@@ -37,70 +37,74 @@ const ZETAS = (() => {
   return out;
 })();
 
-// Exact a*b mod q for 0 <= a, b < q (product < 2^46 fits a double exactly). The reciprocal
-// estimate of the quotient is off by at most one, fixed by the two conditional corrections.
-// (kept as a function: V8 inlines it in the hot loops)
-function mulmod(a, b) {
+// Polynomials are Float64Arrays: every intermediate value stays an exactly representable
+// integer below 2^53, and V8 then never has to convert between int32 and double.
+//
+// Branch-free "almost mod": for |a*b| < 2^52 returns a*b - q*round-estimate, a value in (-q, 2q)
+// (the reciprocal quotient estimate is off by at most one). Nothing is corrected here; instead
+// the NTT butterflies are lazily reduced: coefficients grow by at most 2q per stage, so after the
+// 8 stages |c| <= 17q < 2^28 and every product z*c < 2^51 is still exact. One canonicalizing
+// pass at the end brings everything back to [0, q). This removed every data-dependent branch
+// from the butterflies and measured ~3x faster than the fully reduced loop.
+function mulq(a, b) {
   const t = a * b;
-  let r = t - Math.floor(t * QINV) * Q;
-  if (r >= Q) r -= Q;
-  else if (r < 0) r += Q;
-  return r;
+  return t - Math.floor(t * QINV) * Q;
 }
-const mod = (a) => {
-  const r = a % Q;
-  return r < 0 ? r + Q : r;
-};
-
-// FIPS 204 Algorithm 41 (in place; input any sign, output canonical in [0, q)).
-function ntt(p) {
+function canon(p) {
   for (let i = 0; i < N; i++) {
     const v = p[i] % Q;
     p[i] = v < 0 ? v + Q : v;
   }
+  return p;
+}
+const ZETASF = Float64Array.from(ZETAS);
+const NZETASF = Float64Array.from(ZETAS, (z) => Q - z);
+
+// FIPS 204 Algorithm 41 (in place; input in (-q, q), output canonical in [0, q)).
+function ntt(p) {
   let k = 0;
   for (let len = 128; len >= 1; len >>= 1) {
     for (let start = 0; start < N; start += len << 1) {
-      const z = ZETAS[++k];
+      const z = ZETASF[++k];
       const end = start + len;
       for (let j = start; j < end; j++) {
-        const t = mulmod(z, p[j + len]);
+        const t = mulq(z, p[j + len]);
         const a = p[j];
-        const u = a + t;
-        const v = a - t;
-        p[j] = u >= Q ? u - Q : u;
-        p[j + len] = v < 0 ? v + Q : v;
+        p[j] = a + t;
+        p[j + len] = a - t;
       }
     }
   }
-  return p;
+  return canon(p);
 }
 // FIPS 204 Algorithm 42 (in place; input canonical, output canonical).
 function intt(p) {
   let k = N;
   for (let len = 1; len < N; len <<= 1) {
     for (let start = 0; start < N; start += len << 1) {
-      const z = Q - ZETAS[--k];
+      const z = NZETASF[--k];
       const end = start + len;
       for (let j = start; j < end; j++) {
         const t = p[j];
         const b = p[j + len];
+        // the sum lane is also reduced (branch-free) here: unlike the forward transform both
+        // butterfly inputs can be sums, so it would otherwise double every stage.
         const u = t + b;
-        const v = t - b;
-        p[j] = u >= Q ? u - Q : u;
-        p[j + len] = mulmod(z, v < 0 ? v + Q : v);
+        p[j] = u - Math.floor(u * QINV) * Q;
+        p[j + len] = mulq(z, t - b);
       }
     }
   }
-  for (let i = 0; i < N; i++) p[i] = mulmod(F, p[i]);
-  return p;
+  for (let i = 0; i < N; i++) p[i] = mulq(F, p[i]);
+  return canon(p);
 }
-const newPoly = () => new Int32Array(N);
+const newPoly = () => new Float64Array(N);
+const toF64 = (p) => Float64Array.from(p);
 // c = a o b (both NTT form, canonical)
 function pointwise(a, b) {
   const c = newPoly();
-  for (let i = 0; i < N; i++) c[i] = mulmod(a[i], b[i]);
-  return c;
+  for (let i = 0; i < N; i++) c[i] = mulq(a[i], b[i]);
+  return canon(c);
 }
 // acc += a o b (no reduction)
 function mulAcc(acc, a, b) {
@@ -330,7 +334,7 @@ export function createFastMlDsa(level) {
     for (let i = 0; i < L; i++) s1.push(RejBoundedPoly(xofPrime.get(i & 0xff, (i >> 8) & 0xff)));
     const s2 = [];
     for (let i = L; i < L + K; i++) s2.push(RejBoundedPoly(xofPrime.get(i & 0xff, (i >> 8) & 0xff)));
-    const s1Hat = s1.map((p) => ntt(p.slice()));
+    const s1Hat = s1.map((p) => ntt(toF64(p)));
     const t0 = [];
     const t1 = [];
     const xof = XOF128(rho);
@@ -360,12 +364,7 @@ export function createFastMlDsa(level) {
   const expandSk = (secretKey) => {
     const [rho, K_, tr, s1, s2, t0] = secretCoder.decode(secretKey);
     const A = expandA(rho);
-    for (let i = 0; i < L; i++) ntt(s1[i]);
-    for (let i = 0; i < K; i++) {
-      ntt(s2[i]);
-      ntt(t0[i]);
-    }
-    return { rho, K: K_, tr, s1, s2, t0, A };
+    return { rho, K: K_, tr, s1: s1.map((p) => ntt(toF64(p))), s2: s2.map((p) => ntt(toF64(p))), t0: t0.map((p) => ntt(toF64(p))), A };
   };
   const signExpanded = (M, exp, rnd) => {
     const { K: K_, tr, s1, s2, t0, A } = exp;
@@ -382,12 +381,11 @@ export function createFastMlDsa(level) {
       w1[i] = newPoly();
     }
     const h = new Array(K);
-    for (let i = 0; i < K; i++) h[i] = newPoly();
-    const r0 = newPoly();
+    for (let i = 0; i < K; i++) h[i] = new Int32Array(N);
     for (let kappa = 0; ; ) {
       for (let i = 0; i < L; i++, kappa++) {
         y[i] = ZCoder.decode(x256.get(kappa & 0xff, kappa >> 8)());
-        z[i] = ntt(y[i].slice());
+        z[i] = ntt(toF64(y[i]));
       }
       for (let i = 0; i < K; i++) {
         acc.fill(0);
@@ -436,8 +434,9 @@ export function createFastMlDsa(level) {
     const tr = shake256(publicKey, { dkLen: TR_BYTES });
     const A = expandA(rho);
     const t1Hat = t1.map((p) => {
-      for (let i = 0; i < N; i++) p[i] <<= D;
-      return ntt(p);
+      const q = toF64(p);
+      for (let i = 0; i < N; i++) q[i] *= 1 << D;
+      return ntt(q);
     });
     return { rho, tr, A, t1Hat };
   };
@@ -449,15 +448,15 @@ export function createFastMlDsa(level) {
     for (let i = 0; i < L; i++) if (polyChknorm(z[i], GAMMA1 - BETA)) return false;
     const mu = hashMu(tr, M);
     const c = ntt(SampleInBall(cTilde));
-    const zNtt = z.map((p) => ntt(p.slice()));
+    const zNtt = z.map((p) => ntt(toF64(p)));
     const wTick1 = [];
     const xof = A === null ? XOF128(rho) : null;
     const acc = new Float64Array(N);
     for (let i = 0; i < K; i++) {
       let t1h;
       if (A === null) {
-        t1h = t1[i];
-        for (let k = 0; k < N; k++) t1h[k] <<= D;
+        t1h = toF64(t1[i]);
+        for (let k = 0; k < N; k++) t1h[k] *= 1 << D;
         ntt(t1h);
       } else t1h = t1Hat[i];
       const ct12d = pointwise(t1h, c);

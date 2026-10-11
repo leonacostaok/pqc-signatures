@@ -34,3 +34,41 @@ single-digit-to-low-double-digit percent gain on ML-DSA (NTT-heavy) and less on 
 is quiet.
 
 <!-- RESULTS -->
+
+## Results (PRELIMINARY: dev run with --budget-ms 200 on a loaded 4-core box; the orchestrator overwrites this section)
+
+| variant | name | geomean speedup | geomean CPU/op vs v0 | all outputs match |
+|---|---|---|---|---|
+| `keygen.v0` | default | 1.00× | 1.00× | yes |
+| `keygen.v1` | native | 0.67× | 1.08× | yes |
+| `keygen.v2` | lto | 1.01× | 0.95× | yes |
+| `keygen.v3` | pgo | 1.02× | 0.92× | yes |
+| `keygen.v4` | mimalloc | 0.88× | 0.96× | yes |
+| `keygen.v5` | par | 1.26× | 1.08× | yes |
+
+| param | variant | median | CPU/op | CPU util | thr | ops/s | speedup | match |
+|---|---|---|---|---|---|---|---|---|
+| ML-DSA-44 | `keygen.v0` default | 181.6 µs | 206.8 µs | 0.86 | 1 | 4154.5 | 1.00× | ✓ |
+| ML-DSA-44 | `keygen.v1` native | 171.8 µs | 186.9 µs | 0.30 | 1 | 1609.8 | 0.39× | ✓ |
+| ML-DSA-44 | `keygen.v2` lto | 151.1 µs | 160.6 µs | 0.95 | 1 | 5934.0 | 1.43× | ✓ |
+| ML-DSA-44 | `keygen.v3` pgo | 162.1 µs | 174.6 µs | 0.91 | 1 | 5186.8 | 1.25× | ✓ |
+| ML-DSA-44 | `keygen.v4` mimalloc | 157.8 µs | 167.6 µs | 0.79 | 1 | 4708.4 | 1.13× | ✓ |
+| ML-DSA-44 | `keygen.v5` par | 188.4 µs | 227.6 µs | 1.09 | 4 | 4768.9 | 1.15× | ✓ |
+| ML-DSA-87 | `keygen.v0` default | 512.6 µs | 529.6 µs | 1.00 | 1 | 1885.5 | 1.00× | ✓ |
+| ML-DSA-87 | `keygen.v1` native | 531.5 µs | 553.6 µs | 0.87 | 1 | 1570.8 | 0.83× | ✓ |
+| ML-DSA-87 | `keygen.v2` lto | 446.8 µs | 462.4 µs | 0.82 | 1 | 1776.8 | 0.94× | ✓ |
+| ML-DSA-87 | `keygen.v3` pgo | 661.3 µs | 624.3 µs | 0.95 | 1 | 1518.3 | 0.81× | ✓ |
+| ML-DSA-87 | `keygen.v4` mimalloc | 451.8 µs | 497.5 µs | 0.68 | 1 | 1372.9 | 0.73× | ✓ |
+| ML-DSA-87 | `keygen.v5` par | 498.1 µs | 520.0 µs | 1.01 | 4 | 1949.3 | 1.03× | ✓ |
+| SLH-DSA-SHA2-128f | `keygen.v0` default | 1.54 ms | 1.57 ms | 0.98 | 1 | 626.2 | 1.00× | ✓ |
+| SLH-DSA-SHA2-128f | `keygen.v1` native | 1.19 ms | 1.25 ms | 0.93 | 1 | 743.0 | 1.19× | ✓ |
+| SLH-DSA-SHA2-128f | `keygen.v2` lto | 1.78 ms | 1.98 ms | 0.95 | 1 | 479.0 | 0.76× | ✓ |
+| SLH-DSA-SHA2-128f | `keygen.v3` pgo | 1.23 ms | 1.29 ms | 0.90 | 1 | 694.4 | 1.11× | ✓ |
+| SLH-DSA-SHA2-128f | `keygen.v4` mimalloc | 1.54 ms | 1.57 ms | 0.94 | 1 | 601.2 | 0.96× | ✓ |
+| SLH-DSA-SHA2-128f | `keygen.v5` par | 1.42 ms | 1.91 ms | 1.27 | 4 | 665.9 | 1.06× | ✓ |
+| SLH-DSA-SHAKE-128s | `keygen.v0` default | 287.10 ms | 278.73 ms | 0.95 | 1 | 3.4 | 1.00× | ✓ |
+| SLH-DSA-SHAKE-128s | `keygen.v1` native | 559.92 ms | 507.00 ms | 0.91 | 1 | 1.8 | 0.53× | ✓ |
+| SLH-DSA-SHAKE-128s | `keygen.v2` lto | 279.80 ms | 264.20 ms | 0.93 | 1 | 3.5 | 1.03× | ✓ |
+| SLH-DSA-SHAKE-128s | `keygen.v3` pgo | 304.49 ms | 246.28 ms | 0.82 | 1 | 3.3 | 0.97× | ✓ |
+| SLH-DSA-SHAKE-128s | `keygen.v4` mimalloc | 339.49 ms | 312.10 ms | 0.82 | 1 | 2.6 | 0.77× | ✓ |
+| SLH-DSA-SHAKE-128s | `keygen.v5` par | 151.35 ms | 291.86 ms | 1.96 | 4 | 6.7 | 1.97× | ✓ |

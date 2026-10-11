@@ -183,18 +183,6 @@ static char *json_get_string(const char *s, const char *end, const char *key)
     return out;
 }
 
-static int json_get_bool(const char *s, const char *end, const char *key, int dflt)
-{
-    const char *v = json_find(s, end, key);
-    if (v == NULL)
-        return dflt;
-    if (strncmp(v, "true", 4) == 0)
-        return 1;
-    if (strncmp(v, "false", 5) == 0)
-        return 0;
-    return dflt;
-}
-
 /* given p at '{' or '[', return pointer just past the matching close */
 static const char *json_match_close(const char *p, const char *end)
 {

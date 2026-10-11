@@ -1,0 +1,10 @@
+const N=256,Q=8380417,QINV=1/Q;
+const ZETAS=new Int32Array(256);{for(let k=0;k<256;k++){let b=0;for(let i=0;i<8;i++)b|=((k>>i)&1)<<(7-i);let r=1;for(let i=0;i<b;i++)r=(r*1753)%Q;ZETAS[k]=r;}}
+const ZETASF=Float64Array.from(ZETAS);
+function nttA(p){let k=0;for(let len=128;len>=1;len>>=1){for(let start=0;start<N;start+=len<<1){const z=ZETAS[++k];const end=start+len;for(let j=start;j<end;j++){const m=z*p[j+len];let t=m-Math.floor(m*QINV)*Q;if(t>=Q)t-=Q;else if(t<0)t+=Q;const a=p[j];const u=a+t;const v=a-t;p[j]=u>=Q?u-Q:u;p[j+len]=v<0?v+Q:v;}}}return p;}
+function nttB(p){let k=0;for(let len=128;len>=1;len>>=1){for(let start=0;start<N;start+=len<<1){const z=ZETAS[++k];const end=start+len;for(let j=start;j<end;j++){const t=(z*p[j+len])%Q;const a=p[j];const u=a+t;const v=a-t;p[j]=u>=Q?u-Q:u;p[j+len]=v<0?v+Q:v;}}}return p;}
+function nttC(p){let k=0;for(let len=128;len>=1;len>>=1){for(let start=0;start<N;start+=len<<1){const z=ZETASF[++k];const end=start+len;for(let j=start;j<end;j++){const m=z*p[j+len];let t=m-Math.floor(m*QINV)*Q;if(t>=Q)t-=Q;else if(t<0)t+=Q;const a=p[j];const u=a+t;const v=a-t;p[j]=u>=Q?u-Q:u;p[j+len]=v<0?v+Q:v;}}}return p;}
+// D: precomputed zeta table per stage flattened; same as A but with (|0) coercions
+function nttD(p){let k=0;for(let len=128;len>=1;len>>=1){for(let start=0;start<N;start+=len<<1){const z=ZETAS[++k];const end=start+len;for(let j=start;j<end;j++){const m=z*p[j+len];let t=(m-Math.floor(m*QINV)*Q)|0;if(t>=Q)t=(t-Q)|0;else if(t<0)t=(t+Q)|0;const a=p[j]|0;const u=(a+t)|0;const v=(a-t)|0;p[j]=u>=Q?(u-Q)|0:u;p[j+len]=v<0?(v+Q)|0:v;}}}return p;}
+const p=new Int32Array(256); for(let i=0;i<256;i++)p[i]=(i*7919)%Q; const pf=Float64Array.from(p);
+const ref=nttB(p.slice()); for (const [nm,f,q0] of [['A recip i32',nttA,p],['B mod i32',nttB,p],['C recip f64',nttC,pf],['D recip |0',nttD,p]]) { const r=f(q0.slice()); let ok=true; for(let i=0;i<256;i++) if(r[i]!==ref[i]) ok=false; const q=q0.slice(); for(let i=0;i<3000;i++)f(q); const s=performance.now(); for(let i=0;i<30000;i++)f(q); console.log(nm,ok,((performance.now()-s)*1e3/30000).toFixed(2),'us/ntt'); }

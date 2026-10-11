@@ -45,7 +45,8 @@ fetch() {
 }
 
 build_flavour() {
-  local f="$1" obj="$BUILD/obj-$f" prefix="$BUILD/$f"
+  local f="$1"
+  local obj="$BUILD/obj-$f" prefix="$BUILD/$f"
   if [ -f "$prefix/lib/libcrypto.a" ]; then
     echo "[openssl] $f: libcrypto.a present, skipping"
     return
@@ -59,7 +60,8 @@ build_flavour() {
 }
 
 build_driver() {
-  local f="$1" prefix="$BUILD/$f" cflags
+  local f="$1"
+  local prefix="$BUILD/$f" cflags
   cflags="$(driver_cflags "$f")"
   mkdir -p "$BIN"
   if [ -f "$BIN/pqc_driver_$f" ] && [ "$BIN/pqc_driver_$f" -nt "$HERE/src/pqc_driver.c" ] \

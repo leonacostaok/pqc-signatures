@@ -11,7 +11,7 @@ ROOT="$(cd "$HERE/../.." && pwd)"
 export PQC_COMMON_DIR="$ROOT/common"
 export CARGO_BUILD_JOBS="${CARGO_BUILD_JOBS:-2}"   # 4 shared cores; be polite
 export CARGO_TERM_COLOR=never
-cd "$HERE"
+# Never cd: paths given by the caller (--out, artifacts) stay relative to the caller's cwd.
 
 # One binary per build configuration: tag -> cargo profile, RUSTFLAGS, extra cargo args.
 # Every tag gets its own target dir so changing RUSTFLAGS never invalidates another build.
@@ -31,14 +31,14 @@ bin_of() { # tag -> path of the built binary
 build_tag() { # tag profile rustflags [extra cargo args...]
   local tag="$1" profile="$2" flags="$3"; shift 3
   echo ">> build [$tag] profile=$profile RUSTFLAGS='$flags' $*"
-  PQC_BUILD_TAG="$tag" RUSTFLAGS="$flags" cargo build --quiet --profile "$profile" --target-dir "target/$tag" "$@"
+  PQC_BUILD_TAG="$tag" RUSTFLAGS="$flags" cargo build --quiet --manifest-path "$HERE/Cargo.toml" --profile "$profile" --target-dir "$HERE/target/$tag" "$@"
 }
 
-newest_src() { stat -c %Y Cargo.toml Cargo.lock build.rs src/*.rs 2>/dev/null | sort -n | tail -1; }
+newest_src() { stat -c %Y "$HERE"/Cargo.toml "$HERE"/Cargo.lock "$HERE"/build.rs "$HERE"/src/*.rs 2>/dev/null | sort -n | tail -1; }
 up_to_date() { [ -x "$1" ] && [ "$(stat -c %Y "$1")" -ge "$(newest_src)" ]; }
 
 cmd_build() {
-  cargo fetch --quiet
+  cargo fetch --quiet --manifest-path "$HERE/Cargo.toml"
   build_tag base     release ""
   build_tag native   release "$NATIVE"
   build_tag lto      lto     ""
@@ -62,7 +62,7 @@ cmd_build() {
       LLVM_PROFILE_FILE="$PGO_DIR/raw-$op/%p-%m.profraw" \
         "$(bin_of pgo-gen)" bench --out /dev/null --budget-ms 150 --ops "$op" --variants "$op.v3" 2>/dev/null
       "$PROFDATA" merge -o "$PGO_DIR/$op.profdata" "$PGO_DIR/raw-$op"/*.profraw
-      build_tag "pgo-$op" lto "$NATIVE -C profile-use=$PGO_DIR/$op.profdata -C llvm-args=-pgo-warn-missing-function"
+      build_tag "pgo-$op" lto "$NATIVE -C profile-use=$PGO_DIR/$op.profdata"
     done
   fi
   echo ">> build done:"; for t in base native lto mimalloc pgo-keygen pgo-sign pgo-verify; do "$(bin_of $t)" info; done

@@ -28,3 +28,41 @@ See the preliminary table below. Expectation: `keycache` roughly halves ML-DSA v
 gone), build flags give moderate gains, SLH-DSA verify only benefits from flags and parallelism.
 
 <!-- RESULTS -->
+
+## Results (PRELIMINARY: dev run with --budget-ms 200 on a loaded 4-core box; the orchestrator overwrites this section)
+
+| variant | name | geomean speedup | geomean CPU/op vs v0 | all outputs match |
+|---|---|---|---|---|
+| `verify.v0` | default | 1.00× | 1.00× | yes |
+| `verify.v1` | native | 0.87× | 1.18× | yes |
+| `verify.v2` | lto | 1.20× | 0.96× | yes |
+| `verify.v3` | pgo | 1.26× | 0.93× | yes |
+| `verify.v4` | keycache | 1.93× | 0.62× | yes |
+| `verify.v5` | par | 1.23× | 1.12× | yes |
+
+| param | variant | median | CPU/op | CPU util | thr | ops/s | speedup | match |
+|---|---|---|---|---|---|---|---|---|
+| ML-DSA-44 | `verify.v0` default | 101.8 µs | 112.2 µs | 0.80 | 1 | 7107.2 | 1.00× | ✓ |
+| ML-DSA-44 | `verify.v1` native | 111.5 µs | 129.2 µs | 0.75 | 1 | 5808.4 | 0.82× | ✓ |
+| ML-DSA-44 | `verify.v2` lto | 100.8 µs | 118.1 µs | 0.91 | 1 | 7742.7 | 1.09× | ✓ |
+| ML-DSA-44 | `verify.v3` pgo | 104.2 µs | 112.8 µs | 0.92 | 1 | 8146.4 | 1.15× | ✓ |
+| ML-DSA-44 | `verify.v4` keycache | 47.2 µs | 55.5 µs | 0.95 | 1 | 17085.9 | 2.40× | ✓ |
+| ML-DSA-44 | `verify.v5` par | 105.4 µs | 120.3 µs | 1.24 | 4 | 10314.9 | 1.45× | ✓ |
+| ML-DSA-87 | `verify.v0` default | 265.0 µs | 278.5 µs | 0.98 | 1 | 3524.3 | 1.00× | ✓ |
+| ML-DSA-87 | `verify.v1` native | 326.0 µs | 361.6 µs | 0.69 | 1 | 1904.3 | 0.54× | ✓ |
+| ML-DSA-87 | `verify.v2` lto | 263.6 µs | 283.2 µs | 0.94 | 1 | 3319.8 | 0.94× | ✓ |
+| ML-DSA-87 | `verify.v3` pgo | 270.2 µs | 280.9 µs | 0.94 | 1 | 3362.2 | 0.95× | ✓ |
+| ML-DSA-87 | `verify.v4` keycache | 92.8 µs | 99.8 µs | 0.94 | 1 | 9416.0 | 2.67× | ✓ |
+| ML-DSA-87 | `verify.v5` par | 332.9 µs | 431.5 µs | 1.15 | 4 | 2670.4 | 0.76× | ✓ |
+| SLH-DSA-SHA2-128f | `verify.v0` default | 2.24 ms | 2.25 ms | 0.98 | 1 | 435.8 | 1.00× | ✓ |
+| SLH-DSA-SHA2-128f | `verify.v1` native | 1.85 ms | 1.87 ms | 0.94 | 1 | 504.3 | 1.16× | ✓ |
+| SLH-DSA-SHA2-128f | `verify.v2` lto | 2.18 ms | 2.32 ms | 0.92 | 1 | 398.1 | 0.91× | ✓ |
+| SLH-DSA-SHA2-128f | `verify.v3` pgo | 1.83 ms | 1.84 ms | 0.92 | 1 | 500.5 | 1.15× | ✓ |
+| SLH-DSA-SHA2-128f | `verify.v4` keycache | 2.24 ms | 2.26 ms | 0.98 | 1 | 431.4 | 0.99× | ✓ |
+| SLH-DSA-SHA2-128f | `verify.v5` par | 2.04 ms | 2.36 ms | 1.11 | 4 | 471.3 | 1.08× | ✓ |
+| SLH-DSA-SHAKE-128s | `verify.v0` default | 3.41 ms | 2.27 ms | 0.53 | 1 | 233.2 | 1.00× | ✓ |
+| SLH-DSA-SHAKE-128s | `verify.v1` native | 3.48 ms | 3.52 ms | 0.93 | 1 | 263.4 | 1.13× | ✓ |
+| SLH-DSA-SHAKE-128s | `verify.v2` lto | 1.78 ms | 1.77 ms | 0.91 | 1 | 510.7 | 2.19× | ✓ |
+| SLH-DSA-SHAKE-128s | `verify.v3` pgo | 1.94 ms | 2.01 ms | 0.95 | 1 | 475.4 | 2.04× | ✓ |
+| SLH-DSA-SHAKE-128s | `verify.v4` keycache | 1.89 ms | 1.90 ms | 0.96 | 1 | 507.4 | 2.18× | ✓ |
+| SLH-DSA-SHAKE-128s | `verify.v5` par | 2.02 ms | 2.06 ms | 0.92 | 4 | 445.3 | 1.91× | ✓ |
