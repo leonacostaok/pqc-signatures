@@ -16,7 +16,7 @@
 import { _SHA256, _SHA512, sha256 as nobleSha256, sha512 as nobleSha512 } from '@noble/hashes/sha2.js';
 import { keccakP, shake256 as nobleShake256 } from '@noble/hashes/sha3.js';
 import { hmac as nobleHmac } from '@noble/hashes/hmac.js';
-import { u32, swap32IfBE, isLE } from '@noble/hashes/utils.js';
+import { u32, swap32IfBE } from '@noble/hashes/utils.js';
 import { createHash, createHmac, hash as oneShot } from 'node:crypto';
 import { bytesToNumberBE, numberToBytesBE } from '@noble/curves/utils.js';
 import { getMessage, splitCoder, vecCoder, equalBytes, getMask } from '@noble/post-quantum/utils.js';

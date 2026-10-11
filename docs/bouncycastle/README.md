@@ -69,7 +69,7 @@ parent's own JIT/GC state never contaminates them. Per cell (variant, op, param)
 
 1. one op to take the output digest and run the tamper check;
 2. for parallel variants, one batch to size the batch (target >= 40 ms per batch, at most 16 ops per lane);
-3. warm-up until >= 300 ms *and* >= 20 ops, capped at ~3 s for the slow SLH-DSA operations, not recorded;
+3. warm-up until >= 1 s *and* >= 20 ops, capped at ~3 s for the slow SLH-DSA operations, not recorded;
 4. measured loop until `budget_ms` elapsed and >= 3 ops (2 if an op exceeds 5 s), cap 100 000 ops; per-op wall
    via `System.nanoTime()` (per batch / batch size for parallel variants); process CPU via
    `com.sun.management.OperatingSystemMXBean.getProcessCpuTime()` over the whole loop, divided by ops.

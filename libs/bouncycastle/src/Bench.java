@@ -284,13 +284,13 @@ public final class Bench {
                 ((Variants.Parallel) r).setPerLane(k);
             }
             batch = r.batch;
-            // ---- warm-up: >= 300 ms and >= 20 ops, but never more than ~3 s (slow SLH-DSA ops) and at least 1 op
+            // ---- warm-up: >= 1 s and >= 20 ops, but never more than ~3 s (slow SLH-DSA ops) and at least 1 op
             long ws = System.nanoTime(); int wn = 0;
             while (true) {
                 Object o = r.run(); wn += batch;
                 if (!r.check(o)) match = false;
                 long el = System.nanoTime() - ws;
-                if ((el >= 300_000_000L && wn >= 20) || el >= 3_000_000_000L) break;
+                if ((el >= 1_000_000_000L && wn >= 20) || el >= 3_000_000_000L) break;
                 if (EPSILON_GUARD && heapNearlyFull(0.45)) break;
             }
             // ---- measured loop

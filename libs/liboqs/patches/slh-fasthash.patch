@@ -51,10 +51,10 @@ index 0cf2f0028..2f5df76fb 100644
    static const uint64_t keccak_rc[24] = {
 diff --git a/src/sig/slh_dsa/slh_dsa_c/slh_fasthash.c b/src/sig/slh_dsa/slh_dsa_c/slh_fasthash.c
 new file mode 100644
-index 000000000..52312f1c6
+index 000000000..604f33b50
 --- /dev/null
 +++ b/src/sig/slh_dsa/slh_dsa_c/slh_fasthash.c
-@@ -0,0 +1,64 @@
+@@ -0,0 +1,69 @@
 +/*
 + * pqc-signatures "fasthash" variant: route the slhdsa-c hash core to
 + * optimized primitives that liboqs / OpenSSL already ship.
@@ -102,6 +102,10 @@ index 000000000..52312f1c6
 +#if defined(OQS_ENABLE_SHA3_xkcp_low_avx2)
 +extern void KeccakP1600_Permute_24rounds_avx2(void *state);
 +static int use_avx2 = -1;
++/* XKCP's AVX2 implementation keeps the 25 lanes in a permuted order
++ * (mapState table in KeccakP-1600-AVX2.S): lane i lives at st[MAP[i]]. */
++static const uint8_t MAP[25] = {0, 1, 2, 3, 4, 7, 21, 10, 15, 20, 5, 13, 22, 19, 12,
++                                8, 9, 18, 23, 16, 6, 17, 14, 11, 24};
 +#endif
 +
 +void keccak_f1600(uint64_t x[25])
@@ -111,9 +115,10 @@ index 000000000..52312f1c6
 +  if (use_avx2)
 +  {
 +    uint64_t st[25] __attribute__((aligned(32)));
-+    memcpy(st, x, 200);
++    int i;
++    for (i = 0; i < 25; i++) st[MAP[i]] = x[i];
 +    KeccakP1600_Permute_24rounds_avx2(st);
-+    memcpy(x, st, 200);
++    for (i = 0; i < 25; i++) x[i] = st[MAP[i]];
 +    return;
 +  }
 +#endif
