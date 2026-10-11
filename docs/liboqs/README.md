@@ -26,7 +26,7 @@ Falcon-512/1024. All 15 ML-DSA/SLH-DSA sets byte-match `common/reference.json` (
 | flavour | liboqs configuration | driver flags |
 |---|---|---|
 | `dist` | liboqs defaults: `CMAKE_BUILD_TYPE=Release` (-O3), `OQS_DIST_BUILD=ON` (generic x86-64 code + AVX2 objects chosen at run time through `OQS_CPU_has_extension`), SHA-2 via OpenSSL, SHA-3 via XKCP (AVX2 / AVX512VL dispatched at run time) | gcc -O2 |
-| `native` | `OQS_DIST_BUILD=OFF`, `OQS_OPT_TARGET=auto` (= `-march=native`), AVX2 backends selected at compile time | gcc -O3 -march=native |
+| `native` | `OQS_DIST_BUILD=OFF`, `OQS_OPT_TARGET=auto` (= `-march=native`), AVX2 backends selected at compile time; the driver re-installs the AVX512VL SHA-3 callbacks (`--sha3 avx512vl`, see notes) | gcc -O3 -march=native |
 | `clang` | as `native`, `CMAKE_C_COMPILER=clang` | clang -O3 -march=native |
 | `lto` | as `native` plus `CMAKE_INTERPROCEDURAL_OPTIMIZATION=ON` (`-flto`) | gcc -O3 -march=native -flto |
 | `pgo` | as `native` built twice: `-fprofile-generate`, a training run (`vectors` + a short `bench` over every param/op), then `-fprofile-use -fprofile-correction` | gcc -O3 -march=native with the same profile flags |
@@ -96,6 +96,19 @@ synchronised with barriers; each thread performs k ops per batch (k sized so tha
 1 <= k <= 64) and the recorded wall time per op is batch wall / (4k).
 
 ## Notes and caveats
+
+- **Non-dist builds silently lose the AVX512VL SHA-3 backend.** `Keccak_Dispatch()` in `src/common/sha3/xkcp_sha3.c`
+  (and the x4 variant) only selects `sha3_avx512vl_callbacks` inside `#if defined(OQS_DIST_X86_64_BUILD)`; a
+  `-march=native` build compiles the AVX512VL code but never uses it and runs SHAKE on the AVX2 Keccak. On this CPU that
+  made every ML-DSA op 20-30 % slower in the `native`/`clang`/`lto`/`pgo` flavours than in the default `dist` build (and
+  an `x86-64-v3` build was slower still, so it is not AVX-512 code generation). The driver therefore calls
+  `OQS_SHA3_set_callbacks(&sha3_avx512vl_callbacks)` / `OQS_SHA3_x4_set_callbacks(...)` for those flavours (public
+  callback API, guarded by `__builtin_cpu_supports`), after which `native` matches `dist` on ML-DSA. The variant
+  descriptions say so.
+- **`OQS_CPU_has_extension()` is a stub returning 0 in non-dist builds** (`src/common/common.c`), so the driver and the
+  fasthash patch use the compile-time `OQS_USE_*_INSTRUCTIONS` macros there instead.
+- **XKCP's AVX2 Keccak keeps the 25 lanes in a permuted order** (`mapState` in `KeccakP-1600-AVX2.S`); the fasthash patch
+  remaps lanes on the way in and out (first attempt without the remap was caught by the byte-match check at run time).
 
 - liboqs's SLH-DSA code (slhdsa-c) is pure portable C including its own SHA-2 and Keccak; it does not use liboqs's
   OpenSSL SHA-2 or XKCP AVX2 Keccak back-ends. That is why the SLH-DSA numbers are far behind the ML-DSA ones and why
