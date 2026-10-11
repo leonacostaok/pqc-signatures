@@ -3398,3 +3398,8 @@ verify.v1 lightweight        SLH-DSA-SHAKE-192s   n=618    median=    1597.2 us 
 verify.v1 lightweight        SLH-DSA-SHAKE-192f   n=189    median=    4631.6 us cpu/op=    5343.9 us util=1.01 ops/s=     188.2 match=true
 verify.v1 lightweight        SLH-DSA-SHAKE-256s   n=329    median=    2526.8 us cpu/op=    3039.5 us util=1.00 ops/s=     328.7 match=true
 verify.v1 lightweight        SLH-DSA-SHAKE-256f   n=194    median=    4981.6 us cpu/op=    5103.1 us util=0.99 ops/s=     194.0 match=true
+verify.v2 reuse-verifier     ML-DSA-44            n=8999   median=      97.9 us cpu/op=     108.9 us util=0.98 ops/s=    8998.6 match=true
+verify.v2 reuse-verifier     ML-DSA-65            n=5135   median=     158.7 us cpu/op=     192.8 us util=0.99 ops/s=    5134.4 match=true
+verify.v2 reuse-verifier     ML-DSA-87            n=3766   median=     257.4 us cpu/op=     270.8 us util=1.02 ops/s=    3765.9 match=true
+verify.v2 reuse-verifier     SLH-DSA-SHA2-128s    n=969    median=     977.8 us cpu/op=    1032.0 us util=1.00 ops/s=     968.1 match=true
+verify.v2 reuse-verifier     SLH-DSA-SHA2-128f    n=332    median=    2851.6 us cpu/op=    3042.2 us util=1.01 ops/s=     331.0 match=true
