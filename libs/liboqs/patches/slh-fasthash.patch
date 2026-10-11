@@ -1,0 +1,121 @@
+diff --git a/src/sig/slh_dsa/CMakeLists.txt b/src/sig/slh_dsa/CMakeLists.txt
+index 90157ed60..913b9b28b 100644
+--- a/src/sig/slh_dsa/CMakeLists.txt
++++ b/src/sig/slh_dsa/CMakeLists.txt
+@@ -8,6 +8,7 @@ if (OQS_ENABLE_SIG_SLH_DSA)
+ 	            slh_dsa_c/sha2_512.c
+ 	            slh_dsa_c/sha3_api.c
+ 	            slh_dsa_c/sha3_f1600.c
++	            slh_dsa_c/slh_fasthash.c
+ 	            slh_dsa_c/slh_dsa.c
+ 	            slh_dsa_c/slh_prehash.c
+ 	            slh_dsa_c/slh_sha2.c
+diff --git a/src/sig/slh_dsa/slh_dsa_c/sha2_256.c b/src/sig/slh_dsa/slh_dsa_c/sha2_256.c
+index 1102f0e47..6f7e9241c 100644
+--- a/src/sig/slh_dsa/slh_dsa_c/sha2_256.c
++++ b/src/sig/slh_dsa/slh_dsa_c/sha2_256.c
+@@ -31,7 +31,7 @@ uint64_t sha2_256_compress_count = 0; /* instrumentation */
+           (ror32(xe, 17) ^ ror32(xe, 19) ^ (xe >> 10));     \
+   }
+ 
+-void sha2_256_compress(void *v)
++void sha2_256_compress_portable(void *v)
+ {
+   /* 4.2.2 SHA-224 and SHA-256 Constants */
+ 
+diff --git a/src/sig/slh_dsa/slh_dsa_c/sha2_512.c b/src/sig/slh_dsa/slh_dsa_c/sha2_512.c
+index 12a646495..1ab4b0d4e 100644
+--- a/src/sig/slh_dsa/slh_dsa_c/sha2_512.c
++++ b/src/sig/slh_dsa/slh_dsa_c/sha2_512.c
+@@ -33,7 +33,7 @@ uint64_t sha2_512_compress_count = 0; /* instrumentation */
+ 
+ /* compression function (this one does *not* modify m[16]) */
+ 
+-void sha2_512_compress(void *v)
++void sha2_512_compress_portable(void *v)
+ {
+   /* 4.2.3 SHA-384, SHA-512, SHA-512/224 and SHA-512/256 Constants */
+ 
+diff --git a/src/sig/slh_dsa/slh_dsa_c/sha3_f1600.c b/src/sig/slh_dsa/slh_dsa_c/sha3_f1600.c
+index 0cf2f0028..2f5df76fb 100644
+--- a/src/sig/slh_dsa/slh_dsa_c/sha3_f1600.c
++++ b/src/sig/slh_dsa/slh_dsa_c/sha3_f1600.c
+@@ -14,7 +14,7 @@ uint64_t keccak_f1600_count = 0; /* instrumentation */
+ 
+ /* forward permutation */
+ 
+-void keccak_f1600(uint64_t x[25])
++void keccak_f1600_portable(uint64_t x[25])
+ {
+   /* round constants */
+   static const uint64_t keccak_rc[24] = {
+diff --git a/src/sig/slh_dsa/slh_dsa_c/slh_fasthash.c b/src/sig/slh_dsa/slh_dsa_c/slh_fasthash.c
+new file mode 100644
+index 000000000..52312f1c6
+--- /dev/null
++++ b/src/sig/slh_dsa/slh_dsa_c/slh_fasthash.c
+@@ -0,0 +1,64 @@
++/*
++ * pqc-signatures "fasthash" variant: route the slhdsa-c hash core to
++ * optimized primitives that liboqs / OpenSSL already ship.
++ *
++ *  - sha2_256_compress / sha2_512_compress -> OpenSSL SHA256_Transform /
++ *    SHA512_Transform (assembly block functions: SHA-NI, AVX2, SSSE3 ...).
++ *    slhdsa-c keeps the chaining state as big-endian bytes in s[0..7] and the
++ *    message block as raw bytes in s[8..]; OpenSSL keeps the state as host
++ *    words, so we convert on the way in and out.
++ *  - keccak_f1600 -> XKCP KeccakP1600_Permute_24rounds_avx2 (liboqs's own
++ *    AVX2 Keccak permutation, which the SLH-DSA code did not use), chosen at
++ *    run time via OQS_CPU_has_extension; portable fallback otherwise.
++ */
++#define OPENSSL_SUPPRESS_DEPRECATED 1
++#include <stdint.h>
++#include <string.h>
++#include <openssl/sha.h>
++#include <oqs/oqs.h>
++#include "plat_local.h"
++
++void sha2_256_compress_portable(void *v);
++void sha2_512_compress_portable(void *v);
++void keccak_f1600_portable(uint64_t x[25]);
++
++void sha2_256_compress(void *v)
++{
++  uint32_t *sp = (uint32_t *)v;
++  SHA256_CTX c;
++  int i;
++  for (i = 0; i < 8; i++) c.h[i] = rev8_be32(sp[i]);
++  SHA256_Transform(&c, (const unsigned char *)(sp + 8));
++  for (i = 0; i < 8; i++) sp[i] = rev8_be32(c.h[i]);
++}
++
++void sha2_512_compress(void *v)
++{
++  uint64_t *sp = (uint64_t *)v;
++  SHA512_CTX c;
++  int i;
++  for (i = 0; i < 8; i++) c.h[i] = rev8_be64(sp[i]);
++  SHA512_Transform(&c, (const unsigned char *)(sp + 8));
++  for (i = 0; i < 8; i++) sp[i] = rev8_be64(c.h[i]);
++}
++
++#if defined(OQS_ENABLE_SHA3_xkcp_low_avx2)
++extern void KeccakP1600_Permute_24rounds_avx2(void *state);
++static int use_avx2 = -1;
++#endif
++
++void keccak_f1600(uint64_t x[25])
++{
++#if defined(OQS_ENABLE_SHA3_xkcp_low_avx2)
++  if (use_avx2 < 0) use_avx2 = OQS_CPU_has_extension(OQS_CPU_EXT_AVX2) ? 1 : 0;
++  if (use_avx2)
++  {
++    uint64_t st[25] __attribute__((aligned(32)));
++    memcpy(st, x, 200);
++    KeccakP1600_Permute_24rounds_avx2(st);
++    memcpy(x, st, 200);
++    return;
++  }
++#endif
++  keccak_f1600_portable(x);
++}

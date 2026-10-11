@@ -1,0 +1,18 @@
+import { ml_dsa65 } from '@noble/post-quantum/ml-dsa.js';
+import * as slh from '@noble/post-quantum/slh-dsa.js';
+import { hexToBytes } from '@noble/hashes/utils.js';
+import { readFileSync } from 'node:fs';
+const V = JSON.parse(readFileSync('common/vectors.json'));
+const msg = hexToBytes(V.message_hex);
+const bench = (name, f, ms = 1500) => { f(); f(); let n = 0; const s = performance.now(); while (performance.now() - s < ms) { f(); n++; } console.log(name, ((performance.now() - s) / n).toFixed(3), 'ms/op'); };
+const seed = hexToBytes(V.params.find(p => p.name === 'ML-DSA-65').seed_hex);
+const k = ml_dsa65.keygen(seed); const sig = ml_dsa65.sign(msg, k.secretKey, { extraEntropy: false });
+bench('mldsa65 keygen', () => ml_dsa65.keygen(seed));
+bench('mldsa65 sign', () => ml_dsa65.sign(msg, k.secretKey, { extraEntropy: false }));
+bench('mldsa65 verify', () => ml_dsa65.verify(sig, msg, k.publicKey));
+const s2 = hexToBytes(V.params.find(p => p.name === 'SLH-DSA-SHA2-128f').seed_hex);
+const k2 = slh.slh_dsa_sha2_128f.keygen(s2);
+bench('slh-sha2-128f keygen', () => slh.slh_dsa_sha2_128f.keygen(s2));
+bench('slh-sha2-128f sign', () => slh.slh_dsa_sha2_128f.sign(msg, k2.secretKey, { extraEntropy: false }), 2500);
+const s3 = hexToBytes(V.params.find(p => p.name === 'SLH-DSA-SHAKE-128f').seed_hex);
+bench('slh-shake-128f keygen', () => slh.slh_dsa_shake_128f.keygen(s3));

@@ -1,0 +1,140 @@
+--- ../../node_modules/@noble/post-quantum/falcon.js	2026-10-11 09:55:28.299119901 +0000
++++ build/vendor/falcon.js	2026-10-11 10:15:19.529155205 +0000
+@@ -9,7 +9,8 @@
+ import { FFTCore } from '@noble/curves/abstract/fft.js';
+ import { invert } from '@noble/curves/abstract/modular.js';
+ import { bytesToNumberLE, numberToHexUnpadded } from '@noble/curves/utils.js';
+-import { shake256 } from '@noble/hashes/sha3.js';
++// pqc-signatures fork: hash layer is pluggable (NOBLE_PQ_HASH=native -> node:crypto).
++import { shake256 } from '../../src/hashlayer.mjs';
+ import { abytes, bytesToHex, createView, hexToBytes, randomBytes, swap32IfBE, u32, u8, } from '@noble/hashes/utils.js';
+ import { genCrystals } from "./_crystals.js";
+ import { baswap64If, cleanBytes, copyBytes, getMask, splitCoder, validateSigOpts, validateVerOpts, SIG_OPT_KEYS, } from "./utils.js";
+@@ -2105,7 +2106,21 @@
+             return this.ffsampRec(this.logn, t0f, t1f, this.g00, this.g01, this.g11);
+         }
+     }
+-    const signRaw = (sk, msg, maxLen, rnd = randomBytes) => {
++    // pqc-signatures fork (sign.v3 "keycache"): the per-key part of sign (skDecode, G
++    // reconstruction, FFT of the basis B = [[g, -f], [G, -F]]) split out so it can be cached.
++    const expandBasis = (sk) => {
++        abytes(sk, secretKeyCoder.bytesLen, 'secretKey');
++        const [f, g, F] = secretKeyCoder.decode(sk);
++        const G = completePrivate(f, g, F);
++        const b00 = floatPoly.FFT(floatPoly.convSmall(g));
++        const b01 = floatPoly.FFT(floatPoly.neg(floatPoly.convSmall(f)));
++        const b10 = floatPoly.FFT(floatPoly.convSmall(G));
++        const b11 = floatPoly.FFT(floatPoly.neg(floatPoly.convSmall(F)));
++        cleanBytes(f, g, F, G);
++        return { b00, b01, b10, b11 };
++    };
++    const cloneCPoly = (p) => p.map((c) => ({ re: c.re, im: c.im }));
++    const signRaw = (sk, msg, maxLen, rnd = randomBytes, pre = null) => {
+         // Algorithm 10: Sign(m, sk, [β²]), (Page 39)
+         // Require: A message m, a secret key sk, a bound [β²]
+         // Ensure: A signature sig of m
+@@ -2126,7 +2141,8 @@
+         // 11: while (s = ⊥)
+         // 12: return sig = (r, s)
+         abytes(msg, undefined, 'msg');
+-        abytes(sk, secretKeyCoder.bytesLen, 'secretKey');
++        if (!pre)
++            abytes(sk, secretKeyCoder.bytesLen, 'secretKey');
+         // One RNG stream drives both the public 40-byte nonce and the 48-byte sampler seed, so
+         // deterministic rnd hooks make signatures deterministic for fixed secretKey/message inputs.
+         const nonce = rnd(40);
+@@ -2138,13 +2154,12 @@
+         // Falcon implementations here use a fixed 48-byte sampler seed; reject callback bugs up front.
+         abytes(seed, 48, 'seed');
+         try {
+-            const [f, g, F] = secretKeyCoder.decode(sk);
++            const basis = pre ? pre : expandBasis(sk);
++            const { b00, b10 } = basis;
++            // FFSampler.destroy() wipes b01/b11, so a cached basis hands it copies.
++            const b01 = pre ? cloneCPoly(basis.b01) : basis.b01;
++            const b11 = pre ? cloneCPoly(basis.b11) : basis.b11;
+             try {
+-                const G = completePrivate(f, g, F);
+-                const b00 = floatPoly.FFT(floatPoly.convSmall(g));
+-                const b01 = floatPoly.FFT(floatPoly.neg(floatPoly.convSmall(f)));
+-                const b10 = floatPoly.FFT(floatPoly.convSmall(G));
+-                const b11 = floatPoly.FFT(floatPoly.neg(floatPoly.convSmall(F)));
+                 const sampler = new FFSampler(logn, seed, b00, b01, b10, b11);
+                 const s2 = new Int16Array(N);
+                 try {
+@@ -2185,12 +2200,13 @@
+                 finally {
+                     cleanBytes(s2);
+                     sampler.destroy();
+-                    cleanCPoly(b00, b01, b10, b11);
+-                    cleanBytes(G);
++                    cleanCPoly(b01, b11);
++                    if (!pre)
++                        cleanCPoly(b00, b10);
+                 }
+             }
+             finally {
+-                cleanBytes(f, g, F);
++                // f, g, F, G are wiped inside expandBasis().
+             }
+         }
+         finally {
+@@ -2199,7 +2215,7 @@
+     };
+     // Raw helper: malformed encodings or wrong lengths still throw here; the public verify()/open()
+     // wrappers decide whether to translate those failures into false or an exception.
+-    const verifyRaw = (pk, s2comp, nonce, msg) => {
++    const verifyRaw = (pk, s2comp, nonce, msg, pkHat = null) => {
+         // Algorithm 16: Verify(m, sig, pk, [β²])
+         // (Page 45)
+         // Require: A message m, a signature sig = (r, s), a public key pk = h ∈ Zq[x]/(φ), a bound [β²]
+@@ -2215,7 +2231,8 @@
+         // 9:     reject ▷ Reject signatures that are too long
+         const s2 = compCoder(N).decode(s2comp); // 2: s₂ ← Decompress(s, 8 · sbytelen - 328)
+         const c0 = HashToPoint(nonce, msg); // 1: c ← HashToPoint(r||m, q, n)
+-        const h = intPoly.toMontgomery(intPoly.ntt(publicKeyCoder.decode(pk)));
++        // pqc-signatures fork (verify.v3 "pkcache"): NTT(h) may be cached per public key.
++        const h = pkHat ? pkHat : intPoly.toMontgomery(intPoly.ntt(publicKeyCoder.decode(pk)));
+         const s1 = intPoly.intt(intPoly.mul(intPoly.ntt(signedCoder.decode(s2)), h));
+         intPoly.sub(s1, c0); // 5: s₁ ← c - s₂h mod q ▷ s₁ should be normalized between -q/2 and q/2
+         return intPoly.isShort(signedCoder.encode(s1), s2); // 6: if ||(s₁, s₂)||² < [β²] then
+@@ -2294,6 +2311,28 @@
+         const { s2, nonce } = signRaw(sk, msg, opts.maxS2Len, getRnd(sigOpts));
+         return SignatureCoderDetached(logn).encode({ nonce, s2 });
+     };
++    // pqc-signatures fork: precomputation APIs.
++    const expandSk = (sk) => ({ basis: expandBasis(sk) });
++    const signPrecomputed = (msg, exp, sigOpts = {}) => {
++        const { s2, nonce } = signRaw(null, msg, opts.maxS2Len, getRnd(sigOpts), exp.basis);
++        return SignatureCoderDetached(logn).encode({ nonce, s2 });
++    };
++    const expandPk = (pk) => {
++        abytes(pk, undefined, 'publicKey');
++        return { pkHat: intPoly.toMontgomery(intPoly.ntt(publicKeyCoder.decode(pk))) };
++    };
++    const verifyPrecomputed = (sig, msg, exp, verOpts = {}) => {
++        checkVerOpts(verOpts);
++        abytes(sig, undefined, 'signature');
++        abytes(msg, undefined, 'msg');
++        try {
++            const { s2, nonce } = SignatureCoderDetached(logn).decode(sig);
++            return verifyRaw(null, s2, nonce, msg, exp.pkHat);
++        }
++        catch {
++            return false;
++        }
++    };
+     /** Verify one detached Falcon signature.
+      * Returns `false` for malformed detached signature encodings, non-canonical detached signatures,
+      * and well-formed signatures that do not validate. Throws on malformed API argument types or
+@@ -2371,6 +2410,10 @@
+         getPublicKey,
+         sign,
+         verify,
++        expandSk,
++        signPrecomputed,
++        expandPk,
++        verifyPrecomputed,
+     };
+     res.__test = tests;
+     return Object.freeze(res);

@@ -1,0 +1,203 @@
+--- ../../node_modules/@noble/post-quantum/slh-dsa.js	2026-10-11 09:55:28.310006747 +0000
++++ build/vendor/slh-dsa.js	2026-10-11 10:13:37.265809012 +0000
+@@ -27,10 +27,9 @@
+  * @module
+  */
+ /*! noble-post-quantum - MIT License (c) 2024 Paul Miller (paulmillr.com) */
+-import { hmac } from '@noble/hashes/hmac.js';
++// pqc-signatures fork: hash layer is pluggable (NOBLE_PQ_HASH=native -> node:crypto).
++import { hmac, sha256, sha512, shake256 } from '../../src/hashlayer.mjs';
+ import { bytesToNumberBE, numberToBytesBE } from '@noble/curves/utils.js';
+-import { sha256, sha512 } from '@noble/hashes/sha2.js';
+-import { shake256 } from '@noble/hashes/sha3.js';
+ import { concatBytes, createView } from '@noble/hashes/utils.js';
+ import { abytes, checkHash, cleanBytes, copyBytes, equalBytes, getMask, getMessage, getMessagePrehash, randomBytes, splitCoder, validateSigOpts, validateVerOpts, vecCoder, } from "./utils.js";
+ // Keys the internal SLH-DSA surface accepts. `context` is deliberately absent: the public
+@@ -97,7 +96,7 @@
+  * and `getPublicKey(secretKey)` only extracts the embedded public key
+  * instead of recomputing `PK.root`.
+  */
+-function gen(opts, hashOpts_) {
++export function gen(opts, hashOpts_) {
+     const hashOpts = hashOpts_;
+     const { N, W, H, D, K, A, securityLevel: securityLevel } = opts;
+     const getContext = hashOpts.getContext(opts);
+@@ -299,6 +298,69 @@
+             sigAuth: authPath,
+         };
+     };
++    // pqc-signatures fork (sign.v3 "keycache"): the hypertree's top layer (layer D-1) is always the
++    // same XMSS tree (tree index 0) for a given key, so all of its nodes can be precomputed once per
++    // secret key. Signing then only recomputes the one WOTS chain set it needs (the WOTS secret
++    // values come from PRF, the auth path is read from the cached levels).
++    const buildTopTreeLevels = (context) => {
++        const treeAddr = setAddr({ type: AddressType.HASHTREE, layer: D - 1 });
++        const wotsAddr = setAddr({ type: AddressType.WOTS, layer: D - 1 });
++        const n = 1 << TREE_HEIGHT;
++        const levels = [new Uint8Array(n * N)];
++        const leafAddr = setAddr({ subtreeAddr: wotsAddr });
++        const pkAddr = setAddr({ type: AddressType.WOTSPK, subtreeAddr: wotsAddr });
++        const wotsPk = new Uint8Array(WOTS_LEN * N);
++        for (let idx = 0; idx < n; idx++) {
++            setAddr({ keypair: idx }, leafAddr);
++            setAddr({ keypair: idx }, pkAddr);
++            for (let i = 0; i < WOTS_LEN; i++) {
++                const pk = wotsPk.subarray(i * N, (i + 1) * N);
++                setAddr({ chain: i, hash: 0, type: AddressType.WOTSPRF }, leafAddr);
++                pk.set(context.PRFaddr(leafAddr));
++                setAddr({ type: AddressType.WOTS }, leafAddr);
++                for (let k = 0; k < W - 1; k++) {
++                    setAddr({ hash: k }, leafAddr);
++                    pk.set(context.thash1(pk, leafAddr));
++                }
++            }
++            levels[0].set(context.thashN(WOTS_LEN, wotsPk, pkAddr), idx * N);
++        }
++        const buf = new Uint8Array(2 * N);
++        for (let h = 1; h <= TREE_HEIGHT; h++) {
++            const prev = levels[h - 1];
++            const cnt = n >> h;
++            const cur = new Uint8Array(cnt * N);
++            for (let i = 0; i < cnt; i++) {
++                setAddr({ height: h, index: i }, treeAddr);
++                buf.set(prev.subarray(2 * i * N, (2 * i + 2) * N));
++                cur.set(context.thashN(2, buf, treeAddr), i * N);
++            }
++            levels.push(cur);
++        }
++        return levels;
++    };
++    const merkleSignCached = (context, wotsAddr, leafIdx, prevRoot, levels) => {
++        const wotsSteps = chainLengths(prevRoot);
++        const leafAddr = setAddr({ subtreeAddr: wotsAddr });
++        setAddr({ keypair: leafIdx }, leafAddr);
++        const wotsSig = new Uint8Array(WOTS_LEN * N);
++        for (let i = 0; i < WOTS_LEN; i++) {
++            const pk = wotsSig.subarray(i * N, (i + 1) * N);
++            setAddr({ chain: i, hash: 0, type: AddressType.WOTSPRF }, leafAddr);
++            pk.set(context.PRFaddr(leafAddr));
++            setAddr({ type: AddressType.WOTS }, leafAddr);
++            for (let k = 0; k < wotsSteps[i]; k++) {
++                setAddr({ hash: k }, leafAddr);
++                pk.set(context.thash1(pk, leafAddr));
++            }
++        }
++        const authPath = new Uint8Array(TREE_HEIGHT * N);
++        for (let h = 0; h < TREE_HEIGHT; h++) {
++            const sib = (leafIdx >> h) ^ 1;
++            authPath.set(levels[h].subarray(sib * N, (sib + 1) * N), h * N);
++        }
++        return { root: levels[TREE_HEIGHT].subarray(0, N), sigWots: wotsSig, sigAuth: authPath };
++    };
+     const computeRoot = (leaf, leafIdx, idxOffset, authPath, treeHeight, context, addr) => {
+         const rawContext = context;
+         const buffer = new Uint8Array(2 * N);
+@@ -376,7 +438,25 @@
+             const [_skSeed, _skPRF, pk] = secretCoder.decode(secretKey);
+             return Uint8Array.from(pk);
+         },
+-        sign: (msg, sk, opts = {}) => {
++        // pqc-signatures fork: per-secret-key precomputation (hash context + top-layer tree nodes).
++        expandSk: (sk) => {
++            const [skSeed, skPRF, pk] = secretCoder.decode(sk);
++            const [pkSeed, _] = publicCoder.decode(pk);
++            const context = getContext(pkSeed, skSeed);
++            const levels = buildTopTreeLevels(context);
++            return { sk, context, levels };
++        },
++        signPrecomputed: (msg, exp, opts = {}) => signCore(msg, exp.sk, opts, exp),
++        sign: (msg, sk, opts = {}) => signCore(msg, sk, opts, null),
++        // pqc-signatures fork: per-public-key precomputation (decoded pk + hash context).
++        expandPk: (publicKey) => {
++            const [pkSeed, pubRoot] = publicCoder.decode(publicKey);
++            return { publicKey, pkSeed, pubRoot, context: getContext(pkSeed) };
++        },
++        verifyPrecomputed: (sig, msg, exp, opts = {}) => verifyCore(sig, msg, exp.publicKey, opts, exp),
++        verify: (sig, msg, publicKey, opts = {}) => verifyCore(sig, msg, publicKey, opts, null),
++    });
++    function signCore(msg, sk, opts, cache) {
+             opts = validateSigOpts(opts, INTERNAL_SIG_OPT_KEYS);
+             let { extraEntropy: random } = opts;
+             const [skSeed, skPRF, pk] = secretCoder.decode(sk); // todo: fix
+@@ -389,7 +469,7 @@
+             else
+                 random = copyBytes(random);
+             abytes(random, N);
+-            const context = getContext(pkSeed, skSeed);
++            const context = cache ? cache.context : getContext(pkSeed, skSeed);
+             // Generate randomizer
+             const R = context.PRFmsg(skPRF, random, msg); // R ← PRFmsg(SK.prf, opt_rand, M)
+             let { tree, leafIdx, md } = hashMessage(R, pk, msg, context);
+@@ -432,23 +512,27 @@
+             for (let i = 0; i < D; i++, tree >>= BigInt(TREE_HEIGHT)) {
+                 setAddr({ tree, layer: i }, treeAddr);
+                 setAddr({ subtreeAddr: treeAddr, keypair: leafIdx }, wotsAddr);
+-                const { sigWots, sigAuth, root: r, } = merkleSign(context, wotsAddr, treeAddr, leafIdx, root);
++                const { sigWots, sigAuth, root: r, } = cache && i === D - 1
++                    ? merkleSignCached(context, wotsAddr, leafIdx, root, cache.levels)
++                    : merkleSign(context, wotsAddr, treeAddr, leafIdx, root);
+                 root.set(r);
+-                cleanBytes(r);
++                if (!cache || i !== D - 1)
++                    cleanBytes(r);
+                 wots.push([sigWots, sigAuth]);
+                 leafIdx = Number(tree & getMaskBig(TREE_HEIGHT));
+             }
+-            context.clean();
++            if (!cache)
++                context.clean();
+             const SIG = sigCoder.encode([R, fors, wots]);
+             cleanBytes(R, random, treeAddr, wotsAddr, forsLeaf, forsTreeAddr, indices, roots);
+             return SIG;
+-        },
+-        verify: (sig, msg, publicKey, opts = {}) => {
++    }
++    function verifyCore(sig, msg, publicKey, opts, cache) {
+             // The internal verify reads no options; reject any so a stray key (e.g. a caller
+             // mistaking this for the public verify and passing `context`) is reported rather than
+             // silently swallowed by this function's arity.
+             validateVerOpts(opts, INTERNAL_VER_OPT_KEYS);
+-            const [pkSeed, pubRoot] = publicCoder.decode(publicKey);
++            const [pkSeed, pubRoot] = cache ? [cache.pkSeed, cache.pubRoot] : publicCoder.decode(publicKey);
+             const pk = publicKey;
+             // FIPS 205 Algorithm 20 step 1: wrong-length signatures return false instead of throwing
+             // (same as ml-dsa). Must run before sigCoder.decode, which throws on length mismatch.
+@@ -457,7 +541,7 @@
+             if (sig.length !== sigCoder.bytesLen)
+                 return false;
+             const [random, forsVec, wotsVec] = sigCoder.decode(sig);
+-            const context = getContext(pkSeed);
++            const context = cache ? cache.context : getContext(pkSeed);
+             let { tree, leafIdx, md } = hashMessage(random, pk, msg, context);
+             const wotsAddr = setAddr({
+                 type: AddressType.WOTS,
+@@ -513,14 +597,27 @@
+                 leafIdx = Number(tree & getMaskBig(TREE_HEIGHT));
+             }
+             return equalBytes(root, pubRoot);
+-        },
+-    });
++    }
+     return Object.freeze({
+         info: Object.freeze({ type: 'slh-dsa' }),
+         internal,
+         securityLevel: securityLevel,
+         lengths: internal.lengths,
+         keygen: internal.keygen,
++        // pqc-signatures fork: precomputation APIs (pure SLH-DSA; context handled like sign/verify).
++        expandSk: internal.expandSk,
++        signPrecomputed: (msg, exp, opts = {}) => {
++            opts = validateSigOpts(opts);
++            const M = getMessage(msg, opts.context);
++            const res = internal.signPrecomputed(M, exp, { extraEntropy: opts.extraEntropy });
++            cleanBytes(M);
++            return res;
++        },
++        expandPk: internal.expandPk,
++        verifyPrecomputed: (sig, msg, exp, opts = {}) => {
++            opts = validateVerOpts(opts);
++            return internal.verifyPrecomputed(sig, getMessage(msg, opts.context), exp);
++        },
+         getPublicKey: internal.getPublicKey,
+         sign: (msg, secretKey, opts = {}) => {
+             opts = validateSigOpts(opts);

@@ -1,0 +1,237 @@
+--- ../../node_modules/@noble/post-quantum/ml-dsa.js	2026-10-11 09:55:28.307303786 +0000
++++ build/vendor/ml-dsa.js	2026-10-11 10:11:57.136849045 +0000
+@@ -9,8 +9,9 @@
+  */
+ /*! noble-post-quantum - MIT License (c) 2024 Paul Miller (paulmillr.com) */
+ import { abool } from '@noble/curves/utils.js';
+-import { shake256 } from '@noble/hashes/sha3.js';
+-import { genCrystals, XOF128, XOF256 } from "./_crystals.js";
++// pqc-signatures fork: hash layer is pluggable (NOBLE_PQ_HASH=native -> node:crypto).
++import { shake256, XOF128, XOF256 } from '../../src/hashlayer.mjs';
++import { genCrystals } from "./_crystals.js";
+ import { abytes, checkHash, cleanBytes, equalBytes, getMessage, getMessagePrehash, randomBytes, splitCoder, validateSigOpts, validateVerOpts, checkOptKeys, vecCoder, } from "./utils.js";
+ /**
+  * Keys each internal surface accepts.
+@@ -153,7 +154,7 @@
+ }
+ // Instantiate one ML-DSA parameter set from the Table 1 lattice constants plus the
+ // Table 2 byte lengths / hash-width choices used by the public wrappers below.
+-function getDilithium(opts_) {
++export function getDilithium(opts_) {
+     const opts = opts_;
+     const { K, L, GAMMA1, GAMMA2, TAU, ETA, OMEGA } = opts;
+     const { CRH_BYTES, TR_BYTES, C_TILDE_BYTES, XOF128, XOF256, securityLevel } = opts;
+@@ -436,38 +437,11 @@
+             cleanBytes(tmp, s1Hat, _t0, s1, s2);
+             return publicCoder.encode([rho, t1]);
+         },
+-        // NOTE: random is optional.
+-        sign: (msg, secretKey, opts = {}) => {
+-            opts = validateSigOpts(opts, INTERNAL_SIG_OPT_KEYS);
+-            opts = validateInternalOpts(opts, INTERNAL_SIG_OPT_KEYS);
+-            const { extraEntropy: random, externalMu = false } = opts;
+-            // FIPS 204 external-mu mode expects the 64-byte message representative µ = H(tr || M).
+-            if (externalMu)
+-                abytes(msg, CRH_BYTES, 'mu');
+-            // Prepare entropy before touching decoded secrets: randomBytes() may throw, and an RNG
+-            // failure must not leave expanded secret-polynomial copies behind.
+-            const ownRnd = random === false || random === undefined;
+-            const rnd = random === false
+-                ? new Uint8Array(32)
+-                : random === undefined
+-                    ? randomBytes(signRandBytes)
+-                    : random;
+-            abytes(rnd, 32, 'extraEntropy');
+-            // This part can be pre-cached per secretKey, but there is only minor performance improvement,
+-            // since we re-use a lot of variables to computation.
++        // pqc-signatures fork: the per-key part of sign (skDecode, ExpandA, NTT(s1,s2,t0)) is split
++        // out so it can be cached across signatures with the same key (sign.v3 "keycache").
++        expandSk: (secretKey) => {
+             // (ρ, K,tr, s1, s2, t0) ← skDecode(sk)
+-            const decoded = (() => {
+-                try {
+-                    return secretCoder.decode(secretKey);
+-                }
+-                catch (error) {
+-                    // A malformed key must not strand entropy owned by the library.
+-                    if (ownRnd)
+-                        cleanBytes(rnd);
+-                    throw error;
+-                }
+-            })();
+-            const [rho, _K, tr, s1, s2, t0] = decoded;
++            const [rho, _K, tr, s1, s2, t0] = secretCoder.decode(secretKey);
+             // Cache matrix to avoid re-compute later
+             const A = []; // A ← ExpandA(ρ)
+             const xof = XOF128(rho);
+@@ -484,6 +458,77 @@
+                 crystals.NTT.encode(s2[i]); // sˆ2 ← NTT(s2)
+                 crystals.NTT.encode(t0[i]); // tˆ0 ← NTT(t0)
+             }
++            return { rho, K: _K, tr, s1, s2, t0, A };
++        },
++        // NOTE: random is optional.
++        sign: (msg, secretKey, opts = {}) => {
++            const { rnd, ownRnd, externalMu } = prepareSignOpts(msg, opts);
++            // This part can be pre-cached per secretKey (see expandSk / signPrecomputed).
++            let exp;
++            try {
++                exp = internal.expandSk(secretKey);
++            }
++            catch (error) {
++                // A malformed key must not strand entropy owned by the library.
++                if (ownRnd)
++                    cleanBytes(rnd);
++                throw error;
++            }
++            const res = signExpanded(msg, exp, rnd, ownRnd, externalMu);
++            // rho, _K, tr is subarray of secretKey, cannot clean.
++            cleanBytes(exp.s1, exp.s2, exp.t0, ...exp.A);
++            return res;
++        },
++        // Same as sign(), but with the expanded key from expandSk() (kept intact for reuse).
++        signPrecomputed: (msg, exp, opts = {}) => {
++            const { rnd, ownRnd, externalMu } = prepareSignOpts(msg, opts);
++            return signExpanded(msg, exp, rnd, ownRnd, externalMu);
++        },
++        // pqc-signatures fork: per-public-key precomputation for verify (verify.v3 "pkcache").
++        expandPk: (publicKey) => {
++            const [rho, t1] = publicCoder.decode(publicKey); // (ρ, t1) ← pkDecode(pk)
++            const tr = shake256(publicKey, { dkLen: TR_BYTES }); // tr ← H(BytesToBits(pk), 512)
++            const A = []; // A ← ExpandA(ρ)
++            const xof = XOF128(rho);
++            for (let i = 0; i < K; i++) {
++                const pv = [];
++                for (let j = 0; j < L; j++)
++                    pv.push(RejNTTPoly(xof.get(j, i)));
++                A.push(pv);
++            }
++            xof.clean();
++            const t1Hat = t1.map((p) => crystals.NTT.encode(polyShiftl(p))); // NTT(t1 * 2^d)
++            return { rho, tr, A, t1Hat };
++        },
++        verify: (sig, msg, publicKey, opts = {}) => verifyInternal(sig, msg, publicKey, opts),
++        verifyPrecomputed: (sig, msg, exp, opts = {}) => {
++            opts = validateInternalOpts(opts, INTERNAL_VER_OPT_KEYS);
++            const { externalMu = false } = opts;
++            if (externalMu)
++                abytes(msg, CRH_BYTES, 'mu');
++            return verifyExpanded(sig, msg, exp, externalMu);
++        },
++    });
++    function prepareSignOpts(msg, opts) {
++        opts = validateSigOpts(opts, INTERNAL_SIG_OPT_KEYS);
++        opts = validateInternalOpts(opts, INTERNAL_SIG_OPT_KEYS);
++        const { extraEntropy: random, externalMu = false } = opts;
++        // FIPS 204 external-mu mode expects the 64-byte message representative µ = H(tr || M).
++        if (externalMu)
++            abytes(msg, CRH_BYTES, 'mu');
++        // Prepare entropy before touching decoded secrets: randomBytes() may throw, and an RNG
++        // failure must not leave expanded secret-polynomial copies behind.
++        const ownRnd = random === false || random === undefined;
++        const rnd = random === false
++            ? new Uint8Array(32)
++            : random === undefined
++                ? randomBytes(signRandBytes)
++                : random;
++        abytes(rnd, 32, 'extraEntropy');
++        return { rnd, ownRnd, externalMu };
++    }
++    function signExpanded(msg, exp, rnd, ownRnd, externalMu) {
++            const { K: _K, tr, s1, s2, t0, A } = exp;
+             // This part is per msg
+             const mu = externalMu
+                 ? msg
+@@ -566,8 +611,8 @@
+                 }
+                 x256.clean();
+                 const res = sigCoder.encode([cTilde, cs1, h]); // σ ← sigEncode(c˜, z mod±q, h)
+-                // rho, _K, tr is subarray of secretKey, cannot clean.
+-                cleanBytes(cTilde, cs1, h, cHat, w1, w, z, y, rhoprime, s1, s2, t0, ...A);
++                // s1, s2, t0, A belong to the (possibly cached) expanded key; sign() wipes them.
++                cleanBytes(cTilde, cs1, h, cHat, w1, w, z, y, rhoprime);
+                 // `externalMu` hands ownership of `mu` to the caller,
+                 // so only wipe the internally derived digest form here;
+                 // zeroizing caller memory would break the caller's own reuse / verify path.
+@@ -577,8 +622,8 @@
+             }
+             // @ts-ignore
+             throw new Error('Unreachable code path reached, report this error');
+-        },
+-        verify: (sig, msg, publicKey, opts = {}) => {
++    }
++    function verifyInternal(sig, msg, publicKey, opts = {}) {
+             opts = validateInternalOpts(opts, INTERNAL_VER_OPT_KEYS);
+             const { externalMu = false } = opts;
+             // FIPS 204 external-mu mode expects the 64-byte message representative µ = H(tr || M).
+@@ -587,6 +632,12 @@
+             // ML-DSA.Verify(pk, M, σ): Verifes a signature σ for a message M.
+             const [rho, t1] = publicCoder.decode(publicKey); // (ρ, t1) ← pkDecode(pk)
+             const tr = shake256(publicKey, { dkLen: TR_BYTES }); // 6: tr ← H(BytesToBits(pk), 512)
++            return verifyExpanded(sig, msg, { rho, t1, tr, A: null, t1Hat: null }, externalMu);
++    }
++    // pqc-signatures fork: verify core; `exp` either carries pkDecode output (rho, t1, tr) and
++    // expands A on the fly (original behaviour), or carries the cached A and NTT(t1*2^d).
++    function verifyExpanded(sig, msg, exp, externalMu) {
++            const { rho, t1, tr, A, t1Hat } = exp;
+             if (sig.length !== sigCoder.bytesLen)
+                 return false; // return false instead of exception
+             // (c˜, z, h) ← sigDecode(σ)
+@@ -607,12 +658,14 @@
+             for (let i = 0; i < L; i++)
+                 crystals.NTT.encode(zNtt[i]);
+             const wTick1 = [];
+-            const xof = XOF128(rho);
++            const xof = A === null ? XOF128(rho) : null;
+             for (let i = 0; i < K; i++) {
+-                const ct12d = MultiplyNTTs(crystals.NTT.encode(polyShiftl(t1[i])), c); //c * t1 * (2**d)
++                const ct12d = A === null
++                    ? MultiplyNTTs(crystals.NTT.encode(polyShiftl(t1[i])), c) //c * t1 * (2**d)
++                    : MultiplyNTTs(t1Hat[i], c);
+                 const Az = newPoly(N); // // A * z
+                 for (let j = 0; j < L; j++) {
+-                    const aij = RejNTTPoly(xof.get(j, i)); // A[i][j] inplace
++                    const aij = A === null ? RejNTTPoly(xof.get(j, i)) : A[i][j]; // A[i][j] inplace
+                     polyAdd(Az, MultiplyNTTs(aij, zNtt[j]));
+                 }
+                 // wApprox = A*z - c*t1 * (2**d)
+@@ -620,7 +673,8 @@
+                 // Reconstruction of signer’s commitment
+                 wTick1.push(polyUseHint(wApprox, h[i])); // w ′ ← UseHint(h, w'approx )
+             }
+-            xof.clean();
++            if (xof)
++                xof.clean();
+             // c˜′← H (µ||w1Encode(w′1), 2λ),  Hash it; this should match c˜
+             const c2 = shake256
+                 .create({ dkLen: C_TILDE_BYTES })
+@@ -638,13 +692,27 @@
+                 if (polyChknorm(t, GAMMA1 - BETA))
+                     return false;
+             return equalBytes(cTilde, c2);
+-        },
+-    });
++    }
+     return Object.freeze({
+         info: Object.freeze({ type: 'ml-dsa' }),
+         internal,
+         securityLevel: securityLevel,
+         keygen: internal.keygen,
++        // pqc-signatures fork: precomputation APIs (pure ML-DSA, empty context only).
++        expandSk: internal.expandSk,
++        signPrecomputed: (msg, exp, opts = {}) => {
++            opts = validateSigOpts(opts);
++            const M = getMessage(msg, opts.context);
++            const res = internal.signPrecomputed(M, exp, { extraEntropy: opts.extraEntropy, externalMu: false });
++            cleanBytes(M);
++            return res;
++        },
++        expandPk: internal.expandPk,
++        verifyPrecomputed: (sig, msg, exp, opts = {}) => {
++            opts = validateVerOpts(opts);
++            abytes(sig, undefined, 'signature');
++            return internal.verifyPrecomputed(sig, getMessage(msg, opts.context), exp, { externalMu: false });
++        },
+         lengths: internal.lengths,
+         getPublicKey: internal.getPublicKey,
+         sign: (msg, secretKey, opts = {}) => {
