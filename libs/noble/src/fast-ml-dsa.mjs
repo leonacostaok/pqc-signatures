@@ -9,12 +9,18 @@
 //   - decompose / HighBits / LowBits / Power2Round / MakeHint / UseHint are inlined loops
 //     without per-coefficient {r1, r0} object allocation.
 //   - No per-iteration cleanBytes() wiping of rejected buffers.
-//   - Same hash layer as the vendored fork (hashlayer.mjs), so the native-XOF option composes.
+//   - SHAKE128/256 run on a generated, fully unrolled Keccak-f[1600] (fast-keccak.mjs, ~2.4x
+//     noble's keccakP); with NOBLE_PQ_HASH=native the node:crypto shim is used instead ("allin").
 // Packing (bit coders) and the SHAKE-based samplers reuse noble's code structure verbatim.
-import { shake256, XOF128, XOF256 } from './hashlayer.mjs';
+import { HASH_BACKEND } from './hashlayer.mjs';
+import * as fastShake from './fast-shake.mjs';
+import * as nativeHash from './native-hash.mjs';
 import { genCrystals } from '@noble/post-quantum/_crystals.js';
 import { equalBytes, getMessage, splitCoder, vecCoder } from '@noble/post-quantum/utils.js';
 import { PARAMS } from '@noble/post-quantum/ml-dsa.js';
+
+// SHAKE: generated unrolled keccak (fast-shake.mjs) or node:crypto (NOBLE_PQ_HASH=native)
+const { shake256, XOF128, XOF256 } = HASH_BACKEND === 'native' ? nativeHash : fastShake;
 
 const N = 256;
 const Q = 8380417;

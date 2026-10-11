@@ -32,20 +32,20 @@ NATIVE=(-DOQS_DIST_BUILD=OFF -DOQS_OPT_TARGET=auto)
 VARIANTS=(
 "keygen.v0|dist|api|1|baseline|Default liboqs 0.16.0 build (OQS_DIST_BUILD=ON, gcc 13 -O3, run-time AVX2 dispatch); OQS_SIG_keypair with the seed supplied through OQS_randombytes_custom_algorithm."
 "keygen.v1|dist|direct|1|internal-seeded|Calls the vendored seeded keygen functions directly (mld_sign_keypair_internal(seed) / slh_keygen_internal(SK.seed,SK.prf,PK.seed)): no OQS_SIG dispatcher, no RNG callback, no per-call CPU-feature check."
-"keygen.v2|native|api|1|march-native|liboqs built with OQS_DIST_BUILD=OFF and OQS_OPT_TARGET=auto (-march=native): all C code tuned for this CPU and the AVX2/BMI2 ML-DSA backend selected at compile time instead of run time."
-"keygen.v3|clang|api|1|clang-native|Same -march=native non-dist configuration compiled with clang 18 instead of gcc 13 (different vectoriser and scheduler for the portable hash/polynomial C code)."
-"keygen.v4|pgo|api|1|gcc-pgo|gcc profile-guided optimisation on the -march=native build: -fprofile-generate, a training run over every param/op, then rebuild with -fprofile-use."
+"keygen.v2|native|api|1|march-native|liboqs built with OQS_DIST_BUILD=OFF and OQS_OPT_TARGET=auto (-march=native): all C code tuned for this CPU, AVX2/BMI2 backend bound at compile time, plus the AVX512VL SHA-3 callbacks re-selected at run time (non-dist builds otherwise drop them)."
+"keygen.v3|clang|api|1|clang-native|Same -march=native non-dist configuration (AVX512VL SHA-3 callbacks re-selected) compiled with clang 18 instead of gcc 13 (different vectoriser and scheduler for the portable hash/polynomial C code)."
+"keygen.v4|pgo|api|1|gcc-pgo|gcc profile-guided optimisation on the -march=native build (AVX512VL SHA-3 callbacks re-selected): -fprofile-generate, a training run over every param/op, then rebuild with -fprofile-use."
 "keygen.v5|dist|api|4|pthread-x4|Baseline build; four pthreads generate keys concurrently from the same seed (batch throughput, wall per op = batch wall / batch size)."
 "sign.v0|dist|api|1|baseline|Default liboqs build; OQS_SIG_sign with rnd = 0^32 (ML-DSA) / opt_rand = PK.seed (SLH-DSA) supplied through OQS_randombytes_custom_algorithm (FIPS deterministic variants)."
 "sign.v1|dist|direct|1|internal-deterministic|Calls mld_sign_signature_internal with an all-zero rnd and slh_sign with addrnd = NULL directly: the standard deterministic variants without the dispatcher, the RNG callback or the per-call CPU check."
-"sign.v2|native|api|1|march-native|liboqs built with OQS_DIST_BUILD=OFF, OQS_OPT_TARGET=auto (-march=native, compile-time AVX2 selection)."
+"sign.v2|native|api|1|march-native|liboqs built with OQS_DIST_BUILD=OFF, OQS_OPT_TARGET=auto (-march=native, compile-time AVX2 selection, AVX512VL SHA-3 callbacks re-selected at run time)."
 "sign.v3|fasthash|api|1|fasthash|liboqs patched so slhdsa-c's private hash core uses OpenSSL's assembly SHA-256/SHA-512 block functions and liboqs's own AVX2 XKCP Keccak-f[1600] instead of its portable C versions (ML-DSA/Falcon unchanged)."
-"sign.v4|pgo|api|1|gcc-pgo|gcc profile-guided optimisation (-fprofile-generate, training run, -fprofile-use) on top of -march=native."
+"sign.v4|pgo|api|1|gcc-pgo|gcc profile-guided optimisation (-fprofile-generate, training run, -fprofile-use) on top of -march=native, AVX512VL SHA-3 callbacks re-selected."
 "sign.v5|dist|api|4|pthread-x4|Baseline build; four pthreads sign the same message concurrently (batch throughput)."
 "verify.v0|dist|api|1|baseline|Default liboqs build; OQS_SIG_verify through the OQS_SIG dispatcher."
 "verify.v1|dist|direct|1|internal-direct|mld_sign_verify_internal / slh_verify called directly, bypassing the OQS_SIG function-pointer dispatch and the per-call CPU-feature check."
-"verify.v2|lto|api|1|gcc-lto|-march=native build with CMAKE_INTERPROCEDURAL_OPTIMIZATION=ON (gcc -flto) for liboqs and the driver: cross-module inlining of the hash and NTT helpers."
-"verify.v3|clang|api|1|clang-native|-march=native non-dist build compiled with clang 18 instead of gcc 13."
+"verify.v2|lto|api|1|gcc-lto|-march=native build with CMAKE_INTERPROCEDURAL_OPTIMIZATION=ON (gcc -flto) for liboqs and the driver (cross-module inlining of the hash and NTT helpers), AVX512VL SHA-3 callbacks re-selected."
+"verify.v3|clang|api|1|clang-native|-march=native non-dist build compiled with clang 18 instead of gcc 13, AVX512VL SHA-3 callbacks re-selected."
 "verify.v4|fasthash|api|1|fasthash|liboqs patched so SLH-DSA hashing uses OpenSSL SHA-2 block functions and liboqs's AVX2 Keccak permutation (ML-DSA/Falcon unchanged)."
 "verify.v5|dist|api|4|pthread-x4|Baseline build; four pthreads verify the same signature concurrently (batch throughput)."
 )
@@ -193,7 +193,9 @@ cmd_bench() {
     in_csv "$ops" "$op" || continue
     in_csv "$variants" "$id" || continue
     local cc="gcc $gccv"; [ "$b" = clang ] && cc="clang $clangv"
-    local args=(--budget-ms "$budget" --path "$path" --threads "$threads" --variant "$id" --variant-name "$name" --variant-desc "$desc" --ops "$op" --runtime "liboqs $LIBOQS_TAG static, $cc, flavour=$b")
+    local args=()
+    case "$b" in native|clang|lto|pgo) args+=(--sha3 avx512vl) ;; esac
+    args+=(--budget-ms "$budget" --path "$path" --threads "$threads" --variant "$id" --variant-name "$name" --variant-desc "$desc" --ops "$op" --runtime "liboqs $LIBOQS_TAG static, $cc, flavour=$b")
     [ -n "$params" ] && args+=(--params "$params")
     log "bench $id ($b/$path/t$threads)"
     "$BUILD/$b/bench" bench "$BUILD/spec.txt" "${args[@]}" >> "$out"

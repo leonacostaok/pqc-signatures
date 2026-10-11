@@ -636,6 +636,28 @@ static int in_list(const char *list, const char *item) {
 	return 0;
 }
 
+/* Non-dist liboqs builds never install the AVX512VL SHA-3 backend (the
+ * selection only exists in the OQS_DIST_X86_64_BUILD branch of
+ * Keccak_Dispatch), so they run SHAKE on the AVX2 Keccak. --sha3 avx512vl
+ * re-selects it at run time through the public callback API. */
+#if defined(OQS_USE_SHA3_AVX512VL)
+extern const struct OQS_SHA3_callbacks sha3_avx512vl_callbacks;
+extern const struct OQS_SHA3_x4_callbacks sha3_x4_avx512vl_callbacks;
+#endif
+static int select_sha3(const char *which) {
+	if (strcmp(which, "avx512vl")) return 0;
+#if defined(OQS_USE_SHA3_AVX512VL)
+	/* OQS_CPU_has_extension() always returns 0 in non-dist builds, so use the compiler's probe */
+	if (__builtin_cpu_supports("avx512f") && __builtin_cpu_supports("avx512vl")) {
+		OQS_SHA3_set_callbacks((struct OQS_SHA3_callbacks *)&sha3_avx512vl_callbacks);
+		OQS_SHA3_x4_set_callbacks((struct OQS_SHA3_x4_callbacks *)&sha3_x4_avx512vl_callbacks);
+		return 1;
+	}
+#endif
+	fprintf(stderr, "bench: AVX512VL SHA-3 backend not available, keeping default\n");
+	return 0;
+}
+
 static int cmd_bench(int argc, char **argv) {
 	bench_cfg_t cfg = { OQS_VERSION_TEXT, "c", "liboqs", "x.v0", "baseline", "", 1, PATH_API, 1000 };
 	const char *params = NULL, *ops = NULL;
@@ -649,6 +671,7 @@ static int cmd_bench(int argc, char **argv) {
 		else if (!strcmp(argv[i], "--variant-name") && i + 1 < argc) cfg.variant_name = argv[++i];
 		else if (!strcmp(argv[i], "--variant-desc") && i + 1 < argc) cfg.variant_desc = argv[++i];
 		else if (!strcmp(argv[i], "--runtime") && i + 1 < argc) cfg.runtime = argv[++i];
+		else if (!strcmp(argv[i], "--sha3") && i + 1 < argc) select_sha3(argv[++i]);
 		else { fprintf(stderr, "unknown option %s\n", argv[i]); return 2; }
 	}
 	static const char *all_ops[] = {"keygen", "sign", "verify"};
@@ -670,8 +693,12 @@ int main(int argc, char **argv) {
 		return 2;
 	}
 	OQS_init();
+#if defined(OQS_DIST_BUILD)
 	g_have_avx2 = OQS_CPU_has_extension(OQS_CPU_EXT_AVX2) && OQS_CPU_has_extension(OQS_CPU_EXT_BMI2) &&
 	              OQS_CPU_has_extension(OQS_CPU_EXT_POPCNT);
+#elif defined(OQS_USE_AVX2_INSTRUCTIONS) && defined(OQS_USE_BMI2_INSTRUCTIONS) && defined(OQS_USE_POPCNT_INSTRUCTIONS)
+	g_have_avx2 = 1; /* non-dist build: OQS_CPU_has_extension() is a stub, backend chosen at compile time */
+#endif
 	OQS_randombytes_custom_algorithm(fixed_randombytes);
 	load_spec(argv[2]);
 	int rc = 2;

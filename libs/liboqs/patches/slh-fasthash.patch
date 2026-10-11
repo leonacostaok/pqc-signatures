@@ -51,10 +51,10 @@ index 0cf2f0028..2f5df76fb 100644
    static const uint64_t keccak_rc[24] = {
 diff --git a/src/sig/slh_dsa/slh_dsa_c/slh_fasthash.c b/src/sig/slh_dsa/slh_dsa_c/slh_fasthash.c
 new file mode 100644
-index 000000000..604f33b50
+index 000000000..96d243ffe
 --- /dev/null
 +++ b/src/sig/slh_dsa/slh_dsa_c/slh_fasthash.c
-@@ -0,0 +1,69 @@
+@@ -0,0 +1,73 @@
 +/*
 + * pqc-signatures "fasthash" variant: route the slhdsa-c hash core to
 + * optimized primitives that liboqs / OpenSSL already ship.
@@ -111,7 +111,11 @@ index 000000000..604f33b50
 +void keccak_f1600(uint64_t x[25])
 +{
 +#if defined(OQS_ENABLE_SHA3_xkcp_low_avx2)
++#if defined(OQS_DIST_BUILD)
 +  if (use_avx2 < 0) use_avx2 = OQS_CPU_has_extension(OQS_CPU_EXT_AVX2) ? 1 : 0;
++#else
++  use_avx2 = 1; /* non-dist build: the AVX2 objects exist only if the target has AVX2 */
++#endif
 +  if (use_avx2)
 +  {
 +    uint64_t st[25] __attribute__((aligned(32)));

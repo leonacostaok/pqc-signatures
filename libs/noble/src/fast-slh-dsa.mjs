@@ -5,7 +5,8 @@
 //     on a pre-padded block: for SHA2 the block `ADRSc || M || pad` is filled into a fixed buffer
 //     and `_SHA256.process()` / `_SHA512.process()` is run from the cached `PK.seed || 0..`
 //     midstate (no update()/digestInto()/clone(), no length bookkeeping); for SHAKE the 200-byte
-//     sponge state is reset from the cached `PK.seed` state and `keccakP()` is invoked once.
+//     sponge state is reset from the cached `PK.seed` state and a generated, fully unrolled
+//     Keccak-f[1600] (fast-keccak.mjs, ~2.4x noble's keccakP) is invoked once.
 //     Everything else (T_l over WOTS public keys, FORS roots, Hmsg, PRFmsg) uses the generic path.
 //   - ADRS words are written through small offset helpers instead of noble's setAddr({...})
 //     (which allocates an options object and does 8 Object.hasOwn checks per call).
@@ -14,7 +15,7 @@
 // A "native" lane (NOBLE_PQ_HASH=native) replaces the compression-function calls with one-shot
 // node:crypto hashes of the full input, for the "allin" variant.
 import { _SHA256, _SHA512, sha256 as nobleSha256, sha512 as nobleSha512 } from '@noble/hashes/sha2.js';
-import { keccakP, shake256 as nobleShake256 } from '@noble/hashes/sha3.js';
+import { keccakP } from './fast-keccak.mjs';
 import { hmac as nobleHmac } from '@noble/hashes/hmac.js';
 import { u32, swap32IfBE } from '@noble/hashes/utils.js';
 import { createHash, createHmac, hash as oneShot } from 'node:crypto';
@@ -252,7 +253,7 @@ const genShakeLane = () => (opts) => (pubSeed, skSeed) => {
   mid.set(pubSeed);
   const permute = () => {
     swap32IfBE(state32);
-    keccakP(state32, 24);
+    keccakP(state32);
     swap32IfBE(state32);
   };
   // single-block absorb of PK.seed || ADRS || M (N + 32 + len <= 135), one permutation
