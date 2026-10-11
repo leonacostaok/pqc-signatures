@@ -46,3 +46,17 @@ offers no per-operation live-set peak without a heap walk, and pool peak-usage c
 * Stage lines show where the allocation goes inside a verify (expandA and decode for ML-DSA).
 
 <!-- RESULTS -->
+
+## Results (preliminary dev run on a shared 4-core box)
+
+stack = peak stack of one op (bytes, resolution = one compiled recursion frame); heap = allocated bytes per op.
+
+### ML-DSA-44
+
+| op | variant | stack bytes | heap alloc bytes/op | threads | match |
+|---|---|---|---|---|---|
+| keygen | `keygen.v0` | 1936 | 67968 | 1 | True |
+| keygen | `keygen.v1` | 240 | 67648 | 1 | True |
+| keygen | `keygen.v2` | 448 | 67424 | 1 | True |
+| keygen | `keygen.v3` | 384 | 63328 | 1 | True |
+| keygen | `keygen.v4` | 400 | 63486 | 4 | True |

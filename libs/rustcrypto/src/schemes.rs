@@ -14,6 +14,7 @@ pub type VerifyCtxFn = Box<dyn Fn(&[u8], &[u8], &[u8]) -> bool + Send + Sync>;
 
 pub trait Scheme: Send + Sync {
     fn name(&self) -> &'static str;
+    #[allow(dead_code)]
     fn family(&self) -> &'static str;
     /// sign with a context string (pure mode, deterministic); None when ctx > 255 bytes or sk malformed
     fn sign_ctx(&self, sk: &[u8], msg: &[u8], ctx: &[u8]) -> Option<Vec<u8>>;

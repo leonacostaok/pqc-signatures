@@ -5,13 +5,13 @@ use crate::fasthash::{self, RawSha256, RawSha512, SHA256_IV, SHA512_IV};
 use hybrid_array::{typenum::Unsigned, Array};
 use rayon::prelude::*;
 use slh_dsa::address::{ForsTree, WotsHash};
-use slh_dsa::fors::ForsParams;
-use slh_dsa::hashes::HashSuite;
-use slh_dsa::hypertree::HypertreeParams;
+use slh_dsa::fors::ForsParams as _;
+use slh_dsa::hashes::HashSuite as _;
+use slh_dsa::hypertree::HypertreeParams as _;
 use slh_dsa::util::split_digest;
-use slh_dsa::wots::WotsParams;
-use slh_dsa::xmss::XmssParams;
-use slh_dsa::{ParameterSet, PkSeed, Signature};
+use slh_dsa::wots::WotsParams as _;
+use slh_dsa::xmss::XmssParams as _;
+use slh_dsa::{ParameterSet, Signature};
 
 pub type Bytes = Vec<u8>;
 

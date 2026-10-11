@@ -9,7 +9,7 @@ use crate::{lib_version, runtime, sha256_hex, BUILD_TAG, LIB};
 use hybrid_array::{typenum::Unsigned, Array};
 use ml_dsa::param::MlDsaParams;
 use serde::Serialize;
-use slh_dsa::hashes::HashSuite;
+use slh_dsa::hashes::HashSuite as _;
 use slh_dsa::ParameterSet;
 use std::io::Write;
 use std::sync::Arc;

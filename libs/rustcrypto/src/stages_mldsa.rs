@@ -11,9 +11,7 @@ use ml_dsa::algebra::{AlgebraExt, Elem, NttMatrix, NttPolynomial, NttVector, Pol
 use ml_dsa::crypto::H;
 use ml_dsa::hint::Hint;
 use ml_dsa::ntt::{Ntt, NttInverse};
-use ml_dsa::param::{EncodedSignature, EncodedVerifyingKey, MlDsaParams, ParameterSet, SignatureParams, VerifyingKeyParams};
-#[allow(unused_imports)]
-use ml_dsa::param::SignatureParams as _;
+use ml_dsa::param::{EncodedSignature, EncodedVerifyingKey, MlDsaParams, ParameterSet, SignatureParams as _, VerifyingKeyParams as _};
 use ml_dsa::sampling::{expand_a, rej_ntt_poly, sample_in_ball};
 use ml_dsa::{MuBuilder, B32, B64};
 use rayon::prelude::*;

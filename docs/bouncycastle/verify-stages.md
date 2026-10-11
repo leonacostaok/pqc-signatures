@@ -87,3 +87,43 @@ and the only large single-thread gains are the per-key caches; the lazy-reductio
 effects within the noise of the dev box.
 
 <!-- RESULTS -->
+
+## Results (preliminary dev run on a shared 4-core box)
+
+Median wall per stage execution (us); speedup = median of `<stage>.v0` / median of the variant; match = canonical output equals v0's.
+
+### ML-DSA-44
+
+| stage | variant | iters | median us | p95 us | cpu/op us | threads | speedup vs v0 | match |
+|---|---|---|---|---|---|---|---|---|
+| decode | `decode.v0` bc | 5504 | 12.1 | 21.2 | 30.9 | 1 | 1.00x | True |
+| decode | `decode.v1` wide-unpack | 12244 | 4.0 | 5.5 | 16.3 | 1 | 3.05x | True |
+| decode | `decode.v2` c2-only | 6397 | 6.2 | 9.8 | 28.1 | 1 | 1.95x | True |
+| mu | `mu.v0` bc | 19272 | 5.3 | 8.1 | 7.8 | 1 | 1.00x | True |
+| mu | `mu.v1` cached-tr | 56690 | 0.6 | 0.9 | 1.8 | 1 | 8.46x | True |
+| mu | `mu.v2` own-keccak | 9962 | 5.3 | 9.7 | 10.0 | 1 | 1.00x | True |
+| expandA | `expandA.v0` bc | 959 | 46.8 | 68.2 | 125.1 | 1 | 1.00x | True |
+| expandA | `expandA.v1` cached-A | 2276 | 0.0 | 0.1 | 61.5 | 1 | 1375.59x | True |
+| expandA | `expandA.v2` parallel-rows | 1522 | 70.3 | 111.0 | 164.3 | 4 | 0.67x | True |
+| expandA | `expandA.v3` own-keccak | 999 | 49.7 | 73.3 | 110.1 | 1 | 0.94x | True |
+| expandA | `expandA.v4` c2-only | 488 | 74.1 | 128.5 | 225.4 | 1 | 0.63x | True |
+| w_approx | `w_approx.v0` bc | 421 | 39.7 | 80.8 | 285.0 | 1 | 1.00x | True |
+| w_approx | `w_approx.v1` cached-ntt-t1 | 2394 | 30.8 | 50.7 | 45.9 | 1 | 1.29x | True |
+
+### Geometric mean speedup vs stage v0 (per family)
+
+| variant | ML-DSA | SLH-DSA SHA2 | SLH-DSA SHAKE |
+|---|---|---|---|
+| `decode.v0` | 1.00x | - | - |
+| `decode.v1` | 3.05x | - | - |
+| `decode.v2` | 1.95x | - | - |
+| `mu.v0` | 1.00x | - | - |
+| `mu.v1` | 8.46x | - | - |
+| `mu.v2` | 1.00x | - | - |
+| `expandA.v0` | 1.00x | - | - |
+| `expandA.v1` | 1375.59x | - | - |
+| `expandA.v2` | 0.67x | - | - |
+| `expandA.v3` | 0.94x | - | - |
+| `expandA.v4` | 0.63x | - | - |
+| `w_approx.v0` | 1.00x | - | - |
+| `w_approx.v1` | 1.29x | - | - |

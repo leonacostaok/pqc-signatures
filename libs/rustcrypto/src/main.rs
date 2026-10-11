@@ -95,7 +95,7 @@ use sha2::{Digest, Sha256};
 use std::collections::BTreeMap;
 use std::io::Write;
 use std::time::Duration;
-use timing::{cpu_time_ns, measure, stats};
+use timing::{measure, stats};
 
 pub const LIB: &str = "rustcrypto";
 pub const BUILD_TAG: &str = env!("PQC_BUILD_TAG");

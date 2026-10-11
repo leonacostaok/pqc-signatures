@@ -38,9 +38,52 @@ Implementation (`Validate.java`, `CaseOps.java`):
   pass/fail/skipped per variant. Nothing is skipped: the slowest siggen cases (SLH-DSA-*-256s, ~1-2 s each) are run
   through all six sign variants.
 
-## Results
+## Findings
 
-Preliminary results of the dev run are below the marker; findings and any failure analysis follow here once the run
-has been examined.
+All 4680 results pass (651 cases x the variants of their process: 195 keygen cases x 6, 69 siggen x 6,
+387 sigver x 8 incl. `total.v0` and `total_best`), with zero skips; the full run took ~16 minutes on the shared dev box (five child JVMs included), dominated by the
+SLH-DSA "s" siggen cases in the six sign variants. Nothing had to be explained away:
+
+* BC 1.86 agrees with the NIST ACVP vectors for all 15 parameter sets, with and without contexts (contexts of 0-255
+  bytes are in the suite), for seed-based keygen, deterministic signing with imported FIPS-encoded secret keys, and
+  signature verification; every ACVP "reason" (modified message / signature parts / commitment / hint / too large /
+  too small) and every negative case of our own (wrong context in both directions, flipped pk, truncated or extended
+  signature, all-zero signature, z coefficient = gamma1, hint count > omega, non-increasing hint indices, non-zero hint
+  padding) is rejected by every verify variant, including the caching `reuse-verifier` and the stage pipelines.
+* The caching variants were the point of this exercise: `reuse-verifier` keeps an initialised `MLDSASigner` per
+  (pk, ctx) and `total_best` keeps nothing between cases, and both reject everything the fresh variants reject. One
+  pitfall surfaced in the memory driver rather than here: a `StackOverflowError` thrown inside a reused `MLDSASigner`
+  leaves its SHAKE state in "squeezing" mode and every later call throws ("attempt to absorb while squeezing"), so a
+  reused signer must be discarded after any error.
+* BC's ML-DSA verify returns `false` (never throws) for malformed signatures, as its javadoc says; the SLH-DSA path
+  rejects wrong signature lengths before parsing (`SIG` would throw on a length mismatch otherwise). No exception
+  reached the "exception treated as reject" path in this run (`error` is null for every sigver result).
 
 <!-- RESULTS -->
+
+## Results (preliminary dev run on a shared 4-core box)
+
+| variant | pass | fail | skipped |
+|---|---|---|---|
+| `keygen.v0` | 195 | 0 | 0 |
+| `keygen.v1` | 195 | 0 | 0 |
+| `keygen.v2` | 195 | 0 | 0 |
+| `keygen.v3` | 195 | 0 | 0 |
+| `keygen.v4` | 195 | 0 | 0 |
+| `keygen.v5` | 195 | 0 | 0 |
+| `sign.v0` | 69 | 0 | 0 |
+| `sign.v1` | 69 | 0 | 0 |
+| `sign.v2` | 69 | 0 | 0 |
+| `sign.v3` | 69 | 0 | 0 |
+| `sign.v4` | 69 | 0 | 0 |
+| `sign.v5` | 69 | 0 | 0 |
+| `total.v0` | 387 | 0 | 0 |
+| `total_best` | 387 | 0 | 0 |
+| `verify.v0` | 387 | 0 | 0 |
+| `verify.v1` | 387 | 0 | 0 |
+| `verify.v2` | 387 | 0 | 0 |
+| `verify.v3` | 387 | 0 | 0 |
+| `verify.v4` | 387 | 0 | 0 |
+| `verify.v5` | 387 | 0 | 0 |
+
+Total results: 4680, failures: 0
