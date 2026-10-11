@@ -16,12 +16,33 @@ has no FN-DSA crate), so this library covers ML-DSA-44/65/87 and all 12 SLH-DSA 
 
 ```
 libs/rustcrypto/
-  Cargo.toml        one bin crate "pqcbench"; profiles release (v0) and lto (fat LTO, cgu=1, panic=abort)
-  build.rs          bakes crate versions, rustc version and the build tag into the binary
-  src/schemes.rs    byte-in/byte-out wrappers (keygen/sign/verify + cached-key closures) for all 15 params
-  src/main.rs       vectors / crossverify / bench subcommands, timing loop, variant table
-  run.sh            contract entry point; builds 7 binaries under target/<tag>/ and runs them in turn
+  Cargo.toml          one bin crate "pqcbench"; profiles release (v0) and lto (fat LTO, cgu=1, panic=abort)
+  build.rs            bakes crate versions, rustc version and the build tag into the binary
+  vendor/ml-dsa       ml-dsa 0.1.1 sources (crates.io), internals made public for the stage split (Phase 2)
+  vendor/slh-dsa      slh-dsa 0.2.0-rc.5 sources, same treatment; both keep their LICENSE-* files
+  src/schemes.rs      byte-in/byte-out wrappers (keygen/sign/verify, with/without context, cached-key closures)
+  src/main.rs         vectors / crossverify / bench / stages / validate / memory subcommands, variant table,
+                      counting global allocator
+  src/timing.rs       contract timing loop (Instant per op, getrusage CPU)
+  src/stages_mldsa.rs ML-DSA verify stages: crate v0 + alternatives (fast unpack, Montgomery NTT, x4 Keccak, ...)
+  src/stages_slhdsa.rs SLH-DSA verify stages: crate v0 + raw fused hashing, 4-lane Keccak, rayon, zero-copy parse
+  src/fasthash.rs     4-lane AVX2 Keccak-f[1600], raw SHAKE/SHA-2 helpers (self-tested: `pqcbench selftest`)
+  src/stages.rs       stage driver, stage variant tables, stage memory ops
+  src/validate.rs     validation suite runner (+ merge of the per-binary partial results)
+  src/memory.rs       painted-stack thread + heap counting measurement
+  run.sh              contract entry point; builds 7 binaries under target/<tag>/ and runs them in turn
 ```
+
+Phase 2 subcommands (see `validation.md`, `verify-stages.md`, `memory.md`):
+
+```
+libs/rustcrypto/run.sh validate common/validation/validation.json.gz results/rustcrypto/validation.json
+libs/rustcrypto/run.sh stages --out results/rustcrypto/stages.jsonl [--budget-ms 1000] [--params ..] [--stages ..]
+libs/rustcrypto/run.sh memory --out results/rustcrypto/memory.jsonl [--params ..]
+```
+`validate` runs all seven binaries (each validates its own variants) and merges; `stages` runs base,
+native, lto and pgo-verify; `memory` runs all seven (each measures its own variants; stage lines come
+from base). Dev filters: `validate ... --params a,b --kinds keygen,siggen,sigver --variants id,id`.
 
 The same source is compiled 7 times with different settings (build tags `base`, `native`, `lto`,
 `mimalloc`, `pgo-keygen`, `pgo-sign`, `pgo-verify`). Every binary knows its tag and `bench` only emits
@@ -91,6 +112,15 @@ Things that were considered and rejected: `keccak` SIMD backends (nightly only),
 (only replaces a handful of `Box`es with stack arrays; the double A_hat expansion in keygen is the same
 either way), external-μ signing (`sign_mu_deterministic`: would move part of the work out of the timed
 region, which is not an honest sign benchmark), randomized signing (cannot byte-match).
+
+## Vendored crates (Phase 2)
+
+Since Phase 2 the harness builds against `vendor/ml-dsa` and `vendor/slh-dsa` (path dependencies)
+instead of the registry crates. The vendored copies are the unmodified published sources except for
+visibility: private modules exported as `#[doc(hidden)] pub mod`, `pub(crate)` → `pub`, public fields
+on the decoded-signature structs and `MuBuilder`, and two sampling helpers made `pub`. The lint tables
+were relaxed accordingly. No algorithm, constant or control flow was touched; `run.sh vectors` still
+reproduces all 15 reference digests and the Phase-1 variant results are unchanged in nature.
 
 ## Problems / caveats
 

@@ -31,8 +31,10 @@ libs/openssl/run.sh build
 | `noasm` | default + `no-asm` | `*.v3` |
 | `native` | default + `-O3 -march=native -flto -ffat-lto-objects` | `*.v4` |
 
-* compiles `src/pqc_driver.c` three times (`-DBUILD_LABEL=<flavour>`, the `native` driver is itself built with
-  `-O3 -march=native -flto` so the LTO link can inline across the libcrypto boundary) into `libs/openssl/build/bin/pqc_driver_<flavour>`.
+* compiles the driver sources (`src/pqc_driver.c`, `pqc_stages.c`, `pqc_validate.c`, `pqc_memory.c`) three
+  times (`-DBUILD_LABEL=<flavour>`, include paths to the source tree's internal headers and the flavour's generated
+  `configuration.h`; the `native` driver is itself built with `-O3 -march=native -flto` so the LTO link can
+  inline across the libcrypto boundary) into `libs/openssl/build/bin/pqc_driver_<flavour>`.
 
 `run.sh bench` simply runs all three binaries with the same arguments; each binary executes only the variants
 that belong to its flavour, so one `bench.jsonl` collects everything. The build is idempotent (each step is
@@ -65,9 +67,20 @@ Every bench line re-derives SHA-256 of its output and compares with the referenc
 libs/openssl/run.sh build
 libs/openssl/run.sh vectors     results/openssl/artifacts.json
 libs/openssl/run.sh crossverify results/<other>/artifacts.json results/openssl/crossverify-<other>.json
-libs/openssl/run.sh bench --out results/openssl/bench.jsonl [--budget-ms 1000] [--params a,b] [--ops keygen,sign] [--variants keygen.v1,sign.v5]
+libs/openssl/run.sh bench    --out results/openssl/bench.jsonl   [--budget-ms 1000] [--params a,b] [--ops keygen,sign] [--variants keygen.v1,sign.v5]
+libs/openssl/run.sh validate common/validation/validation.json.gz results/openssl/validation.json   # phase 2 A
+libs/openssl/run.sh stages   --out results/openssl/stages.jsonl  [--budget-ms 1000] [--params a,b] [--stages expandA,fors,total]  # phase 2 B
+libs/openssl/run.sh memory   --out results/openssl/memory.jsonl  [--params a,b]                     # phase 2 C
 libs/openssl/run.sh list        # variant table
 ```
+
+Phase 2 (see `validation.md`, `verify-stages.md`, `memory.md`): the same three binaries implement the
+validation-suite runner (`src/pqc_validate.c`), the verify stage split (`src/pqc_stages.c`, linked against
+libcrypto's internal `ossl_ml_dsa_*` / `ossl_slh_*` / `ossl_sha3_*` symbols and internal headers, with
+`crypto/ml_dsa/ml_dsa_encoders.c` vendored into the stage TU for the static decoders) and the stack/heap
+measurement (`src/pqc_memory.c`, painted pthread stack + `CRYPTO_set_mem_functions` counters).
+`stages` and `memory` append to their jsonl like `bench`; `validate` writes per-build partial files under
+`libs/openssl/build/validate/` and merges them.
 
 ## Variants at a glance
 

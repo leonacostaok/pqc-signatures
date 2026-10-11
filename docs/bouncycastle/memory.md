@@ -60,3 +60,91 @@ stack = peak stack of one op (bytes, resolution = one compiled recursion frame);
 | keygen | `keygen.v2` | 448 | 67424 | 1 | True |
 | keygen | `keygen.v3` | 384 | 63328 | 1 | True |
 | keygen | `keygen.v4` | 400 | 63486 | 4 | True |
+| keygen | `keygen.v5` | 948 | 67634 | 1 | True |
+| sign | `sign.v0` | 1088 | 79424 | 1 | True |
+| sign | `sign.v1` | 704 | 78992 | 1 | True |
+| sign | `sign.v2` | 416 | 74176 | 1 | True |
+| sign | `sign.v3` | 240 | 74317 | 4 | True |
+| sign | `sign.v4` | 853 | 79617 | 1 | True |
+| sign | `sign.v5` | 1043 | 79333 | 1 | True |
+| verify | `verify.v0` | 480 | 59560 | 1 | True |
+| verify | `verify.v1` | 160 | 59272 | 1 | True |
+| verify | `verify.v2` | 112 | 55688 | 1 | True |
+| verify | `verify.v3` | 160 | 55837 | 4 | True |
+| verify | `verify.v4` | 1011 | 59436 | 1 | True |
+| verify | `verify.v5` | 1074 | 59928 | 1 | True |
+| verify-stage | `decode.v0` | 0 | 18144 | 1 | True |
+| verify-stage | `mu.v0` | 0 | 1152 | 1 | True |
+| verify-stage | `expandA.v0` | 0 | 31600 | 1 | True |
+| verify-stage | `w_approx.v0` | 32 | 14728 | 1 | True |
+| verify-stage | `hint_check.v0` | 0 | 6536 | 1 | True |
+| verify-stage | `total_best` | 1120 | 66616 | 1 | True |
+
+### ML-DSA-87
+
+| op | variant | stack bytes | heap alloc bytes/op | threads | match |
+|---|---|---|---|---|---|
+| keygen | `keygen.v0` | 704 | 176976 | 1 | True |
+| keygen | `keygen.v1` | 224 | 176792 | 1 | True |
+| keygen | `keygen.v2` | 240 | 176600 | 1 | True |
+| keygen | `keygen.v3` | 288 | 168912 | 1 | True |
+| keygen | `keygen.v4` | 288 | 169054 | 4 | True |
+| keygen | `keygen.v5` | 1074 | 176968 | 1 | True |
+| sign | `sign.v0` | 512 | 201592 | 1 | True |
+| sign | `sign.v1` | 480 | 201336 | 1 | True |
+| sign | `sign.v2` | 480 | 194184 | 1 | True |
+| sign | `sign.v3` | 320 | 194332 | 4 | True |
+| sign | `sign.v4` | 1184 | 202064 | 1 | True |
+| sign | `sign.v5` | 1011 | 202064 | 1 | True |
+| verify | `verify.v0` | 384 | 159544 | 1 | True |
+| verify | `verify.v1` | 480 | 159288 | 1 | True |
+| verify | `verify.v2` | 288 | 154424 | 1 | True |
+| verify | `verify.v3` | 160 | 154563 | 4 | True |
+| verify | `verify.v4` | 1165 | 159812 | 1 | True |
+| verify | `verify.v5` | 0 | 159912 | 1 | True |
+| verify-stage | `decode.v0` | 0 | 34864 | 1 | True |
+| verify-stage | `mu.v0` | 0 | 1152 | 1 | True |
+| verify-stage | `expandA.v0` | 0 | 110336 | 1 | True |
+| verify-stage | `w_approx.v0` | 32 | 26568 | 1 | True |
+| verify-stage | `hint_check.v0` | 0 | 11384 | 1 | True |
+| verify-stage | `total_best` | 1120 | 120312 | 1 | True |
+
+### SLH-DSA-SHA2-128f
+
+| op | variant | stack bytes | heap alloc bytes/op | threads | match |
+|---|---|---|---|---|---|
+| keygen | `keygen.v0` | 1280 | 171112 | 1 | True |
+| keygen | `keygen.v1` | 896 | 170928 | 1 | True |
+| keygen | `keygen.v2` | 928 | 170880 | 1 | True |
+| keygen | `keygen.v3` | 1024 | 170880 | 1 | True |
+| keygen | `keygen.v4` | 1024 | 171071 | 4 | True |
+| keygen | `keygen.v5` | 1138 | 170912 | 1 | True |
+| sign | `sign.v0` | 1280 | 4100391 | 1 | True |
+| sign | `sign.v1` | 1312 | 4095280 | 1 | True |
+| sign | `sign.v2` | 1120 | 4095072 | 1 | True |
+| sign | `sign.v3` | 1152 | 4095521 | 4 | True |
+| sign | `sign.v4` | 1612 | 4108288 | 1 | True |
+| sign | `sign.v5` | 1675 | 4101952 | 1 | True |
+| verify | `verify.v0` | 896 | 272024 | 1 | True |
+| verify | `verify.v1` | 1056 | 271560 | 1 | True |
+| verify | `verify.v2` | 896 | 271448 | 1 | True |
+| verify | `verify.v3` | 864 | 271622 | 4 | True |
+| verify | `verify.v4` | 1327 | 274064 | 1 | True |
+| verify | `verify.v5` | 1548 | 274064 | 1 | True |
+| verify-stage | `hmsg.v0` | None | 872 | 1 | False java.lang.RuntimeException: probe failed with java.lang.ArrayIndexOutOfBoundsException: Index 16 out of bounds for length 16 |
+| verify-stage | `fors.v0` | 112 | 24376 | 1 | True |
+| verify-stage | `ht_wots.v0` | 224 | 217384 | 1 | True |
+| verify-stage | `ht_auth.v0` | 0 | 3624 | 1 | True |
+| verify-stage | `total_best` | 960 | 1262497 | 1 | True |
+
+### SLH-DSA-SHAKE-128s
+
+| op | variant | stack bytes | heap alloc bytes/op | threads | match |
+|---|---|---|---|---|---|
+| keygen | `keygen.v0` | 1280 | 10782472 | 1 | True |
+| keygen | `keygen.v1` | 896 | 10782288 | 1 | True |
+| keygen | `keygen.v2` | 1120 | 10782272 | 1 | True |
+| keygen | `keygen.v3` | 1216 | 10782272 | 1 | True |
+| keygen | `keygen.v4` | 1216 | 10782846 | 4 | True |
+| keygen | `keygen.v5` | 1359 | 10782512 | 1 | True |
+| sign | `sign.v0` | 1472 | 83767561 | 1 | True |

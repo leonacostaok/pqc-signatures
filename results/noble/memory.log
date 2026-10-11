@@ -35,3 +35,8 @@
 [noble] memory sign.v1        ML-DSA-44           stack    2288 B  heap/op     146538 B  peak     152336 B  match true  (2.5s)
 [noble] memory sign.v1        ML-DSA-87           stack    2288 B  heap/op     425762 B  peak     437976 B  match true  (5.8s)
 [noble] memory sign.v1        SLH-DSA-SHA2-128f   stack    2808 B  heap/op   23529637 B  peak    7363432 B  match true  (69.5s)
+[noble] memory sign.v1        SLH-DSA-SHAKE-128f  stack    2808 B  heap/op   14872190 B  peak   15597680 B  match true  (412.9s)
+[noble] memory sign.v1        Falcon-512          stack    4992 B  heap/op    6939906 B  peak    8067472 B  match true  (7.0s)
+[noble] memory sign.v2        ML-DSA-44           stack    2288 B  heap/op      41618 B  peak      45264 B  match true  (1.9s)
+[noble] memory sign.v2        ML-DSA-87           stack    1976 B  heap/op      94226 B  peak     101432 B  match true  (2.8s)
+[noble] memory sign.v2        SLH-DSA-SHA2-128f   stack    2808 B  heap/op    9272774 B  peak     967776 B  match true  (32.1s)

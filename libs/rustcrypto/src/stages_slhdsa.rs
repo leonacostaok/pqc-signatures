@@ -7,10 +7,8 @@ use rayon::prelude::*;
 use slh_dsa::address::{ForsTree, WotsHash};
 use slh_dsa::fors::ForsParams as _;
 use slh_dsa::hashes::HashSuite as _;
-use slh_dsa::hypertree::HypertreeParams as _;
 use slh_dsa::util::split_digest;
 use slh_dsa::wots::WotsParams as _;
-use slh_dsa::xmss::XmssParams as _;
 use slh_dsa::{ParameterSet, Signature};
 
 pub type Bytes = Vec<u8>;
