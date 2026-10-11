@@ -3403,3 +3403,400 @@ verify.v2 reuse-verifier     ML-DSA-65            n=5135   median=     158.7 us 
 verify.v2 reuse-verifier     ML-DSA-87            n=3766   median=     257.4 us cpu/op=     270.8 us util=1.02 ops/s=    3765.9 match=true
 verify.v2 reuse-verifier     SLH-DSA-SHA2-128s    n=969    median=     977.8 us cpu/op=    1032.0 us util=1.00 ops/s=     968.1 match=true
 verify.v2 reuse-verifier     SLH-DSA-SHA2-128f    n=332    median=    2851.6 us cpu/op=    3042.2 us util=1.01 ops/s=     331.0 match=true
+verify.v2 reuse-verifier     SLH-DSA-SHA2-192s    n=646    median=    1505.3 us cpu/op=    1532.5 us util=0.99 ops/s=     645.8 match=true
+verify.v2 reuse-verifier     SLH-DSA-SHA2-192f    n=179    median=    4364.1 us cpu/op=    5530.7 us util=0.99 ops/s=     179.0 match=true
+verify.v2 reuse-verifier     SLH-DSA-SHA2-256s    n=337    median=    2349.3 us cpu/op=    2967.4 us util=1.00 ops/s=     337.0 match=true
+verify.v2 reuse-verifier     SLH-DSA-SHA2-256f    n=205    median=    4561.4 us cpu/op=    4829.3 us util=0.99 ops/s=     204.9 match=true
+verify.v2 reuse-verifier     SLH-DSA-SHAKE-128s   n=914    median=    1056.1 us cpu/op=    1094.1 us util=1.00 ops/s=     912.8 match=true
+verify.v2 reuse-verifier     SLH-DSA-SHAKE-128f   n=251    median=    3423.1 us cpu/op=    3904.4 us util=0.98 ops/s=     250.9 match=true
+verify.v2 reuse-verifier     SLH-DSA-SHAKE-192s   n=619    median=    1597.5 us cpu/op=    1631.7 us util=1.01 ops/s=     618.0 match=true
+verify.v2 reuse-verifier     SLH-DSA-SHAKE-192f   n=199    median=    4649.4 us cpu/op=    5025.1 us util=1.00 ops/s=     198.3 match=true
+verify.v2 reuse-verifier     SLH-DSA-SHAKE-256s   n=385    median=    2422.6 us cpu/op=    2597.4 us util=1.00 ops/s=     384.8 match=true
+verify.v2 reuse-verifier     SLH-DSA-SHAKE-256f   n=207    median=    4809.4 us cpu/op=    4879.2 us util=1.01 ops/s=     206.1 match=true
+verify.v3 parallel           ML-DSA-44            n=20800  median=      52.1 us cpu/op=     145.2 us util=3.02 ops/s=   20795.9 match=true
+verify.v3 parallel           ML-DSA-65            n=12800  median=      81.1 us cpu/op=     221.9 us util=2.83 ops/s=   12762.5 match=true
+verify.v3 parallel           ML-DSA-87            n=9536   median=      99.1 us cpu/op=     326.1 us util=3.09 ops/s=    9471.5 match=true
+verify.v3 parallel           SLH-DSA-SHA2-128s    n=2624   median=     404.3 us cpu/op=    1166.2 us util=3.05 ops/s=    2613.7 match=true
+verify.v3 parallel           SLH-DSA-SHA2-128f    n=840    median=    1223.5 us cpu/op=    3690.5 us util=3.06 ops/s=     830.0 match=true
+verify.v3 parallel           SLH-DSA-SHA2-192s    n=1680   median=     587.6 us cpu/op=    1892.9 us util=3.15 ops/s=    1666.1 match=true
+verify.v3 parallel           SLH-DSA-SHA2-192f    n=688    median=    1347.7 us cpu/op=    4970.9 us util=3.41 ops/s=     686.8 match=true
+verify.v3 parallel           SLH-DSA-SHA2-256s    n=1088   median=     952.4 us cpu/op=    2821.7 us util=3.03 ops/s=    1075.6 match=true
+verify.v3 parallel           SLH-DSA-SHA2-256f    n=672    median=    1363.8 us cpu/op=    5059.5 us util=3.38 ops/s=     667.6 match=true
+verify.v3 parallel           SLH-DSA-SHAKE-128s   n=2432   median=     434.5 us cpu/op=    1348.7 us util=3.22 ops/s=    2389.5 match=true
+verify.v3 parallel           SLH-DSA-SHAKE-128f   n=560    median=    1790.9 us cpu/op=    4982.1 us util=2.79 ops/s=     559.6 match=true
+verify.v3 parallel           SLH-DSA-SHAKE-192s   n=1452   median=     757.0 us cpu/op=    2128.1 us util=3.09 ops/s=    1450.9 match=true
+verify.v3 parallel           SLH-DSA-SHAKE-192f   n=648    median=    1458.7 us cpu/op=    5138.9 us util=3.29 ops/s=     639.6 match=true
+verify.v3 parallel           SLH-DSA-SHAKE-256s   n=1064   median=     889.5 us cpu/op=    2951.1 us util=3.10 ops/s=    1050.7 match=true
+verify.v3 parallel           SLH-DSA-SHAKE-256f   n=520    median=    2004.5 us cpu/op=    6153.8 us util=3.18 ops/s=     516.8 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench bench --child --out - --budget-ms 1000 --ops verify --variants verify.v4 --params ML-DSA-44,ML-DSA-65,ML-DSA-87,SLH-DSA-SHA2-128s,SLH-DSA-SHA2-128f,SLH-DSA-SHA2-192s,SLH-DSA-SHA2-192f,SLH-DSA-SHA2-256s,SLH-DSA-SHA2-256f,SLH-DSA-SHAKE-128s,SLH-DSA-SHAKE-128f,SLH-DSA-SHAKE-192s,SLH-DSA-SHAKE-192f,SLH-DSA-SHAKE-256s,SLH-DSA-SHAKE-256f
+verify.v4 parallelgc         ML-DSA-44            n=9148   median=      99.2 us cpu/op=     273.3 us util=2.50 ops/s=    9147.1 match=true
+verify.v4 parallelgc         ML-DSA-65            n=5474   median=     162.3 us cpu/op=     188.2 us util=1.03 ops/s=    5473.9 match=true
+verify.v4 parallelgc         ML-DSA-87            n=2699   median=     284.8 us cpu/op=     370.5 us util=1.00 ops/s=    2698.0 match=true
+verify.v4 parallelgc         SLH-DSA-SHA2-128s    n=1019   median=     931.1 us cpu/op=     971.5 us util=0.99 ops/s=    1018.9 match=true
+verify.v4 parallelgc         SLH-DSA-SHA2-128f    n=337    median=    2688.2 us cpu/op=    2908.0 us util=0.98 ops/s=     336.5 match=true
+verify.v4 parallelgc         SLH-DSA-SHA2-192s    n=698    median=    1412.4 us cpu/op=    1432.7 us util=1.00 ops/s=     697.6 match=true
+verify.v4 parallelgc         SLH-DSA-SHA2-192f    n=231    median=    4075.6 us cpu/op=    4329.0 us util=1.00 ops/s=     230.6 match=true
+verify.v4 parallelgc         SLH-DSA-SHA2-256s    n=426    median=    2165.5 us cpu/op=    2558.7 us util=1.09 ops/s=     425.4 match=true
+verify.v4 parallelgc         SLH-DSA-SHA2-256f    n=222    median=    4261.5 us cpu/op=    5270.3 us util=1.17 ops/s=     221.4 match=true
+verify.v4 parallelgc         SLH-DSA-SHAKE-128s   n=836    median=    1078.5 us cpu/op=    2212.9 us util=1.85 ops/s=     835.2 match=true
+verify.v4 parallelgc         SLH-DSA-SHAKE-128f   n=288    median=    3358.9 us cpu/op=    3506.9 us util=1.01 ops/s=     287.3 match=true
+verify.v4 parallelgc         SLH-DSA-SHAKE-192s   n=529    median=    1640.1 us cpu/op=    1852.6 us util=0.98 ops/s=     528.5 match=true
+verify.v4 parallelgc         SLH-DSA-SHAKE-192f   n=184    median=    4826.9 us cpu/op=    5434.8 us util=1.00 ops/s=     183.2 match=true
+verify.v4 parallelgc         SLH-DSA-SHAKE-256s   n=372    median=    2398.2 us cpu/op=    2661.3 us util=0.99 ops/s=     371.9 match=true
+verify.v4 parallelgc         SLH-DSA-SHAKE-256f   n=192    median=    4898.6 us cpu/op=    5156.3 us util=0.99 ops/s=     191.7 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench bench --child --out - --budget-ms 1000 --ops verify --variants verify.v5 --params ML-DSA-44,ML-DSA-65,ML-DSA-87,SLH-DSA-SHA2-128s,SLH-DSA-SHA2-128f,SLH-DSA-SHA2-192s,SLH-DSA-SHA2-192f,SLH-DSA-SHA2-256s,SLH-DSA-SHA2-256f,SLH-DSA-SHAKE-128s,SLH-DSA-SHAKE-128f,SLH-DSA-SHAKE-192s,SLH-DSA-SHAKE-192f,SLH-DSA-SHAKE-256s,SLH-DSA-SHAKE-256f
+verify.v5 inline-aggressive  ML-DSA-44            n=7871   median=     101.3 us cpu/op=     247.7 us util=1.95 ops/s=    7870.9 match=true
+verify.v5 inline-aggressive  ML-DSA-65            n=4865   median=     170.1 us cpu/op=     217.9 us util=1.06 ops/s=    4864.5 match=true
+verify.v5 inline-aggressive  ML-DSA-87            n=3167   median=     273.5 us cpu/op=     325.2 us util=1.03 ops/s=    3166.2 match=true
+verify.v5 inline-aggressive  SLH-DSA-SHA2-128s    n=965    median=     960.8 us cpu/op=    1036.3 us util=1.00 ops/s=     964.8 match=true
+verify.v5 inline-aggressive  SLH-DSA-SHA2-128f    n=330    median=    2811.6 us cpu/op=    3030.3 us util=1.00 ops/s=     329.4 match=true
+verify.v5 inline-aggressive  SLH-DSA-SHA2-192s    n=556    median=    1706.4 us cpu/op=    1780.6 us util=0.99 ops/s=     555.6 match=true
+verify.v5 inline-aggressive  SLH-DSA-SHA2-192f    n=221    median=    4372.5 us cpu/op=    4570.1 us util=1.01 ops/s=     220.6 match=true
+verify.v5 inline-aggressive  SLH-DSA-SHA2-256s    n=380    median=    2287.2 us cpu/op=    2605.3 us util=0.99 ops/s=     379.3 match=true
+verify.v5 inline-aggressive  SLH-DSA-SHA2-256f    n=220    median=    4288.4 us cpu/op=    4590.9 us util=1.01 ops/s=     219.7 match=true
+verify.v5 inline-aggressive  SLH-DSA-SHAKE-128s   n=816    median=    1166.9 us cpu/op=    1875.0 us util=1.53 ops/s=     815.7 match=true
+verify.v5 inline-aggressive  SLH-DSA-SHAKE-128f   n=243    median=    3730.7 us cpu/op=    4156.4 us util=1.01 ops/s=     242.3 match=true
+verify.v5 inline-aggressive  SLH-DSA-SHAKE-192s   n=506    median=    1756.3 us cpu/op=    1917.0 us util=0.97 ops/s=     505.4 match=true
+verify.v5 inline-aggressive  SLH-DSA-SHAKE-192f   n=170    median=    5384.2 us cpu/op=    5823.5 us util=0.98 ops/s=     169.1 match=true
+verify.v5 inline-aggressive  SLH-DSA-SHAKE-256s   n=341    median=    2632.6 us cpu/op=    2932.6 us util=1.00 ops/s=     340.2 match=true
+verify.v5 inline-aggressive  SLH-DSA-SHAKE-256f   n=185    median=    5264.2 us cpu/op=    5405.4 us util=1.00 ops/s=     184.6 match=true
+== stages bouncycastle  21:03:25
+decode.v0        bc                 ML-DSA-44            n=100000 median=       5.1 us match=true
+decode.v1        wide-unpack        ML-DSA-44            n=100000 median=       3.2 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages decode --variants decode.v2 --params ML-DSA-44
+decode.v2        c2-only            ML-DSA-44            n=70770  median=       4.4 us match=true
+mu.v0            bc                 ML-DSA-44            n=100000 median=       5.3 us match=true
+mu.v1            cached-tr          ML-DSA-44            n=100000 median=       0.8 us match=true
+mu.v2            own-keccak         ML-DSA-44            n=100000 median=       5.3 us match=true
+expandA.v0       bc                 ML-DSA-44            n=9587   median=      46.7 us match=true
+expandA.v1       cached-A           ML-DSA-44            n=15340  median=       0.0 us match=true
+expandA.v2       parallel-rows      ML-DSA-44            n=4960   median=     118.8 us match=true
+expandA.v3       own-keccak         ML-DSA-44            n=9237   median=      49.6 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages expandA --variants expandA.v4 --params ML-DSA-44
+expandA.v4       c2-only            ML-DSA-44            n=7701   median=      47.6 us match=true
+w_approx.v0      bc                 ML-DSA-44            n=14125  median=      40.5 us match=true
+w_approx.v1      cached-ntt-t1      ML-DSA-44            n=17598  median=      31.4 us match=true
+w_approx.v2      parallel-rows      ML-DSA-44            n=7606   median=     108.2 us match=true
+w_approx.v3      long-accum         ML-DSA-44            n=15778  median=      42.6 us match=true
+hint_check.v0    bc                 ML-DSA-44            n=79985  median=       7.8 us match=true
+hint_check.v1    fused-usehint-pack ML-DSA-44            n=97794  median=       6.1 us match=true
+hint_check.v2    own-keccak         ML-DSA-44            n=81747  median=       7.7 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hint_check --variants hint_check.v3 --params ML-DSA-44
+hint_check.v3    c2-only            ML-DSA-44            n=76928  median=       7.7 us match=true
+total.v0         v0-pipeline        ML-DSA-44            n=8240   median=     112.1 us match=true {decode=decode.v0, mu=mu.v0, expandA=expandA.v0, w_approx=w_approx.v0, hint_check=hint_check.v0}
+total_best       best-pipeline      ML-DSA-44            n=6596   median=     119.4 us match=true {decode=decode.v1, mu=mu.v0, expandA=expandA.v0, w_approx=w_approx.v0, hint_check=hint_check.v1}
+decode.v0        bc                 ML-DSA-65            n=100000 median=       6.5 us match=true
+decode.v1        wide-unpack        ML-DSA-65            n=100000 median=       4.7 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages decode --variants decode.v2 --params ML-DSA-65
+decode.v2        c2-only            ML-DSA-65            n=49554  median=       7.4 us match=true
+mu.v0            bc                 ML-DSA-65            n=100000 median=       7.5 us match=true
+mu.v1            cached-tr          ML-DSA-65            n=100000 median=       0.6 us match=true
+mu.v2            own-keccak         ML-DSA-65            n=100000 median=       7.5 us match=true
+expandA.v0       bc                 ML-DSA-65            n=5191   median=      86.2 us match=true
+expandA.v1       cached-A           ML-DSA-65            n=9970   median=       0.0 us match=true
+expandA.v2       parallel-rows      ML-DSA-65            n=2667   median=     193.0 us match=true
+expandA.v3       own-keccak         ML-DSA-65            n=4634   median=      94.0 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages expandA --variants expandA.v4 --params ML-DSA-65
+expandA.v4       c2-only            ML-DSA-65            n=4125   median=      90.7 us match=true
+w_approx.v0      bc                 ML-DSA-65            n=9399   median=      59.5 us match=true
+w_approx.v1      cached-ntt-t1      ML-DSA-65            n=13236  median=      43.6 us match=true
+w_approx.v2      parallel-rows      ML-DSA-65            n=5641   median=     132.7 us match=true
+w_approx.v3      long-accum         ML-DSA-65            n=10632  median=      61.4 us match=true
+hint_check.v0    bc                 ML-DSA-65            n=82982  median=       8.7 us match=true
+hint_check.v1    fused-usehint-pack ML-DSA-65            n=95044  median=       6.1 us match=true
+hint_check.v2    own-keccak         ML-DSA-65            n=77609  median=       8.9 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hint_check --variants hint_check.v3 --params ML-DSA-65
+hint_check.v3    c2-only            ML-DSA-65            n=55279  median=      11.4 us match=true
+total.v0         v0-pipeline        ML-DSA-65            n=5128   median=     178.8 us match=true {decode=decode.v0, mu=mu.v0, expandA=expandA.v0, w_approx=w_approx.v0, hint_check=hint_check.v0}
+total_best       best-pipeline      ML-DSA-65            n=5162   median=     174.5 us match=true {decode=decode.v1, mu=mu.v0, expandA=expandA.v0, w_approx=w_approx.v0, hint_check=hint_check.v1}
+decode.v0        bc                 ML-DSA-87            n=94918  median=       8.4 us match=true
+decode.v1        wide-unpack        ML-DSA-87            n=100000 median=       6.3 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages decode --variants decode.v2 --params ML-DSA-87
+decode.v2        c2-only            ML-DSA-87            n=26834  median=       8.9 us match=true
+mu.v0            bc                 ML-DSA-87            n=80037  median=       9.7 us match=true
+mu.v1            cached-tr          ML-DSA-87            n=100000 median=       0.6 us match=true
+mu.v2            own-keccak         ML-DSA-87            n=87940  median=       9.8 us match=true
+expandA.v0       bc                 ML-DSA-87            n=2666   median=     164.6 us match=true
+expandA.v1       cached-A           ML-DSA-87            n=5388   median=       0.1 us match=true
+expandA.v2       parallel-rows      ML-DSA-87            n=1919   median=     244.9 us match=true
+expandA.v3       own-keccak         ML-DSA-87            n=2703   median=     174.5 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages expandA --variants expandA.v4 --params ML-DSA-87
+expandA.v4       c2-only            ML-DSA-87            n=2505   median=     165.5 us match=true
+w_approx.v0      bc                 ML-DSA-87            n=8302   median=      81.9 us match=true
+w_approx.v1      cached-ntt-t1      ML-DSA-87            n=10160  median=      63.0 us match=true
+w_approx.v2      parallel-rows      ML-DSA-87            n=5253   median=     145.3 us match=true
+w_approx.v3      long-accum         ML-DSA-87            n=8112   median=      87.2 us match=true
+hint_check.v0    bc                 ML-DSA-87            n=62508  median=      11.5 us match=true
+hint_check.v1    fused-usehint-pack ML-DSA-87            n=76764  median=       8.0 us match=true
+hint_check.v2    own-keccak         ML-DSA-87            n=58525  median=      11.7 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hint_check --variants hint_check.v3 --params ML-DSA-87
+hint_check.v3    c2-only            ML-DSA-87            n=49730  median=      11.7 us match=true
+total.v0         v0-pipeline        ML-DSA-87            n=2941   median=     294.7 us match=true {decode=decode.v0, mu=mu.v0, expandA=expandA.v0, w_approx=w_approx.v0, hint_check=hint_check.v0}
+total_best       best-pipeline      ML-DSA-87            n=3272   median=     283.4 us match=true {decode=decode.v1, mu=mu.v0, expandA=expandA.v0, w_approx=w_approx.v0, hint_check=hint_check.v1}
+hmsg.v0          bc                 SLH-DSA-SHA2-128s    n=100000 median=       1.7 us match=true
+hmsg.v1          alt-backend        SLH-DSA-SHA2-128s    n=100000 median=       1.0 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hmsg --variants hmsg.v2 --params SLH-DSA-SHA2-128s
+hmsg.v2          c2-only            SLH-DSA-SHA2-128s    n=100000 median=       1.7 us match=true
+fors.v0          bc                 SLH-DSA-SHA2-128s    n=10939  median=      85.4 us match=true
+fors.v1          alt-backend        SLH-DSA-SHA2-128s    n=14947  median=      53.7 us match=true
+fors.v2          parallel-trees     SLH-DSA-SHA2-128s    n=7571   median=     121.1 us match=true
+fors.v3          fused-fast         SLH-DSA-SHA2-128s    n=17597  median=      46.3 us match=true
+ht_wots.v0       bc                 SLH-DSA-SHA2-128s    n=1019   median=     861.5 us match=true
+ht_wots.v1       alt-backend        SLH-DSA-SHA2-128s    n=1729   median=     523.7 us match=true
+ht_wots.v2       parallel-chains    SLH-DSA-SHA2-128s    n=1023   median=     932.1 us match=true
+ht_wots.v3       parallel-layers    SLH-DSA-SHA2-128s    n=1941   median=     493.0 us match=true
+ht_wots.v4       fused-fast         SLH-DSA-SHA2-128s    n=1845   median=     488.6 us match=true
+ht_auth.v0       bc                 SLH-DSA-SHA2-128s    n=27143  median=      28.3 us match=true
+ht_auth.v1       alt-backend        SLH-DSA-SHA2-128s    n=49045  median=      17.7 us match=true
+ht_auth.v2       parallel-layers    SLH-DSA-SHA2-128s    n=10339  median=      89.5 us match=true
+ht_auth.v3       fused-fast         SLH-DSA-SHA2-128s    n=54118  median=      15.8 us match=true
+total.v0         v0-pipeline        SLH-DSA-SHA2-128s    n=1008   median=     956.1 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v0, ht_auth=ht_auth.v0}
+total_best       best-pipeline      SLH-DSA-SHA2-128s    n=1557   median=     570.1 us match=true {hmsg=hmsg.v1, fors=fors.v3, ht_wots=ht_wots.v4, ht_auth=ht_auth.v3}
+hmsg.v0          bc                 SLH-DSA-SHA2-128f    n=100000 median=       2.5 us match=true
+hmsg.v1          alt-backend        SLH-DSA-SHA2-128f    n=100000 median=       1.4 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hmsg --variants hmsg.v2 --params SLH-DSA-SHA2-128f
+hmsg.v2          c2-only            SLH-DSA-SHA2-128f    n=100000 median=       2.5 us match=true
+fors.v0          bc                 SLH-DSA-SHA2-128f    n=7502   median=     113.7 us match=true
+fors.v1          alt-backend        SLH-DSA-SHA2-128f    n=12167  median=      70.7 us match=true
+fors.v2          parallel-trees     SLH-DSA-SHA2-128f    n=6476   median=     141.0 us match=true
+fors.v3          fused-fast         SLH-DSA-SHA2-128f    n=13755  median=      60.0 us match=true
+ht_wots.v0       bc                 SLH-DSA-SHA2-128f    n=362    median=    2652.9 us match=true
+ht_wots.v1       alt-backend        SLH-DSA-SHA2-128f    n=576    median=    1655.1 us match=true
+ht_wots.v2       parallel-chains    SLH-DSA-SHA2-128f    n=310    median=    3067.9 us match=true
+ht_wots.v3       parallel-layers    SLH-DSA-SHA2-128f    n=686    median=    1415.9 us match=true
+ht_wots.v4       fused-fast         SLH-DSA-SHA2-128f    n=526    median=    1570.7 us match=true
+ht_auth.v0       bc                 SLH-DSA-SHA2-128f    n=24449  median=      31.8 us match=true
+ht_auth.v1       alt-backend        SLH-DSA-SHA2-128f    n=41914  median=      17.8 us match=true
+ht_auth.v2       parallel-layers    SLH-DSA-SHA2-128f    n=8978   median=      99.8 us match=true
+ht_auth.v3       fused-fast         SLH-DSA-SHA2-128f    n=49187  median=      16.8 us match=true
+total.v0         v0-pipeline        SLH-DSA-SHA2-128f    n=339    median=    2822.7 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v0, ht_auth=ht_auth.v0}
+total_best       best-pipeline      SLH-DSA-SHA2-128f    n=564    median=    1676.4 us match=true {hmsg=hmsg.v1, fors=fors.v3, ht_wots=ht_wots.v4, ht_auth=ht_auth.v3}
+hmsg.v0          bc                 SLH-DSA-SHA2-192s    n=100000 median=       2.4 us match=true
+hmsg.v1          alt-backend        SLH-DSA-SHA2-192s    n=100000 median=       1.3 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hmsg --variants hmsg.v2 --params SLH-DSA-SHA2-192s
+hmsg.v2          c2-only            SLH-DSA-SHA2-192s    n=100000 median=       2.5 us match=true
+fors.v0          bc                 SLH-DSA-SHA2-192s    n=5057   median=     188.5 us match=true
+fors.v1          alt-backend        SLH-DSA-SHA2-192s    n=8706   median=      96.8 us match=true
+fors.v2          parallel-trees     SLH-DSA-SHA2-192s    n=5456   median=     175.6 us match=true
+fors.v3          fused-fast         SLH-DSA-SHA2-192s    n=9587   median=      86.8 us match=true
+ht_wots.v0       bc                 SLH-DSA-SHA2-192s    n=762    median=    1233.0 us match=true
+ht_wots.v1       alt-backend        SLH-DSA-SHA2-192s    n=1113   median=     811.0 us match=true
+ht_wots.v2       parallel-chains    SLH-DSA-SHA2-192s    n=762    median=    1271.3 us match=true
+ht_wots.v3       parallel-layers    SLH-DSA-SHA2-192s    n=1490   median=     643.7 us match=true
+ht_wots.v4       fused-fast         SLH-DSA-SHA2-192s    n=1149   median=     808.5 us match=true
+ht_auth.v0       bc                 SLH-DSA-SHA2-192s    n=20038  median=      45.0 us match=true
+ht_auth.v1       alt-backend        SLH-DSA-SHA2-192s    n=38566  median=      22.0 us match=true
+ht_auth.v2       parallel-layers    SLH-DSA-SHA2-192s    n=9059   median=      99.8 us match=true
+ht_auth.v3       fused-fast         SLH-DSA-SHA2-192s    n=40875  median=      21.2 us match=true
+total.v0         v0-pipeline        SLH-DSA-SHA2-192s    n=619    median=    1486.5 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v0, ht_auth=ht_auth.v0}
+total_best       best-pipeline      SLH-DSA-SHA2-192s    n=1024   median=     935.4 us match=true {hmsg=hmsg.v1, fors=fors.v3, ht_wots=ht_wots.v4, ht_auth=ht_auth.v3}
+hmsg.v0          bc                 SLH-DSA-SHA2-192f    n=100000 median=       2.4 us match=true
+hmsg.v1          alt-backend        SLH-DSA-SHA2-192f    n=100000 median=       1.3 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hmsg --variants hmsg.v2 --params SLH-DSA-SHA2-192f
+hmsg.v2          c2-only            SLH-DSA-SHA2-192f    n=100000 median=       2.2 us match=true
+fors.v0          bc                 SLH-DSA-SHA2-192f    n=4423   median=     218.1 us match=true
+fors.v1          alt-backend        SLH-DSA-SHA2-192f    n=7089   median=     115.9 us match=true
+fors.v2          parallel-trees     SLH-DSA-SHA2-192f    n=4570   median=     206.8 us match=true
+fors.v3          fused-fast         SLH-DSA-SHA2-192f    n=8761   median=     101.6 us match=true
+ht_wots.v0       bc                 SLH-DSA-SHA2-192f    n=217    median=    4046.3 us match=true
+ht_wots.v1       alt-backend        SLH-DSA-SHA2-192f    n=353    median=    2573.7 us match=true
+ht_wots.v2       parallel-chains    SLH-DSA-SHA2-192f    n=227    median=    4282.1 us match=true
+ht_wots.v3       parallel-layers    SLH-DSA-SHA2-192f    n=473    median=    1995.6 us match=true
+ht_wots.v4       fused-fast         SLH-DSA-SHA2-192f    n=346    median=    2615.5 us match=true
+ht_auth.v0       bc                 SLH-DSA-SHA2-192f    n=18044  median=      47.7 us match=true
+ht_auth.v1       alt-backend        SLH-DSA-SHA2-192f    n=30333  median=      23.4 us match=true
+ht_auth.v2       parallel-layers    SLH-DSA-SHA2-192f    n=7795   median=     116.3 us match=true
+ht_auth.v3       fused-fast         SLH-DSA-SHA2-192f    n=37059  median=      22.6 us match=true
+total.v0         v0-pipeline        SLH-DSA-SHA2-192f    n=222    median=    4299.2 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v0, ht_auth=ht_auth.v0}
+total_best       best-pipeline      SLH-DSA-SHA2-192f    n=305    median=    2809.4 us match=true {hmsg=hmsg.v1, fors=fors.v3, ht_wots=ht_wots.v1, ht_auth=ht_auth.v3}
+hmsg.v0          bc                 SLH-DSA-SHA2-256s    n=100000 median=       2.4 us match=true
+hmsg.v1          alt-backend        SLH-DSA-SHA2-256s    n=100000 median=       1.3 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hmsg --variants hmsg.v2 --params SLH-DSA-SHA2-256s
+hmsg.v2          c2-only            SLH-DSA-SHA2-256s    n=100000 median=       2.3 us match=true
+fors.v0          bc                 SLH-DSA-SHA2-256s    n=3847   median=     246.0 us match=true
+fors.v1          alt-backend        SLH-DSA-SHA2-256s    n=6866   median=     125.9 us match=true
+fors.v2          parallel-trees     SLH-DSA-SHA2-256s    n=4372   median=     215.7 us match=true
+fors.v3          fused-fast         SLH-DSA-SHA2-256s    n=6655   median=     116.8 us match=true
+ht_wots.v0       bc                 SLH-DSA-SHA2-256s    n=496    median=    1877.6 us match=true
+ht_wots.v1       alt-backend        SLH-DSA-SHA2-256s    n=768    median=    1248.4 us match=true
+ht_wots.v2       parallel-chains    SLH-DSA-SHA2-256s    n=617    median=    1559.2 us match=true
+ht_wots.v3       parallel-layers    SLH-DSA-SHA2-256s    n=957    median=    1053.3 us match=true
+ht_wots.v4       fused-fast         SLH-DSA-SHA2-256s    n=744    median=    1237.5 us match=true
+ht_auth.v0       bc                 SLH-DSA-SHA2-256s    n=18651  median=      46.3 us match=true
+ht_auth.v1       alt-backend        SLH-DSA-SHA2-256s    n=30107  median=      22.6 us match=true
+ht_auth.v2       parallel-layers    SLH-DSA-SHA2-256s    n=8657   median=     104.8 us match=true
+ht_auth.v3       fused-fast         SLH-DSA-SHA2-256s    n=38472  median=      21.6 us match=true
+total.v0         v0-pipeline        SLH-DSA-SHA2-256s    n=391    median=    2271.1 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v0, ht_auth=ht_auth.v0}
+total_best       best-pipeline      SLH-DSA-SHA2-256s    n=654    median=    1398.2 us match=true {hmsg=hmsg.v1, fors=fors.v3, ht_wots=ht_wots.v4, ht_auth=ht_auth.v3}
+hmsg.v0          bc                 SLH-DSA-SHA2-256f    n=100000 median=       2.4 us match=true
+hmsg.v1          alt-backend        SLH-DSA-SHA2-256f    n=100000 median=       1.3 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hmsg --variants hmsg.v2 --params SLH-DSA-SHA2-256f
+hmsg.v2          c2-only            SLH-DSA-SHA2-256f    n=100000 median=       2.3 us match=true
+fors.v0          bc                 SLH-DSA-SHA2-256f    n=3294   median=     268.0 us match=true
+fors.v1          alt-backend        SLH-DSA-SHA2-256f    n=6073   median=     138.7 us match=true
+fors.v2          parallel-trees     SLH-DSA-SHA2-256f    n=4577   median=     209.6 us match=true
+fors.v3          fused-fast         SLH-DSA-SHA2-256f    n=6871   median=     121.9 us match=true
+ht_wots.v0       bc                 SLH-DSA-SHA2-256f    n=231    median=    3940.4 us match=true
+ht_wots.v1       alt-backend        SLH-DSA-SHA2-256f    n=333    median=    2655.0 us match=true
+ht_wots.v2       parallel-chains    SLH-DSA-SHA2-256f    n=269    median=    3581.9 us match=true
+ht_wots.v3       parallel-layers    SLH-DSA-SHA2-256f    n=556    median=    1800.9 us match=true
+ht_wots.v4       fused-fast         SLH-DSA-SHA2-256f    n=362    median=    2563.6 us match=true
+ht_auth.v0       bc                 SLH-DSA-SHA2-256f    n=17902  median=      49.6 us match=true
+ht_auth.v1       alt-backend        SLH-DSA-SHA2-256f    n=33619  median=      24.0 us match=true
+ht_auth.v2       parallel-layers    SLH-DSA-SHA2-256f    n=8736   median=     104.2 us match=true
+ht_auth.v3       fused-fast         SLH-DSA-SHA2-256f    n=32230  median=      23.5 us match=true
+total.v0         v0-pipeline        SLH-DSA-SHA2-256f    n=216    median=    4379.8 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v0, ht_auth=ht_auth.v0}
+total_best       best-pipeline      SLH-DSA-SHA2-256f    n=340    median=    2757.0 us match=true {hmsg=hmsg.v1, fors=fors.v3, ht_wots=ht_wots.v4, ht_auth=ht_auth.v3}
+hmsg.v0          bc                 SLH-DSA-SHAKE-128s   n=100000 median=       0.6 us match=true
+hmsg.v1          alt-backend        SLH-DSA-SHAKE-128s   n=100000 median=       0.7 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hmsg --variants hmsg.v2 --params SLH-DSA-SHAKE-128s
+hmsg.v2          c2-only            SLH-DSA-SHAKE-128s   n=100000 median=       1.1 us match=true
+fors.v0          bc                 SLH-DSA-SHAKE-128s   n=9004   median=      95.8 us match=true
+fors.v1          alt-backend        SLH-DSA-SHAKE-128s   n=8179   median=     105.6 us match=true
+fors.v2          parallel-trees     SLH-DSA-SHAKE-128s   n=6408   median=     140.7 us match=true
+fors.v3          fused-fast         SLH-DSA-SHAKE-128s   n=8741   median=     100.4 us match=true
+ht_wots.v0       bc                 SLH-DSA-SHAKE-128s   n=1087   median=     903.3 us match=true
+ht_wots.v1       alt-backend        SLH-DSA-SHAKE-128s   n=861    median=    1035.9 us match=true
+ht_wots.v2       parallel-chains    SLH-DSA-SHAKE-128s   n=876    median=    1079.3 us match=true
+ht_wots.v3       parallel-layers    SLH-DSA-SHAKE-128s   n=1767   median=     532.5 us match=true
+ht_wots.v4       fused-fast         SLH-DSA-SHAKE-128s   n=912    median=    1009.5 us match=true
+ht_auth.v0       bc                 SLH-DSA-SHAKE-128s   n=27600  median=      31.9 us match=true
+ht_auth.v1       alt-backend        SLH-DSA-SHAKE-128s   n=24960  median=      34.9 us match=true
+ht_auth.v2       parallel-layers    SLH-DSA-SHAKE-128s   n=10450  median=      88.1 us match=true
+ht_auth.v3       fused-fast         SLH-DSA-SHAKE-128s   n=24712  median=      33.9 us match=true
+total.v0         v0-pipeline        SLH-DSA-SHAKE-128s   n=906    median=    1076.4 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v0, ht_auth=ht_auth.v0}
+total_best       best-pipeline      SLH-DSA-SHAKE-128s   n=946    median=    1043.6 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v0, ht_auth=ht_auth.v0}
+hmsg.v0          bc                 SLH-DSA-SHAKE-128f   n=100000 median=       0.6 us match=true
+hmsg.v1          alt-backend        SLH-DSA-SHAKE-128f   n=100000 median=       0.7 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hmsg --variants hmsg.v2 --params SLH-DSA-SHAKE-128f
+hmsg.v2          c2-only            SLH-DSA-SHAKE-128f   n=100000 median=       0.7 us match=true
+fors.v0          bc                 SLH-DSA-SHAKE-128f   n=7471   median=     123.9 us match=true
+fors.v1          alt-backend        SLH-DSA-SHAKE-128f   n=6141   median=     137.3 us match=true
+fors.v2          parallel-trees     SLH-DSA-SHAKE-128f   n=6191   median=     147.6 us match=true
+fors.v3          fused-fast         SLH-DSA-SHAKE-128f   n=7063   median=     128.4 us match=true
+ht_wots.v0       bc                 SLH-DSA-SHAKE-128f   n=294    median=    3214.9 us match=true
+ht_wots.v1       alt-backend        SLH-DSA-SHAKE-128f   n=263    median=    3566.0 us match=true
+ht_wots.v2       parallel-chains    SLH-DSA-SHAKE-128f   n=334    median=    2876.5 us match=true
+ht_wots.v3       parallel-layers    SLH-DSA-SHAKE-128f   n=589    median=    1673.3 us match=true
+ht_wots.v4       fused-fast         SLH-DSA-SHAKE-128f   n=262    median=    3662.7 us match=true
+ht_auth.v0       bc                 SLH-DSA-SHAKE-128f   n=24192  median=      33.5 us match=true
+ht_auth.v1       alt-backend        SLH-DSA-SHAKE-128f   n=24461  median=      37.1 us match=true
+ht_auth.v2       parallel-layers    SLH-DSA-SHAKE-128f   n=9311   median=      97.1 us match=true
+ht_auth.v3       fused-fast         SLH-DSA-SHAKE-128f   n=23551  median=      35.9 us match=true
+total.v0         v0-pipeline        SLH-DSA-SHAKE-128f   n=270    median=    3445.8 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v0, ht_auth=ht_auth.v0}
+total_best       best-pipeline      SLH-DSA-SHAKE-128f   n=214    median=    4605.3 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v2, ht_auth=ht_auth.v0}
+hmsg.v0          bc                 SLH-DSA-SHAKE-192s   n=100000 median=       1.0 us match=true
+hmsg.v1          alt-backend        SLH-DSA-SHAKE-192s   n=100000 median=       1.1 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hmsg --variants hmsg.v2 --params SLH-DSA-SHAKE-192s
+hmsg.v2          c2-only            SLH-DSA-SHAKE-192s   n=100000 median=       1.1 us match=true
+fors.v0          bc                 SLH-DSA-SHAKE-192s   n=6735   median=     135.7 us match=true
+fors.v1          alt-backend        SLH-DSA-SHAKE-192s   n=6109   median=     150.7 us match=true
+fors.v2          parallel-trees     SLH-DSA-SHAKE-192s   n=6583   median=     137.2 us match=true
+fors.v3          fused-fast         SLH-DSA-SHAKE-192s   n=6533   median=     140.3 us match=true
+ht_wots.v0       bc                 SLH-DSA-SHAKE-192s   n=664    median=    1440.2 us match=true
+ht_wots.v1       alt-backend        SLH-DSA-SHAKE-192s   n=626    median=    1576.4 us match=true
+ht_wots.v2       parallel-chains    SLH-DSA-SHAKE-192s   n=730    median=    1344.4 us match=true
+ht_wots.v3       parallel-layers    SLH-DSA-SHAKE-192s   n=1243   median=     807.0 us match=true
+ht_wots.v4       fused-fast         SLH-DSA-SHAKE-192s   n=489    median=    1612.9 us match=true
+ht_auth.v0       bc                 SLH-DSA-SHAKE-192s   n=27366  median=      32.4 us match=true
+ht_auth.v1       alt-backend        SLH-DSA-SHAKE-192s   n=24721  median=      35.0 us match=true
+ht_auth.v2       parallel-layers    SLH-DSA-SHAKE-192s   n=10215  median=      89.3 us match=true
+ht_auth.v3       fused-fast         SLH-DSA-SHAKE-192s   n=22840  median=      34.0 us match=true
+total.v0         v0-pipeline        SLH-DSA-SHAKE-192s   n=571    median=    1648.7 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v0, ht_auth=ht_auth.v0}
+total_best       best-pipeline      SLH-DSA-SHAKE-192s   n=525    median=    1869.5 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v2, ht_auth=ht_auth.v0}
+hmsg.v0          bc                 SLH-DSA-SHAKE-192f   n=100000 median=       2.0 us match=true
+hmsg.v1          alt-backend        SLH-DSA-SHAKE-192f   n=100000 median=       1.1 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hmsg --variants hmsg.v2 --params SLH-DSA-SHAKE-192f
+hmsg.v2          c2-only            SLH-DSA-SHAKE-192f   n=100000 median=       1.1 us match=true
+fors.v0          bc                 SLH-DSA-SHAKE-192f   n=5418   median=     162.1 us match=true
+fors.v1          alt-backend        SLH-DSA-SHAKE-192f   n=5035   median=     174.7 us match=true
+fors.v2          parallel-trees     SLH-DSA-SHAKE-192f   n=4560   median=     195.0 us match=true
+fors.v3          fused-fast         SLH-DSA-SHAKE-192f   n=5331   median=     167.0 us match=true
+ht_wots.v0       bc                 SLH-DSA-SHAKE-192f   n=191    median=    4526.6 us match=true
+ht_wots.v1       alt-backend        SLH-DSA-SHAKE-192f   n=203    median=    4850.9 us match=true
+ht_wots.v2       parallel-chains    SLH-DSA-SHAKE-192f   n=209    median=    4756.1 us match=true
+ht_wots.v3       parallel-layers    SLH-DSA-SHAKE-192f   n=418    median=    2334.5 us match=true
+ht_wots.v4       fused-fast         SLH-DSA-SHAKE-192f   n=147    median=    5780.8 us match=true
+ht_auth.v0       bc                 SLH-DSA-SHAKE-192f   n=20304  median=      34.3 us match=true
+ht_auth.v1       alt-backend        SLH-DSA-SHAKE-192f   n=21353  median=      37.0 us match=true
+ht_auth.v2       parallel-layers    SLH-DSA-SHAKE-192f   n=9201   median=      96.0 us match=true
+ht_auth.v3       fused-fast         SLH-DSA-SHAKE-192f   n=22460  median=      35.7 us match=true
+total.v0         v0-pipeline        SLH-DSA-SHAKE-192f   n=186    median=    4897.7 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v0, ht_auth=ht_auth.v0}
+total_best       best-pipeline      SLH-DSA-SHAKE-192f   n=212    median=    4682.1 us match=true {hmsg=hmsg.v1, fors=fors.v0, ht_wots=ht_wots.v0, ht_auth=ht_auth.v0}
+hmsg.v0          bc                 SLH-DSA-SHAKE-256s   n=100000 median=       1.1 us match=true
+hmsg.v1          alt-backend        SLH-DSA-SHAKE-256s   n=100000 median=       1.1 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hmsg --variants hmsg.v2 --params SLH-DSA-SHAKE-256s
+hmsg.v2          c2-only            SLH-DSA-SHAKE-256s   n=100000 median=       1.1 us match=true
+fors.v0          bc                 SLH-DSA-SHAKE-256s   n=4911   median=     180.1 us match=true
+fors.v1          alt-backend        SLH-DSA-SHAKE-256s   n=4510   median=     193.2 us match=true
+fors.v2          parallel-trees     SLH-DSA-SHAKE-256s   n=4514   median=     202.0 us match=true
+fors.v3          fused-fast         SLH-DSA-SHAKE-256s   n=4762   median=     184.5 us match=true
+ht_wots.v0       bc                 SLH-DSA-SHAKE-256s   n=439    median=    2164.3 us match=true
+ht_wots.v1       alt-backend        SLH-DSA-SHAKE-256s   n=411    median=    2351.3 us match=true
+ht_wots.v2       parallel-chains    SLH-DSA-SHAKE-256s   n=497    median=    1994.7 us match=true
+ht_wots.v3       parallel-layers    SLH-DSA-SHAKE-256s   n=866    median=    1190.0 us match=true
+ht_wots.v4       fused-fast         SLH-DSA-SHAKE-256s   n=373    median=    2345.8 us match=true
+ht_auth.v0       bc                 SLH-DSA-SHAKE-256s   n=24620  median=      33.6 us match=true
+ht_auth.v1       alt-backend        SLH-DSA-SHAKE-256s   n=25351  median=      35.7 us match=true
+ht_auth.v2       parallel-layers    SLH-DSA-SHAKE-256s   n=8846   median=     103.4 us match=true
+ht_auth.v3       fused-fast         SLH-DSA-SHAKE-256s   n=25939  median=      34.2 us match=true
+total.v0         v0-pipeline        SLH-DSA-SHAKE-256s   n=380    median=    2444.1 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v0, ht_auth=ht_auth.v0}
+total_best       best-pipeline      SLH-DSA-SHAKE-256s   n=435    median=    2240.5 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v2, ht_auth=ht_auth.v0}
+hmsg.v0          bc                 SLH-DSA-SHAKE-256f   n=100000 median=       1.1 us match=true
+hmsg.v1          alt-backend        SLH-DSA-SHAKE-256f   n=100000 median=       1.1 us match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench stages --child --out - --budget-ms 1000 --stages hmsg --variants hmsg.v2 --params SLH-DSA-SHAKE-256f
+hmsg.v2          c2-only            SLH-DSA-SHAKE-256f   n=100000 median=       1.2 us match=true
+fors.v0          bc                 SLH-DSA-SHAKE-256f   n=4499   median=     197.1 us match=true
+fors.v1          alt-backend        SLH-DSA-SHAKE-256f   n=4193   median=     209.0 us match=true
+fors.v2          parallel-trees     SLH-DSA-SHAKE-256f   n=5501   median=     174.5 us match=true
+fors.v3          fused-fast         SLH-DSA-SHAKE-256f   n=4458   median=     198.8 us match=true
+ht_wots.v0       bc                 SLH-DSA-SHAKE-256f   n=186    median=    4861.7 us match=true
+ht_wots.v1       alt-backend        SLH-DSA-SHAKE-256f   n=192    median=    4955.0 us match=true
+ht_wots.v2       parallel-chains    SLH-DSA-SHAKE-256f   n=267    median=    3664.2 us match=true
+ht_wots.v3       parallel-layers    SLH-DSA-SHAKE-256f   n=397    median=    2454.6 us match=true
+ht_wots.v4       fused-fast         SLH-DSA-SHAKE-256f   n=190    median=    5030.6 us match=true
+ht_auth.v0       bc                 SLH-DSA-SHAKE-256f   n=22035  median=      35.8 us match=true
+ht_auth.v1       alt-backend        SLH-DSA-SHAKE-256f   n=21953  median=      38.2 us match=true
+ht_auth.v2       parallel-layers    SLH-DSA-SHAKE-256f   n=9340   median=      95.4 us match=true
+ht_auth.v3       fused-fast         SLH-DSA-SHAKE-256f   n=24055  median=      36.8 us match=true
+total.v0         v0-pipeline        SLH-DSA-SHAKE-256f   n=180    median=    4926.7 us match=true {hmsg=hmsg.v0, fors=fors.v0, ht_wots=ht_wots.v0, ht_auth=ht_auth.v0}
+total_best       best-pipeline      SLH-DSA-SHAKE-256f   n=230    median=    4236.7 us match=true {hmsg=hmsg.v0, fors=fors.v2, ht_wots=ht_wots.v2, ht_auth=ht_auth.v0}
+== memory bouncycastle  21:12:58
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v0      keygen        ML-DSA-44            stack=1912 (res 15.800849883969741) heap/op=67822 match=true
+keygen.v1      keygen        ML-DSA-44            stack=411 (res 15.800849883969741) heap/op=67592 match=true
+keygen.v2      keygen        ML-DSA-44            stack=474 (res 15.800849883969741) heap/op=67400 match=true
+keygen.v3      keygen        ML-DSA-44            stack=379 (res 15.800849883969741) heap/op=63328 match=true
+keygen.v4      keygen        ML-DSA-44            stack=411 (res 15.800849883969741) heap/op=63484 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params ML-DSA-44
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        ML-DSA-44            stack=474 (res 15.800849883969741) heap/op=67317 match=true
+sign.v0        sign          ML-DSA-44            stack=600 (res 15.800849883969741) heap/op=79304 match=true
+sign.v1        sign          ML-DSA-44            stack=379 (res 15.800849883969741) heap/op=78992 match=true
+sign.v2        sign          ML-DSA-44            stack=379 (res 15.800849883969741) heap/op=74176 match=true
+sign.v3        sign          ML-DSA-44            stack=316 (res 15.800849883969741) heap/op=74331 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params ML-DSA-44
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          ML-DSA-44            stack=537 (res 15.800849883969741) heap/op=79280 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params ML-DSA-44
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v5        sign          ML-DSA-44            stack=632 (res 15.800849883969741) heap/op=78992 match=true
+verify.v0      verify        ML-DSA-44            stack=316 (res 15.800849883969741) heap/op=59567 match=true
+verify.v1      verify        ML-DSA-44            stack=284 (res 15.800849883969741) heap/op=59272 match=true
+verify.v2      verify        ML-DSA-44            stack=284 (res 15.800849883969741) heap/op=55688 match=true
+verify.v3      verify        ML-DSA-44            stack=253 (res 15.800849883969741) heap/op=55842 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params ML-DSA-44
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v4      verify        ML-DSA-44            stack=379 (res 15.800849883969741) heap/op=59268 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params ML-DSA-44
+stack calibration: frame = 43.9 bytes (depth 17789 @ 2048 KiB, 65535 @ 4096 KiB), no-op depth 124531
+verify.v5      verify        ML-DSA-44            stack=1406 (res 43.92309303397143) heap/op=59304 match=true
+decode.v0      verify-stage  ML-DSA-44            stack=0 (res 15.800849883969741) heap/op=18144 match=true
+mu.v0          verify-stage  ML-DSA-44            stack=0 (res 15.800849883969741) heap/op=1152 match=true
+expandA.v0     verify-stage  ML-DSA-44            stack=0 (res 15.800849883969741) heap/op=31600 match=true
+w_approx.v0    verify-stage  ML-DSA-44            stack=32 (res 15.800849883969741) heap/op=14728 match=true
+hint_check.v0  verify-stage  ML-DSA-44            stack=0 (res 15.800849883969741) heap/op=6536 match=true
+total_best     verify-stage  ML-DSA-44            stack=190 (res 15.800849883969741) heap/op=66200 match=true
+keygen.v0      keygen        ML-DSA-65            stack=632 (res 15.800849883969741) heap/op=111544 match=true
+keygen.v1      keygen        ML-DSA-65            stack=348 (res 15.800849883969741) heap/op=111360 match=true
+keygen.v2      keygen        ML-DSA-65            stack=348 (res 15.800849883969741) heap/op=111168 match=true
