@@ -520,6 +520,7 @@ fn main() {
         Some("vectors") => cmd_vectors(args.get(2).unwrap_or_else(|| usage())),
         Some("crossverify") => cmd_crossverify(args.get(2).unwrap_or_else(|| usage()), args.get(3).unwrap_or_else(|| usage())),
         Some("info") => println!("{{\"lib\":\"{LIB}\",\"lib_version\":\"{}\",\"runtime\":\"{}\",\"build_tag\":\"{BUILD_TAG}\"}}", lib_version(), runtime()),
+        Some("selftest") => selftest(),
         Some("stages") => {
             let (mut out, mut budget_ms, mut params, mut stages_f, mut variants) = (String::new(), 1000u64, None, None, None);
             let list = |s: &str| s.split(',').filter(|x| !x.is_empty()).map(String::from).collect::<Vec<_>>();
@@ -614,5 +615,68 @@ fn main() {
             cmd_bench(o);
         }
         _ => usage(),
+    }
+}
+
+/// Internal consistency checks of the raw hashing helpers against the RustCrypto digest crates.
+fn selftest() {
+    use sha2::Digest as _;
+    let data: Vec<u8> = (0..400u32).map(|i| (i * 7 + 3) as u8).collect();
+    let mut bad = 0;
+    for len in 0..300 {
+        for split in [0usize, 1, 17, 63, 64, 65, 127, 128, 129] {
+            let split = split.min(len);
+            let mut r = fasthash::RawSha256::new();
+            r.update(&data[..split]);
+            r.update(&data[split..len]);
+            let mut out = [0u8; 32];
+            r.finalize_into(&mut out);
+            let want = sha2::Sha256::digest(&data[..len]);
+            if out[..] != want[..] {
+                bad += 1;
+                eprintln!("RawSha256 mismatch len={len} split={split}");
+            }
+            let mut r = fasthash::RawSha512::new();
+            r.update(&data[..split]);
+            r.update(&data[split..len]);
+            let mut out = [0u8; 64];
+            r.finalize_into(&mut out);
+            let want = sha2::Sha512::digest(&data[..len]);
+            if out[..] != want[..] {
+                bad += 1;
+                eprintln!("RawSha512 mismatch len={len} split={split}");
+            }
+        }
+    }
+    // midstate path: prefix block compressed separately
+    let mut st = fasthash::SHA256_IV;
+    let mut b = [0u8; 64];
+    b.copy_from_slice(&data[..64]);
+    sha2::block_api::compress256(&mut st, &[b]);
+    let mut r = fasthash::RawSha256::from_midstate(st, 64);
+    r.update(&data[64..150]);
+    let mut out = [0u8; 32];
+    r.finalize_into(&mut out);
+    if out[..] != sha2::Sha256::digest(&data[..150])[..] {
+        bad += 1;
+        eprintln!("RawSha256 midstate mismatch");
+    }
+    eprintln!("x4 keccak available: {}", fasthash::x4_available());
+    let mut o = vec![0u8; 32];
+    fasthash::shake256_multi(&[&data[..200]], &mut o);
+    {
+        use sha3::digest::{ExtendableOutput, Update};
+        let mut h = sha3::Shake256::default();
+        h.update(&data[..200]);
+        let mut w = vec![0u8; 32];
+        h.finalize_xof_into(&mut w);
+        if o != w {
+            bad += 1;
+            eprintln!("shake256_multi mismatch");
+        }
+    }
+    eprintln!("selftest: {} problems", bad);
+    if bad > 0 {
+        std::process::exit(1);
     }
 }

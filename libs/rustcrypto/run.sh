@@ -4,6 +4,9 @@
 #   run.sh vectors <out.json>
 #   run.sh crossverify <artifacts.json> <out.json>
 #   run.sh bench --out <file.jsonl> [--budget-ms N] [--params a,b] [--ops a,b] [--variants a,b]
+#   run.sh validate <common/validation/validation.json.gz> <out.json>     (Phase 2 A)
+#   run.sh stages --out <file.jsonl> [--budget-ms N] [--params a,b] [--stages x,y]   (Phase 2 B)
+#   run.sh memory --out <file.jsonl> [--params a,b]                       (Phase 2 C)
 set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -74,6 +77,32 @@ case "${1:-}" in
   build) cmd_build ;;
   vectors)     ensure_built; "$(bin_of base)" vectors "$2" ;;
   crossverify) ensure_built; "$(bin_of base)" crossverify "$2" "$3" ;;
+  validate)
+    ensure_built; in="$2"; out="$3"; shift 3
+    tmpd="$(mktemp -d "$HERE/target/validate.XXXXXX")"; parts=()
+    for t in base native lto mimalloc pgo-keygen pgo-sign pgo-verify; do
+      "$(bin_of $t)" validate "$in" "$tmpd/$t.json" "$@"; parts+=("$tmpd/$t.json")
+    done
+    mkdir -p "$(dirname "$out")"; "$(bin_of base)" validate-merge "$out" "${parts[@]}"; rm -rf "$tmpd"
+    ;;
+  stages)
+    shift; ensure_built
+    out=""; args=("$@")
+    for ((i=0; i<${#args[@]}; i++)); do [ "${args[$i]}" = "--out" ] && out="${args[$((i+1))]}"; done
+    [ -n "$out" ] || { echo "stages: --out required" >&2; exit 2; }
+    mkdir -p "$(dirname "$out")"; : > "$out"
+    for t in base native lto pgo-verify; do "$(bin_of $t)" stages "${args[@]}"; done
+    echo ">> $(wc -l < "$out") lines written to $out"
+    ;;
+  memory)
+    shift; ensure_built
+    out=""; args=("$@")
+    for ((i=0; i<${#args[@]}; i++)); do [ "${args[$i]}" = "--out" ] && out="${args[$((i+1))]}"; done
+    [ -n "$out" ] || { echo "memory: --out required" >&2; exit 2; }
+    mkdir -p "$(dirname "$out")"; : > "$out"
+    for t in base native lto mimalloc pgo-keygen pgo-sign pgo-verify; do "$(bin_of $t)" memory "${args[@]}"; done
+    echo ">> $(wc -l < "$out") lines written to $out"
+    ;;
   bench)
     shift; ensure_built
     out=""; args=("$@")
@@ -87,5 +116,5 @@ case "${1:-}" in
     done
     echo ">> $(wc -l < "$out") lines written to $out"
     ;;
-  *) echo "usage: $0 build | vectors <out.json> | crossverify <in.json> <out.json> | bench --out <f.jsonl> [--budget-ms N] [--params a,b] [--ops a,b] [--variants a,b]" >&2; exit 2 ;;
+  *) echo "usage: $0 build | vectors <out.json> | crossverify <in.json> <out.json> | bench --out <f.jsonl> [--budget-ms N] [--params a,b] [--ops a,b] [--variants a,b] | validate <suite.json.gz> <out.json> [--params a,b] [--kinds a,b] [--variants a,b] | stages --out <f.jsonl> [--budget-ms N] [--params a,b] [--stages a,b] [--variants a,b] | memory --out <f.jsonl> [--params a,b]" >&2; exit 2 ;;
 esac
