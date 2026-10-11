@@ -170,3 +170,1707 @@ warning: method `canon` is never used
 55 |     pub fn canon(&self) -> Vec<u8> {
    |            ^^^^^
 
+>> build [lto] profile=lto RUSTFLAGS='' 
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+   --> vendor/ml-dsa/src/lib.rs:158:1
+    |
+158 | pub struct MuBuilder(pub H);
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: requested on the command line with `-W missing-debug-implementations`
+
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+  --> vendor/ml-dsa/src/crypto.rs:8:1
+   |
+ 8 | / pub enum ShakeState<Shake: ExtendableOutput> {
+ 9 | |     Absorbing(Shake),
+10 | |     Squeezing(Shake::Reader),
+11 | | }
+   | |_^
+
+warning: unused import: `SignatureParams`
+  --> src/stages_mldsa.rs:14:87
+   |
+14 | use ml_dsa::param::{EncodedSignature, EncodedVerifyingKey, MlDsaParams, ParameterSet, SignatureParams as _};
+   |                                                                                       ^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `slh_dsa::hashes::HashSuite`
+ --> src/stages_slhdsa.rs:9:5
+  |
+9 | use slh_dsa::hashes::HashSuite as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::fors::ForsParams`
+ --> src/stages_slhdsa.rs:8:5
+  |
+8 | use slh_dsa::fors::ForsParams as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::wots::WotsParams`
+  --> src/stages_slhdsa.rs:11:5
+   |
+11 | use slh_dsa::wots::WotsParams as _;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: variable does not need to be mutable
+   --> src/stages_slhdsa.rs:558:9
+    |
+558 |     let mut load = |l: usize, lane: &mut [Option<(usize, u8)>; 4], vals: &mut [[u8; 64]; 4], out: &mut Vec<Bytes>, next: &mut usize| {
+    |         ----^^^^
+    |         |
+    |         help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `RHO` is never used
+  --> src/fasthash.rs:18:11
+   |
+18 | pub const RHO: [u32; 25] = [0, 1, 62, 28, 27, 36, 44, 6, 55, 20, 3, 10, 43, 25, 39, 41, 45, 15, 21, 8, 18, 2, 61, 56, 14];
+   |           ^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `PI` is never used
+  --> src/fasthash.rs:20:11
+   |
+20 | pub const PI: [usize; 25] = {
+   |           ^^
+
+warning: method `canon` is never used
+  --> src/stages_mldsa.rs:55:12
+   |
+43 | impl<P: MlDsaParams> Decoded<P> {
+   | ------------------------------- method in this implementation
+...
+55 |     pub fn canon(&self) -> Vec<u8> {
+   |            ^^^^^
+
+>> build [mimalloc] profile=release RUSTFLAGS='' --features mimalloc
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+   --> vendor/ml-dsa/src/lib.rs:158:1
+    |
+158 | pub struct MuBuilder(pub H);
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: requested on the command line with `-W missing-debug-implementations`
+
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+  --> vendor/ml-dsa/src/crypto.rs:8:1
+   |
+ 8 | / pub enum ShakeState<Shake: ExtendableOutput> {
+ 9 | |     Absorbing(Shake),
+10 | |     Squeezing(Shake::Reader),
+11 | | }
+   | |_^
+
+warning: unused import: `SignatureParams`
+  --> src/stages_mldsa.rs:14:87
+   |
+14 | use ml_dsa::param::{EncodedSignature, EncodedVerifyingKey, MlDsaParams, ParameterSet, SignatureParams as _};
+   |                                                                                       ^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `slh_dsa::hashes::HashSuite`
+ --> src/stages_slhdsa.rs:9:5
+  |
+9 | use slh_dsa::hashes::HashSuite as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::fors::ForsParams`
+ --> src/stages_slhdsa.rs:8:5
+  |
+8 | use slh_dsa::fors::ForsParams as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::wots::WotsParams`
+  --> src/stages_slhdsa.rs:11:5
+   |
+11 | use slh_dsa::wots::WotsParams as _;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: variable does not need to be mutable
+   --> src/stages_slhdsa.rs:558:9
+    |
+558 |     let mut load = |l: usize, lane: &mut [Option<(usize, u8)>; 4], vals: &mut [[u8; 64]; 4], out: &mut Vec<Bytes>, next: &mut usize| {
+    |         ----^^^^
+    |         |
+    |         help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `RHO` is never used
+  --> src/fasthash.rs:18:11
+   |
+18 | pub const RHO: [u32; 25] = [0, 1, 62, 28, 27, 36, 44, 6, 55, 20, 3, 10, 43, 25, 39, 41, 45, 15, 21, 8, 18, 2, 61, 56, 14];
+   |           ^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `PI` is never used
+  --> src/fasthash.rs:20:11
+   |
+20 | pub const PI: [usize; 25] = {
+   |           ^^
+
+warning: method `canon` is never used
+  --> src/stages_mldsa.rs:55:12
+   |
+43 | impl<P: MlDsaParams> Decoded<P> {
+   | ------------------------------- method in this implementation
+...
+55 |     pub fn canon(&self) -> Vec<u8> {
+   |            ^^^^^
+
+>> build [pgo-gen] profile=lto RUSTFLAGS='-C target-cpu=native -C profile-generate=/home/user/pqc-signatures/libs/rustcrypto/target/pgo-data/raw' 
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+   --> vendor/ml-dsa/src/lib.rs:158:1
+    |
+158 | pub struct MuBuilder(pub H);
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: requested on the command line with `-W missing-debug-implementations`
+
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+  --> vendor/ml-dsa/src/crypto.rs:8:1
+   |
+ 8 | / pub enum ShakeState<Shake: ExtendableOutput> {
+ 9 | |     Absorbing(Shake),
+10 | |     Squeezing(Shake::Reader),
+11 | | }
+   | |_^
+
+warning: unused import: `SignatureParams`
+  --> src/stages_mldsa.rs:14:87
+   |
+14 | use ml_dsa::param::{EncodedSignature, EncodedVerifyingKey, MlDsaParams, ParameterSet, SignatureParams as _};
+   |                                                                                       ^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `slh_dsa::hashes::HashSuite`
+ --> src/stages_slhdsa.rs:9:5
+  |
+9 | use slh_dsa::hashes::HashSuite as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::fors::ForsParams`
+ --> src/stages_slhdsa.rs:8:5
+  |
+8 | use slh_dsa::fors::ForsParams as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::wots::WotsParams`
+  --> src/stages_slhdsa.rs:11:5
+   |
+11 | use slh_dsa::wots::WotsParams as _;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: variable does not need to be mutable
+   --> src/stages_slhdsa.rs:558:9
+    |
+558 |     let mut load = |l: usize, lane: &mut [Option<(usize, u8)>; 4], vals: &mut [[u8; 64]; 4], out: &mut Vec<Bytes>, next: &mut usize| {
+    |         ----^^^^
+    |         |
+    |         help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `RHO` is never used
+  --> src/fasthash.rs:18:11
+   |
+18 | pub const RHO: [u32; 25] = [0, 1, 62, 28, 27, 36, 44, 6, 55, 20, 3, 10, 43, 25, 39, 41, 45, 15, 21, 8, 18, 2, 61, 56, 14];
+   |           ^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `PI` is never used
+  --> src/fasthash.rs:20:11
+   |
+20 | pub const PI: [usize; 25] = {
+   |           ^^
+
+warning: method `canon` is never used
+  --> src/stages_mldsa.rs:55:12
+   |
+43 | impl<P: MlDsaParams> Decoded<P> {
+   | ------------------------------- method in this implementation
+...
+55 |     pub fn canon(&self) -> Vec<u8> {
+   |            ^^^^^
+
+>> PGO training [keygen]
+>> build [pgo-keygen] profile=lto RUSTFLAGS='-C target-cpu=native -C profile-use=/home/user/pqc-signatures/libs/rustcrypto/target/pgo-data/keygen.profdata' 
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+   --> vendor/ml-dsa/src/lib.rs:158:1
+    |
+158 | pub struct MuBuilder(pub H);
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: requested on the command line with `-W missing-debug-implementations`
+
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+  --> vendor/ml-dsa/src/crypto.rs:8:1
+   |
+ 8 | / pub enum ShakeState<Shake: ExtendableOutput> {
+ 9 | |     Absorbing(Shake),
+10 | |     Squeezing(Shake::Reader),
+11 | | }
+   | |_^
+
+warning: unused import: `SignatureParams`
+  --> src/stages_mldsa.rs:14:87
+   |
+14 | use ml_dsa::param::{EncodedSignature, EncodedVerifyingKey, MlDsaParams, ParameterSet, SignatureParams as _};
+   |                                                                                       ^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `slh_dsa::hashes::HashSuite`
+ --> src/stages_slhdsa.rs:9:5
+  |
+9 | use slh_dsa::hashes::HashSuite as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::fors::ForsParams`
+ --> src/stages_slhdsa.rs:8:5
+  |
+8 | use slh_dsa::fors::ForsParams as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::wots::WotsParams`
+  --> src/stages_slhdsa.rs:11:5
+   |
+11 | use slh_dsa::wots::WotsParams as _;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: variable does not need to be mutable
+   --> src/stages_slhdsa.rs:558:9
+    |
+558 |     let mut load = |l: usize, lane: &mut [Option<(usize, u8)>; 4], vals: &mut [[u8; 64]; 4], out: &mut Vec<Bytes>, next: &mut usize| {
+    |         ----^^^^
+    |         |
+    |         help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `RHO` is never used
+  --> src/fasthash.rs:18:11
+   |
+18 | pub const RHO: [u32; 25] = [0, 1, 62, 28, 27, 36, 44, 6, 55, 20, 3, 10, 43, 25, 39, 41, 45, 15, 21, 8, 18, 2, 61, 56, 14];
+   |           ^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `PI` is never used
+  --> src/fasthash.rs:20:11
+   |
+20 | pub const PI: [usize; 25] = {
+   |           ^^
+
+warning: method `canon` is never used
+  --> src/stages_mldsa.rs:55:12
+   |
+43 | impl<P: MlDsaParams> Decoded<P> {
+   | ------------------------------- method in this implementation
+...
+55 |     pub fn canon(&self) -> Vec<u8> {
+   |            ^^^^^
+
+warning: pqcbench.e0a0a4060c11759e-cgu.0: function control flow change detected (hash mismatch) _RNvCsjhGAxPbHvNa_8pqcbench9cmd_bench Hash = 583346223637428919 up to 977 count discarded
+
+warning: pqcbench.e0a0a4060c11759e-cgu.0: function control flow change detected (hash mismatch) _RNvNtCsjhGAxPbHvNa_8pqcbench8validate12cmd_validate Hash = 1082706322639369390 up to 0 count discarded
+
+warning: pqcbench.e0a0a4060c11759e-cgu.0: function control flow change detected (hash mismatch) _RNvXs1_NtNtNtCscI6d9CVNmLh_4core4iter8adapters6filterINtB5_6FilterIBQ_IBQ_IBQ_INtNtNtBb_5slice4iter4IterNtNtCsjhGAxPbHvNa_8pqcbench6stages4SVarENCNvB1G_8selected0ENCB2k_s_0ENCB2k_s0_0ENCB2k_s1_0ENtNtNtB9_6traits8iterator8Iterator4nextB1I_ Hash = 801666164216194328 up to 0 count discarded
+
+>> PGO training [sign]
+>> build [pgo-sign] profile=lto RUSTFLAGS='-C target-cpu=native -C profile-use=/home/user/pqc-signatures/libs/rustcrypto/target/pgo-data/sign.profdata' 
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+   --> vendor/ml-dsa/src/lib.rs:158:1
+    |
+158 | pub struct MuBuilder(pub H);
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: requested on the command line with `-W missing-debug-implementations`
+
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+  --> vendor/ml-dsa/src/crypto.rs:8:1
+   |
+ 8 | / pub enum ShakeState<Shake: ExtendableOutput> {
+ 9 | |     Absorbing(Shake),
+10 | |     Squeezing(Shake::Reader),
+11 | | }
+   | |_^
+
+warning: unused import: `SignatureParams`
+  --> src/stages_mldsa.rs:14:87
+   |
+14 | use ml_dsa::param::{EncodedSignature, EncodedVerifyingKey, MlDsaParams, ParameterSet, SignatureParams as _};
+   |                                                                                       ^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `slh_dsa::hashes::HashSuite`
+ --> src/stages_slhdsa.rs:9:5
+  |
+9 | use slh_dsa::hashes::HashSuite as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::fors::ForsParams`
+ --> src/stages_slhdsa.rs:8:5
+  |
+8 | use slh_dsa::fors::ForsParams as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::wots::WotsParams`
+  --> src/stages_slhdsa.rs:11:5
+   |
+11 | use slh_dsa::wots::WotsParams as _;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: variable does not need to be mutable
+   --> src/stages_slhdsa.rs:558:9
+    |
+558 |     let mut load = |l: usize, lane: &mut [Option<(usize, u8)>; 4], vals: &mut [[u8; 64]; 4], out: &mut Vec<Bytes>, next: &mut usize| {
+    |         ----^^^^
+    |         |
+    |         help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `RHO` is never used
+  --> src/fasthash.rs:18:11
+   |
+18 | pub const RHO: [u32; 25] = [0, 1, 62, 28, 27, 36, 44, 6, 55, 20, 3, 10, 43, 25, 39, 41, 45, 15, 21, 8, 18, 2, 61, 56, 14];
+   |           ^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `PI` is never used
+  --> src/fasthash.rs:20:11
+   |
+20 | pub const PI: [usize; 25] = {
+   |           ^^
+
+warning: method `canon` is never used
+  --> src/stages_mldsa.rs:55:12
+   |
+43 | impl<P: MlDsaParams> Decoded<P> {
+   | ------------------------------- method in this implementation
+...
+55 |     pub fn canon(&self) -> Vec<u8> {
+   |            ^^^^^
+
+warning: pqcbench.e0a0a4060c11759e-cgu.0: function control flow change detected (hash mismatch) _RNvCsjhGAxPbHvNa_8pqcbench9cmd_bench Hash = 583346223637428919 up to 932 count discarded
+
+warning: pqcbench.e0a0a4060c11759e-cgu.0: function control flow change detected (hash mismatch) _RNvNtCsjhGAxPbHvNa_8pqcbench8validate12cmd_validate Hash = 1082706322639369390 up to 0 count discarded
+
+warning: pqcbench.e0a0a4060c11759e-cgu.0: function control flow change detected (hash mismatch) _RNvXs1_NtNtNtCscI6d9CVNmLh_4core4iter8adapters6filterINtB5_6FilterIBQ_IBQ_IBQ_INtNtNtBb_5slice4iter4IterNtNtCsjhGAxPbHvNa_8pqcbench6stages4SVarENCNvB1G_8selected0ENCB2k_s_0ENCB2k_s0_0ENCB2k_s1_0ENtNtNtB9_6traits8iterator8Iterator4nextB1I_ Hash = 801666164216194328 up to 0 count discarded
+
+>> PGO training [verify]
+>> build [pgo-verify] profile=lto RUSTFLAGS='-C target-cpu=native -C profile-use=/home/user/pqc-signatures/libs/rustcrypto/target/pgo-data/verify.profdata' 
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+   --> vendor/ml-dsa/src/lib.rs:158:1
+    |
+158 | pub struct MuBuilder(pub H);
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: requested on the command line with `-W missing-debug-implementations`
+
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+  --> vendor/ml-dsa/src/crypto.rs:8:1
+   |
+ 8 | / pub enum ShakeState<Shake: ExtendableOutput> {
+ 9 | |     Absorbing(Shake),
+10 | |     Squeezing(Shake::Reader),
+11 | | }
+   | |_^
+
+warning: unused import: `SignatureParams`
+  --> src/stages_mldsa.rs:14:87
+   |
+14 | use ml_dsa::param::{EncodedSignature, EncodedVerifyingKey, MlDsaParams, ParameterSet, SignatureParams as _};
+   |                                                                                       ^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `slh_dsa::hashes::HashSuite`
+ --> src/stages_slhdsa.rs:9:5
+  |
+9 | use slh_dsa::hashes::HashSuite as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::fors::ForsParams`
+ --> src/stages_slhdsa.rs:8:5
+  |
+8 | use slh_dsa::fors::ForsParams as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::wots::WotsParams`
+  --> src/stages_slhdsa.rs:11:5
+   |
+11 | use slh_dsa::wots::WotsParams as _;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: variable does not need to be mutable
+   --> src/stages_slhdsa.rs:558:9
+    |
+558 |     let mut load = |l: usize, lane: &mut [Option<(usize, u8)>; 4], vals: &mut [[u8; 64]; 4], out: &mut Vec<Bytes>, next: &mut usize| {
+    |         ----^^^^
+    |         |
+    |         help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `RHO` is never used
+  --> src/fasthash.rs:18:11
+   |
+18 | pub const RHO: [u32; 25] = [0, 1, 62, 28, 27, 36, 44, 6, 55, 20, 3, 10, 43, 25, 39, 41, 45, 15, 21, 8, 18, 2, 61, 56, 14];
+   |           ^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `PI` is never used
+  --> src/fasthash.rs:20:11
+   |
+20 | pub const PI: [usize; 25] = {
+   |           ^^
+
+warning: method `canon` is never used
+  --> src/stages_mldsa.rs:55:12
+   |
+43 | impl<P: MlDsaParams> Decoded<P> {
+   | ------------------------------- method in this implementation
+...
+55 |     pub fn canon(&self) -> Vec<u8> {
+   |            ^^^^^
+
+warning: pqcbench.e0a0a4060c11759e-cgu.0: function control flow change detected (hash mismatch) _RNvCsjhGAxPbHvNa_8pqcbench9cmd_bench Hash = 583346223637428919 up to 902 count discarded
+
+warning: pqcbench.e0a0a4060c11759e-cgu.0: function control flow change detected (hash mismatch) _RNvNtCsjhGAxPbHvNa_8pqcbench8validate12cmd_validate Hash = 1082706322639369390 up to 0 count discarded
+
+warning: pqcbench.e0a0a4060c11759e-cgu.0: function control flow change detected (hash mismatch) _RNvXs1_NtNtNtCscI6d9CVNmLh_4core4iter8adapters6filterINtB5_6FilterIBQ_IBQ_IBQ_INtNtNtBb_5slice4iter4IterNtNtCsjhGAxPbHvNa_8pqcbench6stages4SVarENCNvB1G_8selected0ENCB2k_s_0ENCB2k_s0_0ENCB2k_s1_0ENtNtNtB9_6traits8iterator8Iterator4nextB1I_ Hash = 801666164216194328 up to 0 count discarded
+
+>> build done:
+{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=base)","build_tag":"base"}
+{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=native)","build_tag":"native"}
+{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=lto)","build_tag":"lto"}
+{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=mimalloc)","build_tag":"mimalloc"}
+{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=pgo-keygen)","build_tag":"pgo-keygen"}
+{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=pgo-sign)","build_tag":"pgo-sign"}
+{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=pgo-verify)","build_tag":"pgo-verify"}
+== build bouncycastle
+== vectors noble
+[noble] ML-DSA-44           sig   2420 B  self_verify=true  reference_match=true
+[noble] ML-DSA-65           sig   3309 B  self_verify=true  reference_match=true
+[noble] ML-DSA-87           sig   4627 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHA2-128s   sig   7856 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHA2-128f   sig  17088 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHA2-192s   sig  16224 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHA2-192f   sig  35664 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHA2-256s   sig  29792 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHA2-256f   sig  49856 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHAKE-128s  sig   7856 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHAKE-128f  sig  17088 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHAKE-192s  sig  16224 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHAKE-192f  sig  35664 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHAKE-256s  sig  29792 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHAKE-256f  sig  49856 B  self_verify=true  reference_match=true
+[noble] Falcon-512          sig    654 B  self_verify=true  reference_match=null
+[noble] Falcon-1024         sig   1276 B  self_verify=true  reference_match=null
+== vectors liboqs
+vectors: 17 params, mismatches: none
+== vectors openssl
+ML-DSA-44            pk=1312 sk=2560 sig=2420 self_verify=1 reference_match=1
+ML-DSA-65            pk=1952 sk=4032 sig=3309 self_verify=1 reference_match=1
+ML-DSA-87            pk=2592 sk=4896 sig=4627 self_verify=1 reference_match=1
+SLH-DSA-SHA2-128s    pk=32 sk=64 sig=7856 self_verify=1 reference_match=1
+SLH-DSA-SHA2-128f    pk=32 sk=64 sig=17088 self_verify=1 reference_match=1
+SLH-DSA-SHA2-192s    pk=48 sk=96 sig=16224 self_verify=1 reference_match=1
+SLH-DSA-SHA2-192f    pk=48 sk=96 sig=35664 self_verify=1 reference_match=1
+SLH-DSA-SHA2-256s    pk=64 sk=128 sig=29792 self_verify=1 reference_match=1
+SLH-DSA-SHA2-256f    pk=64 sk=128 sig=49856 self_verify=1 reference_match=1
+SLH-DSA-SHAKE-128s   pk=32 sk=64 sig=7856 self_verify=1 reference_match=1
+SLH-DSA-SHAKE-128f   pk=32 sk=64 sig=17088 self_verify=1 reference_match=1
+SLH-DSA-SHAKE-192s   pk=48 sk=96 sig=16224 self_verify=1 reference_match=1
+SLH-DSA-SHAKE-192f   pk=48 sk=96 sig=35664 self_verify=1 reference_match=1
+SLH-DSA-SHAKE-256s   pk=64 sk=128 sig=29792 self_verify=1 reference_match=1
+SLH-DSA-SHAKE-256f   pk=64 sk=128 sig=49856 self_verify=1 reference_match=1
+15/15 params match the reference
+== vectors circl
+ML-DSA-44            pk=1312 sk=2560 sig=2420 self_verify=true OK
+ML-DSA-65            pk=1952 sk=4032 sig=3309 self_verify=true OK
+ML-DSA-87            pk=2592 sk=4896 sig=4627 self_verify=true OK
+SLH-DSA-SHA2-128s    pk=32 sk=64 sig=7856 self_verify=true OK
+SLH-DSA-SHA2-128f    pk=32 sk=64 sig=17088 self_verify=true OK
+SLH-DSA-SHA2-192s    pk=48 sk=96 sig=16224 self_verify=true OK
+SLH-DSA-SHA2-192f    pk=48 sk=96 sig=35664 self_verify=true OK
+SLH-DSA-SHA2-256s    pk=64 sk=128 sig=29792 self_verify=true OK
+SLH-DSA-SHA2-256f    pk=64 sk=128 sig=49856 self_verify=true OK
+SLH-DSA-SHAKE-128s   pk=32 sk=64 sig=7856 self_verify=true OK
+SLH-DSA-SHAKE-128f   pk=32 sk=64 sig=17088 self_verify=true OK
+SLH-DSA-SHAKE-192s   pk=48 sk=96 sig=16224 self_verify=true OK
+SLH-DSA-SHAKE-192f   pk=48 sk=96 sig=35664 self_verify=true OK
+SLH-DSA-SHAKE-256s   pk=64 sk=128 sig=29792 self_verify=true OK
+SLH-DSA-SHAKE-256f   pk=64 sk=128 sig=49856 self_verify=true OK
+== vectors rustcrypto
+ML-DSA-44              pk=1312 sk=2560 sig=2420 self_verify=true tamper_rejected=true reference_match=true
+ML-DSA-65              pk=1952 sk=4032 sig=3309 self_verify=true tamper_rejected=true reference_match=true
+ML-DSA-87              pk=2592 sk=4896 sig=4627 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHA2-128s      pk=32 sk=64 sig=7856 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHA2-128f      pk=32 sk=64 sig=17088 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHA2-192s      pk=48 sk=96 sig=16224 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHA2-192f      pk=48 sk=96 sig=35664 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHA2-256s      pk=64 sk=128 sig=29792 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHA2-256f      pk=64 sk=128 sig=49856 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHAKE-128s     pk=32 sk=64 sig=7856 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHAKE-128f     pk=32 sk=64 sig=17088 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHAKE-192s     pk=48 sk=96 sig=16224 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHAKE-192f     pk=48 sk=96 sig=35664 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHAKE-256s     pk=64 sk=128 sig=29792 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHAKE-256f     pk=64 sk=128 sig=49856 self_verify=true tamper_rejected=true reference_match=true
+all 15 parameter sets match common/reference.json
+== vectors bouncycastle
+ML-DSA-44            pk= 1312 sk= 2560 sig= 2420 self_verify=true MATCH reference
+ML-DSA-65            pk= 1952 sk= 4032 sig= 3309 self_verify=true MATCH reference
+ML-DSA-87            pk= 2592 sk= 4896 sig= 4627 self_verify=true MATCH reference
+SLH-DSA-SHA2-128s    pk=   32 sk=   64 sig= 7856 self_verify=true MATCH reference
+SLH-DSA-SHA2-128f    pk=   32 sk=   64 sig=17088 self_verify=true MATCH reference
+SLH-DSA-SHA2-192s    pk=   48 sk=   96 sig=16224 self_verify=true MATCH reference
+SLH-DSA-SHA2-192f    pk=   48 sk=   96 sig=35664 self_verify=true MATCH reference
+SLH-DSA-SHA2-256s    pk=   64 sk=  128 sig=29792 self_verify=true MATCH reference
+SLH-DSA-SHA2-256f    pk=   64 sk=  128 sig=49856 self_verify=true MATCH reference
+SLH-DSA-SHAKE-128s   pk=   32 sk=   64 sig= 7856 self_verify=true MATCH reference
+SLH-DSA-SHAKE-128f   pk=   32 sk=   64 sig=17088 self_verify=true MATCH reference
+SLH-DSA-SHAKE-192s   pk=   48 sk=   96 sig=16224 self_verify=true MATCH reference
+SLH-DSA-SHAKE-192f   pk=   48 sk=   96 sig=35664 self_verify=true MATCH reference
+SLH-DSA-SHAKE-256s   pk=   64 sk=  128 sig=29792 self_verify=true MATCH reference
+SLH-DSA-SHAKE-256f   pk=   64 sk=  128 sig=49856 self_verify=true MATCH reference
+Falcon-512           pk=  897 sk= 1281 sig=  666 self_verify=true (no byte match expected)
+Falcon-1024          pk= 1793 sk= 2305 sig= 1280 self_verify=true (no byte match expected)
+== crossverify: noble verifies noble
+[noble] crossverify noble ML-DSA-44           ok=true tamper_rejected=true
+[noble] crossverify noble ML-DSA-65           ok=true tamper_rejected=true
+[noble] crossverify noble ML-DSA-87           ok=true tamper_rejected=true
+[noble] crossverify noble SLH-DSA-SHA2-128s   ok=true tamper_rejected=true
+[noble] crossverify noble SLH-DSA-SHA2-128f   ok=true tamper_rejected=true
+[noble] crossverify noble SLH-DSA-SHA2-192s   ok=true tamper_rejected=true
+[noble] crossverify noble SLH-DSA-SHA2-192f   ok=true tamper_rejected=true
+[noble] crossverify noble SLH-DSA-SHA2-256s   ok=true tamper_rejected=true
+[noble] crossverify noble SLH-DSA-SHA2-256f   ok=true tamper_rejected=true
+[noble] crossverify noble SLH-DSA-SHAKE-128s  ok=true tamper_rejected=true
+[noble] crossverify noble SLH-DSA-SHAKE-128f  ok=true tamper_rejected=true
+[noble] crossverify noble SLH-DSA-SHAKE-192s  ok=true tamper_rejected=true
+[noble] crossverify noble SLH-DSA-SHAKE-192f  ok=true tamper_rejected=true
+[noble] crossverify noble SLH-DSA-SHAKE-256s  ok=true tamper_rejected=true
+[noble] crossverify noble SLH-DSA-SHAKE-256f  ok=true tamper_rejected=true
+[noble] crossverify noble Falcon-512          ok=true tamper_rejected=true
+[noble] crossverify noble Falcon-1024         ok=true tamper_rejected=true
+== crossverify: noble verifies liboqs
+[noble] crossverify liboqs ML-DSA-44           ok=true tamper_rejected=true
+[noble] crossverify liboqs ML-DSA-65           ok=true tamper_rejected=true
+[noble] crossverify liboqs ML-DSA-87           ok=true tamper_rejected=true
+[noble] crossverify liboqs SLH-DSA-SHA2-128s   ok=true tamper_rejected=true
+[noble] crossverify liboqs SLH-DSA-SHA2-128f   ok=true tamper_rejected=true
+[noble] crossverify liboqs SLH-DSA-SHA2-192s   ok=true tamper_rejected=true
+[noble] crossverify liboqs SLH-DSA-SHA2-192f   ok=true tamper_rejected=true
+[noble] crossverify liboqs SLH-DSA-SHA2-256s   ok=true tamper_rejected=true
+[noble] crossverify liboqs SLH-DSA-SHA2-256f   ok=true tamper_rejected=true
+[noble] crossverify liboqs SLH-DSA-SHAKE-128s  ok=true tamper_rejected=true
+[noble] crossverify liboqs SLH-DSA-SHAKE-128f  ok=true tamper_rejected=true
+[noble] crossverify liboqs SLH-DSA-SHAKE-192s  ok=true tamper_rejected=true
+[noble] crossverify liboqs SLH-DSA-SHAKE-192f  ok=true tamper_rejected=true
+[noble] crossverify liboqs SLH-DSA-SHAKE-256s  ok=true tamper_rejected=true
+[noble] crossverify liboqs SLH-DSA-SHAKE-256f  ok=true tamper_rejected=true
+[noble] crossverify liboqs Falcon-512          ok=true tamper_rejected=true
+[noble] crossverify liboqs Falcon-1024         ok=true tamper_rejected=true
+== crossverify: noble verifies openssl
+[noble] crossverify openssl ML-DSA-44           ok=true tamper_rejected=true
+[noble] crossverify openssl ML-DSA-65           ok=true tamper_rejected=true
+[noble] crossverify openssl ML-DSA-87           ok=true tamper_rejected=true
+[noble] crossverify openssl SLH-DSA-SHA2-128s   ok=true tamper_rejected=true
+[noble] crossverify openssl SLH-DSA-SHA2-128f   ok=true tamper_rejected=true
+[noble] crossverify openssl SLH-DSA-SHA2-192s   ok=true tamper_rejected=true
+[noble] crossverify openssl SLH-DSA-SHA2-192f   ok=true tamper_rejected=true
+[noble] crossverify openssl SLH-DSA-SHA2-256s   ok=true tamper_rejected=true
+[noble] crossverify openssl SLH-DSA-SHA2-256f   ok=true tamper_rejected=true
+[noble] crossverify openssl SLH-DSA-SHAKE-128s  ok=true tamper_rejected=true
+[noble] crossverify openssl SLH-DSA-SHAKE-128f  ok=true tamper_rejected=true
+[noble] crossverify openssl SLH-DSA-SHAKE-192s  ok=true tamper_rejected=true
+[noble] crossverify openssl SLH-DSA-SHAKE-192f  ok=true tamper_rejected=true
+[noble] crossverify openssl SLH-DSA-SHAKE-256s  ok=true tamper_rejected=true
+[noble] crossverify openssl SLH-DSA-SHAKE-256f  ok=true tamper_rejected=true
+== crossverify: noble verifies circl
+[noble] crossverify circl ML-DSA-44           ok=true tamper_rejected=true
+[noble] crossverify circl ML-DSA-65           ok=true tamper_rejected=true
+[noble] crossverify circl ML-DSA-87           ok=true tamper_rejected=true
+[noble] crossverify circl SLH-DSA-SHA2-128s   ok=true tamper_rejected=true
+[noble] crossverify circl SLH-DSA-SHA2-128f   ok=true tamper_rejected=true
+[noble] crossverify circl SLH-DSA-SHA2-192s   ok=true tamper_rejected=true
+[noble] crossverify circl SLH-DSA-SHA2-192f   ok=true tamper_rejected=true
+[noble] crossverify circl SLH-DSA-SHA2-256s   ok=true tamper_rejected=true
+[noble] crossverify circl SLH-DSA-SHA2-256f   ok=true tamper_rejected=true
+[noble] crossverify circl SLH-DSA-SHAKE-128s  ok=true tamper_rejected=true
+[noble] crossverify circl SLH-DSA-SHAKE-128f  ok=true tamper_rejected=true
+[noble] crossverify circl SLH-DSA-SHAKE-192s  ok=true tamper_rejected=true
+[noble] crossverify circl SLH-DSA-SHAKE-192f  ok=true tamper_rejected=true
+[noble] crossverify circl SLH-DSA-SHAKE-256s  ok=true tamper_rejected=true
+[noble] crossverify circl SLH-DSA-SHAKE-256f  ok=true tamper_rejected=true
+== crossverify: noble verifies rustcrypto
+[noble] crossverify rustcrypto ML-DSA-44           ok=true tamper_rejected=true
+[noble] crossverify rustcrypto ML-DSA-65           ok=true tamper_rejected=true
+[noble] crossverify rustcrypto ML-DSA-87           ok=true tamper_rejected=true
+[noble] crossverify rustcrypto SLH-DSA-SHA2-128s   ok=true tamper_rejected=true
+[noble] crossverify rustcrypto SLH-DSA-SHA2-128f   ok=true tamper_rejected=true
+[noble] crossverify rustcrypto SLH-DSA-SHA2-192s   ok=true tamper_rejected=true
+[noble] crossverify rustcrypto SLH-DSA-SHA2-192f   ok=true tamper_rejected=true
+[noble] crossverify rustcrypto SLH-DSA-SHA2-256s   ok=true tamper_rejected=true
+[noble] crossverify rustcrypto SLH-DSA-SHA2-256f   ok=true tamper_rejected=true
+[noble] crossverify rustcrypto SLH-DSA-SHAKE-128s  ok=true tamper_rejected=true
+[noble] crossverify rustcrypto SLH-DSA-SHAKE-128f  ok=true tamper_rejected=true
+[noble] crossverify rustcrypto SLH-DSA-SHAKE-192s  ok=true tamper_rejected=true
+[noble] crossverify rustcrypto SLH-DSA-SHAKE-192f  ok=true tamper_rejected=true
+[noble] crossverify rustcrypto SLH-DSA-SHAKE-256s  ok=true tamper_rejected=true
+[noble] crossverify rustcrypto SLH-DSA-SHAKE-256f  ok=true tamper_rejected=true
+== crossverify: noble verifies bouncycastle
+[noble] crossverify bouncycastle ML-DSA-44           ok=true tamper_rejected=true
+[noble] crossverify bouncycastle ML-DSA-65           ok=true tamper_rejected=true
+[noble] crossverify bouncycastle ML-DSA-87           ok=true tamper_rejected=true
+[noble] crossverify bouncycastle SLH-DSA-SHA2-128s   ok=true tamper_rejected=true
+[noble] crossverify bouncycastle SLH-DSA-SHA2-128f   ok=true tamper_rejected=true
+[noble] crossverify bouncycastle SLH-DSA-SHA2-192s   ok=true tamper_rejected=true
+[noble] crossverify bouncycastle SLH-DSA-SHA2-192f   ok=true tamper_rejected=true
+[noble] crossverify bouncycastle SLH-DSA-SHA2-256s   ok=true tamper_rejected=true
+[noble] crossverify bouncycastle SLH-DSA-SHA2-256f   ok=true tamper_rejected=true
+[noble] crossverify bouncycastle SLH-DSA-SHAKE-128s  ok=true tamper_rejected=true
+[noble] crossverify bouncycastle SLH-DSA-SHAKE-128f  ok=true tamper_rejected=true
+[noble] crossverify bouncycastle SLH-DSA-SHAKE-192s  ok=true tamper_rejected=true
+[noble] crossverify bouncycastle SLH-DSA-SHAKE-192f  ok=true tamper_rejected=true
+[noble] crossverify bouncycastle SLH-DSA-SHAKE-256s  ok=true tamper_rejected=true
+[noble] crossverify bouncycastle SLH-DSA-SHAKE-256f  ok=true tamper_rejected=true
+[noble] crossverify bouncycastle Falcon-512          ok=false tamper_rejected=true
+[noble] crossverify bouncycastle Falcon-1024         ok=false tamper_rejected=true
+== crossverify: liboqs verifies noble
+crossverify(noble): 17 params, failures: none
+== crossverify: liboqs verifies liboqs
+crossverify(liboqs): 17 params, failures: none
+== crossverify: liboqs verifies openssl
+crossverify(openssl): 15 params, failures: none
+== crossverify: liboqs verifies circl
+crossverify(circl): 15 params, failures: none
+== crossverify: liboqs verifies rustcrypto
+crossverify(rustcrypto): 15 params, failures: none
+== crossverify: liboqs verifies bouncycastle
+crossverify(bouncycastle): 17 params, failures: none
+== crossverify: openssl verifies noble
+ML-DSA-44            ok=1 tamper_rejected=1
+ML-DSA-65            ok=1 tamper_rejected=1
+ML-DSA-87            ok=1 tamper_rejected=1
+SLH-DSA-SHA2-128s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-128f    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-192s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-192f    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-256s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-256f    ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-128s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-128f   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-192s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-192f   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-256s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-256f   ok=1 tamper_rejected=1
+Falcon-512           skipped (unsupported)
+Falcon-1024          skipped (unsupported)
+crossverify: 15/15 ok
+== crossverify: openssl verifies liboqs
+ML-DSA-44            ok=1 tamper_rejected=1
+ML-DSA-65            ok=1 tamper_rejected=1
+ML-DSA-87            ok=1 tamper_rejected=1
+SLH-DSA-SHA2-128s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-128f    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-192s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-192f    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-256s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-256f    ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-128s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-128f   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-192s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-192f   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-256s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-256f   ok=1 tamper_rejected=1
+Falcon-512           skipped (unsupported)
+Falcon-1024          skipped (unsupported)
+crossverify: 15/15 ok
+== crossverify: openssl verifies openssl
+ML-DSA-44            ok=1 tamper_rejected=1
+ML-DSA-65            ok=1 tamper_rejected=1
+ML-DSA-87            ok=1 tamper_rejected=1
+SLH-DSA-SHA2-128s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-128f    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-192s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-192f    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-256s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-256f    ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-128s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-128f   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-192s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-192f   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-256s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-256f   ok=1 tamper_rejected=1
+crossverify: 15/15 ok
+== crossverify: openssl verifies circl
+ML-DSA-44            ok=1 tamper_rejected=1
+ML-DSA-65            ok=1 tamper_rejected=1
+ML-DSA-87            ok=1 tamper_rejected=1
+SLH-DSA-SHA2-128s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-128f    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-192s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-192f    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-256s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-256f    ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-128s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-128f   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-192s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-192f   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-256s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-256f   ok=1 tamper_rejected=1
+crossverify: 15/15 ok
+== crossverify: openssl verifies rustcrypto
+ML-DSA-44            ok=1 tamper_rejected=1
+ML-DSA-65            ok=1 tamper_rejected=1
+ML-DSA-87            ok=1 tamper_rejected=1
+SLH-DSA-SHA2-128s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-128f    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-192s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-192f    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-256s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-256f    ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-128s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-128f   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-192s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-192f   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-256s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-256f   ok=1 tamper_rejected=1
+crossverify: 15/15 ok
+== crossverify: openssl verifies bouncycastle
+ML-DSA-44            ok=1 tamper_rejected=1
+ML-DSA-65            ok=1 tamper_rejected=1
+ML-DSA-87            ok=1 tamper_rejected=1
+SLH-DSA-SHA2-128s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-128f    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-192s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-192f    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-256s    ok=1 tamper_rejected=1
+SLH-DSA-SHA2-256f    ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-128s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-128f   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-192s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-192f   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-256s   ok=1 tamper_rejected=1
+SLH-DSA-SHAKE-256f   ok=1 tamper_rejected=1
+Falcon-512           skipped (unsupported)
+Falcon-1024          skipped (unsupported)
+crossverify: 15/15 ok
+== crossverify: circl verifies noble
+ML-DSA-44            ok=true tamper_rejected=true
+ML-DSA-65            ok=true tamper_rejected=true
+ML-DSA-87            ok=true tamper_rejected=true
+SLH-DSA-SHA2-128s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-128f    ok=true tamper_rejected=true
+SLH-DSA-SHA2-192s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-192f    ok=true tamper_rejected=true
+SLH-DSA-SHA2-256s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-256f    ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128f   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192f   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256f   ok=true tamper_rejected=true
+== crossverify: circl verifies liboqs
+ML-DSA-44            ok=true tamper_rejected=true
+ML-DSA-65            ok=true tamper_rejected=true
+ML-DSA-87            ok=true tamper_rejected=true
+SLH-DSA-SHA2-128s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-128f    ok=true tamper_rejected=true
+SLH-DSA-SHA2-192s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-192f    ok=true tamper_rejected=true
+SLH-DSA-SHA2-256s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-256f    ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128f   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192f   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256f   ok=true tamper_rejected=true
+== crossverify: circl verifies openssl
+ML-DSA-44            ok=true tamper_rejected=true
+ML-DSA-65            ok=true tamper_rejected=true
+ML-DSA-87            ok=true tamper_rejected=true
+SLH-DSA-SHA2-128s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-128f    ok=true tamper_rejected=true
+SLH-DSA-SHA2-192s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-192f    ok=true tamper_rejected=true
+SLH-DSA-SHA2-256s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-256f    ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128f   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192f   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256f   ok=true tamper_rejected=true
+== crossverify: circl verifies circl
+ML-DSA-44            ok=true tamper_rejected=true
+ML-DSA-65            ok=true tamper_rejected=true
+ML-DSA-87            ok=true tamper_rejected=true
+SLH-DSA-SHA2-128s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-128f    ok=true tamper_rejected=true
+SLH-DSA-SHA2-192s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-192f    ok=true tamper_rejected=true
+SLH-DSA-SHA2-256s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-256f    ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128f   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192f   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256f   ok=true tamper_rejected=true
+== crossverify: circl verifies rustcrypto
+ML-DSA-44            ok=true tamper_rejected=true
+ML-DSA-65            ok=true tamper_rejected=true
+ML-DSA-87            ok=true tamper_rejected=true
+SLH-DSA-SHA2-128s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-128f    ok=true tamper_rejected=true
+SLH-DSA-SHA2-192s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-192f    ok=true tamper_rejected=true
+SLH-DSA-SHA2-256s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-256f    ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128f   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192f   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256f   ok=true tamper_rejected=true
+== crossverify: circl verifies bouncycastle
+ML-DSA-44            ok=true tamper_rejected=true
+ML-DSA-65            ok=true tamper_rejected=true
+ML-DSA-87            ok=true tamper_rejected=true
+SLH-DSA-SHA2-128s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-128f    ok=true tamper_rejected=true
+SLH-DSA-SHA2-192s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-192f    ok=true tamper_rejected=true
+SLH-DSA-SHA2-256s    ok=true tamper_rejected=true
+SLH-DSA-SHA2-256f    ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128f   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192f   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256s   ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256f   ok=true tamper_rejected=true
+== crossverify: rustcrypto verifies noble
+ML-DSA-44              ok=true tamper_rejected=true
+ML-DSA-65              ok=true tamper_rejected=true
+ML-DSA-87              ok=true tamper_rejected=true
+SLH-DSA-SHA2-128s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-128f      ok=true tamper_rejected=true
+SLH-DSA-SHA2-192s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-192f      ok=true tamper_rejected=true
+SLH-DSA-SHA2-256s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-256f      ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128f     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192f     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256f     ok=true tamper_rejected=true
+crossverify of noble: 15 entries, 0 failures
+== crossverify: rustcrypto verifies liboqs
+ML-DSA-44              ok=true tamper_rejected=true
+ML-DSA-65              ok=true tamper_rejected=true
+ML-DSA-87              ok=true tamper_rejected=true
+SLH-DSA-SHA2-128s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-128f      ok=true tamper_rejected=true
+SLH-DSA-SHA2-192s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-192f      ok=true tamper_rejected=true
+SLH-DSA-SHA2-256s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-256f      ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128f     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192f     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256f     ok=true tamper_rejected=true
+crossverify of liboqs: 15 entries, 0 failures
+== crossverify: rustcrypto verifies openssl
+ML-DSA-44              ok=true tamper_rejected=true
+ML-DSA-65              ok=true tamper_rejected=true
+ML-DSA-87              ok=true tamper_rejected=true
+SLH-DSA-SHA2-128s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-128f      ok=true tamper_rejected=true
+SLH-DSA-SHA2-192s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-192f      ok=true tamper_rejected=true
+SLH-DSA-SHA2-256s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-256f      ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128f     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192f     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256f     ok=true tamper_rejected=true
+crossverify of openssl: 15 entries, 0 failures
+== crossverify: rustcrypto verifies circl
+ML-DSA-44              ok=true tamper_rejected=true
+ML-DSA-65              ok=true tamper_rejected=true
+ML-DSA-87              ok=true tamper_rejected=true
+SLH-DSA-SHA2-128s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-128f      ok=true tamper_rejected=true
+SLH-DSA-SHA2-192s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-192f      ok=true tamper_rejected=true
+SLH-DSA-SHA2-256s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-256f      ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128f     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192f     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256f     ok=true tamper_rejected=true
+crossverify of circl: 15 entries, 0 failures
+== crossverify: rustcrypto verifies rustcrypto
+ML-DSA-44              ok=true tamper_rejected=true
+ML-DSA-65              ok=true tamper_rejected=true
+ML-DSA-87              ok=true tamper_rejected=true
+SLH-DSA-SHA2-128s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-128f      ok=true tamper_rejected=true
+SLH-DSA-SHA2-192s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-192f      ok=true tamper_rejected=true
+SLH-DSA-SHA2-256s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-256f      ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128f     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192f     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256f     ok=true tamper_rejected=true
+crossverify of rustcrypto: 15 entries, 0 failures
+== crossverify: rustcrypto verifies bouncycastle
+ML-DSA-44              ok=true tamper_rejected=true
+ML-DSA-65              ok=true tamper_rejected=true
+ML-DSA-87              ok=true tamper_rejected=true
+SLH-DSA-SHA2-128s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-128f      ok=true tamper_rejected=true
+SLH-DSA-SHA2-192s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-192f      ok=true tamper_rejected=true
+SLH-DSA-SHA2-256s      ok=true tamper_rejected=true
+SLH-DSA-SHA2-256f      ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-128f     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-192f     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256s     ok=true tamper_rejected=true
+SLH-DSA-SHAKE-256f     ok=true tamper_rejected=true
+crossverify of bouncycastle: 15 entries, 0 failures
+== crossverify: bouncycastle verifies noble
+ML-DSA-44 {param=ML-DSA-44, ok=true, error=null, tamper_rejected=true}
+ML-DSA-65 {param=ML-DSA-65, ok=true, error=null, tamper_rejected=true}
+ML-DSA-87 {param=ML-DSA-87, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-128s {param=SLH-DSA-SHA2-128s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-128f {param=SLH-DSA-SHA2-128f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-192s {param=SLH-DSA-SHA2-192s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-192f {param=SLH-DSA-SHA2-192f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-256s {param=SLH-DSA-SHA2-256s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-256f {param=SLH-DSA-SHA2-256f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-128s {param=SLH-DSA-SHAKE-128s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-128f {param=SLH-DSA-SHAKE-128f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-192s {param=SLH-DSA-SHAKE-192s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-192f {param=SLH-DSA-SHAKE-192f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-256s {param=SLH-DSA-SHAKE-256s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-256f {param=SLH-DSA-SHAKE-256f, ok=true, error=null, tamper_rejected=true}
+Falcon-512 {param=Falcon-512, ok=true, error=null, tamper_rejected=true}
+Falcon-1024 {param=Falcon-1024, ok=true, error=null, tamper_rejected=true}
+17 entries verified, 0 failures
+== crossverify: bouncycastle verifies liboqs
+ML-DSA-44 {param=ML-DSA-44, ok=true, error=null, tamper_rejected=true}
+ML-DSA-65 {param=ML-DSA-65, ok=true, error=null, tamper_rejected=true}
+ML-DSA-87 {param=ML-DSA-87, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-128s {param=SLH-DSA-SHA2-128s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-128f {param=SLH-DSA-SHA2-128f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-192s {param=SLH-DSA-SHA2-192s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-192f {param=SLH-DSA-SHA2-192f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-256s {param=SLH-DSA-SHA2-256s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-256f {param=SLH-DSA-SHA2-256f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-128s {param=SLH-DSA-SHAKE-128s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-128f {param=SLH-DSA-SHAKE-128f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-192s {param=SLH-DSA-SHAKE-192s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-192f {param=SLH-DSA-SHAKE-192f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-256s {param=SLH-DSA-SHAKE-256s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-256f {param=SLH-DSA-SHAKE-256f, ok=true, error=null, tamper_rejected=true}
+Falcon-512 {param=Falcon-512, ok=true, error=null, tamper_rejected=true}
+Falcon-1024 {param=Falcon-1024, ok=true, error=null, tamper_rejected=true}
+17 entries verified, 0 failures
+== crossverify: bouncycastle verifies openssl
+ML-DSA-44 {param=ML-DSA-44, ok=true, error=null, tamper_rejected=true}
+ML-DSA-65 {param=ML-DSA-65, ok=true, error=null, tamper_rejected=true}
+ML-DSA-87 {param=ML-DSA-87, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-128s {param=SLH-DSA-SHA2-128s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-128f {param=SLH-DSA-SHA2-128f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-192s {param=SLH-DSA-SHA2-192s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-192f {param=SLH-DSA-SHA2-192f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-256s {param=SLH-DSA-SHA2-256s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-256f {param=SLH-DSA-SHA2-256f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-128s {param=SLH-DSA-SHAKE-128s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-128f {param=SLH-DSA-SHAKE-128f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-192s {param=SLH-DSA-SHAKE-192s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-192f {param=SLH-DSA-SHAKE-192f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-256s {param=SLH-DSA-SHAKE-256s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-256f {param=SLH-DSA-SHAKE-256f, ok=true, error=null, tamper_rejected=true}
+15 entries verified, 0 failures
+== crossverify: bouncycastle verifies circl
+ML-DSA-44 {param=ML-DSA-44, ok=true, error=null, tamper_rejected=true}
+ML-DSA-65 {param=ML-DSA-65, ok=true, error=null, tamper_rejected=true}
+ML-DSA-87 {param=ML-DSA-87, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-128s {param=SLH-DSA-SHA2-128s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-128f {param=SLH-DSA-SHA2-128f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-192s {param=SLH-DSA-SHA2-192s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-192f {param=SLH-DSA-SHA2-192f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-256s {param=SLH-DSA-SHA2-256s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-256f {param=SLH-DSA-SHA2-256f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-128s {param=SLH-DSA-SHAKE-128s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-128f {param=SLH-DSA-SHAKE-128f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-192s {param=SLH-DSA-SHAKE-192s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-192f {param=SLH-DSA-SHAKE-192f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-256s {param=SLH-DSA-SHAKE-256s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-256f {param=SLH-DSA-SHAKE-256f, ok=true, error=null, tamper_rejected=true}
+15 entries verified, 0 failures
+== crossverify: bouncycastle verifies rustcrypto
+ML-DSA-44 {param=ML-DSA-44, ok=true, error=null, tamper_rejected=true}
+ML-DSA-65 {param=ML-DSA-65, ok=true, error=null, tamper_rejected=true}
+ML-DSA-87 {param=ML-DSA-87, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-128s {param=SLH-DSA-SHA2-128s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-128f {param=SLH-DSA-SHA2-128f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-192s {param=SLH-DSA-SHA2-192s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-192f {param=SLH-DSA-SHA2-192f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-256s {param=SLH-DSA-SHA2-256s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-256f {param=SLH-DSA-SHA2-256f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-128s {param=SLH-DSA-SHAKE-128s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-128f {param=SLH-DSA-SHAKE-128f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-192s {param=SLH-DSA-SHAKE-192s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-192f {param=SLH-DSA-SHAKE-192f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-256s {param=SLH-DSA-SHAKE-256s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-256f {param=SLH-DSA-SHAKE-256f, ok=true, error=null, tamper_rejected=true}
+15 entries verified, 0 failures
+== crossverify: bouncycastle verifies bouncycastle
+ML-DSA-44 {param=ML-DSA-44, ok=true, error=null, tamper_rejected=true}
+ML-DSA-65 {param=ML-DSA-65, ok=true, error=null, tamper_rejected=true}
+ML-DSA-87 {param=ML-DSA-87, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-128s {param=SLH-DSA-SHA2-128s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-128f {param=SLH-DSA-SHA2-128f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-192s {param=SLH-DSA-SHA2-192s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-192f {param=SLH-DSA-SHA2-192f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-256s {param=SLH-DSA-SHA2-256s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHA2-256f {param=SLH-DSA-SHA2-256f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-128s {param=SLH-DSA-SHAKE-128s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-128f {param=SLH-DSA-SHAKE-128f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-192s {param=SLH-DSA-SHAKE-192s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-192f {param=SLH-DSA-SHAKE-192f, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-256s {param=SLH-DSA-SHAKE-256s, ok=true, error=null, tamper_rejected=true}
+SLH-DSA-SHAKE-256f {param=SLH-DSA-SHAKE-256f, ok=true, error=null, tamper_rejected=true}
+Falcon-512 {param=Falcon-512, ok=true, error=null, tamper_rejected=true}
+Falcon-1024 {param=Falcon-1024, ok=true, error=null, tamper_rejected=true}
+17 entries verified, 0 failures
+== bench noble (budget 1000ms)
+[noble] keygen.v0  ML-DSA-44           median      1.633 ms  ops/s    542.785  iters    543  match true  (1.3s)
+[noble] keygen.v0  ML-DSA-65           median      1.864 ms  ops/s    467.222  iters    468  match true  (1.3s)
+[noble] keygen.v0  ML-DSA-87           median      3.195 ms  ops/s    266.762  iters    267  match true  (1.4s)
+[noble] keygen.v0  SLH-DSA-SHA2-128s   median    352.834 ms  ops/s      2.853  iters      3  match true  (7.1s)
+[noble] keygen.v0  SLH-DSA-SHA2-128f   median      4.091 ms  ops/s    225.424  iters    226  match true  (1.6s)
+[noble] keygen.v0  SLH-DSA-SHA2-192s   median    525.834 ms  ops/s      2.028  iters      3  match true  (9.9s)
+[noble] keygen.v0  SLH-DSA-SHA2-192f   median      6.567 ms  ops/s     142.52  iters    143  match true  (1.6s)
+[noble] keygen.v0  SLH-DSA-SHA2-256s   median    332.849 ms  ops/s       3.28  iters      4  match true  (9.5s)
+[noble] keygen.v0  SLH-DSA-SHA2-256f   median     27.192 ms  ops/s     38.979  iters     39  match true  (1.9s)
+[noble] keygen.v0  SLH-DSA-SHAKE-128s  median   1910.295 ms  ops/s      0.529  iters      3  match true  (25.0s)
+[noble] keygen.v0  SLH-DSA-SHAKE-128f  median     28.638 ms  ops/s     32.046  iters     33  match true  (2.7s)
+[noble] keygen.v0  SLH-DSA-SHAKE-192s  median   2771.423 ms  ops/s      0.348  iters      3  match true  (40.7s)
+[noble] keygen.v0  SLH-DSA-SHAKE-192f  median     39.016 ms  ops/s     23.437  iters     24  match true  (3.2s)
+[noble] keygen.v0  SLH-DSA-SHAKE-256s  median   1771.640 ms  ops/s      0.551  iters      3  match true  (34.4s)
+[noble] keygen.v0  SLH-DSA-SHAKE-256f  median    148.916 ms  ops/s      6.976  iters      8  match true  (6.3s)
+[noble] keygen.v0  Falcon-512          median    223.071 ms  ops/s      4.448  iters      5  match true  (4.7s)
+[noble] keygen.v0  Falcon-1024         median    710.189 ms  ops/s      1.336  iters      3  match true  (6.6s)
+[noble] keygen.v1  ML-DSA-44           median      0.680 ms  ops/s   1114.977  iters   1115  match true  (1.3s)
+[noble] keygen.v1  ML-DSA-65           median      1.196 ms  ops/s    613.782  iters    614  match true  (1.3s)
+[noble] keygen.v1  ML-DSA-87           median      1.602 ms  ops/s    458.262  iters    459  match true  (1.4s)
+[noble] keygen.v1  SLH-DSA-SHA2-128s   median    844.131 ms  ops/s      1.177  iters      3  match true  (8.9s)
+[noble] keygen.v1  SLH-DSA-SHA2-128f   median     11.325 ms  ops/s     84.173  iters     85  match true  (1.5s)
+[noble] keygen.v1  SLH-DSA-SHA2-192s   median   1251.046 ms  ops/s      0.844  iters      3  match true  (13.3s)
+[noble] keygen.v1  SLH-DSA-SHA2-192f   median     14.604 ms  ops/s     66.203  iters     67  match true  (1.9s)
+[noble] keygen.v1  SLH-DSA-SHA2-256s   median    611.847 ms  ops/s      1.547  iters      3  match true  (10.2s)
+[noble] keygen.v1  SLH-DSA-SHA2-256f   median     47.180 ms  ops/s     20.938  iters     21  match true  (2.4s)
+[noble] keygen.v1  SLH-DSA-SHAKE-128s  median   1511.625 ms  ops/s      0.663  iters      3  match true  (24.1s)
+[noble] keygen.v1  SLH-DSA-SHAKE-128f  median     27.546 ms  ops/s     34.373  iters     35  match true  (2.5s)
+[noble] keygen.v1  SLH-DSA-SHAKE-192s  median   2260.793 ms  ops/s      0.458  iters      3  match true  (39.8s)
+[noble] keygen.v1  SLH-DSA-SHAKE-192f  median     31.279 ms  ops/s     31.116  iters     32  match true  (3.1s)
+[noble] keygen.v1  SLH-DSA-SHAKE-256s  median   1425.815 ms  ops/s        0.7  iters      3  match true  (32.1s)
+[noble] keygen.v1  SLH-DSA-SHAKE-256f  median     86.274 ms  ops/s      11.51  iters     12  match true  (5.5s)
+[noble] keygen.v1  Falcon-512          median    266.263 ms  ops/s      3.778  iters      4  match true  (4.6s)
+[noble] keygen.v1  Falcon-1024         median    692.137 ms  ops/s      1.433  iters      3  match true  (6.7s)
+[noble] keygen.v2  ML-DSA-44           median      0.576 ms  ops/s   1410.225  iters   1411  match true  (1.3s)
+[noble] keygen.v2  ML-DSA-65           median      0.928 ms  ops/s    910.175  iters    911  match true  (1.4s)
+[noble] keygen.v2  ML-DSA-87           median      1.434 ms  ops/s     597.14  iters    598  match true  (1.3s)
+[noble] keygen.v2  SLH-DSA-SHA2-128s   median    148.396 ms  ops/s       6.18  iters      7  match true  (6.9s)
+[noble] keygen.v2  SLH-DSA-SHA2-128f   median      2.302 ms  ops/s    392.405  iters    393  match true  (1.5s)
+[noble] keygen.v2  SLH-DSA-SHA2-192s   median    245.943 ms  ops/s      3.965  iters      4  match true  (9.6s)
+[noble] keygen.v2  SLH-DSA-SHA2-192f   median      3.608 ms  ops/s    269.077  iters    270  match true  (1.6s)
+[noble] keygen.v2  SLH-DSA-SHA2-256s   median    148.887 ms  ops/s      6.532  iters      7  match true  (9.1s)
+[noble] keygen.v2  SLH-DSA-SHA2-256f   median      9.473 ms  ops/s    103.585  iters    104  match true  (1.9s)
+[noble] keygen.v2  SLH-DSA-SHAKE-128s  median    923.867 ms  ops/s      1.071  iters      3  match true  (22.6s)
+[noble] keygen.v2  SLH-DSA-SHAKE-128f  median     10.587 ms  ops/s      68.78  iters     69  match true  (2.3s)
+[noble] keygen.v2  SLH-DSA-SHAKE-192s  median   1239.100 ms  ops/s      0.816  iters      3  match true  (36.9s)
+[noble] keygen.v2  SLH-DSA-SHAKE-192f  median     18.536 ms  ops/s     45.649  iters     46  match true  (3.3s)
+[noble] keygen.v2  SLH-DSA-SHAKE-256s  median    718.317 ms  ops/s      1.408  iters      3  match true  (31.0s)
+[noble] keygen.v2  SLH-DSA-SHAKE-256f  median     44.888 ms  ops/s     19.987  iters     20  match true  (4.5s)
+[noble] keygen.v3  ML-DSA-44           median      0.372 ms  ops/s   1697.579  iters   1698  match true  (1.3s)
+[noble] keygen.v3  ML-DSA-65           median      0.592 ms  ops/s   1046.531  iters   1047  match true  (1.4s)
+[noble] keygen.v3  ML-DSA-87           median      0.936 ms  ops/s    688.958  iters    693  match true  (1.4s)
+[noble] keygen.v3  SLH-DSA-SHA2-128s   median    702.409 ms  ops/s      1.396  iters      3  match true  (8.2s)
+[noble] keygen.v3  SLH-DSA-SHA2-128f   median      9.508 ms  ops/s      95.83  iters     96  match true  (1.5s)
+[noble] keygen.v3  SLH-DSA-SHA2-192s   median   1086.932 ms  ops/s      0.894  iters      3  match true  (11.5s)
+[noble] keygen.v3  SLH-DSA-SHA2-192f   median     12.894 ms  ops/s     69.821  iters     71  match true  (1.7s)
+[noble] keygen.v3  SLH-DSA-SHA2-256s   median    671.091 ms  ops/s      1.532  iters      3  match true  (10.3s)
+[noble] keygen.v3  SLH-DSA-SHA2-256f   median     57.144 ms  ops/s     17.775  iters     18  match true  (2.5s)
+[noble] keygen.v3  SLH-DSA-SHAKE-128s  median    958.061 ms  ops/s      0.997  iters      3  match true  (22.9s)
+[noble] keygen.v3  SLH-DSA-SHAKE-128f  median     14.052 ms  ops/s     68.136  iters     69  match true  (2.2s)
+[noble] keygen.v3  SLH-DSA-SHAKE-192s  median   1443.462 ms  ops/s      0.708  iters      3  match true  (37.6s)
+[noble] keygen.v3  SLH-DSA-SHAKE-192f  median     21.249 ms  ops/s     45.984  iters     47  match true  (2.8s)
+[noble] keygen.v3  SLH-DSA-SHAKE-256s  median    968.618 ms  ops/s       1.04  iters      3  match true  (31.1s)
+[noble] keygen.v3  SLH-DSA-SHAKE-256f  median     56.979 ms  ops/s     15.215  iters     16  match true  (4.7s)
+[noble] keygen.v4  ML-DSA-44           median      1.665 ms  ops/s    516.041  iters    517  match true  (1.3s)
+[noble] keygen.v4  ML-DSA-65           median      3.617 ms  ops/s    283.195  iters    284  match true  (1.4s)
+[noble] keygen.v4  ML-DSA-87           median      5.785 ms  ops/s    185.559  iters    186  match true  (1.3s)
+[noble] keygen.v4  SLH-DSA-SHA2-128s   median    371.983 ms  ops/s      2.777  iters      3  match true  (7.8s)
+[noble] keygen.v4  SLH-DSA-SHA2-128f   median      5.603 ms  ops/s    152.367  iters    153  match true  (1.4s)
+[noble] keygen.v4  SLH-DSA-SHA2-192s   median    668.379 ms  ops/s      1.452  iters      3  match true  (11.8s)
+[noble] keygen.v4  SLH-DSA-SHA2-192f   median      9.203 ms  ops/s      96.63  iters     97  match true  (1.9s)
+[noble] keygen.v4  SLH-DSA-SHA2-256s   median    392.025 ms  ops/s      2.426  iters      3  match true  (10.8s)
+[noble] keygen.v4  SLH-DSA-SHA2-256f   median     21.083 ms  ops/s     46.929  iters     47  match true  (2.6s)
+[noble] keygen.v4  SLH-DSA-SHAKE-128s  median   1467.698 ms  ops/s      0.676  iters      3  match true  (20.8s)
+[noble] keygen.v4  SLH-DSA-SHAKE-128f  median     20.872 ms  ops/s     43.217  iters     44  match true  (2.1s)
+[noble] keygen.v4  SLH-DSA-SHAKE-192s  median   2272.925 ms  ops/s       0.44  iters      3  match true  (32.1s)
+[noble] keygen.v4  SLH-DSA-SHAKE-192f  median     29.704 ms  ops/s     31.573  iters     32  match true  (3.0s)
+[noble] keygen.v4  SLH-DSA-SHAKE-256s  median   1363.800 ms  ops/s      0.688  iters      3  match true  (25.8s)
+[noble] keygen.v4  SLH-DSA-SHAKE-256f  median     80.246 ms  ops/s      11.89  iters     12  match true  (4.8s)
+[noble] keygen.v4  Falcon-512          median    200.847 ms  ops/s       4.87  iters      5  match true  (4.4s)
+[noble] keygen.v4  Falcon-1024         median    617.745 ms  ops/s      1.609  iters      3  match true  (6.0s)
+[noble] keygen.v5  ML-DSA-44           median      0.587 ms  ops/s   1539.724  iters   1544  match true  (1.8s)
+[noble] keygen.v5  ML-DSA-65           median      0.862 ms  ops/s   1065.227  iters   1068  match true  (1.7s)
+[noble] keygen.v5  ML-DSA-87           median      1.139 ms  ops/s    810.994  iters    812  match true  (1.8s)
+[noble] keygen.v5  SLH-DSA-SHA2-128s   median     87.962 ms  ops/s     10.138  iters     12  match true  (6.3s)
+[noble] keygen.v5  SLH-DSA-SHA2-128f   median      2.059 ms  ops/s    498.012  iters    500  match true  (1.9s)
+[noble] keygen.v5  SLH-DSA-SHA2-192s   median    117.814 ms  ops/s      8.438  iters     12  match true  (10.0s)
+[noble] keygen.v5  SLH-DSA-SHA2-192f   median      3.053 ms  ops/s    348.148  iters    352  match true  (2.1s)
+[noble] keygen.v5  SLH-DSA-SHA2-256s   median     98.584 ms  ops/s     10.497  iters     12  match true  (8.6s)
+[noble] keygen.v5  SLH-DSA-SHA2-256f   median      5.698 ms  ops/s    163.916  iters    168  match true  (2.3s)
+[noble] keygen.v5  SLH-DSA-SHAKE-128s  median    507.827 ms  ops/s      1.988  iters     12  match true  (24.8s)
+[noble] keygen.v5  SLH-DSA-SHAKE-128f  median      7.439 ms  ops/s    122.139  iters    124  match true  (2.6s)
+[noble] keygen.v5  SLH-DSA-SHAKE-192s  median    793.993 ms  ops/s      1.308  iters     12  match true  (41.0s)
+[noble] keygen.v5  SLH-DSA-SHAKE-192f  median     15.108 ms  ops/s     68.328  iters     72  match true  (3.2s)
+[noble] keygen.v5  SLH-DSA-SHAKE-256s  median    507.342 ms  ops/s        1.9  iters     12  match true  (32.6s)
+[noble] keygen.v5  SLH-DSA-SHAKE-256f  median     37.401 ms  ops/s     26.371  iters     28  match true  (4.8s)
+[noble] keygen.v5  Falcon-512          median     88.163 ms  ops/s      11.58  iters     12  match true  (3.8s)
+[noble] keygen.v5  Falcon-1024         median    189.887 ms  ops/s      5.306  iters     12  match true  (8.2s)
+[noble] sign.v0    ML-DSA-44           median      2.072 ms  ops/s    456.867  iters    457  match true  (1.3s)
+[noble] sign.v0    ML-DSA-65           median      8.722 ms  ops/s    111.795  iters    112  match true  (1.3s)
+[noble] sign.v0    ML-DSA-87           median      7.291 ms  ops/s    125.481  iters    126  match true  (1.4s)
+[noble] sign.v0    SLH-DSA-SHA2-128s   median   2058.801 ms  ops/s      0.484  iters      3  match true  (13.2s)
+[noble] sign.v0    SLH-DSA-SHA2-128f   median    100.829 ms  ops/s      9.438  iters     10  match true  (3.3s)
+[noble] sign.v0    SLH-DSA-SHA2-192s   median   4463.810 ms  ops/s      0.219  iters      3  match true  (23.4s)
+[noble] sign.v0    SLH-DSA-SHA2-192f   median    185.412 ms  ops/s       5.13  iters      6  match true  (4.7s)
+[noble] sign.v0    SLH-DSA-SHA2-256s   median   4262.968 ms  ops/s       0.24  iters      3  match true  (21.5s)
+[noble] sign.v0    SLH-DSA-SHA2-256f   median    439.927 ms  ops/s      2.296  iters      3  match true  (5.1s)
+[noble] sign.v0    SLH-DSA-SHAKE-128s  median  14202.229 ms  ops/s      0.071  iters      2  match true  (59.0s)
+[noble] sign.v0    SLH-DSA-SHAKE-128f  median    662.007 ms  ops/s      1.456  iters      3  match true  (6.2s)
+[noble] sign.v0    SLH-DSA-SHAKE-192s  median  26060.346 ms  ops/s       0.04  iters      2  match true  (102.1s)
+[noble] sign.v0    SLH-DSA-SHAKE-192f  median   1137.552 ms  ops/s      0.884  iters      3  match true  (8.0s)
+[noble] sign.v0    SLH-DSA-SHAKE-256s  median  21736.029 ms  ops/s      0.047  iters      2  match true  (86.2s)
+[noble] sign.v0    SLH-DSA-SHAKE-256f  median   2355.174 ms  ops/s      0.427  iters      3  match true  (13.9s)
+[noble] sign.v0    Falcon-512          median      4.444 ms  ops/s    217.718  iters    218  match true  (1.7s)
+[noble] sign.v0    Falcon-1024         median     10.284 ms  ops/s     91.212  iters     92  match true  (2.2s)
+[noble] sign.v1    ML-DSA-44           median      2.442 ms  ops/s     358.93  iters    360  match true  (1.3s)
+[noble] sign.v1    ML-DSA-65           median     10.326 ms  ops/s     95.838  iters     96  match true  (1.4s)
+[noble] sign.v1    ML-DSA-87           median      6.330 ms  ops/s    140.601  iters    141  match true  (1.4s)
+[noble] sign.v1    SLH-DSA-SHA2-128s   median   5969.031 ms  ops/s      0.168  iters      2  match true  (21.2s)
+[noble] sign.v1    SLH-DSA-SHA2-128f   median    352.038 ms  ops/s      2.922  iters      3  match true  (4.5s)
+[noble] sign.v1    SLH-DSA-SHA2-192s   median  10805.127 ms  ops/s      0.099  iters      2  match true  (35.7s)
+[noble] sign.v1    SLH-DSA-SHA2-192f   median    462.459 ms  ops/s      2.171  iters      3  match true  (5.1s)
+[noble] sign.v1    SLH-DSA-SHA2-256s   median   8311.137 ms  ops/s      0.123  iters      2  match true  (29.6s)
+[noble] sign.v1    SLH-DSA-SHA2-256f   median    854.140 ms  ops/s      1.178  iters      3  match true  (6.5s)
+[noble] sign.v1    SLH-DSA-SHAKE-128s  median  11275.102 ms  ops/s      0.092  iters      2  match true  (48.1s)
+[noble] sign.v1    SLH-DSA-SHAKE-128f  median    536.277 ms  ops/s      1.748  iters      3  match true  (5.8s)
+[noble] sign.v1    SLH-DSA-SHAKE-192s  median  20703.284 ms  ops/s       0.05  iters      2  match true  (85.9s)
+[noble] sign.v1    SLH-DSA-SHAKE-192f  median    836.050 ms  ops/s      1.193  iters      3  match true  (7.6s)
+[noble] sign.v1    SLH-DSA-SHAKE-256s  median  17884.496 ms  ops/s      0.056  iters      2  match true  (76.8s)
+[noble] sign.v1    SLH-DSA-SHAKE-256f  median   1975.328 ms  ops/s      0.473  iters      3  match true  (13.3s)
+[noble] sign.v1    Falcon-512          median      4.875 ms  ops/s    188.716  iters    189  match true  (1.8s)
+[noble] sign.v1    Falcon-1024         median     11.322 ms  ops/s     82.281  iters     83  match true  (2.2s)
+[noble] sign.v2    ML-DSA-44           median      1.078 ms  ops/s    809.931  iters    810  match true  (1.3s)
+[noble] sign.v2    ML-DSA-65           median      4.098 ms  ops/s    230.257  iters    231  match true  (1.4s)
+[noble] sign.v2    ML-DSA-87           median      3.007 ms  ops/s    309.305  iters    310  match true  (1.4s)
+[noble] sign.v2    SLH-DSA-SHA2-128s   median   1256.231 ms  ops/s      0.784  iters      3  match true  (10.2s)
+[noble] sign.v2    SLH-DSA-SHA2-128f   median     81.656 ms  ops/s     12.586  iters     13  match true  (2.6s)
+[noble] sign.v2    SLH-DSA-SHA2-192s   median   3037.869 ms  ops/s      0.314  iters      3  match true  (18.6s)
+[noble] sign.v2    SLH-DSA-SHA2-192f   median    125.642 ms  ops/s       7.78  iters      8  match true  (4.0s)
+[noble] sign.v2    SLH-DSA-SHA2-256s   median   2841.137 ms  ops/s      0.341  iters      3  match true  (19.8s)
+[noble] sign.v2    SLH-DSA-SHA2-256f   median    257.725 ms  ops/s      3.889  iters      4  match true  (4.8s)
+[noble] sign.v2    SLH-DSA-SHAKE-128s  median   5980.377 ms  ops/s      0.169  iters      2  match true  (38.6s)
+[noble] sign.v2    SLH-DSA-SHAKE-128f  median    455.655 ms  ops/s      2.392  iters      3  match true  (5.4s)
+[noble] sign.v2    SLH-DSA-SHAKE-192s  median  12976.395 ms  ops/s      0.084  iters      2  match true  (65.0s)
+[noble] sign.v2    SLH-DSA-SHAKE-192f  median    588.888 ms  ops/s      1.591  iters      3  match true  (6.8s)
+[noble] sign.v2    SLH-DSA-SHAKE-256s  median   9973.425 ms  ops/s      0.101  iters      2  match true  (59.4s)
+[noble] sign.v2    SLH-DSA-SHAKE-256f  median   1030.385 ms  ops/s          1  iters      3  match true  (8.8s)
+[noble] sign.v3    ML-DSA-44           median      1.773 ms  ops/s     519.29  iters    520  match true  (1.3s)
+[noble] sign.v3    ML-DSA-65           median     12.113 ms  ops/s     81.895  iters     82  match true  (1.4s)
+[noble] sign.v3    ML-DSA-87           median      5.048 ms  ops/s     178.33  iters    179  match true  (1.4s)
+[noble] sign.v3    SLH-DSA-SHA2-128s   median   2381.966 ms  ops/s      0.441  iters      3  match true  (14.3s)
+[noble] sign.v3    SLH-DSA-SHA2-128f   median    150.746 ms  ops/s      7.343  iters      8  match true  (3.9s)
+[noble] sign.v3    SLH-DSA-SHA2-192s   median   5236.102 ms  ops/s      0.207  iters      2  match true  (19.7s)
+[noble] sign.v3    SLH-DSA-SHA2-192f   median    294.224 ms  ops/s      3.484  iters      4  match true  (4.8s)
+[noble] sign.v3    SLH-DSA-SHA2-256s   median   4335.608 ms  ops/s      0.236  iters      3  match true  (23.0s)
+[noble] sign.v3    SLH-DSA-SHA2-256f   median    381.992 ms  ops/s      2.299  iters      3  match true  (5.3s)
+[noble] sign.v3    SLH-DSA-SHAKE-128s  median  12597.559 ms  ops/s      0.081  iters      2  match true  (55.2s)
+[noble] sign.v3    SLH-DSA-SHAKE-128f  median    623.228 ms  ops/s      1.613  iters      3  match true  (6.0s)
+[noble] sign.v3    SLH-DSA-SHAKE-192s  median  26247.135 ms  ops/s      0.039  iters      2  match true  (107.9s)
+[noble] sign.v3    SLH-DSA-SHAKE-192f  median   1388.720 ms  ops/s      0.715  iters      3  match true  (9.0s)
+[noble] sign.v3    SLH-DSA-SHAKE-256s  median  21766.893 ms  ops/s      0.047  iters      2  match true  (94.2s)
+[noble] sign.v3    SLH-DSA-SHAKE-256f  median   2195.504 ms  ops/s      0.425  iters      3  match true  (15.4s)
+[noble] sign.v3    Falcon-512          median      3.690 ms  ops/s    259.821  iters    260  match true  (1.7s)
+[noble] sign.v3    Falcon-1024         median     10.103 ms  ops/s    103.887  iters    104  match true  (2.3s)
+[noble] sign.v4    ML-DSA-44           median      3.886 ms  ops/s    206.686  iters    207  match true  (1.3s)
+[noble] sign.v4    ML-DSA-65           median     25.731 ms  ops/s     42.853  iters     43  match true  (1.6s)
+[noble] sign.v4    ML-DSA-87           median     12.042 ms  ops/s     81.115  iters     82  match true  (1.5s)
+[noble] sign.v4    SLH-DSA-SHA2-128s   median   3072.240 ms  ops/s      0.331  iters      3  match true  (20.0s)
+[noble] sign.v4    SLH-DSA-SHA2-128f   median    131.104 ms  ops/s      7.333  iters      8  match true  (4.5s)
+[noble] sign.v4    SLH-DSA-SHA2-192s   median   7715.670 ms  ops/s      0.134  iters      2  match true  (29.6s)
+[noble] sign.v4    SLH-DSA-SHA2-192f   median    227.265 ms  ops/s      3.782  iters      5  match true  (4.8s)
+[noble] sign.v4    SLH-DSA-SHA2-256s   median   5836.481 ms  ops/s      0.178  iters      2  match true  (24.3s)
+[noble] sign.v4    SLH-DSA-SHA2-256f   median    462.188 ms  ops/s      2.015  iters      3  match true  (5.4s)
+[noble] sign.v4    SLH-DSA-SHAKE-128s  median  11835.275 ms  ops/s      0.088  iters      2  match true  (48.1s)
+[noble] sign.v4    SLH-DSA-SHAKE-128f  median    621.225 ms  ops/s      1.584  iters      3  match true  (6.1s)
+[noble] sign.v4    SLH-DSA-SHAKE-192s  median  19671.557 ms  ops/s      0.051  iters      2  match true  (81.9s)
+[noble] sign.v4    SLH-DSA-SHAKE-192f  median    896.593 ms  ops/s      1.102  iters      3  match true  (7.6s)
+[noble] sign.v4    SLH-DSA-SHAKE-256s  median  19135.123 ms  ops/s      0.054  iters      2  match true  (77.3s)
+[noble] sign.v4    SLH-DSA-SHAKE-256f  median   1740.903 ms  ops/s      0.574  iters      3  match true  (11.1s)
+[noble] sign.v4    Falcon-512          median      5.060 ms  ops/s    183.343  iters    184  match true  (1.6s)
+[noble] sign.v4    Falcon-1024         median     11.687 ms  ops/s     79.727  iters     81  match true  (2.2s)
+[noble] sign.v5    ML-DSA-44           median      1.023 ms  ops/s    870.737  iters    872  match true  (1.8s)
+[noble] sign.v5    ML-DSA-65           median      4.357 ms  ops/s    230.213  iters    232  match true  (1.8s)
+[noble] sign.v5    ML-DSA-87           median      3.018 ms  ops/s    308.598  iters    312  match true  (1.9s)
+[noble] sign.v5    SLH-DSA-SHA2-128s   median    634.337 ms  ops/s      1.599  iters     12  match true  (14.0s)
+[noble] sign.v5    SLH-DSA-SHA2-128f   median     42.308 ms  ops/s     25.383  iters     28  match true  (2.7s)
+[noble] sign.v5    SLH-DSA-SHA2-192s   median   1449.153 ms  ops/s      0.717  iters      8  match true  (22.5s)
+[noble] sign.v5    SLH-DSA-SHA2-192f   median     58.970 ms  ops/s     16.808  iters     20  match true  (3.5s)
+[noble] sign.v5    SLH-DSA-SHA2-256s   median   1119.985 ms  ops/s      0.871  iters     12  match true  (23.5s)
+[noble] sign.v5    SLH-DSA-SHA2-256f   median    119.474 ms  ops/s       7.81  iters     12  match true  (5.1s)
+[noble] sign.v5    SLH-DSA-SHAKE-128s  median   4600.918 ms  ops/s      0.229  iters      8  match true  (65.6s)
+[noble] sign.v5    SLH-DSA-SHAKE-128f  median    170.591 ms  ops/s      5.812  iters     12  match true  (7.3s)
+[noble] sign.v5    SLH-DSA-SHAKE-192s  median   7080.876 ms  ops/s      0.145  iters      8  match true  (109.2s)
+[noble] sign.v5    SLH-DSA-SHAKE-192f  median    316.825 ms  ops/s      3.166  iters     12  match true  (7.1s)
+[noble] sign.v5    SLH-DSA-SHAKE-256s  median   5752.113 ms  ops/s      0.176  iters      8  match true  (93.1s)
+[noble] sign.v5    SLH-DSA-SHAKE-256f  median    708.617 ms  ops/s      1.436  iters     12  match true  (13.8s)
+[noble] sign.v5    Falcon-512          median      1.707 ms  ops/s    518.061  iters    520  match true  (2.3s)
+[noble] sign.v5    Falcon-1024         median      4.256 ms  ops/s    205.517  iters    208  match true  (3.0s)
+[noble] verify.v0  ML-DSA-44           median      1.194 ms  ops/s    518.965  iters    519  match true  (1.4s)
+[noble] verify.v0  ML-DSA-65           median      2.209 ms  ops/s     411.21  iters    412  match true  (1.3s)
+[noble] verify.v0  ML-DSA-87           median      3.241 ms  ops/s    274.812  iters    276  match true  (1.4s)
+[noble] verify.v0  SLH-DSA-SHA2-128s   median      2.298 ms  ops/s    415.586  iters    416  match true  (3.7s)
+[noble] verify.v0  SLH-DSA-SHA2-128f   median      6.613 ms  ops/s    148.705  iters    149  match true  (1.4s)
+[noble] verify.v0  SLH-DSA-SHA2-192s   median      3.962 ms  ops/s    229.441  iters    230  match true  (6.3s)
+[noble] verify.v0  SLH-DSA-SHA2-192f   median     11.225 ms  ops/s     80.758  iters     81  match true  (1.7s)
+[noble] verify.v0  SLH-DSA-SHA2-256s   median      5.623 ms  ops/s    162.366  iters    163  match true  (6.0s)
+[noble] verify.v0  SLH-DSA-SHA2-256f   median     10.899 ms  ops/s     85.431  iters     86  match true  (2.0s)
+[noble] verify.v0  SLH-DSA-SHAKE-128s  median     12.391 ms  ops/s     79.854  iters     80  match true  (16.9s)
+[noble] verify.v0  SLH-DSA-SHAKE-128f  median     40.520 ms  ops/s     23.407  iters     24  match true  (2.8s)
+[noble] verify.v0  SLH-DSA-SHAKE-192s  median     19.032 ms  ops/s     50.815  iters     51  match true  (28.7s)
+[noble] verify.v0  SLH-DSA-SHAKE-192f  median     52.372 ms  ops/s     18.952  iters     19  match true  (3.5s)
+[noble] verify.v0  SLH-DSA-SHAKE-256s  median     27.843 ms  ops/s     32.622  iters     33  match true  (24.2s)
+[noble] verify.v0  SLH-DSA-SHAKE-256f  median     55.938 ms  ops/s     15.873  iters     16  match true  (5.0s)
+[noble] verify.v0  Falcon-512          median      0.583 ms  ops/s   1386.779  iters   1387  match true  (1.6s)
+[noble] verify.v0  Falcon-1024         median      1.115 ms  ops/s    693.384  iters    694  match true  (2.3s)
+[noble] verify.v1  ML-DSA-44           median      0.907 ms  ops/s    957.098  iters    959  match true  (1.3s)
+[noble] verify.v1  ML-DSA-65           median      1.357 ms  ops/s    579.725  iters    582  match true  (1.4s)
+[noble] verify.v1  ML-DSA-87           median      1.993 ms  ops/s    414.764  iters    415  match true  (1.4s)
+[noble] verify.v1  SLH-DSA-SHA2-128s   median      5.094 ms  ops/s    185.352  iters    186  match true  (3.9s)
+[noble] verify.v1  SLH-DSA-SHA2-128f   median     14.258 ms  ops/s     68.989  iters     69  match true  (1.7s)
+[noble] verify.v1  SLH-DSA-SHA2-192s   median      7.051 ms  ops/s    127.925  iters    128  match true  (6.2s)
+[noble] verify.v1  SLH-DSA-SHA2-192f   median     27.498 ms  ops/s     35.698  iters     36  match true  (1.9s)
+[noble] verify.v1  SLH-DSA-SHA2-256s   median     10.441 ms  ops/s      89.68  iters     90  match true  (5.8s)
+[noble] verify.v1  SLH-DSA-SHA2-256f   median     23.064 ms  ops/s     39.275  iters     40  match true  (2.3s)
+[noble] verify.v1  SLH-DSA-SHAKE-128s  median     11.051 ms  ops/s     85.228  iters     86  match true  (18.8s)
+[noble] verify.v1  SLH-DSA-SHAKE-128f  median     34.622 ms  ops/s     26.162  iters     27  match true  (2.9s)
+[noble] verify.v1  SLH-DSA-SHAKE-192s  median     14.991 ms  ops/s     64.874  iters     65  match true  (29.3s)
+[noble] verify.v1  SLH-DSA-SHAKE-192f  median     46.574 ms  ops/s     20.945  iters     21  match true  (3.6s)
+[noble] verify.v1  SLH-DSA-SHAKE-256s  median     24.287 ms  ops/s     41.999  iters     42  match true  (26.7s)
+[noble] verify.v1  SLH-DSA-SHAKE-256f  median     47.430 ms  ops/s     20.763  iters     22  match true  (5.1s)
+[noble] verify.v1  Falcon-512          median      0.523 ms  ops/s   1594.302  iters   1595  match true  (1.8s)
+[noble] verify.v1  Falcon-1024         median      1.015 ms  ops/s    851.893  iters    852  match true  (2.3s)
+[noble] verify.v2  ML-DSA-44           median      0.559 ms  ops/s   1500.545  iters   1501  match true  (1.3s)
+[noble] verify.v2  ML-DSA-65           median      1.574 ms  ops/s    709.231  iters    710  match true  (1.4s)
+[noble] verify.v2  ML-DSA-87           median      2.370 ms  ops/s    466.995  iters    467  match true  (1.4s)
+[noble] verify.v2  SLH-DSA-SHA2-128s   median      1.211 ms  ops/s    728.662  iters    729  match true  (4.1s)
+[noble] verify.v2  SLH-DSA-SHA2-128f   median      4.501 ms  ops/s    220.968  iters    222  match true  (1.5s)
+[noble] verify.v2  SLH-DSA-SHA2-192s   median      2.192 ms  ops/s    429.211  iters    430  match true  (6.4s)
+[noble] verify.v2  SLH-DSA-SHA2-192f   median      6.336 ms  ops/s    121.475  iters    122  match true  (1.6s)
+[noble] verify.v2  SLH-DSA-SHA2-256s   median      3.529 ms  ops/s     233.34  iters    234  match true  (6.1s)
+[noble] verify.v2  SLH-DSA-SHA2-256f   median      6.387 ms  ops/s    151.609  iters    152  match true  (1.8s)
+[noble] verify.v2  SLH-DSA-SHAKE-128s  median      5.273 ms  ops/s    167.597  iters    169  match true  (22.5s)
+[noble] verify.v2  SLH-DSA-SHAKE-128f  median     16.372 ms  ops/s      59.63  iters     60  match true  (2.3s)
+[noble] verify.v2  SLH-DSA-SHAKE-192s  median      7.690 ms  ops/s     116.81  iters    118  match true  (28.7s)
+[noble] verify.v2  SLH-DSA-SHAKE-192f  median     22.601 ms  ops/s     38.562  iters     40  match true  (3.0s)
+[noble] verify.v2  SLH-DSA-SHAKE-256s  median     11.081 ms  ops/s     86.473  iters     87  match true  (25.7s)
+[noble] verify.v2  SLH-DSA-SHAKE-256f  median     23.534 ms  ops/s     37.884  iters     38  match true  (4.1s)
+[noble] verify.v3  ML-DSA-44           median      0.909 ms  ops/s   1131.809  iters   1132  match true  (1.3s)
+[noble] verify.v3  ML-DSA-65           median      0.864 ms  ops/s    1065.45  iters   1066  match true  (1.4s)
+[noble] verify.v3  ML-DSA-87           median      1.218 ms  ops/s    753.602  iters    754  match true  (1.3s)
+[noble] verify.v3  SLH-DSA-SHA2-128s   median      2.232 ms  ops/s    433.921  iters    434  match true  (4.2s)
+[noble] verify.v3  SLH-DSA-SHA2-128f   median      6.799 ms  ops/s     129.61  iters    130  match true  (1.5s)
+[noble] verify.v3  SLH-DSA-SHA2-192s   median      7.108 ms  ops/s    153.702  iters    154  match true  (6.2s)
+[noble] verify.v3  SLH-DSA-SHA2-192f   median     10.954 ms  ops/s     81.547  iters     82  match true  (1.7s)
+[noble] verify.v3  SLH-DSA-SHA2-256s   median      6.544 ms  ops/s    130.221  iters    131  match true  (6.2s)
+[noble] verify.v3  SLH-DSA-SHA2-256f   median     10.536 ms  ops/s     93.326  iters     94  match true  (1.9s)
+[noble] verify.v3  SLH-DSA-SHAKE-128s  median     12.324 ms  ops/s     79.319  iters     80  match true  (17.3s)
+[noble] verify.v3  SLH-DSA-SHAKE-128f  median     44.343 ms  ops/s     21.656  iters     22  match true  (3.2s)
+[noble] verify.v3  SLH-DSA-SHAKE-192s  median     31.565 ms  ops/s     34.886  iters     35  match true  (30.5s)
+[noble] verify.v3  SLH-DSA-SHAKE-192f  median     53.775 ms  ops/s     18.344  iters     19  match true  (3.7s)
+[noble] verify.v3  SLH-DSA-SHAKE-256s  median     35.903 ms  ops/s      26.31  iters     27  match true  (28.5s)
+[noble] verify.v3  SLH-DSA-SHAKE-256f  median     60.498 ms  ops/s     14.624  iters     15  match true  (5.5s)
+[noble] verify.v3  Falcon-512          median      0.457 ms  ops/s   1746.482  iters   1747  match true  (1.7s)
+[noble] verify.v3  Falcon-1024         median      0.903 ms  ops/s    960.727  iters    961  match true  (2.2s)
+[noble] verify.v4  ML-DSA-44           median      1.920 ms  ops/s    478.883  iters    479  match true  (1.3s)
+[noble] verify.v4  ML-DSA-65           median      3.215 ms  ops/s    258.682  iters    259  match true  (1.3s)
+[noble] verify.v4  ML-DSA-87           median      4.795 ms  ops/s    179.718  iters    180  match true  (1.3s)
+[noble] verify.v4  SLH-DSA-SHA2-128s   median      3.196 ms  ops/s    293.992  iters    294  match true  (4.3s)
+[noble] verify.v4  SLH-DSA-SHA2-128f   median      9.589 ms  ops/s     94.512  iters     95  match true  (1.6s)
+[noble] verify.v4  SLH-DSA-SHA2-192s   median      9.314 ms  ops/s    116.884  iters    117  match true  (8.6s)
+[noble] verify.v4  SLH-DSA-SHA2-192f   median     16.172 ms  ops/s     53.253  iters     54  match true  (2.0s)
+[noble] verify.v4  SLH-DSA-SHA2-256s   median      8.384 ms  ops/s     99.789  iters    100  match true  (8.0s)
+[noble] verify.v4  SLH-DSA-SHA2-256f   median     16.316 ms  ops/s     54.235  iters     55  match true  (2.2s)
+[noble] verify.v4  SLH-DSA-SHAKE-128s  median     10.689 ms  ops/s     82.128  iters     83  match true  (14.8s)
+[noble] verify.v4  SLH-DSA-SHAKE-128f  median     31.873 ms  ops/s     29.525  iters     30  match true  (2.6s)
+[noble] verify.v4  SLH-DSA-SHAKE-192s  median     14.952 ms  ops/s     54.485  iters     55  match true  (23.4s)
+[noble] verify.v4  SLH-DSA-SHAKE-192f  median     39.978 ms  ops/s     24.406  iters     25  match true  (3.2s)
+[noble] verify.v4  SLH-DSA-SHAKE-256s  median     32.240 ms  ops/s     33.877  iters     34  match true  (19.4s)
+[noble] verify.v4  SLH-DSA-SHAKE-256f  median     44.778 ms  ops/s     19.772  iters     20  match true  (4.4s)
+[noble] verify.v4  Falcon-512          median      0.747 ms  ops/s   1133.773  iters   1135  match true  (1.6s)
+[noble] verify.v4  Falcon-1024         median      1.705 ms  ops/s    529.488  iters    530  match true  (2.2s)
+[noble] verify.v5  ML-DSA-44           median      1.182 ms  ops/s    759.763  iters    760  match true  (1.8s)
+[noble] verify.v5  ML-DSA-65           median      1.659 ms  ops/s    570.133  iters    572  match true  (1.8s)
+[noble] verify.v5  ML-DSA-87           median      2.823 ms  ops/s    345.171  iters    348  match true  (1.8s)
+[noble] verify.v5  SLH-DSA-SHA2-128s   median      2.291 ms  ops/s    422.813  iters    424  match true  (4.3s)
+[noble] verify.v5  SLH-DSA-SHA2-128f   median      5.860 ms  ops/s    180.224  iters    184  match true  (2.0s)
+[noble] verify.v5  SLH-DSA-SHA2-192s   median      3.250 ms  ops/s    291.019  iters    292  match true  (6.9s)
+[noble] verify.v5  SLH-DSA-SHA2-192f   median      8.016 ms  ops/s    125.229  iters    128  match true  (2.1s)
+[noble] verify.v5  SLH-DSA-SHA2-256s   median      5.997 ms  ops/s    167.636  iters    172  match true  (6.2s)
+[noble] verify.v5  SLH-DSA-SHA2-256f   median     10.567 ms  ops/s     92.759  iters     96  match true  (2.5s)
+[noble] verify.v5  SLH-DSA-SHAKE-128s  median      9.523 ms  ops/s      96.87  iters    100  match true  (18.6s)
+[noble] verify.v5  SLH-DSA-SHAKE-128f  median     26.119 ms  ops/s     38.518  iters     40  match true  (3.1s)
+[noble] verify.v5  SLH-DSA-SHAKE-192s  median     17.711 ms  ops/s     58.189  iters     60  match true  (28.8s)
+[noble] verify.v5  SLH-DSA-SHAKE-192f  median     43.266 ms  ops/s     22.825  iters     24  match true  (3.5s)
+[noble] verify.v5  SLH-DSA-SHAKE-256s  median     17.406 ms  ops/s     55.463  iters     56  match true  (25.1s)
+[noble] verify.v5  SLH-DSA-SHAKE-256f  median     54.253 ms  ops/s     20.351  iters     24  match true  (5.5s)
+[noble] verify.v5  Falcon-512          median      0.261 ms  ops/s   3590.796  iters   3592  match true  (2.3s)
+[noble] verify.v5  Falcon-1024         median      0.815 ms  ops/s   1115.618  iters   1116  match true  (2.9s)
+== verify stages noble
+[noble] decode.v0      ML-DSA-44           median      0.057 ms  ops/s  11272.367  iters  11274  match true  (1.4s)
+[noble] decode.v0      ML-DSA-65           median      0.107 ms  ops/s   7411.821  iters   7413  match true  (1.4s)
+[noble] decode.v0      ML-DSA-87           median      0.125 ms  ops/s   6254.798  iters   6255  match true  (1.4s)
+[noble] decode.v1      ML-DSA-44           median      0.028 ms  ops/s  18346.751  iters  18349  match true  (1.4s)
+[noble] decode.v1      ML-DSA-65           median      0.054 ms  ops/s  13367.621  iters  13369  match true  (1.4s)
+[noble] decode.v1      ML-DSA-87           median      0.064 ms  ops/s  10488.914  iters  10490  match true  (1.5s)
+[noble] decode.v2      ML-DSA-44           median      0.034 ms  ops/s  19912.627  iters  19914  match true  (1.3s)
+[noble] decode.v2      ML-DSA-65           median      0.050 ms  ops/s  14024.843  iters  14026  match true  (1.3s)
+[noble] decode.v2      ML-DSA-87           median      0.070 ms  ops/s    8766.16  iters   8767  match true  (1.4s)
+[noble] mu.v0          ML-DSA-44           median      0.059 ms  ops/s  13889.767  iters  13891  match true  (1.4s)
+[noble] mu.v0          ML-DSA-65           median      0.084 ms  ops/s   9487.149  iters   9488  match true  (1.4s)
+[noble] mu.v0          ML-DSA-87           median      0.110 ms  ops/s   7059.355  iters   7060  match true  (1.4s)
+[noble] mu.v1          ML-DSA-44           median      0.009 ms  ops/s  45940.099  iters  45947  match true  (1.4s)
+[noble] mu.v1          ML-DSA-65           median      0.018 ms  ops/s  30578.509  iters  30581  match true  (1.4s)
+[noble] mu.v1          ML-DSA-87           median      0.019 ms  ops/s  33679.807  iters  33682  match true  (1.4s)
+[noble] mu.v2          ML-DSA-44           median      0.030 ms  ops/s  23968.675  iters  23970  match true  (1.4s)
+[noble] mu.v2          ML-DSA-65           median      0.042 ms  ops/s  20529.336  iters  20531  match true  (1.4s)
+[noble] mu.v2          ML-DSA-87           median      0.059 ms  ops/s  12019.782  iters  12022  match true  (1.4s)
+[noble] mu.v3          ML-DSA-44           median      0.007 ms  ops/s  66991.542  iters  66997  match true  (1.4s)
+[noble] mu.v3          ML-DSA-65           median      0.007 ms  ops/s  64436.391  iters  64440  match true  (1.4s)
+[noble] mu.v3          ML-DSA-87           median      0.007 ms  ops/s  76840.887  iters  76857  match true  (1.4s)
+[noble] mu.v4          ML-DSA-44           median      0.044 ms  ops/s  15336.225  iters  15338  match true  (1.4s)
+[noble] mu.v4          ML-DSA-65           median      0.067 ms  ops/s  10312.676  iters  10314  match true  (1.3s)
+[noble] mu.v4          ML-DSA-87           median      0.082 ms  ops/s   8653.676  iters   8655  match true  (1.4s)
+[noble] expandA.v0     ML-DSA-44           median      0.462 ms  ops/s   1624.138  iters   1625  match true  (1.4s)
+[noble] expandA.v0     ML-DSA-65           median      0.898 ms  ops/s    790.208  iters    791  match true  (1.4s)
+[noble] expandA.v0     ML-DSA-87           median      1.670 ms  ops/s     453.76  iters    454  match true  (1.4s)
+[noble] expandA.v1     ML-DSA-44           median      0.084 ms  ops/s   3394.419  iters   3395  match true  (1.3s)
+[noble] expandA.v1     ML-DSA-65           median      0.169 ms  ops/s   1701.628  iters   1702  match true  (1.4s)
+[noble] expandA.v1     ML-DSA-87           median      0.340 ms  ops/s    819.625  iters    828  match true  (1.4s)
+[noble] expandA.v2     ML-DSA-44           median      0.240 ms  ops/s   2039.675  iters   2040  match true  (1.3s)
+[noble] expandA.v2     ML-DSA-65           median      0.431 ms  ops/s   1322.307  iters   1323  match true  (1.4s)
+[noble] expandA.v2     ML-DSA-87           median      0.824 ms  ops/s    643.517  iters    644  match true  (1.4s)
+[noble] expandA.v3     ML-DSA-44           median      0.000 ms  ops/s   7497.891  iters   7498  match true  (1.4s)
+[noble] expandA.v3     ML-DSA-65           median      0.000 ms  ops/s   3864.752  iters   3865  match true  (1.4s)
+[noble] expandA.v3     ML-DSA-87           median      0.001 ms  ops/s   2144.776  iters   2145  match true  (1.4s)
+[noble] expandA.v4     ML-DSA-44           median      0.606 ms  ops/s   1115.642  iters   1116  match true  (1.7s)
+[noble] expandA.v4     ML-DSA-65           median      0.996 ms  ops/s    724.812  iters    727  match true  (1.8s)
+[noble] expandA.v4     ML-DSA-87           median      1.594 ms  ops/s    424.422  iters    425  match true  (1.8s)
+[noble] expandA.v5     ML-DSA-44           median      0.389 ms  ops/s   1356.827  iters   1358  match true  (1.3s)
+[noble] expandA.v5     ML-DSA-65           median      0.670 ms  ops/s     845.33  iters    846  match true  (1.4s)
+[noble] expandA.v5     ML-DSA-87           median      1.608 ms  ops/s    398.324  iters    399  match true  (1.4s)
+[noble] w_approx.v0    ML-DSA-44           median      0.808 ms  ops/s   1007.801  iters   1009  match true  (1.4s)
+[noble] w_approx.v0    ML-DSA-65           median      1.036 ms  ops/s     786.84  iters    787  match true  (1.4s)
+[noble] w_approx.v0    ML-DSA-87           median      1.424 ms  ops/s    608.972  iters    609  match true  (1.4s)
+[noble] w_approx.v1    ML-DSA-44           median      0.174 ms  ops/s   3536.198  iters   3538  match true  (1.4s)
+[noble] w_approx.v1    ML-DSA-65           median      0.215 ms  ops/s   2935.284  iters   2936  match true  (1.4s)
+[noble] w_approx.v1    ML-DSA-87           median      0.345 ms  ops/s   1846.355  iters   1847  match true  (1.4s)
+[noble] w_approx.v2    ML-DSA-44           median      0.505 ms  ops/s    1636.39  iters   1638  match true  (1.4s)
+[noble] w_approx.v2    ML-DSA-65           median      0.735 ms  ops/s   1091.411  iters   1092  match true  (1.4s)
+[noble] w_approx.v2    ML-DSA-87           median      1.064 ms  ops/s    766.864  iters    767  match true  (1.4s)
+[noble] w_approx.v3    ML-DSA-44           median      0.582 ms  ops/s   1447.348  iters   1448  match true  (1.3s)
+[noble] w_approx.v3    ML-DSA-65           median      0.888 ms  ops/s    893.266  iters    894  match true  (1.4s)
+[noble] w_approx.v3    ML-DSA-87           median      1.802 ms  ops/s    548.658  iters    549  match true  (1.5s)
+[noble] w_approx.v4    ML-DSA-44           median      1.390 ms  ops/s    655.271  iters    656  match true  (1.3s)
+[noble] w_approx.v4    ML-DSA-65           median      2.098 ms  ops/s    433.796  iters    434  match true  (1.4s)
+[noble] w_approx.v4    ML-DSA-87           median      4.156 ms  ops/s    236.916  iters    238  match true  (1.4s)
+[noble] hint_check.v0  ML-DSA-44           median      0.070 ms  ops/s   9557.193  iters   9558  match true  (1.4s)
+[noble] hint_check.v0  ML-DSA-65           median      0.078 ms  ops/s   8256.893  iters   8257  match true  (1.4s)
+[noble] hint_check.v0  ML-DSA-87           median      0.104 ms  ops/s   6669.755  iters   6670  match true  (1.4s)
+[noble] hint_check.v1  ML-DSA-44           median      0.054 ms  ops/s  11599.321  iters  11600  match true  (1.4s)
+[noble] hint_check.v1  ML-DSA-65           median      0.072 ms  ops/s   9134.617  iters   9136  match true  (1.4s)
+[noble] hint_check.v1  ML-DSA-87           median      0.093 ms  ops/s   7009.526  iters   7010  match true  (1.4s)
+[noble] hint_check.v2  ML-DSA-44           median      0.033 ms  ops/s  15213.914  iters  15217  match true  (1.4s)
+[noble] hint_check.v2  ML-DSA-65           median      0.044 ms  ops/s   11994.69  iters  11996  match true  (1.4s)
+[noble] hint_check.v2  ML-DSA-87           median      0.060 ms  ops/s   9994.277  iters   9996  match true  (1.5s)
+[noble] hint_check.v3  ML-DSA-44           median      0.102 ms  ops/s   6429.092  iters   6433  match true  (1.4s)
+[noble] hint_check.v3  ML-DSA-65           median      0.144 ms  ops/s   5064.377  iters   5068  match true  (1.4s)
+[noble] hint_check.v3  ML-DSA-87           median      0.326 ms  ops/s   2728.856  iters   2730  match true  (1.4s)
+[noble] hmsg.v0        SLH-DSA-SHA2-128s   median      0.019 ms  ops/s  38174.032  iters  38177  match true  (4.0s)
+[noble] hmsg.v0        SLH-DSA-SHA2-128f   median      0.030 ms  ops/s  25715.638  iters  25717  match true  (1.5s)
+[noble] hmsg.v0        SLH-DSA-SHA2-192s   median      0.030 ms  ops/s  22674.436  iters  22676  match true  (6.2s)
+[noble] hmsg.v0        SLH-DSA-SHA2-192f   median      0.036 ms  ops/s  19381.685  iters  19383  match true  (1.6s)
+[noble] hmsg.v0        SLH-DSA-SHA2-256s   median      0.034 ms  ops/s  19401.717  iters  19403  match true  (5.9s)
+[noble] hmsg.v0        SLH-DSA-SHA2-256f   median      0.055 ms  ops/s  16320.385  iters  16322  match true  (2.1s)
+[noble] hmsg.v0        SLH-DSA-SHAKE-128s  median      0.016 ms  ops/s  41306.206  iters  41308  match true  (19.7s)
+[noble] hmsg.v0        SLH-DSA-SHAKE-128f  median      0.027 ms  ops/s  25377.506  iters  25380  match true  (2.1s)
+[noble] hmsg.v0        SLH-DSA-SHAKE-192s  median      0.022 ms  ops/s  33857.895  iters  33861  match true  (31.4s)
+[noble] hmsg.v0        SLH-DSA-SHAKE-192f  median      0.030 ms  ops/s  24862.157  iters  24864  match true  (2.7s)
+[noble] hmsg.v0        SLH-DSA-SHAKE-256s  median      0.024 ms  ops/s  28603.502  iters  28605  match true  (24.8s)
+[noble] hmsg.v0        SLH-DSA-SHAKE-256f  median      0.028 ms  ops/s   26966.62  iters  26968  match true  (3.8s)
+[noble] hmsg.v1        SLH-DSA-SHA2-128s   median      0.026 ms  ops/s  20090.515  iters  20092  match true  (4.3s)
+[noble] hmsg.v1        SLH-DSA-SHA2-128f   median      0.029 ms  ops/s  22000.192  iters  22002  match true  (1.5s)
+[noble] hmsg.v1        SLH-DSA-SHA2-192s   median      0.027 ms  ops/s  23787.823  iters  23789  match true  (6.3s)
+[noble] hmsg.v1        SLH-DSA-SHA2-192f   median      0.028 ms  ops/s  23140.778  iters  23144  match true  (1.6s)
+[noble] hmsg.v1        SLH-DSA-SHA2-256s   median      0.024 ms  ops/s  24550.667  iters  24553  match true  (5.7s)
+[noble] hmsg.v1        SLH-DSA-SHA2-256f   median      0.028 ms  ops/s  22384.051  iters  22395  match true  (1.8s)
+[noble] hmsg.v1        SLH-DSA-SHAKE-128s  median      0.014 ms  ops/s  36858.617  iters  36861  match true  (17.2s)
+[noble] hmsg.v1        SLH-DSA-SHAKE-128f  median      0.021 ms  ops/s  30953.022  iters  30956  match true  (2.2s)
+[noble] hmsg.v1        SLH-DSA-SHAKE-192s  median      0.014 ms  ops/s  44898.841  iters  44901  match true  (28.0s)
+[noble] hmsg.v1        SLH-DSA-SHAKE-192f  median      0.020 ms  ops/s  33034.093  iters  33036  match true  (2.8s)
+[noble] hmsg.v1        SLH-DSA-SHAKE-256s  median      0.015 ms  ops/s  40632.294  iters  40637  match true  (23.6s)
+[noble] hmsg.v1        SLH-DSA-SHAKE-256f  median      0.021 ms  ops/s  30326.958  iters  30329  match true  (3.8s)
+[noble] hmsg.v2        SLH-DSA-SHAKE-128s  median      0.012 ms  ops/s  53677.249  iters  53680  match true  (16.9s)
+[noble] hmsg.v2        SLH-DSA-SHAKE-128f  median      0.020 ms  ops/s  34687.023  iters  34689  match true  (2.1s)
+[noble] hmsg.v2        SLH-DSA-SHAKE-192s  median      0.016 ms  ops/s  42969.618  iters  42974  match true  (28.3s)
+[noble] hmsg.v2        SLH-DSA-SHAKE-192f  median      0.022 ms  ops/s  31971.859  iters  31974  match true  (2.8s)
+[noble] hmsg.v2        SLH-DSA-SHAKE-256s  median      0.017 ms  ops/s  39417.798  iters  39421  match true  (24.8s)
+[noble] hmsg.v2        SLH-DSA-SHAKE-256f  median      0.022 ms  ops/s  31276.586  iters  31281  match true  (4.3s)
+[noble] hmsg.v3        SLH-DSA-SHA2-128s   median      0.015 ms  ops/s  32681.473  iters  32690  match true  (4.5s)
+[noble] hmsg.v3        SLH-DSA-SHA2-128f   median      0.023 ms  ops/s  21904.142  iters  21906  match true  (1.5s)
+[noble] hmsg.v3        SLH-DSA-SHA2-192s   median      0.025 ms  ops/s  23988.191  iters  23989  match true  (7.6s)
+[noble] hmsg.v3        SLH-DSA-SHA2-192f   median      0.036 ms  ops/s  15839.308  iters  15840  match true  (1.7s)
+[noble] hmsg.v3        SLH-DSA-SHA2-256s   median      0.033 ms  ops/s  17180.226  iters  17185  match true  (7.2s)
+[noble] hmsg.v3        SLH-DSA-SHA2-256f   median      0.037 ms  ops/s  15206.426  iters  15208  match true  (1.9s)
+[noble] hmsg.v3        SLH-DSA-SHAKE-128s  median      0.013 ms  ops/s  40396.587  iters  40398  match true  (12.9s)
+[noble] hmsg.v3        SLH-DSA-SHAKE-128f  median      0.025 ms  ops/s  21478.955  iters  21480  match true  (2.0s)
+[noble] hmsg.v3        SLH-DSA-SHAKE-192s  median      0.018 ms  ops/s  32050.898  iters  32052  match true  (23.2s)
+[noble] hmsg.v3        SLH-DSA-SHAKE-192f  median      0.023 ms  ops/s  24492.826  iters  24494  match true  (2.3s)
+[noble] hmsg.v3        SLH-DSA-SHAKE-256s  median      0.018 ms  ops/s  32250.621  iters  32252  match true  (19.4s)
+[noble] hmsg.v3        SLH-DSA-SHAKE-256f  median      0.024 ms  ops/s  22990.351  iters  23014  match true  (3.3s)
+[noble] fors.v0        SLH-DSA-SHA2-128s   median      0.179 ms  ops/s   4918.718  iters   4919  match true  (4.0s)
+[noble] fors.v0        SLH-DSA-SHA2-128f   median      0.237 ms  ops/s   3904.246  iters   3905  match true  (1.5s)
+[noble] fors.v0        SLH-DSA-SHA2-192s   median      0.871 ms  ops/s   1103.024  iters   1104  match true  (6.4s)
+[noble] fors.v0        SLH-DSA-SHA2-192f   median      0.957 ms  ops/s    922.676  iters    923  match true  (1.7s)
+[noble] fors.v0        SLH-DSA-SHA2-256s   median      0.882 ms  ops/s    954.777  iters    955  match true  (6.2s)
+[noble] fors.v0        SLH-DSA-SHA2-256f   median      0.882 ms  ops/s    983.419  iters    984  match true  (1.8s)
+[noble] fors.v0        SLH-DSA-SHAKE-128s  median      1.106 ms  ops/s    806.609  iters    807  match true  (17.4s)
+[noble] fors.v0        SLH-DSA-SHAKE-128f  median      2.351 ms  ops/s    463.699  iters    464  match true  (2.1s)
+[noble] fors.v0        SLH-DSA-SHAKE-192s  median      1.600 ms  ops/s    569.362  iters    570  match true  (28.8s)
+[noble] fors.v0        SLH-DSA-SHAKE-192f  median      1.975 ms  ops/s    437.349  iters    438  match true  (2.7s)
+[noble] fors.v0        SLH-DSA-SHAKE-256s  median      2.187 ms  ops/s    387.412  iters    388  match true  (25.4s)
+[noble] fors.v0        SLH-DSA-SHAKE-256f  median      2.398 ms  ops/s    365.088  iters    366  match true  (3.8s)
+[noble] fors.v1        SLH-DSA-SHA2-128s   median      0.096 ms  ops/s   8721.947  iters   8723  match true  (4.2s)
+[noble] fors.v1        SLH-DSA-SHA2-128f   median      0.129 ms  ops/s   6311.327  iters   6312  match true  (1.5s)
+[noble] fors.v1        SLH-DSA-SHA2-192s   median      0.481 ms  ops/s   1817.427  iters   1818  match true  (6.5s)
+[noble] fors.v1        SLH-DSA-SHA2-192f   median      0.554 ms  ops/s   1564.954  iters   1566  match true  (1.6s)
+[noble] fors.v1        SLH-DSA-SHA2-256s   median      0.657 ms  ops/s   1271.876  iters   1272  match true  (6.3s)
+[noble] fors.v1        SLH-DSA-SHA2-256f   median      0.688 ms  ops/s   1251.741  iters   1252  match true  (1.8s)
+[noble] fors.v1        SLH-DSA-SHAKE-128s  median      0.467 ms  ops/s   1914.783  iters   1915  match true  (18.3s)
+[noble] fors.v1        SLH-DSA-SHAKE-128f  median      0.597 ms  ops/s   1468.938  iters   1469  match true  (2.4s)
+[noble] fors.v1        SLH-DSA-SHAKE-192s  median      0.636 ms  ops/s   1417.076  iters   1418  match true  (31.0s)
+[noble] fors.v1        SLH-DSA-SHAKE-192f  median      0.802 ms  ops/s   1031.563  iters   1032  match true  (3.1s)
+[noble] fors.v1        SLH-DSA-SHAKE-256s  median      0.834 ms  ops/s   1048.607  iters   1050  match true  (25.9s)
+[noble] fors.v1        SLH-DSA-SHAKE-256f  median      0.901 ms  ops/s      980.6  iters    981  match true  (4.2s)
+[noble] fors.v2        SLH-DSA-SHA2-128s   median      0.436 ms  ops/s    2070.44  iters   2071  match true  (4.0s)
+[noble] fors.v2        SLH-DSA-SHA2-128f   median      0.550 ms  ops/s   1616.933  iters   1618  match true  (1.5s)
+[noble] fors.v2        SLH-DSA-SHA2-192s   median      0.739 ms  ops/s   1155.438  iters   1156  match true  (6.7s)
+[noble] fors.v2        SLH-DSA-SHA2-192f   median      0.846 ms  ops/s   1064.135  iters   1065  match true  (1.8s)
+[noble] fors.v2        SLH-DSA-SHA2-256s   median      0.891 ms  ops/s     976.85  iters    977  match true  (6.5s)
+[noble] fors.v2        SLH-DSA-SHA2-256f   median      0.858 ms  ops/s    938.205  iters    939  match true  (1.9s)
+[noble] fors.v2        SLH-DSA-SHAKE-128s  median      0.521 ms  ops/s   1155.504  iters   1166  match true  (18.2s)
+[noble] fors.v2        SLH-DSA-SHAKE-128f  median      0.777 ms  ops/s    653.844  iters    654  match true  (2.2s)
+[noble] fors.v2        SLH-DSA-SHAKE-192s  median      0.910 ms  ops/s     612.95  iters    613  match true  (30.5s)
+[noble] fors.v2        SLH-DSA-SHAKE-192f  median      0.942 ms  ops/s    544.564  iters    551  match true  (2.8s)
+[noble] fors.v2        SLH-DSA-SHAKE-256s  median      1.051 ms  ops/s    527.116  iters    528  match true  (24.3s)
+[noble] fors.v2        SLH-DSA-SHAKE-256f  median      1.354 ms  ops/s    457.531  iters    458  match true  (4.4s)
+[noble] fors.v3        SLH-DSA-SHA2-128s   median      0.259 ms  ops/s   3138.103  iters   3140  match true  (5.4s)
+[noble] fors.v3        SLH-DSA-SHA2-128f   median      0.306 ms  ops/s   2395.859  iters   2396  match true  (1.5s)
+[noble] fors.v3        SLH-DSA-SHA2-192s   median      0.785 ms  ops/s   1037.979  iters   1038  match true  (8.1s)
+[noble] fors.v3        SLH-DSA-SHA2-192f   median      0.929 ms  ops/s    867.262  iters    868  match true  (1.7s)
+[noble] fors.v3        SLH-DSA-SHA2-256s   median      1.640 ms  ops/s    642.541  iters    643  match true  (7.2s)
+[noble] fors.v3        SLH-DSA-SHA2-256f   median      1.110 ms  ops/s    694.836  iters    695  match true  (2.0s)
+[noble] fors.v3        SLH-DSA-SHAKE-128s  median      0.827 ms  ops/s   1037.115  iters   1038  match true  (13.4s)
+[noble] fors.v3        SLH-DSA-SHAKE-128f  median      1.061 ms  ops/s    855.377  iters    856  match true  (1.9s)
+[noble] fors.v3        SLH-DSA-SHAKE-192s  median      1.150 ms  ops/s    772.949  iters    773  match true  (22.1s)
+[noble] fors.v3        SLH-DSA-SHAKE-192f  median      1.427 ms  ops/s    615.566  iters    616  match true  (2.3s)
+[noble] fors.v3        SLH-DSA-SHAKE-256s  median      1.566 ms  ops/s     584.41  iters    585  match true  (20.2s)
+[noble] fors.v3        SLH-DSA-SHAKE-256f  median      1.682 ms  ops/s    491.333  iters    492  match true  (3.2s)
+[noble] ht_wots.v0     SLH-DSA-SHA2-128s   median      1.856 ms  ops/s     500.66  iters    501  match true  (3.9s)
+[noble] ht_wots.v0     SLH-DSA-SHA2-128f   median      6.129 ms  ops/s    156.864  iters    157  match true  (1.5s)
+[noble] ht_wots.v0     SLH-DSA-SHA2-192s   median      3.028 ms  ops/s    304.331  iters    305  match true  (6.3s)
+[noble] ht_wots.v0     SLH-DSA-SHA2-192f   median      9.564 ms  ops/s     98.865  iters     99  match true  (1.6s)
+[noble] ht_wots.v0     SLH-DSA-SHA2-256s   median      4.776 ms  ops/s    194.567  iters    195  match true  (5.7s)
+[noble] ht_wots.v0     SLH-DSA-SHA2-256f   median      9.404 ms  ops/s    102.856  iters    103  match true  (1.8s)
+[noble] ht_wots.v0     SLH-DSA-SHAKE-128s  median     10.771 ms  ops/s     87.461  iters     88  match true  (16.8s)
+[noble] ht_wots.v0     SLH-DSA-SHAKE-128f  median     37.623 ms  ops/s     22.431  iters     23  match true  (2.8s)
+[noble] ht_wots.v0     SLH-DSA-SHAKE-192s  median     16.966 ms  ops/s     57.502  iters     58  match true  (27.8s)
+[noble] ht_wots.v0     SLH-DSA-SHAKE-192f  median     50.484 ms  ops/s     18.957  iters     19  match true  (3.6s)
+[noble] ht_wots.v0     SLH-DSA-SHAKE-256s  median     26.016 ms  ops/s     37.052  iters     38  match true  (25.0s)
+[noble] ht_wots.v0     SLH-DSA-SHAKE-256f  median     53.207 ms  ops/s     18.347  iters     19  match true  (4.8s)
+[noble] ht_wots.v1     SLH-DSA-SHA2-128s   median      0.979 ms  ops/s    944.988  iters    945  match true  (4.0s)
+[noble] ht_wots.v1     SLH-DSA-SHA2-128f   median      2.933 ms  ops/s    330.196  iters    331  match true  (1.5s)
+[noble] ht_wots.v1     SLH-DSA-SHA2-192s   median      1.468 ms  ops/s    600.376  iters    601  match true  (6.3s)
+[noble] ht_wots.v1     SLH-DSA-SHA2-192f   median      4.902 ms  ops/s    184.374  iters    185  match true  (1.6s)
+[noble] ht_wots.v1     SLH-DSA-SHA2-256s   median      2.550 ms  ops/s     367.16  iters    368  match true  (5.7s)
+[noble] ht_wots.v1     SLH-DSA-SHA2-256f   median      5.101 ms  ops/s    176.679  iters    177  match true  (2.0s)
+[noble] ht_wots.v1     SLH-DSA-SHAKE-128s  median      4.206 ms  ops/s    224.193  iters    225  match true  (17.5s)
+[noble] ht_wots.v1     SLH-DSA-SHAKE-128f  median     15.559 ms  ops/s     59.902  iters     61  match true  (2.3s)
+[noble] ht_wots.v1     SLH-DSA-SHAKE-192s  median      7.025 ms  ops/s    120.532  iters    121  match true  (28.6s)
+[noble] ht_wots.v1     SLH-DSA-SHAKE-192f  median     20.982 ms  ops/s     45.968  iters     46  match true  (3.0s)
+[noble] ht_wots.v1     SLH-DSA-SHAKE-256s  median      9.950 ms  ops/s     98.856  iters     99  match true  (25.0s)
+[noble] ht_wots.v1     SLH-DSA-SHAKE-256f  median     21.565 ms  ops/s      43.22  iters     44  match true  (4.2s)
+[noble] ht_wots.v2     SLH-DSA-SHA2-128s   median      4.715 ms  ops/s    204.494  iters    205  match true  (3.7s)
+[noble] ht_wots.v2     SLH-DSA-SHA2-128f   median     16.056 ms  ops/s      60.07  iters     61  match true  (1.7s)
+[noble] ht_wots.v2     SLH-DSA-SHA2-192s   median      7.092 ms  ops/s    130.768  iters    131  match true  (6.2s)
+[noble] ht_wots.v2     SLH-DSA-SHA2-192f   median     19.963 ms  ops/s     48.374  iters     49  match true  (1.9s)
+[noble] ht_wots.v2     SLH-DSA-SHA2-256s   median      9.540 ms  ops/s     96.782  iters     98  match true  (5.8s)
+[noble] ht_wots.v2     SLH-DSA-SHA2-256f   median     18.339 ms  ops/s     53.618  iters     54  match true  (2.0s)
+[noble] ht_wots.v2     SLH-DSA-SHAKE-128s  median      5.221 ms  ops/s    119.634  iters    120  match true  (17.1s)
+[noble] ht_wots.v2     SLH-DSA-SHAKE-128f  median     28.453 ms  ops/s     33.255  iters     34  match true  (2.6s)
+[noble] ht_wots.v2     SLH-DSA-SHAKE-192s  median     15.483 ms  ops/s     65.125  iters     66  match true  (28.0s)
+[noble] ht_wots.v2     SLH-DSA-SHAKE-192f  median     39.744 ms  ops/s     25.075  iters     26  match true  (3.3s)
+[noble] ht_wots.v2     SLH-DSA-SHAKE-256s  median     21.260 ms  ops/s     46.194  iters     47  match true  (24.0s)
+[noble] ht_wots.v2     SLH-DSA-SHAKE-256f  median     42.020 ms  ops/s     22.723  iters     23  match true  (5.1s)
+[noble] ht_wots.v3     SLH-DSA-SHA2-128s   median      2.003 ms  ops/s    423.267  iters    424  match true  (4.1s)
+[noble] ht_wots.v3     SLH-DSA-SHA2-128f   median      7.645 ms  ops/s    122.414  iters    123  match true  (1.5s)
+[noble] ht_wots.v3     SLH-DSA-SHA2-192s   median      3.985 ms  ops/s    243.236  iters    244  match true  (7.7s)
+[noble] ht_wots.v3     SLH-DSA-SHA2-192f   median     12.053 ms  ops/s      81.45  iters     82  match true  (1.8s)
+[noble] ht_wots.v3     SLH-DSA-SHA2-256s   median      5.818 ms  ops/s    160.898  iters    161  match true  (7.0s)
+[noble] ht_wots.v3     SLH-DSA-SHA2-256f   median     12.119 ms  ops/s     78.458  iters     79  match true  (2.1s)
+[noble] ht_wots.v3     SLH-DSA-SHAKE-128s  median      7.676 ms  ops/s    126.213  iters    127  match true  (13.2s)
+[noble] ht_wots.v3     SLH-DSA-SHAKE-128f  median     29.243 ms  ops/s     30.222  iters     31  match true  (2.4s)
+[noble] ht_wots.v3     SLH-DSA-SHAKE-192s  median     12.641 ms  ops/s     75.932  iters     77  match true  (21.6s)
+[noble] ht_wots.v3     SLH-DSA-SHAKE-192f  median     39.989 ms  ops/s     22.151  iters     23  match true  (3.0s)
+[noble] ht_wots.v3     SLH-DSA-SHAKE-256s  median     18.097 ms  ops/s     50.607  iters     51  match true  (18.5s)
+[noble] ht_wots.v3     SLH-DSA-SHAKE-256f  median     48.446 ms  ops/s     19.391  iters     20  match true  (3.9s)
+[noble] ht_auth.v0     SLH-DSA-SHA2-128s   median      0.066 ms  ops/s  11701.237  iters  11702  match true  (3.8s)
+[noble] ht_auth.v0     SLH-DSA-SHA2-128f   median      0.091 ms  ops/s   8075.903  iters   8077  match true  (1.5s)
+[noble] ht_auth.v0     SLH-DSA-SHA2-192s   median      0.190 ms  ops/s   4160.366  iters   4161  match true  (6.0s)
+[noble] ht_auth.v0     SLH-DSA-SHA2-192f   median      0.214 ms  ops/s   3627.336  iters   3628  match true  (1.6s)
+[noble] ht_auth.v0     SLH-DSA-SHA2-256s   median      0.163 ms  ops/s   5212.577  iters   5213  match true  (6.0s)
+[noble] ht_auth.v0     SLH-DSA-SHA2-256f   median      0.194 ms  ops/s   4071.719  iters   4072  match true  (1.8s)
+[noble] ht_auth.v0     SLH-DSA-SHAKE-128s  median      0.380 ms  ops/s   2289.855  iters   2290  match true  (17.4s)
+[noble] ht_auth.v0     SLH-DSA-SHAKE-128f  median      0.436 ms  ops/s   1998.842  iters   1999  match true  (2.2s)
+[noble] ht_auth.v0     SLH-DSA-SHAKE-192s  median      0.385 ms  ops/s   2109.861  iters   2110  match true  (28.6s)
+[noble] ht_auth.v0     SLH-DSA-SHAKE-192f  median      0.416 ms  ops/s   2082.453  iters   2083  match true  (2.6s)
+[noble] ht_auth.v0     SLH-DSA-SHAKE-256s  median      0.393 ms  ops/s   2266.161  iters   2267  match true  (23.7s)
+[noble] ht_auth.v0     SLH-DSA-SHAKE-256f  median      0.435 ms  ops/s   2065.191  iters   2066  match true  (3.9s)
+[noble] ht_auth.v1     SLH-DSA-SHA2-128s   median      0.035 ms  ops/s   19705.97  iters  19707  match true  (4.2s)
+[noble] ht_auth.v1     SLH-DSA-SHA2-128f   median      0.047 ms  ops/s  16248.619  iters  16257  match true  (1.5s)
+[noble] ht_auth.v1     SLH-DSA-SHA2-192s   median      0.121 ms  ops/s   7112.864  iters   7113  match true  (6.3s)
+[noble] ht_auth.v1     SLH-DSA-SHA2-192f   median      0.155 ms  ops/s   4832.499  iters   4833  match true  (1.6s)
+[noble] ht_auth.v1     SLH-DSA-SHA2-256s   median      0.128 ms  ops/s   5970.964  iters   5971  match true  (6.2s)
+[noble] ht_auth.v1     SLH-DSA-SHA2-256f   median      0.142 ms  ops/s   5285.509  iters   5288  match true  (1.9s)
+[noble] ht_auth.v1     SLH-DSA-SHAKE-128s  median      0.153 ms  ops/s   5678.126  iters   5679  match true  (16.9s)
+[noble] ht_auth.v1     SLH-DSA-SHAKE-128f  median      0.184 ms  ops/s   4237.757  iters   4238  match true  (2.2s)
+[noble] ht_auth.v1     SLH-DSA-SHAKE-192s  median      0.156 ms  ops/s   4751.765  iters   4752  match true  (28.5s)
+[noble] ht_auth.v1     SLH-DSA-SHAKE-192f  median      0.182 ms  ops/s   4588.352  iters   4589  match true  (2.6s)
+[noble] ht_auth.v1     SLH-DSA-SHAKE-256s  median      0.162 ms  ops/s   4972.712  iters   4973  match true  (24.5s)
+[noble] ht_auth.v1     SLH-DSA-SHAKE-256f  median      0.181 ms  ops/s    4428.97  iters   4429  match true  (3.9s)
+[noble] ht_auth.v2     SLH-DSA-SHA2-128s   median      0.149 ms  ops/s   5540.748  iters   5541  match true  (3.8s)
+[noble] ht_auth.v2     SLH-DSA-SHA2-128f   median      0.202 ms  ops/s   4008.116  iters   4009  match true  (1.6s)
+[noble] ht_auth.v2     SLH-DSA-SHA2-192s   median      0.177 ms  ops/s   4806.694  iters   4808  match true  (6.7s)
+[noble] ht_auth.v2     SLH-DSA-SHA2-192f   median      0.225 ms  ops/s   3736.552  iters   3737  match true  (1.6s)
+[noble] ht_auth.v2     SLH-DSA-SHA2-256s   median      0.190 ms  ops/s   4180.572  iters   4181  match true  (6.1s)
+[noble] ht_auth.v2     SLH-DSA-SHA2-256f   median      0.213 ms  ops/s   3983.272  iters   3984  match true  (1.8s)
+[noble] ht_auth.v2     SLH-DSA-SHAKE-128s  median      0.182 ms  ops/s   2993.654  iters   3008  match true  (16.9s)
+[noble] ht_auth.v2     SLH-DSA-SHAKE-128f  median      0.349 ms  ops/s   1984.921  iters   1985  match true  (2.1s)
+[noble] ht_auth.v2     SLH-DSA-SHAKE-192s  median      0.183 ms  ops/s   2703.013  iters   2706  match true  (32.9s)
+[noble] ht_auth.v2     SLH-DSA-SHAKE-192f  median      0.351 ms  ops/s   1907.678  iters   1908  match true  (2.9s)
+[noble] ht_auth.v2     SLH-DSA-SHAKE-256s  median      0.212 ms  ops/s   2489.835  iters   2491  match true  (25.9s)
+[noble] ht_auth.v2     SLH-DSA-SHAKE-256f  median      0.232 ms  ops/s    2365.84  iters   2366  match true  (4.3s)
+[noble] ht_auth.v3     SLH-DSA-SHA2-128s   median      0.068 ms  ops/s   9797.626  iters   9803  match true  (5.0s)
+[noble] ht_auth.v3     SLH-DSA-SHA2-128f   median      0.087 ms  ops/s   7119.659  iters   7120  match true  (1.5s)
+[noble] ht_auth.v3     SLH-DSA-SHA2-192s   median      0.193 ms  ops/s   4097.478  iters   4099  match true  (7.9s)
+[noble] ht_auth.v3     SLH-DSA-SHA2-192f   median      0.222 ms  ops/s    3545.63  iters   3546  match true  (1.6s)
+[noble] ht_auth.v3     SLH-DSA-SHA2-256s   median      0.211 ms  ops/s   3585.233  iters   3586  match true  (7.7s)
+[noble] ht_auth.v3     SLH-DSA-SHA2-256f   median      0.235 ms  ops/s   3119.995  iters   3121  match true  (2.3s)
+[noble] ht_auth.v3     SLH-DSA-SHAKE-128s  median      0.285 ms  ops/s    3131.15  iters   3135  match true  (16.0s)
+[noble] ht_auth.v3     SLH-DSA-SHAKE-128f  median      0.320 ms  ops/s   2517.805  iters   2518  match true  (2.2s)
+[noble] ht_auth.v3     SLH-DSA-SHAKE-192s  median      0.287 ms  ops/s   2992.319  iters   2993  match true  (25.9s)
+[noble] ht_auth.v3     SLH-DSA-SHAKE-192f  median      0.315 ms  ops/s   2590.321  iters   2591  match true  (2.4s)
+[noble] ht_auth.v3     SLH-DSA-SHAKE-256s  median      0.300 ms  ops/s   2703.566  iters   2704  match true  (21.8s)
+[noble] ht_auth.v3     SLH-DSA-SHAKE-256f  median      0.324 ms  ops/s   2668.482  iters   2669  match true  (3.6s)
+[noble] total.v0       ML-DSA-44           median      1.424 ms  ops/s    612.784  iters    613  match true  (1.3s)
+[noble] total.v0       ML-DSA-65           median      2.183 ms  ops/s    393.849  iters    395  match true  (1.4s)
+[noble] total.v0       ML-DSA-87           median      3.574 ms  ops/s    249.958  iters    250  match true  (1.4s)
+[noble] total.v0       SLH-DSA-SHA2-128s   median      2.281 ms  ops/s    372.016  iters    373  match true  (4.1s)
+[noble] total.v0       SLH-DSA-SHA2-128f   median      6.587 ms  ops/s    131.555  iters    132  match true  (1.6s)
+[noble] total.v0       SLH-DSA-SHA2-192s   median      3.986 ms  ops/s    246.939  iters    247  match true  (6.8s)
+[noble] total.v0       SLH-DSA-SHA2-192f   median     10.320 ms  ops/s     77.784  iters     78  match true  (1.7s)
+[noble] total.v0       SLH-DSA-SHA2-256s   median      5.980 ms  ops/s    137.832  iters    138  match true  (6.0s)
+[noble] total.v0       SLH-DSA-SHA2-256f   median     10.656 ms  ops/s     69.978  iters     70  match true  (2.1s)
+[noble] total.v0       SLH-DSA-SHAKE-128s  median     12.295 ms  ops/s     63.936  iters     64  match true  (18.1s)
+[noble] total.v0       SLH-DSA-SHAKE-128f  median     40.069 ms  ops/s      24.82  iters     25  match true  (3.3s)
+[noble] total.v0       SLH-DSA-SHAKE-192s  median     18.443 ms  ops/s     53.717  iters     54  match true  (30.3s)
+[noble] total.v0       SLH-DSA-SHAKE-192f  median     54.152 ms  ops/s     16.203  iters     17  match true  (4.4s)
+[noble] total.v0       SLH-DSA-SHAKE-256s  median     28.240 ms  ops/s       34.7  iters     35  match true  (26.0s)
+[noble] total.v0       SLH-DSA-SHAKE-256f  median     58.060 ms  ops/s     16.629  iters     17  match true  (5.0s)
+[noble] total_best.v0  ML-DSA-44           median      0.474 ms  ops/s   1790.274  iters   1791  match true  (1.4s)
+[noble] total_best.v0  ML-DSA-65           median      0.839 ms  ops/s    965.005  iters    966  match true  (1.4s)
+[noble] total_best.v0  ML-DSA-87           median      2.029 ms  ops/s    481.275  iters    482  match true  (1.4s)
+[noble] total_best.v0  SLH-DSA-SHA2-128s   median      1.170 ms  ops/s     765.21  iters    766  match true  (4.6s)
+[noble] total_best.v0  SLH-DSA-SHA2-128f   median      3.315 ms  ops/s    272.264  iters    273  match true  (1.5s)
+[noble] total_best.v0  SLH-DSA-SHA2-192s   median      2.481 ms  ops/s    325.363  iters    326  match true  (6.6s)
+[noble] total_best.v0  SLH-DSA-SHA2-192f   median      5.798 ms  ops/s    160.813  iters    161  match true  (1.7s)
+[noble] total_best.v0  SLH-DSA-SHA2-256s   median      3.755 ms  ops/s    221.343  iters    222  match true  (7.0s)
+[noble] total_best.v0  SLH-DSA-SHA2-256f   median      6.728 ms  ops/s    116.236  iters    117  match true  (1.8s)
+[noble] total_best.v0  SLH-DSA-SHAKE-128s  median      4.946 ms  ops/s    194.104  iters    195  match true  (17.8s)
+[noble] total_best.v0  SLH-DSA-SHAKE-128f  median     16.390 ms  ops/s     59.868  iters     60  match true  (2.3s)
+[noble] total_best.v0  SLH-DSA-SHAKE-192s  median      7.714 ms  ops/s     109.85  iters    111  match true  (29.4s)
+[noble] total_best.v0  SLH-DSA-SHAKE-192f  median     22.161 ms  ops/s     44.915  iters     45  match true  (3.1s)
+[noble] total_best.v0  SLH-DSA-SHAKE-256s  median     11.587 ms  ops/s      82.96  iters     83  match true  (26.5s)
+[noble] total_best.v0  SLH-DSA-SHAKE-256f  median     23.153 ms  ops/s     38.711  iters     39  match true  (4.2s)
+== memory noble
+[noble] memory: probe frame = 104 B (node), 112 B (bun)
+[noble] memory keygen.v0      ML-DSA-44           stack    1976 B  heap/op      55178 B  peak      60424 B  match true  (0.9s)
+[noble] memory keygen.v0      ML-DSA-65           stack    1976 B  heap/op      80400 B  peak      92088 B  match true  (1.1s)
+[noble] memory keygen.v0      ML-DSA-87           stack    1976 B  heap/op     132018 B  peak     172008 B  match true  (1.4s)
+[noble] memory keygen.v0      SLH-DSA-SHA2-128s   stack    2288 B  heap/op   71177738 B  peak    3787392 B  match true  (124.0s)
+[noble] memory keygen.v0      SLH-DSA-SHA2-128f   stack    2288 B  heap/op    1131502 B  peak    3028848 B  match true  (2.2s)
+[noble] memory keygen.v0      SLH-DSA-SHA2-192s   stack    2288 B  heap/op  106918572 B  peak    5322408 B  match true  (183.5s)
+[noble] memory keygen.v0      SLH-DSA-SHA2-192f   stack    2288 B  heap/op    1690106 B  peak    1411128 B  match true  (3.5s)
+[noble] memory keygen.v0      SLH-DSA-SHA2-256s   stack    2288 B  heap/op  101266416 B  peak    1430408 B  match true  (125.4s)
+[noble] memory keygen.v0      SLH-DSA-SHA2-256f   stack    2288 B  heap/op    4557943 B  peak    3365632 B  match true  (8.2s)
