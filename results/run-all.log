@@ -1874,3 +1874,5 @@ Falcon-1024 {param=Falcon-1024, ok=true, error=null, tamper_rejected=true}
 [noble] memory keygen.v0      SLH-DSA-SHA2-192f   stack    2288 B  heap/op    1690106 B  peak    1411128 B  match true  (3.5s)
 [noble] memory keygen.v0      SLH-DSA-SHA2-256s   stack    2288 B  heap/op  101266416 B  peak    1430408 B  match true  (125.4s)
 [noble] memory keygen.v0      SLH-DSA-SHA2-256f   stack    2288 B  heap/op    4557943 B  peak    3365632 B  match true  (8.2s)
+[noble] memory keygen.v0      SLH-DSA-SHAKE-128s  stack    2288 B  heap/op   38543130 B  peak    2851720 B  match true  (714.3s)
+[noble] memory keygen.v0      SLH-DSA-SHAKE-128f  stack    2288 B  heap/op     610645 B  peak     788248 B  match true  (11.5s)
