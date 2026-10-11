@@ -64,6 +64,6 @@ randomness even for the deterministic variant, which is why the driver's RNG cal
 | `verify.v4` | 387 | 0 | 0 |
 | `verify.v5` | 387 | 0 | 0 |
 | `verify.total` | 387 | 0 | 0 |
-| `verify.total_best` | 387 | 0 | 387 |
+| `verify.total_best` | 387 | 0 | 0 |
 
-Total: 5067 results, 0 failures.
+Total: 4680 results, 0 failures.
