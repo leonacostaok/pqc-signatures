@@ -57,3 +57,33 @@ export function finish(perOpNs, loopWallNs, cpuNs_, ops, threads) {
     ops_per_sec: +((ops * 1e9) / loopWallNs).toFixed(3),
   };
 }
+
+// async flavour (worker-parallel stage alternatives): identical rules, fn returns a promise.
+export async function measureAsync(fn, check, budgetMs) {
+  {
+    const t0 = now();
+    let n = 0;
+    do {
+      check(await fn(), -1);
+      n++;
+    } while ((n < WARMUP_MIN_OPS || Number(now() - t0) / 1e6 < WARMUP_MIN_MS) && Number(now() - t0) / 1e6 < WARMUP_CAP_MS);
+  }
+  const times = [];
+  const cpu0 = cpuNs();
+  const loopStart = now();
+  let minOps = 3;
+  for (;;) {
+    const s = now();
+    const out = await fn();
+    const e = now();
+    const dt = Number(e - s);
+    times.push(dt);
+    check(out, times.length - 1);
+    if (times.length === 1 && dt > 5e9) minOps = 2;
+    const elapsedMs = Number(now() - loopStart) / 1e6;
+    if ((elapsedMs >= budgetMs && times.length >= minOps) || times.length >= MAX_ITERS) break;
+  }
+  const loopWall = Number(now() - loopStart);
+  const cpu = cpuNs() - cpu0;
+  return finish(times, loopWall, cpu, times.length, 1);
+}

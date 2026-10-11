@@ -489,8 +489,64 @@ export function createFastMlDsa(level) {
     if (opts.extraEntropy === false) return new Uint8Array(32);
     throw new Error('fast-ml-dsa: only deterministic signing (extraEntropy: false) is supported');
   };
+  // Phase 2 verify stages (same contract as the vendored noble `stages`, Float64Array polys)
+  const stages = {
+    decode: (publicKey, sig) => {
+      const [rho, t1] = publicCoder.decode(publicKey);
+      if (sig.length !== sigCoder.bytesLen) return false;
+      const [cTilde, z, h] = sigCoder.decode(sig);
+      if (h === false) return false;
+      return { rho, t1, cTilde, z, h };
+    },
+    mu: (publicKey, M) => hashMu(shake256(publicKey, { dkLen: TR_BYTES }), M),
+    expandA,
+    t1Hat: (t1) =>
+      t1.map((p) => {
+        const q = toF64(p);
+        for (let i = 0; i < N; i++) q[i] *= 1 << D;
+        return ntt(q);
+      }),
+    wApprox: (A, t1, cTilde, z, t1Hat = null) => {
+      const c = ntt(SampleInBall(cTilde));
+      const zNtt = z.map((p) => ntt(toF64(p)));
+      const acc = new Float64Array(N);
+      const w = [];
+      for (let i = 0; i < K; i++) {
+        let t1h;
+        if (t1Hat) t1h = t1Hat[i];
+        else {
+          t1h = toF64(t1[i]);
+          for (let k = 0; k < N; k++) t1h[k] *= 1 << D;
+          ntt(t1h);
+        }
+        const ct12d = pointwise(t1h, c);
+        acc.fill(0);
+        for (let j = 0; j < L; j++) mulAcc(acc, A[i][j], zNtt[j]);
+        const Az = reduceAcc(acc, newPoly());
+        for (let k = 0; k < N; k++) {
+          const v = Az[k] - ct12d[k];
+          Az[k] = v < 0 ? v + Q : v;
+        }
+        w.push(intt(Az));
+      }
+      return w;
+    },
+    hintCheck: (mu, w, h, z, cTilde) => {
+      for (let i = 0; i < L; i++) if (polyChknorm(z[i], GAMMA1 - BETA)) return { ok: false, w1enc: null };
+      const w1 = w.map((p, i) => useHint(toF64(p), h[i]));
+      const w1enc = W1Vec.encode(w1);
+      const c2 = shake256.create({ dkLen: C_TILDE_BYTES }).update(mu).update(w1enc).digest();
+      for (const t of h) {
+        let sum = 0;
+        for (let i = 0; i < N; i++) sum += t[i];
+        if (!(sum <= OMEGA)) return { ok: false, w1enc };
+      }
+      return { ok: equalBytes(cTilde, c2), w1enc };
+    },
+  };
   return {
     info: { type: 'ml-dsa-fastjs' },
+    stages,
     lengths: { secretKey: secretCoder.bytesLen, publicKey: publicCoder.bytesLen, seed: 32, signature: sigCoder.bytesLen },
     keygen,
     sign: (msg, sk, opts = {}) => signExpanded(getMessage(msg, opts.context), expandSk(sk), rndFromOpts(opts)),

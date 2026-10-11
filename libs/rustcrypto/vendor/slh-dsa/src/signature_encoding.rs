@@ -30,9 +30,9 @@ use pkcs8::{
 ///
 /// There are no invariants maintained by this struct - every field is a hash value
 pub struct Signature<P: ParameterSet> {
-    pub(crate) randomizer: Array<u8, P::N>,
-    pub(crate) fors_sig: ForsSignature<P>,
-    pub(crate) ht_sig: HypertreeSig<P>,
+    pub randomizer: Array<u8, P::N>,
+    pub fors_sig: ForsSignature<P>,
+    pub ht_sig: HypertreeSig<P>,
 }
 
 impl<P: ParameterSet> PartialEq for Signature<P> {

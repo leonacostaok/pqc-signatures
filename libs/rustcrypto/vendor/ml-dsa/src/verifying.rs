@@ -55,7 +55,7 @@ impl<P: MlDsaParams> PrecomputedValues<P> {
 }
 
 impl<P: MlDsaParams> VerifyingKey<P> {
-    pub(crate) fn new(
+    pub fn new(
         rho: B32,
         t1: Vector<P::K>,
         A_hat: NttMatrix<P::K, P::L>,
@@ -103,7 +103,7 @@ impl<P: MlDsaParams> VerifyingKey<P> {
         self.raw_verify_mu(&mu, sigma)
     }
 
-    pub(crate) fn raw_verify_mu(&self, mu: &B64, sigma: &Signature<P>) -> bool
+    pub fn raw_verify_mu(&self, mu: &B64, sigma: &Signature<P>) -> bool
     where
         P: MlDsaParams,
     {
@@ -146,7 +146,7 @@ impl<P: MlDsaParams> VerifyingKey<P> {
         self.verify_mu(&mu, sigma)
     }
 
-    pub(crate) fn encode_internal(rho: &B32, t1: &Vector<P::K>) -> EncodedVerifyingKey<P> {
+    pub fn encode_internal(rho: &B32, t1: &Vector<P::K>) -> EncodedVerifyingKey<P> {
         let t1_enc = P::encode_t1(t1);
         P::concat_vk(rho.clone(), t1_enc)
     }

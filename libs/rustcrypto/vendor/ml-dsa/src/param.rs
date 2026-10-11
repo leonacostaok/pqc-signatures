@@ -27,12 +27,12 @@ use hybrid_array::{
 use module_lattice::{ArraySize, Encode, EncodedPolynomialSize, EncodedVectorSize, EncodingSize};
 
 /// Some useful compile-time constants
-pub(crate) type SpecQ = Sum<Diff<Shleft<U1, U23>, Shleft<U1, U13>>, U1>;
-pub(crate) type SpecD = U13;
-pub(crate) type QMinus1 = Diff<SpecQ, U1>;
-pub(crate) type BitlenQMinusD = Diff<Length<SpecQ>, SpecD>;
-pub(crate) type Pow2DMinus1 = Shleft<U1, Diff<SpecD, U1>>;
-pub(crate) type Pow2DMinus1Minus1 = Diff<Pow2DMinus1, U1>;
+pub type SpecQ = Sum<Diff<Shleft<U1, U23>, Shleft<U1, U13>>, U1>;
+pub type SpecD = U13;
+pub type QMinus1 = Diff<SpecQ, U1>;
+pub type BitlenQMinusD = Diff<Length<SpecQ>, SpecD>;
+pub type Pow2DMinus1 = Shleft<U1, Diff<SpecD, U1>>;
+pub type Pow2DMinus1Minus1 = Diff<Pow2DMinus1, U1>;
 
 /// An integer that describes a bit length to be used in sampling.
 #[allow(unreachable_pub, reason = "MSRV 1.85 complains")]
@@ -150,11 +150,11 @@ pub trait SigningKeyParams: ParameterSet {
     );
 }
 
-pub(crate) type EncodedS1<P> = Array<u8, <P as SigningKeyParams>::S1Size>;
-pub(crate) type EncodedS2<P> = Array<u8, <P as SigningKeyParams>::S2Size>;
-pub(crate) type EncodedT0<P> = Array<u8, <P as SigningKeyParams>::T0Size>;
+pub type EncodedS1<P> = Array<u8, <P as SigningKeyParams>::S1Size>;
+pub type EncodedS2<P> = Array<u8, <P as SigningKeyParams>::S2Size>;
+pub type EncodedT0<P> = Array<u8, <P as SigningKeyParams>::T0Size>;
 
-pub(crate) type SigningKeySize<P> = <P as SigningKeyParams>::SigningKeySize;
+pub type SigningKeySize<P> = <P as SigningKeyParams>::SigningKeySize;
 
 /// A signing key encoded as a byte array
 pub type ExpandedSigningKeyBytes<P> = Array<u8, SigningKeySize<P>>;
@@ -284,9 +284,9 @@ pub trait VerifyingKeyParams: ParameterSet {
     fn split_vk(enc: &EncodedVerifyingKey<Self>) -> (&B32, &EncodedT1<Self>);
 }
 
-pub(crate) type VerifyingKeySize<P> = <P as VerifyingKeyParams>::VerifyingKeySize;
+pub type VerifyingKeySize<P> = <P as VerifyingKeyParams>::VerifyingKeySize;
 
-pub(crate) type EncodedT1<P> = Array<u8, <P as VerifyingKeyParams>::T1Size>;
+pub type EncodedT1<P> = Array<u8, <P as VerifyingKeyParams>::T1Size>;
 
 /// A verifying key encoded as a byte array
 pub type EncodedVerifyingKey<P> = Array<u8, VerifyingKeySize<P>>;
@@ -349,14 +349,14 @@ pub trait SignatureParams: ParameterSet {
     ) -> (&EncodedCTilde<Self>, &EncodedZ<Self>, &EncodedHint<Self>);
 }
 
-pub(crate) type SignatureSize<P> = <P as SignatureParams>::SignatureSize;
+pub type SignatureSize<P> = <P as SignatureParams>::SignatureSize;
 
-pub(crate) type EncodedCTilde<P> = Array<u8, <P as ParameterSet>::Lambda>;
-pub(crate) type EncodedW1<P> = Array<u8, <P as SignatureParams>::W1Size>;
-pub(crate) type EncodedZ<P> = Array<u8, <P as SignatureParams>::ZSize>;
-pub(crate) type EncodedHintIndices<P> = Array<u8, <P as ParameterSet>::Omega>;
-pub(crate) type EncodedHintCuts<P> = Array<u8, <P as ParameterSet>::K>;
-pub(crate) type EncodedHint<P> = Array<u8, <P as SignatureParams>::HintSize>;
+pub type EncodedCTilde<P> = Array<u8, <P as ParameterSet>::Lambda>;
+pub type EncodedW1<P> = Array<u8, <P as SignatureParams>::W1Size>;
+pub type EncodedZ<P> = Array<u8, <P as SignatureParams>::ZSize>;
+pub type EncodedHintIndices<P> = Array<u8, <P as ParameterSet>::Omega>;
+pub type EncodedHintCuts<P> = Array<u8, <P as ParameterSet>::K>;
+pub type EncodedHint<P> = Array<u8, <P as SignatureParams>::HintSize>;
 
 /// A signature encoded as a byte array
 pub type EncodedSignature<P> = Array<u8, SignatureSize<P>>;

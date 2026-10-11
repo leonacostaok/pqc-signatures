@@ -12,42 +12,25 @@
  *   crossverify <vectors.json> <artifacts.json> <out.json>
  *   bench       <vectors.json> <reference.json> --out <f.jsonl> [--budget-ms N]
  *               [--params a,b] [--ops keygen,sign,verify] [--variants id,id]
+ *   stages      <vectors.json> <reference.json> --out <f.jsonl> [--budget-ms N] [--params a,b] [--stages x,y]
+ *   validate    <vectors.json> <suite.json> <out.jsonl>     (per-build partial, merged by 'merge-validate')
+ *   memory      <vectors.json> <reference.json> --out <f.jsonl> [--params a,b]
+ *   merge-validate <out.json> <partial.jsonl>...
  *   list        (prints the variant table)
  */
-#define _GNU_SOURCE
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdint.h>
+#include "pqc_common.h"
 #include <ctype.h>
 #include <time.h>
 #include <errno.h>
 #include <pthread.h>
 #include <sys/resource.h>
 #include <sys/time.h>
-
-#include <openssl/evp.h>
-#include <openssl/err.h>
-#include <openssl/core_names.h>
 #include <openssl/param_build.h>
-#include <openssl/opensslv.h>
 #include <openssl/crypto.h>
-
-#ifndef BUILD_LABEL
-#define BUILD_LABEL "default"
-#endif
-#ifndef DRIVER_CFLAGS
-#define DRIVER_CFLAGS ""
-#endif
-
-#define LIB_NAME "openssl"
-#define MAX_PARAMS 32
-#define MAX_SAMPLES 100000
-#define NTHREADS 4
 
 /* ------------------------------------------------------------------ utils */
 
-static void die(const char *fmt, ...)
+void die(const char *fmt, ...)
 {
     va_list ap;
     va_start(ap, fmt);
@@ -59,14 +42,14 @@ static void die(const char *fmt, ...)
     exit(1);
 }
 
-static uint64_t now_ns(void)
+uint64_t now_ns(void)
 {
     struct timespec ts;
     clock_gettime(CLOCK_MONOTONIC, &ts);
     return (uint64_t)ts.tv_sec * 1000000000ull + (uint64_t)ts.tv_nsec;
 }
 
-static uint64_t cpu_ns(void)
+uint64_t cpu_ns(void)
 {
     struct rusage ru;
     getrusage(RUSAGE_SELF, &ru);
@@ -74,7 +57,7 @@ static uint64_t cpu_ns(void)
         + ((uint64_t)ru.ru_utime.tv_usec + (uint64_t)ru.ru_stime.tv_usec) * 1000ull;
 }
 
-static char *read_file(const char *path, size_t *len)
+char *read_file(const char *path, size_t *len)
 {
     FILE *f = fopen(path, "rb");
     if (f == NULL)
@@ -100,7 +83,7 @@ static int hexval(int c)
     return -1;
 }
 
-static uint8_t *hex2bin(const char *hex, size_t *outlen)
+uint8_t *hex2bin(const char *hex, size_t *outlen)
 {
     size_t n = strlen(hex);
     if (n % 2)
@@ -116,7 +99,7 @@ static uint8_t *hex2bin(const char *hex, size_t *outlen)
     return out;
 }
 
-static char *bin2hex(const uint8_t *b, size_t n)
+char *bin2hex(const uint8_t *b, size_t n)
 {
     static const char d[] = "0123456789abcdef";
     char *s = malloc(2 * n + 1);
@@ -128,7 +111,7 @@ static char *bin2hex(const uint8_t *b, size_t n)
     return s;
 }
 
-static void sha256_hex(const uint8_t *data, size_t len, char out[65])
+void sha256_hex(const uint8_t *data, size_t len, char out[65])
 {
     uint8_t md[32];
     unsigned int mdlen = 32;
@@ -139,8 +122,32 @@ static void sha256_hex(const uint8_t *data, size_t len, char out[65])
     free(h);
 }
 
+void json_escape(FILE *f, const char *s)
+{
+    for (; *s; s++) {
+        if (*s == '"' || *s == '\\') fputc('\\', f);
+        fputc(*s, f);
+    }
+}
+
+int list_has(const char *list, const char *item)
+{
+    if (list == NULL)
+        return 1;
+    size_t il = strlen(item);
+    const char *p = list;
+    while (*p) {
+        const char *c = strchr(p, ',');
+        size_t l = c ? (size_t)(c - p) : strlen(p);
+        if (l == il && strncmp(p, item, il) == 0)
+            return 1;
+        if (!c) break;
+        p = c + 1;
+    }
+    return 0;
+}
+
 /* ------------------------------------------------------------ mini JSON */
-/* Enough for the flat, well-formed files of this project. */
 
 static const char *skip_ws(const char *p, const char *end)
 {
@@ -149,8 +156,7 @@ static const char *skip_ws(const char *p, const char *end)
     return p;
 }
 
-/* find the value of "key" inside [s,end); returns pointer at value start or NULL */
-static const char *json_find(const char *s, const char *end, const char *key)
+const char *json_find(const char *s, const char *end, const char *key)
 {
     size_t kl = strlen(key);
     const char *p = s;
@@ -168,7 +174,7 @@ static const char *json_find(const char *s, const char *end, const char *key)
     return NULL;
 }
 
-static char *json_get_string(const char *s, const char *end, const char *key)
+char *json_get_string(const char *s, const char *end, const char *key)
 {
     const char *v = json_find(s, end, key);
     if (v == NULL || *v != '"')
@@ -183,8 +189,19 @@ static char *json_get_string(const char *s, const char *end, const char *key)
     return out;
 }
 
-/* given p at '{' or '[', return pointer just past the matching close */
-static const char *json_match_close(const char *p, const char *end)
+int json_get_bool(const char *s, const char *end, const char *key, int dflt)
+{
+    const char *v = json_find(s, end, key);
+    if (v == NULL)
+        return dflt;
+    if (strncmp(v, "true", 4) == 0)
+        return 1;
+    if (strncmp(v, "false", 5) == 0)
+        return 0;
+    return dflt;
+}
+
+const char *json_match_close(const char *p, const char *end)
 {
     int depth = 0, instr = 0;
     for (; p < end; p++) {
@@ -205,22 +222,26 @@ static const char *json_match_close(const char *p, const char *end)
     return NULL;
 }
 
-/* iterate objects in the array that starts at arr ('['); *it = NULL to start */
-static int json_next_object(const char *arr, const char *end, const char **it,
-                            const char **ostart, const char **oend)
+int json_iter_init(json_iter_t *it, const char *arr, const char *end)
 {
-    const char *p = (*it == NULL) ? arr + 1 : *it;
-    const char *aend = json_match_close(arr, end);
-    if (aend == NULL)
+    if (arr == NULL || *arr != '[')
         return 0;
-    while (p < aend) {
+    it->aend = json_match_close(arr, end);
+    it->p = arr + 1;
+    return it->aend != NULL;
+}
+
+int json_iter_next(json_iter_t *it, const char **ostart, const char **oend)
+{
+    const char *p = it->p;
+    while (p < it->aend) {
         if (*p == '{') {
-            const char *e = json_match_close(p, aend);
+            const char *e = json_match_close(p, it->aend);
             if (e == NULL)
                 return 0;
             *ostart = p;
             *oend = e;
-            *it = e;
+            it->p = e;
             return 1;
         }
         p++;
@@ -230,28 +251,7 @@ static int json_next_object(const char *arr, const char *end, const char **it,
 
 /* ------------------------------------------------------------- vectors */
 
-typedef struct {
-    char *name;      /* "ML-DSA-44" */
-    int is_mldsa;
-    uint8_t *seed;
-    size_t seed_len;
-    /* reference digests (may be NULL if no reference file) */
-    char *ref_pk, *ref_sk, *ref_sig;
-    /* material computed by the baseline path (filled by prepare_param) */
-    EVP_PKEY *key;   /* key pair generated from the seed */
-    EVP_PKEY *pub;   /* public-only key imported from pk bytes */
-    uint8_t *pk, *sk, *sig;
-    size_t pk_len, sk_len, sig_len;
-} param_t;
-
-typedef struct {
-    uint8_t *msg;
-    size_t msg_len;
-    param_t params[MAX_PARAMS];
-    int nparams;
-} vectors_t;
-
-static void load_vectors(vectors_t *V, const char *path)
+void load_vectors(vectors_t *V, const char *path)
 {
     size_t n;
     char *buf = read_file(path, &n);
@@ -261,12 +261,12 @@ static void load_vectors(vectors_t *V, const char *path)
         die("vectors: no message_hex");
     V->msg = hex2bin(mh, &V->msg_len);
     free(mh);
-    const char *arr = json_find(buf, end, "params");
-    if (arr == NULL || *arr != '[')
+    json_iter_t it;
+    if (!json_iter_init(&it, json_find(buf, end, "params"), end))
         die("vectors: no params array");
-    const char *it = NULL, *os, *oe;
+    const char *os, *oe;
     V->nparams = 0;
-    while (json_next_object(arr, end, &it, &os, &oe)) {
+    while (json_iter_next(&it, &os, &oe)) {
         char *name = json_get_string(os, oe, "name");
         char *fam = json_get_string(os, oe, "family");
         char *seed = json_get_string(os, oe, "seed_hex");
@@ -280,6 +280,8 @@ static void load_vectors(vectors_t *V, const char *path)
             p->name = name;
             p->is_mldsa = strcmp(fam, "ml-dsa") == 0;
             p->seed = hex2bin(seed, &p->seed_len);
+            p->msg = V->msg;
+            p->msg_len = V->msg_len;
         } else {
             free(name); /* Falcon etc: unsupported by OpenSSL, skipped */
         }
@@ -289,7 +291,7 @@ static void load_vectors(vectors_t *V, const char *path)
     free(buf);
 }
 
-static void load_reference(vectors_t *V, const char *path)
+void load_reference(vectors_t *V, const char *path)
 {
     size_t n;
     char *buf = read_file(path, &n);
@@ -309,10 +311,18 @@ static void load_reference(vectors_t *V, const char *path)
     free(buf);
 }
 
+param_t *find_param(vectors_t *V, const char *name)
+{
+    for (int i = 0; i < V->nparams; i++)
+        if (strcmp(V->params[i].name, name) == 0)
+            return &V->params[i];
+    return NULL;
+}
+
 /* ------------------------------------------------------- crypto helpers */
 
-static EVP_PKEY *keygen_from_seed(OSSL_LIB_CTX *libctx, const char *propq,
-                                  const char *alg, const uint8_t *seed, size_t seed_len)
+EVP_PKEY *keygen_from_seed(OSSL_LIB_CTX *libctx, const char *propq,
+                           const char *alg, const uint8_t *seed, size_t seed_len)
 {
     EVP_PKEY *pkey = NULL;
     EVP_PKEY_CTX *ctx = EVP_PKEY_CTX_new_from_name(libctx, alg, propq);
@@ -326,79 +336,107 @@ static EVP_PKEY *keygen_from_seed(OSSL_LIB_CTX *libctx, const char *propq,
         || EVP_PKEY_CTX_set_params(ctx, params) <= 0
         || EVP_PKEY_keygen(ctx, &pkey) <= 0) {
         EVP_PKEY_CTX_free(ctx);
+        ERR_clear_error();
         return NULL;
     }
     EVP_PKEY_CTX_free(ctx);
     return pkey;
 }
 
-static int get_octets(EVP_PKEY *key, const char *name, uint8_t *out, size_t cap, size_t *len)
+int get_octets(EVP_PKEY *key, const char *name, uint8_t *out, size_t cap, size_t *len)
 {
     return EVP_PKEY_get_octet_string_param(key, name, out, cap, len) == 1;
 }
 
-static EVP_PKEY *pubkey_from_bytes(const char *alg, const uint8_t *pk, size_t pk_len)
+static EVP_PKEY *key_from_bytes(const char *alg, const char *pname, int selection,
+                                const uint8_t *b, size_t len)
 {
     EVP_PKEY *pkey = NULL;
     EVP_PKEY_CTX *ctx = EVP_PKEY_CTX_new_from_name(NULL, alg, NULL);
     OSSL_PARAM params[2];
-    params[0] = OSSL_PARAM_construct_octet_string(OSSL_PKEY_PARAM_PUB_KEY, (void *)pk, pk_len);
+    params[0] = OSSL_PARAM_construct_octet_string(pname, (void *)b, len);
     params[1] = OSSL_PARAM_construct_end();
     if (ctx == NULL
         || EVP_PKEY_fromdata_init(ctx) <= 0
-        || EVP_PKEY_fromdata(ctx, &pkey, EVP_PKEY_PUBLIC_KEY, params) <= 0) {
+        || EVP_PKEY_fromdata(ctx, &pkey, selection, params) <= 0) {
         EVP_PKEY_CTX_free(ctx);
+        ERR_clear_error();
         return NULL;
     }
     EVP_PKEY_CTX_free(ctx);
     return pkey;
 }
 
-static const OSSL_PARAM *det_params(void)
+EVP_PKEY *pubkey_from_bytes(const char *alg, const uint8_t *pk, size_t pk_len)
 {
-    static OSSL_PARAM p[2];
-    static int det = 1;
-    p[0] = OSSL_PARAM_construct_int(OSSL_SIGNATURE_PARAM_DETERMINISTIC, &det);
-    p[1] = OSSL_PARAM_construct_end();
-    return p;
+    return key_from_bytes(alg, OSSL_PKEY_PARAM_PUB_KEY, EVP_PKEY_PUBLIC_KEY, pk, pk_len);
+}
+
+EVP_PKEY *privkey_from_bytes(const char *alg, const uint8_t *sk, size_t sk_len)
+{
+    return key_from_bytes(alg, OSSL_PKEY_PARAM_PRIV_KEY, EVP_PKEY_KEYPAIR, sk, sk_len);
+}
+
+/* deterministic=1 for signing, mu=1 for the external-mu verify path; the
+ * context-string param is only added when the context is non-empty so the
+ * reference benchmark path stays identical to plain documented usage. */
+int build_sig_params(OSSL_PARAM out[4], const param_t *p, int deterministic, int mu)
+{
+    static int one = 1;
+    int n = 0;
+    if (deterministic)
+        out[n++] = OSSL_PARAM_construct_int(OSSL_SIGNATURE_PARAM_DETERMINISTIC, &one);
+    if (mu)
+        out[n++] = OSSL_PARAM_construct_int(OSSL_SIGNATURE_PARAM_MU, &one);
+    if (p->ctx_len > 0)
+        out[n++] = OSSL_PARAM_construct_octet_string(OSSL_SIGNATURE_PARAM_CONTEXT_STRING,
+                                                     (void *)p->ctx, p->ctx_len);
+    out[n] = OSSL_PARAM_construct_end();
+    return n;
 }
 
 /* baseline sign: fresh ctx, implicit fetch, size query, one-shot sign */
-static int sign_baseline(EVP_PKEY *key, const uint8_t *msg, size_t msg_len,
-                         uint8_t *sig, size_t *sig_len, size_t cap)
+int sign_baseline(EVP_PKEY *key, const param_t *p, uint8_t *sig, size_t *sig_len, size_t cap)
 {
+    OSSL_PARAM sp[4];
     EVP_PKEY_CTX *ctx = EVP_PKEY_CTX_new_from_pkey(NULL, key, NULL);
     size_t need = 0;
+    build_sig_params(sp, p, 1, 0);
     int ok = ctx != NULL
-        && EVP_PKEY_sign_message_init(ctx, NULL, det_params()) > 0
-        && EVP_PKEY_sign(ctx, NULL, &need, msg, msg_len) > 0
+        && EVP_PKEY_sign_message_init(ctx, NULL, sp) > 0
+        && EVP_PKEY_sign(ctx, NULL, &need, p->msg, p->msg_len) > 0
         && need <= cap
-        && (*sig_len = cap, EVP_PKEY_sign(ctx, sig, sig_len, msg, msg_len) > 0);
+        && (*sig_len = cap, EVP_PKEY_sign(ctx, sig, sig_len, p->msg, p->msg_len) > 0);
     EVP_PKEY_CTX_free(ctx);
+    if (!ok)
+        ERR_clear_error();
     return ok;
 }
 
-/* baseline verify: fresh ctx, implicit fetch, one-shot verify. 1 = valid, 0 = invalid, -1 = error */
-static int verify_baseline(EVP_PKEY *pub, const uint8_t *msg, size_t msg_len,
-                           const uint8_t *sig, size_t sig_len)
+/* baseline verify: fresh ctx, implicit fetch, one-shot verify. 1 = valid, 0 = invalid/error */
+int verify_baseline(EVP_PKEY *pub, const param_t *p, const uint8_t *sig, size_t sig_len)
 {
+    OSSL_PARAM sp[4];
     EVP_PKEY_CTX *ctx = EVP_PKEY_CTX_new_from_pkey(NULL, pub, NULL);
-    int r = -1;
-    if (ctx != NULL && EVP_PKEY_verify_message_init(ctx, NULL, NULL) > 0) {
-        r = EVP_PKEY_verify(ctx, sig, sig_len, msg, msg_len);
-        if (r != 1) {
-            r = 0;
-            ERR_clear_error();
-        }
+    int r = 0;
+    build_sig_params(sp, p, 0, 0);
+    if (ctx != NULL && EVP_PKEY_verify_message_init(ctx, NULL, p->ctx_len ? sp : NULL) > 0)
+        r = EVP_PKEY_verify(ctx, sig, sig_len, p->msg, p->msg_len);
+    if (r != 1) {
+        r = 0;
+        ERR_clear_error();
     }
     EVP_PKEY_CTX_free(ctx);
     return r;
 }
 
 /* Generate pk/sk/sig for a param with the baseline path and check the reference */
-static int prepare_param(vectors_t *V, param_t *p, int verbose)
+int prepare_param(vectors_t *V, param_t *p, int verbose)
 {
     uint8_t buf[8192];
+    if (p->key != NULL)
+        return 1; /* already prepared */
+    (void)V;
     p->key = keygen_from_seed(NULL, NULL, p->name, p->seed, p->seed_len);
     if (p->key == NULL)
         die("keygen failed for %s", p->name);
@@ -414,7 +452,7 @@ static int prepare_param(vectors_t *V, param_t *p, int verbose)
     if (p->pub == NULL)
         die("pub import failed for %s", p->name);
     uint8_t *sig = malloc(65536);
-    if (!sign_baseline(p->key, V->msg, V->msg_len, sig, &p->sig_len, 65536))
+    if (!sign_baseline(p->key, p, sig, &p->sig_len, 65536))
         die("sign failed for %s", p->name);
     p->sig = sig;
     int ok = 1;
@@ -432,16 +470,9 @@ static int prepare_param(vectors_t *V, param_t *p, int verbose)
 
 /* ------------------------------------------------------------ variants */
 
-enum { OP_KEYGEN, OP_SIGN, OP_VERIFY };
-enum { IMPL_BASE, IMPL_REUSE, IMPL_FROMDATA, IMPL_DUP, IMPL_MU, IMPL_THREADS };
-static const char *op_names[] = { "keygen", "sign", "verify" };
+const char *op_names[] = { "keygen", "sign", "verify" };
 
-typedef struct {
-    const char *id, *name, *desc, *build;
-    int op, impl, threads, mldsa_only;
-} variant_t;
-
-static const variant_t VARIANTS[] = {
+const variant_t VARIANTS[] = {
     { "keygen.v0", "evp-baseline",
       "Default build; per call: EVP_PKEY_CTX_new_from_name (implicit keymgmt fetch), keygen_init, set 'seed' param, EVP_PKEY_keygen, EVP_PKEY_CTX_free.",
       "default", OP_KEYGEN, IMPL_BASE, 1, 0 },
@@ -487,7 +518,7 @@ static const variant_t VARIANTS[] = {
       "Default build; EVP_SIGNATURE fetched once, verify ctx initialised once and reused: only EVP_PKEY_verify per call.",
       "default", OP_VERIFY, IMPL_REUSE, 1, 0 },
     { "verify.v2", "external-mu",
-      "Default build; mu = SHAKE256(tr || 0x00 || 0x00 || msg) computed by the caller with a cached tr = SHAKE256(pk), then EVP_PKEY_verify with the 'mu'=1 signature param (ML-DSA only).",
+      "Default build; mu = SHAKE256(tr || 0x00 || |ctx| || ctx || msg) computed by the caller with a cached tr = SHAKE256(pk), then EVP_PKEY_verify with the 'mu'=1 signature param (ML-DSA only).",
       "default", OP_VERIFY, IMPL_MU, 1, 1 },
     { "verify.v3", "no-asm-build",
       "libcrypto configured with no-asm (pure C Keccak/SHA-2); baseline API path.",
@@ -499,37 +530,20 @@ static const variant_t VARIANTS[] = {
       "Default build; 4 worker threads, each with its own prefetched/reused verify ctx on the same public key, throughput over a batch.",
       "default", OP_VERIFY, IMPL_THREADS, NTHREADS, 0 },
 };
-#define NVARIANTS (sizeof(VARIANTS) / sizeof(VARIANTS[0]))
+const size_t NVARIANTS = sizeof(VARIANTS) / sizeof(VARIANTS[0]);
 
 /* --------------------------------------------------------------- worker */
 
-typedef struct {
-    const variant_t *v;
-    param_t *p;
-    const vectors_t *V;
-    int impl;                 /* effective implementation for this worker */
-    EVP_KEYMGMT *km;
-    EVP_SIGNATURE *sigalg;
-    EVP_PKEY_CTX *ctx;        /* reused ctx (REUSE / FROMDATA / MU) or template (DUP) */
-    EVP_MD *shake;
-    EVP_MD_CTX *mdctx;
-    uint8_t tr[64];
-    uint8_t *out;             /* keygen: pk||sk ; sign: sig ; verify: 1 byte */
-    size_t out_len, out_cap;
-    int ok;                   /* 0 after any failure */
-} worker_t;
-
-static int worker_init(worker_t *w, const variant_t *v, param_t *p, const vectors_t *V, int impl)
+int worker_init(worker_t *w, const variant_t *v, param_t *p, int impl)
 {
     memset(w, 0, sizeof(*w));
     w->v = v;
     w->p = p;
-    w->V = V;
     w->impl = impl;
     w->ok = 1;
     w->out_cap = 65536 + 8192;
     w->out = malloc(w->out_cap);
-    OSSL_PARAM seedp[2];
+    OSSL_PARAM seedp[2], sp[4];
     seedp[0] = OSSL_PARAM_construct_octet_string(OSSL_PKEY_PARAM_ML_DSA_SEED, p->seed, p->seed_len);
     seedp[1] = OSSL_PARAM_construct_end();
 
@@ -551,32 +565,35 @@ static int worker_init(worker_t *w, const variant_t *v, param_t *p, const vector
         }
         break;
     case OP_SIGN:
+        if (p->key == NULL)
+            return 0;
         if (impl == IMPL_REUSE || impl == IMPL_DUP) {
+            build_sig_params(sp, p, 1, 0);
             w->sigalg = EVP_SIGNATURE_fetch(NULL, p->name, NULL);
             w->ctx = EVP_PKEY_CTX_new_from_pkey(NULL, p->key, NULL);
             if (w->sigalg == NULL || w->ctx == NULL
-                || EVP_PKEY_sign_message_init(w->ctx, w->sigalg, det_params()) <= 0)
+                || EVP_PKEY_sign_message_init(w->ctx, w->sigalg, sp) <= 0)
                 return 0;
         }
         break;
     case OP_VERIFY:
+        if (p->pub == NULL)
+            return 0;
         if (impl == IMPL_REUSE) {
+            build_sig_params(sp, p, 0, 0);
             w->sigalg = EVP_SIGNATURE_fetch(NULL, p->name, NULL);
             w->ctx = EVP_PKEY_CTX_new_from_pkey(NULL, p->pub, NULL);
             if (w->sigalg == NULL || w->ctx == NULL
-                || EVP_PKEY_verify_message_init(w->ctx, w->sigalg, NULL) <= 0)
+                || EVP_PKEY_verify_message_init(w->ctx, w->sigalg, p->ctx_len ? sp : NULL) <= 0)
                 return 0;
         } else if (impl == IMPL_MU) {
-            int mu = 1;
-            OSSL_PARAM mup[2];
-            mup[0] = OSSL_PARAM_construct_int(OSSL_SIGNATURE_PARAM_MU, &mu);
-            mup[1] = OSSL_PARAM_construct_end();
+            build_sig_params(sp, p, 0, 1);
             w->sigalg = EVP_SIGNATURE_fetch(NULL, p->name, NULL);
             w->ctx = EVP_PKEY_CTX_new_from_pkey(NULL, p->pub, NULL);
             w->shake = EVP_MD_fetch(NULL, "SHAKE256", NULL);
             w->mdctx = EVP_MD_CTX_new();
             if (w->sigalg == NULL || w->ctx == NULL || w->shake == NULL || w->mdctx == NULL
-                || EVP_PKEY_verify_message_init(w->ctx, w->sigalg, mup) <= 0)
+                || EVP_PKEY_verify_message_init(w->ctx, w->sigalg, sp) <= 0)
                 return 0;
             /* tr = SHAKE256(pk, 64), FIPS 204 Alg 6 line 9 / Alg 8 line 4 */
             if (!EVP_DigestInit_ex(w->mdctx, w->shake, NULL)
@@ -589,7 +606,7 @@ static int worker_init(worker_t *w, const variant_t *v, param_t *p, const vector
     return 1;
 }
 
-static void worker_free(worker_t *w)
+void worker_free(worker_t *w)
 {
     EVP_PKEY_CTX_free(w->ctx);
     EVP_KEYMGMT_free(w->km);
@@ -597,6 +614,7 @@ static void worker_free(worker_t *w)
     EVP_MD_free(w->shake);
     EVP_MD_CTX_free(w->mdctx);
     free(w->out);
+    ERR_clear_error();
 }
 
 /* one keygen op: writes pk||sk into w->out */
@@ -622,6 +640,8 @@ static int op_keygen(worker_t *w)
         && get_octets(key, OSSL_PKEY_PARAM_PUB_KEY, w->out, w->out_cap, &pkl)
         && get_octets(key, OSSL_PKEY_PARAM_PRIV_KEY, w->out + pkl, w->out_cap - pkl, &skl);
     EVP_PKEY_free(key);
+    if (!ok)
+        ERR_clear_error();
     w->out_len = pkl + skl;
     return ok;
 }
@@ -629,41 +649,43 @@ static int op_keygen(worker_t *w)
 static int op_sign(worker_t *w)
 {
     param_t *p = w->p;
-    const vectors_t *V = w->V;
     int ok;
     w->out_len = w->out_cap;
     if (w->impl == IMPL_BASE) {
-        ok = sign_baseline(p->key, V->msg, V->msg_len, w->out, &w->out_len, w->out_cap);
+        ok = sign_baseline(p->key, p, w->out, &w->out_len, w->out_cap);
     } else if (w->impl == IMPL_REUSE) {
-        ok = EVP_PKEY_sign(w->ctx, w->out, &w->out_len, V->msg, V->msg_len) > 0;
+        ok = EVP_PKEY_sign(w->ctx, w->out, &w->out_len, p->msg, p->msg_len) > 0;
     } else { /* IMPL_DUP */
         EVP_PKEY_CTX *c = EVP_PKEY_CTX_dup(w->ctx);
-        ok = c != NULL && EVP_PKEY_sign(c, w->out, &w->out_len, V->msg, V->msg_len) > 0;
+        ok = c != NULL && EVP_PKEY_sign(c, w->out, &w->out_len, p->msg, p->msg_len) > 0;
         EVP_PKEY_CTX_free(c);
     }
+    if (!ok)
+        ERR_clear_error();
     return ok;
 }
 
-/* returns 1 (valid), 0 (invalid) or -1 (error); sig/len allow the tamper check */
-static int op_verify_sig(worker_t *w, const uint8_t *sig, size_t sig_len)
+/* returns 1 (valid) or 0 (invalid / error); sig/len allow the tamper check */
+int op_verify_sig(worker_t *w, const uint8_t *sig, size_t sig_len)
 {
     param_t *p = w->p;
-    const vectors_t *V = w->V;
     int r;
     if (w->impl == IMPL_BASE) {
-        r = verify_baseline(p->pub, V->msg, V->msg_len, sig, sig_len);
+        r = verify_baseline(p->pub, p, sig, sig_len);
     } else if (w->impl == IMPL_REUSE) {
-        r = EVP_PKEY_verify(w->ctx, sig, sig_len, V->msg, V->msg_len);
+        r = EVP_PKEY_verify(w->ctx, sig, sig_len, p->msg, p->msg_len);
     } else { /* IMPL_MU */
         uint8_t mu[64];
-        static const uint8_t pre[2] = { 0x00, 0x00 }; /* domain sep 0, ctx len 0 */
+        uint8_t pre[2] = { 0x00, (uint8_t)p->ctx_len }; /* domain sep 0, ctx len */
         if (!EVP_DigestInit_ex(w->mdctx, w->shake, NULL)
             || !EVP_DigestUpdate(w->mdctx, w->tr, 64)
             || !EVP_DigestUpdate(w->mdctx, pre, 2)
-            || !EVP_DigestUpdate(w->mdctx, V->msg, V->msg_len)
+            || !EVP_DigestUpdate(w->mdctx, p->ctx, p->ctx_len)
+            || !EVP_DigestUpdate(w->mdctx, p->msg, p->msg_len)
             || !EVP_DigestFinalXOF(w->mdctx, mu, 64))
-            return -1;
-        r = EVP_PKEY_verify(w->ctx, sig, sig_len, mu, 64);
+            r = 0;
+        else
+            r = EVP_PKEY_verify(w->ctx, sig, sig_len, mu, 64);
     }
     if (r != 1) {
         ERR_clear_error();
@@ -680,7 +702,7 @@ static int op_verify(worker_t *w)
     return r == 1;
 }
 
-static int worker_op(worker_t *w)
+int worker_op(worker_t *w)
 {
     int ok;
     switch (w->v->op) {
@@ -694,10 +716,9 @@ static int worker_op(worker_t *w)
 }
 
 /* check worker output against the reference digests; fills out_sha/sk_sha */
-static int worker_check_reference(worker_t *w, char out_sha[65], char sk_sha[65])
+int worker_check_reference(worker_t *w, char out_sha[65], char sk_sha[65])
 {
     param_t *p = w->p;
-    char h[65];
     sk_sha[0] = 0;
     if (!w->ok)
         return 0;
@@ -722,7 +743,6 @@ static int worker_check_reference(worker_t *w, char out_sha[65], char sk_sha[65]
         /* the ctx may be reused afterwards; make sure a good verify still passes */
         int again = op_verify_sig(w, p->sig, p->sig_len) == 1;
         strcpy(out_sha, (good && rej && again) ? "true" : "false");
-        (void)h;
         return good && rej && again;
     }
     }
@@ -760,43 +780,38 @@ static int cmp_u64(const void *a, const void *b)
     return x < y ? -1 : x > y;
 }
 
-static void json_escape(FILE *f, const char *s)
+void bench_loop(bench_stats_t *st, int budget_ms, int (*op)(void *), void *arg, int *ok)
 {
-    for (; *s; s++) {
-        if (*s == '"' || *s == '\\') fputc('\\', f);
-        fputc(*s, f);
+    uint64_t budget = (uint64_t)budget_ms * 1000000ull;
+    st->samples = malloc(MAX_SAMPLES * sizeof(uint64_t));
+    st->n = 0;
+    st->batch = 1;
+    /* warm-up, not recorded */
+    uint64_t t0 = now_ns();
+    if (!op(arg))
+        *ok = 0;
+    uint64_t first = now_ns() - t0;
+    size_t min_iters = first > 5000000000ull ? 2 : 3;
+    uint64_t cpu0 = cpu_ns(), wall0 = now_ns();
+    st->wall_total = 0;
+    while (st->n < MAX_SAMPLES) {
+        uint64_t a = now_ns();
+        if (!op(arg))
+            *ok = 0;
+        uint64_t b = now_ns();
+        st->samples[st->n++] = b - a;
+        st->wall_total = b - wall0;
+        if (st->wall_total >= budget && st->n >= min_iters)
+            break;
     }
+    st->cpu_total = cpu_ns() - cpu0;
 }
 
-typedef struct {
-    const char *out_path;
-    int budget_ms;
-    const char *params, *ops, *variants;
-} bench_opts_t;
-
-static int list_has(const char *list, const char *item)
+void emit_line(FILE *out, const line_meta_t *m, const bench_stats_t *st)
 {
-    if (list == NULL)
-        return 1;
-    size_t il = strlen(item);
-    const char *p = list;
-    while (*p) {
-        const char *c = strchr(p, ',');
-        size_t l = c ? (size_t)(c - p) : strlen(p);
-        if (l == il && strncmp(p, item, il) == 0)
-            return 1;
-        if (!c) break;
-        p = c + 1;
-    }
-    return 0;
-}
-
-static void emit_line(FILE *out, const variant_t *v, param_t *p, int threads, int batch,
-                      uint64_t *samples, size_t n, uint64_t wall_total, uint64_t cpu_total,
-                      const char *out_sha, const char *sk_sha, int match, const char *error)
-{
-    uint64_t *s = malloc(n * sizeof(*s));
-    memcpy(s, samples, n * sizeof(*s));
+    size_t n = st->n;
+    uint64_t *s = malloc((n ? n : 1) * sizeof(*s));
+    memcpy(s, st->samples, n * sizeof(*s));
     qsort(s, n, sizeof(*s), cmp_u64);
     double mean = 0;
     for (size_t i = 0; i < n; i++) mean += (double)s[i];
@@ -804,81 +819,82 @@ static void emit_line(FILE *out, const variant_t *v, param_t *p, int threads, in
     uint64_t med = n ? ((n & 1) ? s[n / 2] : (s[n / 2 - 1] + s[n / 2]) / 2) : 0;
     size_t i95 = n ? (size_t)((0.95 * (double)n) + 0.999999) - 1 : 0;
     if (i95 >= n) i95 = n ? n - 1 : 0;
-    size_t ops = n * (size_t)batch;
+    size_t ops = n * (size_t)st->batch;
     fprintf(out, "{\"lib\":\"%s\",\"lib_version\":\"%s\",\"lang\":\"c\",\"runtime\":\"",
             LIB_NAME, OPENSSL_VERSION_STR);
     json_escape(out, "OpenSSL " OPENSSL_VERSION_STR " static libcrypto, build=" BUILD_LABEL
                      ", gcc " __VERSION__ " " DRIVER_CFLAGS);
-    fprintf(out, "\",\"build\":\"%s\",\"variant\":\"%s\",\"variant_name\":\"%s\",\"variant_desc\":\"",
-            BUILD_LABEL, v->id, v->name);
-    json_escape(out, v->desc);
-    fprintf(out, "\",\"op\":\"%s\",\"param\":\"%s\",\"iterations\":%zu,\"batch_size\":%d,\"threads\":%d,",
-            op_names[v->op], p->name, ops, batch, threads);
+    fprintf(out, "\",\"build\":\"%s\",", BUILD_LABEL);
+    if (m->family)
+        fprintf(out, "\"family\":\"%s\",", m->family);
+    if (m->stage)
+        fprintf(out, "\"stage\":\"%s\",", m->stage);
+    fprintf(out, "\"variant\":\"%s\",\"variant_name\":\"%s\",\"variant_desc\":\"", m->variant, m->variant_name);
+    json_escape(out, m->variant_desc);
+    fprintf(out, "\",");
+    if (m->op)
+        fprintf(out, "\"op\":\"%s\",", m->op);
+    fprintf(out, "\"param\":\"%s\",\"iterations\":%zu,\"batch_size\":%d,\"threads\":%d,",
+            m->param, ops, st->batch, m->threads);
     fprintf(out, "\"wall_ns_median\":%llu,\"wall_ns_mean\":%.0f,\"wall_ns_p95\":%llu,\"wall_ns_min\":%llu,",
             (unsigned long long)med, mean, (unsigned long long)(n ? s[i95] : 0),
             (unsigned long long)(n ? s[0] : 0));
-    double cpu_per_op = ops ? (double)cpu_total / (double)ops : 0;
-    double cpu_util = wall_total ? (double)cpu_total / (double)wall_total : 0;
-    double ops_per_sec = wall_total ? (double)ops / ((double)wall_total / 1e9) : 0;
+    double cpu_per_op = ops ? (double)st->cpu_total / (double)ops : 0;
+    double cpu_util = st->wall_total ? (double)st->cpu_total / (double)st->wall_total : 0;
+    double ops_per_sec = st->wall_total ? (double)ops / ((double)st->wall_total / 1e9) : 0;
     fprintf(out, "\"cpu_ns_per_op\":%.0f,\"cpu_util\":%.4f,\"ops_per_sec\":%.3f,",
             cpu_per_op, cpu_util, ops_per_sec);
-    fprintf(out, "\"output_sha256\":\"%s\",", out_sha);
-    if (sk_sha && sk_sha[0])
-        fprintf(out, "\"sk_sha256\":\"%s\",", sk_sha);
-    if (error)
-        fprintf(out, "\"error\":\"%s\",", error);
-    fprintf(out, "\"match\":%s}\n", match ? "true" : "false");
+    fprintf(out, "\"output_sha256\":\"%s\",", m->output_sha256 ? m->output_sha256 : "");
+    if (m->sk_sha256 && m->sk_sha256[0])
+        fprintf(out, "\"sk_sha256\":\"%s\",", m->sk_sha256);
+    if (m->error)
+        fprintf(out, "\"error\":\"%s\",", m->error);
+    fprintf(out, "\"match\":%s}\n", m->match ? "true" : "false");
     fflush(out);
     free(s);
 }
 
-static void bench_one(FILE *out, const vectors_t *V, param_t *p, const variant_t *v, int budget_ms)
+static int worker_op_cb(void *arg) { return worker_op((worker_t *)arg); }
+
+static void bench_one(FILE *out, param_t *p, const variant_t *v, int budget_ms)
 {
-    uint64_t *samples = malloc(MAX_SAMPLES * sizeof(uint64_t));
-    size_t n = 0;
     char out_sha[65] = "", sk_sha[65] = "";
     int match = 0;
     const char *error = NULL;
-    uint64_t budget = (uint64_t)budget_ms * 1000000ull;
+    bench_stats_t st = { 0 };
+    line_meta_t m = { "op", v->id, v->name, v->desc, op_names[v->op], NULL, NULL, p->name,
+                      v->threads, out_sha, sk_sha, NULL, 0 };
 
     if (v->impl != IMPL_THREADS) {
         worker_t w;
-        if (!worker_init(&w, v, p, (vectors_t *)V, v->impl)) {
+        if (!worker_init(&w, v, p, v->impl)) {
             error = "worker init failed";
             ERR_print_errors_fp(stderr);
+            st.samples = malloc(sizeof(uint64_t));
+            m.error = error;
+            emit_line(out, &m, &st);
         } else {
-            /* warm-up (not recorded) + first reference check */
-            uint64_t t0 = now_ns();
+            /* first op: reference check, then every op is byte-compared with it */
             worker_op(&w);
-            uint64_t first_op = now_ns() - t0;
             match = worker_check_reference(&w, out_sha, sk_sha);
             if (!match)
                 error = w.ok ? "output does not match reference" : "operation failed";
             uint8_t *expect = malloc(w.out_len);
             size_t expect_len = w.out_len;
             memcpy(expect, w.out, expect_len);
-            size_t min_iters = first_op > 5000000000ull ? 2 : 3;
-            uint64_t wall_total = 0, cpu0 = cpu_ns(), wall0 = now_ns();
-            while (n < MAX_SAMPLES) {
-                uint64_t a = now_ns();
-                worker_op(&w);
-                uint64_t b = now_ns();
-                samples[n++] = b - a;
-                if (w.out_len != expect_len || memcmp(w.out, expect, expect_len) != 0)
-                    match = 0;
-                wall_total = b - wall0;
-                if (wall_total >= budget && n >= min_iters)
-                    break;
-            }
-            uint64_t cpu_total = cpu_ns() - cpu0;
-            if (!w.ok) { match = 0; if (!error) error = "operation failed during loop"; }
-            /* re-check the last output against the reference (never hardcoded) */
+            int ok = 1;
+            bench_loop(&st, budget_ms, worker_op_cb, &w, &ok);
+            if (!ok || !w.ok) { match = 0; if (!error) error = "operation failed during loop"; }
+            if (w.out_len != expect_len || memcmp(w.out, expect, expect_len) != 0)
+                match = 0;
             if (match) {
                 char o2[65], s2[65];
                 if (!worker_check_reference(&w, o2, s2))
                     match = 0;
             }
-            emit_line(out, v, p, 1, 1, samples, n, wall_total, cpu_total, out_sha, sk_sha, match, error);
+            m.match = match;
+            m.error = error;
+            emit_line(out, &m, &st);
             free(expect);
         }
         worker_free(&w);
@@ -889,14 +905,14 @@ static void bench_one(FILE *out, const vectors_t *V, param_t *p, const variant_t
         pthread_barrier_t start, end;
         volatile int stop = 0;
         int ok = 1;
-        /* worker threads use the prefetch/reuse path */
         for (int i = 0; i < T; i++)
-            if (!worker_init(&ws[i], v, p, (vectors_t *)V, IMPL_REUSE)) ok = 0;
+            if (!worker_init(&ws[i], v, p, IMPL_REUSE)) ok = 0;
         if (!ok) {
-            error = "worker init failed";
-            emit_line(out, v, p, T, 1, samples, 0, 0, 0, "", "", 0, error);
+            st.samples = malloc(sizeof(uint64_t));
+            m.error = "worker init failed";
+            emit_line(out, &m, &st);
         } else {
-            /* estimate single-op time to size the batch (~2 ms per thread) */
+            uint64_t budget = (uint64_t)budget_ms * 1000000ull;
             uint64_t t0 = now_ns();
             worker_op(&ws[0]);
             uint64_t est = now_ns() - t0;
@@ -910,31 +926,32 @@ static void bench_one(FILE *out, const vectors_t *V, param_t *p, const variant_t
             if (per < 1) per = 1;
             if (per > 32) per = 32;
             int batch = per * T;
+            st.samples = malloc(MAX_SAMPLES * sizeof(uint64_t));
+            st.batch = batch;
             pthread_barrier_init(&start, NULL, (unsigned)T + 1);
             pthread_barrier_init(&end, NULL, (unsigned)T + 1);
             for (int i = 0; i < T; i++) {
                 ta[i].w = &ws[i]; ta[i].per_thread = per; ta[i].start = &start; ta[i].end = &end; ta[i].stop = &stop;
                 pthread_create(&ta[i].tid, NULL, thread_main, &ta[i]);
             }
-            /* warm-up batch */
-            pthread_barrier_wait(&start);
+            pthread_barrier_wait(&start);  /* warm-up batch */
             pthread_barrier_wait(&end);
             size_t min_iters = est > 5000000000ull ? 2 : 3;
-            uint64_t wall_total = 0, cpu0 = cpu_ns(), wall0 = now_ns();
-            while (n < MAX_SAMPLES) {
+            uint64_t cpu0 = cpu_ns(), wall0 = now_ns();
+            while (st.n < MAX_SAMPLES) {
                 uint64_t a = now_ns();
                 pthread_barrier_wait(&start);
                 pthread_barrier_wait(&end);
                 uint64_t b = now_ns();
-                samples[n++] = (b - a) / (uint64_t)batch;
+                st.samples[st.n++] = (b - a) / (uint64_t)batch;
                 for (int i = 0; i < T; i++)
                     if (!ws[i].ok || ws[i].out_len != expect_len || memcmp(ws[i].out, expect, expect_len) != 0)
                         match = 0;
-                wall_total = b - wall0;
-                if (wall_total >= budget && n >= min_iters)
+                st.wall_total = b - wall0;
+                if (st.wall_total >= budget && st.n >= min_iters)
                     break;
             }
-            uint64_t cpu_total = cpu_ns() - cpu0;
+            st.cpu_total = cpu_ns() - cpu0;
             stop = 1;
             pthread_barrier_wait(&start);
             for (int i = 0; i < T; i++)
@@ -949,14 +966,22 @@ static void bench_one(FILE *out, const vectors_t *V, param_t *p, const variant_t
                 }
             }
             if (!match && !error) error = "output mismatch in a worker thread";
-            emit_line(out, v, p, T, batch, samples, n, wall_total, cpu_total, out_sha, sk_sha, match, error);
+            m.match = match;
+            m.error = error;
+            emit_line(out, &m, &st);
             free(expect);
         }
         for (int i = 0; i < T; i++)
             worker_free(&ws[i]);
     }
-    free(samples);
+    free(st.samples);
 }
+
+typedef struct {
+    const char *out_path;
+    int budget_ms;
+    const char *params, *ops, *variants, *stages;
+} bench_opts_t;
 
 static int cmd_bench(vectors_t *V, bench_opts_t *o)
 {
@@ -981,7 +1006,7 @@ static int cmd_bench(vectors_t *V, bench_opts_t *o)
                 continue;
             fprintf(stderr, "[%s] %s %s ...", BUILD_LABEL, v->id, p->name);
             uint64_t t0 = now_ns();
-            bench_one(out, V, p, v, o->budget_ms);
+            bench_one(out, p, v, o->budget_ms);
             fprintf(stderr, " %.2fs\n", (double)(now_ns() - t0) / 1e9);
         }
     }
@@ -1001,7 +1026,7 @@ static int cmd_vectors(vectors_t *V, const char *out_path)
     for (int i = 0; i < V->nparams; i++) {
         param_t *p = &V->params[i];
         int match = prepare_param(V, p, 1);
-        int self = verify_baseline(p->pub, V->msg, V->msg_len, p->sig, p->sig_len) == 1;
+        int self = verify_baseline(p->pub, p, p->sig, p->sig_len) == 1;
         char hpk[65], hsk[65], hsig[65];
         sha256_hex(p->pk, p->pk_len, hpk);
         sha256_hex(p->sk, p->sk_len, hsk);
@@ -1032,25 +1057,22 @@ static int cmd_crossverify(vectors_t *V, const char *art_path, const char *out_p
     char *buf = read_file(art_path, &n);
     const char *end = buf + n;
     char *src = json_get_string(buf, end, "lib");
-    const char *arr = json_find(buf, end, "entries");
-    if (arr == NULL || *arr != '[')
+    json_iter_t it;
+    if (!json_iter_init(&it, json_find(buf, end, "entries"), end))
         die("artifacts: no entries array");
     FILE *out = fopen(out_path, "w");
     if (out == NULL)
         die("cannot open %s", out_path);
     fprintf(out, "{\"lib\":\"%s\",\"source\":\"%s\",\"results\":[\n", LIB_NAME, src ? src : "unknown");
-    const char *it = NULL, *os, *oe;
+    const char *os, *oe;
     int first = 1, bad = 0, total = 0;
-    while (json_next_object(arr, end, &it, &os, &oe)) {
+    while (json_iter_next(&it, &os, &oe)) {
         char *param = json_get_string(os, oe, "param");
         char *pkh = json_get_string(os, oe, "pk_hex");
         char *sigh = json_get_string(os, oe, "sig_hex");
         if (param == NULL)
             continue;
-        param_t *p = NULL;
-        for (int i = 0; i < V->nparams; i++)
-            if (strcmp(V->params[i].name, param) == 0)
-                p = &V->params[i];
+        param_t *p = find_param(V, param);
         if (p == NULL) { /* unsupported (e.g. Falcon): skip */
             fprintf(stderr, "%-20s skipped (unsupported)\n", param);
             free(param); free(pkh); free(sigh);
@@ -1066,14 +1088,12 @@ static int cmd_crossverify(vectors_t *V, const char *art_path, const char *out_p
             EVP_PKEY *pub = pubkey_from_bytes(param, pk, pkl);
             if (pub == NULL) {
                 error = "public key import failed";
-                ERR_clear_error();
             } else {
-                int r = verify_baseline(pub, V->msg, V->msg_len, sig, sl);
+                int r = verify_baseline(pub, p, sig, sl);
                 ok = r == 1;
-                if (r == 0) error = "verify returned 0";
-                else if (r < 0) error = "verify error";
+                if (!ok) error = "verify returned 0";
                 sig[sl / 2] ^= 0x01;
-                tamper_rejected = verify_baseline(pub, V->msg, V->msg_len, sig, sl) == 0;
+                tamper_rejected = verify_baseline(pub, p, sig, sl) == 0;
                 EVP_PKEY_free(pub);
             }
             free(pk); free(sig);
@@ -1106,12 +1126,17 @@ static void usage(void)
         "       pqc_driver crossverify <vectors.json> <artifacts.json> <out.json>\n"
         "       pqc_driver bench <vectors.json> <reference.json> --out f.jsonl [--budget-ms N]\n"
         "                  [--params a,b] [--ops keygen,sign,verify] [--variants id,id]\n"
+        "       pqc_driver stages <vectors.json> <reference.json> --out f.jsonl [--budget-ms N] [--params a,b] [--stages x,y]\n"
+        "       pqc_driver memory <vectors.json> <reference.json> --out f.jsonl [--params a,b]\n"
+        "       pqc_driver validate <vectors.json> <suite.json> <partial.jsonl>\n"
+        "       pqc_driver merge-validate <out.json> <partial.jsonl>...\n"
         "       pqc_driver list\n");
     exit(2);
 }
 
 int main(int argc, char **argv)
 {
+    mem_hooks_install();
     if (argc < 2)
         usage();
     if (strcmp(argv[1], "list") == 0) {
@@ -1123,6 +1148,8 @@ int main(int argc, char **argv)
         printf("%s\n", OPENSSL_VERSION_STR);
         return 0;
     }
+    if (strcmp(argv[1], "merge-validate") == 0)
+        return cmd_merge_validate(argc - 2, argv + 2);
     vectors_t V;
     memset(&V, 0, sizeof(V));
     if (strcmp(argv[1], "vectors") == 0) {
@@ -1136,20 +1163,30 @@ int main(int argc, char **argv)
         load_vectors(&V, argv[2]);
         return cmd_crossverify(&V, argv[3], argv[4]);
     }
-    if (strcmp(argv[1], "bench") == 0) {
+    if (strcmp(argv[1], "validate") == 0) {
+        if (argc != 5) usage();
+        load_vectors(&V, argv[2]);
+        return cmd_validate(&V, argv[3], argv[4]);
+    }
+    if (strcmp(argv[1], "bench") == 0 || strcmp(argv[1], "stages") == 0 || strcmp(argv[1], "memory") == 0) {
         if (argc < 4) usage();
-        bench_opts_t o = { NULL, 1000, NULL, NULL, NULL };
+        bench_opts_t o = { NULL, 1000, NULL, NULL, NULL, NULL };
         for (int i = 4; i < argc; i++) {
             if (strcmp(argv[i], "--out") == 0 && i + 1 < argc) o.out_path = argv[++i];
             else if (strcmp(argv[i], "--budget-ms") == 0 && i + 1 < argc) o.budget_ms = atoi(argv[++i]);
             else if (strcmp(argv[i], "--params") == 0 && i + 1 < argc) o.params = argv[++i];
             else if (strcmp(argv[i], "--ops") == 0 && i + 1 < argc) o.ops = argv[++i];
             else if (strcmp(argv[i], "--variants") == 0 && i + 1 < argc) o.variants = argv[++i];
+            else if (strcmp(argv[i], "--stages") == 0 && i + 1 < argc) o.stages = argv[++i];
             else usage();
         }
         if (o.out_path == NULL) usage();
         load_vectors(&V, argv[2]);
         load_reference(&V, argv[3]);
+        if (strcmp(argv[1], "stages") == 0)
+            return cmd_stages(&V, o.out_path, o.budget_ms, o.params, o.stages);
+        if (strcmp(argv[1], "memory") == 0)
+            return cmd_memory(&V, o.out_path, o.params);
         return cmd_bench(&V, &o);
     }
     usage();

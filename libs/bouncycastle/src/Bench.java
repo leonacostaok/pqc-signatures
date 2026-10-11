@@ -43,12 +43,15 @@ public final class Bench {
             case "vectors": vectors(args[1]); break;
             case "crossverify": crossverify(args[1], args[2]); break;
             case "bench": bench(Arrays.copyOfRange(args, 1, args.length)); break;
+            case "validate": Validate.main(Arrays.copyOfRange(args, 1, args.length)); break;
+            case "stages": Stages.main(Arrays.copyOfRange(args, 1, args.length)); break;
+            case "memory": Memory.main(Arrays.copyOfRange(args, 1, args.length)); break;
             default: usage();
         }
     }
 
     static void usage() {
-        System.err.println("usage: Bench vectors <out.json> | crossverify <artifacts.json> <out.json> | bench --out <f> [--budget-ms N] [--params a,b] [--ops o,o] [--variants id,id]");
+        System.err.println("usage: Bench vectors <out.json> | crossverify <artifacts.json> <out.json> | bench --out <f> [--budget-ms N] [--params a,b] [--ops o,o] [--variants id,id] | validate <suite.json.gz> <out.json> | stages --out <f> [...] | memory --out <f> [...]");
         System.exit(2);
     }
 

@@ -1,3 +1,4 @@
+#![allow(private_interfaces, private_bounds, missing_docs, unreachable_pub, dead_code)]
 #![no_std]
 #![doc = include_str!("../README.md")]
 #![doc(
@@ -46,15 +47,15 @@ extern crate alloc;
 #[cfg(feature = "pkcs8")]
 pub mod pkcs8;
 
-mod algebra;
-mod crypto;
-mod encode;
-mod hint;
-mod ntt;
-mod param;
-mod sampling;
-mod signing;
-mod verifying;
+#[doc(hidden)] pub mod algebra;
+#[doc(hidden)] pub mod crypto;
+#[doc(hidden)] pub mod encode;
+#[doc(hidden)] pub mod hint;
+#[doc(hidden)] pub mod ntt;
+#[doc(hidden)] pub mod param;
+#[doc(hidden)] pub mod sampling;
+#[doc(hidden)] pub mod signing;
+#[doc(hidden)] pub mod verifying;
 
 pub use crate::{
     param::{EncodedSignature, EncodedVerifyingKey, ExpandedSigningKeyBytes, MlDsaParams},
@@ -86,7 +87,7 @@ use shake::Shake256;
 pub type B32 = Array<u8, U32>;
 
 /// A 64-byte array, defined here for brevity because it is used several times
-pub(crate) type B64 = Array<u8, U64>;
+pub type B64 = Array<u8, U64>;
 
 /// ML-DSA seeds are signing (private) keys, which are consistently 32-bytes across all security
 /// levels, and are the preferred serialization for representing such keys.
@@ -95,9 +96,9 @@ pub type Seed = B32;
 /// An ML-DSA signature
 #[derive(Clone, Debug, PartialEq)]
 pub struct Signature<P: MlDsaParams> {
-    c_tilde: Array<u8, P::Lambda>,
-    z: MaybeBox<Vector<P::L>>,
-    h: Hint<P>,
+    pub c_tilde: Array<u8, P::Lambda>,
+    pub z: MaybeBox<Vector<P::L>>,
+    pub h: Hint<P>,
 }
 
 impl<P: MlDsaParams> Signature<P> {
@@ -154,10 +155,10 @@ impl<P: MlDsaParams> core::hash::Hash for Signature<P> {
     }
 }
 
-struct MuBuilder(H);
+pub struct MuBuilder(pub H);
 
 impl MuBuilder {
-    fn new(tr: &[u8], ctx: &[u8]) -> Self {
+    pub fn new(tr: &[u8], ctx: &[u8]) -> Self {
         let mut h = H::default();
         h = h.absorb(tr);
         h = h.absorb(&[0]);
@@ -167,7 +168,7 @@ impl MuBuilder {
         Self(h)
     }
 
-    fn internal(tr: &[u8], Mp: &[&[u8]]) -> B64 {
+    pub fn internal(tr: &[u8], Mp: &[&[u8]]) -> B64 {
         let mut h = H::default().absorb(tr);
 
         for m in Mp {
@@ -177,7 +178,7 @@ impl MuBuilder {
         h.squeeze_new()
     }
 
-    fn message(mut self, M: &[&[u8]]) -> B64 {
+    pub fn message(mut self, M: &[&[u8]]) -> B64 {
         for m in M {
             self.0 = self.0.absorb(m);
         }
@@ -185,7 +186,7 @@ impl MuBuilder {
         self.0.squeeze_new()
     }
 
-    fn finish(mut self) -> B64 {
+    pub fn finish(mut self) -> B64 {
         self.0.squeeze_new()
     }
 }

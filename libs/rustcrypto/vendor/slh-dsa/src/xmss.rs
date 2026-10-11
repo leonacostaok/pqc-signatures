@@ -4,9 +4,9 @@ use hybrid_array::{Array, ArraySize};
 use typenum::Unsigned;
 
 #[derive(Clone, Debug)]
-pub(crate) struct XmssSig<P: XmssParams> {
-    pub(crate) sig: WotsSig<P>,
-    pub(crate) auth: Array<Array<u8, P::N>, P::HPrime>,
+pub struct XmssSig<P: XmssParams> {
+    pub sig: WotsSig<P>,
+    pub auth: Array<Array<u8, P::N>, P::HPrime>,
 }
 
 impl<P: XmssParams> PartialEq for XmssSig<P> {
@@ -18,9 +18,9 @@ impl<P: XmssParams> PartialEq for XmssSig<P> {
 impl<P: XmssParams> Eq for XmssSig<P> {}
 
 impl<P: XmssParams> XmssSig<P> {
-    pub(crate) const SIZE: usize = WotsSig::<P>::SIZE + P::HPrime::USIZE * P::N::USIZE;
+    pub const SIZE: usize = WotsSig::<P>::SIZE + P::HPrime::USIZE * P::N::USIZE;
 
-    pub(crate) fn write_to(&self, buf: &mut [u8]) {
+    pub fn write_to(&self, buf: &mut [u8]) {
         debug_assert!(buf.len() == Self::SIZE, "Xmss serialize length mismatch");
 
         let (wots, auth) = buf.split_at_mut(WotsSig::<P>::SIZE);
@@ -32,7 +32,7 @@ impl<P: XmssParams> XmssSig<P> {
 
     #[cfg(feature = "alloc")]
     #[cfg(test)]
-    pub(crate) fn to_vec(&self) -> alloc::vec::Vec<u8> {
+    pub fn to_vec(&self) -> alloc::vec::Vec<u8> {
         let mut buf = alloc::vec![0u8; Self::SIZE];
         self.write_to(&mut buf);
         buf
@@ -59,7 +59,7 @@ impl<P: XmssParams> TryFrom<&[u8]> for XmssSig<P> {
     }
 }
 
-pub(crate) trait XmssParams: WotsParams + Sized {
+pub trait XmssParams: WotsParams + Sized {
     type HPrime: ArraySize + Debug + Eq;
 
     fn xmss_node(

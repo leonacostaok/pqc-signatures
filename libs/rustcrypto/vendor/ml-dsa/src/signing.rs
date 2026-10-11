@@ -235,7 +235,7 @@ impl<P: MlDsaParams> ZeroizeOnDrop for SigningKey<P> {}
 pub struct ExpandedSigningKey<P: MlDsaParams> {
     rho: B32,
     K: B32,
-    pub(crate) tr: B64,
+    pub tr: B64,
     s1: Vector<P::L>,
     s2: Vector<P::K>,
     t0: Vector<P::K>,
@@ -248,7 +248,7 @@ pub struct ExpandedSigningKey<P: MlDsaParams> {
 }
 
 impl<P: MlDsaParams> ExpandedSigningKey<P> {
-    pub(crate) fn new(
+    pub fn new(
         rho: B32,
         K: B32,
         tr: B64,
@@ -313,7 +313,7 @@ impl<P: MlDsaParams> ExpandedSigningKey<P> {
         self.raw_sign_mu(&mu, rnd)
     }
 
-    pub(crate) fn raw_sign_mu(&self, mu: &B64, rnd: &B32) -> Signature<P>
+    pub fn raw_sign_mu(&self, mu: &B64, rnd: &B32) -> Signature<P>
     where
         P: MlDsaParams,
     {

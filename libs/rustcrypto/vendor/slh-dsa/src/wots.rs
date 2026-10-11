@@ -11,7 +11,7 @@ const W: u32 = 16;
 const CK_LEN: usize = 3; // Length of a checksum in chunks
 
 #[derive(Clone, Debug)]
-pub(crate) struct WotsSig<P: WotsParams>(Array<Array<u8, P::N>, P::WotsSigLen>);
+pub struct WotsSig<P: WotsParams>(pub Array<Array<u8, P::N>, P::WotsSigLen>);
 
 impl<P: WotsParams> PartialEq for WotsSig<P> {
     fn eq(&self, other: &Self) -> bool {
@@ -22,9 +22,9 @@ impl<P: WotsParams> PartialEq for WotsSig<P> {
 impl<P: WotsParams> Eq for WotsSig<P> {}
 
 impl<P: WotsParams> WotsSig<P> {
-    pub(crate) const SIZE: usize = P::N::USIZE * P::WotsSigLen::USIZE;
+    pub const SIZE: usize = P::N::USIZE * P::WotsSigLen::USIZE;
 
-    pub(crate) fn write_to(&self, buf: &mut [u8]) {
+    pub fn write_to(&self, buf: &mut [u8]) {
         debug_assert!(buf.len() == Self::SIZE, "WOTS+ serialize length mismatch");
 
         buf.chunks_exact_mut(P::N::USIZE)
@@ -34,7 +34,7 @@ impl<P: WotsParams> WotsSig<P> {
 
     #[cfg(feature = "alloc")]
     #[cfg(test)]
-    pub(crate) fn to_vec(&self) -> alloc::vec::Vec<u8> {
+    pub fn to_vec(&self) -> alloc::vec::Vec<u8> {
         let mut vec = alloc::vec![0u8; Self::SIZE];
         self.write_to(&mut vec);
         vec
@@ -56,7 +56,7 @@ impl<P: WotsParams> TryFrom<&[u8]> for WotsSig<P> {
     }
 }
 
-pub(crate) trait WotsParams: HashSuite {
+pub trait WotsParams: HashSuite {
     type WotsMsgLen: ArraySize; // Number of chunks in a WOTS message. Must equal 2 * Self::N
     type WotsSigLen: ArraySize + Debug + Eq; // Number of chunks in a WOTS signature. Must equal WotsSigLen + CK_LEN;
 

@@ -47,5 +47,8 @@ case "$cmd" in
   vectors) "$NODE" "$HERE/src/vectors.mjs" "$@" ;;
   crossverify) "$NODE" "$HERE/src/crossverify.mjs" "$@" ;;
   bench) "$NODE" "$HERE/src/bench.mjs" "$@" ;;
-  *) echo "usage: $0 {build|vectors <out.json>|crossverify <in.json> <out.json>|bench --out <file.jsonl> [opts]}" >&2; exit 2 ;;
+  stages) "$NODE" "$HERE/src/stages.mjs" "$@" ;;
+  validate) "$NODE" "$HERE/src/validate.mjs" "$@" ;;
+  memory) "$NODE" "$HERE/src/memory.mjs" "$@" ;;
+  *) echo "usage: $0 {build|vectors <out.json>|crossverify <in.json> <out.json>|bench|stages|memory --out <file.jsonl> [opts]|validate <suite.json.gz> <out.json>}" >&2; exit 2 ;;
 esac

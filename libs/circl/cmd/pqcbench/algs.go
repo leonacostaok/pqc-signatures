@@ -12,10 +12,10 @@ import (
 
 // signer is a sign function bound to an already-unpacked private key.
 // It writes the signature into sig (len >= sigSize) and returns the slice.
-type signer func(msg, sig []byte) []byte
+type signer func(msg, ctx, sig []byte) []byte
 
 // verifier is a verify function bound to an already-unpacked public key.
-type verifier func(msg, sig []byte) bool
+type verifier func(msg, ctx, sig []byte) bool
 
 // alg abstracts one parameter set over the two CIRCL packages (mldsa*, slhdsa).
 type alg struct {
@@ -66,8 +66,8 @@ func buildAlgs() []*alg {
 				if err := sk.UnmarshalBinary(skb); err != nil {
 					panic(err)
 				}
-				return func(msg, sig []byte) []byte {
-					if err := mldsa44.SignTo(&sk, msg, nil, false, sig); err != nil {
+				return func(msg, ctx, sig []byte) []byte {
+					if err := mldsa44.SignTo(&sk, msg, ctx, false, sig); err != nil {
 						panic(err)
 					}
 					return sig[:mldsa44.SignatureSize]
@@ -78,7 +78,7 @@ func buildAlgs() []*alg {
 				if err := pk.UnmarshalBinary(pkb); err != nil {
 					panic(err)
 				}
-				return func(msg, sig []byte) bool { return mldsa44.Verify(&pk, msg, nil, sig) }
+				return func(msg, ctx, sig []byte) bool { return mldsa44.Verify(&pk, msg, ctx, sig) }
 			},
 		},
 		{
@@ -99,8 +99,8 @@ func buildAlgs() []*alg {
 				if err := sk.UnmarshalBinary(skb); err != nil {
 					panic(err)
 				}
-				return func(msg, sig []byte) []byte {
-					if err := mldsa65.SignTo(&sk, msg, nil, false, sig); err != nil {
+				return func(msg, ctx, sig []byte) []byte {
+					if err := mldsa65.SignTo(&sk, msg, ctx, false, sig); err != nil {
 						panic(err)
 					}
 					return sig[:mldsa65.SignatureSize]
@@ -111,7 +111,7 @@ func buildAlgs() []*alg {
 				if err := pk.UnmarshalBinary(pkb); err != nil {
 					panic(err)
 				}
-				return func(msg, sig []byte) bool { return mldsa65.Verify(&pk, msg, nil, sig) }
+				return func(msg, ctx, sig []byte) bool { return mldsa65.Verify(&pk, msg, ctx, sig) }
 			},
 		},
 		{
@@ -132,8 +132,8 @@ func buildAlgs() []*alg {
 				if err := sk.UnmarshalBinary(skb); err != nil {
 					panic(err)
 				}
-				return func(msg, sig []byte) []byte {
-					if err := mldsa87.SignTo(&sk, msg, nil, false, sig); err != nil {
+				return func(msg, ctx, sig []byte) []byte {
+					if err := mldsa87.SignTo(&sk, msg, ctx, false, sig); err != nil {
 						panic(err)
 					}
 					return sig[:mldsa87.SignatureSize]
@@ -144,7 +144,7 @@ func buildAlgs() []*alg {
 				if err := pk.UnmarshalBinary(pkb); err != nil {
 					panic(err)
 				}
-				return func(msg, sig []byte) bool { return mldsa87.Verify(&pk, msg, nil, sig) }
+				return func(msg, ctx, sig []byte) bool { return mldsa87.Verify(&pk, msg, ctx, sig) }
 			},
 		},
 	}
@@ -191,8 +191,8 @@ func slhAlg(name string, id slhdsa.ID, n int) *alg {
 			if err := priv.UnmarshalBinary(skb); err != nil {
 				panic(err)
 			}
-			return func(msg, sig []byte) []byte {
-				s, err := slhdsa.SignDeterministic(&priv, slhdsa.NewMessage(msg), nil)
+			return func(msg, ctx, sig []byte) []byte {
+				s, err := slhdsa.SignDeterministic(&priv, slhdsa.NewMessage(msg), ctx)
 				if err != nil {
 					panic(err)
 				}
@@ -204,7 +204,7 @@ func slhAlg(name string, id slhdsa.ID, n int) *alg {
 			if err := pub.UnmarshalBinary(pkb); err != nil {
 				panic(err)
 			}
-			return func(msg, sig []byte) bool { return slhdsa.Verify(&pub, slhdsa.NewMessage(msg), sig, nil) }
+			return func(msg, ctx, sig []byte) bool { return slhdsa.Verify(&pub, slhdsa.NewMessage(msg), sig, ctx) }
 		},
 	}
 }

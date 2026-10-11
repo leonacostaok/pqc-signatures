@@ -2,7 +2,7 @@ use crate::fors::ForsParams;
 use hybrid_array::{Array, ArraySize, typenum::Unsigned};
 
 // Algorithm 3
-pub(crate) fn base_2b<OutLen: ArraySize, B: Unsigned>(x: &[u8]) -> Array<u16, OutLen> {
+pub fn base_2b<OutLen: ArraySize, B: Unsigned>(x: &[u8]) -> Array<u16, OutLen> {
     debug_assert!(x.len() >= (OutLen::USIZE * B::USIZE).div_ceil(8));
     debug_assert!(B::USIZE <= 16);
 
@@ -24,7 +24,7 @@ pub(crate) fn base_2b<OutLen: ArraySize, B: Unsigned>(x: &[u8]) -> Array<u16, Ou
 }
 
 /// Separates the digest into the FORS message, the Xmss tree index, and the Xmss leaf index.
-pub(crate) fn split_digest<P: ForsParams>(
+pub fn split_digest<P: ForsParams>(
     digest: &Array<u8, P::M>,
 ) -> (&Array<u8, P::MD>, u64, u32) {
     #[allow(deprecated)]
@@ -50,7 +50,7 @@ pub(crate) fn split_digest<P: ForsParams>(
 }
 
 #[cfg(test)]
-pub(crate) mod macros {
+pub mod macros {
     /// Generate a test case
     #[macro_export]
     macro_rules! gen_test {
@@ -84,7 +84,7 @@ pub(crate) mod macros {
         };
     }
 
-    pub(crate) use test_parameter_sets;
+    pub use test_parameter_sets;
 }
 
 #[cfg(test)]

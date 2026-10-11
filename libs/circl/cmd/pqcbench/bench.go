@@ -39,7 +39,7 @@ type variant struct {
 var variantTable = []variant{
 	// ---- keygen
 	{"keygen.v0", "keygen", "baseline", "Default build; mldsa.NewKeyFromSeed + Pack / slhdsa.GenerateKey(seed reader) + MarshalBinary.", "default", modeBaseline},
-	{"keygen.v1", "keygen", "purego", "Built with -tags purego: no assembly (generic NTT, scalar Keccak instead of AVX2 Keccak-x4).", "purego", modeBaseline},
+	{"keygen.v1", "keygen", "purego", "Built with -tags purego: no assembly (generic NTT, scalar Keccak instead of AVX2 Keccak-x4, generic stdlib SHA-256).", "purego", modeBaseline},
 	{"keygen.v2", "keygen", "amd64v3", "Built with GOAMD64=v3 so the Go compiler may emit AVX2/BMI2/FMA for generic Go code.", "amd64v3", modeBaseline},
 	{"keygen.v3", "keygen", "pgo", "Profile-guided optimization: -pgo=default.pgo from a CPU profile of this workload.", "pgo", modeBaseline},
 	{"keygen.v4", "keygen", "gc-off", "Runtime tuning: GC disabled (GOGC=off) with a 1 GiB soft memory limit during the loop.", "default", modeGCOff},
@@ -47,17 +47,31 @@ var variantTable = []variant{
 	// ---- sign
 	{"sign.v0", "sign", "baseline", "Default build; sk bytes unpacked per call (UnmarshalBinary), SignTo/SignDeterministic into a fresh buffer.", "default", modeBaseline},
 	{"sign.v1", "sign", "preunpacked", "Private key unpacked once (ExpandA + NTTs cached in circl PrivateKey) and reused; signature buffer reused.", "default", modePreunpacked},
-	{"sign.v2", "sign", "purego", "Built with -tags purego: no assembly (generic NTT, scalar Keccak instead of AVX2 Keccak-x4).", "purego", modeBaseline},
+	{"sign.v2", "sign", "purego", "Built with -tags purego: no assembly (generic NTT, scalar Keccak instead of AVX2 Keccak-x4, generic stdlib SHA-256).", "purego", modeBaseline},
 	{"sign.v3", "sign", "amd64v3", "Built with GOAMD64=v3 so the Go compiler may emit AVX2/BMI2/FMA for generic Go code.", "amd64v3", modeBaseline},
 	{"sign.v4", "sign", "pgo", "Profile-guided optimization: -pgo=default.pgo from a CPU profile of this workload.", "pgo", modeBaseline},
 	{"sign.v5", "sign", "parallel", "Batch signing on a goroutine worker pool (GOMAXPROCS workers, each with its own pre-unpacked key).", "default", modeParallel},
 	// ---- verify
 	{"verify.v0", "verify", "baseline", "Default build; pk bytes unpacked per call (UnmarshalBinary), then Verify.", "default", modeBaseline},
 	{"verify.v1", "verify", "preunpacked", "Public key unpacked once (ExpandA + tr cached in circl PublicKey) and reused across verifications.", "default", modePreunpacked},
-	{"verify.v2", "verify", "purego", "Built with -tags purego: no assembly (generic NTT, scalar Keccak instead of AVX2 Keccak-x4).", "purego", modeBaseline},
+	{"verify.v2", "verify", "purego", "Built with -tags purego: no assembly (generic NTT, scalar Keccak instead of AVX2 Keccak-x4, generic stdlib SHA-256).", "purego", modeBaseline},
 	{"verify.v3", "verify", "amd64v3", "Built with GOAMD64=v3 so the Go compiler may emit AVX2/BMI2/FMA for generic Go code.", "amd64v3", modeBaseline},
 	{"verify.v4", "verify", "pgo", "Profile-guided optimization: -pgo=default.pgo from a CPU profile of this workload.", "pgo", modeBaseline},
 	{"verify.v5", "verify", "parallel", "Batch verification on a goroutine worker pool (GOMAXPROCS workers, each with its own pre-unpacked key).", "default", modeParallel},
+}
+
+func variantByID(id string) *variant {
+	for i := range variantTable {
+		if variantTable[i].id == id {
+			return &variantTable[i]
+		}
+	}
+	return nil
+}
+
+// inputs of one operation (reference vectors or a validation case).
+type inputs struct {
+	seed, pk, sk, sig, msg, ctx []byte
 }
 
 // runner executes `batch` ops per call and returns the outputs of the first op
@@ -69,27 +83,26 @@ type runner struct {
 	run     func() (out1, out2 []byte)
 	cleanup func()
 	bad     bool
-	tamper  bool // verify only: tampered signature was rejected at setup
 }
 
 // singleOp builds the per-call closure for one op in a given mode.
-func singleOp(a *alg, c *common, op string, m mode, seed, pk, sk, sig []byte) func() ([]byte, []byte) {
+func singleOp(a *alg, in *inputs, op string, m mode) func() ([]byte, []byte) {
 	switch op {
 	case "keygen":
-		return func() ([]byte, []byte) { return a.keygen(seed) }
+		return func() ([]byte, []byte) { return a.keygen(in.seed) }
 	case "sign":
 		if m == modePreunpacked || m == modeParallel {
-			s := a.newSigner(sk)
+			s := a.newSigner(in.sk)
 			buf := make([]byte, a.sigSize)
-			return func() ([]byte, []byte) { return s(c.msg, buf), nil }
+			return func() ([]byte, []byte) { return s(in.msg, in.ctx, buf), nil }
 		}
-		return func() ([]byte, []byte) { return a.newSigner(sk)(c.msg, make([]byte, a.sigSize)), nil }
+		return func() ([]byte, []byte) { return a.newSigner(in.sk)(in.msg, in.ctx, make([]byte, a.sigSize)), nil }
 	case "verify":
 		if m == modePreunpacked || m == modeParallel {
-			v := a.newVerifier(pk)
-			return func() ([]byte, []byte) { return boolBytes(v(c.msg, sig)), nil }
+			v := a.newVerifier(in.pk)
+			return func() ([]byte, []byte) { return boolBytes(v(in.msg, in.ctx, in.sig)), nil }
 		}
-		return func() ([]byte, []byte) { return boolBytes(a.newVerifier(pk)(c.msg, sig)), nil }
+		return func() ([]byte, []byte) { return boolBytes(a.newVerifier(in.pk)(in.msg, in.ctx, in.sig)), nil }
 	}
 	panic("bad op " + op)
 }
@@ -103,40 +116,13 @@ func boolBytes(b bool) []byte {
 	return bFalse
 }
 
-// setup holds the untimed inputs of one parameter set (computed once per process:
-// SLH-DSA "s" signing takes seconds, so this must not be repeated per variant).
-type setup struct {
-	seed, pk, sk, sig []byte
-	tamperRejected    bool
-}
-
-var setups = map[string]*setup{}
-
-func getSetup(a *alg, c *common) *setup {
-	if s, ok := setups[a.name]; ok {
-		return s
-	}
-	s := &setup{seed: c.seed(a.name)}
-	s.pk, s.sk = a.keygen(s.seed)
-	s.sig = a.newSigner(s.sk)(c.msg, make([]byte, a.sigSize))
-	// tamper check (untimed): flip one bit of the signature, must be rejected
-	t := append([]byte(nil), s.sig...)
-	t[len(t)/2] ^= 0x01
-	s.tamperRejected = !a.newVerifier(s.pk)(c.msg, t)
-	setups[a.name] = s
-	return s
-}
-
-func newRunner(a *alg, c *common, v *variant) *runner {
-	st := getSetup(a, c)
-	seed, pk, sk, sig := st.seed, st.pk, st.sk, st.sig
-	r := &runner{batch: 1, threads: 1, cleanup: func() {}, tamper: st.tamperRejected}
-
+func newRunner(a *alg, in *inputs, v *variant) *runner {
+	r := &runner{batch: 1, threads: 1, cleanup: func() {}}
 	switch v.mode {
 	case modeBaseline, modePreunpacked:
-		r.run = singleOp(a, c, v.op, v.mode, seed, pk, sk, sig)
+		r.run = singleOp(a, in, v.op, v.mode)
 	case modeGCOff:
-		op := singleOp(a, c, v.op, modeBaseline, seed, pk, sk, sig)
+		op := singleOp(a, in, v.op, modeBaseline)
 		runtime.GC()
 		oldPct := debug.SetGCPercent(-1)
 		oldLim := debug.SetMemoryLimit(1 << 30)
@@ -151,7 +137,7 @@ func newRunner(a *alg, c *common, v *variant) *runner {
 		r.threads, r.batch = w, w
 		ops := make([]func() ([]byte, []byte), w)
 		for i := range ops {
-			ops[i] = singleOp(a, c, v.op, modeParallel, seed, pk, sk, sig)
+			ops[i] = singleOp(a, in, v.op, modeParallel)
 		}
 		out1 := make([][]byte, w)
 		out2 := make([][]byte, w)
@@ -190,6 +176,33 @@ func newRunner(a *alg, c *common, v *variant) *runner {
 	return r
 }
 
+// setup holds the untimed reference inputs of one parameter set (computed once
+// per process: SLH-DSA "s" signing takes seconds, so never repeat it per variant).
+type setup struct {
+	seed, pk, sk, sig []byte
+	tamperRejected    bool
+}
+
+var setups = map[string]*setup{}
+
+func getSetup(a *alg, c *common) *setup {
+	if s, ok := setups[a.name]; ok {
+		return s
+	}
+	s := &setup{seed: c.seed(a.name)}
+	s.pk, s.sk = a.keygen(s.seed)
+	s.sig = a.newSigner(s.sk)(c.msg, nil, make([]byte, a.sigSize))
+	t := append([]byte(nil), s.sig...)
+	t[len(t)/2] ^= 0x01
+	s.tamperRejected = !a.newVerifier(s.pk)(c.msg, nil, t)
+	setups[a.name] = s
+	return s
+}
+
+func (s *setup) inputs(c *common) *inputs {
+	return &inputs{seed: s.seed, pk: s.pk, sk: s.sk, sig: s.sig, msg: c.msg, ctx: nil}
+}
+
 type benchLine struct {
 	Lib          string  `json:"lib"`
 	LibVersion   string  `json:"lib_version"`
@@ -223,28 +236,35 @@ func cpuTime() time.Duration {
 
 const maxCalls = 100000
 
-func benchOne(a *alg, c *common, v *variant, budget time.Duration) benchLine {
-	r := newRunner(a, c, v)
-	defer r.cleanup()
+type stats struct {
+	iterations                int
+	median, mean, p95, min    int64
+	cpuPerOp                  int64
+	cpuUtil, opsPerSec        float64
+}
 
-	// warm-up: at least one op, up to ~100 ms or 10 calls (Go has no JIT)
-	first1, first2 := r.run()
+// measure times run() (batch ops per call) per the contract: warm-up (>= 1 op,
+// up to 100 ms / 10 calls), then until budget elapsed and >= 3 calls (2 if a
+// call > 5 s), capped at 100000 calls. after() runs untimed after each call.
+func measure(run func(), after func(), batch int, budget time.Duration) stats {
+	run()
+	after()
 	for t0, n := time.Now(), 1; n < 10 && time.Since(t0) < 100*time.Millisecond; n++ {
-		r.run()
+		run()
+		after()
 	}
-
 	samples := make([]float64, 0, 1024)
 	cpu0 := cpuTime()
 	loopStart := time.Now()
+	var wallTotal time.Duration
 	calls := 0
 	for {
 		t0 := time.Now()
-		o1, o2 := r.run()
+		run()
 		d := time.Since(t0)
-		if !bytes.Equal(o1, first1) || !bytes.Equal(o2, first2) {
-			r.bad = true
-		}
-		samples = append(samples, float64(d.Nanoseconds())/float64(r.batch))
+		wallTotal += d
+		after()
+		samples = append(samples, float64(d.Nanoseconds())/float64(batch))
 		calls++
 		minCalls := 3
 		if d > 5*time.Second {
@@ -254,21 +274,38 @@ func benchOne(a *alg, c *common, v *variant, budget time.Duration) benchLine {
 			break
 		}
 	}
-	wallTotal := time.Since(loopStart)
 	cpuTotal := cpuTime() - cpu0
-	ops := calls * r.batch
-
+	ops := calls * batch
 	sort.Float64s(samples)
 	sum := 0.0
 	for _, s := range samples {
 		sum += s
 	}
 	pct := func(p float64) int64 {
-		i := int(math.Round(p * float64(len(samples)-1)))
-		return int64(samples[i])
+		return int64(samples[int(math.Round(p*float64(len(samples)-1)))])
 	}
+	return stats{
+		iterations: ops, median: pct(0.5), mean: int64(sum / float64(len(samples))), p95: pct(0.95),
+		min: int64(samples[0]), cpuPerOp: cpuTotal.Nanoseconds() / int64(ops),
+		cpuUtil: float64(cpuTotal) / float64(wallTotal), opsPerSec: float64(ops) / wallTotal.Seconds(),
+	}
+}
 
-	// correctness against the shared reference
+func benchOne(a *alg, c *common, v *variant, budget time.Duration) benchLine {
+	st := getSetup(a, c)
+	r := newRunner(a, st.inputs(c), v)
+	defer r.cleanup()
+
+	var first1, first2 []byte
+	var o1, o2 []byte
+	s := measure(func() { o1, o2 = r.run() }, func() {
+		if first1 == nil && first2 == nil {
+			first1, first2 = append([]byte(nil), o1...), append([]byte(nil), o2...)
+		} else if !bytes.Equal(o1, first1) || !bytes.Equal(o2, first2) {
+			r.bad = true
+		}
+	}, r.batch, budget)
+
 	ref, hasRef := c.ref[a.name]
 	match := hasRef && !r.bad
 	outHash := ""
@@ -280,23 +317,19 @@ func benchOne(a *alg, c *common, v *variant, budget time.Duration) benchLine {
 		outHash = sha256hex(first1)
 		match = match && outHash == ref.SigSha256
 	case "verify":
-		ok := bytes.Equal(first1, bTrue) && r.tamper
+		ok := bytes.Equal(first1, bTrue) && st.tamperRejected
 		match = match && ok
 		outHash = "false"
 		if ok {
 			outHash = "true"
 		}
 	}
-
 	return benchLine{
 		Lib: libName, LibVersion: libVersion(), Lang: "go", Runtime: runtimeString(),
 		Variant: v.id, VariantName: v.name, VariantDesc: v.desc, Op: v.op, Param: a.name,
-		Iterations: ops, Threads: r.threads,
-		WallNsMedian: pct(0.5), WallNsMean: int64(sum / float64(len(samples))),
-		WallNsP95: pct(0.95), WallNsMin: int64(samples[0]),
-		CPUNsPerOp: cpuTotal.Nanoseconds() / int64(ops),
-		CPUUtil:    float64(cpuTotal) / float64(wallTotal),
-		OpsPerSec:  float64(ops) / wallTotal.Seconds(),
+		Iterations: s.iterations, Threads: r.threads,
+		WallNsMedian: s.median, WallNsMean: s.mean, WallNsP95: s.p95, WallNsMin: s.min,
+		CPUNsPerOp: s.cpuPerOp, CPUUtil: s.cpuUtil, OpsPerSec: s.opsPerSec,
 		OutputSha256: outHash, Match: match,
 	}
 }
@@ -325,16 +358,8 @@ func cmdBench(args []string) {
 	allFlavors := fs.Bool("all-flavors", false, "run variants of every flavor in this binary (debug)")
 	fs.Parse(args)
 	c := loadCommon(*commonDir)
-
-	w := os.Stdout
-	if *out != "" && *out != "-" {
-		f, err := os.OpenFile(*out, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0o644)
-		if err != nil {
-			fatalf("open %s: %v", *out, err)
-		}
-		defer f.Close()
-		w = f
-	}
+	w := openOut(*out)
+	defer w.Close()
 	pset, oset, vset := splitList(*params), splitList(*ops), splitList(*variants)
 	budget := time.Duration(*budgetMs) * time.Millisecond
 
@@ -345,10 +370,7 @@ func cmdBench(args []string) {
 			continue
 		}
 		for _, a := range algs {
-			if pset != nil && !pset[a.name] {
-				continue
-			}
-			if c.seed(a.name) == nil {
+			if pset != nil && !pset[a.name] || c.seed(a.name) == nil {
 				continue
 			}
 			line := benchOne(a, c, v, budget)
@@ -366,8 +388,8 @@ func cmdBench(args []string) {
 	}
 }
 
-// cmdProfile runs the baseline path of every op/param under the CPU profiler
-// to produce a default.pgo for the PGO build.
+// cmdProfile runs the baseline paths of every op/param (and the verify stages)
+// under the CPU profiler to produce a default.pgo for the PGO build.
 func cmdProfile(args []string) {
 	fs := flag.NewFlagSet("profile", flag.ExitOnError)
 	commonDir := fs.String("common", "common", "directory with vectors.json/reference.json")
@@ -385,21 +407,29 @@ func cmdProfile(args []string) {
 		fatalf("profile: %v", err)
 	}
 	defer pprof.StopCPUProfile()
+	dur := time.Duration(*ms) * time.Millisecond
 	for _, a := range algs {
 		if c.seed(a.name) == nil {
 			continue
 		}
+		st := getSetup(a, c)
 		for _, op := range []string{"keygen", "sign", "verify"} {
 			for _, m := range []mode{modeBaseline, modePreunpacked} {
 				if op == "keygen" && m == modePreunpacked {
 					continue
 				}
-				v := &variant{id: "profile", op: op, mode: m, flavor: flavor}
-				r := newRunner(a, c, v)
-				for t0 := time.Now(); time.Since(t0) < time.Duration(*ms)*time.Millisecond; {
+				r := newRunner(a, st.inputs(c), &variant{id: "profile", op: op, mode: m, flavor: flavor})
+				for t0 := time.Now(); time.Since(t0) < dur; {
 					r.run()
 				}
 				r.cleanup()
+			}
+		}
+		impl := prepareStages(a, c)
+		for _, s := range impl.stageNames() {
+			r, _ := impl.stage(s, "circl")
+			for t0 := time.Now(); time.Since(t0) < dur/2; {
+				r.run()
 			}
 		}
 	}

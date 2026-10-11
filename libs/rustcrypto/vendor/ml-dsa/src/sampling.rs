@@ -16,7 +16,7 @@ fn bit_set(z: &[u8], i: usize) -> bool {
 }
 
 // Algorithm 14 CoeffFromThreeBytes
-fn coeff_from_three_bytes(b: [u8; 3]) -> Option<Elem> {
+pub fn coeff_from_three_bytes(b: [u8; 3]) -> Option<Elem> {
     let b0: Int = b[0].into();
     let b1: Int = b[1].into();
     let b2: Int = b[2].into();
@@ -63,7 +63,7 @@ fn coeffs_from_byte(z: u8, eta: Eta) -> (Option<Elem>, Option<Elem>) {
 }
 
 // Algorithm 29 SampleInBall
-pub(crate) fn sample_in_ball(rho: &[u8], tau: usize) -> Polynomial {
+pub fn sample_in_ball(rho: &[u8], tau: usize) -> Polynomial {
     const ONE: Elem = Elem::new(1);
     const MINUS_ONE: Elem = Elem::new(BaseField::Q - 1);
 
@@ -94,7 +94,7 @@ pub(crate) fn sample_in_ball(rho: &[u8], tau: usize) -> Polynomial {
 }
 
 // Algorithm 30 RejNTTPoly
-fn rej_ntt_poly(rho: &[u8], r: u8, s: u8) -> NttPolynomial {
+pub fn rej_ntt_poly(rho: &[u8], r: u8, s: u8) -> NttPolynomial {
     let mut j = 0;
     let mut ctx = G::default().absorb(rho).absorb(&[s]).absorb(&[r]);
     let mut a = NttPolynomial::default();
@@ -185,7 +185,7 @@ fn rej_bounded_poly(rho: &[u8], eta: Eta, r: u16) -> Polynomial {
 }
 
 // Algorithm 32 ExpandA
-pub(crate) fn expand_a<K: ArraySize, L: ArraySize>(rho: &[u8]) -> NttMatrix<K, L> {
+pub fn expand_a<K: ArraySize, L: ArraySize>(rho: &[u8]) -> NttMatrix<K, L> {
     NttMatrix::new(Array::from_fn(|r| {
         NttVector::new(Array::from_fn(|s| {
             rej_ntt_poly(rho, Truncate::truncate(r), Truncate::truncate(s))
@@ -200,7 +200,7 @@ pub(crate) fn expand_a<K: ArraySize, L: ArraySize>(rho: &[u8]) -> NttMatrix<K, L
 //
 //    let s1 = Vector::<K>::expand_s(rho, 0);
 //    let s2 = Vector::<L>::expand_s(rho, L::USIZE);
-pub(crate) fn expand_s<K: ArraySize>(rho: &[u8], eta: Eta, base: usize) -> Vector<K> {
+pub fn expand_s<K: ArraySize>(rho: &[u8], eta: Eta, base: usize) -> Vector<K> {
     Vector::new(Array::from_fn(|r| {
         let r = Truncate::truncate(r + base);
         rej_bounded_poly(rho, eta, r)
@@ -208,7 +208,7 @@ pub(crate) fn expand_s<K: ArraySize>(rho: &[u8], eta: Eta, base: usize) -> Vecto
 }
 
 // Algorithm 34 ExpandMask
-pub(crate) fn expand_mask<K, Gamma1>(rho: &[u8], mu: u16) -> Vector<K>
+pub fn expand_mask<K, Gamma1>(rho: &[u8], mu: u16) -> Vector<K>
 where
     K: ArraySize,
     Gamma1: MaskSamplingSize,

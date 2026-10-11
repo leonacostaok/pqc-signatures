@@ -12,6 +12,9 @@
 #![allow(clippy::too_many_arguments)]
 
 mod schemes;
+mod fasthash;
+mod stages_mldsa;
+mod stages_slhdsa;
 
 #[cfg(feature = "mimalloc")]
 #[global_allocator]

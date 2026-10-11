@@ -1,6 +1,6 @@
 # liboqs (Open Quantum Safe, C)
 
-Harness: `libs/liboqs/run.sh` (build / vectors / crossverify / bench), driver `libs/liboqs/src/bench.c`,
+Harness: `libs/liboqs/run.sh` (build / vectors / crossverify / bench / validate / stages / memory), driver `libs/liboqs/src/bench.c` (+ `stages_mldsa.c`, `stages_slh.c`, `memhook.c`),
 JSON glue `libs/liboqs/src/glue.py`, source patch `libs/liboqs/patches/slh-fasthash.patch`.
 
 ## Versions
@@ -85,6 +85,21 @@ libs/liboqs/run.sh bench --out /tmp/x.jsonl --budget-ms 200 --params ML-DSA-44 -
 `bench` truncates the output file and writes one JSON line per (variant, op, param): 18 variants x 17 params = 306 lines.
 With the default 1000 ms budget the full run takes roughly 25-30 minutes, dominated by the SLH-DSA `s` signing times
 (a single SLH-DSA-SHAKE-256s signature takes a few seconds on the portable code, and at least 3 ops are always measured).
+
+## Phase 2 subcommands
+
+```
+libs/liboqs/run.sh validate common/validation/validation.json.gz results/liboqs/validation.json
+libs/liboqs/run.sh stages --out results/liboqs/stages.jsonl [--budget-ms N] [--params a,b] [--stages decode,mu,...]
+libs/liboqs/run.sh memory --out results/liboqs/memory.jsonl [--params a,b]
+```
+
+`validate` runs all 651 ACVP/negative cases through every keygen/sign/verify variant and the two verify stage
+pipelines (`docs/liboqs/validation.md`); `stages` times the canonical verify stages with 6 variants each plus
+`total`/`total_best` (`docs/liboqs/verify-stages.md`); `memory` measures stack (painted private thread stack) and
+heap (interposed allocator) per op for every variant and stage (`docs/liboqs/memory.md`). The stage code is
+built into every flavour's driver: `src/stages_mldsa.c` (compiled per parameter set and backend against the
+vendored mldsa-native headers) and `src/stages_slh.c` (includes the vendored `slh_dsa.c` with renamed globals).
 
 ## Timing method
 

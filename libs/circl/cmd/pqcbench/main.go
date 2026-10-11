@@ -6,6 +6,9 @@
 //	crossverify --common DIR --in ARTIFACTS --out FILE
 //	bench       --common DIR --out FILE [--budget-ms N] [--params a,b] [--ops k,s,v] [--variants id,id]
 //	profile     --common DIR --out FILE.pgo [--ms N]   (CPU profile of the workload, for PGO)
+//	validate    --suite validation.json.gz --out FILE [--only-own] [--bindir DIR]
+//	stages      --common DIR --out FILE.jsonl [--budget-ms N] [--params a,b] [--stages x,y]
+//	memory      --common DIR --out FILE.jsonl [--params a,b]
 //	variants                                             (prints variant table, one per line)
 package main
 
@@ -151,8 +154,8 @@ func cmdVectors(args []string) {
 			continue
 		}
 		pk, sk := a.keygen(seed)
-		sig := a.newSigner(sk)(c.msg, make([]byte, a.sigSize))
-		ok := a.newVerifier(pk)(c.msg, sig)
+		sig := a.newSigner(sk)(c.msg, nil, make([]byte, a.sigSize))
+		ok := a.newVerifier(pk)(c.msg, nil, sig)
 		e := artifactEntry{
 			Param: a.name, PkHex: hex.EncodeToString(pk), SigHex: hex.EncodeToString(sig),
 			SkSha256: sha256hex(sk), PkSha256: sha256hex(pk), SigSha256: sha256hex(sig), SelfVerify: ok,
@@ -248,14 +251,14 @@ func cmdCrossverify(args []string) {
 				return
 			}
 			v := a.newVerifier(pk)
-			r.OK = v(c.msg, sig)
+			r.OK = v(c.msg, nil, sig)
 			if !r.OK {
 				s := "signature rejected"
 				r.Error = &s
 			}
 			t := append([]byte(nil), sig...)
 			t[len(t)/2] ^= 0x01
-			r.TamperRejected = !v(c.msg, t)
+			r.TamperRejected = !v(c.msg, nil, t)
 		}()
 		if !r.OK || !r.TamperRejected {
 			failures++
@@ -284,6 +287,12 @@ func main() {
 		cmdBench(os.Args[2:])
 	case "profile":
 		cmdProfile(os.Args[2:])
+	case "validate":
+		cmdValidate(os.Args[2:])
+	case "stages":
+		cmdStages(os.Args[2:])
+	case "memory":
+		cmdMemory(os.Args[2:])
 	case "variants":
 		for _, v := range variantTable {
 			fmt.Printf("%s\t%s\t%s\t%s\n", v.id, v.flavor, v.name, v.desc)

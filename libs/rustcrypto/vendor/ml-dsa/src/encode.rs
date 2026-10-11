@@ -26,18 +26,18 @@ where
     type EncodingSize = Length<Sum<A, B>>;
 }
 
-pub(crate) type RangeMin<A, B> = <(A, B) as RangeEncodingSize>::Min;
-pub(crate) type RangeMax<A, B> = <(A, B) as RangeEncodingSize>::Max;
-pub(crate) type RangeEncodingBits<A, B> = <(A, B) as RangeEncodingSize>::EncodingSize;
-pub(crate) type RangeEncodedPolynomialSize<A, B> =
+pub type RangeMin<A, B> = <(A, B) as RangeEncodingSize>::Min;
+pub type RangeMax<A, B> = <(A, B) as RangeEncodingSize>::Max;
+pub type RangeEncodingBits<A, B> = <(A, B) as RangeEncodingSize>::EncodingSize;
+pub type RangeEncodedPolynomialSize<A, B> =
     <RangeEncodingBits<A, B> as EncodingSize>::EncodedPolynomialSize;
-pub(crate) type RangeEncodedPolynomial<A, B> = Array<u8, RangeEncodedPolynomialSize<A, B>>;
-pub(crate) type RangeEncodedVectorSize<A, B, K> =
+pub type RangeEncodedPolynomial<A, B> = Array<u8, RangeEncodedPolynomialSize<A, B>>;
+pub type RangeEncodedVectorSize<A, B, K> =
     <RangeEncodingBits<A, B> as VectorEncodingSize<K>>::EncodedVectorSize;
-pub(crate) type RangeEncodedVector<A, B, K> = Array<u8, RangeEncodedVectorSize<A, B, K>>;
+pub type RangeEncodedVector<A, B, K> = Array<u8, RangeEncodedVectorSize<A, B, K>>;
 
 /// `BitPack` represents range-encoding logic
-pub(crate) trait BitPack<A, B> {
+pub trait BitPack<A, B> {
     type PackedSize: ArraySize;
     fn pack(&self) -> Array<u8, Self::PackedSize>;
     fn unpack(enc: &Array<u8, Self::PackedSize>) -> Self;
@@ -107,7 +107,7 @@ where
 
 #[cfg(test)]
 #[allow(clippy::integer_division_remainder_used, reason = "tests")]
-pub(crate) mod tests {
+pub mod tests {
     use super::*;
     use crate::algebra::*;
     use core::ops::Rem;

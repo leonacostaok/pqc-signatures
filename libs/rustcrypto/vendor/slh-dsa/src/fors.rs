@@ -4,9 +4,9 @@ use hybrid_array::{Array, ArraySize};
 use typenum::Unsigned;
 
 #[derive(Clone, Debug)]
-pub(crate) struct ForsMTSig<P: ForsParams> {
-    sk: Array<u8, P::N>,
-    auth: Array<Array<u8, P::N>, P::A>,
+pub struct ForsMTSig<P: ForsParams> {
+    pub sk: Array<u8, P::N>,
+    pub auth: Array<Array<u8, P::N>, P::A>,
 }
 
 impl<P: ForsParams> PartialEq for ForsMTSig<P> {
@@ -68,7 +68,7 @@ impl<P: ForsParams> TryFrom<&[u8]> for ForsMTSig<P> {
 }
 
 #[derive(Clone, Debug)]
-pub(crate) struct ForsSignature<P: ForsParams>(Array<ForsMTSig<P>, P::K>);
+pub struct ForsSignature<P: ForsParams>(pub Array<ForsMTSig<P>, P::K>);
 
 impl<P: ForsParams> PartialEq for ForsSignature<P> {
     fn eq(&self, other: &Self) -> bool {
@@ -101,9 +101,9 @@ impl<P: ForsParams> Default for ForsSignature<P> {
 }
 
 impl<P: ForsParams> ForsSignature<P> {
-    pub(crate) const SIZE: usize = P::K::USIZE * (P::A::USIZE + 1) * P::N::USIZE;
+    pub const SIZE: usize = P::K::USIZE * (P::A::USIZE + 1) * P::N::USIZE;
 
-    pub(crate) fn write_to(&self, slice: &mut [u8]) {
+    pub fn write_to(&self, slice: &mut [u8]) {
         debug_assert!(
             slice.len() == Self::SIZE,
             "Writing FORS sig to slice of incorrect length"
@@ -116,14 +116,14 @@ impl<P: ForsParams> ForsSignature<P> {
     }
 
     #[cfg(feature = "alloc")]
-    pub(crate) fn to_vec(&self) -> alloc::vec::Vec<u8> {
+    pub fn to_vec(&self) -> alloc::vec::Vec<u8> {
         let mut v = alloc::vec![0u8; Self::SIZE];
         self.write_to(&mut v);
         v
     }
 }
 
-pub(crate) trait ForsParams: HypertreeParams {
+pub trait ForsParams: HypertreeParams {
     type K: ArraySize + Eq + Debug;
     type A: ArraySize + Eq + Debug;
     type MD: ArraySize; // ceil(K*A/8)

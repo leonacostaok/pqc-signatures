@@ -73,6 +73,58 @@ def crossverify_json(source, lines_file, out):
     return 1 if bad else 0
 
 
+def cases_flat(gz, out):
+    import gzip
+    d = json.load(gzip.open(gz))
+    n = 0
+    with open(out, "w") as f:
+        for c in d["cases"]:
+            h = lambda k: (c.get(k) or "-")
+            if c["kind"] == "keygen":
+                fields = [h("seed_hex"), h("expect_pk_hex"), h("expect_sk_hex"), "1"]
+            elif c["kind"] == "siggen":
+                fields = [h("sk_hex"), h("msg_hex"), h("expect_sig_hex"), "1"]
+            else:
+                fields = [h("pk_hex"), h("msg_hex"), h("sig_hex"), "1" if c["expect"] else "0"]
+            f.write(" ".join(["case", c["id"], c["kind"], c["param"], h("ctx_hex")] + fields) + "\n")
+            n += 1
+    print(f"{n} cases")
+
+
+def validate_json(lib_version, lines_file, out):
+    results, summary = [], {}
+    for line in open(lines_file):
+        t = line.split(None, 4)
+        if len(t) < 4:
+            continue
+        cid, variant, status = t[0], t[1], t[2]
+        s = summary.setdefault(variant, {"pass": 0, "fail": 0, "skipped": 0})
+        if status == "skipped":
+            s["skipped"] += 1
+            results.append({"id": cid, "variant": variant, "pass": None, "got": None, "error": None,
+                            "skipped": " ".join(t[3:]).strip().lstrip("- ")})
+            continue
+        got = int(t[3]); err = t[4].strip() if len(t) > 4 else "-"
+        s["pass" if status == "pass" else "fail"] += 1
+        results.append({"id": cid, "variant": variant, "pass": status == "pass",
+                        "got": None if got < 0 else bool(got), "error": None if err == "-" else err})
+    json.dump({"lib": "liboqs", "lib_version": lib_version, "results": results, "summary": summary}, open(out, "w"), indent=1)
+    bad = {v: s["fail"] for v, s in summary.items() if s["fail"]}
+    print(f"validate: {len(results)} results over {len(summary)} variants; failures: {bad if bad else 'none'}")
+    return 1 if bad else 0
+
+
+def stage_ref(jsonl, stage):
+    refs = []
+    for line in open(jsonl):
+        if not line.strip():
+            continue
+        r = json.loads(line)
+        if r.get("stage") == stage and r["variant"] == f"{stage}.v0":
+            refs.append(f"{r['param']}={r['output_sha256']}")
+    print(",".join(refs))
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1]
     if cmd == "spec":
@@ -83,5 +135,11 @@ if __name__ == "__main__":
         print(entries_flat(*sys.argv[2:4]))
     elif cmd == "crossverify-json":
         sys.exit(crossverify_json(*sys.argv[2:5]))
+    elif cmd == "cases-flat":
+        cases_flat(*sys.argv[2:4])
+    elif cmd == "validate-json":
+        sys.exit(validate_json(*sys.argv[2:5]))
+    elif cmd == "stage-ref":
+        stage_ref(*sys.argv[2:4])
     else:
         raise SystemExit("usage: glue.py spec|vectors-json|entries-flat|crossverify-json ...")

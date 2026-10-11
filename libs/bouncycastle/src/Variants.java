@@ -368,13 +368,16 @@ final class Variants {
 
     /** One batch = `threads` lanes x `perLane` ops; batch size is tuned by the driver via setPerLane(). */
     abstract static class Parallel extends Runner {
+        /** lane thread stack size (0 = JVM default); set by the memory driver's stack probes */
+        static volatile long STACK = 0;
         final int threads;
         final ExecutorService pool;
         int perLane = 1;
         Parallel(int threads) {
             this.threads = threads;
             this.batch = threads;
-            pool = Executors.newFixedThreadPool(threads, r -> { Thread t = new Thread(r, "bench-lane"); t.setDaemon(true); return t; });
+            final long stack = STACK;
+            pool = Executors.newFixedThreadPool(threads, r -> { Thread t = new Thread(null, r, "bench-lane", stack); t.setDaemon(true); return t; });
         }
         void setPerLane(int k) { perLane = k; batch = threads * k; }
         abstract Object lane(int lane, int k) throws Exception;

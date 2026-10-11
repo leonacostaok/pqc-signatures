@@ -1,5 +1,5 @@
 --- ../../node_modules/@noble/post-quantum/slh-dsa.js	2026-10-11 09:55:28.310006747 +0000
-+++ build/vendor/slh-dsa.js	2026-10-11 10:13:37.265809012 +0000
++++ build/vendor/slh-dsa.js	2026-10-11 11:07:11.863045760 +0000
 @@ -27,10 +27,9 @@
   * @module
   */
@@ -171,16 +171,82 @@
              let { tree, leafIdx, md } = hashMessage(random, pk, msg, context);
              const wotsAddr = setAddr({
                  type: AddressType.WOTS,
-@@ -513,14 +597,27 @@
+@@ -513,14 +597,95 @@
                  leafIdx = Number(tree & getMaskBig(TREE_HEIGHT));
              }
              return equalBytes(root, pubRoot);
--        },
--    });
 +    }
++    // pqc-signatures fork (Phase 2): verify split into the canonical stages of CONTRACT.md §B, built
++    // from this file's own helpers. M is the formatted message M' = 0 || |ctx| || ctx || msg.
++    const stages = Object.freeze({
++        // parse sig; digest = Hmsg(R, PK.seed, PK.root, M'); split -> { digest, md, tree, leafIdx, context, ... }
++        hmsg: (publicKey, M, sig) => {
++            const [pkSeed, pubRoot] = publicCoder.decode(publicKey);
++            if (sig.length !== sigCoder.bytesLen)
++                return false;
++            const [random, forsVec, wotsVec] = sigCoder.decode(sig);
++            const context = getContext(pkSeed);
++            const digest = context.Hmsg(random, publicKey, M, hashMsgCoder.bytesLen);
++            const [md, tmpIdxTree, tmpIdxLeaf] = hashMsgCoder.decode(digest);
++            const tree = bytesToNumberBE(tmpIdxTree) & getMaskBig(TREE_BITS);
++            const leafIdx = Number(bytesToNumberBE(tmpIdxLeaf)) & getMask(LEAF_BITS);
++            return { digest, md, tree, leafIdx, forsVec, wotsVec, context, pubRoot };
++        },
++        // PK_FORS = fors_pkFromSig(SIG_FORS, md, PK.seed, ADRS)
++        fors: (context, forsVec, md, tree, leafIdx) => {
++            const wotsAddr = setAddr({ type: AddressType.WOTS, tree, keypair: leafIdx });
++            const roots = [];
++            const forsTreeAddr = setAddr({ type: AddressType.FORSTREE, keypairAddr: wotsAddr });
++            const indices = messageToIndices(md);
++            for (let i = 0; i < forsVec.length; i++) {
++                const [prf, authPath] = forsVec[i];
++                const idxOffset = i << A;
++                setAddr({ height: 0, index: indices[i] + idxOffset }, forsTreeAddr);
++                const leaf = context.thash1(prf, forsTreeAddr);
++                roots.push(copyBytes(computeRoot(leaf, indices[i], idxOffset, authPath, A, context, forsTreeAddr)));
++            }
++            const forsPkAddr = setAddr({ type: AddressType.FORSPK, keypairAddr: wotsAddr });
++            return copyBytes(context.thashN(K, concatBytes(...roots), forsPkAddr));
++        },
++        // layer addresses/indices for layers 0..d-1 given (tree, leafIdx) from hmsg
++        layers: (tree, leafIdx) => {
++            const out = [];
++            for (let i = 0; i < D; i++, tree >>= BigInt(TREE_HEIGHT)) {
++                out.push({ tree, leafIdx });
++                leafIdx = Number(tree & getMaskBig(TREE_HEIGHT));
++            }
++            return out;
++        },
++        // one WOTS+ pkFromSig: msg = the layer's input (FORS pk or previous root) -> n-byte compressed pk
++        wotsPkFromSig: (context, wots, msg, layer, tree, leafIdx) => {
++            const treeAddr = setAddr({ type: AddressType.HASHTREE, tree, layer });
++            const wotsAddr = setAddr({ type: AddressType.WOTS, subtreeAddr: treeAddr, keypair: leafIdx });
++            const wotsPkAddr = setAddr({ type: AddressType.WOTSPK, keypairAddr: wotsAddr });
++            const lengths = chainLengths(msg);
++            const wotsPk = new Uint8Array(WOTS_LEN * N);
++            for (let i = 0; i < WOTS_LEN; i++) {
++                setAddr({ chain: i }, wotsAddr);
++                const steps = W - 1 - lengths[i];
++                const start = lengths[i];
++                const out = wotsPk.subarray(i * N);
++                out.set(wots.subarray(i * N, (i + 1) * N));
++                for (let j = start; j < start + steps && j < W; j++) {
++                    setAddr({ hash: j }, wotsAddr);
++                    out.set(context.thash1(out, wotsAddr));
++                }
++            }
++            return copyBytes(context.thashN(WOTS_LEN, wotsPk, wotsPkAddr));
++        },
++        // one XMSS root from a WOTS pk (leaf) and the auth path
++        xmssRoot: (context, leaf, sigAuth, layer, tree, leafIdx) => {
++            const treeAddr = setAddr({ type: AddressType.HASHTREE, tree, layer });
++            return copyBytes(computeRoot(leaf, leafIdx, 0, sigAuth, TREE_HEIGHT, context, treeAddr));
+         },
+     });
      return Object.freeze({
          info: Object.freeze({ type: 'slh-dsa' }),
          internal,
++        stages,
          securityLevel: securityLevel,
          lengths: internal.lengths,
          keygen: internal.keygen,

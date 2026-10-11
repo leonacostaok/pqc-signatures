@@ -663,8 +663,91 @@ export function createFastSlhDsa(paramName, hashName) {
     }
     return equalBytes(root, pubRoot);
   };
+  // Phase 2 verify stages (same contract as the vendored noble `stages`)
+  const stages = {
+    hmsg: (publicKey, M, sig) => {
+      const [pkSeed, pubRoot] = publicCoder.decode(publicKey);
+      if (sig.length !== sigCoder.bytesLen) return false;
+      const [random, forsVec, wotsVec] = sigCoder.decode(sig);
+      const context = getLane(pkSeed);
+      const digest = context.Hmsg(random, publicKey, M, hashMsgCoder.bytesLen);
+      const [md, tmpIdxTree, tmpIdxLeaf] = hashMsgCoder.decode(digest);
+      const tree = bytesToNumberBE(tmpIdxTree) & getMaskBig(TREE_BITS);
+      const leafIdx = Number(bytesToNumberBE(tmpIdxLeaf)) & getMask(LEAF_BITS);
+      return { digest, md, tree, leafIdx, forsVec, wotsVec, context, pubRoot };
+    },
+    fors: (lane, forsVec, md, tree, leafIdx) => {
+      const wotsAddr = newAddr();
+      setType(wotsAddr, AddressType.WOTS);
+      setTree(wotsAddr, tree);
+      setKeypair(wotsAddr, leafIdx);
+      const forsTreeAddr = newAddr();
+      copyKeypairAddr(forsTreeAddr, wotsAddr);
+      setType(forsTreeAddr, AddressType.FORSTREE);
+      const indices = messageToIndices(md);
+      const roots = new Uint8Array(K * N);
+      const leaf = new Uint8Array(N);
+      for (let i = 0; i < forsVec.length; i++) {
+        const [prf, authPath] = forsVec[i];
+        const idxOffset = i << A;
+        setHeight(forsTreeAddr, 0);
+        setIndex(forsTreeAddr, indices[i] + idxOffset);
+        lane.F(forsTreeAddr, prf, 0, leaf, 0);
+        roots.set(computeRoot(lane, leaf, indices[i], idxOffset, authPath, A, forsTreeAddr), i * N);
+      }
+      const forsPkAddr = newAddr();
+      copyKeypairAddr(forsPkAddr, wotsAddr);
+      setType(forsPkAddr, AddressType.FORSPK);
+      const root = new Uint8Array(N);
+      lane.T(forsPkAddr, roots, K * N, root, 0);
+      return root;
+    },
+    layers: (tree, leafIdx) => {
+      const out = [];
+      for (let i = 0; i < D; i++, tree >>= BigInt(TREE_HEIGHT)) {
+        out.push({ tree, leafIdx });
+        leafIdx = Number(tree & getMaskBig(TREE_HEIGHT));
+      }
+      return out;
+    },
+    wotsPkFromSig: (lane, wots, msg, layer, tree, leafIdx) => {
+      const treeAddr = newAddr();
+      setType(treeAddr, AddressType.HASHTREE);
+      setTree(treeAddr, tree);
+      setLayer(treeAddr, layer);
+      const wotsAddr = newAddr();
+      copySubtree(wotsAddr, treeAddr);
+      setType(wotsAddr, AddressType.WOTS);
+      setKeypair(wotsAddr, leafIdx);
+      const wotsPkAddr = newAddr();
+      copyKeypairAddr(wotsPkAddr, wotsAddr);
+      setType(wotsPkAddr, AddressType.WOTSPK);
+      const lengths = chainLengths(msg);
+      const buf = new Uint8Array(WOTS_LEN * N);
+      for (let c = 0; c < WOTS_LEN; c++) {
+        setChain(wotsAddr, c);
+        const o = c * N;
+        for (let b = 0; b < N; b++) buf[o + b] = wots[o + b];
+        for (let j = lengths[c]; j < W - 1; j++) {
+          setHash(wotsAddr, j);
+          lane.F(wotsAddr, buf, o, buf, o);
+        }
+      }
+      const out = new Uint8Array(N);
+      lane.T(wotsPkAddr, buf, WOTS_LEN * N, out, 0);
+      return out;
+    },
+    xmssRoot: (lane, leaf, sigAuth, layer, tree, leafIdx) => {
+      const treeAddr = newAddr();
+      setType(treeAddr, AddressType.HASHTREE);
+      setTree(treeAddr, tree);
+      setLayer(treeAddr, layer);
+      return computeRoot(lane, leaf, leafIdx, 0, sigAuth, TREE_HEIGHT, treeAddr);
+    },
+  };
   return {
     info: { type: 'slh-dsa-fastjs' },
+    stages,
     lengths: { publicKey: publicCoder.bytesLen, secretKey: secretCoder.bytesLen, signature: sigCoder.bytesLen, seed: seedCoder.bytesLen },
     keygen,
     sign: (msg, sk, opts = {}) => {

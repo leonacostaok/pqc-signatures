@@ -45,6 +45,13 @@ export async function loadAlg(backend, param) {
   const det = { extraEntropy: false }; // deterministic: rnd = 0^32 (ML-DSA) / opt_rand = PK.seed (SLH-DSA) / zero DRBG seed (Falcon)
   return {
     family: fam,
+    raw: alg,
+    stages: alg.stages || null,
+    // with context (validation suite: FIPS external interface, pure mode)
+    signCtx: (msg, sk, ctx) => alg.sign(msg, sk, { ...det, context: ctx }),
+    verifyCtx: (sig, msg, pk, ctx) => alg.verify(sig, msg, pk, { context: ctx }),
+    signPrecomputedCtx: alg.signPrecomputed ? (msg, exp, ctx) => alg.signPrecomputed(msg, exp, { ...det, context: ctx }) : null,
+    verifyPrecomputedCtx: alg.verifyPrecomputed ? (sig, msg, exp, ctx) => alg.verifyPrecomputed(sig, msg, exp, { context: ctx }) : null,
     keygen: (seed) => alg.keygen(seed),
     sign: (msg, sk) => alg.sign(msg, sk, det),
     verify: (sig, msg, pk) => alg.verify(sig, msg, pk),

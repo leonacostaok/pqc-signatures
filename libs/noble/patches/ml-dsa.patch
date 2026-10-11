@@ -1,5 +1,5 @@
 --- ../../node_modules/@noble/post-quantum/ml-dsa.js	2026-10-11 09:55:28.307303786 +0000
-+++ build/vendor/ml-dsa.js	2026-10-11 10:11:57.136849045 +0000
++++ build/vendor/ml-dsa.js	2026-10-11 11:10:24.142237176 +0000
 @@ -9,8 +9,9 @@
   */
  /*! noble-post-quantum - MIT License (c) 2024 Paul Miller (paulmillr.com) */
@@ -205,16 +205,92 @@
              // c˜′← H (µ||w1Encode(w′1), 2λ),  Hash it; this should match c˜
              const c2 = shake256
                  .create({ dkLen: C_TILDE_BYTES })
-@@ -638,13 +692,27 @@
+@@ -638,13 +692,105 @@
                  if (polyChknorm(t, GAMMA1 - BETA))
                      return false;
              return equalBytes(cTilde, c2);
--        },
--    });
 +    }
++    // pqc-signatures fork (Phase 2): verify split into the canonical stages of CONTRACT.md §B, each
++    // built from this file's own helpers. Inputs/outputs are noble's internal representations
++    // (Int32Array polys, canonical [0,q)); M is the formatted message M' = 0 || |ctx| || ctx || msg.
++    const stages = Object.freeze({
++        decode: (publicKey, sig) => {
++            const [rho, t1] = publicCoder.decode(publicKey); // (ρ, t1) ← pkDecode(pk)
++            if (sig.length !== sigCoder.bytesLen)
++                return false;
++            const [cTilde, z, h] = sigCoder.decode(sig); // (c˜, z, h) ← sigDecode(σ)
++            if (h === false)
++                return false;
++            return { rho, t1, cTilde, z, h };
++        },
++        mu: (publicKey, M) => {
++            const tr = shake256(publicKey, { dkLen: TR_BYTES });
++            return shake256.create({ dkLen: CRH_BYTES }).update(tr).update(M).digest();
++        },
++        muFromTr: (tr, M) => shake256.create({ dkLen: CRH_BYTES }).update(tr).update(M).digest(),
++        tr: (publicKey) => shake256(publicKey, { dkLen: TR_BYTES }),
++        expandA: (rho) => {
++            const A = [];
++            const xof = XOF128(rho);
++            for (let i = 0; i < K; i++) {
++                const pv = [];
++                for (let j = 0; j < L; j++)
++                    pv.push(RejNTTPoly(xof.get(j, i)));
++                A.push(pv);
++            }
++            xof.clean();
++            return A;
++        },
++        t1Hat: (t1) => t1.map((p) => crystals.NTT.encode(polyShiftl(p.slice()))),
++        sampleInBall: SampleInBall,
++        // rows [i...] of A^ only (used by the worker-parallel ExpandA alternative)
++        expandARows: (rho, rows) => {
++            const xof = XOF128(rho);
++            const out = [];
++            for (const i of rows) {
++                const pv = [];
++                for (let j = 0; j < L; j++)
++                    pv.push(RejNTTPoly(xof.get(j, i)));
++                out.push(pv);
++            }
++            xof.clean();
++            return out;
++        },
++        // w' = NTT^-1(A o NTT(z) - NTT(c) o NTT(t1 * 2^d)); t1Hat (optional) = precomputed NTT(t1*2^d)
++        wApprox: (A, t1, cTilde, z, t1Hat = null) => {
++            const c = crystals.NTT.encode(SampleInBall(cTilde));
++            const zNtt = z.map((i) => i.slice());
++            for (let i = 0; i < L; i++)
++                crystals.NTT.encode(zNtt[i]);
++            const w = [];
++            for (let i = 0; i < K; i++) {
++                const ct12d = MultiplyNTTs(t1Hat ? t1Hat[i] : crystals.NTT.encode(polyShiftl(t1[i].slice())), c);
++                const Az = newPoly(N);
++                for (let j = 0; j < L; j++)
++                    polyAdd(Az, MultiplyNTTs(A[i][j], zNtt[j]));
++                w.push(crystals.NTT.decode(polySub(Az, ct12d)));
++            }
++            return w;
++        },
++        hintCheck: (mu, w, h, z, cTilde) => {
++            for (let i = 0; i < L; i++)
++                if (polyChknorm(z[i], GAMMA1 - BETA))
++                    return { ok: false, w1enc: null };
++            const w1 = w.map((p, i) => polyUseHint(p.slice(), h[i]));
++            const w1enc = W1Vec.encode(w1);
++            const c2 = shake256.create({ dkLen: C_TILDE_BYTES }).update(mu).update(w1enc).digest();
++            for (const t of h) {
++                const sum = t.reduce((acc, i) => acc + i, 0);
++                if (!(sum <= OMEGA))
++                    return { ok: false, w1enc };
++            }
++            return { ok: equalBytes(cTilde, c2), w1enc };
+         },
+     });
      return Object.freeze({
          info: Object.freeze({ type: 'ml-dsa' }),
          internal,
++        stages,
          securityLevel: securityLevel,
          keygen: internal.keygen,
 +        // pqc-signatures fork: precomputation APIs (pure ML-DSA, empty context only).

@@ -79,7 +79,33 @@ fetch_deps() {
 
 driver_cc() { # <build> <cc> <flags...>
   local b="$1" cc="$2"; shift 2
-  "$cc" "$@" -Wall -o "$BUILD/$b/bench" "$SRC/bench.c" -I"$BUILD/$b/include" "$BUILD/$b/lib/liboqs.a" -lcrypto -lpthread
+  local src="$DEPS"; [ "$b" = fasthash ] && src="$BUILD/src-fasthash"
+  local inc=(-I"$BUILD/$b/include" -I"$SRC")
+  local obj="$BUILD/$b/obj"; mkdir -p "$obj"
+  local objs=()
+  "$cc" "$@" -Wall -c -o "$obj/bench.o" "$SRC/bench.c" "${inc[@]}" || exit 1
+  "$cc" "$@" -c -o "$obj/memhook.o" "$SRC/memhook.c" || exit 1
+  # slhdsa-c internals: compile the vendored slh_dsa.c into the driver with its globals renamed
+  local ren=(-Dslh_alg_id=stg_slh_alg_id -Dslh_pk_sz=stg_slh_pk_sz -Dslh_sk_sz=stg_slh_sk_sz -Dslh_sig_sz=stg_slh_sig_sz
+             -Dslh_keygen_internal=stg_slh_keygen_internal -Dslh_keygen=stg_slh_keygen -Dslh_sign_internal=stg_slh_sign_internal
+             -Dslh_sign=stg_slh_sign -Dslh_verify_internal=stg_slh_verify_internal -Dslh_verify=stg_slh_verify)
+  "$cc" "$@" -Wno-unused-function -c -o "$obj/stages_slh.o" "$SRC/stages_slh.c" "${inc[@]}" \
+    -I"$src/src/sig/slh_dsa/slh_dsa_c" "-DSLH_DSA_C_SOURCE=\"$src/src/sig/slh_dsa/slh_dsa_c/slh_dsa.c\"" "${ren[@]}" || exit 1
+  objs=("$obj/bench.o" "$obj/memhook.o" "$obj/stages_slh.o")
+  # mldsa-native internals: one unit per (param set, backend) with liboqs's own flags
+  local nn be
+  for nn in 44 65 87; do
+    for be in c x86_64; do
+      local short=c extra=() cfg=config_c.h dir=ref
+      if [ "$be" = x86_64 ]; then short=x86; extra=(-mavx2 -mbmi2 -mpopcnt); cfg=config_x86_64.h; dir=x86_64; fi
+      "$cc" "$@" -std=gnu11 -Wno-unused-function -c -o "$obj/stages_mldsa_${nn}_${short}.o" "$SRC/stages_mldsa.c" "${inc[@]}" \
+        -I"$src/src/sig/ml_dsa/mldsa-native_ml-dsa-${nn}_${dir}" -I"$src/src/common/pqclean_shims" "${extra[@]}" \
+        -DMLD_CONFIG_PARAMETER_SET=$nn "-DMLD_CONFIG_FILE=\"../../integration/liboqs/$cfg\"" \
+        -DSTG_NAME=stg_mldsa_${nn}_${short} "-DSTG_BACKEND_NAME=\"$be\"" || exit 1
+      objs+=("$obj/stages_mldsa_${nn}_${short}.o")
+    done
+  done
+  "$cc" "$@" -o "$BUILD/$b/bench" "${objs[@]}" "$BUILD/$b/lib/liboqs.a" -lcrypto -lpthread || exit 1
 }
 
 cmake_build() { # <build> <srcdir> <cmake args...>
@@ -91,7 +117,8 @@ cmake_build() { # <build> <srcdir> <cmake args...>
 
 build_one() {
   local b="$1"
-  if [ -f "$BUILD/$b/.done" ] && [ "$BUILD/$b/bench" -nt "$SRC/bench.c" ] && [ "$BUILD/$b/bench" -nt "$HERE/run.sh" ]; then
+  if [ -f "$BUILD/$b/.done" ] && [ "$BUILD/$b/bench" -nt "$SRC/bench.c" ] && [ "$BUILD/$b/bench" -nt "$HERE/run.sh" ] \
+     && [ "$BUILD/$b/bench" -nt "$SRC/stages_mldsa.c" ] && [ "$BUILD/$b/bench" -nt "$SRC/stages_slh.c" ] && [ "$BUILD/$b/bench" -nt "$SRC/memhook.c" ]; then
     return
   fi
   rm -f "$BUILD/$b/.done"
@@ -203,10 +230,181 @@ cmd_bench() {
   log "wrote $out ($(wc -l < "$out") lines)"
 }
 
+
+# ---------------------------------------------------------------------------
+# verify-stage variants: id|family|build|mode|sha3|name|description
+#   mode tokens: c (portable C backend), ossl (OpenSSL SHAKE), cached (tr / A / NTT(t1*2^d) cache), oneway (1-way SHAKE128)
+#   sha3: avx512vl = re-select liboqs's AVX512VL Keccak in non-dist builds, none = keep what the build dispatches
+# ---------------------------------------------------------------------------
+STAGE_VARIANTS=(
+"decode.v0|ml-dsa|dist|-|-|lib-x86_64|liboqs mldsa-native x86_64 backend: mld_polyvecl_unpack_z (AVX2 polyz_unpack), mld_unpack_pk_t1, mld_sig_unpack_hints (hint validity check)."
+"decode.v1|ml-dsa|dist|c|-|lib-c|Same functions from the portable C backend objects of the same library (compiled generic x86-64, no AVX2 unpacking)."
+"decode.v2|ml-dsa|native|-|avx512vl|march-native|x86_64 backend from the OQS_DIST_BUILD=OFF -march=native build."
+"decode.v3|ml-dsa|clang|-|avx512vl|clang-native|x86_64 backend from the clang 18 -march=native build."
+"decode.v4|ml-dsa|pgo|-|avx512vl|gcc-pgo|x86_64 backend from the profile-guided build."
+"decode.v5|ml-dsa|lto|-|avx512vl|gcc-lto|x86_64 backend from the -flto build (driver linked with -flto)."
+"mu.v0|ml-dsa|dist|-|-|lib-shake|tr = SHAKE256(pk, 64), mu = SHAKE256(tr || 0 || |ctx| || ctx || M, 64) with liboqs's incremental SHAKE256 (XKCP, AVX512VL on this CPU), exactly as mld_H in sign.c."
+"mu.v1|ml-dsa|dist|ossl|-|openssl-shake|Both SHAKE256 calls through OpenSSL 3 EVP (EVP_shake256 + DigestFinalXOF) instead of liboqs's XKCP."
+"mu.v2|ml-dsa|dist|cached|-|cached-tr|tr = H(pk) cached per public key (pk compared bytewise on every call); only mu = H(tr, M') is recomputed."
+"mu.v3|ml-dsa|native|-|none|xkcp-avx2|Non-dist build without the AVX512VL re-selection: liboqs's XKCP AVX2 Keccak instead of the AVX512VL one."
+"mu.v4|ml-dsa|pgo|-|avx512vl|gcc-pgo|Profile-guided -march=native build."
+"mu.v5|ml-dsa|clang|-|avx512vl|clang-native|clang 18 -march=native build."
+"expandA.v0|ml-dsa|dist|-|-|lib-4way|mld_polyvec_matrix_expand: 4-way SHAKE128 (XKCP times4, AVX512VL here) + AVX2 rejection sampler, output in the backend's NTT lane order (undone for the canonical hash)."
+"expandA.v1|ml-dsa|dist|c|-|lib-c|Portable C backend: same 4-way Keccak but the C rejection sampler (no AVX2 rej_uniform)."
+"expandA.v2|ml-dsa|dist|oneway|-|oneway-shake|One SHAKE128 stream per matrix entry (mld_poly_uniform, nonce = i<<8|j) instead of 4 interleaved streams, then the backend's lane permutation."
+"expandA.v3|ml-dsa|dist|cached|-|cached-A|A^ cached per public key (rho compared on every call) and copied into the working state: measures the floor of a key-cached verifier."
+"expandA.v4|ml-dsa|native|-|none|xkcp-avx2-x4|Non-dist build without AVX512VL re-selection: XKCP AVX2 times4 Keccak for the 4-way expansion."
+"expandA.v5|ml-dsa|pgo|-|avx512vl|gcc-pgo|Profile-guided -march=native build."
+"w_approx.v0|ml-dsa|dist|-|-|lib-x86_64|NTT(z), SampleInBall + NTT(c), per row: A^_i o z^ (AVX2 pointwise-acc asm), NTT(t1_i 2^d), c^ o t1^, sub, invNTT (AVX2 asm), caddq; as in mld_sign_verify_internal."
+"w_approx.v1|ml-dsa|dist|c|-|lib-c|Same sequence from the portable C backend (C NTT / invNTT / pointwise Montgomery)."
+"w_approx.v2|ml-dsa|dist|cached|-|cached-t1hat|NTT(t1 * 2^d) precomputed and cached per public key; the stage only does NTT(z), NTT(c), the row products, subtraction and invNTT."
+"w_approx.v3|ml-dsa|native|-|avx512vl|march-native|x86_64 backend from the -march=native build."
+"w_approx.v4|ml-dsa|lto|-|avx512vl|gcc-lto|-flto build."
+"w_approx.v5|ml-dsa|clang|-|avx512vl|clang-native|clang 18 build."
+"hint_check.v0|ml-dsa|dist|-|-|lib-x86_64|||z||inf check, UseHint (AVX2 poly_use_hint), w1Encode (polyw1_pack), c~' = SHAKE256(mu || w1) with liboqs XKCP, constant-time compare."
+"hint_check.v1|ml-dsa|dist|c|-|lib-c|Portable C backend: C chknorm / use_hint / polyw1_pack."
+"hint_check.v2|ml-dsa|dist|ossl|-|openssl-shake|The challenge hash c~' through OpenSSL EVP SHAKE256 instead of liboqs XKCP."
+"hint_check.v3|ml-dsa|native|-|none|xkcp-avx2|Non-dist build: XKCP AVX2 Keccak for the challenge hash instead of AVX512VL."
+"hint_check.v4|ml-dsa|pgo|-|avx512vl|gcc-pgo|Profile-guided -march=native build."
+"hint_check.v5|ml-dsa|clang|-|avx512vl|clang-native|clang 18 build."
+"hmsg.v0|slh-dsa|dist|-|-|lib|slhdsa-c: mk_var (SHA-2 midstate of PK.seed), H_msg(R, PK.seed, PK.root, M') with its portable SHA-2/SHAKE, digest split into md / idx_tree / idx_leaf."
+"hmsg.v1|slh-dsa|fasthash|-|-|fasthash|Same code with the hash core swapped: OpenSSL assembly SHA-256/512 block functions and liboqs's AVX2 XKCP Keccak-f[1600]."
+"hmsg.v2|slh-dsa|native|-|-|march-native|slhdsa-c compiled with -march=native (gcc vectorises its Keccak / SHA-2 rounds for AVX2/AVX-512)."
+"hmsg.v3|slh-dsa|clang|-|-|clang-native|slhdsa-c compiled with clang 18 -march=native."
+"hmsg.v4|slh-dsa|pgo|-|-|gcc-pgo|Profile-guided gcc build."
+"hmsg.v5|slh-dsa|lto|-|-|gcc-lto|-flto build: hash primitives inlined into the FORS/WOTS loops."
+"fors.v0|slh-dsa|dist|-|-|lib|slhdsa-c fors_pk_from_sig: k leaf hashes (F), k*a tree hashes (H), one T_k compression."
+"fors.v1|slh-dsa|fasthash|-|-|fasthash|OpenSSL SHA-2 block functions / AVX2 Keccak for F, H, T_k."
+"fors.v2|slh-dsa|native|-|-|march-native|-march=native build."
+"fors.v3|slh-dsa|clang|-|-|clang-native|clang 18 build."
+"fors.v4|slh-dsa|pgo|-|-|gcc-pgo|Profile-guided build."
+"fors.v5|slh-dsa|lto|-|-|gcc-lto|-flto build."
+"ht_wots.v0|slh-dsa|dist|-|-|lib|d x wots_pk_from_sig (slhdsa-c): base-2^lg_w + checksum, len chains of F, one T_len; each layer fed its correct input (precomputed)."
+"ht_wots.v1|slh-dsa|fasthash|-|-|fasthash|OpenSSL SHA-2 / AVX2 Keccak primitives for the chains."
+"ht_wots.v2|slh-dsa|native|-|-|march-native|-march=native build."
+"ht_wots.v3|slh-dsa|clang|-|-|clang-native|clang 18 build."
+"ht_wots.v4|slh-dsa|pgo|-|-|gcc-pgo|Profile-guided build."
+"ht_wots.v5|slh-dsa|lto|-|-|gcc-lto|-flto build."
+"ht_auth.v0|slh-dsa|dist|-|-|lib|d x (h' auth-path H calls from the WOTS pk, slhdsa-c's xmss_pk_from_sig loop) + compare with PK.root."
+"ht_auth.v1|slh-dsa|fasthash|-|-|fasthash|OpenSSL SHA-2 / AVX2 Keccak primitives for H."
+"ht_auth.v2|slh-dsa|native|-|-|march-native|-march=native build."
+"ht_auth.v3|slh-dsa|clang|-|-|clang-native|clang 18 build."
+"ht_auth.v4|slh-dsa|pgo|-|-|gcc-pgo|Profile-guided build."
+"ht_auth.v5|slh-dsa|lto|-|-|gcc-lto|-flto build."
+"total|ml-dsa|dist|-|-|v0-pipeline|End-to-end verify assembled from the v0 stages (decode, mu, expandA, w_approx, hint_check)."
+"total|slh-dsa|dist|-|-|v0-pipeline|End-to-end verify assembled from the v0 stages (hmsg, fors, ht_wots, ht_auth)."
+"total_best|ml-dsa|dist|cached|-|best-pipeline|x86_64 backend with cached tr, cached A^ and cached NTT(t1 2^d) per public key (mu.v2 + expandA.v3 + w_approx.v2), default decode / hint_check."
+"total_best|slh-dsa|fasthash|-|-|best-pipeline|The four SLH-DSA stages from the fasthash flavour (fastest hash primitives)."
+)
+
+# ---------------------------------------------------------------------------
+# validate
+# ---------------------------------------------------------------------------
+cmd_validate() {
+  local gz="$1" out="$2"; need_build
+  $PY "$SRC/glue.py" cases-flat "$gz" "$BUILD/cases.txt" >&2
+  local lines="$BUILD/validate.txt"; : > "$lines"
+  for v in "${VARIANTS[@]}"; do
+    IFS='|' read -r id b path threads name desc <<< "$v"
+    local args=(--variant "$id" --path "$path" --threads "$threads")
+    case "$b" in native|clang|lto|pgo) args+=(--sha3 avx512vl) ;; esac
+    log "validate $id"
+    "$BUILD/$b/bench" validate "$BUILD/spec.txt" "$BUILD/cases.txt" "${args[@]}" >> "$lines"
+  done
+  # sigver cases through the stage pipelines
+  log "validate verify.total"
+  "$BUILD/dist/bench" validate "$BUILD/spec.txt" "$BUILD/cases.txt" --variant verify.total --pipeline total >> "$lines"
+  log "validate verify.total_best"
+  "$BUILD/dist/bench" validate "$BUILD/spec.txt" "$BUILD/cases.txt" --variant verify.total_best --pipeline total_best --mode cached --skip-kind sigver --skip-params "$SLH_PARAMS" >> "$lines"
+  "$BUILD/fasthash/bench" validate "$BUILD/spec.txt" "$BUILD/cases.txt" --variant verify.total_best --pipeline total_best --skip-kind sigver --skip-params "$MLD_PARAMS" >> "$lines"
+  $PY "$SRC/glue.py" validate-json "$LIBOQS_TAG" "$lines" "$out"
+}
+
+MLD_PARAMS="ML-DSA-44,ML-DSA-65,ML-DSA-87"
+SLH_PARAMS=""
+for h in SHA2 SHAKE; do for s in 128s 128f 192s 192f 256s 256f; do SLH_PARAMS="$SLH_PARAMS,SLH-DSA-$h-$s"; done; done
+SLH_PARAMS="${SLH_PARAMS#,}"
+
+# ---------------------------------------------------------------------------
+# stages
+# ---------------------------------------------------------------------------
+cmd_stages() {
+  local out="" budget=1000 params="" stages=""
+  while [ $# -gt 0 ]; do
+    case "$1" in
+      --out) out="$2"; shift 2 ;;
+      --budget-ms) budget="$2"; shift 2 ;;
+      --params) params="$2"; shift 2 ;;
+      --stages) stages="$2"; shift 2 ;;
+      *) log "unknown stages option $1"; exit 2 ;;
+    esac
+  done
+  [ -n "$out" ] || { log "--out required"; exit 2; }
+  need_build
+  mkdir -p "$(dirname "$out")"; : > "$out"
+  local gccv clangv
+  gccv="$(gcc -dumpfullversion)"; clangv="$(clang --version | head -1 | sed 's/.*version \([0-9.]*\).*/\1/')"
+  for v in "${STAGE_VARIANTS[@]}"; do
+    IFS='|' read -r id fam b mode sha3 name desc <<< "$v"
+    local stage="${id%%.*}"
+    in_csv "$stages" "$stage" || continue
+    local cc="gcc $gccv"; [ "$b" = clang ] && cc="clang $clangv"
+    local args=(--budget-ms "$budget" --stage "$stage" --family "$fam" --variant "$id" --variant-name "$name" --variant-desc "$desc" --runtime "liboqs $LIBOQS_TAG static, $cc, flavour=$b")
+    [ "$mode" != "-" ] && args+=(--mode "$mode")
+    [ "$sha3" = avx512vl ] && args+=(--sha3 avx512vl)
+    [ -n "$params" ] && args+=(--params "$params")
+    if [ "$id" != "$stage.v0" ] && [ "$stage" != total ] && [ "$stage" != total_best ]; then
+      local refs; refs="$($PY "$SRC/glue.py" stage-ref "$out" "$stage")"
+      [ -n "$refs" ] && args+=(--ref "$refs")
+    fi
+    log "stages $id ($fam/$b/mode=$mode)"
+    "$BUILD/$b/bench" stages "$BUILD/spec.txt" "${args[@]}" >> "$out"
+  done
+  log "wrote $out ($(wc -l < "$out") lines)"
+}
+
+# ---------------------------------------------------------------------------
+# memory
+# ---------------------------------------------------------------------------
+cmd_memory() {
+  local out="" params=""
+  while [ $# -gt 0 ]; do
+    case "$1" in
+      --out) out="$2"; shift 2 ;;
+      --params) params="$2"; shift 2 ;;
+      *) log "unknown memory option $1"; exit 2 ;;
+    esac
+  done
+  [ -n "$out" ] || { log "--out required"; exit 2; }
+  need_build
+  mkdir -p "$(dirname "$out")"; : > "$out"
+  local pa=(); [ -n "$params" ] && pa=(--params "$params")
+  for v in "${VARIANTS[@]}"; do
+    IFS='|' read -r id b path threads name desc <<< "$v"
+    local args=(--op "${id%%.*}" --variant "$id" --path "$path" --threads "$threads")
+    case "$b" in native|clang|lto|pgo) args+=(--sha3 avx512vl) ;; esac
+    log "memory $id"
+    "$BUILD/$b/bench" memory "$BUILD/spec.txt" "${args[@]}" "${pa[@]}" >> "$out"
+  done
+  for v in "${STAGE_VARIANTS[@]}"; do
+    IFS='|' read -r id fam b mode sha3 name desc <<< "$v"
+    local stage="${id%%.*}"
+    [ "$id" = "$stage.v0" ] || [ "$id" = total_best ] || continue
+    local args=(--stage "$stage" --variant "$id" --family "$fam")
+    [ "$mode" != "-" ] && args+=(--mode "$mode")
+    log "memory $id ($fam)"
+    "$BUILD/$b/bench" memory "$BUILD/spec.txt" "${args[@]}" "${pa[@]}" >> "$out"
+  done
+  log "wrote $out ($(wc -l < "$out") lines)"
+}
+
 case "${1:-}" in
   build) cmd_build ;;
   vectors) cmd_vectors "$2" ;;
   crossverify) cmd_crossverify "$2" "$3" ;;
   bench) shift; cmd_bench "$@" ;;
-  *) echo "usage: $0 build | vectors <out.json> | crossverify <in.json> <out.json> | bench --out <f.jsonl> [--budget-ms N] [--params a,b] [--ops a,b] [--variants a,b]" >&2; exit 2 ;;
+  validate) cmd_validate "$2" "$3" ;;
+  stages) shift; cmd_stages "$@" ;;
+  memory) shift; cmd_memory "$@" ;;
+  *) echo "usage: $0 build | vectors <out.json> | crossverify <in.json> <out.json> | bench --out <f.jsonl> [opts] | validate <suite.json.gz> <out.json> | stages --out <f.jsonl> [--budget-ms N] [--params a,b] [--stages a,b] | memory --out <f.jsonl> [--params a,b]" >&2; exit 2 ;;
 esac

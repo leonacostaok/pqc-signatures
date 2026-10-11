@@ -47,7 +47,8 @@ build() {
   mkdir -p "$BUILD/classes"
   local cp=""
   for a in "${ARTIFACTS[@]}"; do cp="$cp:$DEPS/$a-$BC_VERSION.jar"; done
-  "$JAVAC" --release 21 -Xlint:-options -d "$BUILD/classes" -cp "${cp#:}" "$HERE"/src/*.java
+  find "$HERE/src" -name '*.java' > "$BUILD/sources.txt"
+  "$JAVAC" --release 21 -Xlint:-options -d "$BUILD/classes" -cp "${cp#:}" @"$BUILD/sources.txt"
   touch "$stamp"
   echo "built libs/bouncycastle (bcprov-jdk18on $BC_VERSION, $("$JAVA" -version 2>&1 | head -1))" >&2
 }
@@ -63,5 +64,8 @@ case "$cmd" in
   vectors) build >/dev/null; run_java vectors "$@" ;;
   crossverify) build >/dev/null; run_java crossverify "$@" ;;
   bench) build >/dev/null; run_java bench "$@" ;;
-  *) echo "usage: $0 build | vectors <out.json> | crossverify <artifacts.json> <out.json> | bench --out <f.jsonl> [--budget-ms N] [--params a,b] [--ops keygen,sign,verify] [--variants id,id]" >&2; exit 2 ;;
+  validate) build >/dev/null; run_java validate "$@" ;;
+  stages) build >/dev/null; run_java stages "$@" ;;
+  memory) build >/dev/null; run_java memory "$@" ;;
+  *) echo "usage: $0 build | vectors <out.json> | crossverify <artifacts.json> <out.json> | bench --out <f.jsonl> [--budget-ms N] [--params a,b] [--ops keygen,sign,verify] [--variants id,id] | validate <validation.json.gz> <out.json> | stages --out <f.jsonl> [--budget-ms N] [--params a,b] [--stages x,y] | memory --out <f.jsonl> [--params a,b]" >&2; exit 2 ;;
 esac

@@ -7,19 +7,19 @@ use module_lattice::{Field, Truncate};
 
 module_lattice::define_field!(BaseField, u32, u64, u128, 8_380_417);
 
-pub(crate) type Int = <BaseField as Field>::Int;
+pub type Int = <BaseField as Field>::Int;
 
-pub(crate) type Elem = module_lattice::Elem<BaseField>;
-pub(crate) type Polynomial = module_lattice::Polynomial<BaseField>;
-pub(crate) type Vector<K> = module_lattice::Vector<BaseField, K>;
-pub(crate) type NttPolynomial = module_lattice::NttPolynomial<BaseField>;
-pub(crate) type NttVector<K> = module_lattice::NttVector<BaseField, K>;
-pub(crate) type NttMatrix<K, L> = module_lattice::NttMatrix<BaseField, K, L>;
+pub type Elem = module_lattice::Elem<BaseField>;
+pub type Polynomial = module_lattice::Polynomial<BaseField>;
+pub type Vector<K> = module_lattice::Vector<BaseField, K>;
+pub type NttPolynomial = module_lattice::NttPolynomial<BaseField>;
+pub type NttVector<K> = module_lattice::NttVector<BaseField, K>;
+pub type NttMatrix<K, L> = module_lattice::NttMatrix<BaseField, K, L>;
 
 // We require modular reduction for three moduli: q, 2^d, and 2 * gamma2.  All three of these are
 // greater than sqrt(q), which means that a number reduced mod q will always be less than M^2,
 // which means that barrett reduction will work.
-pub(crate) trait BarrettReduce: Unsigned {
+pub trait BarrettReduce: Unsigned {
     const SHIFT: usize;
     const MULTIPLIER: u64;
 
@@ -45,7 +45,7 @@ where
     const MULTIPLIER: u64 = (1 << Self::SHIFT) / M::U64;
 }
 
-pub(crate) trait Decompose {
+pub trait Decompose {
     fn decompose<TwoGamma2: Unsigned>(self) -> (Elem, Elem);
 }
 
@@ -54,7 +54,7 @@ pub(crate) trait Decompose {
 /// This trait provides a constant-time alternative to the hardware division
 /// instruction, which has variable timing based on operand values.
 /// Uses Barrett reduction to compute `x / M` where M is a compile-time constant.
-pub(crate) trait ConstantTimeDiv: Unsigned {
+pub trait ConstantTimeDiv: Unsigned {
     /// Bit shift for Barrett reduction, chosen to provide sufficient precision
     const CT_DIV_SHIFT: usize;
     /// Precomputed multiplier: ceil(2^SHIFT / M)
@@ -117,7 +117,7 @@ impl Decompose for Elem {
 }
 
 #[allow(clippy::module_name_repetitions)] // I can't think of a better name
-pub(crate) trait AlgebraExt: Sized {
+pub trait AlgebraExt: Sized {
     fn mod_plus_minus<M: Unsigned>(&self) -> Self;
     fn infinity_norm(&self) -> Int;
     fn power2round(&self) -> (Self, Self);

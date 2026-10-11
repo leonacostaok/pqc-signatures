@@ -25,7 +25,7 @@ use pkcs8::{
 
 // NewTypes for ensuring hash argument order correctness
 #[derive(Clone, PartialEq, Eq, Debug)]
-pub(crate) struct SkSeed<N: ArraySize>(pub(crate) Array<u8, N>);
+pub struct SkSeed<N: ArraySize>(pub Array<u8, N>);
 impl<N: ArraySize> AsRef<[u8]> for SkSeed<N> {
     fn as_ref(&self) -> &[u8] {
         self.0.as_ref()
@@ -39,7 +39,7 @@ impl<N: ArraySize> From<&[u8]> for SkSeed<N> {
     }
 }
 impl<N: ArraySize> SkSeed<N> {
-    pub(crate) fn new<R: CryptoRng + ?Sized>(rng: &mut R) -> Self {
+    pub fn new<R: CryptoRng + ?Sized>(rng: &mut R) -> Self {
         let mut bytes = Array::<u8, N>::default();
         rng.fill_bytes(bytes.as_mut_slice());
         Self(bytes)
@@ -47,7 +47,7 @@ impl<N: ArraySize> SkSeed<N> {
 }
 
 #[derive(Clone, PartialEq, Eq, Debug)]
-pub(crate) struct SkPrf<N: ArraySize>(pub(crate) Array<u8, N>);
+pub struct SkPrf<N: ArraySize>(pub Array<u8, N>);
 impl<N: ArraySize> AsRef<[u8]> for SkPrf<N> {
     fn as_ref(&self) -> &[u8] {
         self.0.as_ref()
@@ -61,7 +61,7 @@ impl<N: ArraySize> From<&[u8]> for SkPrf<N> {
     }
 }
 impl<N: ArraySize> SkPrf<N> {
-    pub(crate) fn new<R: CryptoRng + ?Sized>(rng: &mut R) -> Self {
+    pub fn new<R: CryptoRng + ?Sized>(rng: &mut R) -> Self {
         let mut bytes = Array::<u8, N>::default();
         rng.fill_bytes(bytes.as_mut_slice());
         Self(bytes)
@@ -71,9 +71,9 @@ impl<N: ArraySize> SkPrf<N> {
 /// A `SigningKey` allows signing messages with a fixed parameter set
 #[derive(Clone, Debug)]
 pub struct SigningKey<P: ParameterSet> {
-    pub(crate) sk_seed: SkSeed<P::N>,
-    pub(crate) sk_prf: SkPrf<P::N>,
-    pub(crate) verifying_key: VerifyingKey<P>,
+    pub sk_seed: SkSeed<P::N>,
+    pub sk_prf: SkPrf<P::N>,
+    pub verifying_key: VerifyingKey<P>,
 }
 
 impl<P: ParameterSet> PartialEq for SigningKey<P> {

@@ -21,7 +21,7 @@ pub trait VerifyingKeyLen {
 }
 
 #[derive(Clone, Debug, PartialEq, Eq)]
-pub(crate) struct PkSeed<N: ArraySize>(pub(crate) Array<u8, N>);
+pub struct PkSeed<N: ArraySize>(pub Array<u8, N>);
 impl<N: ArraySize> AsRef<[u8]> for PkSeed<N> {
     fn as_ref(&self) -> &[u8] {
         self.0.as_ref()
@@ -34,7 +34,7 @@ impl<N: ArraySize> From<&[u8]> for PkSeed<N> {
     }
 }
 impl<N: ArraySize> PkSeed<N> {
-    pub(crate) fn new<R: CryptoRng + ?Sized>(rng: &mut R) -> Self {
+    pub fn new<R: CryptoRng + ?Sized>(rng: &mut R) -> Self {
         let mut bytes = Array::<u8, N>::default();
         rng.fill_bytes(bytes.as_mut_slice());
         Self(bytes)
@@ -46,8 +46,8 @@ impl<N: ArraySize> PkSeed<N> {
 /// `SigningKey`
 #[derive(Debug)]
 pub struct VerifyingKey<P: ParameterSet> {
-    pub(crate) pk_seed: PkSeed<P::N>,
-    pub(crate) pk_root: Array<u8, P::N>,
+    pub pk_seed: PkSeed<P::N>,
+    pub pk_root: Array<u8, P::N>,
 }
 
 impl<P: ParameterSet> PartialEq for VerifyingKey<P> {

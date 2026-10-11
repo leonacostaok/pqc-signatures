@@ -99,6 +99,21 @@ to several processes, but each process' list was chosen for that process:
 `v2`/`v3`(keygen) have no Falcon implementation, so those (variant, param) rows are skipped
 (the contract allows skipping unsupported combinations); every other variant covers all 17 sets.
 
+## Phase 2 subcommands
+
+| command | what | docs |
+|---|---|---|
+| `run.sh validate <suite.json.gz> <out.json> [--params] [--variants] [--skip-slow]` | every case of the shared suite through every variant of its process (+ the stage pipelines) | [validation.md](validation.md) |
+| `run.sh stages --out <jsonl> [--budget-ms] [--params] [--stages] [--variants]` | verify split into the canonical stages, v0 = noble's internals via the vendored `stages` entry points, alternatives per stage, `total` / `total_best` | [verify-stages.md](verify-stages.md) |
+| `run.sh memory --out <jsonl> [--params] [--variants] [--no-stages] [--no-heap]` | peak stack per op (in-process recursion probe calibrated per runtime) and heap (V8 sampling profiler) for every variant and every stage v0 | [memory.md](memory.md) |
+
+Phase 2 sources: `src/stage-impls.mjs` (stage variant table + stand-alone alternatives),
+`src/stage-lib.mjs` (pipelines, canonical outputs, per-variant stage runners), `src/stages.mjs` /
+`src/stages-one.mjs` / `src/stage-worker.mjs`, `src/validate.mjs` / `src/validate-one.mjs` /
+`src/validate-lib.mjs` / `src/validate-worker.mjs`, `src/memory.mjs` / `src/mem-one.mjs`. The vendored
+patches gained a `stages` object (ML-DSA: `decode`, `mu`, `expandA`, `wApprox`, `hintCheck`, …;
+SLH-DSA: `hmsg`, `fors`, `wotsPkFromSig`, `xmssRoot`, …) built from the same closures `verify` uses.
+
 ## Running
 
 ```bash
@@ -107,6 +122,9 @@ libs/noble/run.sh vectors results/noble/artifacts.json
 libs/noble/run.sh crossverify results/noble/artifacts.json results/noble/crossverify-noble.json
 libs/noble/run.sh bench --out results/noble/bench.jsonl                 # full run, 1 s budget
 libs/noble/run.sh bench --out x.jsonl --budget-ms 200 --params ML-DSA-65 --ops sign --variants sign.v2,sign.v3
+libs/noble/run.sh validate common/validation/validation.json.gz results/noble/validation.json
+libs/noble/run.sh stages --out results/noble/stages.jsonl
+libs/noble/run.sh memory --out results/noble/memory.jsonl
 ```
 
 Timing follows the contract: warm-up ≥ 200 ms and ≥ 20 ops (capped at 3 s so multi-second ops run

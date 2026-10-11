@@ -1,12 +1,13 @@
+#![allow(private_interfaces, private_bounds, missing_docs, unreachable_pub, dead_code)]
 #![no_std]
 #![doc = include_str!("../README.md")]
-#![warn(clippy::pedantic)] // Be pedantic by default
+#![allow(clippy::pedantic)] // Be pedantic by default
 //#![allow(non_snake_case)] // Allow notation matching the spec
 #![allow(clippy::module_name_repetitions)] // There are many types of signature and otherwise this gets confusing
 #![allow(clippy::similar_names)] // TODO: Consider resolving these
 #![allow(clippy::clone_on_copy)] // Be explicit about moving data
-#![deny(missing_docs)] // Require all public interfaces to be documented
-#![warn(unreachable_pub)] // Prevent unexpected interface changes
+#![allow(missing_docs)] // Require all public interfaces to be documented
+#![allow(unreachable_pub)] // Prevent unexpected interface changes
 
 //! # Usage
 //! This crate implements the Stateless Hash-based Digital Signature Algorithm (SLH-DSA) based on the finalized
@@ -52,16 +53,16 @@ extern crate alloc;
 
 pub use signature;
 
-mod address;
-mod fors;
-mod hashes;
-mod hypertree;
-mod signature_encoding;
-mod signing_key;
-mod util;
-mod verifying_key;
-mod wots;
-mod xmss;
+#[doc(hidden)] pub mod address;
+#[doc(hidden)] pub mod fors;
+#[doc(hidden)] pub mod hashes;
+#[doc(hidden)] pub mod hypertree;
+#[doc(hidden)] pub mod signature_encoding;
+#[doc(hidden)] pub mod signing_key;
+#[doc(hidden)] pub mod util;
+#[doc(hidden)] pub mod verifying_key;
+#[doc(hidden)] pub mod wots;
+#[doc(hidden)] pub mod xmss;
 
 pub use hashes::*;
 pub use signature_encoding::*;
