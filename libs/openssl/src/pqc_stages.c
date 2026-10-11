@@ -1305,6 +1305,11 @@ int stage_prepare(stage_ctx_t *s)
     return memcmp(node, t->pk_root, t->n) == 0;
 }
 
+int stage_exec(stage_ctx_t *s, int sidx, int method)
+{
+    return stage_op(s, sidx, method);
+}
+
 int stage_run(stage_ctx_t *s, int sidx, int method, char sha[65])
 {
     int ok = stage_op(s, sidx, method);

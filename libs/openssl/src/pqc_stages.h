@@ -43,6 +43,8 @@ int stage_prepare(stage_ctx_t *s);
  * canonical SHA-256 (hex) of its output. Returns 1 on success, 0 if the stage
  * reported failure/rejection. */
 int stage_run(stage_ctx_t *s, int sidx, int method, char sha[65]);
+/* same without computing the canonical hash (for memory measurements) */
+int stage_exec(stage_ctx_t *s, int sidx, int method);
 /* Full verification pipeline with one method per stage. 1 = valid, 0 = invalid. */
 int stage_pipeline(stage_ctx_t *s, const int *methods);
 /* the method of variant v0 for stage sidx of the family */

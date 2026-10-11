@@ -87,7 +87,8 @@ static void *stack_tramp(void *a)
 {
     run_arg_t *r = a;
     volatile uint8_t marker = 0;
-    uint8_t *sp = (uint8_t *)&marker;
+    volatile uintptr_t spv = (uintptr_t)&marker;
+    uint8_t *sp = (uint8_t *)spv;
     /* warm-up inside this thread: per-thread lazy initialisations of OpenSSL
      * (thread-local error state, RNG child contexts, ...) and the deeper
      * frames of the pthread start-up code must not be attributed to the op */
@@ -156,11 +157,11 @@ static void emit_mem(FILE *out, const char *variant, const char *op, const char 
 
 static int worker_cb(void *a) { return worker_op((worker_t *)a); }
 
-typedef struct { stage_ctx_t *s; int sidx, method; char sha[65]; } stage_arg_t;
+typedef struct { stage_ctx_t *s; int sidx, method; } stage_arg_t;
 static int stage_cb(void *a)
 {
     stage_arg_t *x = a;
-    return stage_run(x->s, x->sidx, x->method, x->sha);
+    return stage_exec(x->s, x->sidx, x->method);
 }
 typedef struct { stage_ctx_t *s; const int *methods; } pipe_arg_t;
 static int pipe_cb(void *a)
@@ -211,7 +212,7 @@ int cmd_memory(vectors_t *V, const char *out_path, const char *params)
             } else {
                 int ns = stage_ctx_nstages(sc);
                 for (int si = 0; si < ns; si++) {
-                    stage_arg_t a = { sc, si, 0, "" };
+                    stage_arg_t a = { sc, si, 0 };
                     stage_cb(&a); /* warm-up */
                     int ret; uint64_t alloc, peak;
                     size_t stack = measure(stage_cb, &a, &ret, &alloc, &peak);
