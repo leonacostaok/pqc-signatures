@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "message_hex": "c24c168f5689e2c0c12f003d82bd42aa3afb44c7befb14eb5a9f5695fe28f863a91b1e575acdab3f3bd86cf7c475000a0f36c63fa97c5112f3f70a7bdc3db907",
+  "context_hex": "",
+  "notes": [
+    "ML-DSA: seed = xi (32 bytes) for ML-DSA.KeyGen_internal (FIPS 204 Alg 6). Pure ML-DSA, empty context, deterministic signing (rnd = 32 zero bytes).",
+    "SLH-DSA: seed = SK.seed || SK.prf || PK.seed (3n bytes) for slh_keygen_internal (FIPS 205 Alg 18). Pure SLH-DSA, empty context, deterministic signing (opt_rand = PK.seed).",
+    "Falcon: not standardized yet (FN-DSA draft); seed formats differ per library, so Falcon is cross-verify only (no byte match expected)."
+  ],
+  "params": [
+    {
+      "name": "ML-DSA-44",
+      "family": "ml-dsa",
+      "seed_hex": "77db69d59ce0aee8dc3e78d1b431224bc65dd1dec670b9a7c8e41d1f5adb3f10",
+      "byte_match_expected": true
+    },
+    {
+      "name": "ML-DSA-65",
+      "family": "ml-dsa",
+      "seed_hex": "d7972d6c14b00a0900960fa46815903688ad5cb18c109a3bb9f2467c871ea255",
+      "byte_match_expected": true
+    },
+    {
+      "name": "ML-DSA-87",
+      "family": "ml-dsa",
+      "seed_hex": "9b053359b8759c373f7d08f9e4d0bc71c845af9a02bab972ea89281819652fee",
+      "byte_match_expected": true
+    },
+    {
+      "name": "SLH-DSA-SHA2-128s",
+      "family": "slh-dsa",
+      "seed_hex": "2f5ff9f106c456cbf7d92ce48aae1982c65353275037fba338b60e88666e2b816342c8706652de1ccaf6a868a911f148",
+      "byte_match_expected": true
+    },
+    {
+      "name": "SLH-DSA-SHA2-128f",
+      "family": "slh-dsa",
+      "seed_hex": "2fb1fe39a764d917eaec3e40689146aad2283f6ff2740381c3018fa225cbce758ca23c9fd35470a8e279fc24dc5c7723",
+      "byte_match_expected": true
+    },
+    {
+      "name": "SLH-DSA-SHA2-192s",
+      "family": "slh-dsa",
+      "seed_hex": "54f041931067c1050668aadbcc562a160e246c6ceb235bcd8690c19d1fd37666cd54c3482e3baae676a111426729111425a7b1ceff2b5ea9f50a30a349d0a02bc4bc41ce3a1e3f3e",
+      "byte_match_expected": true
+    },
+    {
+      "name": "SLH-DSA-SHA2-192f",
+      "family": "slh-dsa",
+      "seed_hex": "193eee9eba27da9e4bcdfc27acae5cef1c63a2b6dcfa51fbcaad9500bbc877970298087ad6ead8f783d3ed732ecdca2d0f3a7a0e7c2e8c977781aebbc86582f4917edbd7a6aaa389",
+      "byte_match_expected": true
+    },
+    {
+      "name": "SLH-DSA-SHA2-256s",
+      "family": "slh-dsa",
+      "seed_hex": "076a55a76c41224ea491192d9fd13bd09d77123e8c41e77669b07fc250bf5fc687a9da63e6de20294cf918c434c0bf0f16bae2a8a33b190e62e3d6edf4e441632ab091609a49c3fef6d926bebc80f57dba5d69a2c144201c66f93a3c8832731d",
+      "byte_match_expected": true
+    },
+    {
+      "name": "SLH-DSA-SHA2-256f",
+      "family": "slh-dsa",
+      "seed_hex": "ede40b83578c81f91739496876072c32f399d192238de5196c343dfcf78ac1f83a3fd96089559bd9eb2aa60030eb334b882d94dd62849f32e293e841a6cfc03be1f569b889e57c46946c3603367571f4dc33faf93a91c0df65919a7637047c57",
+      "byte_match_expected": true
+    },
+    {
+      "name": "SLH-DSA-SHAKE-128s",
+      "family": "slh-dsa",
+      "seed_hex": "67f9d480345573a4be4dfb9ece5d81f70c079850f6a08285e17ce889368a7a3a6fbe60b30d966843f7a206a2f5d9ef10",
+      "byte_match_expected": true
+    },
+    {
+      "name": "SLH-DSA-SHAKE-128f",
+      "family": "slh-dsa",
+      "seed_hex": "494531c9d99e6e49f692af2ed9756b306087fc92f15001513f9558840f9be620f9ca47a44f46c123801b2eb3d9aab452",
+      "byte_match_expected": true
+    },
+    {
+      "name": "SLH-DSA-SHAKE-192s",
+      "family": "slh-dsa",
+      "seed_hex": "6c4826bfc26b78c5fcbc987be1b814804363ceef25d4974ad12b522df0329d76cddcd5c1b37677a0969f484e927a91d25705f60f8449f7b3f104d78dec64d0ebe9d495574190cfea",
+      "byte_match_expected": true
+    },
+    {
+      "name": "SLH-DSA-SHAKE-192f",
+      "family": "slh-dsa",
+      "seed_hex": "85c503fd075e4f4455a6b16b0eb33a0f738f8d7c15ecbdd89954645cd5512b96cf762a07d2740dfdd0c1ffe13847079ef24b70f15240eb5609cf71cfb74208c6026477e47a12689e",
+      "byte_match_expected": true
+    },
+    {
+      "name": "SLH-DSA-SHAKE-256s",
+      "family": "slh-dsa",
+      "seed_hex": "8de710f9726975699a2556e9e57ef5ad42be44e73de3f609a05d1633ddd8ed9882cf8fe8247b83b0894cbf328997df04c56a991f5547ff565e915734b14c4aa25e5c95ca3041024d8c34fe1f778b8796c74d2e596735715adb090944d0ce044a",
+      "byte_match_expected": true
+    },
+    {
+      "name": "SLH-DSA-SHAKE-256f",
+      "family": "slh-dsa",
+      "seed_hex": "8cb2b5e672892d9cc919b3c43b7f86ae35fb0a7642bf4b9dcf08fb1e1f12cd01d26cfce0656d871065692fe17defba748f833c487dcac6d4d95f1a24605c445930f894be3f242c919e4ea051c55d8b2295534cdc85bcdf03bcdee65d3e4a151d",
+      "byte_match_expected": true
+    },
+    {
+      "name": "Falcon-512",
+      "family": "falcon",
+      "seed_hex": "7e32afc46043ff58adf0e23edfa9e50dc708555152cd8d4803fe7bbddc83dc1d045372d9cf4c2b13be5513ada3694ff8",
+      "byte_match_expected": false
+    },
+    {
+      "name": "Falcon-1024",
+      "family": "falcon",
+      "seed_hex": "0b2f395bedda3a06a978e9a31e1cbce78dcb8e40c7e8a21888385af6f02c2ed73859f55a72f21a6b75d1744c5f2d7626",
+      "byte_match_expected": false
+    }
+  ]
+}

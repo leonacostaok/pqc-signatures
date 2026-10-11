@@ -1,0 +1,8 @@
+node_modules/
+libs/*/build/
+libs/*/target/
+libs/*/deps/
+libs/*/out/
+*.o
+*.class
+results/*/artifacts*.json
