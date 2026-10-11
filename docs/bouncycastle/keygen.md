@@ -25,10 +25,10 @@ accessor, so its PKCS#8 encoding is compared to a precomputed expected encoding 
 
 ## Preliminary conclusions (dev run, noisy shared box; final numbers come from the quiet run)
 
-* ML-DSA keygen is ~100 us in BC, so the fixed per-call overhead of the JCA layer is visible: `internal-seed` and
-  `jca-reuse` were ~15-20 % faster than a fresh `KeyPairGenerator.getInstance` per op, and `parallelgc` gained a
-  similar amount by making the PolyVec allocations cheaper. `lightweight` with a fresh generator object was no
-  better than JCA, i.e. the cost is in the per-op provider lookup/initialisation, not in the key wrapper objects.
+* ML-DSA keygen is ~100 us in BC, so the fixed per-call overhead of the JCA layer is visible: `internal-seed`, `jca-reuse`,
+  `lightweight` and `parallelgc` all came out 3-20 % ahead of a fresh `KeyPairGenerator.getInstance` per op in
+  different dev runs (the ordering between them flips from run to run, i.e. it is within the noise of the shared
+  box); the quiet run has to decide which of provider lookup, SecureRandom indirection and allocation cost matters.
 * SLH-DSA keygen (2-160 ms, pure hashing) is insensitive to all of this: every single-threaded variant is within
   noise of the baseline; only more cores help (`parallel`), and on the shared box that variant could not get its
   4 cores so its dev numbers are meaningless.
@@ -44,174 +44,174 @@ Parallel variants: wall = batch wall / batch size, i.e. throughput-equivalent pe
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 1170 | 120.2 | 255.8 | 196.6 | 1.15 | 5,847.6 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 1278 | 102.3 | 197.4 | 125.2 | 0.80 | 6,387.9 | 1.17x | True |
-| keygen.v2 `lightweight` | 1695 | 99.7 | 229.7 | 118.0 | 1.00 | 8,467.7 | 1.20x | True |
-| keygen.v3 `internal-seed` | 1669 | 95.3 | 145.0 | 107.8 | 0.89 | 8,254.0 | 1.26x | True |
-| keygen.v4 `parallel` (t=4) | 1600 | 115.0 | 215.9 | 131.2 | 1.00 | 7,609.8 | 1.05x | True |
-| keygen.v5 `parallelgc` | 1039 | 96.6 | 172.5 | 211.7 | 1.10 | 5,193.0 | 1.24x | True |
+| keygen.v0 `jca` | 1576 | 99.4 | 229.4 | 177.7 | 1.40 | 7,876.8 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 1735 | 97.0 | 200.0 | 115.3 | 1.00 | 8,672.9 | 1.03x | True |
+| keygen.v2 `lightweight` | 1527 | 96.0 | 233.8 | 124.4 | 0.95 | 7,628.4 | 1.04x | True |
+| keygen.v3 `internal-seed` | 1639 | 97.6 | 197.0 | 122.0 | 1.00 | 8,192.2 | 1.02x | True |
+| keygen.v4 `parallel` (t=4) | 2496 | 77.2 | 133.9 | 132.2 | 1.61 | 12,193.8 | 1.29x | True |
+| keygen.v5 `parallelgc` | 1297 | 153.2 | 210.4 | 285.3 | 1.85 | 6,482.7 | 0.65x | True |
 
 ### ML-DSA-65
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 809 | 209.6 | 386.6 | 234.9 | 0.95 | 4,042.3 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 1016 | 161.7 | 273.4 | 187.0 | 0.95 | 5,079.4 | 1.30x | True |
-| keygen.v2 `lightweight` | 774 | 262.0 | 335.7 | 245.5 | 0.95 | 3,869.4 | 0.80x | True |
-| keygen.v3 `internal-seed` | 659 | 160.5 | 229.2 | 197.3 | 0.65 | 3,293.2 | 1.31x | True |
-| keygen.v4 `parallel` (t=4) | 896 | 189.2 | 363.4 | 234.4 | 1.03 | 4,401.3 | 1.11x | True |
-| keygen.v5 `parallelgc` | 1103 | 159.0 | 247.7 | 253.9 | 1.40 | 5,511.5 | 1.32x | True |
+| keygen.v0 `jca` | 571 | 191.1 | 481.2 | 385.3 | 1.09 | 2,822.8 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 1019 | 164.3 | 368.9 | 206.1 | 1.05 | 5,091.6 | 1.16x | True |
+| keygen.v2 `lightweight` | 1123 | 161.8 | 229.6 | 178.1 | 1.00 | 5,610.4 | 1.18x | True |
+| keygen.v3 `internal-seed` | 1067 | 160.2 | 233.5 | 187.4 | 1.00 | 5,333.1 | 1.19x | True |
+| keygen.v4 `parallel` (t=4) | 1408 | 139.5 | 184.6 | 227.3 | 1.55 | 6,834.6 | 1.37x | True |
+| keygen.v5 `parallelgc` | 1113 | 157.3 | 251.2 | 170.7 | 0.95 | 5,562.9 | 1.21x | True |
 
 ### ML-DSA-87
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 612 | 281.2 | 499.6 | 408.5 | 1.25 | 3,054.7 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 547 | 277.6 | 362.3 | 310.8 | 0.85 | 2,734.8 | 1.01x | True |
-| keygen.v2 `lightweight` | 592 | 292.0 | 540.0 | 320.9 | 0.95 | 2,956.8 | 0.96x | True |
-| keygen.v3 `internal-seed` | 403 | 283.3 | 544.2 | 347.4 | 0.70 | 2,012.1 | 0.99x | True |
-| keygen.v4 `parallel` (t=4) | 720 | 282.7 | 322.1 | 291.7 | 1.00 | 3,416.1 | 0.99x | True |
-| keygen.v5 `parallelgc` | 614 | 260.5 | 435.6 | 293.2 | 0.88 | 3,013.2 | 1.08x | True |
+| keygen.v0 `jca` | 604 | 281.3 | 555.4 | 314.6 | 0.95 | 3,016.5 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 680 | 276.3 | 327.0 | 294.1 | 1.00 | 3,398.8 | 1.02x | True |
+| keygen.v2 `lightweight` | 691 | 278.4 | 320.4 | 289.4 | 1.00 | 3,450.4 | 1.01x | True |
+| keygen.v3 `internal-seed` | 512 | 314.2 | 587.6 | 390.6 | 1.00 | 2,558.6 | 0.90x | True |
+| keygen.v4 `parallel` (t=4) | 768 | 276.3 | 326.9 | 468.8 | 1.75 | 3,735.4 | 1.02x | True |
+| keygen.v5 `parallelgc` | 703 | 268.5 | 342.9 | 284.5 | 1.00 | 3,513.9 | 1.05x | True |
 
 ### SLH-DSA-SHA2-128s
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 3 | 138,848.9 | 141,870.4 | 133,333.3 | 0.97 | 7.3 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 3 | 152,283.4 | 152,914.7 | 133,333.3 | 0.92 | 6.9 | 0.91x | True |
-| keygen.v2 `lightweight` | 3 | 134,811.3 | 201,621.5 | 153,333.3 | 0.99 | 6.4 | 1.03x | True |
-| keygen.v3 `internal-seed` | 3 | 142,009.3 | 146,387.8 | 133,333.3 | 0.94 | 7.1 | 0.98x | True |
-| keygen.v4 `parallel` (t=4) | 4 | 162,624.0 | 162,624.0 | 150,000.0 | 0.92 | 6.1 | 0.85x | True |
-| keygen.v5 `parallelgc` | 3 | 129,935.6 | 135,189.5 | 130,000.0 | 1.00 | 7.7 | 1.07x | True |
+| keygen.v0 `jca` | 3 | 142,530.3 | 145,407.0 | 140,000.0 | 1.01 | 7.2 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 3 | 124,765.7 | 125,283.1 | 126,666.7 | 1.01 | 8.0 | 1.14x | True |
+| keygen.v2 `lightweight` | 3 | 161,617.5 | 173,798.5 | 143,333.3 | 0.92 | 6.4 | 0.88x | True |
+| keygen.v3 `internal-seed` | 3 | 146,283.1 | 146,752.4 | 133,333.3 | 0.96 | 7.2 | 0.97x | True |
+| keygen.v4 `parallel` (t=4) | 4 | 92,392.9 | 92,392.9 | 175,000.0 | 1.89 | 10.8 | 1.54x | True |
+| keygen.v5 `parallelgc` | 3 | 125,248.7 | 131,684.8 | 126,666.7 | 1.00 | 7.9 | 1.14x | True |
 
 ### SLH-DSA-SHA2-128f
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 98 | 1,995.4 | 2,277.1 | 2,142.9 | 1.04 | 486.1 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 86 | 2,033.5 | 2,631.9 | 2,209.3 | 0.95 | 428.3 | 0.98x | True |
-| keygen.v2 `lightweight` | 70 | 3,034.4 | 3,632.5 | 2,714.3 | 0.95 | 349.2 | 0.66x | True |
-| keygen.v3 `internal-seed` | 88 | 2,036.7 | 2,792.8 | 2,272.7 | 1.00 | 438.6 | 0.98x | True |
-| keygen.v4 `parallel` (t=4) | 96 | 2,089.1 | 2,792.2 | 2,291.7 | 1.09 | 476.9 | 0.96x | True |
-| keygen.v5 `parallelgc` | 90 | 1,974.3 | 3,084.1 | 2,222.2 | 0.98 | 440.7 | 1.01x | True |
+| keygen.v0 `jca` | 97 | 1,995.8 | 2,381.6 | 2,061.9 | 1.00 | 483.9 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 64 | 3,278.9 | 3,873.5 | 3,125.0 | 1.00 | 318.6 | 0.61x | True |
+| keygen.v2 `lightweight` | 91 | 2,131.9 | 2,864.8 | 2,087.9 | 0.94 | 451.9 | 0.94x | True |
+| keygen.v3 `internal-seed` | 100 | 1,960.2 | 2,278.4 | 2,000.0 | 1.00 | 498.6 | 1.02x | True |
+| keygen.v4 `parallel` (t=4) | 160 | 1,438.7 | 1,465.1 | 2,250.0 | 1.74 | 775.4 | 1.39x | True |
+| keygen.v5 `parallelgc` | 98 | 1,997.7 | 2,281.1 | 2,040.8 | 1.00 | 487.7 | 1.00x | True |
 
 ### SLH-DSA-SHA2-192s
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 3 | 199,370.2 | 219,251.4 | 203,333.3 | 0.99 | 4.9 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 3 | 211,700.8 | 250,817.5 | 206,666.7 | 0.94 | 4.5 | 0.94x | True |
-| keygen.v2 `lightweight` | 3 | 194,958.2 | 254,513.3 | 213,333.3 | 1.00 | 4.7 | 1.02x | True |
-| keygen.v3 `internal-seed` | 3 | 206,682.3 | 273,084.5 | 203,333.3 | 0.89 | 4.4 | 0.96x | True |
-| keygen.v4 `parallel` (t=4) | 4 | 158,268.7 | 158,268.7 | 215,000.0 | 1.36 | 6.3 | 1.26x | True |
-| keygen.v5 `parallelgc` | 3 | 191,795.5 | 230,549.9 | 190,000.0 | 0.93 | 4.9 | 1.04x | True |
+| keygen.v0 `jca` | 3 | 206,640.5 | 255,094.6 | 216,666.7 | 1.00 | 4.6 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 3 | 198,164.5 | 275,768.3 | 220,000.0 | 0.99 | 4.5 | 1.04x | True |
+| keygen.v2 `lightweight` | 3 | 240,806.3 | 274,045.6 | 236,666.7 | 1.00 | 4.2 | 0.86x | True |
+| keygen.v3 `internal-seed` | 3 | 189,899.3 | 193,934.8 | 190,000.0 | 1.00 | 5.2 | 1.09x | True |
+| keygen.v4 `parallel` (t=4) | 4 | 107,495.1 | 107,495.1 | 227,500.0 | 2.12 | 9.3 | 1.92x | True |
+| keygen.v5 `parallelgc` | 3 | 201,879.5 | 205,937.1 | 200,000.0 | 0.99 | 4.9 | 1.02x | True |
 
 ### SLH-DSA-SHA2-192f
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 58 | 3,066.2 | 4,561.4 | 3,448.3 | 0.99 | 287.6 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 31 | 6,935.8 | 10,179.4 | 4,193.5 | 0.64 | 153.0 | 0.44x | True |
-| keygen.v2 `lightweight` | 50 | 4,127.5 | 5,149.7 | 4,000.0 | 0.99 | 248.0 | 0.74x | True |
-| keygen.v3 `internal-seed` | 46 | 3,074.1 | 8,770.9 | 3,478.3 | 0.79 | 227.9 | 1.00x | True |
-| keygen.v4 `parallel` (t=4) | 60 | 3,353.5 | 3,456.6 | 3,333.3 | 0.99 | 296.9 | 0.91x | True |
-| keygen.v5 `parallelgc` | 60 | 3,040.5 | 5,215.4 | 3,333.3 | 0.98 | 292.7 | 1.01x | True |
+| keygen.v0 `jca` | 64 | 2,999.1 | 3,783.4 | 3,125.0 | 1.00 | 318.7 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 68 | 2,914.5 | 3,169.9 | 2,941.2 | 0.99 | 336.9 | 1.03x | True |
+| keygen.v2 `lightweight` | 63 | 2,972.1 | 4,039.7 | 3,015.9 | 0.94 | 310.3 | 1.01x | True |
+| keygen.v3 `internal-seed` | 41 | 3,431.6 | 7,254.3 | 7,317.1 | 1.45 | 198.5 | 0.87x | True |
+| keygen.v4 `parallel` (t=4) | 128 | 1,950.2 | 2,428.9 | 3,437.5 | 1.87 | 542.6 | 1.54x | True |
+| keygen.v5 `parallelgc` | 66 | 2,894.9 | 3,818.1 | 3,030.3 | 1.00 | 329.0 | 1.04x | True |
 
 ### SLH-DSA-SHA2-256s
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 3 | 123,882.3 | 124,927.5 | 133,333.3 | 1.07 | 8.1 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 3 | 152,228.8 | 173,799.6 | 150,000.0 | 0.94 | 6.3 | 0.81x | True |
-| keygen.v2 `lightweight` | 3 | 130,794.4 | 136,874.2 | 130,000.0 | 0.99 | 7.6 | 0.95x | True |
-| keygen.v3 `internal-seed` | 3 | 169,754.7 | 173,379.0 | 130,000.0 | 0.77 | 5.9 | 0.73x | True |
-| keygen.v4 `parallel` (t=4) | 4 | 133,958.6 | 133,958.6 | 137,500.0 | 1.03 | 7.5 | 0.92x | True |
-| keygen.v5 `parallelgc` | 3 | 130,448.3 | 149,203.1 | 133,333.3 | 1.00 | 7.5 | 0.95x | True |
+| keygen.v0 `jca` | 3 | 130,648.4 | 134,496.6 | 130,000.0 | 0.99 | 7.6 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 3 | 151,885.6 | 182,724.5 | 156,666.7 | 0.99 | 6.3 | 0.86x | True |
+| keygen.v2 `lightweight` | 3 | 199,083.1 | 206,139.3 | 180,000.0 | 1.01 | 5.6 | 0.66x | True |
+| keygen.v3 `internal-seed` | 3 | 130,264.2 | 131,264.3 | 130,000.0 | 1.00 | 7.7 | 1.00x | True |
+| keygen.v4 `parallel` (t=4) | 4 | 68,647.0 | 68,647.0 | 147,500.0 | 2.15 | 14.6 | 1.90x | True |
+| keygen.v5 `parallelgc` | 3 | 125,067.7 | 128,103.2 | 123,333.3 | 0.98 | 8.0 | 1.04x | True |
 
 ### SLH-DSA-SHA2-256f
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 24 | 7,812.7 | 10,994.5 | 8,750.0 | 1.03 | 117.3 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 24 | 8,159.6 | 12,097.9 | 8,333.3 | 0.97 | 116.0 | 0.96x | True |
-| keygen.v2 `lightweight` | 26 | 7,782.8 | 8,073.1 | 7,692.3 | 0.98 | 127.8 | 1.00x | True |
-| keygen.v3 `internal-seed` | 20 | 10,776.7 | 12,841.0 | 7,500.0 | 0.75 | 100.0 | 0.72x | True |
-| keygen.v4 `parallel` (t=4) | 28 | 7,867.7 | 8,144.5 | 7,857.1 | 0.99 | 126.2 | 0.99x | True |
-| keygen.v5 `parallelgc` | 26 | 7,570.4 | 8,271.7 | 7,692.3 | 1.00 | 129.8 | 1.03x | True |
+| keygen.v0 `jca` | 24 | 8,094.1 | 9,299.0 | 8,333.3 | 1.00 | 119.6 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 16 | 12,829.6 | 13,189.8 | 13,125.0 | 1.02 | 77.7 | 0.63x | True |
+| keygen.v2 `lightweight` | 24 | 8,243.5 | 10,456.4 | 8,750.0 | 1.03 | 117.6 | 0.98x | True |
+| keygen.v3 `internal-seed` | 24 | 8,272.3 | 10,518.4 | 8,750.0 | 1.00 | 114.8 | 0.98x | True |
+| keygen.v4 `parallel` (t=4) | 48 | 4,304.8 | 5,636.7 | 8,958.3 | 1.97 | 220.3 | 1.88x | True |
+| keygen.v5 `parallelgc` | 27 | 7,481.2 | 7,621.1 | 7,407.4 | 0.99 | 133.2 | 1.08x | True |
 
 ### SLH-DSA-SHAKE-128s
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 3 | 199,488.0 | 245,184.3 | 196,666.7 | 0.98 | 5.0 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 3 | 214,870.6 | 215,051.4 | 173,333.3 | 0.86 | 5.0 | 0.93x | True |
-| keygen.v2 `lightweight` | 3 | 164,548.1 | 173,306.4 | 150,000.0 | 0.90 | 6.0 | 1.21x | True |
-| keygen.v3 `internal-seed` | 3 | 157,832.1 | 190,676.5 | 150,000.0 | 0.90 | 6.0 | 1.26x | True |
-| keygen.v4 `parallel` (t=4) | 4 | 154,683.3 | 154,683.3 | 150,000.0 | 0.97 | 6.4 | 1.29x | True |
-| keygen.v5 `parallelgc` | 3 | 159,714.4 | 161,567.0 | 146,666.7 | 0.94 | 6.4 | 1.25x | True |
+| keygen.v0 `jca` | 3 | 143,911.8 | 144,368.4 | 143,333.3 | 1.00 | 6.9 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 3 | 146,061.9 | 147,112.5 | 146,666.7 | 1.00 | 6.8 | 0.99x | True |
+| keygen.v2 `lightweight` | 3 | 161,843.5 | 189,650.5 | 160,000.0 | 0.95 | 6.0 | 0.89x | True |
+| keygen.v3 `internal-seed` | 3 | 151,163.2 | 233,411.1 | 176,666.7 | 1.00 | 5.6 | 0.95x | True |
+| keygen.v4 `parallel` (t=4) | 4 | 79,519.6 | 79,519.6 | 177,500.0 | 2.23 | 12.6 | 1.81x | True |
+| keygen.v5 `parallelgc` | 3 | 147,158.1 | 147,646.6 | 146,666.7 | 1.00 | 6.8 | 0.98x | True |
 
 ### SLH-DSA-SHAKE-128f
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 81 | 2,364.9 | 3,025.4 | 2,469.1 | 1.00 | 404.5 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 79 | 2,393.3 | 3,362.3 | 2,531.6 | 0.99 | 390.9 | 0.99x | True |
-| keygen.v2 `lightweight` | 73 | 2,312.6 | 6,308.2 | 2,328.8 | 0.84 | 359.6 | 1.02x | True |
-| keygen.v3 `internal-seed` | 83 | 2,259.0 | 2,560.1 | 2,289.2 | 0.94 | 411.2 | 1.05x | True |
-| keygen.v4 `parallel` (t=4) | 96 | 2,331.3 | 2,357.5 | 2,291.7 | 0.99 | 432.0 | 1.01x | True |
-| keygen.v5 `parallelgc` | 52 | 4,464.0 | 8,551.7 | 3,461.5 | 0.88 | 255.3 | 0.53x | True |
+| keygen.v0 `jca` | 71 | 2,334.4 | 6,187.3 | 2,816.9 | 1.00 | 354.0 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 88 | 2,252.5 | 2,314.9 | 2,272.7 | 0.99 | 435.7 | 1.04x | True |
+| keygen.v2 `lightweight` | 88 | 2,264.4 | 2,496.2 | 2,272.7 | 0.99 | 437.4 | 1.03x | True |
+| keygen.v3 `internal-seed` | 79 | 2,307.1 | 3,902.0 | 2,658.2 | 1.04 | 390.7 | 1.01x | True |
+| keygen.v4 `parallel` (t=4) | 160 | 1,235.3 | 2,046.2 | 2,500.0 | 1.99 | 796.7 | 1.89x | True |
+| keygen.v5 `parallelgc` | 71 | 2,576.2 | 4,125.5 | 2,676.1 | 0.94 | 352.1 | 0.91x | True |
 
 ### SLH-DSA-SHAKE-192s
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 3 | 235,770.6 | 275,482.2 | 240,000.0 | 0.99 | 4.1 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 3 | 260,603.5 | 265,438.9 | 240,000.0 | 0.93 | 3.9 | 0.90x | True |
-| keygen.v2 `lightweight` | 3 | 290,385.6 | 366,555.8 | 236,666.7 | 0.77 | 3.3 | 0.81x | True |
-| keygen.v3 `internal-seed` | 3 | 260,252.9 | 262,279.5 | 226,666.7 | 0.92 | 4.1 | 0.91x | True |
-| keygen.v4 `parallel` (t=4) | 4 | 243,862.1 | 243,862.1 | 255,000.0 | 1.05 | 4.1 | 0.97x | True |
-| keygen.v5 `parallelgc` | 3 | 309,757.1 | 353,680.2 | 240,000.0 | 0.78 | 3.3 | 0.76x | True |
+| keygen.v0 `jca` | 3 | 217,829.2 | 311,267.1 | 246,666.7 | 0.99 | 4.0 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 3 | 247,963.7 | 264,831.4 | 246,666.7 | 1.00 | 4.0 | 0.88x | True |
+| keygen.v2 `lightweight` | 3 | 228,921.1 | 242,715.4 | 230,000.0 | 0.99 | 4.3 | 0.95x | True |
+| keygen.v3 `internal-seed` | 3 | 215,270.1 | 216,036.9 | 213,333.3 | 0.99 | 4.7 | 1.01x | True |
+| keygen.v4 `parallel` (t=4) | 4 | 109,700.9 | 109,700.9 | 260,000.0 | 2.37 | 9.1 | 1.99x | True |
+| keygen.v5 `parallelgc` | 3 | 246,082.3 | 311,730.2 | 256,666.7 | 0.98 | 3.8 | 0.89x | True |
 
 ### SLH-DSA-SHAKE-192f
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 45 | 3,717.2 | 7,426.0 | 3,777.8 | 0.83 | 219.6 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 60 | 3,335.3 | 3,448.1 | 3,333.3 | 0.99 | 298.2 | 1.11x | True |
-| keygen.v2 `lightweight` | 34 | 3,552.8 | 11,835.0 | 3,529.4 | 0.60 | 169.1 | 1.05x | True |
-| keygen.v3 `internal-seed` | 46 | 3,414.6 | 7,542.5 | 3,695.7 | 0.83 | 224.9 | 1.09x | True |
-| keygen.v4 `parallel` (t=4) | 48 | 4,309.8 | 5,575.1 | 3,958.3 | 0.94 | 236.8 | 0.86x | True |
-| keygen.v5 `parallelgc` | 55 | 3,378.8 | 4,882.7 | 3,272.7 | 0.89 | 270.8 | 1.10x | True |
+| keygen.v0 `jca` | 58 | 3,339.7 | 5,388.0 | 3,448.3 | 0.99 | 288.1 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 30 | 6,688.7 | 7,034.9 | 6,666.7 | 0.99 | 147.9 | 0.50x | True |
+| keygen.v2 `lightweight` | 45 | 3,792.2 | 6,057.9 | 4,444.4 | 0.99 | 222.3 | 0.88x | True |
+| keygen.v3 `internal-seed` | 60 | 3,329.7 | 3,481.4 | 3,333.3 | 1.00 | 298.8 | 1.00x | True |
+| keygen.v4 `parallel` (t=4) | 112 | 2,005.0 | 2,299.1 | 4,285.7 | 2.10 | 490.1 | 1.67x | True |
+| keygen.v5 `parallelgc` | 54 | 3,698.3 | 4,461.3 | 3,703.7 | 0.98 | 265.9 | 0.90x | True |
 
 ### SLH-DSA-SHAKE-256s
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 3 | 151,529.5 | 168,087.6 | 150,000.0 | 0.96 | 6.4 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 3 | 147,855.9 | 148,293.0 | 150,000.0 | 1.02 | 6.8 | 1.02x | True |
-| keygen.v2 `lightweight` | 3 | 208,929.0 | 211,033.2 | 166,666.7 | 0.83 | 5.0 | 0.73x | True |
-| keygen.v3 `internal-seed` | 3 | 151,529.7 | 154,258.4 | 150,000.0 | 0.99 | 6.6 | 1.00x | True |
-| keygen.v4 `parallel` (t=4) | 4 | 142,842.9 | 142,842.9 | 182,500.0 | 1.28 | 7.0 | 1.06x | True |
-| keygen.v5 `parallelgc` | 3 | 164,452.7 | 242,940.2 | 166,666.7 | 0.90 | 5.4 | 0.92x | True |
+| keygen.v0 `jca` | 3 | 146,622.6 | 150,115.7 | 146,666.7 | 1.00 | 6.8 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 3 | 145,472.3 | 150,384.3 | 146,666.7 | 1.00 | 6.8 | 1.01x | True |
+| keygen.v2 `lightweight` | 3 | 160,264.0 | 170,900.6 | 160,000.0 | 0.99 | 6.2 | 0.91x | True |
+| keygen.v3 `internal-seed` | 3 | 156,725.8 | 180,516.1 | 160,000.0 | 0.99 | 6.2 | 0.94x | True |
+| keygen.v4 `parallel` (t=4) | 4 | 59,763.0 | 59,763.0 | 155,000.0 | 2.59 | 16.7 | 2.45x | True |
+| keygen.v5 `parallelgc` | 3 | 172,754.8 | 209,892.3 | 176,666.7 | 0.98 | 5.5 | 0.85x | True |
 
 ### SLH-DSA-SHAKE-256f
 
 | variant | iters | wall median us | wall p95 us | cpu/op us | cpu_util | ops/s | speedup | match |
 |---|---|---|---|---|---|---|---|---|
-| keygen.v0 `jca` | 22 | 9,177.1 | 9,393.1 | 9,090.9 | 0.99 | 108.8 | 1.00x | True |
-| keygen.v1 `jca-reuse` | 23 | 8,887.4 | 8,970.9 | 9,130.4 | 1.02 | 112.0 | 1.03x | True |
-| keygen.v2 `lightweight` | 15 | 12,644.2 | 25,454.0 | 10,666.7 | 0.76 | 71.5 | 0.73x | True |
-| keygen.v3 `internal-seed` | 18 | 9,545.6 | 19,418.7 | 10,000.0 | 0.89 | 89.1 | 0.96x | True |
-| keygen.v4 `parallel` (t=4) | 20 | 9,595.0 | 15,625.7 | 10,000.0 | 0.93 | 93.1 | 0.96x | True |
-| keygen.v5 `parallelgc` | 20 | 9,543.6 | 14,537.4 | 10,500.0 | 1.04 | 98.8 | 0.96x | True |
+| keygen.v0 `jca` | 23 | 8,924.0 | 9,031.3 | 13,043.5 | 1.45 | 111.4 | 1.00x | True |
+| keygen.v1 `jca-reuse` | 19 | 9,573.2 | 15,945.5 | 11,052.6 | 1.01 | 91.6 | 0.93x | True |
+| keygen.v2 `lightweight` | 21 | 9,365.3 | 10,688.7 | 9,523.8 | 0.98 | 103.2 | 0.95x | True |
+| keygen.v3 `internal-seed` | 22 | 9,089.1 | 9,705.1 | 9,090.9 | 0.99 | 109.4 | 0.98x | True |
+| keygen.v4 `parallel` (t=4) | 32 | 7,077.5 | 7,570.0 | 12,187.5 | 1.86 | 152.6 | 1.26x | True |
+| keygen.v5 `parallelgc` | 20 | 9,290.4 | 12,747.4 | 10,500.0 | 1.03 | 97.8 | 0.96x | True |
 
 ### Geometric mean speedup vs v0 across parameter sets
 
 | variant | ML-DSA | SLH-DSA | all |
 |---|---|---|---|
 | keygen.v0 `jca` | 1.00x | 1.00x | 1.00x |
-| keygen.v1 `jca-reuse` | 1.16x | 0.90x | 0.95x |
-| keygen.v2 `lightweight` | 0.98x | 0.90x | 0.91x |
-| keygen.v3 `internal-seed` | 1.18x | 0.96x | 1.00x |
-| keygen.v4 `parallel` | 1.05x | 1.00x | 1.01x |
-| keygen.v5 `parallelgc` | 1.21x | 0.95x | 1.00x |
+| keygen.v1 `jca-reuse` | 1.07x | 0.86x | 0.90x |
+| keygen.v2 `lightweight` | 1.07x | 0.91x | 0.94x |
+| keygen.v3 `internal-seed` | 1.03x | 0.98x | 0.99x |
+| keygen.v4 `parallel` | 1.22x | 1.74x | 1.62x |
+| keygen.v5 `parallelgc` | 0.94x | 0.98x | 0.97x |
