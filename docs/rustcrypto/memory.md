@@ -49,3 +49,106 @@ inputs (`stage` field) plus the `total` and `total_best` pipelines on raw bytes.
   (zero-copy slices) and keeps its chain/tree state in small heap buffers instead.
 
 <!-- RESULTS -->
+
+## Results (PRELIMINARY: dev run on a loaded shared box, short budgets; the orchestrator overwrites this section)
+
+| param | op | variant | stack bytes | heap alloc/op | heap peak | threads | match |
+|---|---|---|---|---|---|---|---|
+| ML-DSA-44 | keygen | `keygen.v0` | 201664 | 94272 | 90400 | 1 | ✓ |
+| ML-DSA-44 | keygen | `keygen.v1` | 201744 | 94272 | 90400 | 1 | ✓ |
+| ML-DSA-44 | keygen | `keygen.v2` | 198464 | 94272 | 90400 | 1 | ✓ |
+| ML-DSA-44 | keygen | `keygen.v3` | 189344 | 94272 | 90400 | 1 | ✓ |
+| ML-DSA-44 | keygen | `keygen.v4` | 201664 | 94272 | 90400 | 1 | ✓ |
+| ML-DSA-44 | keygen | `keygen.v5` | 201664 | 94272 | 90400 | 4 | ✓ |
+| ML-DSA-44 | sign | `sign.v0` | 107600 | 6516 | 6516 | 1 | ✓ |
+| ML-DSA-44 | sign | `sign.v1` | 105680 | 6516 | 6516 | 1 | ✓ |
+| ML-DSA-44 | sign | `sign.v2` | 107696 | 6516 | 6516 | 1 | ✓ |
+| ML-DSA-44 | sign | `sign.v3` | 118576 | 6516 | 6516 | 1 | ✓ |
+| ML-DSA-44 | sign | `sign.v4` | 66480 | 6516 | 6516 | 1 | ✓ |
+| ML-DSA-44 | sign | `sign.v5` | 107600 | 6516 | 6516 | 4 | ✓ |
+| ML-DSA-44 | verify | `verify.v0` | 68272 | 28736 | 28736 | 1 | ✓ |
+| ML-DSA-44 | verify | `verify.v1` | 66384 | 28736 | 28736 | 1 | ✓ |
+| ML-DSA-44 | verify | `verify.v2` | 58464 | 28736 | 28736 | 1 | ✓ |
+| ML-DSA-44 | verify | `verify.v3` | 59968 | 28736 | 28736 | 1 | ✓ |
+| ML-DSA-44 | verify | `verify.v4` | 48464 | 4096 | 4096 | 1 | ✓ |
+| ML-DSA-44 | verify | `verify.v5` | 68272 | 28736 | 28736 | 4 | ✓ |
+| ML-DSA-44 | verify-stage decode | `decode.v0` | 44592 | 32768 | 32768 | 1 | ✓ |
+| ML-DSA-44 | verify-stage expandA | `expandA.v0` | 43096 | 0 | 0 | 1 | ✓ |
+| ML-DSA-44 | verify-stage hint_check | `hint_check.v0` | 13078 | 768 | 768 | 1 | ✓ |
+| ML-DSA-44 | verify-stage mu | `mu.v0` | 0 | 0 | 0 | 1 | ✓ |
+| ML-DSA-44 | verify-stage total | `total.v0` | 80608 | 768 | 768 | 1 | ✓ |
+| ML-DSA-44 | verify-stage total_best | `total_best.v0` | 71920 | 29568 | 16384 | 1 | ✓ |
+| ML-DSA-44 | verify-stage w_approx | `w_approx.v0` | 54768 | 0 | 0 | 1 | ✓ |
+| ML-DSA-87 | keygen | `keygen.v0` | 438688 | 259680 | 252192 | 1 | ✓ |
+| ML-DSA-87 | keygen | `keygen.v1` | 438848 | 259680 | 252192 | 1 | ✓ |
+| ML-DSA-87 | keygen | `keygen.v2` | 442976 | 259680 | 252192 | 1 | ✓ |
+| ML-DSA-87 | keygen | `keygen.v3` | 432560 | 259680 | 252192 | 1 | ✓ |
+| ML-DSA-87 | keygen | `keygen.v4` | 438688 | 259680 | 252192 | 1 | ✓ |
+| ML-DSA-87 | keygen | `keygen.v5` | 438688 | 259680 | 252192 | 4 | ✓ |
+| ML-DSA-87 | sign | `sign.v0` | 275432 | 11795 | 11795 | 1 | ✓ |
+| ML-DSA-87 | sign | `sign.v1` | 275488 | 11795 | 11795 | 1 | ✓ |
+| ML-DSA-87 | sign | `sign.v2` | 268432 | 11795 | 11795 | 1 | ✓ |
+| ML-DSA-87 | sign | `sign.v3` | 269240 | 11795 | 11795 | 1 | ✓ |
+| ML-DSA-87 | sign | `sign.v4` | 130432 | 11795 | 11795 | 1 | ✓ |
+| ML-DSA-87 | sign | `sign.v5` | 275432 | 11795 | 11795 | 4 | ✓ |
+| ML-DSA-87 | verify | `verify.v0` | 170144 | 80960 | 80960 | 1 | ✓ |
+| ML-DSA-87 | verify | `verify.v1` | 170288 | 80960 | 80960 | 1 | ✓ |
+| ML-DSA-87 | verify | `verify.v2` | 154464 | 80960 | 80960 | 1 | ✓ |
+| ML-DSA-87 | verify | `verify.v3` | 157824 | 80960 | 80960 | 1 | ✓ |
+| ML-DSA-87 | verify | `verify.v4` | 70032 | 7168 | 7168 | 1 | ✓ |
+| ML-DSA-87 | verify | `verify.v5` | 170144 | 80960 | 80960 | 4 | ✓ |
+| ML-DSA-87 | verify-stage decode | `decode.v0` | 85648 | 65536 | 65536 | 1 | ✓ |
+| ML-DSA-87 | verify-stage expandA | `expandA.v0` | 131208 | 0 | 0 | 1 | ✓ |
+| ML-DSA-87 | verify-stage hint_check | `hint_check.v0` | 25654 | 1024 | 1024 | 1 | ✓ |
+| ML-DSA-87 | verify-stage mu | `mu.v0` | 0 | 0 | 0 | 1 | ✓ |
+| ML-DSA-87 | verify-stage total | `total.v0` | 157048 | 1024 | 1024 | 1 | ✓ |
+| ML-DSA-87 | verify-stage total_best | `total_best.v0` | 213312 | 82176 | 57344 | 1 | ✓ |
+| ML-DSA-87 | verify-stage w_approx | `w_approx.v0` | 72192 | 0 | 0 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | keygen | `keygen.v0` | 4624 | 192 | 192 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | keygen | `keygen.v1` | 4608 | 192 | 192 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | keygen | `keygen.v2` | 4352 | 192 | 192 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | keygen | `keygen.v3` | 4440 | 192 | 192 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | keygen | `keygen.v4` | 4624 | 192 | 192 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | keygen | `keygen.v5` | 4624 | 192 | 192 | 4 | ✓ |
+| SLH-DSA-SHA2-256s | sign | `sign.v0` | 166960 | 29792 | 29792 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | sign | `sign.v1` | 166944 | 29792 | 29792 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | sign | `sign.v2` | 177968 | 29792 | 29792 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | sign | `sign.v3` | 148520 | 29792 | 29792 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | sign | `sign.v4` | 166784 | 29792 | 29792 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | sign | `sign.v5` | 166960 | 29792 | 29792 | 4 | ✓ |
+| SLH-DSA-SHA2-256s | verify | `verify.v0` | 137488 | 0 | 0 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | verify | `verify.v1` | 137504 | 0 | 0 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | verify | `verify.v2` | 84320 | 0 | 0 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | verify | `verify.v3` | 115120 | 0 | 0 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | verify | `verify.v4` | 137408 | 0 | 0 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | verify | `verify.v5` | 137488 | 0 | 0 | 4 | ✓ |
+| SLH-DSA-SHA2-256s | verify-stage fors | `fors.v0` | 928 | 32 | 32 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | verify-stage hmsg | `hmsg.v0` | 167440 | 86 | 86 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | verify-stage ht_auth | `ht_auth.v0` | 368 | 576 | 576 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | verify-stage ht_wots | `ht_wots.v0` | 4768 | 576 | 576 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | verify-stage total | `total.v0` | 197952 | 246 | 246 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | verify-stage total_best | `total_best.v0` | 3120 | 35142 | 4441 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | keygen | `keygen.v0` | 3840 | 96 | 96 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | keygen | `keygen.v1` | 3720 | 96 | 96 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | keygen | `keygen.v2` | 3712 | 96 | 96 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | keygen | `keygen.v3` | 3064 | 96 | 96 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | keygen | `keygen.v4` | 3840 | 96 | 96 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | keygen | `keygen.v5` | 3840 | 96 | 96 | 4 | ✓ |
+| SLH-DSA-SHAKE-128f | sign | `sign.v0` | 96048 | 17088 | 17088 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | sign | `sign.v1` | 96048 | 17088 | 17088 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | sign | `sign.v2` | 86928 | 17088 | 17088 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | sign | `sign.v3` | 87576 | 17088 | 17088 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | sign | `sign.v4` | 95984 | 17088 | 17088 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | sign | `sign.v5` | 96048 | 17088 | 17088 | 4 | ✓ |
+| SLH-DSA-SHAKE-128f | verify | `verify.v0` | 86768 | 0 | 0 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | verify | `verify.v1` | 86768 | 0 | 0 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | verify | `verify.v2` | 63296 | 0 | 0 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | verify | `verify.v3` | 63600 | 0 | 0 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | verify | `verify.v4` | 86720 | 0 | 0 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | verify | `verify.v5` | 86768 | 0 | 0 | 4 | ✓ |
+| SLH-DSA-SHAKE-128f | verify-stage fors | `fors.v0` | 1728 | 16 | 16 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | verify-stage hmsg | `hmsg.v0` | 104032 | 59 | 59 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | verify-stage ht_auth | `ht_auth.v0` | 320 | 1232 | 1232 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | verify-stage ht_wots | `ht_wots.v0` | 1520 | 1232 | 1232 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | verify-stage total | `total.v0` | 122640 | 427 | 427 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | verify-stage total_best | `total_best.v0` | 5152 | 16369 | 1118 | 1 | ✓ |

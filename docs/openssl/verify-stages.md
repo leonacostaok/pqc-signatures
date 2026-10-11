@@ -67,18 +67,27 @@ on purpose: a cache turns a per-verify cost into a per-key cost, and threads tra
 reported as their own variants instead. Both pipelines are checked on every run: they must accept the reference
 signature and reject a bit-flipped copy (and `validate` runs them over the whole negative suite).
 
-## What the numbers say (development run, shared box)
+## What the numbers say (development run, shared box, load average 5-9 on 4 cores)
 
-* ML-DSA verify is dominated by `w_approx` (~55 %) and `expandA` (~30 %); the own int32 lazy-reduction NTT
-  is 3-4x faster than OpenSSL's uint32 "reduce after every operation" NTT, which makes `total_best` ~1.6x faster
-  than `total` for ML-DSA-44. EVP overhead per SHAKE call is only visible in the microsecond-sized stages (mu,
-  hint_check); expandA is Keccak-bound and the low-level API gains nothing (OpenSSL's Keccak assembly is scalar).
+* ML-DSA verify is dominated by `w_approx` (~55 %) and `expandA` (~30 %). The own int32 lazy-reduction NTT is
+  2.5x faster than OpenSSL's uint32 "reduce after every operation" NTT (3.4x with the cached NTT(t1*2^d)),
+  which makes `total_best` 1.5-1.7x faster than `total`. EVP overhead per SHAKE call is only visible in the
+  microsecond-sized stages (mu, hint_check, 2-12 %); expandA is Keccak-bound and the low-level API gains
+  nothing (OpenSSL's Keccak assembly is scalar, so a 4-way SHAKE would be the real lever and OpenSSL has none).
+  The own decoder gains ~10 % over the PACKET-based one. The cached variants show what a per-key cache buys:
+  mu with cached tr 13x (the pk hash dominates mu for a 64-byte message), cached A^ >100x.
+* Surprise to confirm on the quiet machine: the `-O3 -march=native -flto` build is consistently *slower* for
+  `w_approx` (0.7x, two runs) and not better for expandA, while it helps hint_check (1.3x) and decode (1.1x);
+  the likely cause is LTO/AVX-512 code generation for the Montgomery butterflies (frequency/port effects),
+  the `no-asm` build costs 5-25 % wherever SHAKE is involved.
 * SLH-DSA verify is `ht_wots` (~85 %) + `fors` (~10 %). For the SHA2 sets the per-call EVP cost plus the
   re-hashing of the constant `PK.seed || 0...` block costs OpenSSL about 3.5x: the midstate primitives bring
-  SHA2-128f ht_wots from ~4.7 ms to ~1.2 ms. For the SHAKE sets the low-level API gains ~10 %.
-* Threads help the SLH stages only when the per-call work is milliseconds (ht_wots); for expandA/fors/ht_auth
-  the barrier hand-off costs more than the ~100 us of work, so those thread variants are slower than v0 (kept
-  as an honest data point). With 5 other agents on the box, cpu_util of 0.5-0.8 shows how noisy these numbers are.
+  SHA2-128f ht_wots from ~4.7 ms to ~1.2 ms; over all 12 sets the low-level/midstate variants give 1.4-1.7x
+  per stage (SHAKE sets ~1.1x) and `total_best` 1.56x geomean over `total`.
+* Threads help only where the per-call work is milliseconds: ht_wots 1.75x (limited by the busy box), fors
+  1.2x; for expandA / ht_auth (tens of microseconds) the barrier hand-off costs more than the work and the
+  thread variants are slower than v0 - kept as honest data points. cpu_util of 0.5-0.9 in the tables shows
+  how noisy these development numbers are.
 
 <!-- RESULTS -->
 
@@ -91,32 +100,32 @@ signature and reject a bit-flipped copy (and `validate` runs them over the whole
 | stage | variant | name | geomean speedup | all match |
 |---|---|---|---|---|
 | decode | `decode.v0` | ossl-decoders | 1.00× | yes |
-| decode | `decode.v1` | own-unpack-u64 | 0.44× | yes |
+| decode | `decode.v1` | own-unpack-u64 | 1.12× | yes |
 | decode | `decode.v2` | ossl-decoders-native | 1.10× | yes |
 | mu | `mu.v0` | ossl-evp-shake | 1.00× | yes |
 | mu | `mu.v1` | cached-tr | 13.18× | yes |
-| mu | `mu.v2` | lowlevel-sha3 | 1.03× | yes |
-| mu | `mu.v3` | ossl-evp-shake-noasm | 0.95× | yes |
+| mu | `mu.v2` | lowlevel-sha3 | 1.02× | yes |
+| mu | `mu.v3` | ossl-evp-shake-noasm | 0.96× | yes |
 | mu | `mu.v4` | ossl-evp-shake-native | 1.01× | yes |
-| mu | `mu.v5` | evp-reused-ctx | 1.02× | yes |
+| mu | `mu.v5` | evp-reused-ctx | 0.99× | yes |
 | expandA | `expandA.v0` | ossl-expand-A | 1.00× | yes |
-| expandA | `expandA.v1` | cached-A | 127.48× | yes |
+| expandA | `expandA.v1` | cached-A | 137.61× | yes |
 | expandA | `expandA.v2` | lowlevel-sha3 | 1.01× | yes |
-| expandA | `expandA.v3` | ossl-expand-A-noasm | 0.98× | yes |
-| expandA | `expandA.v4` | ossl-expand-A-native | 0.51× | yes |
-| expandA | `expandA.v5` | pthread-x4-rows | 0.70× | yes |
+| expandA | `expandA.v3` | ossl-expand-A-noasm | 0.74× | yes |
+| expandA | `expandA.v4` | ossl-expand-A-native | 0.77× | yes |
+| expandA | `expandA.v5` | pthread-x4-rows | 0.75× | yes |
 | w_approx | `w_approx.v0` | ossl-ntt | 1.00× | yes |
-| w_approx | `w_approx.v1` | cached-ntt-t1 | 1.12× | yes |
-| w_approx | `w_approx.v2` | own-int32-mont-ntt | 2.55× | yes |
-| w_approx | `w_approx.v3` | ossl-ntt-native | 0.71× | yes |
+| w_approx | `w_approx.v1` | cached-ntt-t1 | 1.36× | yes |
+| w_approx | `w_approx.v2` | own-int32-mont-ntt | 2.49× | yes |
+| w_approx | `w_approx.v3` | ossl-ntt-native | 0.73× | yes |
 | w_approx | `w_approx.v4` | cached-t1+own-ntt | 3.44× | yes |
 | hint_check | `hint_check.v0` | ossl-usehint-w1encode | 1.00× | yes |
 | hint_check | `hint_check.v1` | lowlevel-sha3 | 1.02× | yes |
-| hint_check | `hint_check.v2` | fused-usehint-pack | 1.14× | yes |
-| hint_check | `hint_check.v3` | ossl-noasm | 0.86× | yes |
-| hint_check | `hint_check.v4` | ossl-native | 1.40× | yes |
+| hint_check | `hint_check.v2` | fused-usehint-pack | 1.12× | yes |
+| hint_check | `hint_check.v3` | ossl-noasm | 0.87× | yes |
+| hint_check | `hint_check.v4` | ossl-native | 1.33× | yes |
 | total | `total` | v0-pipeline | — | yes |
-| total_best | `total_best` | best-pipeline | 1.53× | yes |
+| total_best | `total_best` | best-pipeline | 1.67× | yes |
 
 #### Per parameter set
 
@@ -124,97 +133,97 @@ signature and reject a bit-flipped copy (and `validate` runs them over the whole
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| decode | `decode.v0` ossl-decoders | 2.0 µs | 3.5 µs | 2.3 µs | 0.73 | 1 | 315017 | 1.00× | ✓ |
-| decode | `decode.v1` own-unpack-u64 | 4.1 µs | 6.5 µs | 4.6 µs | 0.68 | 1 | 147424 | 0.49× | ✓ |
-| decode | `decode.v2` ossl-decoders-native | 1.9 µs | 2.7 µs | 2.1 µs | 0.93 | 1 | 454169 | 1.10× | ✓ |
-| mu | `mu.v0` ossl-evp-shake | 4.0 µs | 7.3 µs | 4.8 µs | 0.50 | 1 | 105579 | 1.00× | ✓ |
-| mu | `mu.v1` cached-tr | 0.4 µs | 0.4 µs | 0.5 µs | 0.49 | 1 | 1036881 | 9.58× | ✓ |
-| mu | `mu.v2` lowlevel-sha3 | 3.9 µs | 6.1 µs | 4.4 µs | 0.49 | 1 | 112648 | 1.04× | ✓ |
-| mu | `mu.v3` ossl-evp-shake-noasm | 4.2 µs | 9.0 µs | 5.6 µs | 0.51 | 1 | 91408 | 0.96× | ✓ |
-| mu | `mu.v4` ossl-evp-shake-native | 4.0 µs | 4.9 µs | 4.3 µs | 0.77 | 1 | 178025 | 1.02× | ✓ |
-| mu | `mu.v5` evp-reused-ctx | 3.9 µs | 6.2 µs | 4.4 µs | 0.44 | 1 | 100653 | 1.03× | ✓ |
-| expandA | `expandA.v0` ossl-expand-A | 33.3 µs | 61.7 µs | 40.2 µs | 0.68 | 1 | 16855 | 1.00× | ✓ |
-| expandA | `expandA.v1` cached-A | 0.1 µs | 0.1 µs | 0.2 µs | 0.95 | 1 | 5595849 | 245.12× | ✓ |
-| expandA | `expandA.v2` lowlevel-sha3 | 32.5 µs | 51.3 µs | 34.5 µs | 0.77 | 1 | 22268 | 1.03× | ✓ |
-| expandA | `expandA.v3` ossl-expand-A-noasm | 33.9 µs | 61.1 µs | 38.1 µs | 0.54 | 1 | 14260 | 0.98× | ✓ |
-| expandA | `expandA.v4` ossl-expand-A-native | 55.0 µs | 80.6 µs | 50.1 µs | 0.67 | 1 | 13455 | 0.61× | ✓ |
-| expandA | `expandA.v5` pthread-x4-rows | 79.5 µs | 112.5 µs | 99.3 µs | 1.25 | 4 | 12583 | 0.42× | ✓ |
-| w_approx | `w_approx.v0` ossl-ntt | 81.5 µs | 181.2 µs | 96.7 µs | 0.39 | 1 | 4047 | 1.00× | ✓ |
-| w_approx | `w_approx.v1` cached-ntt-t1 | 59.6 µs | 78.0 µs | 62.2 µs | 0.49 | 1 | 7799 | 1.37× | ✓ |
-| w_approx | `w_approx.v2` own-int32-mont-ntt | 33.0 µs | 57.1 µs | 36.6 µs | 0.30 | 1 | 8274 | 2.47× | ✓ |
-| w_approx | `w_approx.v3` ossl-ntt-native | 80.1 µs | 101.2 µs | 83.6 µs | 0.68 | 1 | 8175 | 1.02× | ✓ |
-| w_approx | `w_approx.v4` cached-t1+own-ntt | 24.6 µs | 48.2 µs | 27.9 µs | 0.57 | 1 | 20350 | 3.32× | ✓ |
-| hint_check | `hint_check.v0` ossl-usehint-w1encode | 12.2 µs | 21.7 µs | 13.9 µs | 0.56 | 1 | 40531 | 1.00× | ✓ |
-| hint_check | `hint_check.v1` lowlevel-sha3 | 12.0 µs | 21.5 µs | 14.3 µs | 0.70 | 1 | 48907 | 1.01× | ✓ |
-| hint_check | `hint_check.v2` fused-usehint-pack | 10.4 µs | 14.0 µs | 11.0 µs | 0.70 | 1 | 63643 | 1.17× | ✓ |
-| hint_check | `hint_check.v3` ossl-noasm | 13.9 µs | 26.3 µs | 16.5 µs | 0.35 | 1 | 21199 | 0.88× | ✓ |
-| hint_check | `hint_check.v4` ossl-native | 9.1 µs | 9.3 µs | 9.5 µs | 0.67 | 1 | 70360 | 1.34× | ✓ |
-| total | `total` v0-pipeline | 134.6 µs | 208.5 µs | 145.1 µs | 0.64 | 1 | 4429 | — | ✓ |
-| total_best | `total_best` best-pipeline | 85.5 µs | 182.3 µs | 101.9 µs | 0.47 | 1 | 4629 | 1.57× | ✓ |
+| decode | `decode.v0` ossl-decoders | 2.0 µs | 2.2 µs | 2.2 µs | 0.51 | 1 | 233685 | 1.00× | ✓ |
+| decode | `decode.v1` own-unpack-u64 | 1.8 µs | 2.9 µs | 2.1 µs | 0.68 | 1 | 330083 | 1.13× | ✓ |
+| decode | `decode.v2` ossl-decoders-native | 1.9 µs | 1.9 µs | 2.0 µs | 1.00 | 1 | 492385 | 1.09× | ✓ |
+| mu | `mu.v0` ossl-evp-shake | 4.0 µs | 5.0 µs | 4.3 µs | 0.77 | 1 | 178484 | 1.00× | ✓ |
+| mu | `mu.v1` cached-tr | 0.4 µs | 0.5 µs | 0.5 µs | 0.86 | 1 | 1815254 | 9.54× | ✓ |
+| mu | `mu.v2` lowlevel-sha3 | 3.9 µs | 5.8 µs | 4.3 µs | 0.93 | 1 | 216818 | 1.03× | ✓ |
+| mu | `mu.v3` ossl-evp-shake-noasm | 4.2 µs | 4.4 µs | 4.4 µs | 0.91 | 1 | 205504 | 0.96× | ✓ |
+| mu | `mu.v4` ossl-evp-shake-native | 4.0 µs | 7.4 µs | 5.0 µs | 0.96 | 1 | 192584 | 1.01× | ✓ |
+| mu | `mu.v5` evp-reused-ctx | 3.9 µs | 8.2 µs | 4.9 µs | 0.86 | 1 | 173993 | 1.03× | ✓ |
+| expandA | `expandA.v0` ossl-expand-A | 33.1 µs | 71.1 µs | 42.5 µs | 0.90 | 1 | 21150 | 1.00× | ✓ |
+| expandA | `expandA.v1` cached-A | 0.1 µs | 0.1 µs | 0.1 µs | 0.90 | 1 | 6649620 | 312.45× | ✓ |
+| expandA | `expandA.v2` lowlevel-sha3 | 32.6 µs | 50.1 µs | 34.7 µs | 0.87 | 1 | 24945 | 1.02× | ✓ |
+| expandA | `expandA.v3` ossl-expand-A-noasm | 34.4 µs | 70.0 µs | 42.6 µs | 0.81 | 1 | 19028 | 0.96× | ✓ |
+| expandA | `expandA.v4` ossl-expand-A-native | 33.0 µs | 60.3 µs | 39.8 µs | 0.84 | 1 | 21233 | 1.00× | ✓ |
+| expandA | `expandA.v5` pthread-x4-rows | 41.9 µs | 90.4 µs | 56.9 µs | 0.83 | 4 | 14504 | 0.79× | ✓ |
+| w_approx | `w_approx.v0` ossl-ntt | 80.6 µs | 123.5 µs | 88.8 µs | 0.82 | 1 | 9192 | 1.00× | ✓ |
+| w_approx | `w_approx.v1` cached-ntt-t1 | 59.5 µs | 81.6 µs | 62.6 µs | 0.92 | 1 | 14641 | 1.36× | ✓ |
+| w_approx | `w_approx.v2` own-int32-mont-ntt | 32.9 µs | 52.8 µs | 36.1 µs | 0.70 | 1 | 19442 | 2.45× | ✓ |
+| w_approx | `w_approx.v3` ossl-ntt-native | 80.3 µs | 128.4 µs | 89.3 µs | 0.77 | 1 | 8674 | 1.00× | ✓ |
+| w_approx | `w_approx.v4` cached-t1+own-ntt | 24.5 µs | 36.2 µs | 26.1 µs | 0.73 | 1 | 28144 | 3.29× | ✓ |
+| hint_check | `hint_check.v0` ossl-usehint-w1encode | 12.2 µs | 17.0 µs | 13.0 µs | 0.99 | 1 | 76567 | 1.00× | ✓ |
+| hint_check | `hint_check.v1` lowlevel-sha3 | 12.1 µs | 25.2 µs | 15.2 µs | 0.78 | 1 | 51476 | 1.01× | ✓ |
+| hint_check | `hint_check.v2` fused-usehint-pack | 10.4 µs | 19.6 µs | 13.6 µs | 0.69 | 1 | 50969 | 1.17× | ✓ |
+| hint_check | `hint_check.v3` ossl-noasm | 13.9 µs | 16.4 µs | 14.6 µs | 0.76 | 1 | 52020 | 0.88× | ✓ |
+| hint_check | `hint_check.v4` ossl-native | 9.1 µs | 11.3 µs | 9.6 µs | 0.95 | 1 | 98448 | 1.34× | ✓ |
+| total | `total` v0-pipeline | 132.9 µs | 191.2 µs | 141.6 µs | 0.84 | 1 | 5949 | — | ✓ |
+| total_best | `total_best` best-pipeline | 100.6 µs | 174.2 µs | 113.3 µs | 0.94 | 1 | 8286 | 1.32× | ✓ |
 
 ##### ML-DSA-65
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| decode | `decode.v0` ossl-decoders | 2.7 µs | 2.8 µs | 2.8 µs | 0.80 | 1 | 284029 | 1.00× | ✓ |
-| decode | `decode.v1` own-unpack-u64 | 5.4 µs | 6.1 µs | 5.9 µs | 0.49 | 1 | 83679 | 0.49× | ✓ |
-| decode | `decode.v2` ossl-decoders-native | 2.4 µs | 2.4 µs | 2.5 µs | 0.68 | 1 | 270787 | 1.11× | ✓ |
-| mu | `mu.v0` ossl-evp-shake | 5.7 µs | 6.8 µs | 6.1 µs | 0.52 | 1 | 84614 | 1.00× | ✓ |
-| mu | `mu.v1` cached-tr | 0.4 µs | 0.4 µs | 0.5 µs | 0.54 | 1 | 1151894 | 13.56× | ✓ |
-| mu | `mu.v2` lowlevel-sha3 | 5.6 µs | 5.7 µs | 5.9 µs | 0.55 | 1 | 93100 | 1.02× | ✓ |
-| mu | `mu.v3` ossl-evp-shake-noasm | 6.0 µs | 14.7 µs | 9.6 µs | 0.47 | 1 | 49041 | 0.95× | ✓ |
-| mu | `mu.v4` ossl-evp-shake-native | 5.7 µs | 5.8 µs | 5.9 µs | 0.66 | 1 | 112063 | 1.01× | ✓ |
-| mu | `mu.v5` evp-reused-ctx | 5.6 µs | 9.4 µs | 6.2 µs | 0.50 | 1 | 80688 | 1.02× | ✓ |
-| expandA | `expandA.v0` ossl-expand-A | 62.2 µs | 91.1 µs | 66.4 µs | 0.55 | 1 | 8247 | 1.00× | ✓ |
-| expandA | `expandA.v1` cached-A | 0.6 µs | 0.8 µs | 0.7 µs | 0.55 | 1 | 755289 | 96.24× | ✓ |
-| expandA | `expandA.v2` lowlevel-sha3 | 61.0 µs | 81.8 µs | 63.6 µs | 0.56 | 1 | 8750 | 1.02× | ✓ |
-| expandA | `expandA.v3` ossl-expand-A-noasm | 63.5 µs | 139.9 µs | 72.5 µs | 0.46 | 1 | 6348 | 0.98× | ✓ |
-| expandA | `expandA.v4` ossl-expand-A-native | 61.6 µs | 80.8 µs | 63.9 µs | 0.70 | 1 | 10925 | 1.01× | ✓ |
-| expandA | `expandA.v5` pthread-x4-rows | 70.1 µs | 92.2 µs | 73.3 µs | 0.90 | 4 | 12291 | 0.89× | ✓ |
-| w_approx | `w_approx.v0` ossl-ntt | 118.7 µs | 224.3 µs | 140.3 µs | 0.72 | 1 | 5154 | 1.00× | ✓ |
-| w_approx | `w_approx.v1` cached-ntt-t1 | 154.3 µs | 201.4 µs | 159.1 µs | 0.65 | 1 | 4089 | 0.77× | ✓ |
-| w_approx | `w_approx.v2` own-int32-mont-ntt | 47.0 µs | 88.8 µs | 51.4 µs | 0.81 | 1 | 15767 | 2.52× | ✓ |
-| w_approx | `w_approx.v3` ossl-ntt-native | 117.4 µs | 159.8 µs | 125.2 µs | 0.66 | 1 | 5239 | 1.01× | ✓ |
-| w_approx | `w_approx.v4` cached-t1+own-ntt | 34.5 µs | 60.9 µs | 39.1 µs | 0.59 | 1 | 15092 | 3.44× | ✓ |
-| hint_check | `hint_check.v0` ossl-usehint-w1encode | 14.2 µs | 23.9 µs | 15.5 µs | 0.63 | 1 | 40714 | 1.00× | ✓ |
-| hint_check | `hint_check.v1` lowlevel-sha3 | 13.9 µs | 14.6 µs | 14.5 µs | 0.70 | 1 | 48014 | 1.02× | ✓ |
-| hint_check | `hint_check.v2` fused-usehint-pack | 12.6 µs | 12.8 µs | 13.1 µs | 0.40 | 1 | 30379 | 1.13× | ✓ |
-| hint_check | `hint_check.v3` ossl-noasm | 16.4 µs | 27.0 µs | 17.9 µs | 0.50 | 1 | 28030 | 0.86× | ✓ |
-| hint_check | `hint_check.v4` ossl-native | 10.5 µs | 15.3 µs | 11.4 µs | 0.69 | 1 | 60030 | 1.35× | ✓ |
-| total | `total` v0-pipeline | 206.3 µs | 260.5 µs | 212.5 µs | 0.42 | 1 | 1971 | — | ✓ |
-| total_best | `total_best` best-pipeline | 136.0 µs | 295.6 µs | 166.8 µs | 0.54 | 1 | 3214 | 1.52× | ✓ |
+| decode | `decode.v0` ossl-decoders | 2.7 µs | 5.0 µs | 3.0 µs | 0.99 | 1 | 324434 | 1.00× | ✓ |
+| decode | `decode.v1` own-unpack-u64 | 2.4 µs | 2.4 µs | 2.5 µs | 0.70 | 1 | 279704 | 1.12× | ✓ |
+| decode | `decode.v2` ossl-decoders-native | 2.4 µs | 2.5 µs | 2.6 µs | 0.89 | 1 | 346923 | 1.11× | ✓ |
+| mu | `mu.v0` ossl-evp-shake | 5.7 µs | 5.9 µs | 6.0 µs | 0.99 | 1 | 164939 | 1.00× | ✓ |
+| mu | `mu.v1` cached-tr | 0.4 µs | 0.5 µs | 0.5 µs | 0.95 | 1 | 1983215 | 13.61× | ✓ |
+| mu | `mu.v2` lowlevel-sha3 | 5.6 µs | 5.7 µs | 5.9 µs | 0.63 | 1 | 107683 | 1.02× | ✓ |
+| mu | `mu.v3` ossl-evp-shake-noasm | 6.0 µs | 10.4 µs | 6.7 µs | 0.90 | 1 | 133833 | 0.96× | ✓ |
+| mu | `mu.v4` ossl-evp-shake-native | 5.7 µs | 9.3 µs | 6.3 µs | 0.94 | 1 | 148392 | 1.01× | ✓ |
+| mu | `mu.v5` evp-reused-ctx | 6.2 µs | 12.2 µs | 8.7 µs | 0.51 | 1 | 58379 | 0.92× | ✓ |
+| expandA | `expandA.v0` ossl-expand-A | 61.6 µs | 90.7 µs | 65.9 µs | 0.67 | 1 | 10189 | 1.00× | ✓ |
+| expandA | `expandA.v1` cached-A | 0.6 µs | 0.7 µs | 0.7 µs | 0.97 | 1 | 1377223 | 95.76× | ✓ |
+| expandA | `expandA.v2` lowlevel-sha3 | 61.2 µs | 91.2 µs | 66.1 µs | 0.90 | 1 | 13584 | 1.01× | ✓ |
+| expandA | `expandA.v3` ossl-expand-A-noasm | 64.4 µs | 108.6 µs | 72.3 µs | 0.93 | 1 | 12876 | 0.96× | ✓ |
+| expandA | `expandA.v4` ossl-expand-A-native | 61.8 µs | 109.4 µs | 69.3 µs | 0.70 | 1 | 10053 | 1.00× | ✓ |
+| expandA | `expandA.v5` pthread-x4-rows | 108.3 µs | 1.76 ms | 155.3 µs | 0.65 | 4 | 4160 | 0.57× | ✓ |
+| w_approx | `w_approx.v0` ossl-ntt | 118.8 µs | 182.4 µs | 130.7 µs | 0.68 | 1 | 5166 | 1.00× | ✓ |
+| w_approx | `w_approx.v1` cached-ntt-t1 | 86.2 µs | 118.8 µs | 92.4 µs | 0.72 | 1 | 7789 | 1.38× | ✓ |
+| w_approx | `w_approx.v2` own-int32-mont-ntt | 50.7 µs | 108.7 µs | 69.1 µs | 0.83 | 1 | 12013 | 2.35× | ✓ |
+| w_approx | `w_approx.v3` ossl-ntt-native | 172.5 µs | 224.0 µs | 177.2 µs | 0.80 | 1 | 4502 | 0.69× | ✓ |
+| w_approx | `w_approx.v4` cached-t1+own-ntt | 34.4 µs | 71.5 µs | 40.3 µs | 0.78 | 1 | 19350 | 3.45× | ✓ |
+| hint_check | `hint_check.v0` ossl-usehint-w1encode | 14.3 µs | 32.6 µs | 16.8 µs | 0.76 | 1 | 45456 | 1.00× | ✓ |
+| hint_check | `hint_check.v1` lowlevel-sha3 | 14.1 µs | 33.0 µs | 18.6 µs | 0.77 | 1 | 41468 | 1.01× | ✓ |
+| hint_check | `hint_check.v2` fused-usehint-pack | 13.1 µs | 30.6 µs | 18.4 µs | 0.76 | 1 | 41343 | 1.09× | ✓ |
+| hint_check | `hint_check.v3` ossl-noasm | 16.4 µs | 26.5 µs | 18.0 µs | 0.83 | 1 | 46204 | 0.87× | ✓ |
+| hint_check | `hint_check.v4` ossl-native | 10.9 µs | 17.1 µs | 12.1 µs | 0.97 | 1 | 79840 | 1.32× | ✓ |
+| total | `total` v0-pipeline | 207.5 µs | 415.5 µs | 238.0 µs | 0.49 | 1 | 2061 | — | ✓ |
+| total_best | `total_best` best-pipeline | 134.0 µs | 302.6 µs | 176.7 µs | 0.75 | 1 | 4257 | 1.55× | ✓ |
 
 ##### ML-DSA-87
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| decode | `decode.v0` ossl-decoders | 3.6 µs | 5.4 µs | 4.0 µs | 0.39 | 1 | 98329 | 1.00× | ✓ |
-| decode | `decode.v1` own-unpack-u64 | 10.1 µs | 14.9 µs | 10.4 µs | 0.49 | 1 | 46791 | 0.36× | ✓ |
-| decode | `decode.v2` ossl-decoders-native | 3.3 µs | 4.6 µs | 3.6 µs | 0.68 | 1 | 187924 | 1.10× | ✓ |
-| mu | `mu.v0` ossl-evp-shake | 7.5 µs | 16.9 µs | 9.2 µs | 0.45 | 1 | 48431 | 1.00× | ✓ |
-| mu | `mu.v1` cached-tr | 0.4 µs | 1.0 µs | 0.5 µs | 0.48 | 1 | 925709 | 17.64× | ✓ |
-| mu | `mu.v2` lowlevel-sha3 | 7.3 µs | 10.8 µs | 7.9 µs | 0.52 | 1 | 65149 | 1.02× | ✓ |
-| mu | `mu.v3` ossl-evp-shake-noasm | 7.8 µs | 16.0 µs | 11.0 µs | 0.49 | 1 | 44873 | 0.95× | ✓ |
-| mu | `mu.v4` ossl-evp-shake-native | 7.4 µs | 221.7 µs | 7.9 µs | 0.23 | 1 | 28985 | 1.01× | ✓ |
-| mu | `mu.v5` evp-reused-ctx | 7.3 µs | 13.2 µs | 9.4 µs | 0.51 | 1 | 53873 | 1.02× | ✓ |
-| expandA | `expandA.v0` ossl-expand-A | 116.0 µs | 139.0 µs | 120.3 µs | 0.51 | 1 | 4203 | 1.00× | ✓ |
-| expandA | `expandA.v1` cached-A | 1.3 µs | 1.6 µs | 1.4 µs | 0.47 | 1 | 325294 | 87.82× | ✓ |
-| expandA | `expandA.v2` lowlevel-sha3 | 119.1 µs | 269.3 µs | 154.1 µs | 0.56 | 1 | 3643 | 0.97× | ✓ |
-| expandA | `expandA.v3` ossl-expand-A-noasm | 119.0 µs | 245.2 µs | 130.3 µs | 0.49 | 1 | 3799 | 0.97× | ✓ |
-| expandA | `expandA.v4` ossl-expand-A-native | 529.5 µs | 1.73 ms | 119.4 µs | 0.17 | 1 | 1465 | 0.22× | ✓ |
-| expandA | `expandA.v5` pthread-x4-rows | 123.9 µs | 164.3 µs | 130.9 µs | 0.84 | 4 | 6396 | 0.94× | ✓ |
-| w_approx | `w_approx.v0` ossl-ntt | 172.5 µs | 219.2 µs | 179.6 µs | 0.67 | 1 | 3756 | 1.00× | ✓ |
-| w_approx | `w_approx.v1` cached-ntt-t1 | 128.5 µs | 184.7 µs | 136.6 µs | 0.49 | 1 | 3598 | 1.34× | ✓ |
-| w_approx | `w_approx.v2` own-int32-mont-ntt | 65.1 µs | 86.0 µs | 68.3 µs | 0.46 | 1 | 6680 | 2.65× | ✓ |
-| w_approx | `w_approx.v3` ossl-ntt-native | 487.5 µs | 2.02 ms | 194.5 µs | 0.28 | 1 | 1432 | 0.35× | ✓ |
-| w_approx | `w_approx.v4` cached-t1+own-ntt | 48.4 µs | 72.0 µs | 52.0 µs | 0.58 | 1 | 11074 | 3.57× | ✓ |
-| hint_check | `hint_check.v0` ossl-usehint-w1encode | 19.2 µs | 33.0 µs | 21.0 µs | 0.53 | 1 | 25064 | 1.00× | ✓ |
-| hint_check | `hint_check.v1` lowlevel-sha3 | 18.8 µs | 27.9 µs | 19.9 µs | 0.49 | 1 | 24493 | 1.02× | ✓ |
-| hint_check | `hint_check.v2` fused-usehint-pack | 17.0 µs | 37.7 µs | 22.8 µs | 0.49 | 1 | 21665 | 1.13× | ✓ |
-| hint_check | `hint_check.v3` ossl-noasm | 22.8 µs | 48.5 µs | 30.0 µs | 0.48 | 1 | 16120 | 0.84× | ✓ |
-| hint_check | `hint_check.v4` ossl-native | 12.6 µs | 19.8 µs | 13.9 µs | 0.64 | 1 | 45769 | 1.53× | ✓ |
-| total | `total` v0-pipeline | 324.6 µs | 4.37 ms | 340.1 µs | 0.50 | 1 | 1484 | — | ✓ |
-| total_best | `total_best` best-pipeline | 216.8 µs | 4.25 ms | 257.8 µs | 0.45 | 1 | 1752 | 1.50× | ✓ |
+| decode | `decode.v0` ossl-decoders | 3.6 µs | 3.8 µs | 3.9 µs | 0.74 | 1 | 190742 | 1.00× | ✓ |
+| decode | `decode.v1` own-unpack-u64 | 3.2 µs | 5.9 µs | 3.8 µs | 0.76 | 1 | 197727 | 1.12× | ✓ |
+| decode | `decode.v2` ossl-decoders-native | 3.3 µs | 6.6 µs | 4.3 µs | 0.95 | 1 | 221919 | 1.10× | ✓ |
+| mu | `mu.v0` ossl-evp-shake | 7.4 µs | 11.6 µs | 8.2 µs | 0.82 | 1 | 98922 | 1.00× | ✓ |
+| mu | `mu.v1` cached-tr | 0.4 µs | 0.7 µs | 0.5 µs | 0.80 | 1 | 1602371 | 17.64× | ✓ |
+| mu | `mu.v2` lowlevel-sha3 | 7.3 µs | 7.4 µs | 7.7 µs | 0.80 | 1 | 103820 | 1.02× | ✓ |
+| mu | `mu.v3` ossl-evp-shake-noasm | 7.8 µs | 19.1 µs | 9.8 µs | 0.93 | 1 | 94647 | 0.96× | ✓ |
+| mu | `mu.v4` ossl-evp-shake-native | 7.4 µs | 9.0 µs | 7.9 µs | 0.99 | 1 | 125291 | 1.01× | ✓ |
+| mu | `mu.v5` evp-reused-ctx | 7.3 µs | 7.5 µs | 7.6 µs | 0.71 | 1 | 93065 | 1.02× | ✓ |
+| expandA | `expandA.v0` ossl-expand-A | 115.2 µs | 142.1 µs | 119.6 µs | 0.73 | 1 | 6074 | 1.00× | ✓ |
+| expandA | `expandA.v1` cached-A | 1.3 µs | 1.4 µs | 1.4 µs | 0.83 | 1 | 589971 | 87.10× | ✓ |
+| expandA | `expandA.v2` lowlevel-sha3 | 114.3 µs | 165.4 µs | 122.9 µs | 0.85 | 1 | 6942 | 1.01× | ✓ |
+| expandA | `expandA.v3` ossl-expand-A-noasm | 265.9 µs | 316.2 µs | 252.7 µs | 0.94 | 1 | 3718 | 0.43× | ✓ |
+| expandA | `expandA.v4` ossl-expand-A-native | 248.1 µs | 290.2 µs | 239.9 µs | 0.97 | 1 | 4043 | 0.46× | ✓ |
+| expandA | `expandA.v5` pthread-x4-rows | 123.0 µs | 162.6 µs | 128.8 µs | 0.95 | 4 | 7358 | 0.94× | ✓ |
+| w_approx | `w_approx.v0` ossl-ntt | 174.1 µs | 335.1 µs | 193.5 µs | 0.75 | 1 | 3893 | 1.00× | ✓ |
+| w_approx | `w_approx.v1` cached-ntt-t1 | 128.9 µs | 190.7 µs | 137.9 µs | 0.91 | 1 | 6632 | 1.35× | ✓ |
+| w_approx | `w_approx.v2` own-int32-mont-ntt | 65.1 µs | 91.9 µs | 69.1 µs | 0.89 | 1 | 12890 | 2.67× | ✓ |
+| w_approx | `w_approx.v3` ossl-ntt-native | 309.0 µs | 393.9 µs | 316.5 µs | 0.85 | 1 | 2695 | 0.56× | ✓ |
+| w_approx | `w_approx.v4` cached-t1+own-ntt | 48.6 µs | 76.6 µs | 52.1 µs | 0.87 | 1 | 16680 | 3.58× | ✓ |
+| hint_check | `hint_check.v0` ossl-usehint-w1encode | 19.2 µs | 30.5 µs | 20.7 µs | 0.84 | 1 | 40661 | 1.00× | ✓ |
+| hint_check | `hint_check.v1` lowlevel-sha3 | 18.9 µs | 26.4 µs | 20.0 µs | 0.94 | 1 | 46992 | 1.02× | ✓ |
+| hint_check | `hint_check.v2` fused-usehint-pack | 17.3 µs | 21.9 µs | 18.3 µs | 0.85 | 1 | 46455 | 1.11× | ✓ |
+| hint_check | `hint_check.v3` ossl-noasm | 22.2 µs | 41.0 µs | 24.6 µs | 0.82 | 1 | 33281 | 0.87× | ✓ |
+| hint_check | `hint_check.v4` ossl-native | 14.4 µs | 21.7 µs | 15.6 µs | 0.90 | 1 | 57823 | 1.34× | ✓ |
+| total | `total` v0-pipeline | 481.0 µs | 3.53 ms | 463.1 µs | 0.51 | 1 | 1094 | — | ✓ |
+| total_best | `total_best` best-pipeline | 211.2 µs | 327.9 µs | 226.6 µs | 0.99 | 1 | 4379 | 2.28× | ✓ |
 
 ### slh-dsa
 
@@ -223,27 +232,27 @@ signature and reject a bit-flipped copy (and `validate` runs them over the whole
 | stage | variant | name | geomean speedup | all match |
 |---|---|---|---|---|
 | hmsg | `hmsg.v0` | ossl-H_msg | 1.00× | yes |
-| hmsg | `hmsg.v1` | ossl-H_msg-noasm | 0.88× | yes |
-| hmsg | `hmsg.v2` | ossl-H_msg-native | 1.04× | yes |
-| hmsg | `hmsg.v3` | lowlevel-hash | 1.23× | yes |
-| hmsg | `hmsg.v4` | mgf1-seed-midstate | 1.17× | yes |
+| hmsg | `hmsg.v1` | ossl-H_msg-noasm | 0.75× | yes |
+| hmsg | `hmsg.v2` | ossl-H_msg-native | 0.89× | yes |
+| hmsg | `hmsg.v3` | lowlevel-hash | 1.08× | yes |
+| hmsg | `hmsg.v4` | mgf1-seed-midstate | 1.25× | yes |
 | fors | `fors.v0` | ossl-fors_pkFromSig | 1.00× | yes |
-| fors | `fors.v1` | ossl-fors-noasm | 0.77× | yes |
-| fors | `fors.v2` | ossl-fors-native | 0.98× | yes |
-| fors | `fors.v3` | lowlevel-midstate | 1.39× | yes |
+| fors | `fors.v1` | ossl-fors-noasm | 0.72× | yes |
+| fors | `fors.v2` | ossl-fors-native | 1.00× | yes |
+| fors | `fors.v3` | lowlevel-midstate | 1.44× | yes |
 | fors | `fors.v4` | pthread-x4-trees | 1.23× | yes |
 | ht_wots | `ht_wots.v0` | ossl-wots_pkFromSig | 1.00× | yes |
-| ht_wots | `ht_wots.v1` | ossl-wots-noasm | 0.81× | yes |
-| ht_wots | `ht_wots.v2` | ossl-wots-native | 1.32× | yes |
-| ht_wots | `ht_wots.v3` | lowlevel-midstate | 1.63× | yes |
-| ht_wots | `ht_wots.v4` | pthread-x4-layers | 1.61× | yes |
+| ht_wots | `ht_wots.v1` | ossl-wots-noasm | 0.83× | yes |
+| ht_wots | `ht_wots.v2` | ossl-wots-native | 1.10× | yes |
+| ht_wots | `ht_wots.v3` | lowlevel-midstate | 1.68× | yes |
+| ht_wots | `ht_wots.v4` | pthread-x4-layers | 1.75× | yes |
 | ht_auth | `ht_auth.v0` | ossl-xmss-authpath | 1.00× | yes |
-| ht_auth | `ht_auth.v1` | ossl-authpath-noasm | 0.86× | yes |
-| ht_auth | `ht_auth.v2` | ossl-authpath-native | 1.10× | yes |
-| ht_auth | `ht_auth.v3` | lowlevel-midstate | 1.52× | yes |
-| ht_auth | `ht_auth.v4` | pthread-x4-layers | 0.90× | yes |
+| ht_auth | `ht_auth.v1` | ossl-authpath-noasm | 0.75× | yes |
+| ht_auth | `ht_auth.v2` | ossl-authpath-native | 0.96× | yes |
+| ht_auth | `ht_auth.v3` | lowlevel-midstate | 1.38× | yes |
+| ht_auth | `ht_auth.v4` | pthread-x4-layers | 0.85× | yes |
 | total | `total` | v0-pipeline | — | yes |
-| total_best | `total_best` | best-pipeline | 1.89× | yes |
+| total_best | `total_best` | best-pipeline | 1.56× | yes |
 
 #### Per parameter set
 
@@ -251,317 +260,317 @@ signature and reject a bit-flipped copy (and `validate` runs them over the whole
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| hmsg | `hmsg.v0` ossl-H_msg | 0.9 µs | 1.3 µs | 1.1 µs | 0.50 | 1 | 460845 | 1.00× | ✓ |
-| hmsg | `hmsg.v1` ossl-H_msg-noasm | 1.4 µs | 1.6 µs | 1.5 µs | 0.54 | 1 | 353057 | 0.66× | ✓ |
-| hmsg | `hmsg.v2` ossl-H_msg-native | 0.9 µs | 1.0 µs | 1.0 µs | 0.66 | 1 | 677107 | 1.04× | ✓ |
-| hmsg | `hmsg.v3` lowlevel-hash | 0.8 µs | 0.8 µs | 0.8 µs | 0.68 | 1 | 814391 | 1.22× | ✓ |
-| hmsg | `hmsg.v4` mgf1-seed-midstate | 0.8 µs | 0.8 µs | 0.8 µs | 0.69 | 1 | 827307 | 1.21× | ✓ |
-| fors | `fors.v0` ossl-fors_pkFromSig | 75.6 µs | 127.6 µs | 84.2 µs | 0.59 | 1 | 6982 | 1.00× | ✓ |
-| fors | `fors.v1` ossl-fors-noasm | 116.2 µs | 182.5 µs | 125.3 µs | 0.58 | 1 | 4605 | 0.65× | ✓ |
-| fors | `fors.v2` ossl-fors-native | 73.3 µs | 122.1 µs | 80.4 µs | 0.64 | 1 | 7932 | 1.03× | ✓ |
-| fors | `fors.v3` lowlevel-midstate | 37.3 µs | 66.4 µs | 43.0 µs | 0.57 | 1 | 13334 | 2.02× | ✓ |
-| fors | `fors.v4` pthread-x4-trees | 47.1 µs | 100.0 µs | 60.5 µs | 0.95 | 4 | 15745 | 1.60× | ✓ |
-| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 810.4 µs | 2.30 ms | 883.8 µs | 0.56 | 1 | 633 | 1.00× | ✓ |
-| ht_wots | `ht_wots.v1` ossl-wots-noasm | 1.27 ms | 5.47 ms | 1.29 ms | 0.56 | 1 | 438 | 0.64× | ✓ |
-| ht_wots | `ht_wots.v2` ossl-wots-native | 799.7 µs | 4.86 ms | 846.9 µs | 0.66 | 1 | 777 | 1.01× | ✓ |
-| ht_wots | `ht_wots.v3` lowlevel-midstate | 562.5 µs | 730.7 µs | 510.2 µs | 0.77 | 1 | 1518 | 1.44× | ✓ |
-| ht_wots | `ht_wots.v4` pthread-x4-layers | 456.8 µs | 2.20 ms | 503.4 µs | 0.62 | 4 | 1233 | 1.77× | ✓ |
-| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 25.9 µs | 50.7 µs | 34.5 µs | 0.22 | 1 | 6370 | 1.00× | ✓ |
-| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 39.9 µs | 83.5 µs | 49.4 µs | 0.55 | 1 | 11105 | 0.65× | ✓ |
-| ht_auth | `ht_auth.v2` ossl-authpath-native | 25.1 µs | 40.8 µs | 27.5 µs | 0.66 | 1 | 24128 | 1.03× | ✓ |
-| ht_auth | `ht_auth.v3` lowlevel-midstate | 20.8 µs | 29.9 µs | 21.7 µs | 0.55 | 1 | 25078 | 1.25× | ✓ |
-| ht_auth | `ht_auth.v4` pthread-x4-layers | 73.7 µs | 135.4 µs | 91.4 µs | 0.57 | 4 | 6216 | 0.35× | ✓ |
-| total | `total` v0-pipeline | 1.70 ms | 9.70 ms | 1.65 ms | 0.44 | 1 | 265 | — | ✓ |
-| total_best | `total_best` best-pipeline | 791.9 µs | 4.85 ms | 769.7 µs | 0.65 | 1 | 839 | 2.15× | ✓ |
+| hmsg | `hmsg.v0` ossl-H_msg | 0.9 µs | 1.0 µs | 1.0 µs | 0.72 | 1 | 730596 | 1.00× | ✓ |
+| hmsg | `hmsg.v1` ossl-H_msg-noasm | 2.8 µs | 2.9 µs | 2.8 µs | 0.92 | 1 | 332767 | 0.33× | ✓ |
+| hmsg | `hmsg.v2` ossl-H_msg-native | 0.9 µs | 1.5 µs | 1.1 µs | 0.94 | 1 | 872040 | 1.03× | ✓ |
+| hmsg | `hmsg.v3` lowlevel-hash | 0.8 µs | 0.8 µs | 0.8 µs | 0.99 | 1 | 1217402 | 1.22× | ✓ |
+| hmsg | `hmsg.v4` mgf1-seed-midstate | 0.8 µs | 1.0 µs | 0.8 µs | 0.91 | 1 | 1081667 | 1.21× | ✓ |
+| fors | `fors.v0` ossl-fors_pkFromSig | 76.1 µs | 98.2 µs | 79.6 µs | 0.84 | 1 | 10576 | 1.00× | ✓ |
+| fors | `fors.v1` ossl-fors-noasm | 243.7 µs | 284.1 µs | 249.6 µs | 0.93 | 1 | 3737 | 0.31× | ✓ |
+| fors | `fors.v2` ossl-fors-native | 73.7 µs | 126.0 µs | 82.0 µs | 0.55 | 1 | 6745 | 1.03× | ✓ |
+| fors | `fors.v3` lowlevel-midstate | 37.5 µs | 57.7 µs | 39.1 µs | 0.96 | 1 | 24585 | 2.03× | ✓ |
+| fors | `fors.v4` pthread-x4-trees | 72.8 µs | 128.6 µs | 91.5 µs | 1.02 | 4 | 11154 | 1.05× | ✓ |
+| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 804.6 µs | 1.56 ms | 893.4 µs | 0.88 | 1 | 983 | 1.00× | ✓ |
+| ht_wots | `ht_wots.v1` ossl-wots-noasm | 1.25 ms | 4.70 ms | 1.37 ms | 0.84 | 1 | 611 | 0.64× | ✓ |
+| ht_wots | `ht_wots.v2` ossl-wots-native | 844.9 µs | 1.45 ms | 921.1 µs | 0.85 | 1 | 917 | 0.95× | ✓ |
+| ht_wots | `ht_wots.v3` lowlevel-midstate | 381.3 µs | 481.4 µs | 393.7 µs | 0.75 | 1 | 1897 | 2.11× | ✓ |
+| ht_wots | `ht_wots.v4` pthread-x4-layers | 336.6 µs | 503.2 µs | 464.4 µs | 1.14 | 4 | 2450 | 2.39× | ✓ |
+| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 25.8 µs | 43.3 µs | 27.8 µs | 0.74 | 1 | 26412 | 1.00× | ✓ |
+| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 38.4 µs | 64.3 µs | 41.6 µs | 0.76 | 1 | 18355 | 0.67× | ✓ |
+| ht_auth | `ht_auth.v2` ossl-authpath-native | 25.2 µs | 50.6 µs | 32.1 µs | 0.73 | 1 | 22799 | 1.02× | ✓ |
+| ht_auth | `ht_auth.v3` lowlevel-midstate | 12.8 µs | 16.7 µs | 13.6 µs | 0.91 | 1 | 67115 | 2.01× | ✓ |
+| ht_auth | `ht_auth.v4` pthread-x4-layers | 21.1 µs | 27.1 µs | 22.2 µs | 0.92 | 4 | 41165 | 1.22× | ✓ |
+| total | `total` v0-pipeline | 1.40 ms | 5.25 ms | 1.34 ms | 0.84 | 1 | 627 | — | ✓ |
+| total_best | `total_best` best-pipeline | 683.6 µs | 736.8 µs | 677.0 µs | 0.91 | 1 | 1343 | 2.05× | ✓ |
 
 ##### SLH-DSA-SHA2-128f
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| hmsg | `hmsg.v0` ossl-H_msg | 2.0 µs | 2.6 µs | 2.0 µs | 0.59 | 1 | 287915 | 1.00× | ✓ |
-| hmsg | `hmsg.v1` ossl-H_msg-noasm | 2.0 µs | 4.1 µs | 2.5 µs | 0.60 | 1 | 240272 | 0.99× | ✓ |
-| hmsg | `hmsg.v2` ossl-H_msg-native | 1.3 µs | 2.4 µs | 1.6 µs | 0.67 | 1 | 413048 | 1.57× | ✓ |
-| hmsg | `hmsg.v3` lowlevel-hash | 1.1 µs | 1.4 µs | 1.2 µs | 0.60 | 1 | 489117 | 1.78× | ✓ |
-| hmsg | `hmsg.v4` mgf1-seed-midstate | 0.9 µs | 1.2 µs | 1.0 µs | 0.58 | 1 | 558900 | 2.09× | ✓ |
-| fors | `fors.v0` ossl-fors_pkFromSig | 96.9 µs | 142.6 µs | 104.1 µs | 0.59 | 1 | 5703 | 1.00× | ✓ |
-| fors | `fors.v1` ossl-fors-noasm | 151.0 µs | 274.3 µs | 178.8 µs | 0.68 | 1 | 3779 | 0.64× | ✓ |
-| fors | `fors.v2` ossl-fors-native | 94.0 µs | 128.7 µs | 98.9 µs | 0.69 | 1 | 6966 | 1.03× | ✓ |
-| fors | `fors.v3` lowlevel-midstate | 48.3 µs | 74.6 µs | 52.0 µs | 0.61 | 1 | 11664 | 2.01× | ✓ |
-| fors | `fors.v4` pthread-x4-trees | 57.3 µs | 89.7 µs | 62.5 µs | 0.98 | 4 | 15618 | 1.69× | ✓ |
-| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 2.63 ms | 6.62 ms | 2.64 ms | 0.81 | 1 | 306 | 1.00× | ✓ |
-| ht_wots | `ht_wots.v1` ossl-wots-noasm | 8.15 ms | 11.98 ms | 4.62 ms | 0.55 | 1 | 119 | 0.32× | ✓ |
-| ht_wots | `ht_wots.v2` ossl-wots-native | 2.60 ms | 7.24 ms | 2.62 ms | 0.65 | 1 | 249 | 1.01× | ✓ |
-| ht_wots | `ht_wots.v3` lowlevel-midstate | 1.28 ms | 5.60 ms | 1.29 ms | 0.21 | 1 | 162 | 2.05× | ✓ |
-| ht_wots | `ht_wots.v4` pthread-x4-layers | 1.27 ms | 1.73 ms | 1.32 ms | 0.93 | 4 | 705 | 2.08× | ✓ |
-| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 36.8 µs | 58.7 µs | 38.2 µs | 0.69 | 1 | 18165 | 1.00× | ✓ |
-| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 42.1 µs | 71.1 µs | 45.4 µs | 0.52 | 1 | 11348 | 0.87× | ✓ |
-| ht_auth | `ht_auth.v2` ossl-authpath-native | 26.7 µs | 53.9 µs | 30.8 µs | 0.68 | 1 | 21983 | 1.38× | ✓ |
-| ht_auth | `ht_auth.v3` lowlevel-midstate | 13.6 µs | 23.7 µs | 16.5 µs | 0.64 | 1 | 38825 | 2.72× | ✓ |
-| ht_auth | `ht_auth.v4` pthread-x4-layers | 71.9 µs | 116.3 µs | 78.9 µs | 0.62 | 4 | 7854 | 0.51× | ✓ |
-| total | `total` v0-pipeline | 4.91 ms | 10.85 ms | 2.80 ms | 0.47 | 1 | 169 | — | ✓ |
-| total_best | `total_best` best-pipeline | 1.31 ms | 5.45 ms | 1.33 ms | 0.58 | 1 | 438 | 3.74× | ✓ |
+| hmsg | `hmsg.v0` ossl-H_msg | 1.5 µs | 2.1 µs | 1.7 µs | 0.77 | 1 | 440974 | 1.00× | ✓ |
+| hmsg | `hmsg.v1` ossl-H_msg-noasm | 2.0 µs | 3.2 µs | 2.2 µs | 0.79 | 1 | 358604 | 0.78× | ✓ |
+| hmsg | `hmsg.v2` ossl-H_msg-native | 1.7 µs | 2.5 µs | 1.9 µs | 0.76 | 1 | 404003 | 0.90× | ✓ |
+| hmsg | `hmsg.v3` lowlevel-hash | 1.1 µs | 1.6 µs | 1.2 µs | 0.81 | 1 | 657914 | 1.37× | ✓ |
+| hmsg | `hmsg.v4` mgf1-seed-midstate | 1.0 µs | 1.7 µs | 1.1 µs | 0.83 | 1 | 736370 | 1.60× | ✓ |
+| fors | `fors.v0` ossl-fors_pkFromSig | 96.6 µs | 136.1 µs | 104.0 µs | 0.81 | 1 | 7836 | 1.00× | ✓ |
+| fors | `fors.v1` ossl-fors-noasm | 265.4 µs | 356.7 µs | 246.0 µs | 0.73 | 1 | 2984 | 0.36× | ✓ |
+| fors | `fors.v2` ossl-fors-native | 153.3 µs | 201.4 µs | 155.6 µs | 0.94 | 1 | 6023 | 0.63× | ✓ |
+| fors | `fors.v3` lowlevel-midstate | 55.1 µs | 104.7 µs | 63.2 µs | 0.49 | 1 | 7723 | 1.75× | ✓ |
+| fors | `fors.v4` pthread-x4-trees | 57.4 µs | 95.8 µs | 62.7 µs | 0.93 | 4 | 14789 | 1.68× | ✓ |
+| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 2.79 ms | 6.57 ms | 2.64 ms | 0.72 | 1 | 273 | 1.00× | ✓ |
+| ht_wots | `ht_wots.v1` ossl-wots-noasm | 4.01 ms | 7.99 ms | 4.07 ms | 0.88 | 1 | 217 | 0.70× | ✓ |
+| ht_wots | `ht_wots.v2` ossl-wots-native | 3.95 ms | 8.02 ms | 3.95 ms | 0.92 | 1 | 234 | 0.71× | ✓ |
+| ht_wots | `ht_wots.v3` lowlevel-midstate | 1.57 ms | 5.30 ms | 1.52 ms | 0.77 | 1 | 508 | 1.77× | ✓ |
+| ht_wots | `ht_wots.v4` pthread-x4-layers | 1.28 ms | 2.25 ms | 1.31 ms | 0.91 | 4 | 696 | 2.18× | ✓ |
+| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 27.4 µs | 51.6 µs | 31.5 µs | 0.84 | 1 | 26587 | 1.00× | ✓ |
+| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 62.1 µs | 110.1 µs | 64.3 µs | 0.77 | 1 | 12055 | 0.44× | ✓ |
+| ht_auth | `ht_auth.v2` ossl-authpath-native | 26.8 µs | 30.9 µs | 27.8 µs | 0.98 | 1 | 35310 | 1.02× | ✓ |
+| ht_auth | `ht_auth.v3` lowlevel-midstate | 19.7 µs | 25.4 µs | 19.2 µs | 0.75 | 1 | 38921 | 1.39× | ✓ |
+| ht_auth | `ht_auth.v4` pthread-x4-layers | 22.3 µs | 42.0 µs | 27.1 µs | 1.00 | 4 | 36906 | 1.23× | ✓ |
+| total | `total` v0-pipeline | 2.67 ms | 6.85 ms | 2.69 ms | 0.75 | 1 | 278 | — | ✓ |
+| total_best | `total_best` best-pipeline | 1.30 ms | 1.84 ms | 1.31 ms | 0.92 | 1 | 699 | 2.05× | ✓ |
 
 ##### SLH-DSA-SHA2-192s
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| hmsg | `hmsg.v0` ossl-H_msg | 1.3 µs | 2.4 µs | 1.9 µs | 0.49 | 1 | 259858 | 1.00× | ✓ |
-| hmsg | `hmsg.v1` ossl-H_msg-noasm | 1.8 µs | 3.0 µs | 2.0 µs | 0.57 | 1 | 287083 | 0.72× | ✓ |
-| hmsg | `hmsg.v2` ossl-H_msg-native | 1.2 µs | 1.2 µs | 1.3 µs | 0.71 | 1 | 563896 | 1.10× | ✓ |
-| hmsg | `hmsg.v3` lowlevel-hash | 1.1 µs | 2.0 µs | 1.2 µs | 0.63 | 1 | 505289 | 1.19× | ✓ |
-| hmsg | `hmsg.v4` mgf1-seed-midstate | 1.1 µs | 1.4 µs | 1.2 µs | 0.53 | 1 | 451944 | 1.19× | ✓ |
-| fors | `fors.v0` ossl-fors_pkFromSig | 211.3 µs | 1.90 ms | 216.3 µs | 0.49 | 1 | 2269 | 1.00× | ✓ |
-| fors | `fors.v1` ossl-fors-noasm | 211.7 µs | 333.0 µs | 221.4 µs | 0.51 | 1 | 2285 | 1.00× | ✓ |
-| fors | `fors.v2` ossl-fors-native | 157.2 µs | 261.4 µs | 170.0 µs | 0.40 | 1 | 2324 | 1.34× | ✓ |
-| fors | `fors.v3` lowlevel-midstate | 71.4 µs | 137.8 µs | 80.1 µs | 0.61 | 1 | 7658 | 2.96× | ✓ |
-| fors | `fors.v4` pthread-x4-trees | 87.5 µs | 163.3 µs | 104.3 µs | 0.81 | 4 | 7745 | 2.41× | ✓ |
-| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 1.88 ms | 5.86 ms | 1.79 ms | 0.73 | 1 | 409 | 1.00× | ✓ |
-| ht_wots | `ht_wots.v1` ossl-wots-noasm | 1.96 ms | 6.06 ms | 1.89 ms | 0.52 | 1 | 275 | 0.96× | ✓ |
-| ht_wots | `ht_wots.v2` ossl-wots-native | 1.32 ms | 5.85 ms | 1.30 ms | 0.55 | 1 | 424 | 1.43× | ✓ |
-| ht_wots | `ht_wots.v3` lowlevel-midstate | 560.0 µs | 4.62 ms | 571.1 µs | 0.62 | 1 | 1089 | 3.36× | ✓ |
-| ht_wots | `ht_wots.v4` pthread-x4-layers | 578.6 µs | 4.51 ms | 635.5 µs | 0.65 | 4 | 1030 | 3.25× | ✓ |
-| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 59.0 µs | 93.8 µs | 60.0 µs | 0.62 | 1 | 10328 | 1.00× | ✓ |
-| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 51.1 µs | 81.6 µs | 55.9 µs | 0.57 | 1 | 10254 | 1.15× | ✓ |
-| ht_auth | `ht_auth.v2` ossl-authpath-native | 32.6 µs | 52.0 µs | 34.7 µs | 0.94 | 1 | 26988 | 1.81× | ✓ |
-| ht_auth | `ht_auth.v3` lowlevel-midstate | 33.1 µs | 43.2 µs | 33.5 µs | 0.49 | 1 | 14657 | 1.78× | ✓ |
-| ht_auth | `ht_auth.v4` pthread-x4-layers | 43.6 µs | 75.1 µs | 42.6 µs | 0.50 | 4 | 11733 | 1.35× | ✓ |
-| total | `total` v0-pipeline | 3.83 ms | 6.93 ms | 1.99 ms | 0.48 | 1 | 243 | — | ✓ |
-| total_best | `total_best` best-pipeline | 727.0 µs | 4.92 ms | 794.7 µs | 0.60 | 1 | 756 | 5.26× | ✓ |
+| hmsg | `hmsg.v0` ossl-H_msg | 1.3 µs | 1.9 µs | 1.4 µs | 0.88 | 1 | 630685 | 1.00× | ✓ |
+| hmsg | `hmsg.v1` ossl-H_msg-noasm | 1.7 µs | 1.9 µs | 1.9 µs | 0.79 | 1 | 422847 | 0.72× | ✓ |
+| hmsg | `hmsg.v2` ossl-H_msg-native | 1.2 µs | 2.0 µs | 1.3 µs | 0.82 | 1 | 623474 | 1.08× | ✓ |
+| hmsg | `hmsg.v3` lowlevel-hash | 1.1 µs | 2.0 µs | 1.3 µs | 0.84 | 1 | 659146 | 1.18× | ✓ |
+| hmsg | `hmsg.v4` mgf1-seed-midstate | 1.1 µs | 1.3 µs | 1.2 µs | 0.91 | 1 | 772666 | 1.18× | ✓ |
+| fors | `fors.v0` ossl-fors_pkFromSig | 144.6 µs | 213.4 µs | 157.0 µs | 0.87 | 1 | 5558 | 1.00× | ✓ |
+| fors | `fors.v1` ossl-fors-noasm | 210.9 µs | 257.5 µs | 217.6 µs | 0.90 | 1 | 4137 | 0.69× | ✓ |
+| fors | `fors.v2` ossl-fors-native | 134.2 µs | 273.4 µs | 170.9 µs | 0.91 | 1 | 5351 | 1.08× | ✓ |
+| fors | `fors.v3` lowlevel-midstate | 71.4 µs | 133.1 µs | 80.7 µs | 0.69 | 1 | 8575 | 2.03× | ✓ |
+| fors | `fors.v4` pthread-x4-trees | 80.5 µs | 130.5 µs | 88.7 µs | 0.99 | 4 | 11113 | 1.80× | ✓ |
+| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 1.19 ms | 1.96 ms | 1.29 ms | 0.93 | 1 | 720 | 1.00× | ✓ |
+| ht_wots | `ht_wots.v1` ossl-wots-noasm | 1.80 ms | 5.88 ms | 1.89 ms | 0.76 | 1 | 402 | 0.66× | ✓ |
+| ht_wots | `ht_wots.v2` ossl-wots-native | 1.16 ms | 2.67 ms | 1.28 ms | 0.86 | 1 | 675 | 1.03× | ✓ |
+| ht_wots | `ht_wots.v3` lowlevel-midstate | 568.3 µs | 896.5 µs | 601.4 µs | 0.94 | 1 | 1565 | 2.10× | ✓ |
+| ht_wots | `ht_wots.v4` pthread-x4-layers | 604.4 µs | 2.67 ms | 729.0 µs | 0.75 | 4 | 1035 | 1.97× | ✓ |
+| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 35.4 µs | 54.3 µs | 37.5 µs | 0.46 | 1 | 12208 | 1.00× | ✓ |
+| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 51.6 µs | 77.0 µs | 55.2 µs | 0.85 | 1 | 15392 | 0.69× | ✓ |
+| ht_auth | `ht_auth.v2` ossl-authpath-native | 33.1 µs | 54.1 µs | 38.2 µs | 0.95 | 1 | 24958 | 1.07× | ✓ |
+| ht_auth | `ht_auth.v3` lowlevel-midstate | 17.6 µs | 34.3 µs | 20.2 µs | 0.76 | 1 | 37653 | 2.01× | ✓ |
+| ht_auth | `ht_auth.v4` pthread-x4-layers | 26.5 µs | 31.5 µs | 27.7 µs | 0.97 | 4 | 34945 | 1.34× | ✓ |
+| total | `total` v0-pipeline | 1.34 ms | 5.41 ms | 1.34 ms | 0.75 | 1 | 558 | — | ✓ |
+| total_best | `total_best` best-pipeline | 655.8 µs | 4.73 ms | 699.3 µs | 0.67 | 1 | 962 | 2.04× | ✓ |
 
 ##### SLH-DSA-SHA2-192f
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| hmsg | `hmsg.v0` ossl-H_msg | 1.3 µs | 2.1 µs | 1.5 µs | 0.46 | 1 | 316260 | 1.00× | ✓ |
-| hmsg | `hmsg.v1` ossl-H_msg-noasm | 1.8 µs | 2.2 µs | 2.0 µs | 0.57 | 1 | 286779 | 0.71× | ✓ |
-| hmsg | `hmsg.v2` ossl-H_msg-native | 1.2 µs | 1.2 µs | 1.2 µs | 0.51 | 1 | 414179 | 1.09× | ✓ |
-| hmsg | `hmsg.v3` lowlevel-hash | 1.1 µs | 1.6 µs | 1.2 µs | 0.43 | 1 | 354921 | 1.18× | ✓ |
-| hmsg | `hmsg.v4` mgf1-seed-midstate | 1.1 µs | 1.1 µs | 1.2 µs | 0.60 | 1 | 513461 | 1.17× | ✓ |
-| fors | `fors.v0` ossl-fors_pkFromSig | 168.6 µs | 798.3 µs | 178.8 µs | 0.55 | 1 | 3084 | 1.00× | ✓ |
-| fors | `fors.v1` ossl-fors-noasm | 248.3 µs | 698.1 µs | 263.9 µs | 0.56 | 1 | 2130 | 0.68× | ✓ |
-| fors | `fors.v2` ossl-fors-native | 152.3 µs | 256.9 µs | 161.7 µs | 0.51 | 1 | 3173 | 1.11× | ✓ |
-| fors | `fors.v3` lowlevel-midstate | 83.7 µs | 1.68 ms | 90.4 µs | 0.29 | 1 | 3165 | 2.01× | ✓ |
-| fors | `fors.v4` pthread-x4-trees | 99.7 µs | 1.91 ms | 109.3 µs | 0.23 | 4 | 2141 | 1.69× | ✓ |
-| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 17.17 ms | 26.21 ms | 4.44 ms | 0.25 | 1 | 57 | 1.00× | ✓ |
-| ht_wots | `ht_wots.v1` ossl-wots-noasm | 9.79 ms | 13.79 ms | 5.83 ms | 0.60 | 1 | 104 | 1.75× | ✓ |
-| ht_wots | `ht_wots.v2` ossl-wots-native | 5.15 ms | 9.50 ms | 3.83 ms | 0.65 | 1 | 170 | 3.34× | ✓ |
-| ht_wots | `ht_wots.v3` lowlevel-midstate | 3.72 ms | 185.07 ms | 1.98 ms | 0.09 | 1 | 47 | 4.62× | ✓ |
-| ht_wots | `ht_wots.v4` pthread-x4-layers | 2.55 ms | 5.91 ms | 2.26 ms | 0.86 | 4 | 378 | 6.73× | ✓ |
-| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 37.5 µs | 72.4 µs | 46.5 µs | 0.65 | 1 | 13960 | 1.00× | ✓ |
-| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 57.8 µs | 113.3 µs | 70.9 µs | 0.54 | 1 | 7592 | 0.65× | ✓ |
-| ht_auth | `ht_auth.v2` ossl-authpath-native | 53.9 µs | 84.5 µs | 57.0 µs | 0.68 | 1 | 11958 | 0.70× | ✓ |
-| ht_auth | `ht_auth.v3` lowlevel-midstate | 18.6 µs | 32.5 µs | 21.4 µs | 0.56 | 1 | 26134 | 2.02× | ✓ |
-| ht_auth | `ht_auth.v4` pthread-x4-layers | 27.8 µs | 50.3 µs | 30.8 µs | 0.56 | 4 | 18128 | 1.35× | ✓ |
-| total | `total` v0-pipeline | 7.59 ms | 13.47 ms | 4.43 ms | 0.62 | 1 | 139 | — | ✓ |
-| total_best | `total_best` best-pipeline | 1.99 ms | 6.12 ms | 1.94 ms | 0.56 | 1 | 288 | 3.82× | ✓ |
+| hmsg | `hmsg.v0` ossl-H_msg | 1.3 µs | 1.6 µs | 1.4 µs | 0.88 | 1 | 640880 | 1.00× | ✓ |
+| hmsg | `hmsg.v1` ossl-H_msg-noasm | 1.7 µs | 2.6 µs | 2.0 µs | 0.85 | 1 | 434698 | 0.72× | ✓ |
+| hmsg | `hmsg.v2` ossl-H_msg-native | 2.3 µs | 2.6 µs | 2.3 µs | 0.88 | 1 | 380017 | 0.53× | ✓ |
+| hmsg | `hmsg.v3` lowlevel-hash | 1.1 µs | 1.2 µs | 1.2 µs | 0.68 | 1 | 585422 | 1.19× | ✓ |
+| hmsg | `hmsg.v4` mgf1-seed-midstate | 1.1 µs | 1.7 µs | 1.2 µs | 0.78 | 1 | 641645 | 1.18× | ✓ |
+| fors | `fors.v0` ossl-fors_pkFromSig | 167.9 µs | 245.1 µs | 177.8 µs | 0.48 | 1 | 2714 | 1.00× | ✓ |
+| fors | `fors.v1` ossl-fors-noasm | 246.8 µs | 342.1 µs | 258.2 µs | 0.93 | 1 | 3585 | 0.68× | ✓ |
+| fors | `fors.v2` ossl-fors-native | 157.2 µs | 288.3 µs | 174.4 µs | 0.86 | 1 | 4942 | 1.07× | ✓ |
+| fors | `fors.v3` lowlevel-midstate | 83.2 µs | 116.7 µs | 88.8 µs | 0.87 | 1 | 9801 | 2.02× | ✓ |
+| fors | `fors.v4` pthread-x4-trees | 93.0 µs | 160.8 µs | 103.0 µs | 0.72 | 4 | 6953 | 1.81× | ✓ |
+| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 3.78 ms | 7.70 ms | 3.76 ms | 0.91 | 1 | 241 | 1.00× | ✓ |
+| ht_wots | `ht_wots.v1` ossl-wots-noasm | 10.09 ms | 21.73 ms | 7.79 ms | 0.67 | 1 | 86 | 0.37× | ✓ |
+| ht_wots | `ht_wots.v2` ossl-wots-native | 3.73 ms | 5.21 ms | 3.84 ms | 0.95 | 1 | 247 | 1.01× | ✓ |
+| ht_wots | `ht_wots.v3` lowlevel-midstate | 1.81 ms | 3.95 ms | 1.83 ms | 0.87 | 1 | 475 | 2.09× | ✓ |
+| ht_wots | `ht_wots.v4` pthread-x4-layers | 1.83 ms | 5.90 ms | 1.84 ms | 0.79 | 4 | 427 | 2.07× | ✓ |
+| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 37.5 µs | 58.4 µs | 40.3 µs | 0.96 | 1 | 23928 | 1.00× | ✓ |
+| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 54.1 µs | 91.1 µs | 59.0 µs | 0.90 | 1 | 15230 | 0.69× | ✓ |
+| ht_auth | `ht_auth.v2` ossl-authpath-native | 35.0 µs | 77.3 µs | 40.6 µs | 0.91 | 1 | 22338 | 1.07× | ✓ |
+| ht_auth | `ht_auth.v3` lowlevel-midstate | 18.6 µs | 30.3 µs | 20.3 µs | 0.88 | 1 | 43145 | 2.02× | ✓ |
+| ht_auth | `ht_auth.v4` pthread-x4-layers | 77.0 µs | 109.5 µs | 91.5 µs | 0.88 | 4 | 9600 | 0.49× | ✓ |
+| total | `total` v0-pipeline | 12.00 ms | 31.48 ms | 5.31 ms | 0.36 | 1 | 68 | — | ✓ |
+| total_best | `total_best` best-pipeline | 3.54 ms | 7.63 ms | 2.90 ms | 0.69 | 1 | 239 | 3.39× | ✓ |
 
 ##### SLH-DSA-SHA2-256s
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| hmsg | `hmsg.v0` ossl-H_msg | 1.2 µs | 1.8 µs | 1.4 µs | 0.46 | 1 | 329789 | 1.00× | ✓ |
-| hmsg | `hmsg.v1` ossl-H_msg-noasm | 1.7 µs | 2.0 µs | 1.9 µs | 0.37 | 1 | 193875 | 0.71× | ✓ |
-| hmsg | `hmsg.v2` ossl-H_msg-native | 1.1 µs | 1.3 µs | 1.3 µs | 0.55 | 1 | 439919 | 1.07× | ✓ |
-| hmsg | `hmsg.v3` lowlevel-hash | 1.0 µs | 1.5 µs | 1.2 µs | 0.54 | 1 | 457850 | 1.18× | ✓ |
-| hmsg | `hmsg.v4` mgf1-seed-midstate | 1.0 µs | 1.8 µs | 1.2 µs | 0.57 | 1 | 462820 | 1.17× | ✓ |
-| fors | `fors.v0` ossl-fors_pkFromSig | 188.0 µs | 357.2 µs | 203.2 µs | 0.67 | 1 | 3279 | 1.00× | ✓ |
-| fors | `fors.v1` ossl-fors-noasm | 426.9 µs | 4.47 ms | 405.3 µs | 0.50 | 1 | 1229 | 0.44× | ✓ |
-| fors | `fors.v2` ossl-fors-native | 173.6 µs | 327.6 µs | 197.4 µs | 0.77 | 1 | 3920 | 1.08× | ✓ |
-| fors | `fors.v3` lowlevel-midstate | 173.7 µs | 220.4 µs | 165.9 µs | 0.68 | 1 | 4079 | 1.08× | ✓ |
-| fors | `fors.v4` pthread-x4-trees | 124.4 µs | 187.6 µs | 186.6 µs | 1.11 | 4 | 5970 | 1.51× | ✓ |
-| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 1.86 ms | 6.71 ms | 1.85 ms | 0.71 | 1 | 383 | 1.00× | ✓ |
-| ht_wots | `ht_wots.v1` ossl-wots-noasm | 3.05 ms | 8.22 ms | 3.12 ms | 0.73 | 1 | 234 | 0.61× | ✓ |
-| ht_wots | `ht_wots.v2` ossl-wots-native | 1.84 ms | 6.26 ms | 1.88 ms | 0.65 | 1 | 344 | 1.01× | ✓ |
-| ht_wots | `ht_wots.v3` lowlevel-midstate | 883.0 µs | 3.53 ms | 901.2 µs | 0.27 | 1 | 304 | 2.11× | ✓ |
-| ht_wots | `ht_wots.v4` pthread-x4-layers | 928.6 µs | 4.30 ms | 970.2 µs | 0.68 | 4 | 704 | 2.00× | ✓ |
-| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 35.8 µs | 67.1 µs | 40.1 µs | 0.64 | 1 | 16029 | 1.00× | ✓ |
-| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 81.6 µs | 117.2 µs | 77.8 µs | 0.61 | 1 | 7814 | 0.44× | ✓ |
-| ht_auth | `ht_auth.v2` ossl-authpath-native | 33.1 µs | 60.3 µs | 37.7 µs | 0.67 | 1 | 17722 | 1.08× | ✓ |
-| ht_auth | `ht_auth.v3` lowlevel-midstate | 17.9 µs | 30.7 µs | 20.3 µs | 0.52 | 1 | 25828 | 2.00× | ✓ |
-| ht_auth | `ht_auth.v4` pthread-x4-layers | 26.9 µs | 48.9 µs | 29.5 µs | 0.57 | 4 | 19452 | 1.33× | ✓ |
-| total | `total` v0-pipeline | 2.10 ms | 7.94 ms | 2.06 ms | 0.58 | 1 | 283 | — | ✓ |
-| total_best | `total_best` best-pipeline | 989.7 µs | 5.16 ms | 1.03 ms | 0.58 | 1 | 569 | 2.13× | ✓ |
+| hmsg | `hmsg.v0` ossl-H_msg | 1.2 µs | 1.9 µs | 1.4 µs | 0.98 | 1 | 708755 | 1.00× | ✓ |
+| hmsg | `hmsg.v1` ossl-H_msg-noasm | 1.7 µs | 1.9 µs | 1.9 µs | 0.93 | 1 | 502089 | 0.71× | ✓ |
+| hmsg | `hmsg.v2` ossl-H_msg-native | 1.2 µs | 2.3 µs | 1.6 µs | 0.77 | 1 | 491458 | 1.06× | ✓ |
+| hmsg | `hmsg.v3` lowlevel-hash | 1.0 µs | 2.1 µs | 1.3 µs | 0.97 | 1 | 724475 | 1.18× | ✓ |
+| hmsg | `hmsg.v4` mgf1-seed-midstate | 1.0 µs | 2.0 µs | 1.4 µs | 0.86 | 1 | 612089 | 1.17× | ✓ |
+| fors | `fors.v0` ossl-fors_pkFromSig | 188.7 µs | 297.1 µs | 206.2 µs | 0.91 | 1 | 4389 | 1.00× | ✓ |
+| fors | `fors.v1` ossl-fors-noasm | 272.9 µs | 309.0 µs | 279.9 µs | 0.96 | 1 | 3437 | 0.69× | ✓ |
+| fors | `fors.v2` ossl-fors-native | 176.2 µs | 321.6 µs | 195.3 µs | 0.59 | 1 | 3009 | 1.07× | ✓ |
+| fors | `fors.v3` lowlevel-midstate | 92.4 µs | 116.3 µs | 96.6 µs | 0.74 | 1 | 7708 | 2.04× | ✓ |
+| fors | `fors.v4` pthread-x4-trees | 102.2 µs | 133.0 µs | 109.0 µs | 0.97 | 4 | 8893 | 1.85× | ✓ |
+| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 1.80 ms | 6.32 ms | 1.84 ms | 0.62 | 1 | 338 | 1.00× | ✓ |
+| ht_wots | `ht_wots.v1` ossl-wots-noasm | 2.76 ms | 4.02 ms | 2.78 ms | 0.92 | 1 | 331 | 0.65× | ✓ |
+| ht_wots | `ht_wots.v2` ossl-wots-native | 1.78 ms | 2.46 ms | 1.78 ms | 0.91 | 1 | 512 | 1.01× | ✓ |
+| ht_wots | `ht_wots.v3` lowlevel-midstate | 867.8 µs | 1.03 ms | 887.4 µs | 0.88 | 1 | 989 | 2.07× | ✓ |
+| ht_wots | `ht_wots.v4` pthread-x4-layers | 715.6 µs | 1.08 ms | 962.7 µs | 1.26 | 4 | 1307 | 2.51× | ✓ |
+| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 36.0 µs | 62.0 µs | 39.7 µs | 0.89 | 1 | 22507 | 1.00× | ✓ |
+| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 52.1 µs | 82.8 µs | 56.7 µs | 0.85 | 1 | 14984 | 0.69× | ✓ |
+| ht_auth | `ht_auth.v2` ossl-authpath-native | 33.5 µs | 52.7 µs | 35.8 µs | 0.76 | 1 | 21196 | 1.07× | ✓ |
+| ht_auth | `ht_auth.v3` lowlevel-midstate | 17.8 µs | 29.7 µs | 19.8 µs | 0.78 | 1 | 39348 | 2.02× | ✓ |
+| ht_auth | `ht_auth.v4` pthread-x4-layers | 29.1 µs | 90.8 µs | 49.6 µs | 0.95 | 4 | 19174 | 1.23× | ✓ |
+| total | `total` v0-pipeline | 2.00 ms | 2.72 ms | 2.07 ms | 0.97 | 1 | 472 | — | ✓ |
+| total_best | `total_best` best-pipeline | 971.1 µs | 1.16 ms | 993.7 µs | 0.96 | 1 | 968 | 2.06× | ✓ |
 
 ##### SLH-DSA-SHA2-256f
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| hmsg | `hmsg.v0` ossl-H_msg | 1.2 µs | 2.0 µs | 1.4 µs | 0.65 | 1 | 463795 | 1.00× | ✓ |
-| hmsg | `hmsg.v1` ossl-H_msg-noasm | 1.7 µs | 3.5 µs | 2.3 µs | 0.76 | 1 | 331736 | 0.70× | ✓ |
-| hmsg | `hmsg.v2` ossl-H_msg-native | 1.1 µs | 2.1 µs | 1.3 µs | 0.72 | 1 | 537457 | 1.07× | ✓ |
-| hmsg | `hmsg.v3` lowlevel-hash | 1.0 µs | 1.2 µs | 1.1 µs | 0.84 | 1 | 735030 | 1.17× | ✓ |
-| hmsg | `hmsg.v4` mgf1-seed-midstate | 1.9 µs | 2.0 µs | 1.8 µs | 0.61 | 1 | 334519 | 0.63× | ✓ |
-| fors | `fors.v0` ossl-fors_pkFromSig | 199.8 µs | 725.4 µs | 225.3 µs | 0.61 | 1 | 2689 | 1.00× | ✓ |
-| fors | `fors.v1` ossl-fors-noasm | 322.9 µs | 3.99 ms | 390.7 µs | 0.51 | 1 | 1303 | 0.62× | ✓ |
-| fors | `fors.v2` ossl-fors-native | 181.7 µs | 261.9 µs | 190.8 µs | 0.63 | 1 | 3279 | 1.10× | ✓ |
-| fors | `fors.v3` lowlevel-midstate | 101.0 µs | 222.0 µs | 126.1 µs | 0.57 | 1 | 4515 | 1.98× | ✓ |
-| fors | `fors.v4` pthread-x4-trees | 226.8 µs | 367.5 µs | 243.5 µs | 0.56 | 4 | 2293 | 0.88× | ✓ |
-| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 7.28 ms | 15.95 ms | 4.06 ms | 0.57 | 1 | 141 | 1.00× | ✓ |
-| ht_wots | `ht_wots.v1` ossl-wots-noasm | 10.08 ms | 23.71 ms | 6.78 ms | 0.64 | 1 | 95 | 0.72× | ✓ |
-| ht_wots | `ht_wots.v2` ossl-wots-native | 3.86 ms | 8.06 ms | 3.70 ms | 0.71 | 1 | 192 | 1.89× | ✓ |
-| ht_wots | `ht_wots.v3` lowlevel-midstate | 2.40 ms | 8.68 ms | 2.05 ms | 0.57 | 1 | 279 | 3.03× | ✓ |
-| ht_wots | `ht_wots.v4` pthread-x4-layers | 4.60 ms | 7.40 ms | 2.96 ms | 0.63 | 4 | 213 | 1.58× | ✓ |
-| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 38.3 µs | 56.9 µs | 40.1 µs | 0.81 | 1 | 20274 | 1.00× | ✓ |
-| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 55.3 µs | 84.5 µs | 58.9 µs | 0.52 | 1 | 8773 | 0.69× | ✓ |
-| ht_auth | `ht_auth.v2` ossl-authpath-native | 35.3 µs | 57.4 µs | 38.7 µs | 0.72 | 1 | 18573 | 1.08× | ✓ |
-| ht_auth | `ht_auth.v3` lowlevel-midstate | 19.0 µs | 23.0 µs | 20.1 µs | 0.67 | 1 | 33177 | 2.02× | ✓ |
-| ht_auth | `ht_auth.v4` pthread-x4-layers | 27.6 µs | 50.1 µs | 30.3 µs | 0.60 | 4 | 19754 | 1.39× | ✓ |
-| total | `total` v0-pipeline | 7.89 ms | 9.48 ms | 3.92 ms | 0.60 | 1 | 154 | — | ✓ |
-| total_best | `total_best` best-pipeline | 2.56 ms | 7.27 ms | 2.10 ms | 0.55 | 1 | 262 | 3.08× | ✓ |
+| hmsg | `hmsg.v0` ossl-H_msg | 1.2 µs | 1.5 µs | 1.3 µs | 0.74 | 1 | 552782 | 1.00× | ✓ |
+| hmsg | `hmsg.v1` ossl-H_msg-noasm | 1.7 µs | 3.4 µs | 2.0 µs | 0.98 | 1 | 487376 | 0.71× | ✓ |
+| hmsg | `hmsg.v2` ossl-H_msg-native | 1.2 µs | 2.2 µs | 1.4 µs | 0.66 | 1 | 464373 | 1.06× | ✓ |
+| hmsg | `hmsg.v3` lowlevel-hash | 1.0 µs | 1.7 µs | 1.2 µs | 0.90 | 1 | 771814 | 1.19× | ✓ |
+| hmsg | `hmsg.v4` mgf1-seed-midstate | 1.0 µs | 1.1 µs | 1.1 µs | 0.80 | 1 | 710470 | 1.18× | ✓ |
+| fors | `fors.v0` ossl-fors_pkFromSig | 198.0 µs | 251.8 µs | 208.6 µs | 0.85 | 1 | 4093 | 1.00× | ✓ |
+| fors | `fors.v1` ossl-fors-noasm | 296.4 µs | 480.8 µs | 310.2 µs | 0.83 | 1 | 2675 | 0.67× | ✓ |
+| fors | `fors.v2` ossl-fors-native | 186.2 µs | 294.5 µs | 203.1 µs | 0.81 | 1 | 3970 | 1.06× | ✓ |
+| fors | `fors.v3` lowlevel-midstate | 98.2 µs | 127.3 µs | 103.0 µs | 0.96 | 1 | 9343 | 2.02× | ✓ |
+| fors | `fors.v4` pthread-x4-trees | 107.6 µs | 136.8 µs | 112.8 µs | 0.98 | 4 | 8700 | 1.84× | ✓ |
+| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 3.68 ms | 5.43 ms | 3.74 ms | 0.94 | 1 | 251 | 1.00× | ✓ |
+| ht_wots | `ht_wots.v1` ossl-wots-noasm | 10.22 ms | 11.91 ms | 8.71 ms | 0.98 | 1 | 113 | 0.36× | ✓ |
+| ht_wots | `ht_wots.v2` ossl-wots-native | 3.77 ms | 7.75 ms | 3.72 ms | 0.84 | 1 | 225 | 0.98× | ✓ |
+| ht_wots | `ht_wots.v3` lowlevel-midstate | 1.80 ms | 2.23 ms | 1.88 ms | 0.99 | 1 | 528 | 2.04× | ✓ |
+| ht_wots | `ht_wots.v4` pthread-x4-layers | 1.82 ms | 5.54 ms | 1.82 ms | 0.80 | 4 | 442 | 2.03× | ✓ |
+| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 38.5 µs | 57.1 µs | 40.2 µs | 0.73 | 1 | 18178 | 1.00× | ✓ |
+| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 60.6 µs | 138.6 µs | 81.4 µs | 0.80 | 1 | 9792 | 0.63× | ✓ |
+| ht_auth | `ht_auth.v2` ossl-authpath-native | 35.8 µs | 67.3 µs | 40.4 µs | 0.89 | 1 | 22153 | 1.07× | ✓ |
+| ht_auth | `ht_auth.v3` lowlevel-midstate | 19.0 µs | 27.8 µs | 20.2 µs | 0.85 | 1 | 42090 | 2.03× | ✓ |
+| ht_auth | `ht_auth.v4` pthread-x4-layers | 27.8 µs | 47.6 µs | 30.5 µs | 0.97 | 4 | 31988 | 1.38× | ✓ |
+| total | `total` v0-pipeline | 3.99 ms | 7.02 ms | 4.28 ms | 0.95 | 1 | 222 | — | ✓ |
+| total_best | `total_best` best-pipeline | 2.01 ms | 3.45 ms | 2.03 ms | 0.93 | 1 | 461 | 1.99× | ✓ |
 
 ##### SLH-DSA-SHAKE-128s
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| hmsg | `hmsg.v0` ossl-H_msg | 0.5 µs | 0.7 µs | 0.5 µs | 0.98 | 1 | 1848542 | 1.00× | ✓ |
-| hmsg | `hmsg.v1` ossl-H_msg-noasm | 0.5 µs | 0.5 µs | 0.6 µs | 0.71 | 1 | 1272884 | 0.94× | ✓ |
-| hmsg | `hmsg.v2` ossl-H_msg-native | 0.4 µs | 0.4 µs | 0.5 µs | 0.99 | 1 | 2090225 | 1.06× | ✓ |
-| hmsg | `hmsg.v3` lowlevel-hash | 0.4 µs | 0.6 µs | 0.5 µs | 0.94 | 1 | 1936045 | 1.10× | ✓ |
-| fors | `fors.v0` ossl-fors_pkFromSig | 79.7 µs | 123.9 µs | 86.3 µs | 0.79 | 1 | 9184 | 1.00× | ✓ |
-| fors | `fors.v1` ossl-fors-noasm | 85.2 µs | 175.3 µs | 100.3 µs | 0.55 | 1 | 5513 | 0.94× | ✓ |
-| fors | `fors.v2` ossl-fors-native | 76.2 µs | 158.6 µs | 92.4 µs | 0.79 | 1 | 8553 | 1.05× | ✓ |
-| fors | `fors.v3` lowlevel-midstate | 73.2 µs | 106.4 µs | 78.1 µs | 0.54 | 1 | 6969 | 1.09× | ✓ |
-| fors | `fors.v4` pthread-x4-trees | 83.0 µs | 130.6 µs | 88.1 µs | 0.48 | 4 | 5488 | 0.96× | ✓ |
-| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 794.6 µs | 4.83 ms | 809.7 µs | 0.71 | 1 | 878 | 1.00× | ✓ |
-| ht_wots | `ht_wots.v1` ossl-wots-noasm | 1.05 ms | 5.44 ms | 1.10 ms | 0.59 | 1 | 535 | 0.76× | ✓ |
-| ht_wots | `ht_wots.v2` ossl-wots-native | 791.0 µs | 11.53 ms | 827.8 µs | 0.48 | 1 | 580 | 1.00× | ✓ |
-| ht_wots | `ht_wots.v3` lowlevel-midstate | 731.7 µs | 4.84 ms | 742.6 µs | 0.57 | 1 | 768 | 1.09× | ✓ |
-| ht_wots | `ht_wots.v4` pthread-x4-layers | 1.31 ms | 6.27 ms | 1.06 ms | 0.54 | 4 | 513 | 0.61× | ✓ |
-| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 53.6 µs | 78.3 µs | 50.6 µs | 0.59 | 1 | 11662 | 1.00× | ✓ |
-| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 28.9 µs | 57.9 µs | 33.6 µs | 0.71 | 1 | 21205 | 1.85× | ✓ |
-| ht_auth | `ht_auth.v2` ossl-authpath-native | 43.8 µs | 71.5 µs | 44.2 µs | 0.76 | 1 | 17256 | 1.22× | ✓ |
-| ht_auth | `ht_auth.v3` lowlevel-midstate | 25.3 µs | 36.1 µs | 26.7 µs | 0.57 | 1 | 21270 | 2.12× | ✓ |
-| ht_auth | `ht_auth.v4` pthread-x4-layers | 34.1 µs | 53.4 µs | 35.8 µs | 0.64 | 4 | 17881 | 1.57× | ✓ |
-| total | `total` v0-pipeline | 898.3 µs | 4.95 ms | 910.8 µs | 0.71 | 1 | 776 | — | ✓ |
-| total_best | `total_best` best-pipeline | 829.8 µs | 4.90 ms | 841.3 µs | 0.66 | 1 | 788 | 1.08× | ✓ |
+| hmsg | `hmsg.v0` ossl-H_msg | 0.5 µs | 0.5 µs | 0.5 µs | 1.00 | 1 | 2001879 | 1.00× | ✓ |
+| hmsg | `hmsg.v1` ossl-H_msg-noasm | 0.5 µs | 0.9 µs | 0.6 µs | 1.00 | 1 | 1734744 | 0.96× | ✓ |
+| hmsg | `hmsg.v2` ossl-H_msg-native | 0.8 µs | 1.0 µs | 0.9 µs | 0.90 | 1 | 1041844 | 0.59× | ✓ |
+| hmsg | `hmsg.v3` lowlevel-hash | 0.4 µs | 0.4 µs | 0.5 µs | 0.69 | 1 | 1522015 | 1.10× | ✓ |
+| fors | `fors.v0` ossl-fors_pkFromSig | 80.3 µs | 140.3 µs | 87.8 µs | 0.76 | 1 | 8698 | 1.00× | ✓ |
+| fors | `fors.v1` ossl-fors-noasm | 83.0 µs | 117.8 µs | 88.7 µs | 1.00 | 1 | 11263 | 0.97× | ✓ |
+| fors | `fors.v2` ossl-fors-native | 77.0 µs | 128.2 µs | 85.6 µs | 0.38 | 1 | 4429 | 1.04× | ✓ |
+| fors | `fors.v3` lowlevel-midstate | 73.3 µs | 130.6 µs | 84.2 µs | 0.88 | 1 | 10502 | 1.10× | ✓ |
+| fors | `fors.v4` pthread-x4-trees | 85.2 µs | 163.6 µs | 101.4 µs | 0.91 | 4 | 8983 | 0.94× | ✓ |
+| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 1.50 ms | 5.03 ms | 1.38 ms | 0.78 | 1 | 564 | 1.00× | ✓ |
+| ht_wots | `ht_wots.v1` ossl-wots-noasm | 893.6 µs | 1.70 ms | 1.04 ms | 0.96 | 1 | 925 | 1.68× | ✓ |
+| ht_wots | `ht_wots.v2` ossl-wots-native | 778.7 µs | 1.26 ms | 799.1 µs | 0.85 | 1 | 1067 | 1.93× | ✓ |
+| ht_wots | `ht_wots.v3` lowlevel-midstate | 731.4 µs | 1.38 ms | 735.3 µs | 0.79 | 1 | 1068 | 2.05× | ✓ |
+| ht_wots | `ht_wots.v4` pthread-x4-layers | 789.0 µs | 4.10 ms | 820.3 µs | 0.73 | 4 | 887 | 1.90× | ✓ |
+| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 27.2 µs | 56.1 µs | 34.0 µs | 0.74 | 1 | 21833 | 1.00× | ✓ |
+| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 28.2 µs | 58.3 µs | 33.8 µs | 0.96 | 1 | 28334 | 0.96× | ✓ |
+| ht_auth | `ht_auth.v2` ossl-authpath-native | 26.2 µs | 45.8 µs | 29.0 µs | 0.56 | 1 | 19503 | 1.04× | ✓ |
+| ht_auth | `ht_auth.v3` lowlevel-midstate | 25.0 µs | 44.8 µs | 29.6 µs | 0.87 | 1 | 29582 | 1.09× | ✓ |
+| ht_auth | `ht_auth.v4` pthread-x4-layers | 33.8 µs | 53.9 µs | 35.6 µs | 0.98 | 4 | 27502 | 0.81× | ✓ |
+| total | `total` v0-pipeline | 912.2 µs | 2.17 ms | 945.3 µs | 0.86 | 1 | 908 | — | ✓ |
+| total_best | `total_best` best-pipeline | 892.7 µs | 4.92 ms | 1.17 ms | 0.80 | 1 | 683 | 1.02× | ✓ |
 
 ##### SLH-DSA-SHAKE-128f
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| hmsg | `hmsg.v0` ossl-H_msg | 0.5 µs | 0.5 µs | 0.5 µs | 0.61 | 1 | 1190695 | 1.00× | ✓ |
-| hmsg | `hmsg.v1` ossl-H_msg-noasm | 0.5 µs | 1.1 µs | 0.6 µs | 0.64 | 1 | 1045184 | 0.93× | ✓ |
-| hmsg | `hmsg.v2` ossl-H_msg-native | 0.9 µs | 1.0 µs | 0.9 µs | 0.57 | 1 | 613263 | 0.51× | ✓ |
-| hmsg | `hmsg.v3` lowlevel-hash | 0.4 µs | 0.4 µs | 0.5 µs | 0.69 | 1 | 1480106 | 1.10× | ✓ |
-| fors | `fors.v0` ossl-fors_pkFromSig | 101.7 µs | 137.9 µs | 106.8 µs | 0.52 | 1 | 4875 | 1.00× | ✓ |
-| fors | `fors.v1` ossl-fors-noasm | 126.7 µs | 263.2 µs | 155.0 µs | 0.63 | 1 | 4070 | 0.80× | ✓ |
-| fors | `fors.v2` ossl-fors-native | 153.2 µs | 233.5 µs | 156.0 µs | 0.74 | 1 | 4767 | 0.66× | ✓ |
-| fors | `fors.v3` lowlevel-midstate | 93.5 µs | 126.5 µs | 98.3 µs | 0.48 | 1 | 4841 | 1.09× | ✓ |
-| fors | `fors.v4` pthread-x4-trees | 102.2 µs | 139.8 µs | 106.7 µs | 0.49 | 4 | 4548 | 0.99× | ✓ |
-| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 6.77 ms | 7.76 ms | 2.82 ms | 0.48 | 1 | 171 | 1.00× | ✓ |
-| ht_wots | `ht_wots.v1` ossl-wots-noasm | 7.75 ms | 11.00 ms | 4.87 ms | 0.66 | 1 | 135 | 0.87× | ✓ |
-| ht_wots | `ht_wots.v2` ossl-wots-native | 4.80 ms | 15.80 ms | 4.53 ms | 0.70 | 1 | 155 | 1.41× | ✓ |
-| ht_wots | `ht_wots.v3` lowlevel-midstate | 6.11 ms | 9.57 ms | 2.61 ms | 0.51 | 1 | 194 | 1.11× | ✓ |
-| ht_wots | `ht_wots.v4` pthread-x4-layers | 2.67 ms | 6.20 ms | 2.61 ms | 0.74 | 4 | 282 | 2.54× | ✓ |
-| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 28.8 µs | 42.1 µs | 30.2 µs | 0.32 | 1 | 10527 | 1.00× | ✓ |
-| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 30.6 µs | 47.3 µs | 32.2 µs | 0.67 | 1 | 20782 | 0.94× | ✓ |
-| ht_auth | `ht_auth.v2` ossl-authpath-native | 27.7 µs | 58.0 µs | 36.5 µs | 0.88 | 1 | 24064 | 1.04× | ✓ |
-| ht_auth | `ht_auth.v3` lowlevel-midstate | 26.8 µs | 62.1 µs | 36.1 µs | 0.39 | 1 | 10722 | 1.07× | ✓ |
-| ht_auth | `ht_auth.v4` pthread-x4-layers | 35.9 µs | 86.9 µs | 52.5 µs | 0.38 | 4 | 7279 | 0.80× | ✓ |
-| total | `total` v0-pipeline | 6.99 ms | 16.43 ms | 3.01 ms | 0.36 | 1 | 121 | — | ✓ |
-| total_best | `total_best` best-pipeline | 9.81 ms | 14.01 ms | 4.34 ms | 0.47 | 1 | 109 | 0.71× | ✓ |
+| hmsg | `hmsg.v0` ossl-H_msg | 0.5 µs | 0.6 µs | 0.5 µs | 0.86 | 1 | 1619329 | 1.00× | ✓ |
+| hmsg | `hmsg.v1` ossl-H_msg-noasm | 0.8 µs | 1.2 µs | 0.9 µs | 0.99 | 1 | 1061045 | 0.55× | ✓ |
+| hmsg | `hmsg.v2` ossl-H_msg-native | 0.4 µs | 0.6 µs | 0.5 µs | 0.63 | 1 | 1268609 | 1.06× | ✓ |
+| hmsg | `hmsg.v3` lowlevel-hash | 0.4 µs | 0.5 µs | 0.5 µs | 0.99 | 1 | 2073585 | 1.11× | ✓ |
+| fors | `fors.v0` ossl-fors_pkFromSig | 102.5 µs | 140.1 µs | 109.0 µs | 0.81 | 1 | 7409 | 1.00× | ✓ |
+| fors | `fors.v1` ossl-fors-noasm | 106.3 µs | 149.5 µs | 114.0 µs | 0.94 | 1 | 8265 | 0.96× | ✓ |
+| fors | `fors.v2` ossl-fors-native | 98.2 µs | 143.1 µs | 106.6 µs | 0.77 | 1 | 7194 | 1.04× | ✓ |
+| fors | `fors.v3` lowlevel-midstate | 93.5 µs | 161.9 µs | 106.6 µs | 0.83 | 1 | 7820 | 1.10× | ✓ |
+| fors | `fors.v4` pthread-x4-trees | 103.0 µs | 148.9 µs | 111.2 µs | 0.98 | 4 | 8831 | 1.00× | ✓ |
+| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 3.03 ms | 8.89 ms | 3.00 ms | 0.75 | 1 | 250 | 1.00× | ✓ |
+| ht_wots | `ht_wots.v1` ossl-wots-noasm | 3.05 ms | 4.17 ms | 3.15 ms | 0.97 | 1 | 309 | 0.99× | ✓ |
+| ht_wots | `ht_wots.v2` ossl-wots-native | 2.74 ms | 6.81 ms | 2.74 ms | 0.79 | 1 | 287 | 1.10× | ✓ |
+| ht_wots | `ht_wots.v3` lowlevel-midstate | 2.70 ms | 3.51 ms | 2.69 ms | 0.94 | 1 | 348 | 1.12× | ✓ |
+| ht_wots | `ht_wots.v4` pthread-x4-layers | 2.63 ms | 3.95 ms | 2.66 ms | 0.92 | 4 | 347 | 1.15× | ✓ |
+| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 28.8 µs | 52.0 µs | 33.3 µs | 0.44 | 1 | 13154 | 1.00× | ✓ |
+| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 29.8 µs | 58.4 µs | 34.1 µs | 0.96 | 1 | 28140 | 0.96× | ✓ |
+| ht_auth | `ht_auth.v2` ossl-authpath-native | 27.9 µs | 52.8 µs | 32.2 µs | 0.92 | 1 | 28614 | 1.03× | ✓ |
+| ht_auth | `ht_auth.v3` lowlevel-midstate | 26.5 µs | 46.8 µs | 29.7 µs | 0.62 | 1 | 20731 | 1.09× | ✓ |
+| ht_auth | `ht_auth.v4` pthread-x4-layers | 35.6 µs | 65.8 µs | 40.1 µs | 0.90 | 4 | 22371 | 0.81× | ✓ |
+| total | `total` v0-pipeline | 3.05 ms | 7.00 ms | 3.05 ms | 0.89 | 1 | 292 | — | ✓ |
+| total_best | `total_best` best-pipeline | 2.80 ms | 6.77 ms | 2.80 ms | 0.78 | 1 | 277 | 1.09× | ✓ |
 
 ##### SLH-DSA-SHAKE-192s
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| hmsg | `hmsg.v0` ossl-H_msg | 0.8 µs | 0.9 µs | 0.9 µs | 0.51 | 1 | 569787 | 1.00× | ✓ |
-| hmsg | `hmsg.v1` ossl-H_msg-noasm | 0.9 µs | 1.6 µs | 1.0 µs | 0.71 | 1 | 693127 | 0.94× | ✓ |
-| hmsg | `hmsg.v2` ossl-H_msg-native | 0.8 µs | 1.7 µs | 1.1 µs | 0.66 | 1 | 585088 | 1.03× | ✓ |
-| hmsg | `hmsg.v3` lowlevel-hash | 0.8 µs | 0.9 µs | 0.8 µs | 0.50 | 1 | 585836 | 1.06× | ✓ |
-| fors | `fors.v0` ossl-fors_pkFromSig | 119.6 µs | 253.2 µs | 148.5 µs | 0.50 | 1 | 3369 | 1.00× | ✓ |
-| fors | `fors.v1` ossl-fors-noasm | 122.8 µs | 291.8 µs | 160.8 µs | 0.63 | 1 | 3938 | 0.97× | ✓ |
-| fors | `fors.v2` ossl-fors-native | 106.6 µs | 230.4 µs | 118.5 µs | 0.68 | 1 | 5764 | 1.12× | ✓ |
-| fors | `fors.v3` lowlevel-midstate | 174.6 µs | 229.1 µs | 156.5 µs | 0.50 | 1 | 3175 | 0.68× | ✓ |
-| fors | `fors.v4` pthread-x4-trees | 134.7 µs | 244.2 µs | 163.5 µs | 0.82 | 4 | 5035 | 0.89× | ✓ |
-| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 1.22 ms | 5.26 ms | 1.22 ms | 0.50 | 1 | 411 | 1.00× | ✓ |
-| ht_wots | `ht_wots.v1` ossl-wots-noasm | 1.31 ms | 5.41 ms | 1.33 ms | 0.68 | 1 | 510 | 0.93× | ✓ |
-| ht_wots | `ht_wots.v2` ossl-wots-native | 1.19 ms | 5.24 ms | 1.21 ms | 0.66 | 1 | 544 | 1.02× | ✓ |
-| ht_wots | `ht_wots.v3` lowlevel-midstate | 1.13 ms | 5.16 ms | 1.15 ms | 0.64 | 1 | 555 | 1.07× | ✓ |
-| ht_wots | `ht_wots.v4` pthread-x4-layers | 1.18 ms | 2.87 ms | 1.30 ms | 0.84 | 4 | 648 | 1.03× | ✓ |
-| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 27.2 µs | 45.1 µs | 29.6 µs | 0.69 | 1 | 23328 | 1.00× | ✓ |
-| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 29.0 µs | 52.1 µs | 31.7 µs | 0.92 | 1 | 29003 | 0.94× | ✓ |
-| ht_auth | `ht_auth.v2` ossl-authpath-native | 26.0 µs | 53.5 µs | 29.6 µs | 0.73 | 1 | 24725 | 1.04× | ✓ |
-| ht_auth | `ht_auth.v3` lowlevel-midstate | 25.0 µs | 35.7 µs | 26.5 µs | 0.30 | 1 | 11361 | 1.09× | ✓ |
-| ht_auth | `ht_auth.v4` pthread-x4-layers | 34.4 µs | 61.8 µs | 37.8 µs | 0.65 | 4 | 17223 | 0.79× | ✓ |
-| total | `total` v0-pipeline | 1.39 ms | 3.93 ms | 1.44 ms | 0.80 | 1 | 554 | — | ✓ |
-| total_best | `total_best` best-pipeline | 1.28 ms | 7.15 ms | 1.28 ms | 0.49 | 1 | 380 | 1.09× | ✓ |
+| hmsg | `hmsg.v0` ossl-H_msg | 0.8 µs | 1.6 µs | 1.0 µs | 0.73 | 1 | 714391 | 1.00× | ✓ |
+| hmsg | `hmsg.v1` ossl-H_msg-noasm | 0.8 µs | 1.4 µs | 1.0 µs | 0.78 | 1 | 793219 | 0.96× | ✓ |
+| hmsg | `hmsg.v2` ossl-H_msg-native | 0.8 µs | 0.8 µs | 0.8 µs | 1.00 | 1 | 1193063 | 1.04× | ✓ |
+| hmsg | `hmsg.v3` lowlevel-hash | 0.8 µs | 1.7 µs | 1.1 µs | 0.77 | 1 | 714784 | 1.04× | ✓ |
+| fors | `fors.v0` ossl-fors_pkFromSig | 112.6 µs | 151.3 µs | 121.0 µs | 0.66 | 1 | 5485 | 1.00× | ✓ |
+| fors | `fors.v1` ossl-fors-noasm | 116.5 µs | 186.8 µs | 129.3 µs | 0.97 | 1 | 7510 | 0.97× | ✓ |
+| fors | `fors.v2` ossl-fors-native | 107.9 µs | 138.7 µs | 113.5 µs | 0.90 | 1 | 7884 | 1.04× | ✓ |
+| fors | `fors.v3` lowlevel-midstate | 102.5 µs | 142.0 µs | 110.3 µs | 0.77 | 1 | 6979 | 1.10× | ✓ |
+| fors | `fors.v4` pthread-x4-trees | 174.6 µs | 227.5 µs | 158.1 µs | 0.84 | 4 | 5343 | 0.64× | ✓ |
+| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 2.13 ms | 3.56 ms | 1.83 ms | 0.86 | 1 | 470 | 1.00× | ✓ |
+| ht_wots | `ht_wots.v1` ossl-wots-noasm | 1.35 ms | 2.05 ms | 1.37 ms | 0.90 | 1 | 657 | 1.58× | ✓ |
+| ht_wots | `ht_wots.v2` ossl-wots-native | 1.20 ms | 5.23 ms | 1.28 ms | 0.79 | 1 | 618 | 1.77× | ✓ |
+| ht_wots | `ht_wots.v3` lowlevel-midstate | 1.14 ms | 3.41 ms | 1.15 ms | 0.81 | 1 | 701 | 1.87× | ✓ |
+| ht_wots | `ht_wots.v4` pthread-x4-layers | 1.17 ms | 2.01 ms | 1.23 ms | 0.89 | 4 | 727 | 1.82× | ✓ |
+| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 27.2 µs | 52.7 µs | 31.8 µs | 0.80 | 1 | 25176 | 1.00× | ✓ |
+| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 28.2 µs | 59.5 µs | 34.5 µs | 0.95 | 1 | 27559 | 0.96× | ✓ |
+| ht_auth | `ht_auth.v2` ossl-authpath-native | 44.8 µs | 65.5 µs | 42.0 µs | 0.82 | 1 | 19658 | 0.61× | ✓ |
+| ht_auth | `ht_auth.v3` lowlevel-midstate | 25.0 µs | 54.1 µs | 30.0 µs | 0.81 | 1 | 26864 | 1.09× | ✓ |
+| ht_auth | `ht_auth.v4` pthread-x4-layers | 34.2 µs | 60.0 µs | 39.3 µs | 0.94 | 4 | 23830 | 0.80× | ✓ |
+| total | `total` v0-pipeline | 1.44 ms | 5.54 ms | 1.46 ms | 0.74 | 1 | 505 | — | ✓ |
+| total_best | `total_best` best-pipeline | 1.31 ms | 3.26 ms | 1.31 ms | 0.88 | 1 | 666 | 1.10× | ✓ |
 
 ##### SLH-DSA-SHAKE-192f
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| hmsg | `hmsg.v0` ossl-H_msg | 0.8 µs | 0.8 µs | 0.9 µs | 0.59 | 1 | 671724 | 1.00× | ✓ |
-| hmsg | `hmsg.v1` ossl-H_msg-noasm | 0.9 µs | 1.4 µs | 1.0 µs | 0.63 | 1 | 640940 | 0.94× | ✓ |
-| hmsg | `hmsg.v2` ossl-H_msg-native | 0.8 µs | 0.8 µs | 0.8 µs | 0.73 | 1 | 870500 | 1.04× | ✓ |
-| hmsg | `hmsg.v3` lowlevel-hash | 0.8 µs | 1.2 µs | 0.9 µs | 0.49 | 1 | 566525 | 1.05× | ✓ |
-| fors | `fors.v0` ossl-fors_pkFromSig | 131.2 µs | 241.8 µs | 143.6 µs | 0.64 | 1 | 4424 | 1.00× | ✓ |
-| fors | `fors.v1` ossl-fors-noasm | 141.3 µs | 243.3 µs | 155.0 µs | 0.84 | 1 | 5448 | 0.93× | ✓ |
-| fors | `fors.v2` ossl-fors-native | 125.1 µs | 157.9 µs | 130.2 µs | 0.80 | 1 | 6109 | 1.05× | ✓ |
-| fors | `fors.v3` lowlevel-midstate | 120.2 µs | 183.6 µs | 128.2 µs | 0.61 | 1 | 4724 | 1.09× | ✓ |
-| fors | `fors.v4` pthread-x4-trees | 131.1 µs | 426.5 µs | 142.5 µs | 0.51 | 4 | 3548 | 1.00× | ✓ |
-| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 7.78 ms | 14.39 ms | 3.77 ms | 0.47 | 1 | 124 | 1.00× | ✓ |
-| ht_wots | `ht_wots.v1` ossl-wots-noasm | 8.32 ms | 19.57 ms | 4.99 ms | 0.53 | 1 | 106 | 0.94× | ✓ |
-| ht_wots | `ht_wots.v2` ossl-wots-native | 5.72 ms | 11.78 ms | 3.79 ms | 0.61 | 1 | 161 | 1.36× | ✓ |
-| ht_wots | `ht_wots.v3` lowlevel-midstate | 7.49 ms | 7.75 ms | 3.53 ms | 0.52 | 1 | 149 | 1.04× | ✓ |
-| ht_wots | `ht_wots.v4` pthread-x4-layers | 7.23 ms | 9.32 ms | 3.65 ms | 0.54 | 4 | 149 | 1.08× | ✓ |
-| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 28.9 µs | 51.5 µs | 32.3 µs | 0.42 | 1 | 12929 | 1.00× | ✓ |
-| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 30.8 µs | 62.9 µs | 35.7 µs | 0.63 | 1 | 17744 | 0.94× | ✓ |
-| ht_auth | `ht_auth.v2` ossl-authpath-native | 27.7 µs | 55.2 µs | 32.4 µs | 0.40 | 1 | 12209 | 1.04× | ✓ |
-| ht_auth | `ht_auth.v3` lowlevel-midstate | 26.6 µs | 52.9 µs | 30.2 µs | 0.60 | 1 | 19932 | 1.09× | ✓ |
-| ht_auth | `ht_auth.v4` pthread-x4-layers | 35.8 µs | 60.2 µs | 38.7 µs | 0.60 | 4 | 15498 | 0.81× | ✓ |
-| total | `total` v0-pipeline | 7.96 ms | 15.82 ms | 4.29 ms | 0.55 | 1 | 129 | — | ✓ |
-| total_best | `total_best` best-pipeline | 3.91 ms | 11.66 ms | 3.76 ms | 0.65 | 1 | 173 | 2.03× | ✓ |
+| hmsg | `hmsg.v0` ossl-H_msg | 0.8 µs | 0.8 µs | 0.9 µs | 0.89 | 1 | 1011589 | 1.00× | ✓ |
+| hmsg | `hmsg.v1` ossl-H_msg-noasm | 0.8 µs | 1.4 µs | 1.0 µs | 0.96 | 1 | 997959 | 0.96× | ✓ |
+| hmsg | `hmsg.v2` ossl-H_msg-native | 0.8 µs | 1.5 µs | 1.1 µs | 0.70 | 1 | 660150 | 1.02× | ✓ |
+| hmsg | `hmsg.v3` lowlevel-hash | 0.8 µs | 0.8 µs | 0.8 µs | 0.94 | 1 | 1127944 | 1.06× | ✓ |
+| fors | `fors.v0` ossl-fors_pkFromSig | 133.4 µs | 258.4 µs | 153.3 µs | 0.96 | 1 | 6269 | 1.00× | ✓ |
+| fors | `fors.v1` ossl-fors-noasm | 137.2 µs | 192.5 µs | 147.7 µs | 0.92 | 1 | 6244 | 0.97× | ✓ |
+| fors | `fors.v2` ossl-fors-native | 129.6 µs | 276.1 µs | 157.4 µs | 0.79 | 1 | 4997 | 1.03× | ✓ |
+| fors | `fors.v3` lowlevel-midstate | 133.2 µs | 285.3 µs | 166.2 µs | 0.94 | 1 | 5686 | 1.00× | ✓ |
+| fors | `fors.v4` pthread-x4-trees | 131.7 µs | 257.5 µs | 151.9 µs | 0.89 | 4 | 5886 | 1.01× | ✓ |
+| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 6.44 ms | 8.90 ms | 5.70 ms | 0.91 | 1 | 159 | 1.00× | ✓ |
+| ht_wots | `ht_wots.v1` ossl-wots-noasm | 4.03 ms | 5.07 ms | 4.05 ms | 0.96 | 1 | 237 | 1.60× | ✓ |
+| ht_wots | `ht_wots.v2` ossl-wots-native | 3.98 ms | 10.39 ms | 3.74 ms | 0.69 | 1 | 184 | 1.62× | ✓ |
+| ht_wots | `ht_wots.v3` lowlevel-midstate | 3.85 ms | 7.58 ms | 4.02 ms | 0.84 | 1 | 210 | 1.67× | ✓ |
+| ht_wots | `ht_wots.v4` pthread-x4-layers | 3.60 ms | 6.34 ms | 3.76 ms | 0.94 | 4 | 249 | 1.79× | ✓ |
+| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 28.9 µs | 46.8 µs | 31.0 µs | 0.85 | 1 | 27457 | 1.00× | ✓ |
+| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 29.9 µs | 50.4 µs | 32.0 µs | 0.97 | 1 | 30363 | 0.96× | ✓ |
+| ht_auth | `ht_auth.v2` ossl-authpath-native | 27.9 µs | 48.1 µs | 30.7 µs | 0.79 | 1 | 25577 | 1.03× | ✓ |
+| ht_auth | `ht_auth.v3` lowlevel-midstate | 28.6 µs | 62.4 µs | 38.9 µs | 0.86 | 1 | 22135 | 1.01× | ✓ |
+| ht_auth | `ht_auth.v4` pthread-x4-layers | 67.6 µs | 103.5 µs | 65.1 µs | 0.95 | 4 | 14572 | 0.43× | ✓ |
+| total | `total` v0-pipeline | 4.93 ms | 10.67 ms | 5.12 ms | 0.86 | 1 | 168 | — | ✓ |
+| total_best | `total_best` best-pipeline | 4.80 ms | 13.84 ms | 4.39 ms | 0.75 | 1 | 171 | 1.03× | ✓ |
 
 ##### SLH-DSA-SHAKE-256s
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| hmsg | `hmsg.v0` ossl-H_msg | 0.8 µs | 1.7 µs | 1.0 µs | 0.44 | 1 | 453648 | 1.00× | ✓ |
-| hmsg | `hmsg.v1` ossl-H_msg-noasm | 0.9 µs | 1.0 µs | 1.0 µs | 0.79 | 1 | 811415 | 0.93× | ✓ |
-| hmsg | `hmsg.v2` ossl-H_msg-native | 0.8 µs | 1.2 µs | 0.9 µs | 0.69 | 1 | 769558 | 1.03× | ✓ |
-| hmsg | `hmsg.v3` lowlevel-hash | 0.8 µs | 1.7 µs | 1.2 µs | 0.33 | 1 | 274833 | 1.03× | ✓ |
-| fors | `fors.v0` ossl-fors_pkFromSig | 145.0 µs | 251.9 µs | 153.7 µs | 0.23 | 1 | 1466 | 1.00× | ✓ |
-| fors | `fors.v1` ossl-fors-noasm | 156.7 µs | 249.9 µs | 168.4 µs | 0.48 | 1 | 2868 | 0.92× | ✓ |
-| fors | `fors.v2` ossl-fors-native | 169.8 µs | 288.0 µs | 186.6 µs | 0.65 | 1 | 3498 | 0.85× | ✓ |
-| fors | `fors.v3` lowlevel-midstate | 135.3 µs | 165.4 µs | 141.5 µs | 0.60 | 1 | 4244 | 1.07× | ✓ |
-| fors | `fors.v4` pthread-x4-trees | 162.6 µs | 2.97 ms | 233.7 µs | 0.29 | 4 | 1238 | 0.89× | ✓ |
-| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 1.83 ms | 9.57 ms | 2.20 ms | 0.62 | 1 | 283 | 1.00× | ✓ |
-| ht_wots | `ht_wots.v1` ossl-wots-noasm | 2.09 ms | 10.88 ms | 2.05 ms | 0.52 | 1 | 254 | 0.88× | ✓ |
-| ht_wots | `ht_wots.v2` ossl-wots-native | 1.79 ms | 6.27 ms | 1.88 ms | 0.68 | 1 | 361 | 1.02× | ✓ |
-| ht_wots | `ht_wots.v3` lowlevel-midstate | 2.12 ms | 9.78 ms | 1.84 ms | 0.52 | 1 | 283 | 0.86× | ✓ |
-| ht_wots | `ht_wots.v4` pthread-x4-layers | 3.13 ms | 6.08 ms | 1.97 ms | 0.57 | 4 | 286 | 0.58× | ✓ |
-| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 27.7 µs | 49.2 µs | 31.1 µs | 0.47 | 1 | 15154 | 1.00× | ✓ |
-| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 29.8 µs | 62.1 µs | 34.7 µs | 0.78 | 1 | 22490 | 0.93× | ✓ |
-| ht_auth | `ht_auth.v2` ossl-authpath-native | 26.3 µs | 46.5 µs | 29.3 µs | 0.72 | 1 | 24407 | 1.05× | ✓ |
-| ht_auth | `ht_auth.v3` lowlevel-midstate | 25.9 µs | 52.8 µs | 30.6 µs | 0.52 | 1 | 16971 | 1.07× | ✓ |
-| ht_auth | `ht_auth.v4` pthread-x4-layers | 37.0 µs | 92.0 µs | 48.9 µs | 0.57 | 4 | 11564 | 0.75× | ✓ |
-| total | `total` v0-pipeline | 2.43 ms | 10.05 ms | 2.07 ms | 0.48 | 1 | 232 | — | ✓ |
-| total_best | `total_best` best-pipeline | 2.04 ms | 6.69 ms | 1.89 ms | 0.58 | 1 | 310 | 1.19× | ✓ |
+| hmsg | `hmsg.v0` ossl-H_msg | 0.8 µs | 0.8 µs | 0.9 µs | 0.98 | 1 | 1113939 | 1.00× | ✓ |
+| hmsg | `hmsg.v1` ossl-H_msg-noasm | 0.8 µs | 0.9 µs | 0.9 µs | 1.00 | 1 | 1104013 | 0.96× | ✓ |
+| hmsg | `hmsg.v2` ossl-H_msg-native | 0.8 µs | 1.0 µs | 0.9 µs | 0.86 | 1 | 989441 | 1.04× | ✓ |
+| hmsg | `hmsg.v3` lowlevel-hash | 0.8 µs | 0.8 µs | 0.8 µs | 0.97 | 1 | 1167654 | 1.06× | ✓ |
+| fors | `fors.v0` ossl-fors_pkFromSig | 147.1 µs | 203.0 µs | 157.1 µs | 0.81 | 1 | 5130 | 1.00× | ✓ |
+| fors | `fors.v1` ossl-fors-noasm | 151.4 µs | 183.9 µs | 158.5 µs | 0.96 | 1 | 6037 | 0.97× | ✓ |
+| fors | `fors.v2` ossl-fors-native | 138.9 µs | 201.7 µs | 150.5 µs | 0.79 | 1 | 5240 | 1.06× | ✓ |
+| fors | `fors.v3` lowlevel-midstate | 132.8 µs | 190.0 µs | 142.1 µs | 0.65 | 1 | 4566 | 1.11× | ✓ |
+| fors | `fors.v4` pthread-x4-trees | 157.3 µs | 269.3 µs | 179.6 µs | 1.00 | 4 | 5554 | 0.94× | ✓ |
+| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 1.99 ms | 6.78 ms | 2.26 ms | 0.77 | 1 | 340 | 1.00× | ✓ |
+| ht_wots | `ht_wots.v1` ossl-wots-noasm | 1.91 ms | 5.98 ms | 2.70 ms | 0.90 | 1 | 334 | 1.04× | ✓ |
+| ht_wots | `ht_wots.v2` ossl-wots-native | 1.87 ms | 6.15 ms | 1.94 ms | 0.72 | 1 | 368 | 1.07× | ✓ |
+| ht_wots | `ht_wots.v3` lowlevel-midstate | 2.29 ms | 5.74 ms | 2.26 ms | 0.87 | 1 | 383 | 0.87× | ✓ |
+| ht_wots | `ht_wots.v4` pthread-x4-layers | 1.73 ms | 2.35 ms | 1.78 ms | 0.93 | 4 | 523 | 1.15× | ✓ |
+| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 27.6 µs | 46.2 µs | 30.4 µs | 0.84 | 1 | 27559 | 1.00× | ✓ |
+| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 28.7 µs | 65.5 µs | 32.5 µs | 0.95 | 1 | 29167 | 0.96× | ✓ |
+| ht_auth | `ht_auth.v2` ossl-authpath-native | 26.4 µs | 54.4 µs | 31.2 µs | 0.77 | 1 | 24753 | 1.05× | ✓ |
+| ht_auth | `ht_auth.v3` lowlevel-midstate | 36.9 µs | 74.0 µs | 40.2 µs | 0.75 | 1 | 18608 | 0.75× | ✓ |
+| ht_auth | `ht_auth.v4` pthread-x4-layers | 52.0 µs | 91.2 µs | 55.0 µs | 0.78 | 4 | 14203 | 0.53× | ✓ |
+| total | `total` v0-pipeline | 2.06 ms | 6.17 ms | 2.34 ms | 0.81 | 1 | 345 | — | ✓ |
+| total_best | `total_best` best-pipeline | 1.89 ms | 5.95 ms | 1.98 ms | 0.83 | 1 | 420 | 1.09× | ✓ |
 
 ##### SLH-DSA-SHAKE-256f
 
 | stage | variant | median | p95 | CPU/op | util | thr | ops/s | vs v0 | match |
 |---|---|---|---|---|---|---|---|---|---|
-| hmsg | `hmsg.v0` ossl-H_msg | 1.6 µs | 1.7 µs | 1.7 µs | 0.56 | 1 | 327226 | 1.00× | ✓ |
-| hmsg | `hmsg.v1` ossl-H_msg-noasm | 0.9 µs | 1.4 µs | 1.0 µs | 0.63 | 1 | 643726 | 1.86× | ✓ |
-| hmsg | `hmsg.v2` ossl-H_msg-native | 1.4 µs | 1.6 µs | 1.5 µs | 0.68 | 1 | 440363 | 1.18× | ✓ |
-| hmsg | `hmsg.v3` lowlevel-hash | 0.8 µs | 0.8 µs | 0.8 µs | 0.55 | 1 | 666592 | 2.10× | ✓ |
-| fors | `fors.v0` ossl-fors_pkFromSig | 158.4 µs | 319.2 µs | 179.8 µs | 0.56 | 1 | 3112 | 1.00× | ✓ |
-| fors | `fors.v1` ossl-fors-noasm | 170.1 µs | 322.4 µs | 188.9 µs | 0.60 | 1 | 3158 | 0.93× | ✓ |
-| fors | `fors.v2` ossl-fors-native | 262.8 µs | 555.1 µs | 279.2 µs | 0.66 | 1 | 2359 | 0.60× | ✓ |
-| fors | `fors.v3` lowlevel-midstate | 145.6 µs | 231.1 µs | 154.3 µs | 0.56 | 1 | 3654 | 1.09× | ✓ |
-| fors | `fors.v4` pthread-x4-trees | 154.4 µs | 937.7 µs | 169.6 µs | 0.49 | 4 | 2913 | 1.03× | ✓ |
-| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 8.04 ms | 12.86 ms | 4.05 ms | 0.47 | 1 | 116 | 1.00× | ✓ |
-| ht_wots | `ht_wots.v1` ossl-wots-noasm | 8.24 ms | 8.94 ms | 4.28 ms | 0.57 | 1 | 132 | 0.98× | ✓ |
-| ht_wots | `ht_wots.v2` ossl-wots-native | 5.19 ms | 10.52 ms | 3.94 ms | 0.67 | 1 | 169 | 1.55× | ✓ |
-| ht_wots | `ht_wots.v3` lowlevel-midstate | 7.71 ms | 13.01 ms | 3.67 ms | 0.50 | 1 | 135 | 1.04× | ✓ |
-| ht_wots | `ht_wots.v4` pthread-x4-layers | 6.96 ms | 12.41 ms | 3.99 ms | 0.54 | 4 | 135 | 1.15× | ✓ |
-| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 29.6 µs | 55.8 µs | 35.7 µs | 0.60 | 1 | 16750 | 1.00× | ✓ |
-| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 31.8 µs | 58.5 µs | 36.0 µs | 0.69 | 1 | 19070 | 0.93× | ✓ |
-| ht_auth | `ht_auth.v2` ossl-authpath-native | 28.3 µs | 55.6 µs | 35.4 µs | 0.67 | 1 | 19024 | 1.05× | ✓ |
-| ht_auth | `ht_auth.v3` lowlevel-midstate | 27.7 µs | 44.9 µs | 29.4 µs | 0.63 | 1 | 21473 | 1.07× | ✓ |
-| ht_auth | `ht_auth.v4` pthread-x4-layers | 37.0 µs | 139.4 µs | 56.8 µs | 0.67 | 4 | 11880 | 0.80× | ✓ |
-| total | `total` v0-pipeline | 15.90 ms | 28.97 ms | 6.76 ms | 0.40 | 1 | 60 | — | ✓ |
-| total_best | `total_best` best-pipeline | 16.00 ms | 20.91 ms | 7.20 ms | 0.49 | 1 | 68 | 0.99× | ✓ |
+| hmsg | `hmsg.v0` ossl-H_msg | 0.8 µs | 1.0 µs | 0.9 µs | 0.84 | 1 | 930742 | 1.00× | ✓ |
+| hmsg | `hmsg.v1` ossl-H_msg-noasm | 0.8 µs | 1.3 µs | 1.0 µs | 0.75 | 1 | 791068 | 0.97× | ✓ |
+| hmsg | `hmsg.v2` ossl-H_msg-native | 1.3 µs | 1.8 µs | 1.5 µs | 0.78 | 1 | 520808 | 0.62× | ✓ |
+| hmsg | `hmsg.v3` lowlevel-hash | 1.5 µs | 1.7 µs | 1.3 µs | 0.74 | 1 | 551805 | 0.54× | ✓ |
+| fors | `fors.v0` ossl-fors_pkFromSig | 158.9 µs | 286.8 µs | 174.1 µs | 0.76 | 1 | 4357 | 1.00× | ✓ |
+| fors | `fors.v1` ossl-fors-noasm | 164.2 µs | 321.5 µs | 183.6 µs | 0.68 | 1 | 3700 | 0.97× | ✓ |
+| fors | `fors.v2` ossl-fors-native | 175.8 µs | 316.7 µs | 207.4 µs | 0.92 | 1 | 4453 | 0.90× | ✓ |
+| fors | `fors.v3` lowlevel-midstate | 176.0 µs | 285.8 µs | 192.3 µs | 0.85 | 1 | 4439 | 0.90× | ✓ |
+| fors | `fors.v4` pthread-x4-trees | 154.2 µs | 260.6 µs | 170.5 µs | 0.96 | 4 | 5612 | 1.03× | ✓ |
+| ht_wots | `ht_wots.v0` ossl-wots_pkFromSig | 4.20 ms | 9.58 ms | 4.00 ms | 0.74 | 1 | 185 | 1.00× | ✓ |
+| ht_wots | `ht_wots.v1` ossl-wots-noasm | 4.61 ms | 9.05 ms | 4.42 ms | 0.74 | 1 | 169 | 0.91× | ✓ |
+| ht_wots | `ht_wots.v2` ossl-wots-native | 6.12 ms | 10.60 ms | 4.53 ms | 0.68 | 1 | 151 | 0.69× | ✓ |
+| ht_wots | `ht_wots.v3` lowlevel-midstate | 3.65 ms | 5.10 ms | 3.72 ms | 0.94 | 1 | 252 | 1.15× | ✓ |
+| ht_wots | `ht_wots.v4` pthread-x4-layers | 4.57 ms | 6.11 ms | 4.40 ms | 0.89 | 4 | 201 | 0.92× | ✓ |
+| ht_auth | `ht_auth.v0` ossl-xmss-authpath | 29.6 µs | 58.9 µs | 37.4 µs | 0.88 | 1 | 23470 | 1.00× | ✓ |
+| ht_auth | `ht_auth.v1` ossl-authpath-noasm | 46.6 µs | 74.9 µs | 47.1 µs | 0.89 | 1 | 18990 | 0.64× | ✓ |
+| ht_auth | `ht_auth.v2` ossl-authpath-native | 46.7 µs | 79.7 µs | 50.6 µs | 0.86 | 1 | 17014 | 0.63× | ✓ |
+| ht_auth | `ht_auth.v3` lowlevel-midstate | 27.1 µs | 53.4 µs | 33.7 µs | 0.82 | 1 | 24302 | 1.09× | ✓ |
+| ht_auth | `ht_auth.v4` pthread-x4-layers | 38.2 µs | 78.3 µs | 51.8 µs | 0.76 | 4 | 14580 | 0.77× | ✓ |
+| total | `total` v0-pipeline | 5.38 ms | 13.15 ms | 4.90 ms | 0.75 | 1 | 152 | — | ✓ |
+| total_best | `total_best` best-pipeline | 4.25 ms | 8.82 ms | 4.08 ms | 0.73 | 1 | 178 | 1.27× | ✓ |
 
