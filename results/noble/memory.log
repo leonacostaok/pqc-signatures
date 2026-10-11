@@ -7,3 +7,4 @@
 [noble] memory keygen.v1      ML-DSA-44           stack    1976 B  heap/op      55705 B  peak      60936 B  match true  (1.1s)
 [noble] memory keygen.v1      ML-DSA-87           stack    1976 B  heap/op     133043 B  peak     156792 B  match true  (2.3s)
 [noble] memory keygen.v1      SLH-DSA-SHA2-128f   stack    2288 B  heap/op    1007677 B  peak    3741352 B  match true  (3.2s)
+[noble] memory keygen.v1      SLH-DSA-SHAKE-128f  stack    2288 B  heap/op     616828 B  peak     787656 B  match true  (14.5s)
