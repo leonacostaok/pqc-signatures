@@ -1,0 +1,30 @@
+{
+  "pilot": true,
+  "started_utc": "2026-10-11T22:53:41.354273+00:00",
+  "platform": "macOS-26.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "forks": 1,
+  "sign_iterations": 1,
+  "verify_iterations": 5,
+  "corpus": {
+    "sha256": "0879e36d029fde653b48e8156761f9ea44bc71c37e697767cdb65a6f41b3c36d",
+    "size": 629387,
+    "cases": 24,
+    "parameters": 6,
+    "byte_identical_keys_and_signatures": true
+  },
+  "ready_manifest_sha256": "9c89214830e7bf63bc851b7cdafd0296d2a6864b2fe403cf3b7eaa5200a3c3ee",
+  "randomness": "Unmodified OQS_randombytes in timed public signing; fixed identical verification fixtures",
+  "order": [
+    [
+      "baseline",
+      "candidate"
+    ]
+  ],
+  "completed_utc": "2026-10-11T22:54:09.129799+00:00",
+  "complete": true,
+  "raw_sha256": {
+    "01-baseline.jsonl": "cca51527d4b092170bbb15293d673634dc5a37b464a34416bb7b9c417b29480d",
+    "01-candidate.jsonl": "7653f5b34a4ed08d7f31c0f72b2e88841ac768da6e21fad7b66a86f4ceb0d294"
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "variant": "baseline",
+    "source_sha256": {
+      "src/sig/slh_dsa/slh_dsa_c/sha2_256.c": "b1b74abe3d4b6b925ca4ce3ded43a5f2188f0f16a41f8ae91c93de95fc0fa07b",
+      "src/sig/slh_dsa/slh_dsa_c/sha2_512.c": "84b914b342a16d07716b1830668e3728892b422fc322f05fadec3993f60f2832"
+    },
+    "binary_sha256": "31874070c7f44c422d9adda09540f09bdc4e736e9a7db0792d66cc74d13db804",
+    "transform_imports": []
+  },
+  {
+    "variant": "candidate",
+    "source_sha256": {
+      "src/sig/slh_dsa/slh_dsa_c/sha2_256.c": "1ac1b1dbc03ddfc6fd909503429eb20fd8e01dc35ae273db4de565f8ac842a12",
+      "src/sig/slh_dsa/slh_dsa_c/sha2_512.c": "7afdba3b2881c66c59345c921e709ca3cdedb8a7179cba3d40cfa8c5a6e49716"
+    },
+    "binary_sha256": "0235d559a267713392374345341fc4d5c48f06bb4d57057a0d9ee9d2c00ddc03",
+    "transform_imports": [
+      "_SHA256_Transform",
+      "_SHA512_Transform"
+    ]
+  }
+]

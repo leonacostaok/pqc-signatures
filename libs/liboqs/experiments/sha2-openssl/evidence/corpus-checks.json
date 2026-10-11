@@ -1,0 +1,32 @@
+[
+  {
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/baseline/corpus",
+      "generate",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/corpus.bin"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "log": "corpus-baseline-generate.jsonl"
+  },
+  {
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/corpus",
+      "check",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/corpus.bin"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "log": "corpus-candidate-check.jsonl"
+  },
+  {
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/corpus",
+      "generate",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate-corpus.bin"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "log": "corpus-candidate-generate.jsonl"
+  }
+]

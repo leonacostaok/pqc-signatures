@@ -1,0 +1,1976 @@
+{
+  "complete": true,
+  "binary_sha256": "e9b5e820d4aac6a06651a59299567f641ed28cd1992269b8d33e1ed53bb9875a",
+  "public_verify_sha256": "bcf3232e84f4967cbcbe13f0634c58161954901452b818afa7640ea91000b387",
+  "validation_sha256": "8e6269ebc60979b76ef25030fc1871883aba8395f9ded57ec19ab0ad8b2a5685",
+  "validation_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/common/validation/validation.json.gz",
+  "selected_cases": 216,
+  "total_shared_cases": 651,
+  "scope": "All six pure SHA2 SLH parameter sets; other algorithms outside this change are not selected.",
+  "counts": {
+    "SLH-DSA-SHA2-128s/keygen": 10,
+    "SLH-DSA-SHA2-128f/keygen": 10,
+    "SLH-DSA-SHA2-192s/keygen": 10,
+    "SLH-DSA-SHA2-192f/keygen": 10,
+    "SLH-DSA-SHA2-256s/keygen": 10,
+    "SLH-DSA-SHA2-256f/keygen": 10,
+    "SLH-DSA-SHA2-128f/siggen": 2,
+    "SLH-DSA-SHA2-192f/siggen": 2,
+    "SLH-DSA-SHA2-256f/siggen": 2,
+    "SLH-DSA-SHA2-128s/siggen": 2,
+    "SLH-DSA-SHA2-192s/siggen": 2,
+    "SLH-DSA-SHA2-256s/siggen": 2,
+    "SLH-DSA-SHA2-128f/sigver": 24,
+    "SLH-DSA-SHA2-192f/sigver": 24,
+    "SLH-DSA-SHA2-256f/sigver": 24,
+    "SLH-DSA-SHA2-128s/sigver": 24,
+    "SLH-DSA-SHA2-192s/sigver": 24,
+    "SLH-DSA-SHA2-256s/sigver": 24
+  },
+  "cases": [
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128s/75",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128s/76",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128s/77",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128s/78",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128s/79",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128s/80",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128s/81",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128s/82",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128s/83",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128s/84",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128f/95",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128f/96",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128f/97",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128f/98",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128f/99",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128f/100",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128f/101",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128f/102",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128f/103",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-128f/104",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192s/115",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192s/116",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192s/117",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192s/118",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192s/119",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192s/120",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192s/121",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192s/122",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192s/123",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192s/124",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192f/135",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192f/136",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192f/137",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192f/138",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192f/139",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192f/140",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192f/141",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192f/142",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192f/143",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-192f/144",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256s/155",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256s/156",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256s/157",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256s/158",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256s/159",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256s/160",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256s/161",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256s/162",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256s/163",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256s/164",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256f/175",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256f/176",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256f/177",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256f/178",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256f/179",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256f/180",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256f/181",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256f/182",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256f/183",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/keygen/SLH-DSA-SHA2-256f/184",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "keygen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/siggen/SLH-DSA-SHA2-128f/240",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "siggen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/siggen/SLH-DSA-SHA2-128f/241",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "siggen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/siggen/SLH-DSA-SHA2-192f/242",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "siggen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/siggen/SLH-DSA-SHA2-192f/243",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "siggen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/siggen/SLH-DSA-SHA2-256f/244",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "siggen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/siggen/SLH-DSA-SHA2-256f/245",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "siggen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/siggen/SLH-DSA-SHA2-128s/252",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "siggen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/siggen/SLH-DSA-SHA2-128s/253",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "siggen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/siggen/SLH-DSA-SHA2-192s/254",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "siggen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/siggen/SLH-DSA-SHA2-192s/255",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "siggen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/siggen/SLH-DSA-SHA2-256s/256",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "siggen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/siggen/SLH-DSA-SHA2-256s/257",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "siggen",
+      "source": "acvp",
+      "reason": null,
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-128f/309",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "invalid signature - too large",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-128f/310",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "valid signature and message - signature should verify successfully",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-128f/311",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified message",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-128f/312",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - SIGFORS",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-128f/313",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "invalid signature - too small",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-128f/314",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - SIGHT",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-128f/315",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - R",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-192f/316",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "invalid signature - too small",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-192f/317",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "invalid signature - too large",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-192f/318",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - SIGFORS",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-192f/319",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - SIGHT",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-192f/320",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "valid signature and message - signature should verify successfully",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-192f/321",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - R",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-192f/322",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified message",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-256f/323",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "invalid signature - too large",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-256f/324",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - SIGFORS",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-256f/325",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - R",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-256f/326",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified message",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-256f/327",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - SIGHT",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-256f/328",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "valid signature and message - signature should verify successfully",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-256f/329",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "invalid signature - too small",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-128s/351",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - R",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-128s/352",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - SIGHT",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-128s/353",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "invalid signature - too small",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-128s/354",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "invalid signature - too large",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-128s/355",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "valid signature and message - signature should verify successfully",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-128s/356",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - SIGFORS",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-128s/357",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified message",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-192s/358",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "invalid signature - too small",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-192s/359",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - SIGHT",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-192s/360",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "valid signature and message - signature should verify successfully",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-192s/361",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - R",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-192s/362",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified message",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-192s/363",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "invalid signature - too large",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-192s/364",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - SIGFORS",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-256s/365",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified message",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-256s/366",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - SIGFORS",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-256s/367",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "invalid signature - too large",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-256s/368",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - R",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-256s/369",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "invalid signature - too small",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-256s/370",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "modified signature - SIGHT",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "acvp/sigver/SLH-DSA-SHA2-256s/371",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "acvp",
+      "reason": "valid signature and message - signature should verify successfully",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/447",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "positive control (empty context)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/448",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "positive control (non-empty context)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/449",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong message (1 bit flipped)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/450",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "empty message",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/451",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong context (context given, signed without)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/452",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong context (signed with context, verified without)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/453",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong public key (other key, same param)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/454",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "public key bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/455",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature truncated by 1 byte",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/456",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature extended by 1 byte",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/457",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "all-zero signature",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/458",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature first bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/459",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature middle bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/460",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature last bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/461",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: randomizer R flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/462",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: FORS section flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128s/463",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: last hypertree layer flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/464",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "positive control (empty context)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/465",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "positive control (non-empty context)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/466",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong message (1 bit flipped)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/467",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "empty message",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/468",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong context (context given, signed without)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/469",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong context (signed with context, verified without)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/470",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong public key (other key, same param)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/471",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "public key bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/472",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature truncated by 1 byte",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/473",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature extended by 1 byte",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/474",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "all-zero signature",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/475",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature first bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/476",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature middle bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/477",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature last bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/478",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: randomizer R flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/479",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: FORS section flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-128f/480",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: last hypertree layer flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/481",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "positive control (empty context)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/482",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "positive control (non-empty context)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/483",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong message (1 bit flipped)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/484",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "empty message",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/485",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong context (context given, signed without)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/486",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong context (signed with context, verified without)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/487",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong public key (other key, same param)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/488",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "public key bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/489",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature truncated by 1 byte",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/490",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature extended by 1 byte",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/491",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "all-zero signature",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/492",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature first bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/493",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature middle bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/494",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature last bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/495",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: randomizer R flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/496",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: FORS section flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192s/497",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: last hypertree layer flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/498",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "positive control (empty context)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/499",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "positive control (non-empty context)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/500",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong message (1 bit flipped)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/501",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "empty message",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/502",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong context (context given, signed without)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/503",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong context (signed with context, verified without)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/504",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong public key (other key, same param)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/505",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "public key bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/506",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature truncated by 1 byte",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/507",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature extended by 1 byte",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/508",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "all-zero signature",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/509",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature first bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/510",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature middle bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/511",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature last bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/512",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: randomizer R flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/513",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: FORS section flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-192f/514",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: last hypertree layer flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/515",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "positive control (empty context)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/516",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "positive control (non-empty context)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/517",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong message (1 bit flipped)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/518",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "empty message",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/519",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong context (context given, signed without)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/520",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong context (signed with context, verified without)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/521",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong public key (other key, same param)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/522",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "public key bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/523",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature truncated by 1 byte",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/524",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature extended by 1 byte",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/525",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "all-zero signature",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/526",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature first bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/527",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature middle bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/528",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature last bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/529",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: randomizer R flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/530",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: FORS section flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256s/531",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: last hypertree layer flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/532",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "positive control (empty context)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/533",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "positive control (non-empty context)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/534",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong message (1 bit flipped)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/535",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "empty message",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/536",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong context (context given, signed without)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/537",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong context (signed with context, verified without)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/538",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "wrong public key (other key, same param)",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/539",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "public key bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/540",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature truncated by 1 byte",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/541",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature extended by 1 byte",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/542",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "all-zero signature",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/543",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature first bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/544",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature middle bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/545",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "signature last bit flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/546",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: randomizer R flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/547",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: FORS section flipped",
+      "returncode": 0,
+      "execution_marker": true
+    },
+    {
+      "id": "negative/sigver/SLH-DSA-SHA2-256f/548",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "kind": "sigver",
+      "source": "negative",
+      "reason": "SLH-DSA: last hypertree layer flipped",
+      "returncode": 0,
+      "execution_marker": true
+    }
+  ]
+}

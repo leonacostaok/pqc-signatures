@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-openssl/check_acvp.py",
+    "--vectors",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/acvp",
+    "--binary",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/tests/vectors_sig",
+    "--evidence",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-openssl/evidence"
+  ],
+  "returncode": 0
+}

@@ -1,0 +1,363 @@
+diff --git a/src/sig/slh_dsa/CMakeLists.txt b/src/sig/slh_dsa/CMakeLists.txt
+index 90157ed..480ad65 100644
+--- a/src/sig/slh_dsa/CMakeLists.txt
++++ b/src/sig/slh_dsa/CMakeLists.txt
+@@ -169,6 +169,9 @@ if (OQS_ENABLE_SIG_SLH_DSA)
+ 	            wrappers/pure/slh_dsa_pure_shake_256f.c
+ 	            wrappers/pure/slh_dsa_pure_shake_256s.c
+ 	            )
++    if(OQS_USE_SHA2_OPENSSL AND NOT OQS_DLOPEN_OPENSSL)
++        target_include_directories(slh_dsa_c PRIVATE ${OPENSSL_INCLUDE_DIR})
++    endif()
+     target_include_directories(slh_dsa_c PRIVATE ${CMAKE_CURRENT_LIST_DIR}/slh_dsa_c)
+     target_include_directories(slh_dsa_c PRIVATE ${CMAKE_CURRENT_LIST_DIR}/wrappers/pure)
+     target_include_directories(slh_dsa_c PRIVATE ${CMAKE_CURRENT_LIST_DIR}/wrappers/prehash_sha2_224)
+diff --git a/src/sig/slh_dsa/slh_dsa_c/sha2_256.c b/src/sig/slh_dsa/slh_dsa_c/sha2_256.c
+index 1102f0e..aa2420b 100644
+--- a/src/sig/slh_dsa/slh_dsa_c/sha2_256.c
++++ b/src/sig/slh_dsa/slh_dsa_c/sha2_256.c
+@@ -6,6 +6,20 @@
+ /* === FIPS 180-4 SHA2-256 / Portable C Implementation */
+ 
+ #include <string.h>
++#include <oqs/oqsconfig.h>
++
++#if defined(OQS_USE_SHA2_OPENSSL) && !defined(OQS_DLOPEN_OPENSSL)
++/* The block API preserves SLH-DSA's cached chaining states without allocating
++ * an EVP context for each short hash. Keep the portable path when unavailable. */
++#ifndef OPENSSL_SUPPRESS_DEPRECATED
++#define OPENSSL_SUPPRESS_DEPRECATED
++#endif
++#include <openssl/sha.h>
++#include <openssl/crypto.h>
++#if !defined(OPENSSL_NO_DEPRECATED_3_0)
++#define SLH_SHA2_OPENSSL
++#endif
++#endif
+ #include "plat_local.h"
+ #include "sha2_api.h"
+ 
+@@ -33,6 +47,23 @@ uint64_t sha2_256_compress_count = 0; /* instrumentation */
+ 
+ void sha2_256_compress(void *v)
+ {
++#ifdef SLH_SHA2_OPENSSL
++  uint32_t *sp = (uint32_t *)v;
++  SHA256_CTX ctx = {0};
++
++#ifdef SLH_EXPERIMENTAL
++  sha2_256_compress_count++; /* instrumentation */
++#endif
++
++  /* The cached state is stored in big-endian byte order; OpenSSL uses words. */
++  for (size_t i = 0; i < 8; i++)
++    ctx.h[i] = rev8_be32(sp[i]);
++  SHA256_Transform(&ctx, (const unsigned char *)(sp + 8));
++  for (size_t i = 0; i < 8; i++)
++    sp[i] = rev8_be32(ctx.h[i]);
++  /* PRF calls can leave secret-derived chaining values in this copy. */
++  OPENSSL_cleanse(&ctx, sizeof(ctx));
++#else
+   /* 4.2.2 SHA-224 and SHA-256 Constants */
+ 
+   const uint32_t ck[64] = {
+@@ -138,6 +169,7 @@ void sha2_256_compress(void *v)
+   sp[5] = rev8_be32(sp[5] + f);
+   sp[6] = rev8_be32(sp[6] + g);
+   sp[7] = rev8_be32(sp[7] + h);
++#endif
+ }
+ 
+ /* initialize */
+diff --git a/src/sig/slh_dsa/slh_dsa_c/sha2_512.c b/src/sig/slh_dsa/slh_dsa_c/sha2_512.c
+index 12a6464..cd3eec3 100644
+--- a/src/sig/slh_dsa/slh_dsa_c/sha2_512.c
++++ b/src/sig/slh_dsa/slh_dsa_c/sha2_512.c
+@@ -6,6 +6,20 @@
+ /* === FIPS 180-4 SHA2-512 / Portable C Implementation */
+ 
+ #include <string.h>
++#include <oqs/oqsconfig.h>
++
++#if defined(OQS_USE_SHA2_OPENSSL) && !defined(OQS_DLOPEN_OPENSSL)
++/* The block API preserves SLH-DSA's cached chaining states without allocating
++ * an EVP context for each short hash. Keep the portable path when unavailable. */
++#ifndef OPENSSL_SUPPRESS_DEPRECATED
++#define OPENSSL_SUPPRESS_DEPRECATED
++#endif
++#include <openssl/sha.h>
++#include <openssl/crypto.h>
++#if !defined(OPENSSL_NO_DEPRECATED_3_0)
++#define SLH_SHA2_OPENSSL
++#endif
++#endif
+ #include "plat_local.h"
+ #include "sha2_api.h"
+ 
+@@ -35,6 +49,23 @@ uint64_t sha2_512_compress_count = 0; /* instrumentation */
+ 
+ void sha2_512_compress(void *v)
+ {
++#ifdef SLH_SHA2_OPENSSL
++  uint64_t *sp = (uint64_t *)v;
++  SHA512_CTX ctx = {0};
++
++#ifdef SLH_EXPERIMENTAL
++  sha2_512_compress_count++; /* instrumentation */
++#endif
++
++  /* The cached state is stored in big-endian byte order; OpenSSL uses words. */
++  for (size_t i = 0; i < 8; i++)
++    ctx.h[i] = rev8_be64(sp[i]);
++  SHA512_Transform(&ctx, (const unsigned char *)(sp + 8));
++  for (size_t i = 0; i < 8; i++)
++    sp[i] = rev8_be64(ctx.h[i]);
++  /* PRF calls can leave secret-derived chaining values in this copy. */
++  OPENSSL_cleanse(&ctx, sizeof(ctx));
++#else
+   /* 4.2.3 SHA-384, SHA-512, SHA-512/224 and SHA-512/256 Constants */
+ 
+   const uint64_t ck[80] = {
+@@ -171,6 +202,7 @@ void sha2_512_compress(void *v)
+   sp[5] = rev8_be64(sp[5] + f);
+   sp[6] = rev8_be64(sp[6] + g);
+   sp[7] = rev8_be64(sp[7] + h);
++#endif
+ }
+ 
+ /* initialize */
+diff --git a/src/sig/slh_dsa/templates/slh_dsa_cmake_template.jinja b/src/sig/slh_dsa/templates/slh_dsa_cmake_template.jinja
+index 336a87c..11a7a59 100644
+--- a/src/sig/slh_dsa/templates/slh_dsa_cmake_template.jinja
++++ b/src/sig/slh_dsa/templates/slh_dsa_cmake_template.jinja
+@@ -8,6 +8,9 @@ if (OQS_ENABLE_SIG_SLH_DSA)
+ 	            {{ file }}
+ 	            {% endfor -%}
+ 	           )
++    if(OQS_USE_SHA2_OPENSSL AND NOT OQS_DLOPEN_OPENSSL)
++        target_include_directories(slh_dsa_c PRIVATE ${OPENSSL_INCLUDE_DIR})
++    endif()
+     target_include_directories(slh_dsa_c PRIVATE ${CMAKE_CURRENT_LIST_DIR}/slh_dsa_c)
+     target_include_directories(slh_dsa_c PRIVATE ${CMAKE_CURRENT_LIST_DIR}/wrappers/pure)
+     {% for prehashHashAlg in prehashHashAlgs -%}
+diff --git a/tests/CMakeLists.txt b/tests/CMakeLists.txt
+index 0aaac59..8202720 100644
+--- a/tests/CMakeLists.txt
++++ b/tests/CMakeLists.txt
+@@ -59,6 +59,18 @@ if(NOT WIN32)
+ 
+     set(UNIX_TESTS test_aes test_hash test_sha3 speed_common)
+ 
++    if(OQS_ENABLE_SIG_SLH_DSA)
++        add_executable(test_slh_dsa_sha2 test_slh_dsa_sha2.c
++                       ../src/sig/slh_dsa/slh_dsa_c/sha2_256.c
++                       ../src/sig/slh_dsa/slh_dsa_c/sha2_512.c)
++        target_include_directories(test_slh_dsa_sha2 PRIVATE ../src/sig/slh_dsa/slh_dsa_c)
++        if(OQS_USE_SHA2_OPENSSL AND NOT OQS_DLOPEN_OPENSSL)
++            target_include_directories(test_slh_dsa_sha2 PRIVATE ${OPENSSL_INCLUDE_DIR})
++        endif()
++        target_link_libraries(test_slh_dsa_sha2 PRIVATE ${TEST_DEPS})
++        list(APPEND UNIX_TESTS test_slh_dsa_sha2)
++    endif()
++
+     set(PYTHON3_EXEC python3)
+ else()
+     set(PYTHON3_EXEC python)
+diff --git a/tests/test_hash.py b/tests/test_hash.py
+index d19b8de..02bc0cf 100644
+--- a/tests/test_hash.py
++++ b/tests/test_hash.py
+@@ -20,6 +20,14 @@ def test_sha3():
+         [helpers.path_to_executable('test_sha3')],
+     )
+ 
++@helpers.filtered_test
++@pytest.mark.skipif(sys.platform.startswith("win"), reason="Not supported on Windows")
++def test_slh_dsa_sha2():
++    if not any(name.startswith("SLH_DSA") and helpers.is_sig_enabled_by_name(name)
++               for name in helpers.available_sigs_by_name()):
++        pytest.skip("SLH-DSA is disabled")
++    helpers.run_subprocess([helpers.path_to_executable('test_slh_dsa_sha2')])
++
+ @helpers.filtered_test
+ @pytest.mark.parametrize('algname', ['sha256', 'sha384', 'sha512', 'sha3_256', 'sha3_384', 'sha3_512'])
+ @pytest.mark.skipif(sys.platform.startswith("win"), reason="Not supported on Windows")
+diff --git a/src/sig/slh_dsa/patches/sha2_openssl.patch b/src/sig/slh_dsa/patches/sha2_openssl.patch
+new file mode 100644
+index 0000000..6b76fdb
+--- /dev/null
++++ b/src/sig/slh_dsa/patches/sha2_openssl.patch
+@@ -0,0 +1,114 @@
++diff --git a/src/sig/slh_dsa/slh_dsa_c/sha2_256.c b/src/sig/slh_dsa/slh_dsa_c/sha2_256.c
++index 1102f0e..aa2420b 100644
++--- a/src/sig/slh_dsa/slh_dsa_c/sha2_256.c
+++++ b/src/sig/slh_dsa/slh_dsa_c/sha2_256.c
++@@ -6,6 +6,20 @@
++ /* === FIPS 180-4 SHA2-256 / Portable C Implementation */
++ 
++ #include <string.h>
+++#include <oqs/oqsconfig.h>
+++
+++#if defined(OQS_USE_SHA2_OPENSSL) && !defined(OQS_DLOPEN_OPENSSL)
+++/* The block API preserves SLH-DSA's cached chaining states without allocating
+++ * an EVP context for each short hash. Keep the portable path when unavailable. */
+++#ifndef OPENSSL_SUPPRESS_DEPRECATED
+++#define OPENSSL_SUPPRESS_DEPRECATED
+++#endif
+++#include <openssl/sha.h>
+++#include <openssl/crypto.h>
+++#if !defined(OPENSSL_NO_DEPRECATED_3_0)
+++#define SLH_SHA2_OPENSSL
+++#endif
+++#endif
++ #include "plat_local.h"
++ #include "sha2_api.h"
++ 
++@@ -33,6 +47,23 @@ uint64_t sha2_256_compress_count = 0; /* instrumentation */
++ 
++ void sha2_256_compress(void *v)
++ {
+++#ifdef SLH_SHA2_OPENSSL
+++  uint32_t *sp = (uint32_t *)v;
+++  SHA256_CTX ctx = {0};
+++
+++#ifdef SLH_EXPERIMENTAL
+++  sha2_256_compress_count++; /* instrumentation */
+++#endif
+++
+++  /* The cached state is stored in big-endian byte order; OpenSSL uses words. */
+++  for (size_t i = 0; i < 8; i++)
+++    ctx.h[i] = rev8_be32(sp[i]);
+++  SHA256_Transform(&ctx, (const unsigned char *)(sp + 8));
+++  for (size_t i = 0; i < 8; i++)
+++    sp[i] = rev8_be32(ctx.h[i]);
+++  /* PRF calls can leave secret-derived chaining values in this copy. */
+++  OPENSSL_cleanse(&ctx, sizeof(ctx));
+++#else
++   /* 4.2.2 SHA-224 and SHA-256 Constants */
++ 
++   const uint32_t ck[64] = {
++@@ -138,6 +169,7 @@ void sha2_256_compress(void *v)
++   sp[5] = rev8_be32(sp[5] + f);
++   sp[6] = rev8_be32(sp[6] + g);
++   sp[7] = rev8_be32(sp[7] + h);
+++#endif
++ }
++ 
++ /* initialize */
++diff --git a/src/sig/slh_dsa/slh_dsa_c/sha2_512.c b/src/sig/slh_dsa/slh_dsa_c/sha2_512.c
++index 12a6464..cd3eec3 100644
++--- a/src/sig/slh_dsa/slh_dsa_c/sha2_512.c
+++++ b/src/sig/slh_dsa/slh_dsa_c/sha2_512.c
++@@ -6,6 +6,20 @@
++ /* === FIPS 180-4 SHA2-512 / Portable C Implementation */
++ 
++ #include <string.h>
+++#include <oqs/oqsconfig.h>
+++
+++#if defined(OQS_USE_SHA2_OPENSSL) && !defined(OQS_DLOPEN_OPENSSL)
+++/* The block API preserves SLH-DSA's cached chaining states without allocating
+++ * an EVP context for each short hash. Keep the portable path when unavailable. */
+++#ifndef OPENSSL_SUPPRESS_DEPRECATED
+++#define OPENSSL_SUPPRESS_DEPRECATED
+++#endif
+++#include <openssl/sha.h>
+++#include <openssl/crypto.h>
+++#if !defined(OPENSSL_NO_DEPRECATED_3_0)
+++#define SLH_SHA2_OPENSSL
+++#endif
+++#endif
++ #include "plat_local.h"
++ #include "sha2_api.h"
++ 
++@@ -35,6 +49,23 @@ uint64_t sha2_512_compress_count = 0; /* instrumentation */
++ 
++ void sha2_512_compress(void *v)
++ {
+++#ifdef SLH_SHA2_OPENSSL
+++  uint64_t *sp = (uint64_t *)v;
+++  SHA512_CTX ctx = {0};
+++
+++#ifdef SLH_EXPERIMENTAL
+++  sha2_512_compress_count++; /* instrumentation */
+++#endif
+++
+++  /* The cached state is stored in big-endian byte order; OpenSSL uses words. */
+++  for (size_t i = 0; i < 8; i++)
+++    ctx.h[i] = rev8_be64(sp[i]);
+++  SHA512_Transform(&ctx, (const unsigned char *)(sp + 8));
+++  for (size_t i = 0; i < 8; i++)
+++    sp[i] = rev8_be64(ctx.h[i]);
+++  /* PRF calls can leave secret-derived chaining values in this copy. */
+++  OPENSSL_cleanse(&ctx, sizeof(ctx));
+++#else
++   /* 4.2.3 SHA-384, SHA-512, SHA-512/224 and SHA-512/256 Constants */
++ 
++   const uint64_t ck[80] = {
++@@ -171,6 +202,7 @@ void sha2_512_compress(void *v)
++   sp[5] = rev8_be64(sp[5] + f);
++   sp[6] = rev8_be64(sp[6] + g);
++   sp[7] = rev8_be64(sp[7] + h);
+++#endif
++ }
++ 
++ /* initialize */
+diff --git a/tests/test_slh_dsa_sha2.c b/tests/test_slh_dsa_sha2.c
+new file mode 100644
+index 0000000..23f303b
+--- /dev/null
++++ b/tests/test_slh_dsa_sha2.c
+@@ -0,0 +1,53 @@
++// SPDX-License-Identifier: MIT
++
++#include <stdint.h>
++#include <stdio.h>
++#include <string.h>
++#include <oqs/oqs.h>
++#include "sha2_api.h"
++#include "../src/common/sha2/sha2.h"
++
++/* Exercise the private SLH-DSA hash implementation, including the cloned
++ * chaining states used for public-seed prefixes and both padding boundaries. */
++int main(void) {
++	uint8_t message[4096], expected[64], actual[64];
++	for (size_t i = 0; i < sizeof(message); i++) {
++		message[i] = (uint8_t)(i * 197 + i / 11);
++	}
++	OQS_init();
++	for (size_t len = 0; len <= sizeof(message); len += len < 260 ? 1 : 37) {
++		for (size_t split = 0; split <= len; split += split < 130 ? 1 : 113) {
++			sha2_256_t s256, copy256;
++			sha2_512_t s512, copy512;
++			OQS_SHA2_sha256(expected, message, len);
++			sha2_256_init(&s256);
++			sha2_256_update(&s256, message, split);
++			sha2_256_copy(&copy256, &s256);
++			sha2_256_update(&copy256, message + split, len - split);
++			sha2_256_final(&copy256, actual);
++			if (memcmp(actual, expected, 32) != 0) {
++				fprintf(stderr, "SLH SHA-256 mismatch: length %zu split %zu\n", len, split);
++				return 1;
++			}
++			OQS_SHA2_sha512(expected, message, len);
++			sha2_512_init(&s512);
++			sha2_512_update(&s512, message, split);
++			sha2_512_copy(&copy512, &s512);
++			sha2_512_update(&copy512, message + split, len - split);
++			sha2_512_final(&copy512, actual);
++			if (memcmp(actual, expected, 64) != 0) {
++				fprintf(stderr, "SLH SHA-512 mismatch: length %zu split %zu\n", len, split);
++				return 1;
++			}
++		}
++		OQS_SHA2_sha384(expected, message, len);
++		sha2_384(actual, message, len);
++		if (memcmp(actual, expected, 48) != 0) {
++			fprintf(stderr, "SLH SHA-384 mismatch: length %zu\n", len);
++			return 1;
++		}
++	}
++	OQS_destroy();
++	puts("SLH-DSA private SHA-2 differential tests passed");
++	return 0;
++}

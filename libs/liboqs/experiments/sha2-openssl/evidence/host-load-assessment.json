@@ -1,0 +1,105 @@
+{
+  "note": "Diagnostic ps percentages, not instantaneous utilization or a predeclared exclusion gate. No observations or process pairs were excluded. More than100 percent means more than one core-equivalent across background processes, not a saturated multicore host.",
+  "logical_cpus": 8,
+  "sample_count": 62,
+  "background_cpu_median": 58.70000000000002,
+  "background_cpu_max": 175.19999999999996,
+  "cells": [
+    {
+      "fork": 1,
+      "variant": "baseline",
+      "samples": 8,
+      "background_cpu_median": 127.9,
+      "background_cpu_max": 162.60000000000002,
+      "samples_above_one_core_equivalent": 5
+    },
+    {
+      "fork": 1,
+      "variant": "candidate",
+      "samples": 2,
+      "background_cpu_median": 53.3,
+      "background_cpu_max": 59.70000000000001,
+      "samples_above_one_core_equivalent": 0
+    },
+    {
+      "fork": 2,
+      "variant": "baseline",
+      "samples": 8,
+      "background_cpu_median": 57.50000000000002,
+      "background_cpu_max": 78.40000000000002,
+      "samples_above_one_core_equivalent": 0
+    },
+    {
+      "fork": 2,
+      "variant": "candidate",
+      "samples": 2,
+      "background_cpu_median": 69.8,
+      "background_cpu_max": 72.19999999999999,
+      "samples_above_one_core_equivalent": 0
+    },
+    {
+      "fork": 3,
+      "variant": "baseline",
+      "samples": 8,
+      "background_cpu_median": 51.05000000000001,
+      "background_cpu_max": 93.99999999999999,
+      "samples_above_one_core_equivalent": 0
+    },
+    {
+      "fork": 3,
+      "variant": "candidate",
+      "samples": 2,
+      "background_cpu_median": 58.05000000000001,
+      "background_cpu_max": 64.50000000000001,
+      "samples_above_one_core_equivalent": 0
+    },
+    {
+      "fork": 4,
+      "variant": "baseline",
+      "samples": 8,
+      "background_cpu_median": 63.65000000000002,
+      "background_cpu_max": 117.50000000000001,
+      "samples_above_one_core_equivalent": 2
+    },
+    {
+      "fork": 4,
+      "variant": "candidate",
+      "samples": 2,
+      "background_cpu_median": 60.70000000000002,
+      "background_cpu_max": 73.60000000000001,
+      "samples_above_one_core_equivalent": 0
+    },
+    {
+      "fork": 5,
+      "variant": "baseline",
+      "samples": 9,
+      "background_cpu_median": 57.80000000000001,
+      "background_cpu_max": 89.79999999999998,
+      "samples_above_one_core_equivalent": 0
+    },
+    {
+      "fork": 5,
+      "variant": "candidate",
+      "samples": 2,
+      "background_cpu_median": 51.45,
+      "background_cpu_max": 54.39999999999999,
+      "samples_above_one_core_equivalent": 0
+    },
+    {
+      "fork": 6,
+      "variant": "baseline",
+      "samples": 8,
+      "background_cpu_median": 51.10000000000001,
+      "background_cpu_max": 68.2,
+      "samples_above_one_core_equivalent": 0
+    },
+    {
+      "fork": 6,
+      "variant": "candidate",
+      "samples": 2,
+      "background_cpu_median": 54.45,
+      "background_cpu_max": 64.6,
+      "samples_above_one_core_equivalent": 0
+    }
+  ]
+}

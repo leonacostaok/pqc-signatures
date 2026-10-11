@@ -1,0 +1,98 @@
+[  1%] Building C object src/common/sha3/xkcp_low/CMakeFiles/xkcp_low_keccakp_1600times4_serial.dir/KeccakP-1600times4/serial/KeccakP-1600-times4-on1.c.o
+[  1%] Building C object src/common/CMakeFiles/internal.dir/aes/aes_ossl.c.o
+[  1%] Built target xkcp_low_keccakp_1600times4_serial
+[  2%] Building C object src/common/CMakeFiles/internal.dir/aes/aes.c.o
+[  2%] Building C object src/common/CMakeFiles/internal.dir/sha2/sha2_ossl.c.o
+[  2%] Building C object src/common/sha3/xkcp_low/CMakeFiles/xkcp_low_keccakp_1600_plain64.dir/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c.o
+[  3%] Building C object src/common/CMakeFiles/internal.dir/sha2/sha2.c.o
+[  3%] Building C object src/common/CMakeFiles/internal.dir/sha3/xkcp_sha3.c.o
+[  3%] Building C object src/common/CMakeFiles/internal.dir/sha3/xkcp_sha3x4.c.o
+[  5%] Building C object src/common/CMakeFiles/internal.dir/sha3/sha3.c.o
+[  5%] Building C object src/common/CMakeFiles/internal.dir/sha3/sha3x4.c.o
+[  6%] Building C object src/common/CMakeFiles/internal.dir/ossl_helpers.c.o
+[  6%] Built target xkcp_low_keccakp_1600_plain64
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:200:62: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  200 |                         ((unsigned char *)state)[lanePosition * 8 + offset + i] = ~data[i];
+      |                                                                                 ~ ^~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:384:3: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  384 |                 COMPL(1);
+      |                 ^~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:382:70: note: expanded from macro 'COMPL'
+  382 | #define COMPL(lane) for(unsigned int i=0; i<8; i++) data[8*lane+i] = ~data[8*lane+i]
+      |                                                                    ~ ^~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:386:4: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  386 |                         COMPL(2);
+      |                         ^~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:382:70: note: expanded from macro 'COMPL'
+  382 | #define COMPL(lane) for(unsigned int i=0; i<8; i++) data[8*lane+i] = ~data[8*lane+i]
+      |                                                                    ~ ^~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:388:5: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  388 |                                 COMPL(8);
+      |                                 ^~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:382:70: note: expanded from macro 'COMPL'
+  382 | #define COMPL(lane) for(unsigned int i=0; i<8; i++) data[8*lane+i] = ~data[8*lane+i]
+      |                                                                    ~ ^~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:390:6: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  390 |                                         COMPL(12);
+      |                                         ^~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:382:70: note: expanded from macro 'COMPL'
+  382 | #define COMPL(lane) for(unsigned int i=0; i<8; i++) data[8*lane+i] = ~data[8*lane+i]
+      |                                                                    ~ ^~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:392:7: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  392 |                                                 COMPL(17);
+      |                                                 ^~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:382:70: note: expanded from macro 'COMPL'
+  382 | #define COMPL(lane) for(unsigned int i=0; i<8; i++) data[8*lane+i] = ~data[8*lane+i]
+      |                                                                    ~ ^~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:394:8: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  394 |                                                         COMPL(20);
+      |                                                         ^~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:382:70: note: expanded from macro 'COMPL'
+  382 | #define COMPL(lane) for(unsigned int i=0; i<8; i++) data[8*lane+i] = ~data[8*lane+i]
+      |                                                                    ~ ^~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:459:3: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  459 |                 COMPL(1);
+      |                 ^~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:457:59: note: expanded from macro 'COMPL'
+  457 | #define COMPL(lane) for(i=0; i<8; i++) output[8*lane+i] = ~output[8*lane+i]
+      |                                                         ~ ^~~~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:461:4: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  461 |                         COMPL(2);
+      |                         ^~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:457:59: note: expanded from macro 'COMPL'
+  457 | #define COMPL(lane) for(i=0; i<8; i++) output[8*lane+i] = ~output[8*lane+i]
+      |                                                         ~ ^~~~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:463:5: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  463 |                                 COMPL(8);
+      |                                 ^~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:457:59: note: expanded from macro 'COMPL'
+  457 | #define COMPL(lane) for(i=0; i<8; i++) output[8*lane+i] = ~output[8*lane+i]
+      |                                                         ~ ^~~~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:465:6: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  465 |                                         COMPL(12);
+      |                                         ^~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:457:59: note: expanded from macro 'COMPL'
+  457 | #define COMPL(lane) for(i=0; i<8; i++) output[8*lane+i] = ~output[8*lane+i]
+      |                                                         ~ ^~~~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:467:7: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  467 |                                                 COMPL(17);
+      |                                                 ^~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:457:59: note: expanded from macro 'COMPL'
+  457 | #define COMPL(lane) for(i=0; i<8; i++) output[8*lane+i] = ~output[8*lane+i]
+      |                                                         ~ ^~~~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:469:8: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  469 |                                                         COMPL(20);
+      |                                                         ^~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c:457:59: note: expanded from macro 'COMPL'
+  457 | #define COMPL(lane) for(i=0; i<8; i++) output[8*lane+i] = ~output[8*lane+i]
+      |                                                         ~ ^~~~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/common/ossl_helpers.c:458:31: error: use of undeclared identifier 'OQS_OPENSSL_CRYPTO_SONAME'
+  458 |                 libcrypto_dlhandle = dlopen(OQS_OPENSSL_CRYPTO_SONAME,
+      |                                             ^~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[3]: *** [src/common/CMakeFiles/internal.dir/ossl_helpers.c.o] Error 1
+make[2]: *** [src/common/CMakeFiles/internal.dir/all] Error 2
+make[2]: *** Waiting for unfinished jobs....
+13 warnings generated.
+make[1]: *** [tests/CMakeFiles/test_slh_dsa_sha2.dir/rule] Error 2
+make: *** [test_slh_dsa_sha2] Error 2

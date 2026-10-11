@@ -1,0 +1,2802 @@
+{
+  "complete": false,
+  "review_status": "Historical run: 312 cases executed; 84 external verification cases skipped by upstream compile guard. Exit status alone did not prove those cases ran. Superseded by the successful 396-case acvp-checked-execution.json run with explicit execution markers and a separate public verification adapter.",
+  "executed_cases": 312,
+  "skipped_cases": 84,
+  "command_binary": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/tests/vectors_sig",
+  "counts": {
+    "keyGen SLH-DSA-SHA2-128s": 10,
+    "keyGen SLH-DSA-SHA2-128f": 10,
+    "keyGen SLH-DSA-SHA2-192s": 10,
+    "keyGen SLH-DSA-SHA2-192f": 10,
+    "keyGen SLH-DSA-SHA2-256s": 10,
+    "keyGen SLH-DSA-SHA2-256f": 10,
+    "sigGen SLH-DSA-SHA2-128f": 28,
+    "sigGen SLH-DSA-SHA2-192f": 28,
+    "sigGen SLH-DSA-SHA2-256f": 28,
+    "sigGen SLH-DSA-SHA2-128s": 28,
+    "sigGen SLH-DSA-SHA2-192s": 28,
+    "sigGen SLH-DSA-SHA2-256s": 28,
+    "sigVer SLH-DSA-SHA2-128f": 28,
+    "sigVer SLH-DSA-SHA2-192f": 28,
+    "sigVer SLH-DSA-SHA2-256f": 28,
+    "sigVer SLH-DSA-SHA2-128s": 28,
+    "sigVer SLH-DSA-SHA2-192s": 28,
+    "sigVer SLH-DSA-SHA2-256s": 28
+  },
+  "total_cases": 396,
+  "cases": [
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 1,
+      "tcId": 1,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 1,
+      "tcId": 2,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 1,
+      "tcId": 3,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 1,
+      "tcId": 4,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 1,
+      "tcId": 5,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 1,
+      "tcId": 6,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 1,
+      "tcId": 7,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 1,
+      "tcId": 8,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 1,
+      "tcId": 9,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 1,
+      "tcId": 10,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 3,
+      "tcId": 21,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 3,
+      "tcId": 22,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 3,
+      "tcId": 23,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 3,
+      "tcId": 24,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 3,
+      "tcId": 25,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 3,
+      "tcId": 26,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 3,
+      "tcId": 27,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 3,
+      "tcId": 28,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 3,
+      "tcId": 29,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 3,
+      "tcId": 30,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 5,
+      "tcId": 41,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 5,
+      "tcId": 42,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 5,
+      "tcId": 43,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 5,
+      "tcId": 44,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 5,
+      "tcId": 45,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 5,
+      "tcId": 46,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 5,
+      "tcId": 47,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 5,
+      "tcId": 48,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 5,
+      "tcId": 49,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 5,
+      "tcId": 50,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 7,
+      "tcId": 61,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 7,
+      "tcId": 62,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 7,
+      "tcId": 63,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 7,
+      "tcId": 64,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 7,
+      "tcId": 65,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 7,
+      "tcId": 66,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 7,
+      "tcId": 67,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 7,
+      "tcId": 68,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 7,
+      "tcId": 69,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 7,
+      "tcId": 70,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 9,
+      "tcId": 81,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 9,
+      "tcId": 82,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 9,
+      "tcId": 83,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 9,
+      "tcId": 84,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 9,
+      "tcId": 85,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 9,
+      "tcId": 86,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 9,
+      "tcId": 87,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 9,
+      "tcId": 88,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 9,
+      "tcId": 89,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 9,
+      "tcId": 90,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 11,
+      "tcId": 101,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 11,
+      "tcId": 102,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 11,
+      "tcId": 103,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 11,
+      "tcId": 104,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 11,
+      "tcId": 105,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 11,
+      "tcId": 106,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 11,
+      "tcId": 107,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 11,
+      "tcId": 108,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 11,
+      "tcId": 109,
+      "returncode": 0
+    },
+    {
+      "kind": "keyGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 11,
+      "tcId": 110,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 1,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 2,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 3,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 4,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 5,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 6,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 7,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 20,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 21,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 22,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 23,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 24,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 25,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 26,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 39,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 40,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 41,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 42,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 43,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 44,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 45,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 115,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 116,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 117,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 118,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 119,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 120,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 121,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 122,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 123,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 124,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 125,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 126,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 127,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 128,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 129,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 130,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 131,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 132,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 133,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 134,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 135,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 157,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 158,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 159,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 160,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 161,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 162,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 163,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 176,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 177,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 178,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 179,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 180,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 181,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 182,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 195,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 196,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 197,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 198,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 199,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 200,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 201,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 271,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 272,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 273,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 274,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 275,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 276,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 277,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 278,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 279,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 280,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 281,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 282,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 283,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 284,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 285,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 286,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 287,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 288,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 289,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 290,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 291,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 37,
+      "tcId": 313,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 37,
+      "tcId": 314,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 37,
+      "tcId": 315,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 37,
+      "tcId": 316,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 37,
+      "tcId": 317,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 37,
+      "tcId": 318,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 37,
+      "tcId": 319,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 39,
+      "tcId": 332,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 39,
+      "tcId": 333,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 39,
+      "tcId": 334,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 39,
+      "tcId": 335,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 39,
+      "tcId": 336,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 39,
+      "tcId": 337,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 39,
+      "tcId": 338,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 41,
+      "tcId": 351,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 41,
+      "tcId": 352,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 41,
+      "tcId": 353,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 41,
+      "tcId": 354,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 41,
+      "tcId": 355,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 41,
+      "tcId": 356,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 41,
+      "tcId": 357,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 49,
+      "tcId": 427,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 49,
+      "tcId": 428,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 49,
+      "tcId": 429,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 49,
+      "tcId": 430,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 49,
+      "tcId": 431,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 49,
+      "tcId": 432,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 49,
+      "tcId": 433,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 50,
+      "tcId": 434,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 50,
+      "tcId": 435,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 50,
+      "tcId": 436,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 50,
+      "tcId": 437,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 50,
+      "tcId": 438,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 50,
+      "tcId": 439,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 50,
+      "tcId": 440,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 51,
+      "tcId": 441,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 51,
+      "tcId": 442,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 51,
+      "tcId": 443,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 51,
+      "tcId": 444,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 51,
+      "tcId": 445,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 51,
+      "tcId": 446,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 51,
+      "tcId": 447,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 55,
+      "tcId": 469,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 55,
+      "tcId": 470,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 55,
+      "tcId": 471,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 55,
+      "tcId": 472,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 55,
+      "tcId": 473,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 55,
+      "tcId": 474,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 55,
+      "tcId": 475,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 57,
+      "tcId": 488,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 57,
+      "tcId": 489,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 57,
+      "tcId": 490,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 57,
+      "tcId": 491,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 57,
+      "tcId": 492,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 57,
+      "tcId": 493,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 57,
+      "tcId": 494,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 59,
+      "tcId": 507,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 59,
+      "tcId": 508,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 59,
+      "tcId": 509,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 59,
+      "tcId": 510,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 59,
+      "tcId": 511,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 59,
+      "tcId": 512,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 59,
+      "tcId": 513,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 67,
+      "tcId": 583,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 67,
+      "tcId": 584,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 67,
+      "tcId": 585,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 67,
+      "tcId": 586,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 67,
+      "tcId": 587,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 67,
+      "tcId": 588,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 67,
+      "tcId": 589,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 68,
+      "tcId": 590,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 68,
+      "tcId": 591,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 68,
+      "tcId": 592,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 68,
+      "tcId": 593,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 68,
+      "tcId": 594,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 68,
+      "tcId": 595,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 68,
+      "tcId": 596,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 69,
+      "tcId": 597,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 69,
+      "tcId": 598,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 69,
+      "tcId": 599,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 69,
+      "tcId": 600,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 69,
+      "tcId": 601,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 69,
+      "tcId": 602,
+      "returncode": 0
+    },
+    {
+      "kind": "sigGen",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 69,
+      "tcId": 603,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 1,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 2,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 3,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 4,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 5,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 6,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 7,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 8,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 9,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 10,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 11,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 12,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 13,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 1,
+      "tcId": 14,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 29,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 30,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 31,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 32,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 33,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 34,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 35,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 36,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 37,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 38,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 39,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 40,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 41,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 3,
+      "tcId": 42,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 57,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 58,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 59,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 60,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 61,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 62,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 63,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 64,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 65,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 66,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 67,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 68,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 69,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 5,
+      "tcId": 70,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 169,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 170,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 171,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 172,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 173,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 174,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 175,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 176,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 177,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 178,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 179,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 180,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 181,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128f",
+      "tgId": 13,
+      "tcId": 182,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 183,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 184,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 185,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 186,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 187,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 188,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 189,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 190,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 191,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 192,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 193,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 194,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 195,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192f",
+      "tgId": 14,
+      "tcId": 196,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 197,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 198,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 199,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 200,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 201,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 202,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 203,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 204,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 205,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 206,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 207,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 208,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 209,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256f",
+      "tgId": 15,
+      "tcId": 210,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 253,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 254,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 255,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 256,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 257,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 258,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 259,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 260,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 261,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 262,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 263,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 264,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 265,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 19,
+      "tcId": 266,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 281,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 282,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 283,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 284,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 285,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 286,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 287,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 288,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 289,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 290,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 291,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 292,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 293,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 21,
+      "tcId": 294,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 309,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 310,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 311,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 312,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 313,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 314,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 315,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 316,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 317,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 318,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 319,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 320,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 321,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 23,
+      "tcId": 322,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 421,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 422,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 423,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 424,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 425,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 426,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 427,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 428,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 429,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 430,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 431,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 432,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 433,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-128s",
+      "tgId": 31,
+      "tcId": 434,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 435,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 436,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 437,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 438,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 439,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 440,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 441,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 442,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 443,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 444,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 445,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 446,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 447,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-192s",
+      "tgId": 32,
+      "tcId": 448,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 449,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 450,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 451,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 452,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 453,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 454,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 455,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 456,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 457,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 458,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 459,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 460,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 461,
+      "returncode": 0
+    },
+    {
+      "kind": "sigVer",
+      "parameter": "SLH-DSA-SHA2-256s",
+      "tgId": 33,
+      "tcId": 462,
+      "returncode": 0
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+-- OQS Testing: Pytest parallel workers set to 'auto'
+-- CMAKE_BUILD_TYPE=Release
+-- Algorithms filtered for SIG_slh_dsa_pure_sha2_128f
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Configuring done (0.2s)
+-- Generating done (0.2s)
+-- Build files have been written to: /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/no-deprecated

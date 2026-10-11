@@ -1,0 +1,124 @@
+{
+  "results": {
+    "openssl": {
+      "passed_checks": 5710
+    },
+    "portable": {
+      "passed_checks": 5710
+    },
+    "dlopen-fallback": {
+      "passed_checks": 5710
+    },
+    "no-deprecated-fallback": {
+      "passed_checks": 5710
+    }
+  },
+  "backend_probe": "SHA256_Transform calls: 1; SHA512_Transform calls: 1\ncleanse calls: 2; bytes: 328; failed: 0",
+  "commands": [
+    [
+      "cc",
+      "-O3",
+      "-dynamiclib",
+      "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/baseline",
+      "-I/opt/homebrew/Cellar/openssl@3/3.6.4_1/include",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_256.c",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_512.c",
+      "-L/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib",
+      "-lcrypto",
+      "-o",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/baseline/hashes.dylib"
+    ],
+    [
+      "cc",
+      "-O3",
+      "-dynamiclib",
+      "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/openssl",
+      "-I/opt/homebrew/Cellar/openssl@3/3.6.4_1/include",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/sha2_256.c",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/sha2_512.c",
+      "-L/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib",
+      "-lcrypto",
+      "-o",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/openssl/hashes.dylib"
+    ],
+    [
+      "cc",
+      "-O3",
+      "-dynamiclib",
+      "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/portable",
+      "-I/opt/homebrew/Cellar/openssl@3/3.6.4_1/include",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/sha2_256.c",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/sha2_512.c",
+      "-L/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib",
+      "-lcrypto",
+      "-o",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/portable/hashes.dylib"
+    ],
+    [
+      "cc",
+      "-O3",
+      "-dynamiclib",
+      "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/dlopen-fallback",
+      "-I/opt/homebrew/Cellar/openssl@3/3.6.4_1/include",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/sha2_256.c",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/sha2_512.c",
+      "-L/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib",
+      "-lcrypto",
+      "-o",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/dlopen-fallback/hashes.dylib"
+    ],
+    [
+      "cc",
+      "-O3",
+      "-dynamiclib",
+      "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/no-deprecated-fallback",
+      "-I/opt/homebrew/Cellar/openssl@3/3.6.4_1/include",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/sha2_256.c",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/sha2_512.c",
+      "-L/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib",
+      "-lcrypto",
+      "-o",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/no-deprecated-fallback/hashes.dylib"
+    ],
+    [
+      "cc",
+      "-O3",
+      "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/probe",
+      "-I/opt/homebrew/Cellar/openssl@3/3.6.4_1/include",
+      "-DSHA256_Transform=probe256",
+      "-DOPENSSL_cleanse=probe_cleanse",
+      "-c",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/sha2_256.c",
+      "-o",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/probe/256.o"
+    ],
+    [
+      "cc",
+      "-O3",
+      "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/probe",
+      "-I/opt/homebrew/Cellar/openssl@3/3.6.4_1/include",
+      "-DSHA512_Transform=probe512",
+      "-DOPENSSL_cleanse=probe_cleanse",
+      "-c",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/sha2_512.c",
+      "-o",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/probe/512.o"
+    ],
+    [
+      "cc",
+      "-O3",
+      "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c",
+      "-I/opt/homebrew/Cellar/openssl@3/3.6.4_1/include",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-openssl/backend_probe.c",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/probe/256.o",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/probe/512.o",
+      "-L/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib",
+      "-lcrypto",
+      "-o",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/probe/probe"
+    ],
+    [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/hash-checks/probe/probe"
+    ]
+  ]
+}

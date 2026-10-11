@@ -1,0 +1,30 @@
+[
+  [
+    "cc",
+    "-O3",
+    "-DNDEBUG",
+    "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/baseline/include",
+    "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-openssl/corpus.c",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/baseline/lib/liboqs.a",
+    "-L/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib",
+    "-lcrypto",
+    "-lpthread",
+    "-o",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/baseline/corpus"
+  ],
+  [
+    "cc",
+    "-O3",
+    "-DNDEBUG",
+    "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/include",
+    "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-openssl/corpus.c",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/lib/liboqs.a",
+    "-L/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib",
+    "-lcrypto",
+    "-lpthread",
+    "-o",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/corpus"
+  ]
+]

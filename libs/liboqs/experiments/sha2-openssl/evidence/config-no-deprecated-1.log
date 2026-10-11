@@ -1,0 +1,362 @@
+[  1%] Built target xkcp_low_keccakp_1600times4_serial
+[  1%] Building C object src/common/CMakeFiles/internal.dir/aes/aes_ossl.c.o
+[  1%] Built target xkcp_low_keccakp_1600_plain64
+[  2%] Building C object src/common/CMakeFiles/internal.dir/aes/aes.c.o
+[  2%] Building C object src/common/CMakeFiles/internal.dir/sha2/sha2_ossl.c.o
+[  2%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/slh_dsa_c/sha2_256.c.o
+[  3%] Building C object src/common/CMakeFiles/internal.dir/sha2/sha2.c.o
+[  3%] Building C object src/common/CMakeFiles/internal.dir/sha3/xkcp_sha3.c.o
+[  5%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/slh_dsa_c/sha2_512.c.o
+[  5%] Building C object src/common/CMakeFiles/internal.dir/sha3/xkcp_sha3x4.c.o
+[  6%] Building C object src/common/CMakeFiles/internal.dir/sha3/sha3.c.o
+[  6%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/slh_dsa_c/slh_dsa.c.o
+[  6%] Building C object src/common/CMakeFiles/internal.dir/sha3/sha3x4.c.o
+[  7%] Building C object src/common/CMakeFiles/internal.dir/ossl_helpers.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/slh_dsa_c/slh_prehash.c.o
+[  7%] Building C object src/common/CMakeFiles/internal.dir/common.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/slh_dsa_c/slh_sha2.c.o
+[  8%] Building C object src/common/CMakeFiles/internal.dir/rand/rand_nist.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/slh_dsa_c/slh_shake.c.o
+[  8%] Built target internal
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_sha2_128f.c.o
+[ 10%] Building C object src/common/CMakeFiles/common.dir/aes/aes_ossl.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_sha2_128s.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_sha2_192f.c.o
+[ 10%] Building C object src/common/CMakeFiles/common.dir/aes/aes.c.o
+[ 11%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_sha2_192s.c.o
+[ 12%] Building C object src/common/CMakeFiles/common.dir/sha2/sha2_ossl.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_sha2_256f.c.o
+[ 13%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_sha2_256s.c.o
+[ 13%] Building C object src/common/CMakeFiles/common.dir/sha2/sha2.c.o
+[ 13%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_shake_128f.c.o
+[ 15%] Building C object src/common/CMakeFiles/common.dir/sha3/xkcp_sha3.c.o
+[ 15%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_shake_128s.c.o
+[ 16%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_shake_192f.c.o
+[ 16%] Building C object src/common/CMakeFiles/common.dir/sha3/xkcp_sha3x4.c.o
+[ 16%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_shake_192s.c.o
+[ 16%] Building C object src/common/CMakeFiles/common.dir/sha3/sha3.c.o
+[ 17%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_shake_256f.c.o
+[ 18%] Building C object src/common/CMakeFiles/common.dir/sha3/sha3x4.c.o
+[ 18%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_shake_256s.c.o
+[ 18%] Building C object src/common/CMakeFiles/common.dir/ossl_helpers.c.o
+[ 18%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_sha2_128f.c.o
+[ 20%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_sha2_128s.c.o
+[ 21%] Building C object src/common/CMakeFiles/common.dir/common.c.o
+[ 21%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_sha2_192f.c.o
+[ 22%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_sha2_192s.c.o
+[ 22%] Building C object src/common/CMakeFiles/common.dir/pqclean_shims/fips202.c.o
+[ 22%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_sha2_256f.c.o
+[ 22%] Building C object src/common/CMakeFiles/common.dir/pqclean_shims/fips202x4.c.o
+[ 22%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_sha2_256s.c.o
+[ 24%] Building C object src/common/CMakeFiles/common.dir/rand/rand.c.o
+[ 25%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_shake_128f.c.o
+[ 25%] Built target common
+[ 25%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_shake_128s.c.o
+[ 26%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_shake_192f.c.o
+[ 26%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_shake_192s.c.o
+[ 26%] Linking C static library ../lib/liboqs-internal.a
+[ 26%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_shake_256f.c.o
+[ 26%] Built target oqs-internal
+[ 27%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_shake_256s.c.o
+[ 27%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_sha2_128f.c.o
+[ 29%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_sha2_128s.c.o
+[ 29%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_sha2_192f.c.o
+[ 29%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_sha2_192s.c.o
+[ 30%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_sha2_256f.c.o
+[ 30%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_sha2_256s.c.o
+[ 31%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_shake_128f.c.o
+[ 31%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_shake_128s.c.o
+[ 31%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_shake_192f.c.o
+[ 32%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_shake_192s.c.o
+[ 32%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_shake_256f.c.o
+[ 34%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_shake_256s.c.o
+[ 34%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_sha2_128f.c.o
+[ 34%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_sha2_128s.c.o
+[ 35%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_sha2_192f.c.o
+[ 36%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_sha2_192s.c.o
+[ 36%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_sha2_256f.c.o
+[ 36%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_shake_128f.c.o
+[ 36%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_sha2_256s.c.o
+[ 37%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_shake_192f.c.o
+[ 37%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_shake_128s.c.o
+[ 37%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_shake_256f.c.o
+[ 39%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_shake_192s.c.o
+[ 39%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_shake_256s.c.o
+[ 40%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_sha2_128f.c.o
+[ 41%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_sha2_192f.c.o
+[ 41%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_sha2_128s.c.o
+[ 41%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_sha2_256f.c.o
+[ 41%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_sha2_192s.c.o
+[ 43%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_shake_128f.c.o
+[ 43%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_sha2_256s.c.o
+[ 43%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_shake_192f.c.o
+[ 44%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_shake_128s.c.o
+[ 44%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_shake_192s.c.o
+[ 45%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_shake_256f.c.o
+[ 45%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_shake_256s.c.o
+[ 46%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_sha2_128f.c.o
+[ 46%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_sha2_192f.c.o
+[ 46%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_sha2_128s.c.o
+[ 48%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_sha2_256f.c.o
+[ 48%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_sha2_192s.c.o
+[ 48%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_shake_128f.c.o
+[ 49%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_sha2_256s.c.o
+[ 50%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_shake_128s.c.o
+[ 50%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_shake_192f.c.o
+[ 51%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_shake_192s.c.o
+[ 51%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_shake_256f.c.o
+[ 51%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_sha2_128f.c.o
+[ 51%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_shake_256s.c.o
+[ 51%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_sha2_192f.c.o
+[ 53%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_sha2_128s.c.o
+[ 54%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_sha2_256f.c.o
+[ 54%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_sha2_192s.c.o
+[ 54%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_sha2_256s.c.o
+[ 55%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_shake_128f.c.o
+[ 55%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_shake_128s.c.o
+[ 56%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_shake_192f.c.o
+[ 56%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_shake_256f.c.o
+[ 56%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_shake_192s.c.o
+[ 58%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_sha2_128f.c.o
+[ 58%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_shake_256s.c.o
+[ 58%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_sha2_192f.c.o
+[ 59%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_sha2_128s.c.o
+[ 59%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_sha2_192s.c.o
+[ 60%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_sha2_256f.c.o
+[ 60%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_sha2_256s.c.o
+[ 62%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_shake_128f.c.o
+[ 62%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_shake_128s.c.o
+[ 62%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_shake_192f.c.o
+[ 63%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_shake_192s.c.o
+[ 63%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_shake_256f.c.o
+[ 64%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_shake_256s.c.o
+[ 64%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_sha2_128f.c.o
+[ 64%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_sha2_128s.c.o
+[ 65%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_sha2_192f.c.o
+[ 65%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_sha2_192s.c.o
+[ 67%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_sha2_256f.c.o
+[ 67%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_sha2_256s.c.o
+[ 67%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_shake_128f.c.o
+[ 68%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_shake_128s.c.o
+[ 68%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_shake_192f.c.o
+[ 68%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_shake_256f.c.o
+[ 69%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_shake_192s.c.o
+[ 70%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_sha2_128f.c.o
+[ 70%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_shake_256s.c.o
+[ 70%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_sha2_128s.c.o
+[ 72%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_sha2_192f.c.o
+[ 72%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_sha2_256f.c.o
+[ 72%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_sha2_192s.c.o
+[ 73%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_sha2_256s.c.o
+[ 73%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_shake_128f.c.o
+[ 73%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_shake_192f.c.o
+[ 74%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_shake_128s.c.o
+[ 74%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_shake_192s.c.o
+[ 75%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_shake_256f.c.o
+[ 75%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_shake_256s.c.o
+[ 77%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_sha2_128f.c.o
+[ 77%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_sha2_128s.c.o
+[ 77%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_sha2_192f.c.o
+[ 78%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_sha2_256f.c.o
+[ 78%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_sha2_192s.c.o
+[ 78%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_shake_128f.c.o
+[ 79%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_sha2_256s.c.o
+[ 79%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_shake_128s.c.o
+[ 81%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_shake_192f.c.o
+[ 81%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_shake_192s.c.o
+[ 82%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_shake_256f.c.o
+[ 82%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_sha2_128f.c.o
+[ 82%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_shake_256s.c.o
+[ 83%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_sha2_192f.c.o
+[ 83%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_sha2_128s.c.o
+[ 83%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_sha2_256f.c.o
+[ 84%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_sha2_192s.c.o
+[ 86%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_shake_128f.c.o
+[ 86%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_sha2_256s.c.o
+[ 87%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_shake_192f.c.o
+[ 87%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_shake_128s.c.o
+[ 87%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_shake_192s.c.o
+[ 87%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_shake_256f.c.o
+[ 88%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_sha2_128f.c.o
+[ 88%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_shake_256s.c.o
+[ 89%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_sha2_128s.c.o
+[ 89%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_sha2_192f.c.o
+[ 89%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_sha2_192s.c.o
+[ 91%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_sha2_256f.c.o
+[ 91%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_sha2_256s.c.o
+[ 92%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_shake_128f.c.o
+[ 92%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_shake_128s.c.o
+[ 92%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_shake_192f.c.o
+[ 92%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_shake_256f.c.o
+[ 93%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_shake_192s.c.o
+[ 94%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_shake_256s.c.o
+[ 96%] Built target slh_dsa_c
+[ 96%] Building C object src/CMakeFiles/oqs.dir/kem/kem.c.o
+[ 97%] Building C object src/CMakeFiles/oqs.dir/sig/sig.c.o
+[ 97%] Building C object src/CMakeFiles/oqs.dir/sig_stfl/sig_stfl.c.o
+[ 98%] Linking C static library ../lib/liboqs.a
+[ 98%] Built target oqs
+[ 98%] Building C object tests/CMakeFiles/test_slh_dsa_sha2.dir/__/src/sig/slh_dsa/slh_dsa_c/sha2_256.c.o
+[ 98%] Building C object tests/CMakeFiles/test_slh_dsa_sha2.dir/test_slh_dsa_sha2.c.o
+[100%] Building C object tests/CMakeFiles/test_slh_dsa_sha2.dir/__/src/sig/slh_dsa/slh_dsa_c/sha2_512.c.o
+[100%] Linking C executable test_slh_dsa_sha2
+[100%] Built target test_slh_dsa_sha2
+[  1%] Built target xkcp_low_keccakp_1600times4_serial
+[  6%] Built target internal
+[  6%] Built target xkcp_low_keccakp_1600_plain64
+[ 12%] Built target common
+[ 12%] Built target oqs-internal
+[ 96%] Built target slh_dsa_c
+[ 98%] Built target oqs
+[ 98%] Building C object tests/CMakeFiles/test_sig.dir/test_sig.c.o
+[ 98%] Building C object tests/CMakeFiles/test_sig.dir/test_helpers.c.o
+[100%] Linking C executable test_sig
+[100%] Built target test_sig
+In file included from /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:23:
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:171:36: warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  171 |     return (((uint16_t)v[1]) << 8) | ((uint16_t)v[0]);
+      |     ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:176:12: warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  176 |     v[0] = x;
+      |          ~ ^
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:188:12: warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  188 |     v[0] = x;
+      |          ~ ^
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:189:14: warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  189 |     v[1] = x >> 8;
+      |          ~ ~~^~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:190:14: warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  190 |     v[2] = x >> 16;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:204:12: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  204 |     v[0] = x;
+      |          ~ ^
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:205:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  205 |     v[1] = x >> 8;
+      |          ~ ~~^~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:206:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  206 |     v[2] = x >> 16;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:207:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  207 |     v[3] = x >> 24;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:208:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  208 |     v[4] = x >> 32;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:209:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  209 |     v[5] = x >> 40;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:210:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  210 |     v[6] = x >> 48;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:218:36: warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  218 |     return (((uint16_t)v[0]) << 8) | ((uint16_t)v[1]);
+      |     ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:224:12: warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  224 |     v[1] = x;
+      |          ~ ^
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:236:14: warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  236 |     v[1] = x >> 16;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:237:14: warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  237 |     v[2] = x >> 8;
+      |          ~ ~~^~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:238:12: warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  238 |     v[3] = x;
+      |          ~ ^
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:252:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  252 |     v[1] = x >> 48;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:253:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  253 |     v[2] = x >> 40;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:254:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  254 |     v[3] = x >> 32;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:255:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  255 |     v[4] = x >> 24;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:256:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  256 |     v[5] = x >> 16;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:257:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  257 |     v[6] = x >> 8;
+      |          ~ ~~^~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:258:12: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  258 |     v[7] = x;
+      |          ~ ^
+In file included from /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:23:
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:171:36: warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  171 |     return (((uint16_t)v[1]) << 8) | ((uint16_t)v[0]);
+      |     ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:176:12: warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  176 |     v[0] = x;
+      |          ~ ^
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:188:12: warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  188 |     v[0] = x;
+      |          ~ ^
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:189:14: warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  189 |     v[1] = x >> 8;
+      |          ~ ~~^~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:190:14: warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  190 |     v[2] = x >> 16;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:204:12: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  204 |     v[0] = x;
+      |          ~ ^
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:205:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  205 |     v[1] = x >> 8;
+      |          ~ ~~^~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:206:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  206 |     v[2] = x >> 16;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:207:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  207 |     v[3] = x >> 24;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:208:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  208 |     v[4] = x >> 32;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:209:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  209 |     v[5] = x >> 40;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:210:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  210 |     v[6] = x >> 48;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:218:36: warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  218 |     return (((uint16_t)v[0]) << 8) | ((uint16_t)v[1]);
+      |     ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:224:12: warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  224 |     v[1] = x;
+      |          ~ ^
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:236:14: warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  236 |     v[1] = x >> 16;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:237:14: warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  237 |     v[2] = x >> 8;
+      |          ~ ~~^~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:238:12: warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  238 |     v[3] = x;
+      |          ~ ^
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:252:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  252 |     v[1] = x >> 48;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:253:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  253 |     v[2] = x >> 40;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:254:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  254 |     v[3] = x >> 32;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:255:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  255 |     v[4] = x >> 24;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:256:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  256 |     v[5] = x >> 16;
+      |          ~ ~~^~~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:257:14: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  257 |     v[6] = x >> 8;
+      |          ~ ~~^~~~
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance/src/sig/slh_dsa/slh_dsa_c/plat_local.h:258:12: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  258 |     v[7] = x;
+      |          ~ ^
+24 warnings generated.
+24 warnings generated.

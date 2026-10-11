@@ -1,0 +1,63 @@
+{
+  "pilot": false,
+  "started_utc": "2026-10-11T23:04:41.952740+00:00",
+  "platform": "macOS-26.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "forks": 6,
+  "sign_iterations": 3,
+  "verify_iterations": 30,
+  "corpus": {
+    "sha256": "0879e36d029fde653b48e8156761f9ea44bc71c37e697767cdb65a6f41b3c36d",
+    "size": 629387,
+    "cases": 24,
+    "parameters": 6,
+    "byte_identical_keys_and_signatures": true
+  },
+  "ready_manifest_sha256": "cd6d94cd1c41d13776e4f69259bf24d7ec14fb7c9866a221ebe352ad882a0b1c",
+  "randomness": "Unmodified OQS_randombytes in timed public signing; fixed identical verification fixtures",
+  "order": [
+    [
+      "baseline",
+      "candidate"
+    ],
+    [
+      "candidate",
+      "baseline"
+    ],
+    [
+      "baseline",
+      "candidate"
+    ],
+    [
+      "candidate",
+      "baseline"
+    ],
+    [
+      "baseline",
+      "candidate"
+    ],
+    [
+      "candidate",
+      "baseline"
+    ]
+  ],
+  "completed_utc": "2026-10-11T23:09:53.711531+00:00",
+  "complete": true,
+  "host_load_note": "ps percent CPU is a diagnostic, not an instantaneous utilization or isolation guarantee; background activity must be reviewed before accepting speed claims.",
+  "background_cpu_max": 175.19999999999996,
+  "background_cpu_median": 58.70000000000002,
+  "raw_sha256": {
+    "01-baseline.jsonl": "92f7b165fc2642ca51c159ee9ef9a999b06fab45e4118a67f23dfb2ba6c14807",
+    "01-candidate.jsonl": "d122bfc02f1d6cb937b4452c073e937254599ef409b772cfbf08454fc78ba753",
+    "02-baseline.jsonl": "28acb57ef2aece6b18183990793593c498ceab4aa1e9e87a1bf53667adace595",
+    "02-candidate.jsonl": "ed00c8f3521c2d61b114eed982ef3e490016ff69623b3702e4afb7dc768c2a8f",
+    "03-baseline.jsonl": "6b58c48751590ce211347681b06f8544844ac3dacc9aba4c0705cee1f34c46f2",
+    "03-candidate.jsonl": "aa26ad9255121b495b422bf9d62aaa867ad87166dab31ac34c7c4091c792355e",
+    "04-baseline.jsonl": "8d92c69692a7c0a79fe44a79ec360aa50d8c925b52c3cc92b3ed5b5695fa3c13",
+    "04-candidate.jsonl": "559f1b8a1744e454b62aea1c870957de814d06a1518f6877f23c9a9d5d81e5c7",
+    "05-baseline.jsonl": "637ad5ac8b35dc322cb3687d244a0f584484a63a59b0d3f2bf5ff57a27a5cb8c",
+    "05-candidate.jsonl": "c55b31c172c783e9c3c3fb74abb9514fab8a7258d7bd58a15904fc09141dd144",
+    "06-baseline.jsonl": "e5d5e02d345ae3d12c2933ea3f1f957cfd057f6f58c8308e8532461d40af0f93",
+    "06-candidate.jsonl": "1665415aab04ad2c82de154fcd0dae0d8148b8fbf79b2330cb51fcc60c8e21a2"
+  }
+}

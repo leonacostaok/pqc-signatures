@@ -1,0 +1,6 @@
+{
+  "baseline_commit": "fd44469daeffe6b28f031f54f9bb66cbae69a572",
+  "patch_sha256": "4e553b3c2e72d8e8da0bc675435104de5895c3869a55f02d9b404808d74c05f6",
+  "bytes": 12852,
+  "git_apply_check_returncode": 0
+}

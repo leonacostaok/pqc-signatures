@@ -1,0 +1,14 @@
+[
+  {
+    "bits": 256,
+    "optimized_binary": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/corpus",
+    "transform_and_cleanse_retained": true,
+    "binary_sha256": "0235d559a267713392374345341fc4d5c48f06bb4d57057a0d9ee9d2c00ddc03"
+  },
+  {
+    "bits": 512,
+    "optimized_binary": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/corpus",
+    "transform_and_cleanse_retained": true,
+    "binary_sha256": "0235d559a267713392374345341fc4d5c48f06bb4d57057a0d9ee9d2c00ddc03"
+  }
+]

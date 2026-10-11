@@ -1,0 +1,21 @@
+Testing signature algorithms using liboqs version 0.16.0
+Configuration info
+==================
+Target platform:  arm64-Darwin-25.2.0
+Compiler:         clang (21.0.0 (clang-2100.1.1.101))
+Compile options:  [-march=armv8-a+crypto;-Wa,--noexecstack;-fomit-frame-pointer;-Wbad-function-cast;-Wcast-qual;-Wnarrowing;-Wconversion]
+OQS version:      0.16.0 (major: 0, minor: 16, patch: 0)
+Git commit:       45076e05b67a6792e3bbb5115256e776e790cd1c (+ local modifications)
+OpenSSL enabled:  Yes (OpenSSL 3.6.4 25 Aug 2026)
+AES:              OpenSSL
+SHA-2:            C and ARM CRYPTO extensions
+SHA-3:            C
+OQS build flags:  OQS_DIST_BUILD OQS_LIBJADE_BUILD OQS_OPT_TARGET=generic CMAKE_BUILD_TYPE=Release 
+CPU exts active:  AES SHA2 SHA3 NEON
+Extended tests enabled
+================================================================================
+Sample computation for signature SLH_DSA_PURE_SHA2_128F
+Testing EUF-CMA by flipping 50 random bits of the message
+Version source: FIPS205
+================================================================================
+verification passes as expected

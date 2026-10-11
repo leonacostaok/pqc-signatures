@@ -1,0 +1,24 @@
+{
+  "complete": false,
+  "compile_command": [
+    "cc",
+    "-std=c99",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/include",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-openssl/public_verify.c",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/lib/liboqs.a",
+    "-L/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib",
+    "-lcrypto",
+    "-lpthread",
+    "-o",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/public_verify"
+  ],
+  "controls": [],
+  "runs": [],
+  "library_sha256_before": "c86a787170a16f9d39d7dcca2d66213f8b8a3283616bb5c34d6baaea1f071cdd",
+  "upstream_binary_sha256_before": "e9b5e820d4aac6a06651a59299567f641ed28cd1992269b8d33e1ed53bb9875a",
+  "compile_returncode": 1
+}

@@ -1,0 +1,10 @@
+{
+  "commit": "b14f1b616f938698ebc0bf8b75b3736c30e1502c",
+  "baseline_commit": "fd44469daeffe6b28f031f54f9bb66cbae69a572",
+  "commit_diff_sha256": "dadeb3111c77bd1fc94c76a558526015786dc9a18b56d402b50f6af737a52b18",
+  "saved_patch_sha256": "4e553b3c2e72d8e8da0bc675435104de5895c3869a55f02d9b404808d74c05f6",
+  "patch_file_sections_equal_ignoring_file_order": true,
+  "file_count": 8,
+  "apply_check_returncode": 0,
+  "status": ""
+}

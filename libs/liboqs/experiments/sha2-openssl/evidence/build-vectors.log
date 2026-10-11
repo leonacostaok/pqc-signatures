@@ -1,0 +1,10 @@
+[  6%] Built target common
+[  6%] Built target xkcp_low_keccakp_1600_plain64
+[ 65%] Built target xkcp_low_keccakp_1600times4_serial
+[ 91%] Built target slh_dsa_c
+[ 93%] Built target oqs
+[ 98%] Built target internal
+[ 98%] Built target oqs-internal
+[ 98%] Building C object tests/CMakeFiles/vectors_sig.dir/vectors_sig.c.o
+[100%] Linking C executable vectors_sig
+[100%] Built target vectors_sig

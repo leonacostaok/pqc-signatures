@@ -1,0 +1,106 @@
+{
+  "complete": true,
+  "compile_command": [
+    "cc",
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/include",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-openssl/public_verify.c",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/lib/liboqs.a",
+    "-L/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib",
+    "-lcrypto",
+    "-lpthread",
+    "-o",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/public_verify"
+  ],
+  "controls": [
+    {
+      "label": "positive vector executes and accepts",
+      "expected_returncode": 0,
+      "actual_returncode": 0,
+      "passed": true,
+      "stdout": "public_verify_executed: 1\n"
+    },
+    {
+      "label": "inverted expectation fails",
+      "expected_returncode": 1,
+      "actual_returncode": 1,
+      "passed": true,
+      "stdout": "public_verify_executed: 1\n"
+    },
+    {
+      "label": "negative vector executes and rejects",
+      "expected_returncode": 0,
+      "actual_returncode": 0,
+      "passed": true,
+      "stdout": "public_verify_executed: 0\n"
+    },
+    {
+      "label": "NIST rejects exit-zero without execution",
+      "expected_returncode": 1,
+      "actual_returncode": 1,
+      "passed": true,
+      "stdout": ""
+    },
+    {
+      "label": "shared driver rejects exit-zero without execution",
+      "expected_returncode": 1,
+      "actual_returncode": 1,
+      "passed": true,
+      "stdout": ""
+    }
+  ],
+  "runs": [
+    {
+      "label": "acvp-checked-execution",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-openssl/check_acvp_executed.py",
+        "--vectors",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/acvp",
+        "--binary",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/tests/vectors_sig",
+        "--public-verify",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/public_verify",
+        "--evidence",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-openssl/evidence"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 20.333118
+    },
+    {
+      "label": "shared-validation",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-openssl/check_shared.py",
+        "--validation",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/common/validation/validation.json.gz",
+        "--binary",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/tests/vectors_sig",
+        "--public-verify",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/public_verify",
+        "--output",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-openssl/evidence/shared-validation.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 3.2980937079999997
+    }
+  ],
+  "library_sha256_before": "c86a787170a16f9d39d7dcca2d66213f8b8a3283616bb5c34d6baaea1f071cdd",
+  "upstream_binary_sha256_before": "e9b5e820d4aac6a06651a59299567f641ed28cd1992269b8d33e1ed53bb9875a",
+  "compile_returncode": 0,
+  "adapter_sha256": "bcf3232e84f4967cbcbe13f0634c58161954901452b818afa7640ea91000b387",
+  "adapter_source_sha256": "b33128212652e2bac6e718a7c14f7bf4d1dbe02fe73faa70a65d2497cd168f65",
+  "upstream_external_skip_reproduction": {
+    "parameter": "SLH-DSA-SHA2-128f",
+    "tgId": 1,
+    "tcId": 2,
+    "returncode": 0,
+    "execution_marker_present": false
+  },
+  "library_sha256_after": "c86a787170a16f9d39d7dcca2d66213f8b8a3283616bb5c34d6baaea1f071cdd",
+  "upstream_binary_sha256_after": "e9b5e820d4aac6a06651a59299567f641ed28cd1992269b8d33e1ed53bb9875a"
+}
