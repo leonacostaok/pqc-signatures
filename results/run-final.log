@@ -188,3 +188,39 @@ Terminated
 [liboqs] stages ht_wots.v5 (slh-dsa/lto/mode=-)
 [liboqs] stages ht_auth.v0 (slh-dsa/dist/mode=-)
 [liboqs] stages ht_auth.v1 (slh-dsa/fasthash/mode=-)
+[liboqs] stages ht_auth.v2 (slh-dsa/native/mode=-)
+[liboqs] stages ht_auth.v3 (slh-dsa/clang/mode=-)
+[liboqs] stages ht_auth.v4 (slh-dsa/pgo/mode=-)
+[liboqs] stages ht_auth.v5 (slh-dsa/lto/mode=-)
+[liboqs] stages total (ml-dsa/dist/mode=-)
+[liboqs] stages total (slh-dsa/dist/mode=-)
+[liboqs] stages total_best (ml-dsa/dist/mode=cached)
+[liboqs] stages total_best (slh-dsa/fasthash/mode=-)
+[liboqs] wrote /home/user/pqc-signatures/results/liboqs/stages.jsonl (408 lines)
+== memory liboqs  18:57:08
+[liboqs] memory keygen.v0
+[liboqs] memory keygen.v1
+[liboqs] memory keygen.v2
+[liboqs] memory keygen.v3
+[liboqs] memory keygen.v4
+[liboqs] memory keygen.v5
+[liboqs] memory sign.v0
+[liboqs] memory sign.v1
+[liboqs] memory sign.v2
+[liboqs] memory sign.v3
+[liboqs] memory sign.v4
+== skip noble build (done)
+== skip liboqs build (done)
+== skip openssl build (done)
+== skip circl build (done)
+== skip rustcrypto build (done)
+== skip bouncycastle build (done)
+== skip noble bench (done)
+== skip noble stages (done)
+== skip noble memory (done)
+== skip noble validate (done)
+== skip liboqs bench (done)
+== skip liboqs stages (done)
+== memory liboqs  19:13:53
+[liboqs] memory keygen.v0
+[liboqs] memory keygen.v1
