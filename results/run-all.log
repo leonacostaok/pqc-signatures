@@ -1,0 +1,39 @@
+== build noble
+[noble] build ok: node 22.22.0, vendor patches applied, backends pkg/vendor/fast load
+[noble] bun: 1.4.2 at /root/.bun/bin/bun
+== build liboqs
+[liboqs] build complete: dist native clang lto pgo fasthash
+== build openssl
+[openssl] default: libcrypto.a present, skipping
+[openssl] noasm: libcrypto.a present, skipping
+[openssl] native: libcrypto.a present, skipping
+[openssl] build complete: 3.5.9
+== build circl
+go: go version go1.25.0 linux/amd64
+built: default.pgo
+pqcbench-amd64v3
+pqcbench-default
+pqcbench-pgo
+pqcbench-purego
+== build rustcrypto
+>> build [base] profile=release RUSTFLAGS='' 
+>> build [native] profile=release RUSTFLAGS='-C target-cpu=native' 
+>> build [lto] profile=lto RUSTFLAGS='' 
+>> build [mimalloc] profile=release RUSTFLAGS='' --features mimalloc
+>> build done:
+{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=base)","build_tag":"base"}
+{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=native)","build_tag":"native"}
+{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=lto)","build_tag":"lto"}
+{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=mimalloc)","build_tag":"mimalloc"}
+{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=pgo-keygen)","build_tag":"pgo-keygen"}
+{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=pgo-sign)","build_tag":"pgo-sign"}
+{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=pgo-verify)","build_tag":"pgo-verify"}
+== build bouncycastle
+== vectors noble
+[noble] ML-DSA-44           sig   2420 B  self_verify=true  reference_match=true
+[noble] ML-DSA-65           sig   3309 B  self_verify=true  reference_match=true
+[noble] ML-DSA-87           sig   4627 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHA2-128s   sig   7856 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHA2-128f   sig  17088 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHA2-192s   sig  16224 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHA2-192f   sig  35664 B  self_verify=true  reference_match=true
