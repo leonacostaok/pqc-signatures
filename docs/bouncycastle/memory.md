@@ -148,3 +148,19 @@ stack = peak stack of one op (bytes, resolution = one compiled recursion frame);
 | keygen | `keygen.v4` | 1216 | 10782846 | 4 | True |
 | keygen | `keygen.v5` | 1359 | 10782512 | 1 | True |
 | sign | `sign.v0` | 1472 | 83767561 | 1 | True |
+| sign | `sign.v1` | 1408 | 83767000 | 1 | True |
+| sign | `sign.v2` | 1344 | 83766792 | 1 | True |
+| sign | `sign.v3` | 1312 | 83767236 | 4 | True |
+| sign | `sign.v4` | 245972 | 83776528 | 1 | True |
+| sign | `sign.v5` | 491912 | 83776528 | 1 | True |
+| verify | `verify.v0` | 784 | 98032 | 1 | True |
+| verify | `verify.v1` | 960 | 97568 | 1 | True |
+| verify | `verify.v2` | 480 | 97456 | 1 | True |
+| verify | `verify.v3` | 480 | 97609 | 4 | True |
+| verify | `verify.v4` | 1327 | 97623 | 1 | True |
+| verify | `verify.v5` | 1344 | 98796 | 1 | True |
+| verify-stage | `hmsg.v0` | None | 344 | 1 | False java.lang.RuntimeException: probe failed with java.lang.IllegalStateException: attempt to absorb while squeezing |
+| verify-stage | `fors.v0` | None | None | 1 | False java.lang.IllegalStateException: attempt to absorb while squeezing |
+| verify-stage | `ht_wots.v0` | None | None | 1 | False java.lang.IllegalStateException: attempt to absorb while squeezing |
+| verify-stage | `ht_auth.v0` | None | None | 1 | False java.lang.IllegalStateException: attempt to absorb while squeezing |
+| verify-stage | `total_best` | 1104 | 86486 | 1 | True |

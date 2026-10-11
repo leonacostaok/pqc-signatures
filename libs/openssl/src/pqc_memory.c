@@ -86,15 +86,18 @@ typedef struct {
 static void *stack_tramp(void *a)
 {
     run_arg_t *r = a;
-    volatile uint8_t marker = 0;
-    volatile uintptr_t spv = (uintptr_t)&marker;
-    uint8_t *sp = (uint8_t *)spv;
+    uint8_t *rsp;
     /* warm-up inside this thread: per-thread lazy initialisations of OpenSSL
      * (thread-local error state, RNG child contexts, ...) and the deeper
      * frames of the pthread start-up code must not be attributed to the op */
     r->fn(r->arg);
-    /* re-paint everything below the current frame (minus the red zone) */
-    memset(r->stk, PAINT, (size_t)(sp - 256 - r->stk));
+    __asm__ volatile("mov %%rsp, %0" : "=r"(rsp));
+    /* re-paint everything below the current stack pointer: the bulk with
+     * memset (which needs a little stack of its own), the last 1 KiB with an
+     * inline store loop so that the op's first frames are painted too */
+    memset(r->stk, PAINT, (size_t)(rsp - 1024 - r->stk));
+    for (volatile uint8_t *q = rsp - 1024; q < rsp; q++)
+        *q = PAINT;
     r->alloc0 = atomic_load(&g_alloc_total);
     r->live0 = atomic_load(&g_live);
     atomic_store(&g_peak, r->live0);
@@ -102,9 +105,9 @@ static void *stack_tramp(void *a)
     r->alloc1 = atomic_load(&g_alloc_total);
     r->peak1 = atomic_load(&g_peak);
     size_t i = 0;
-    while (r->stk + i < sp - 256 && r->stk[i] == PAINT)
+    while (r->stk + i < rsp && r->stk[i] == PAINT)
         i++;
-    r->used = (size_t)(sp - 256 - (r->stk + i));
+    r->used = (size_t)(rsp - (r->stk + i));
     return NULL;
 }
 
@@ -144,7 +147,7 @@ static void emit_mem(FILE *out, const char *variant, const char *op, const char 
     if (stage)
         fprintf(out, "\"stage\":\"%s\",", stage);
     fprintf(out, "\"param\":\"%s\",\"stack_bytes\":%zu,\"stack_method\":\"painted 16 MiB pthread stack (pthread_attr_setstack), "
-                 "re-painted below the measuring frame after an in-thread warm-up, high-water mark of the op\",\"stack_resolution_bytes\":16,", param, stack);
+                 "re-painted below the measuring frame's rsp after an in-thread warm-up, high-water mark of the op\",\"stack_resolution_bytes\":16,", param, stack);
     if (g_hooks)
         fprintf(out, "\"heap_alloc_bytes_per_op\":%llu,\"heap_peak_bytes\":%llu,\"heap_method\":\"CRYPTO_set_mem_functions "
                      "counting allocator: bytes allocated during the op / peak live bytes above the pre-op level (OpenSSL allocations only)\",",

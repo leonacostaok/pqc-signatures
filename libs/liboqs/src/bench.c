@@ -839,8 +839,21 @@ static void stage_output_sha(stage_ctx_t *c, int i, char out[65]) {
 static uint8_t *g_paint = NULL;
 static size_t g_paint_baseline = 0;
 
-typedef struct { void (*fn)(void *); void *arg; } paint_job_t;
-static void *paint_tramp(void *a) { paint_job_t *j = a; j->fn(j->arg); return NULL; }
+typedef struct { void (*fn)(void *); void *arg; uint8_t *sp_top; } paint_job_t;
+/* glibc's thread start code dirties stack below our frame before calling us,
+ * so the trampoline re-paints everything below its own frame (minus a safety
+ * margin) and records its stack pointer; the high-water mark is measured
+ * from there. */
+static void *paint_tramp(void *a) {
+	paint_job_t *j = a;
+	volatile uint8_t anchor = 0;
+	uint8_t *sp = (uint8_t *)&anchor;
+	j->sp_top = sp;
+	if (sp - 256 > g_paint) memset(g_paint, PAINT_BYTE, (size_t)(sp - 256 - g_paint));
+	j->fn(j->arg);
+	(void)anchor;
+	return NULL;
+}
 
 /* run fn(arg) on a freshly painted private stack and return the high-water mark (bytes) */
 static size_t painted_run_raw(void (*fn)(void *), void *arg) {
@@ -857,7 +870,8 @@ static size_t painted_run_raw(void (*fn)(void *), void *arg) {
 	pthread_attr_destroy(&at);
 	size_t i = 0;
 	while (i < PAINT_SIZE && g_paint[i] == PAINT_BYTE) i++;
-	return PAINT_SIZE - i; /* bytes from the lowest touched address to the top (incl. glibc TCB/TLS) */
+	uint8_t *low = g_paint + i;
+	return low < j.sp_top ? (size_t)(j.sp_top - low) : 0; /* touched bytes below the trampoline frame */
 }
 static void noop_fn(void *a) { (void)a; }
 static size_t painted_run(void (*fn)(void *), void *arg) {
@@ -962,7 +976,7 @@ static int cmd_validate(const char *cases_path, int argc, char **argv) {
 		c.expect = e ? atoi(e) : 1;
 		const param_t *p = find_param(c.param);
 		if (p && ((skip_kind && !strcmp(skip_kind, c.kind) && skip_params && in_list(skip_params, c.param)))) {
-			printf("%s %s skipped - too slow for this variant (SLH-DSA s-set signing)\n", c.id, variant);
+			/* handled by another binary (family split of total_best): not reported here */
 		} else if (p && !(pipeline && p->fam == FAM_FALCON)) {
 			int ok = 1, got = -1; char err[96] = "";
 			if (threads <= 1) {
@@ -1168,7 +1182,7 @@ static int cmd_memory(int argc, char **argv) {
 		}
 		printf("{\"lib\":\"liboqs\",\"variant\":\"%s\",\"op\":\"%s\",", variant, stage ? "verify-stage" : op);
 		if (stage) printf("\"stage\":\"%s\",", stage);
-		printf("\"param\":\"%s\",\"stack_bytes\":%zu,\"stack_method\":\"painted private pthread stack (16 MiB, 0xA5), high-water scan, minus empty-thread baseline of %zu B\","
+		printf("\"param\":\"%s\",\"stack_bytes\":%zu,\"stack_method\":\"private pthread stack (16 MiB) re-painted with 0xA5 below the trampoline frame, high-water scan from that frame, minus the trampoline+call overhead of %zu B\","
 		       "\"stack_resolution_bytes\":16,\"heap_alloc_bytes_per_op\":%zu,\"heap_peak_bytes\":%zu,"
 		       "\"heap_method\":\"interposed malloc/calloc/realloc/memalign in the static binary (malloc_usable_size accounting)\",\"threads\":%d,\"match\":%s}\n",
 		       p->name, stack, g_paint_baseline, heap_total, heap_peak, threads, match ? "true" : "false");

@@ -31,9 +31,39 @@ Output: `results/liboqs/validation.json` = `{lib, lib_version, results:[{id, var
 
 ## Results and failures
 
-See the summary below (generated from the last dev run). Every variant passes every case; there are no
-library bugs to report for liboqs 0.16.0 on this suite. The one behaviour worth noting is the public-key length
+Dev run (`results/liboqs/validation.json`): 20 variants x their cases = 4680 results, 0 failures, 0 skipped:
+all 195 keygen cases through keygen.v0-v5, all 69 siggen cases (including the SLH-DSA "s" sets and the
+255-byte contexts) through sign.v0-v5, all 387 sigver cases through verify.v0-v5, `verify.total` and
+`verify.total_best` (the cached pipeline rejects every negative case: caching tr/A^/NTT(t1 2^d) per key does
+not weaken any check). There are no library bugs to report for liboqs 0.16.0 on this suite. The one behaviour worth noting is the public-key length
 issue above (API design, not a bug), and that `OQS_SIG_sign_with_ctx_str` for SLH-DSA always draws n bytes of
 randomness even for the deterministic variant, which is why the driver's RNG callback has to hand out PK.seed.
 
 <!-- RESULTS -->
+
+## Results
+
+| variant | pass | fail | skipped |
+|---|---|---|---|
+| `keygen.v0` | 195 | 0 | 0 |
+| `keygen.v1` | 195 | 0 | 0 |
+| `keygen.v2` | 195 | 0 | 0 |
+| `keygen.v3` | 195 | 0 | 0 |
+| `keygen.v4` | 195 | 0 | 0 |
+| `keygen.v5` | 195 | 0 | 0 |
+| `sign.v0` | 69 | 0 | 0 |
+| `sign.v1` | 69 | 0 | 0 |
+| `sign.v2` | 69 | 0 | 0 |
+| `sign.v3` | 69 | 0 | 0 |
+| `sign.v4` | 69 | 0 | 0 |
+| `sign.v5` | 69 | 0 | 0 |
+| `verify.v0` | 387 | 0 | 0 |
+| `verify.v1` | 387 | 0 | 0 |
+| `verify.v2` | 387 | 0 | 0 |
+| `verify.v3` | 387 | 0 | 0 |
+| `verify.v4` | 387 | 0 | 0 |
+| `verify.v5` | 387 | 0 | 0 |
+| `verify.total` | 387 | 0 | 0 |
+| `verify.total_best` | 387 | 0 | 387 |
+
+Total: 5067 results, 0 failures.

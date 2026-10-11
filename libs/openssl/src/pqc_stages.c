@@ -74,7 +74,7 @@ const stage_variant_t STAGE_VARIANTS[] = {
     { 1, 0, 0, MD_OSSL, 0, "default", "ossl-decoders",
       "OpenSSL's pkDecode (rho copy + poly_decode_10_bits x k) and ossl_ml_dsa_sig_decode (c~, 18/20-bit z unpack, hint decode with the omega/ordering/padding checks), PACKET based." },
     { 1, 0, 1, MD_OWN, 0, "default", "own-unpack-u64",
-      "Own unpacker: t1 via 5-byte -> 4x10-bit u64 shifts, z via a 64-bit shift register, same hint validity rules; no PACKET bookkeeping." },
+      "Own unpacker: t1 via 5-byte -> 4x10-bit u64 shifts, z via unaligned u64 loads (4 coefficients per 9/10 bytes), same hint validity rules; no PACKET bookkeeping." },
     { 1, 0, 2, MD_OSSL, 0, "native", "ossl-decoders-native",
       "v0 code compiled in the -O3 -march=native -flto libcrypto/driver build." },
     /* ML-DSA mu */
@@ -410,20 +410,33 @@ static int ml_decode(mld_t *m, int method, uint8_t rho[32], POLY *t1, ML_DSA_SIG
     memcpy(out->c_tilde, m->sig, m->ctl);
     in = m->sig + m->ctl;
     uint32_t range = (uint32_t)prm->gamma1;
-    int bits = range == (1u << 19) ? 20 : 18;
-    uint32_t mask = (1u << bits) - 1;
-    for (size_t i = 0; i < m->l; i++) {
-        uint32_t *c = out->z.poly[i].coeff;
-        uint64_t acc = 0;
-        int nb = 0;
-        for (int j = 0; j < 256; j++) {
-            while (nb < bits) {
-                acc |= (uint64_t)*in++ << nb;
-                nb += 8;
+    if (range == (1u << 19)) {
+        /* 20-bit: 4 coefficients per 10 bytes = one u64 + one u16 */
+        for (size_t i = 0; i < m->l; i++) {
+            uint32_t *c = out->z.poly[i].coeff;
+            for (int j = 0; j < 64; j++, in += 10, c += 4) {
+                uint64_t v;
+                uint16_t w;
+                memcpy(&v, in, 8);
+                memcpy(&w, in + 8, 2);
+                c[0] = mod_sub(range, (uint32_t)(v & 0xfffff));
+                c[1] = mod_sub(range, (uint32_t)((v >> 20) & 0xfffff));
+                c[2] = mod_sub(range, (uint32_t)((v >> 40) & 0xfffff));
+                c[3] = mod_sub(range, (uint32_t)((v >> 60) | ((uint32_t)w << 4)));
             }
-            c[j] = mod_sub(range, (uint32_t)(acc & mask));
-            acc >>= bits;
-            nb -= bits;
+        }
+    } else {
+        /* 18-bit: 4 coefficients per 9 bytes = one u64 + one byte */
+        for (size_t i = 0; i < m->l; i++) {
+            uint32_t *c = out->z.poly[i].coeff;
+            for (int j = 0; j < 64; j++, in += 9, c += 4) {
+                uint64_t v;
+                memcpy(&v, in, 8);
+                c[0] = mod_sub(range, (uint32_t)(v & 0x3ffff));
+                c[1] = mod_sub(range, (uint32_t)((v >> 18) & 0x3ffff));
+                c[2] = mod_sub(range, (uint32_t)((v >> 36) & 0x3ffff));
+                c[3] = mod_sub(range, (uint32_t)((v >> 54) | ((uint32_t)in[8] << 10)));
+            }
         }
     }
     /* hints: omega bytes of indices then k limits */

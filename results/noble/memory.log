@@ -40,3 +40,7 @@
 [noble] memory sign.v2        ML-DSA-44           stack    2288 B  heap/op      41618 B  peak      45264 B  match true  (1.9s)
 [noble] memory sign.v2        ML-DSA-87           stack    1976 B  heap/op      94226 B  peak     101432 B  match true  (2.8s)
 [noble] memory sign.v2        SLH-DSA-SHA2-128f   stack    2808 B  heap/op    9272774 B  peak     967776 B  match true  (32.1s)
+[noble] memory sign.v2        SLH-DSA-SHAKE-128f  stack    2496 B  heap/op     149558 B  peak     189360 B  match true  (126.3s)
+[noble] memory sign.v3        ML-DSA-44           stack    2288 B  heap/op     119458 B  peak     121040 B  match true  (1.0s)
+[noble] memory sign.v3        ML-DSA-87           stack    1976 B  heap/op     336584 B  peak     340392 B  match true  (2.8s)
+[noble] memory sign.v3        SLH-DSA-SHA2-128f   stack    2496 B  heap/op   22623834 B  peak    4808088 B  match true  (41.8s)
