@@ -17,103 +17,156 @@ pqcbench-pgo
 pqcbench-purego
 == build rustcrypto
 >> build [base] profile=release RUSTFLAGS='' 
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+   --> vendor/ml-dsa/src/lib.rs:158:1
+    |
+158 | pub struct MuBuilder(pub H);
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: requested on the command line with `-W missing-debug-implementations`
+
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+  --> vendor/ml-dsa/src/crypto.rs:8:1
+   |
+ 8 | / pub enum ShakeState<Shake: ExtendableOutput> {
+ 9 | |     Absorbing(Shake),
+10 | |     Squeezing(Shake::Reader),
+11 | | }
+   | |_^
+
+warning: unused import: `SignatureParams`
+  --> src/stages_mldsa.rs:14:87
+   |
+14 | use ml_dsa::param::{EncodedSignature, EncodedVerifyingKey, MlDsaParams, ParameterSet, SignatureParams as _};
+   |                                                                                       ^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `slh_dsa::hashes::HashSuite`
+ --> src/stages_slhdsa.rs:9:5
+  |
+9 | use slh_dsa::hashes::HashSuite as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::fors::ForsParams`
+ --> src/stages_slhdsa.rs:8:5
+  |
+8 | use slh_dsa::fors::ForsParams as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::wots::WotsParams`
+  --> src/stages_slhdsa.rs:11:5
+   |
+11 | use slh_dsa::wots::WotsParams as _;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: variable does not need to be mutable
+   --> src/stages_slhdsa.rs:558:9
+    |
+558 |     let mut load = |l: usize, lane: &mut [Option<(usize, u8)>; 4], vals: &mut [[u8; 64]; 4], out: &mut Vec<Bytes>, next: &mut usize| {
+    |         ----^^^^
+    |         |
+    |         help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `RHO` is never used
+  --> src/fasthash.rs:18:11
+   |
+18 | pub const RHO: [u32; 25] = [0, 1, 62, 28, 27, 36, 44, 6, 55, 20, 3, 10, 43, 25, 39, 41, 45, 15, 21, 8, 18, 2, 61, 56, 14];
+   |           ^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `PI` is never used
+  --> src/fasthash.rs:20:11
+   |
+20 | pub const PI: [usize; 25] = {
+   |           ^^
+
+warning: method `canon` is never used
+  --> src/stages_mldsa.rs:55:12
+   |
+43 | impl<P: MlDsaParams> Decoded<P> {
+   | ------------------------------- method in this implementation
+...
+55 |     pub fn canon(&self) -> Vec<u8> {
+   |            ^^^^^
+
 >> build [native] profile=release RUSTFLAGS='-C target-cpu=native' 
->> build [lto] profile=lto RUSTFLAGS='' 
->> build [mimalloc] profile=release RUSTFLAGS='' --features mimalloc
->> build done:
-{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=base)","build_tag":"base"}
-{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=native)","build_tag":"native"}
-{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=lto)","build_tag":"lto"}
-{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=mimalloc)","build_tag":"mimalloc"}
-{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=pgo-keygen)","build_tag":"pgo-keygen"}
-{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=pgo-sign)","build_tag":"pgo-sign"}
-{"lib":"rustcrypto","lib_version":"ml-dsa 0.1.1 + slh-dsa 0.2.0-rc.5","runtime":"rustc 1.97.0 (2d8144b78 2026-07-07) (build=pgo-verify)","build_tag":"pgo-verify"}
-== build bouncycastle
-== vectors noble
-[noble] ML-DSA-44           sig   2420 B  self_verify=true  reference_match=true
-[noble] ML-DSA-65           sig   3309 B  self_verify=true  reference_match=true
-[noble] ML-DSA-87           sig   4627 B  self_verify=true  reference_match=true
-[noble] SLH-DSA-SHA2-128s   sig   7856 B  self_verify=true  reference_match=true
-[noble] SLH-DSA-SHA2-128f   sig  17088 B  self_verify=true  reference_match=true
-[noble] SLH-DSA-SHA2-192s   sig  16224 B  self_verify=true  reference_match=true
-[noble] SLH-DSA-SHA2-192f   sig  35664 B  self_verify=true  reference_match=true
-[noble] SLH-DSA-SHA2-256s   sig  29792 B  self_verify=true  reference_match=true
-[noble] SLH-DSA-SHA2-256f   sig  49856 B  self_verify=true  reference_match=true
-[noble] SLH-DSA-SHAKE-128s  sig   7856 B  self_verify=true  reference_match=true
-[noble] SLH-DSA-SHAKE-128f  sig  17088 B  self_verify=true  reference_match=true
-[noble] SLH-DSA-SHAKE-192s  sig  16224 B  self_verify=true  reference_match=true
-[noble] SLH-DSA-SHAKE-192f  sig  35664 B  self_verify=true  reference_match=true
-[noble] SLH-DSA-SHAKE-256s  sig  29792 B  self_verify=true  reference_match=true
-[noble] SLH-DSA-SHAKE-256f  sig  49856 B  self_verify=true  reference_match=true
-[noble] Falcon-512          sig    654 B  self_verify=true  reference_match=null
-[noble] Falcon-1024         sig   1276 B  self_verify=true  reference_match=null
-== vectors liboqs
-vectors: 17 params, mismatches: none
-== vectors openssl
-ML-DSA-44            pk=1312 sk=2560 sig=2420 self_verify=1 reference_match=1
-ML-DSA-65            pk=1952 sk=4032 sig=3309 self_verify=1 reference_match=1
-ML-DSA-87            pk=2592 sk=4896 sig=4627 self_verify=1 reference_match=1
-SLH-DSA-SHA2-128s    pk=32 sk=64 sig=7856 self_verify=1 reference_match=1
-SLH-DSA-SHA2-128f    pk=32 sk=64 sig=17088 self_verify=1 reference_match=1
-SLH-DSA-SHA2-192s    pk=48 sk=96 sig=16224 self_verify=1 reference_match=1
-SLH-DSA-SHA2-192f    pk=48 sk=96 sig=35664 self_verify=1 reference_match=1
-SLH-DSA-SHA2-256s    pk=64 sk=128 sig=29792 self_verify=1 reference_match=1
-SLH-DSA-SHA2-256f    pk=64 sk=128 sig=49856 self_verify=1 reference_match=1
-SLH-DSA-SHAKE-128s   pk=32 sk=64 sig=7856 self_verify=1 reference_match=1
-SLH-DSA-SHAKE-128f   pk=32 sk=64 sig=17088 self_verify=1 reference_match=1
-SLH-DSA-SHAKE-192s   pk=48 sk=96 sig=16224 self_verify=1 reference_match=1
-SLH-DSA-SHAKE-192f   pk=48 sk=96 sig=35664 self_verify=1 reference_match=1
-SLH-DSA-SHAKE-256s   pk=64 sk=128 sig=29792 self_verify=1 reference_match=1
-SLH-DSA-SHAKE-256f   pk=64 sk=128 sig=49856 self_verify=1 reference_match=1
-15/15 params match the reference
-== vectors circl
-ML-DSA-44            pk=1312 sk=2560 sig=2420 self_verify=true OK
-ML-DSA-65            pk=1952 sk=4032 sig=3309 self_verify=true OK
-ML-DSA-87            pk=2592 sk=4896 sig=4627 self_verify=true OK
-SLH-DSA-SHA2-128s    pk=32 sk=64 sig=7856 self_verify=true OK
-SLH-DSA-SHA2-128f    pk=32 sk=64 sig=17088 self_verify=true OK
-SLH-DSA-SHA2-192s    pk=48 sk=96 sig=16224 self_verify=true OK
-SLH-DSA-SHA2-192f    pk=48 sk=96 sig=35664 self_verify=true OK
-SLH-DSA-SHA2-256s    pk=64 sk=128 sig=29792 self_verify=true OK
-SLH-DSA-SHA2-256f    pk=64 sk=128 sig=49856 self_verify=true OK
-SLH-DSA-SHAKE-128s   pk=32 sk=64 sig=7856 self_verify=true OK
-SLH-DSA-SHAKE-128f   pk=32 sk=64 sig=17088 self_verify=true OK
-SLH-DSA-SHAKE-192s   pk=48 sk=96 sig=16224 self_verify=true OK
-SLH-DSA-SHAKE-192f   pk=48 sk=96 sig=35664 self_verify=true OK
-SLH-DSA-SHAKE-256s   pk=64 sk=128 sig=29792 self_verify=true OK
-SLH-DSA-SHAKE-256f   pk=64 sk=128 sig=49856 self_verify=true OK
-== vectors rustcrypto
-ML-DSA-44              pk=1312 sk=2560 sig=2420 self_verify=true tamper_rejected=true reference_match=true
-ML-DSA-65              pk=1952 sk=4032 sig=3309 self_verify=true tamper_rejected=true reference_match=true
-ML-DSA-87              pk=2592 sk=4896 sig=4627 self_verify=true tamper_rejected=true reference_match=true
-SLH-DSA-SHA2-128s      pk=32 sk=64 sig=7856 self_verify=true tamper_rejected=true reference_match=true
-SLH-DSA-SHA2-128f      pk=32 sk=64 sig=17088 self_verify=true tamper_rejected=true reference_match=true
-SLH-DSA-SHA2-192s      pk=48 sk=96 sig=16224 self_verify=true tamper_rejected=true reference_match=true
-SLH-DSA-SHA2-192f      pk=48 sk=96 sig=35664 self_verify=true tamper_rejected=true reference_match=true
-SLH-DSA-SHA2-256s      pk=64 sk=128 sig=29792 self_verify=true tamper_rejected=true reference_match=true
-SLH-DSA-SHA2-256f      pk=64 sk=128 sig=49856 self_verify=true tamper_rejected=true reference_match=true
-SLH-DSA-SHAKE-128s     pk=32 sk=64 sig=7856 self_verify=true tamper_rejected=true reference_match=true
-SLH-DSA-SHAKE-128f     pk=32 sk=64 sig=17088 self_verify=true tamper_rejected=true reference_match=true
-SLH-DSA-SHAKE-192s     pk=48 sk=96 sig=16224 self_verify=true tamper_rejected=true reference_match=true
-SLH-DSA-SHAKE-192f     pk=48 sk=96 sig=35664 self_verify=true tamper_rejected=true reference_match=true
-SLH-DSA-SHAKE-256s     pk=64 sk=128 sig=29792 self_verify=true tamper_rejected=true reference_match=true
-SLH-DSA-SHAKE-256f     pk=64 sk=128 sig=49856 self_verify=true tamper_rejected=true reference_match=true
-all 15 parameter sets match common/reference.json
-== vectors bouncycastle
-ML-DSA-44            pk= 1312 sk= 2560 sig= 2420 self_verify=true MATCH reference
-ML-DSA-65            pk= 1952 sk= 4032 sig= 3309 self_verify=true MATCH reference
-ML-DSA-87            pk= 2592 sk= 4896 sig= 4627 self_verify=true MATCH reference
-SLH-DSA-SHA2-128s    pk=   32 sk=   64 sig= 7856 self_verify=true MATCH reference
-SLH-DSA-SHA2-128f    pk=   32 sk=   64 sig=17088 self_verify=true MATCH reference
-SLH-DSA-SHA2-192s    pk=   48 sk=   96 sig=16224 self_verify=true MATCH reference
-SLH-DSA-SHA2-192f    pk=   48 sk=   96 sig=35664 self_verify=true MATCH reference
-SLH-DSA-SHA2-256s    pk=   64 sk=  128 sig=29792 self_verify=true MATCH reference
-SLH-DSA-SHA2-256f    pk=   64 sk=  128 sig=49856 self_verify=true MATCH reference
-SLH-DSA-SHAKE-128s   pk=   32 sk=   64 sig= 7856 self_verify=true MATCH reference
-SLH-DSA-SHAKE-128f   pk=   32 sk=   64 sig=17088 self_verify=true MATCH reference
-SLH-DSA-SHAKE-192s   pk=   48 sk=   96 sig=16224 self_verify=true MATCH reference
-SLH-DSA-SHAKE-192f   pk=   48 sk=   96 sig=35664 self_verify=true MATCH reference
-SLH-DSA-SHAKE-256s   pk=   64 sk=  128 sig=29792 self_verify=true MATCH reference
-SLH-DSA-SHAKE-256f   pk=   64 sk=  128 sig=49856 self_verify=true MATCH reference
-Falcon-512           pk=  897 sk= 1281 sig=  666 self_verify=true (no byte match expected)
-Falcon-1024          pk= 1793 sk= 2305 sig= 1280 self_verify=true (no byte match expected)
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+   --> vendor/ml-dsa/src/lib.rs:158:1
+    |
+158 | pub struct MuBuilder(pub H);
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: requested on the command line with `-W missing-debug-implementations`
+
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+  --> vendor/ml-dsa/src/crypto.rs:8:1
+   |
+ 8 | / pub enum ShakeState<Shake: ExtendableOutput> {
+ 9 | |     Absorbing(Shake),
+10 | |     Squeezing(Shake::Reader),
+11 | | }
+   | |_^
+
+warning: unused import: `SignatureParams`
+  --> src/stages_mldsa.rs:14:87
+   |
+14 | use ml_dsa::param::{EncodedSignature, EncodedVerifyingKey, MlDsaParams, ParameterSet, SignatureParams as _};
+   |                                                                                       ^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `slh_dsa::hashes::HashSuite`
+ --> src/stages_slhdsa.rs:9:5
+  |
+9 | use slh_dsa::hashes::HashSuite as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::fors::ForsParams`
+ --> src/stages_slhdsa.rs:8:5
+  |
+8 | use slh_dsa::fors::ForsParams as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `slh_dsa::wots::WotsParams`
+  --> src/stages_slhdsa.rs:11:5
+   |
+11 | use slh_dsa::wots::WotsParams as _;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: variable does not need to be mutable
+   --> src/stages_slhdsa.rs:558:9
+    |
+558 |     let mut load = |l: usize, lane: &mut [Option<(usize, u8)>; 4], vals: &mut [[u8; 64]; 4], out: &mut Vec<Bytes>, next: &mut usize| {
+    |         ----^^^^
+    |         |
+    |         help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `RHO` is never used
+  --> src/fasthash.rs:18:11
+   |
+18 | pub const RHO: [u32; 25] = [0, 1, 62, 28, 27, 36, 44, 6, 55, 20, 3, 10, 43, 25, 39, 41, 45, 15, 21, 8, 18, 2, 61, 56, 14];
+   |           ^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `PI` is never used
+  --> src/fasthash.rs:20:11
+   |
+20 | pub const PI: [usize; 25] = {
+   |           ^^
+
+warning: method `canon` is never used
+  --> src/stages_mldsa.rs:55:12
+   |
+43 | impl<P: MlDsaParams> Decoded<P> {
+   | ------------------------------- method in this implementation
+...
+55 |     pub fn canon(&self) -> Vec<u8> {
+   |            ^^^^^
+
