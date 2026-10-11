@@ -1,0 +1,96 @@
+{
+ "lib": "liboqs",
+ "source": "rustcrypto",
+ "results": [
+  {
+   "param": "ML-DSA-44",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  },
+  {
+   "param": "ML-DSA-65",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  },
+  {
+   "param": "ML-DSA-87",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  },
+  {
+   "param": "SLH-DSA-SHA2-128s",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  },
+  {
+   "param": "SLH-DSA-SHA2-128f",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  },
+  {
+   "param": "SLH-DSA-SHA2-192s",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  },
+  {
+   "param": "SLH-DSA-SHA2-192f",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  },
+  {
+   "param": "SLH-DSA-SHA2-256s",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  },
+  {
+   "param": "SLH-DSA-SHA2-256f",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  },
+  {
+   "param": "SLH-DSA-SHAKE-128s",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  },
+  {
+   "param": "SLH-DSA-SHAKE-128f",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  },
+  {
+   "param": "SLH-DSA-SHAKE-192s",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  },
+  {
+   "param": "SLH-DSA-SHAKE-192f",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  },
+  {
+   "param": "SLH-DSA-SHAKE-256s",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  },
+  {
+   "param": "SLH-DSA-SHAKE-256f",
+   "ok": true,
+   "error": null,
+   "tamper_rejected": true
+  }
+ ]
+}
