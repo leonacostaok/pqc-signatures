@@ -1,0 +1,28 @@
+{
+  "upstream_commit": "48e493397e69fa3e377bd454ff5261b1a7e22651",
+  "acvp_commit": "2e9216ceafb854d7bc113088a2f8b043654226a8",
+  "runtime": "v22.23.2",
+  "typescript": "7.0.2",
+  "build_command": "npm run build",
+  "build_exit_code": 0,
+  "test_command": "npm test",
+  "test_exit_code": 0,
+  "slow_tests_enabled": false,
+  "executed_passes": 230,
+  "skipped": [
+    "☆ Falcon → secret/cleanup (skip)",
+    "☆ WebCrypto → ML-KEM-512 (skip)",
+    "☆ WebCrypto → ML-KEM-768 (skip)",
+    "☆ WebCrypto → ML-KEM-1024 (skip)",
+    "☆ WebCrypto → MLKEM768-X25519 (skip)"
+  ],
+  "patched_typescript_matches_tested_source": true,
+  "compiled_javascript_matches_benchmarked_candidate_after_import_quote_normalization": true,
+  "hashes": {
+    "typescript": "6cbfbb35ba9bd571dfa554fb23007dcfad53624bc195016d354b951cb622c6e5",
+    "compiled_javascript": "619d69806c7462134bdb3d823137d5885f8122e19e06d5aef6a0380c997c6cc2",
+    "candidate": "228ff7894f7fc78bb3962c7093573dccf2814610f4ecf838f56d0138941f81f9",
+    "test_log": "73dfe59d02597147f3d7d9fc6f0106d4525f4153efaf5ed3bedce0eb33651823",
+    "patch": "7544180da3ca6d08b83ad82c2370828f1eba570dfe0ef78f5a4fafd94a33f0c3"
+  }
+}
