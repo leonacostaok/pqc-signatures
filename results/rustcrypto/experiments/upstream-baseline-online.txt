@@ -1,0 +1,220 @@
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded ciborium-ll v0.2.2
+  Downloaded ciborium v0.2.2
+  Downloaded crossbeam-deque v0.8.7
+  Downloaded plotters-svg v0.3.7
+  Downloaded cast v0.3.0
+  Downloaded ciborium-io v0.2.2
+  Downloaded anes v0.1.6
+  Downloaded plotters-backend v0.3.7
+  Downloaded fastrand v2.4.1
+  Downloaded quote v1.0.46
+  Downloaded criterion-plot v0.6.0
+  Downloaded tinytemplate v1.2.1
+  Downloaded keccak v0.2.0
+  Downloaded oorandom v11.1.5
+  Downloaded clap v4.6.2
+  Downloaded zerocopy-derive v0.8.54
+  Downloaded criterion v0.7.0
+  Downloaded plotters v0.3.7
+  Downloaded clap_builder v4.6.2
+  Downloaded zerocopy v0.8.54
+  Downloaded regex-automata v0.4.16
+   Compiling libc v0.2.186
+   Compiling cfg-if v1.0.4
+   Compiling proc-macro2 v1.0.106
+   Compiling unicode-ident v1.0.24
+   Compiling quote v1.0.46
+   Compiling zeroize v1.9.0
+   Compiling getrandom v0.4.3
+   Compiling syn v2.0.119
+   Compiling rand_core v0.10.1
+   Compiling zerocopy v0.8.54
+   Compiling serde_core v1.0.228
+   Compiling cmov v0.5.4
+   Compiling autocfg v1.5.1
+   Compiling num-traits v0.2.19
+   Compiling ctutils v0.4.2
+   Compiling getrandom v0.3.4
+   Compiling crossbeam-utils v0.8.22
+   Compiling zerocopy-derive v0.8.54
+   Compiling typenum v1.20.1
+   Compiling hybrid-array v0.4.15
+   Compiling crossbeam-epoch v0.9.20
+   Compiling serde v1.0.228
+   Compiling serde_derive v1.0.228
+   Compiling crossbeam-deque v0.8.7
+   Compiling zmij v1.0.23
+   Compiling base64ct v1.8.3
+   Compiling rustix v1.1.4
+   Compiling pem-rfc7468 v1.0.0
+   Compiling rand_core v0.9.5
+   Compiling crypto-common v0.2.2
+   Compiling errno v0.3.14
+   Compiling either v1.16.0
+   Compiling serde_json v1.0.150
+   Compiling rayon-core v1.13.0
+   Compiling const-oid v0.10.2
+   Compiling bitflags v2.13.1
+   Compiling regex-syntax v0.8.11
+   Compiling der v0.8.1
+   Compiling digest v0.11.3
+   Compiling half v2.7.1
+   Compiling cpufeatures v0.3.0
+   Compiling memchr v2.8.3
+   Compiling anstyle v1.0.14
+   Compiling plotters-backend v0.3.7
+   Compiling clap_lex v1.1.0
+   Compiling ciborium-io v0.2.2
+   Compiling once_cell v1.21.4
+   Compiling itoa v1.0.18
+   Compiling fastrand v2.4.1
+   Compiling tempfile v3.27.0
+   Compiling ciborium-ll v0.2.2
+   Compiling clap_builder v4.6.2
+   Compiling plotters-svg v0.3.7
+   Compiling keccak v0.2.0
+   Compiling spki v0.8.0
+   Compiling regex-automata v0.4.16
+   Compiling itertools v0.13.0
+   Compiling ppv-lite86 v0.2.21
+   Compiling wait-timeout v0.2.1
+   Compiling cast v0.3.0
+   Compiling same-file v1.0.6
+   Compiling quick-error v1.2.3
+   Compiling fnv v1.0.7
+   Compiling bit-vec v0.8.0
+   Compiling sponge-cursor v0.1.0
+   Compiling shake v0.1.0
+   Compiling bit-set v0.8.0
+   Compiling criterion-plot v0.6.0
+   Compiling rusty-fork v0.3.1
+   Compiling walkdir v2.5.0
+   Compiling rand_chacha v0.9.0
+   Compiling regex v1.13.1
+   Compiling pkcs8 v0.11.0
+   Compiling rayon v1.12.0
+   Compiling plotters v0.3.7
+   Compiling clap v4.6.2
+   Compiling ciborium v0.2.2
+   Compiling tinytemplate v1.2.1
+   Compiling signature v3.0.0
+   Compiling rand_xorshift v0.4.0
+   Compiling rand v0.9.5
+   Compiling module-lattice v0.2.3
+   Compiling oorandom v11.1.5
+   Compiling unarray v0.1.4
+   Compiling anes v0.1.6
+   Compiling criterion v0.7.0
+   Compiling proptest v1.11.0
+   Compiling hex v0.4.3
+   Compiling hex-literal v1.1.0
+   Compiling ml-dsa v0.1.1 (/Users/dandelionlabs/development/personal/rustcrypto-signatures/worktrees/keygen-reuse/ml-dsa)
+    Finished `test` profile [optimized + debuginfo] target(s) in 1m 34s
+     Running unittests src/lib.rs (target/debug/deps/ml_dsa-b0f7418ccc20cd0c)
+
+running 37 tests
+test algebra::test::constant_time_div_accuracy ... ok
+test algebra::test::barrett_reduce_boundary ... ok
+test algebra::test::decompose_edge_case ... ok
+test algebra::test::high_low_bits_consistency ... ok
+test crypto::test::g ... ok
+test crypto::test::h ... ok
+test hint::test::decompose_produces_valid_r0 ... ok
+test hint::test::hint_round_trip ... ok
+test hint::test::make_hint_correctness ... ok
+test encode::tests::simple_bit_pack ... ok
+test algebra::test::mod_plus_minus ... ok
+test hint::test::use_hint_m_wraparound ... ok
+test hint::test::use_hint_r0_is_zero ... ok
+test hint::test::use_hint_threshold ... ok
+test ntt::test::ntt ... ok
+test encode::tests::bit_pack ... ok
+test hint::test::use_hint_arithmetic ... ok
+test ntt::test::ntt_matrix ... ok
+test ntt::test::ntt_vector ... ok
+test sampling::test::test_sample_cbd ... ok
+test algebra::test::decompose ... ok
+test sampling::test::test_rej_ntt_poly ... ok
+test test::debug_implementations ... ok
+test test::output_sizes ... ok
+test test::context_length_validation ... ok
+test test::from_seed_implementations_match ... ok
+test test::sign_internal_verify_mu_round_trip ... ok
+test test::derived_verifying_key_validates_signatures ... ok
+test test::public_from_private ... ok
+test test::encode_decode_round_trip ... ok
+test test::sign_mu_verify_internal_round_trip ... ok
+test test::to_seed_returns_correct_seed ... ok
+test test::sign_verify_round_trip ... ok
+test test::sign_mu_verify_mu_round_trip ... ok
+test test::verification_rejects_invalid_signature ... ok
+test test::verification_rejects_wrong_message ... ok
+test sampling::test::test_sample_in_ball ... ok
+
+test result: ok. 37 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/key-gen.rs (target/debug/deps/key_gen-cc88c216d13654ff)
+
+running 1 test
+test acvp_key_gen ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running tests/pkcs8.rs (target/debug/deps/pkcs8-d6e1cd1b20f28104)
+
+running 1 test
+test private_key_serialization ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/proptests.rs (target/debug/deps/proptests-bb6df47f6e03b17e)
+
+running 9 tests
+test mldsa44::round_trip_digest_test ... ok
+test mldsa44::round_trip_randomized_digest_test ... ok
+test mldsa44::round_trip_test ... ok
+test mldsa65::round_trip_digest_test ... ok
+test mldsa65::round_trip_test ... ok
+test mldsa65::round_trip_randomized_digest_test ... ok
+test mldsa87::round_trip_randomized_digest_test ... ok
+test mldsa87::round_trip_digest_test ... ok
+test mldsa87::round_trip_test ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.24s
+
+     Running tests/sig-gen.rs (target/debug/deps/sig_gen-87269599c2f03d7e)
+
+running 1 test
+test acvp_sig_gen ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+     Running tests/sig-ver.rs (target/debug/deps/sig_ver-5d40a81cfb388049)
+
+running 1 test
+test acvp_sig_ver ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/wycheproof.rs (target/debug/deps/wycheproof-d7815e4a5519f69b)
+
+running 6 tests
+test mldsa_44_sign_seed_test ... ok
+test mldsa_44_verify_test ... ok
+test mldsa_65_sign_seed_test ... ok
+test mldsa_87_sign_seed_test ... ok
+test mldsa_65_verify_test ... ok
+test mldsa_87_verify_test ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.54s
+
+   Doc-tests ml_dsa
+
+running 1 test
+test ml-dsa/src/lib.rs - (line 109) ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+all doctests ran in 1.00s; merged doctests compilation took 0.67s

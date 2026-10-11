@@ -1,0 +1,54 @@
+{
+  "schema": "rust-mldsa-keygen-prepared-v1",
+  "upstream_commit": "a84081789729c96dabb35f96cd000e434b247e02",
+  "compiler": "rustc 1.93.0 (254b59607 2026-01-19)\nbinary: rustc\ncommit-hash: 254b59607d4417e9dffbc307138ae5c86280fe4c\ncommit-date: 2026-01-19\nhost: aarch64-apple-darwin\nrelease: 1.93.0\nLLVM version: 21.1.8\n",
+  "cargo": "cargo 1.93.0 (083ac5135 2025-12-15)\n",
+  "features": [
+    "default",
+    "zeroize"
+  ],
+  "profile": "release",
+  "compiler_environment": {
+    "CARGO_BUILD_TARGET": "",
+    "CARGO_ENCODED_RUSTFLAGS": "",
+    "CARGO_TARGET_DIR": "",
+    "RUSTC_WORKSPACE_WRAPPER": "",
+    "RUSTC_WRAPPER": "",
+    "RUSTFLAGS": "",
+    "RUSTUP_TOOLCHAIN": ""
+  },
+  "build_environment": {
+    "CARGO_BUILD_JOBS": "1",
+    "CARGO_INCREMENTAL": "0"
+  },
+  "binary": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/prepared-4b0bcedd916d66de/target/release/mldsa-keygen-experiment",
+  "fixtures": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/prepared-4b0bcedd916d66de/fixtures.json",
+  "corpus": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/prepared-4b0bcedd916d66de/corpus.json",
+  "cargo_lock": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/prepared-4b0bcedd916d66de/Cargo.lock",
+  "cargo_manifest": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/prepared-4b0bcedd916d66de/Cargo.toml",
+  "baseline_source": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/prepared-4b0bcedd916d66de/baseline",
+  "candidate_source": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/prepared-4b0bcedd916d66de/candidate",
+  "checks": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/prepared-4b0bcedd916d66de/checks",
+  "correctness": {
+    "cached_keys_equal_derived": true,
+    "cases": 48,
+    "exact_keygen": true,
+    "exact_signatures": 96,
+    "negative_checks_per_variant": 240,
+    "variants": 2
+  },
+  "provenance": {
+    "libs/rustcrypto/experiments/keygen.py": "b9b69f5f33a442907b131ad62913a60842dbacd3c39ebdc1acb1488e60dc80e6",
+    "libs/rustcrypto/experiments/keygen.rs": "fdb8bc45964e8144ca363bc0f3ce4b321402605f38e6c1b00b3ea058f67d718f",
+    "libs/rustcrypto/patches/mldsa-keygen-reuse.patch": "588e021f2ed85eb438d31216b73916eee23b3e79e912face40c94a6541ac89d2",
+    "libs/rustcrypto/experiments/keygen.Cargo.lock": "9050090b95ff50d90b6d59adefec5a8798c9e4f3f914e5a5075fa49990ace3eb",
+    "binary": "8620b3e3a4629b30e69823f1d52236e269abfee5351ffd4550693bfcb52b938c",
+    "fixtures": "645367f8283789bf9d99b2c67f618e0a99a6cb3135ac2ccd8b01a7315ae57312",
+    "corpus": "a73ce78de4fd49c477c3c914f29a453287b2209837c4e035a60dd16fe538853e",
+    "cargo_lock": "9050090b95ff50d90b6d59adefec5a8798c9e4f3f914e5a5075fa49990ace3eb",
+    "cargo_manifest": "27000ab0af863ad7b8b08f52b4d2385a6225d4600553e0c816889ed42465c5a5",
+    "driver_copy": "fdb8bc45964e8144ca363bc0f3ce4b321402605f38e6c1b00b3ea058f67d718f",
+    "baseline_source": "e699047b9f7937d1091a79a64675228affb079ef246a248d73f396d006946579",
+    "candidate_source": "1a969dcda1bef9b8a864b3440ecdb2d395737771cb7694ace0e6478b8bcde644"
+  }
+}

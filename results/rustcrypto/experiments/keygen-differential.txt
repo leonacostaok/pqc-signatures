@@ -1,0 +1,2 @@
+$ /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/prepared-4b0bcedd916d66de/target/release/mldsa-keygen-experiment check /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/prepared-4b0bcedd916d66de/fixtures.json
+{"cached_keys_equal_derived":true,"cases":48,"exact_keygen":true,"exact_signatures":96,"negative_checks_per_variant":240,"variants":2}

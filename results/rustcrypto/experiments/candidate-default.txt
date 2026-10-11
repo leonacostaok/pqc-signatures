@@ -1,0 +1,124 @@
+$ cargo test -p ml-dsa --release -- --test-threads=1
+   Compiling hybrid-array v0.4.15
+   Compiling crypto-common v0.2.2
+   Compiling digest v0.11.3
+   Compiling shake v0.1.0
+   Compiling signature v3.0.0
+   Compiling module-lattice v0.2.3
+   Compiling ml-dsa v0.1.1 (/Users/dandelionlabs/development/personal/rustcrypto-signatures/worktrees/keygen-reuse/ml-dsa)
+    Finished `release` profile [optimized] target(s) in 26m 50s
+     Running unittests src/lib.rs (target/release/deps/ml_dsa-4f5aa6fc77e8c75b)
+
+running 37 tests
+test algebra::test::barrett_reduce_boundary ... ok
+test algebra::test::constant_time_div_accuracy ... ok
+test algebra::test::decompose ... ok
+test algebra::test::decompose_edge_case ... ok
+test algebra::test::high_low_bits_consistency ... ok
+test algebra::test::mod_plus_minus ... ok
+test crypto::test::g ... ok
+test crypto::test::h ... ok
+test encode::tests::bit_pack ... ok
+test encode::tests::simple_bit_pack ... ok
+test hint::test::decompose_produces_valid_r0 ... ok
+test hint::test::hint_round_trip ... ok
+test hint::test::make_hint_correctness ... ok
+test hint::test::use_hint_arithmetic ... ok
+test hint::test::use_hint_m_wraparound ... ok
+test hint::test::use_hint_r0_is_zero ... ok
+test hint::test::use_hint_threshold ... ok
+test ntt::test::ntt ... ok
+test ntt::test::ntt_matrix ... ok
+test ntt::test::ntt_vector ... ok
+test sampling::test::test_rej_ntt_poly ... ok
+test sampling::test::test_sample_cbd ... ok
+test sampling::test::test_sample_in_ball ... ok
+test test::context_length_validation ... ok
+test test::debug_implementations ... ok
+test test::derived_verifying_key_validates_signatures ... ok
+test test::encode_decode_round_trip ... ok
+test test::from_seed_implementations_match ... ok
+test test::output_sizes ... ok
+test test::public_from_private ... ok
+test test::sign_internal_verify_mu_round_trip ... ok
+test test::sign_mu_verify_internal_round_trip ... ok
+test test::sign_mu_verify_mu_round_trip ... ok
+test test::sign_verify_round_trip ... ok
+test test::to_seed_returns_correct_seed ... ok
+test test::verification_rejects_invalid_signature ... ok
+test test::verification_rejects_wrong_message ... ok
+
+test result: ok. 37 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running tests/key-cache.rs (target/release/deps/key_cache-3f81f381db24f3bc)
+
+running 3 tests
+test key_cache_44 ... ok
+test key_cache_65 ... ok
+test key_cache_87 ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/key-gen.rs (target/release/deps/key_gen-e37c398f13061736)
+
+running 1 test
+test acvp_key_gen ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+     Running tests/pkcs8.rs (target/release/deps/pkcs8-b2e048c7d9fc0867)
+
+running 1 test
+test private_key_serialization ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/proptests.rs (target/release/deps/proptests-8eff5d2d7d62db01)
+
+running 9 tests
+test mldsa44::round_trip_digest_test ... ok
+test mldsa44::round_trip_randomized_digest_test ... ok
+test mldsa44::round_trip_test ... ok
+test mldsa65::round_trip_digest_test ... ok
+test mldsa65::round_trip_randomized_digest_test ... ok
+test mldsa65::round_trip_test ... ok
+test mldsa87::round_trip_digest_test ... ok
+test mldsa87::round_trip_randomized_digest_test ... ok
+test mldsa87::round_trip_test ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.14s
+
+     Running tests/sig-gen.rs (target/release/deps/sig_gen-43efd0fc592b6d1f)
+
+running 1 test
+test acvp_sig_gen ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running tests/sig-ver.rs (target/release/deps/sig_ver-92d3d930c474c41a)
+
+running 1 test
+test acvp_sig_ver ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/wycheproof.rs (target/release/deps/wycheproof-c7e03ba53d1d1315)
+
+running 6 tests
+test mldsa_44_sign_seed_test ... ok
+test mldsa_44_verify_test ... ok
+test mldsa_65_sign_seed_test ... ok
+test mldsa_65_verify_test ... ok
+test mldsa_87_sign_seed_test ... ok
+test mldsa_87_verify_test ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.29s
+
+   Doc-tests ml_dsa
+
+running 1 test
+test ml-dsa/src/lib.rs - (line 109) ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+all doctests ran in 0.98s; merged doctests compilation took 0.67s
