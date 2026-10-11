@@ -123,7 +123,7 @@ var stageVariants = []stageVariant{
 
 const (
 	mlBestDesc  = "End-to-end verify from the fastest correct alternatives: cached pkDecode/tr/A^/NTT(t1*2^d) per key, mu midstate per (key, ctx), fused z decode (decode.v2), fused UseHint+pack (hint_check.v1)."
-	slhBestDesc = "End-to-end verify from the fastest correct alternatives: lazy parse (hmsg.v2) + alt-hash backend for fors/ht_wots/ht_auth (v3: SHA-2 midstate or stdlib SHA-3), sequential layers."
+	slhBestDesc = "End-to-end verify from the fastest correct alternatives: lazy parse (hmsg.v2); SHA2 sets add the SHA-2 midstate hashers (fors/ht_wots/ht_auth v3); SHAKE sets keep CIRCL hashers (v0: the stdlib SHA-3 backend brought no gain); sequential layers."
 )
 
 type stageLine struct {

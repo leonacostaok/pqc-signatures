@@ -120,7 +120,7 @@ type memLine struct {
 }
 
 const (
-	stackMethod = "pre-grown goroutine stack (~4 MiB) painted with 0xA5 via unsafe below the measuring frame, GC off, asyncpreempt off; high-water mark = lowest overwritten byte; harness call overhead (empty op) subtracted"
+	stackMethod = "pre-grown goroutine stack (~4 MiB) painted with 0xA5 via unsafe below the measuring frame, GC off, asyncpreempt off; high-water mark = lowest overwritten byte, minimum of 3 runs; empty-op baseline subtracted; writes inside the ~64-byte probe frame directly below the measuring frame are not visible"
 	heapMethod  = "runtime.ReadMemStats: TotalAlloc delta / n ops (GC off); heap_peak_bytes = HeapAlloc growth over one op with GC off (upper bound of peak live heap)"
 )
 
@@ -157,7 +157,7 @@ func cmdMemory(args []string) {
 			l.StackBytes = &v
 		}
 		l.StackMethod = stackMethod
-		l.StackResolution = 8
+		l.StackResolution = 64
 		n := *heapOps
 		if l.Op == "sign" && l.Param[len(l.Param)-1] == 's' && a0(l.Param) { // SLH-DSA "s": seconds per op
 			n = 1

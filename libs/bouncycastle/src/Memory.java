@@ -19,9 +19,6 @@ import java.util.concurrent.Callable;
  */
 final class Memory {
     static final com.sun.management.ThreadMXBean TMX = (com.sun.management.ThreadMXBean) ManagementFactory.getThreadMXBean();
-    static final long RES = 4096;           // search resolution (one page; HotSpot rounds stack sizes to pages)
-    static final long MAX = 64L << 20;      // search upper bound
-    static long baselineStack = -1;         // smallest stack a no-op thread needs (JVM guard/shadow zones)
 
     static void main(String[] a) throws Exception {
         String out = null; boolean child = false;
@@ -42,8 +39,7 @@ final class Memory {
                                            : new PrintStream(new FileOutputStream(out, true), true, "UTF-8");
         if (!out.equals("-")) System.setOut(System.err);
 
-        baselineStack = minStack(() -> null, false);
-        System.err.println("baseline (no-op thread) minimum stack: " + baselineStack + " bytes");
+        calibrate();
 
         for (String pn : params) {
             Alg alg = Alg.get(pn);
@@ -105,16 +101,21 @@ final class Memory {
 
     static void emit(PrintStream sink, Map<String, Object> line) {
         sink.println(Json.write(line)); sink.flush();
-        System.err.printf("%-14s %-13s %-20s stack=%s (raw %s) heap/op=%s match=%s%n", line.get("variant"), line.get("op"), line.get("param"),
-            line.get("stack_bytes"), line.get("stack_bytes_raw"), line.get("heap_alloc_bytes_per_op"), line.get("match"));
+        System.err.printf("%-14s %-13s %-20s stack=%s (res %s) heap/op=%s match=%s%n", line.get("variant"), line.get("op"), line.get("param"),
+            line.get("stack_bytes"), line.get("stack_resolution_bytes"), line.get("heap_alloc_bytes_per_op"), line.get("match"));
     }
 
     interface Check { boolean ok(Object o) throws Exception; }
 
-    /** bench variant: a fresh Runner per stack probe (parallel runners get their lane stack size from Variants.Parallel.STACK) */
+    /** an op instance for one probe: created on the probe thread before the recursion, closed after it */
+    interface ProbeOp extends Callable<Object>, AutoCloseable { }
+    interface ProbeFactory { ProbeOp create() throws Exception; }
+
+    static ProbeOp simple(Callable<Object> c) { return new ProbeOp() { public Object call() throws Exception { return c.call(); } public void close() {} }; }
+
+    /** bench variant: fresh Runner per probe (a StackOverflowError inside a reused engine leaves it unusable) */
     static void measureVariant(Variants.Variant v, Variants.Inputs in, Map<String, Object> line) throws Exception {
         boolean parallel = v.impl.equals("parallel");
-        // JIT warm-up on a normal thread, and correctness
         boolean match;
         try (Variants.Runner r = Variants.make(v, in)) {
             Object o = r.run();
@@ -123,21 +124,20 @@ final class Memory {
             while ((System.nanoTime() - t0 < 1_000_000_000L || n < 20) && System.nanoTime() - t0 < 3_000_000_000L) { if (!r.check(r.run())) match = false; n++; }
         }
         line.put("match", match);
-        // heap: allocated bytes per op on the measuring thread (parallel: all threads)
         try (Variants.Runner r = Variants.make(v, in)) {
             long[] h = heapPerOp(() -> r.run(), r.batch, parallel);
             line.put("heap_alloc_bytes_per_op", h[0]); line.put("heap_peak_bytes", null);
             line.put("heap_method", parallel ? "ThreadMXBean.getTotalThreadAllocatedBytes delta / ops (all threads)" : "ThreadMXBean.getThreadAllocatedBytes delta / ops (measuring thread)");
         }
-        // stack
-        long raw;
-        if (parallel) {
-            raw = minStackParallel(v, in);
-        } else {
-            raw = minStack(() -> { try (Variants.Runner r = Variants.make(v, in)) { return r.run(); } }, true);
-        }
-        putStack(line, raw, parallel ? "per worker thread: Thread(stackSize) of the pool's lanes binary-searched until the batch completes without StackOverflowError (after JIT warm-up)"
-                                     : "Thread(stackSize) binary search until the op completes without StackOverflowError (after JIT warm-up); minus the JVM's no-op thread minimum");
+        // stack: the op itself; for parallel variants one lane's work on the probe thread (= per-worker stack)
+        ProbeFactory f = () -> {
+            Variants.Runner r = Variants.make(v, in);
+            return new ProbeOp() {
+                public Object call() throws Exception { return parallel ? ((Variants.Parallel) r).lane(0, 0) : r.run(); }
+                public void close() { r.close(); }
+            };
+        };
+        putStack(line, stackBytes(f, isSlow(f)), (parallel ? "per worker thread (one lane's op): " : "") + STACK_METHOD);
     }
 
     static void measureOp(Callable<Object> op, Check check, int batch, boolean multi, Map<String, Object> line) throws Exception {
@@ -148,16 +148,19 @@ final class Memory {
         long[] h = heapPerOp(op, batch, multi);
         line.put("heap_alloc_bytes_per_op", h[0]); line.put("heap_peak_bytes", null);
         line.put("heap_method", multi ? "ThreadMXBean.getTotalThreadAllocatedBytes delta / ops (all threads)" : "ThreadMXBean.getThreadAllocatedBytes delta / ops (measuring thread)");
-        long raw = minStack(op, true);
-        putStack(line, raw, "Thread(stackSize) binary search until the op completes without StackOverflowError (after JIT warm-up); minus the JVM's no-op thread minimum");
+        ProbeFactory f = () -> simple(op);
+        putStack(line, stackBytes(f, isSlow(f)), STACK_METHOD);
     }
 
-    static void putStack(Map<String, Object> line, long raw, String method) {
-        line.put("stack_bytes", raw < 0 ? null : Math.max(0, raw - baselineStack));
-        line.put("stack_bytes_raw", raw < 0 ? null : raw);
-        line.put("stack_baseline_bytes", baselineStack);
+    static boolean isSlow(ProbeFactory f) throws Exception {
+        try (ProbeOp op = f.create()) { long t0 = System.nanoTime(); op.call(); return System.nanoTime() - t0 > 100_000_000L; }
+    }
+
+    static void putStack(Map<String, Object> line, long bytes, String method) {
+        line.put("stack_bytes", bytes < 0 ? null : bytes);
         line.put("stack_method", method);
-        line.put("stack_resolution_bytes", RES);
+        line.put("stack_resolution_bytes", frameBytes);
+        line.put("stack_probe_thread_bytes", PROBE_STACK);
     }
 
     static long[] heapPerOp(Callable<Object> op, int batch, boolean allThreads) throws Exception {
@@ -169,20 +172,27 @@ final class Memory {
         return new long[]{(a1 - a0) / n};
     }
 
-    /** smallest Thread stackSize (multiple of RES) for which op completes without StackOverflowError; -1 if it never does */
-    static long minStack(Callable<Object> op, boolean requireSuccessAtMax) throws Exception {
-        if (!probe(op, MAX)) return -1;
-        long lo = 0, hi = MAX;                 // invariant: hi works, lo does not (or is 0)
-        while (hi - lo > RES) {
-            long mid = ((lo + hi) / 2 / RES) * RES;
-            if (probe(op, mid)) hi = mid; else lo = mid;
-        }
-        return hi;
+    // ------------------------------------------------------------------ stack: pre-consumed recursion depth
+    //
+    // HotSpot silently raises a Thread stackSize below its internal minimum (~ guard + shadow zones + a few pages),
+    // so a plain binary search over stackSize bottoms out at that minimum for every op. Instead a probe thread of
+    // fixed size first recurses d frames of a constant-size method and then calls the op; the deepest d that still
+    // completes (binary search, StackOverflowError = too deep) is found for the op and for a no-op, and
+    // stack(op) = (d_noop - d_op) * frameBytes. frameBytes is calibrated from the no-op depths at two thread sizes.
+
+    static final long PROBE_STACK = 2L << 20;
+    static double frameBytes = -1;
+    static int depthNoop = -1;
+    static final Callable<Object> NOOP = () -> null;
+
+    static void rec(int d, int target, Callable<Object> op) throws Exception {
+        if (d == target) { op.call(); return; }
+        rec(d + 1, target, op);
     }
 
-    static boolean probe(Callable<Object> op, long stackSize) throws Exception {
+    static boolean probe(ProbeFactory f, long stackSize, int depth) throws Exception {
         final Throwable[] err = new Throwable[1];
-        Thread t = new Thread(null, () -> { try { op.call(); } catch (Throwable x) { err[0] = x; } }, "stack-probe", stackSize);
+        Thread t = new Thread(null, () -> { try (ProbeOp op = f.create()) { rec(0, depth, op); } catch (Throwable x) { err[0] = x; } }, "stack-probe", stackSize);
         t.start(); t.join();
         if (err[0] == null) return true;
         if (isSOE(err[0])) return false;
@@ -194,21 +204,43 @@ final class Memory {
         return false;
     }
 
-    static long minStackParallel(Variants.Variant v, Variants.Inputs in) throws Exception {
-        Callable<Object> probeAt = () -> { try (Variants.Runner r = Variants.make(v, in)) { return r.run(); } };
-        long lo = 0, hi = MAX;
-        Variants.Parallel.STACK = MAX;
-        try { probeAt.call(); } catch (Throwable t) { Variants.Parallel.STACK = 0; return -1; }
-        while (hi - lo > RES) {
-            long mid = ((lo + hi) / 2 / RES) * RES;
-            Variants.Parallel.STACK = mid;
-            boolean ok;
-            try { probeAt.call(); ok = true; } catch (Throwable t) { if (isSOE(t)) ok = false; else throw new RuntimeException(t); }
-            if (ok) hi = mid; else lo = mid;
-        }
-        Variants.Parallel.STACK = 0;
-        return hi;
+    /** deepest recursion depth at which op still completes on a thread of the given stack size */
+    static int maxDepth(ProbeFactory f, long stackSize) throws Exception {
+        int lo = 0, hi = depthNoop > 0 ? depthNoop + 1 : 1 << 22;   // lo works, hi does not
+        if (!probe(f, stackSize, 0)) return -1;
+        while (probe(f, stackSize, hi)) hi <<= 1;
+        while (hi - lo > 1) { int mid = (lo + hi) >>> 1; if (probe(f, stackSize, mid)) lo = mid; else hi = mid; }
+        return lo;
     }
+
+    static void calibrate() throws Exception {
+        // warm the recursion method into compiled code with a constant frame layout
+        for (int i = 0; i < 3000; i++) rec(0, 2000, NOOP);
+        ProbeFactory noop = () -> simple(NOOP);
+        int d1 = maxDepth(noop, PROBE_STACK), d2 = maxDepth(noop, 2 * PROBE_STACK);
+        frameBytes = (double) PROBE_STACK / (d2 - d1);
+        depthNoop = Math.max(d1, maxDepth(noop, PROBE_STACK));   // re-measure after warm-up/compilation settled
+        System.err.printf("stack calibration: frame = %.1f bytes (depth %d @ %d KiB, %d @ %d KiB), no-op depth %d%n", frameBytes, d1, PROBE_STACK >> 10, d2, PROBE_STACK >> 9, depthNoop);
+    }
+
+    /**
+     * stack bytes used by one op beyond the probe frame, or -1 if the op never completes on the probe thread.
+     * The op is first warmed through the exact probe call path (so no JIT deoptimisation happens mid-probe), and
+     * the search is repeated (3x, or once for ops slower than 100 ms) taking the deepest success.
+     */
+    static long stackBytes(ProbeFactory f, boolean slow) throws Exception {
+        if (frameBytes < 0) calibrate();
+        try (ProbeOp op = f.create()) {
+            long t0 = System.nanoTime(); int n = 0;
+            while ((System.nanoTime() - t0 < 500_000_000L || n < 10) && System.nanoTime() - t0 < 2_000_000_000L) { op.call(); n++; }
+        }
+        int best = -1;
+        for (int i = 0; i < (slow ? 1 : 3); i++) best = Math.max(best, maxDepth(f, PROBE_STACK));
+        if (best < 0) return -1;
+        return Math.round(Math.max(0, depthNoop - best) * frameBytes);
+    }
+
+    static final String STACK_METHOD = "probe thread (2 MiB) recurses d constant-size frames then runs the op; deepest d without StackOverflowError (binary search, best of 3, after JIT warm-up through the same path) vs a no-op, times the calibrated frame size";
 
     static void runChild(String id, String op, String param, PrintStream sink) throws Exception {
         Variants.Variant v = null;

@@ -11,29 +11,99 @@
 
 #![allow(clippy::too_many_arguments)]
 
-mod schemes;
 mod fasthash;
+mod memory;
+mod schemes;
+mod stages;
 mod stages_mldsa;
 mod stages_slhdsa;
+mod timing;
+mod validate;
 
-#[cfg(feature = "mimalloc")]
+/// Counting global allocator (heap numbers for `memory`); wraps mimalloc in the mimalloc build.
+pub mod heap {
+    use std::alloc::{GlobalAlloc, Layout};
+    use std::sync::atomic::{AtomicBool, AtomicI64, AtomicU64, Ordering::Relaxed};
+    pub static ENABLED: AtomicBool = AtomicBool::new(false);
+    pub static TOTAL: AtomicU64 = AtomicU64::new(0);
+    pub static LIVE: AtomicI64 = AtomicI64::new(0);
+    pub static PEAK: AtomicI64 = AtomicI64::new(0);
+    pub static BASE: AtomicI64 = AtomicI64::new(0);
+    pub struct Counting;
+    #[cfg(feature = "mimalloc")]
+    type Inner = mimalloc::MiMalloc;
+    #[cfg(not(feature = "mimalloc"))]
+    type Inner = std::alloc::System;
+    #[cfg(feature = "mimalloc")]
+    const INNER: Inner = mimalloc::MiMalloc;
+    #[cfg(not(feature = "mimalloc"))]
+    const INNER: Inner = std::alloc::System;
+    #[inline]
+    fn note_alloc(n: usize) {
+        if ENABLED.load(Relaxed) {
+            TOTAL.fetch_add(n as u64, Relaxed);
+            let live = LIVE.fetch_add(n as i64, Relaxed) + n as i64;
+            PEAK.fetch_max(live, Relaxed);
+        }
+    }
+    unsafe impl GlobalAlloc for Counting {
+        unsafe fn alloc(&self, l: Layout) -> *mut u8 {
+            note_alloc(l.size());
+            INNER.alloc(l)
+        }
+        unsafe fn alloc_zeroed(&self, l: Layout) -> *mut u8 {
+            note_alloc(l.size());
+            INNER.alloc_zeroed(l)
+        }
+        unsafe fn dealloc(&self, p: *mut u8, l: Layout) {
+            if ENABLED.load(Relaxed) {
+                LIVE.fetch_sub(l.size() as i64, Relaxed);
+            }
+            INNER.dealloc(p, l)
+        }
+        unsafe fn realloc(&self, p: *mut u8, l: Layout, new: usize) -> *mut u8 {
+            if ENABLED.load(Relaxed) {
+                if new > l.size() {
+                    TOTAL.fetch_add((new - l.size()) as u64, Relaxed);
+                }
+                let live = LIVE.fetch_add(new as i64 - l.size() as i64, Relaxed) + new as i64 - l.size() as i64;
+                PEAK.fetch_max(live, Relaxed);
+            }
+            INNER.realloc(p, l, new)
+        }
+    }
+    /// start counting: total = 0, peak = current live level
+    pub fn start() {
+        TOTAL.store(0, Relaxed);
+        let live = LIVE.load(Relaxed);
+        BASE.store(live, Relaxed);
+        PEAK.store(live, Relaxed);
+        ENABLED.store(true, Relaxed);
+    }
+    /// (bytes allocated since start, peak live bytes above the level at start)
+    pub fn stop() -> (u64, u64) {
+        ENABLED.store(false, Relaxed);
+        (TOTAL.load(Relaxed), (PEAK.load(Relaxed) - BASE.load(Relaxed)).max(0) as u64)
+    }
+}
 #[global_allocator]
-static GLOBAL: mimalloc::MiMalloc = mimalloc::MiMalloc;
+static GLOBAL: heap::Counting = heap::Counting;
 
 use schemes::{all_schemes, Scheme};
 use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
 use std::collections::BTreeMap;
 use std::io::Write;
-use std::time::{Duration, Instant};
+use std::time::Duration;
+use timing::{cpu_time_ns, measure, stats};
 
-const LIB: &str = "rustcrypto";
-const BUILD_TAG: &str = env!("PQC_BUILD_TAG");
+pub const LIB: &str = "rustcrypto";
+pub const BUILD_TAG: &str = env!("PQC_BUILD_TAG");
 
-fn lib_version() -> String {
+pub fn lib_version() -> String {
     format!("ml-dsa {} + slh-dsa {}", env!("ML_DSA_VERSION"), env!("SLH_DSA_VERSION"))
 }
-fn runtime() -> String {
+pub fn runtime() -> String {
     format!("{} (build={})", env!("RUSTC_VERSION_STR"), BUILD_TAG)
 }
 
@@ -41,13 +111,13 @@ fn runtime() -> String {
 // helpers
 // ------------------------------------------------------------------------------------------------
 
-fn hex(b: &[u8]) -> String {
+pub fn hex(b: &[u8]) -> String {
     b.iter().map(|x| format!("{x:02x}")).collect()
 }
-fn unhex(s: &str) -> Vec<u8> {
+pub fn unhex(s: &str) -> Vec<u8> {
     (0..s.len() / 2).map(|i| u8::from_str_radix(&s[2 * i..2 * i + 2], 16).expect("hex")).collect()
 }
-fn sha256_hex(b: &[u8]) -> String {
+pub fn sha256_hex(b: &[u8]) -> String {
     hex(&Sha256::digest(b))
 }
 
@@ -75,19 +145,19 @@ struct Vectors {
     params: Vec<VectorParam>,
 }
 #[derive(Deserialize, Clone)]
-struct RefEntry {
-    pk_sha256: String,
-    sk_sha256: String,
-    sig_sha256: String,
+pub struct RefEntry {
+    pub pk_sha256: String,
+    pub sk_sha256: String,
+    pub sig_sha256: String,
 }
 
-struct Common {
-    msg: Vec<u8>,
-    seeds: BTreeMap<String, Vec<u8>>,
-    reference: BTreeMap<String, RefEntry>,
+pub struct Common {
+    pub msg: Vec<u8>,
+    pub seeds: BTreeMap<String, Vec<u8>>,
+    pub reference: BTreeMap<String, RefEntry>,
 }
 
-fn load_common() -> Common {
+pub fn load_common() -> Common {
     let d = common_dir();
     let v: Vectors = serde_json::from_str(&std::fs::read_to_string(d.join("vectors.json")).expect("read vectors.json")).expect("parse vectors.json");
     let reference: BTreeMap<String, RefEntry> = serde_json::from_str(&std::fs::read_to_string(d.join("reference.json")).expect("read reference.json")).expect("parse reference.json");
@@ -98,12 +168,6 @@ fn load_common() -> Common {
     }
 }
 
-fn cpu_time_ns() -> u64 {
-    let mut ru: libc::rusage = unsafe { std::mem::zeroed() };
-    unsafe { libc::getrusage(libc::RUSAGE_SELF, &mut ru) };
-    let tv = |t: libc::timeval| t.tv_sec as u64 * 1_000_000_000 + t.tv_usec as u64 * 1000;
-    tv(ru.ru_utime) + tv(ru.ru_stime)
-}
 
 // ------------------------------------------------------------------------------------------------
 // vectors / crossverify
@@ -231,22 +295,22 @@ fn cmd_crossverify(input: &str, out: &str) {
 // ------------------------------------------------------------------------------------------------
 
 #[derive(Clone, Copy, PartialEq)]
-enum Kind {
+pub enum Kind {
     Plain,
     KeyCache,
     Par,
 }
 
-struct Variant {
-    id: &'static str,
-    op: &'static str,
-    name: &'static str,
-    desc: &'static str,
-    tag: &'static str,
-    kind: Kind,
+pub struct Variant {
+    pub id: &'static str,
+    pub op: &'static str,
+    pub name: &'static str,
+    pub desc: &'static str,
+    pub tag: &'static str,
+    pub kind: Kind,
 }
 
-const V: &[Variant] = &[
+pub const V: &[Variant] = &[
     // keygen
     Variant { id: "keygen.v0", op: "keygen", name: "default", desc: "Plain cargo build --release; SigningKey::from_seed / slh_keygen_internal, then pk/sk FIPS encoding.", tag: "base", kind: Kind::Plain },
     Variant { id: "keygen.v1", op: "keygen", name: "native", desc: "Same code built with RUSTFLAGS=-C target-cpu=native (AVX2/AVX-512 autovectorisation of NTT, Keccak, SHA-2).", tag: "native", kind: Kind::Plain },
@@ -300,56 +364,6 @@ struct BenchOpts {
     params: Option<Vec<String>>,
     ops: Option<Vec<String>>,
     variants: Option<Vec<String>>,
-}
-
-/// Runs `op` (which returns output bytes) with warm-up and the contract's budget loop.
-/// `batch` > 1 means `op` performs `batch` operations at once (wall per op = wall per batch / batch).
-fn measure(op: &(dyn Fn() -> Vec<u8> + Sync), budget: Duration, batch: u64) -> (Vec<u64>, u64, u64, u64, Vec<u8>) {
-    // warm-up: >= 1 call, up to 20 calls or 100 ms (not recorded)
-    let w0 = Instant::now();
-    let mut warm = 0;
-    let mut first = Duration::ZERO;
-    loop {
-        let t = Instant::now();
-        let _ = op();
-        let d = t.elapsed();
-        if warm == 0 {
-            first = d;
-        }
-        warm += 1;
-        if warm >= 20 || w0.elapsed() >= Duration::from_millis(100) || d > Duration::from_millis(500) {
-            break;
-        }
-    }
-    let min_calls = if first > Duration::from_secs(5) { 2 } else { 3 };
-    let cap_calls = 100_000 / batch;
-
-    let mut samples = Vec::with_capacity(1024);
-    let mut out = vec![];
-    let cpu0 = cpu_time_ns();
-    let t0 = Instant::now();
-    let mut calls = 0u64;
-    loop {
-        let t = Instant::now();
-        out = op();
-        samples.push(t.elapsed().as_nanos() as u64 / batch);
-        calls += 1;
-        if (t0.elapsed() >= budget && calls >= min_calls) || calls >= cap_calls {
-            break;
-        }
-    }
-    let wall_total = t0.elapsed().as_nanos() as u64;
-    let cpu_total = cpu_time_ns() - cpu0;
-    (samples, calls * batch, wall_total, cpu_total, out)
-}
-
-fn stats(samples: &mut [u64]) -> (u64, u64, u64, u64) {
-    samples.sort_unstable();
-    let n = samples.len();
-    let median = if n % 2 == 1 { samples[n / 2] } else { (samples[n / 2 - 1] + samples[n / 2]) / 2 };
-    let mean = (samples.iter().map(|&x| x as u128).sum::<u128>() / n as u128) as u64;
-    let p95 = samples[((n as f64 * 0.95).ceil() as usize).clamp(1, n) - 1];
-    (median, mean, p95, samples[0])
 }
 
 fn cmd_bench(o: BenchOpts) {
@@ -436,7 +450,8 @@ fn cmd_bench(o: BenchOpts) {
                 _ => unreachable!(),
             };
 
-            let (mut samples, iterations, wall_total, cpu_total, out) = measure(&*op, budget, b);
+            let m = measure(&*op, budget, b);
+            let (mut samples, iterations, wall_total, cpu_total, out) = (m.samples, m.iterations, m.wall_total, m.cpu_total, m.out);
             let (median, mean, p95, min) = stats(&mut samples);
 
             // correctness check on the actual output of the measured loop (never hard-coded)
@@ -498,13 +513,85 @@ fn cmd_bench(o: BenchOpts) {
 fn main() {
     let args: Vec<String> = std::env::args().collect();
     let usage = || -> ! {
-        eprintln!("usage: pqcbench vectors <out.json> | crossverify <artifacts.json> <out.json> | bench --out <f.jsonl> [--budget-ms N] [--params a,b] [--ops a,b] [--variants a,b] | info");
+        eprintln!("usage: pqcbench vectors <out.json> | crossverify <artifacts.json> <out.json> | bench --out <f.jsonl> [--budget-ms N] [--params a,b] [--ops a,b] [--variants a,b] | stages --out <f.jsonl> [--budget-ms N] [--params a,b] [--stages a,b] [--variants a,b] | validate <suite.json.gz> <out.json> [--params a,b] [--kinds a,b] [--variants a,b] | validate-merge <out.json> <part.json>... | memory --out <f.jsonl> [--params a,b] | info");
         std::process::exit(2)
     };
     match args.get(1).map(String::as_str) {
         Some("vectors") => cmd_vectors(args.get(2).unwrap_or_else(|| usage())),
         Some("crossverify") => cmd_crossverify(args.get(2).unwrap_or_else(|| usage()), args.get(3).unwrap_or_else(|| usage())),
         Some("info") => println!("{{\"lib\":\"{LIB}\",\"lib_version\":\"{}\",\"runtime\":\"{}\",\"build_tag\":\"{BUILD_TAG}\"}}", lib_version(), runtime()),
+        Some("stages") => {
+            let (mut out, mut budget_ms, mut params, mut stages_f, mut variants) = (String::new(), 1000u64, None, None, None);
+            let list = |s: &str| s.split(',').filter(|x| !x.is_empty()).map(String::from).collect::<Vec<_>>();
+            let mut i = 2;
+            while i < args.len() {
+                let val = args.get(i + 1).cloned().unwrap_or_default();
+                match args[i].as_str() {
+                    "--out" => out = val,
+                    "--budget-ms" => budget_ms = val.parse().expect("--budget-ms"),
+                    "--params" => params = Some(list(&val)),
+                    "--stages" => stages_f = Some(list(&val)),
+                    "--variants" => variants = Some(list(&val)),
+                    _ => usage(),
+                }
+                i += 2;
+            }
+            if out.is_empty() {
+                usage();
+            }
+            let c = load_common();
+            let threads = std::thread::available_parallelism().map(|n| n.get()).unwrap_or(1);
+            let pool = rayon::ThreadPoolBuilder::new().num_threads(threads).build().expect("rayon pool");
+            let mut outf = std::fs::OpenOptions::new().create(true).append(true).open(&out).expect("open --out");
+            for s in all_schemes() {
+                if params.as_ref().is_some_and(|ps| !ps.iter().any(|x| x == s.name())) {
+                    continue;
+                }
+                let Some(seed) = c.seeds.get(s.name()) else { continue };
+                let a = stages::StageArgs { budget: Duration::from_millis(budget_ms), stages: stages_f.clone(), variants: variants.clone(), msg: c.msg.clone(), seed: seed.clone(), pool: rayon::ThreadPoolBuilder::new().num_threads(threads).build().expect("pool"), threads };
+                let _ = &pool;
+                s.run_stages(&a, &mut outf);
+            }
+        }
+        Some("validate") => {
+            let (input, out) = (args.get(2).cloned().unwrap_or_else(|| usage()), args.get(3).cloned().unwrap_or_else(|| usage()));
+            let (mut params, mut kinds, mut variants) = (None, None, None);
+            let list = |s: &str| s.split(',').filter(|x| !x.is_empty()).map(String::from).collect::<Vec<_>>();
+            let mut i = 4;
+            while i < args.len() {
+                let val = args.get(i + 1).cloned().unwrap_or_default();
+                match args[i].as_str() {
+                    "--params" => params = Some(list(&val)),
+                    "--kinds" => kinds = Some(list(&val)),
+                    "--variants" => variants = Some(list(&val)),
+                    _ => usage(),
+                }
+                i += 2;
+            }
+            validate::cmd_validate(validate::ValidateOpts { input, out, params, kinds, variants });
+        }
+        Some("validate-merge") => {
+            let out = args.get(2).cloned().unwrap_or_else(|| usage());
+            validate::cmd_validate_merge(&out, &args[3..]);
+        }
+        Some("memory") => {
+            let (mut out, mut params) = (String::new(), None);
+            let list = |s: &str| s.split(',').filter(|x| !x.is_empty()).map(String::from).collect::<Vec<_>>();
+            let mut i = 2;
+            while i < args.len() {
+                let val = args.get(i + 1).cloned().unwrap_or_default();
+                match args[i].as_str() {
+                    "--out" => out = val,
+                    "--params" => params = Some(list(&val)),
+                    _ => usage(),
+                }
+                i += 2;
+            }
+            if out.is_empty() {
+                usage();
+            }
+            memory::cmd_memory(memory::MemOpts { out, params });
+        }
         Some("bench") => {
             let mut o = BenchOpts { out: String::new(), budget_ms: 1000, params: None, ops: None, variants: None };
             let list = |s: &str| s.split(',').filter(|x| !x.is_empty()).map(String::from).collect::<Vec<_>>();

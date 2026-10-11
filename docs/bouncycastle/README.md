@@ -6,7 +6,7 @@
 | Language / runtime | Java, OpenJDK 21.0.12.1 (HotSpot 64-bit Server VM, G1 GC, tiered C1/C2 JIT by default) |
 | Algorithms | ML-DSA-44/65/87, all 12 SLH-DSA parameter sets (byte-matched), Falcon-512/1024 (cross-verify only) |
 | Entry point | `libs/bouncycastle/run.sh build \| vectors \| crossverify \| bench` |
-| Sources | `libs/bouncycastle/src/{Bench,Variants,Alg,Json}.java` (no build tool, plain `javac`) |
+| Sources | `libs/bouncycastle/src/{Bench,Variants,Alg,Json,Timing,Stages,Validate,Memory,CaseOps}.java` + vendored BC engine packages under `src/bc/` (no build tool, plain `javac`) |
 
 BC is a pure-Java implementation: no native code, no SIMD intrinsics beyond what HotSpot auto-vectorises.
 ML-DSA lives in `org.bouncycastle.crypto.signers.mldsa` (engine `MLDSAEngine`, in-place NTT), SLH-DSA in
@@ -78,6 +78,17 @@ parent's own JIT/GC state never contaminates them. Per cell (variant, op, param)
 CPU and are counted, as the contract requires. Extra fields in each line: `batch`, `jvm_flags` (where used),
 `pk_sha256`/`sk_sha256` for keygen.
 
+## Phase 2 subcommands
+
+| command | what | doc |
+|---|---|---|
+| `run.sh validate <suite.json.gz> <out.json>` | the 651-case NIST ACVP + negative suite through every variant of every process and the stage pipelines | `validation.md` |
+| `run.sh stages --out <f.jsonl> [--budget-ms N] [--params a,b] [--stages x,y]` | verification split into canonical stages (ML-DSA: decode, mu, expandA, w_approx, hint_check; SLH-DSA: hmsg, fors, ht_wots, ht_auth), v0 = BC's own (vendored) code plus alternatives, `total`/`total_best` pipelines | `verify-stages.md` |
+| `run.sh memory --out <f.jsonl> [--params a,b]` | peak stack and heap allocation per op for every variant, every stage v0 and total_best | `memory.md` |
+
+The stages need BC's package-private engine classes, so the 1.86 sources of `org.bouncycastle.crypto.signers.mldsa`
+and `...slhdsa` are vendored (MIT license kept) under `libs/bouncycastle/src/bc/`; see `verify-stages.md`.
+
 ## Commands
 
 ```
@@ -86,6 +97,9 @@ libs/bouncycastle/run.sh vectors results/bouncycastle/artifacts.json
 libs/bouncycastle/run.sh crossverify results/noble/artifacts.json results/bouncycastle/crossverify-noble.json
 libs/bouncycastle/run.sh bench --out results/bouncycastle/bench.jsonl                     # full, 1 s budget
 libs/bouncycastle/run.sh bench --out dev.jsonl --budget-ms 200 --params ML-DSA-44 --ops sign --variants sign.v2
+libs/bouncycastle/run.sh validate common/validation/validation.json.gz results/bouncycastle/validation.json
+libs/bouncycastle/run.sh stages --out results/bouncycastle/stages.jsonl                   # full, 1 s budget
+libs/bouncycastle/run.sh memory --out results/bouncycastle/memory.jsonl
 ```
 
 ## Known caveats

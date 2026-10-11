@@ -9,9 +9,23 @@ use core::marker::PhantomData;
 
 pub type SignFn = Box<dyn Fn(&[u8]) -> Vec<u8> + Send + Sync>;
 pub type VerifyFn = Box<dyn Fn(&[u8], &[u8]) -> bool + Send + Sync>;
+pub type SignCtxFn = Box<dyn Fn(&[u8], &[u8]) -> Option<Vec<u8>> + Send + Sync>;
+pub type VerifyCtxFn = Box<dyn Fn(&[u8], &[u8], &[u8]) -> bool + Send + Sync>;
 
 pub trait Scheme: Send + Sync {
     fn name(&self) -> &'static str;
+    fn family(&self) -> &'static str;
+    /// sign with a context string (pure mode, deterministic); None when ctx > 255 bytes or sk malformed
+    fn sign_ctx(&self, sk: &[u8], msg: &[u8], ctx: &[u8]) -> Option<Vec<u8>>;
+    fn verify_ctx(&self, pk: &[u8], msg: &[u8], ctx: &[u8], sig: &[u8]) -> bool;
+    fn cached_signer_ctx(&self, sk: &[u8]) -> Option<SignCtxFn>;
+    fn cached_verifier_ctx(&self, pk: &[u8]) -> Option<VerifyCtxFn>;
+    /// end-to-end verify assembled from the v0 stages / the fastest stage alternatives (section B)
+    fn total_v0(&self, pk: &[u8], msg: &[u8], ctx: &[u8], sig: &[u8]) -> bool;
+    fn total_best(&self, pk: &[u8], msg: &[u8], ctx: &[u8], sig: &[u8]) -> bool;
+    /// stage benchmark + stage memory ops (implemented per family in stages.rs)
+    fn run_stages(&self, a: &crate::stages::StageArgs, out: &mut dyn std::io::Write);
+    fn stage_memory_ops(&self, msg: &[u8], seed: &[u8]) -> Vec<(String, String, Box<dyn Fn() -> bool + Send + Sync>)>;
     /// seed -> (pk, sk) in FIPS encodings.
     fn keygen(&self, seed: &[u8]) -> (Vec<u8>, Vec<u8>);
     /// FIPS-encoded sk + message -> signature (deterministic, pure mode, empty context).
@@ -36,6 +50,49 @@ where
 {
     fn name(&self) -> &'static str {
         self.0
+    }
+    fn family(&self) -> &'static str {
+        "ml-dsa"
+    }
+    fn sign_ctx(&self, sk: &[u8], msg: &[u8], ctx: &[u8]) -> Option<Vec<u8>> {
+        let enc = <&ml_dsa::ExpandedSigningKeyBytes<P>>::try_from(sk).ok()?;
+        #[allow(deprecated)]
+        let esk = ml_dsa::ExpandedSigningKey::<P>::from_expanded(enc);
+        Some(esk.sign_deterministic(msg, ctx).ok()?.encode().to_vec())
+    }
+    fn verify_ctx(&self, pk: &[u8], msg: &[u8], ctx: &[u8], sig: &[u8]) -> bool {
+        let Ok(enc) = <&ml_dsa::EncodedVerifyingKey<P>>::try_from(pk) else { return false };
+        let vk = ml_dsa::VerifyingKey::<P>::decode(enc);
+        let Ok(senc) = <&ml_dsa::EncodedSignature<P>>::try_from(sig) else { return false };
+        let Some(s) = ml_dsa::Signature::<P>::decode(senc) else { return false };
+        vk.verify_with_context(msg, ctx, &s)
+    }
+    fn cached_signer_ctx(&self, sk: &[u8]) -> Option<SignCtxFn> {
+        let enc = <&ml_dsa::ExpandedSigningKeyBytes<P>>::try_from(sk).ok()?;
+        #[allow(deprecated)]
+        let esk = ml_dsa::ExpandedSigningKey::<P>::from_expanded(enc);
+        Some(Box::new(move |msg: &[u8], ctx: &[u8]| Some(esk.sign_deterministic(msg, ctx).ok()?.encode().to_vec())))
+    }
+    fn cached_verifier_ctx(&self, pk: &[u8]) -> Option<VerifyCtxFn> {
+        let enc = <&ml_dsa::EncodedVerifyingKey<P>>::try_from(pk).ok()?;
+        let vk = ml_dsa::VerifyingKey::<P>::decode(enc);
+        Some(Box::new(move |msg: &[u8], ctx: &[u8], sig: &[u8]| {
+            let Ok(senc) = <&ml_dsa::EncodedSignature<P>>::try_from(sig) else { return false };
+            let Some(s) = ml_dsa::Signature::<P>::decode(senc) else { return false };
+            vk.verify_with_context(msg, ctx, &s)
+        }))
+    }
+    fn total_v0(&self, pk: &[u8], msg: &[u8], ctx: &[u8], sig: &[u8]) -> bool {
+        crate::stages_mldsa::verify_total_v0::<P>(pk, msg, ctx, sig)
+    }
+    fn total_best(&self, pk: &[u8], msg: &[u8], ctx: &[u8], sig: &[u8]) -> bool {
+        crate::stages_mldsa::verify_total_best::<P>(pk, msg, ctx, sig)
+    }
+    fn run_stages(&self, a: &crate::stages::StageArgs, out: &mut dyn std::io::Write) {
+        crate::stages::run_ml::<P>(self.0, a, out)
+    }
+    fn stage_memory_ops(&self, msg: &[u8], seed: &[u8]) -> Vec<(String, String, Box<dyn Fn() -> bool + Send + Sync>)> {
+        crate::stages::ml_memory_ops::<P>(self, msg, seed)
     }
 
     fn keygen(&self, seed: &[u8]) -> (Vec<u8>, Vec<u8>) {
@@ -95,6 +152,41 @@ where
 {
     fn name(&self) -> &'static str {
         self.0
+    }
+    fn family(&self) -> &'static str {
+        "slh-dsa"
+    }
+    fn sign_ctx(&self, sk: &[u8], msg: &[u8], ctx: &[u8]) -> Option<Vec<u8>> {
+        let key = slh_dsa::SigningKey::<P>::try_from(sk).ok()?;
+        Some(key.try_sign_with_context(msg, ctx, None).ok()?.to_bytes().to_vec())
+    }
+    fn verify_ctx(&self, pk: &[u8], msg: &[u8], ctx: &[u8], sig: &[u8]) -> bool {
+        let Ok(vk) = slh_dsa::VerifyingKey::<P>::try_from(pk) else { return false };
+        let Ok(s) = slh_dsa::Signature::<P>::try_from(sig) else { return false };
+        vk.try_verify_with_context(msg, ctx, &s).is_ok()
+    }
+    fn cached_signer_ctx(&self, sk: &[u8]) -> Option<SignCtxFn> {
+        let key = slh_dsa::SigningKey::<P>::try_from(sk).ok()?;
+        Some(Box::new(move |msg: &[u8], ctx: &[u8]| Some(key.try_sign_with_context(msg, ctx, None).ok()?.to_bytes().to_vec())))
+    }
+    fn cached_verifier_ctx(&self, pk: &[u8]) -> Option<VerifyCtxFn> {
+        let vk = slh_dsa::VerifyingKey::<P>::try_from(pk).ok()?;
+        Some(Box::new(move |msg: &[u8], ctx: &[u8], sig: &[u8]| {
+            let Ok(s) = slh_dsa::Signature::<P>::try_from(sig) else { return false };
+            vk.try_verify_with_context(msg, ctx, &s).is_ok()
+        }))
+    }
+    fn total_v0(&self, pk: &[u8], msg: &[u8], ctx: &[u8], sig: &[u8]) -> bool {
+        crate::stages_slhdsa::verify_total_v0::<P>(pk, msg, ctx, sig)
+    }
+    fn total_best(&self, pk: &[u8], msg: &[u8], ctx: &[u8], sig: &[u8]) -> bool {
+        crate::stages_slhdsa::verify_total_best::<P>(pk, msg, ctx, sig)
+    }
+    fn run_stages(&self, a: &crate::stages::StageArgs, out: &mut dyn std::io::Write) {
+        crate::stages::run_slh::<P>(self.0, a, out)
+    }
+    fn stage_memory_ops(&self, msg: &[u8], seed: &[u8]) -> Vec<(String, String, Box<dyn Fn() -> bool + Send + Sync>)> {
+        crate::stages::slh_memory_ops::<P>(self, msg, seed)
     }
 
     fn keygen(&self, seed: &[u8]) -> (Vec<u8>, Vec<u8>) {

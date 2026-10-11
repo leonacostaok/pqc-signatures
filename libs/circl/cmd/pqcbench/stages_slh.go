@@ -218,7 +218,7 @@ func (m *slhStages) stage(name, mode string) (stageRun, bool) {
 
 // bestUsesAltHash: total_best uses the SHA-2 midstate state for SHA2 sets and
 // the stdlib SHA-3 state for SHAKE sets (see docs/circl/verify-stages.md).
-var slhBestAltHash = map[bool]bool{true: true, false: true}
+var slhBestAltHash = map[bool]bool{true: true, false: false}
 
 // verifyPipeline: best=false is hmsg.v0 -> fors.v0 -> ht_wots.v0 -> ht_auth.v0
 // (identical work to slhdsa.Verify); best=true is lazy parse + alternative

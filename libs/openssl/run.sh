@@ -64,14 +64,21 @@ build_driver() {
   local prefix="$BUILD/$f" cflags
   cflags="$(driver_cflags "$f")"
   mkdir -p "$BIN"
-  if [ -f "$BIN/pqc_driver_$f" ] && [ "$BIN/pqc_driver_$f" -nt "$HERE/src/pqc_driver.c" ] \
-     && [ "$BIN/pqc_driver_$f" -nt "$prefix/lib/libcrypto.a" ]; then
-    return
-  fi
+  local up=0 src
+  for src in "$HERE"/src/*.c "$HERE"/src/*.h; do
+    [ -f "$BIN/pqc_driver_$f" ] && [ "$BIN/pqc_driver_$f" -nt "$src" ] || up=1
+  done
+  [ -f "$BIN/pqc_driver_$f" ] && [ "$BIN/pqc_driver_$f" -nt "$prefix/lib/libcrypto.a" ] || up=1
+  [ $up -eq 0 ] && return
   echo "[openssl] compiling driver for $f"
-  $CC $cflags -Wall -Wextra -Wno-unused-parameter -DBUILD_LABEL="\"$f\"" -DDRIVER_CFLAGS="\"$cflags\"" \
-    -I"$prefix/include" "$HERE/src/pqc_driver.c" -o "$BIN/pqc_driver_$f" \
-    "$prefix/lib/libcrypto.a" -lpthread -ldl
+  # the stage split calls libcrypto internals: internal headers come from the
+  # source tree + the per-flavour generated configuration headers
+  $CC $cflags -Wall -Wextra -Wno-unused-parameter -Wno-unused-function \
+    -DBUILD_LABEL="\"$f\"" -DDRIVER_CFLAGS="\"$cflags\"" \
+    -I"$prefix/include" -I"$BUILD/obj-$f/include" -I"$SRC/include" -I"$SRC" \
+    -I"$SRC/crypto/ml_dsa" -I"$SRC/crypto/slh_dsa" \
+    "$HERE"/src/pqc_driver.c "$HERE"/src/pqc_stages.c "$HERE"/src/pqc_validate.c "$HERE"/src/pqc_memory.c \
+    -o "$BIN/pqc_driver_$f" "$prefix/lib/libcrypto.a" -lpthread -ldl
 }
 
 cmd_build() {
@@ -119,10 +126,42 @@ case "${1:-}" in
       "$BIN/pqc_driver_$f" bench "$VECTORS" "$REFERENCE" --out "$OUT" "${ARGS[@]}" || rc=1
     done
     exit $rc ;;
+  stages|memory)
+    CMD="$1"; shift
+    need_build
+    OUT=""; ARGS=()
+    while [ $# -gt 0 ]; do
+      case "$1" in
+        --out) OUT="$2"; shift 2 ;;
+        --budget-ms|--params|--stages) ARGS+=("$1" "$2"); shift 2 ;;
+        *) echo "unknown option $1" >&2; exit 2 ;;
+      esac
+    done
+    [ -n "$OUT" ] || { echo "usage: $0 $CMD --out <file.jsonl> [--budget-ms N] [--params a,b] [--stages x,y]" >&2; exit 2; }
+    mkdir -p "$(dirname "$OUT")"
+    rc=0
+    for f in $FLAVOURS; do
+      "$BIN/pqc_driver_$f" "$CMD" "$VECTORS" "$REFERENCE" --out "$OUT" "${ARGS[@]}" || rc=1
+    done
+    exit $rc ;;
+  validate)
+    [ $# -eq 3 ] || { echo "usage: $0 validate <validation.json.gz> <out.json>" >&2; exit 2; }
+    need_build
+    mkdir -p "$(dirname "$3")" "$BUILD/validate"
+    SUITE="$BUILD/validate/suite.json"
+    # decompress once (cached by mtime); the C driver has no zlib (libcrypto built no-zlib)
+    if [ ! -f "$SUITE" ] || [ "$2" -nt "$SUITE" ]; then gzip -dc "$2" > "$SUITE"; fi
+    rc=0; PARTS=()
+    for f in $FLAVOURS; do
+      "$BIN/pqc_driver_$f" validate "$VECTORS" "$SUITE" "$BUILD/validate/part-$f.jsonl" || rc=1
+      PARTS+=("$BUILD/validate/part-$f.jsonl")
+    done
+    "$BIN/pqc_driver_default" merge-validate "$3" "${PARTS[@]}" || rc=1
+    exit $rc ;;
   list)
     need_build
     "$BIN/pqc_driver_default" list ;;
   *)
-    echo "usage: $0 {build|vectors <out.json>|crossverify <artifacts.json> <out.json>|bench --out <f.jsonl> [...]|list}" >&2
+    echo "usage: $0 {build|vectors <out.json>|crossverify <artifacts.json> <out.json>|bench --out <f.jsonl> [...]|validate <suite.json.gz> <out.json>|stages --out <f.jsonl> [...]|memory --out <f.jsonl> [...]|list}" >&2
     exit 2 ;;
 esac

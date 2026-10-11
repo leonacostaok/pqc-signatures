@@ -15,20 +15,16 @@
  */
 #include "pqc_stages.h"
 #include <pthread.h>
+#include <stdint.h>
 #include <openssl/sha.h>
 #include <openssl/byteorder.h>
 #include "internal/sha3.h"
 #include "internal/packet.h"
 
-/* --- ML-DSA internals */
-#include "ml_dsa_local.h"
-#include "ml_dsa_key.h"
-#include "ml_dsa_matrix.h"
-#include "ml_dsa_sign.h"
-#include "ml_dsa_hash.h"
-
-/* vendor the encoders so that the static poly_decode_10_bits / hint decoder
- * (OpenSSL's own decode code) can be timed in isolation */
+/* --- ML-DSA internals: most of the crypto/ml_dsa headers have no include
+ * guards, so they are pulled in exactly once through the vendored encoders.c.
+ * Vendoring the encoders makes the static poly_decode_10_bits / hint decoder
+ * (OpenSSL's own decode code) callable in isolation. */
 #define ossl_ml_dsa_pk_encode st_ml_dsa_pk_encode
 #define ossl_ml_dsa_pk_decode st_ml_dsa_pk_decode
 #define ossl_ml_dsa_sk_encode st_ml_dsa_sk_encode
@@ -46,6 +42,10 @@
 #undef ossl_ml_dsa_sig_decode
 #undef ossl_ml_dsa_poly_decode_expand_mask
 #undef ossl_ml_dsa_w1_encode
+#include "ml_dsa_matrix.h"
+/* the libcrypto originals that are still called directly (their prototypes
+ * above were renamed by the macros) */
+int ossl_ml_dsa_pk_decode(ML_DSA_KEY *key, const uint8_t *in, size_t in_len);
 
 /* --- SLH-DSA internals */
 #include "slh_dsa_local.h"
@@ -102,7 +102,7 @@ const stage_variant_t STAGE_VARIANTS[] = {
     { 1, 2, 4, EA_OSSL, 0, "native", "ossl-expand-A-native",
       "v0 code in the -O3 -march=native -flto build." },
     { 1, 2, 5, EA_THREADS, SF_THREADS, "default", "pthread-x4-rows",
-      "The k*l polynomials are expanded by 4 threads (fork/join per call, low-level SHAKE128 per thread)." },
+      "The k*l polynomials are expanded by 4 threads (persistent worker pool released through a barrier per call, low-level SHAKE128 per thread)." },
     /* ML-DSA w_approx */
     { 1, 3, 0, W_OSSL, 0, "default", "ossl-ntt",
       "OpenSSL code: SampleInBall+NTT(c), NTT(t1*2^d), pointwise mult (Montgomery, uint32), NTT(z), matrix_mult_vector, vector_sub, NTT^-1." },
@@ -147,7 +147,7 @@ const stage_variant_t STAGE_VARIANTS[] = {
     { 0, 1, 3, X_LL, 0, "default", "lowlevel-midstate",
       "Same tree walk with F/H/T on low-level primitives: SHA2 sets reuse a SHA-256/512 midstate of PK.seed||toByte(0) (one compression saved per call), SHAKE sets use ossl_sha3_* on the stack." },
     { 0, 1, 4, X_THREADS, SF_THREADS, "default", "pthread-x4-trees",
-      "The k FORS trees are split over 4 threads (fork/join per call), each thread using the low-level primitives; T() over the roots on the caller." },
+      "The k FORS trees are split over 4 threads (persistent pool, barrier per call), each thread using the low-level primitives; T() over the roots on the caller." },
     /* SLH-DSA ht_wots */
     { 0, 2, 0, X_OSSL, 0, "default", "ossl-wots_pkFromSig",
       "d calls of ossl_slh_wots_pk_from_sig (chains of F() via EVP, T() compression) with each layer's correct message." },
@@ -188,38 +188,66 @@ const stage_variant_t *stage_variant_find(int mldsa, int sidx, int vidx)
 }
 
 /* ------------------------------------------------------------ thread pool */
+/* A persistent pool of NTHREADS-1 workers plus the calling thread; a call
+ * publishes (fn, ctx, ntasks), releases the start barrier, every thread takes
+ * the tasks i = tid, tid+T, ..., and the end barrier joins them again. */
 
 typedef struct {
     int (*fn)(void *, int);
     void *ctx;
-    int ntasks, tid, T, ok;
-    pthread_t th;
-} task_arg_t;
+    int ntasks;
+    int ok[NTHREADS];
+    volatile int stop;
+    pthread_barrier_t start, end;
+    pthread_t th[NTHREADS];
+    int ready;
+} pool_t;
+static pool_t g_pool;
 
-static void *task_thread(void *a)
+static void pool_work(int tid)
 {
-    task_arg_t *t = a;
-    t->ok = 1;
-    for (int i = t->tid; i < t->ntasks; i += t->T)
-        if (!t->fn(t->ctx, i))
-            t->ok = 0;
+    pool_t *p = &g_pool;
+    int ok = 1;
+    for (int i = tid; i < p->ntasks; i += NTHREADS)
+        if (!p->fn(p->ctx, i))
+            ok = 0;
+    p->ok[tid] = ok;
+}
+
+static void *pool_thread(void *a)
+{
+    int tid = (int)(intptr_t)a;
+    for (;;) {
+        pthread_barrier_wait(&g_pool.start);
+        if (g_pool.stop)
+            break;
+        pool_work(tid);
+        pthread_barrier_wait(&g_pool.end);
+    }
     return NULL;
+}
+
+static void pool_init(void)
+{
+    if (g_pool.ready) return;
+    pthread_barrier_init(&g_pool.start, NULL, NTHREADS);
+    pthread_barrier_init(&g_pool.end, NULL, NTHREADS);
+    for (int i = 1; i < NTHREADS; i++)
+        pthread_create(&g_pool.th[i], NULL, pool_thread, (void *)(intptr_t)i);
+    g_pool.ready = 1;
 }
 
 static int run_tasks(int (*fn)(void *, int), void *ctx, int ntasks)
 {
-    task_arg_t ta[NTHREADS];
-    int T = ntasks < NTHREADS ? ntasks : NTHREADS, ok = 1;
-    for (int i = 0; i < T; i++) {
-        ta[i].fn = fn; ta[i].ctx = ctx; ta[i].ntasks = ntasks; ta[i].tid = i; ta[i].T = T;
-        if (i > 0)
-            pthread_create(&ta[i].th, NULL, task_thread, &ta[i]);
-    }
-    task_thread(&ta[0]);
-    for (int i = 1; i < T; i++)
-        pthread_join(ta[i].th, NULL);
-    for (int i = 0; i < T; i++)
-        ok &= ta[i].ok;
+    if (ntasks <= 0) return 1;
+    pool_init();
+    g_pool.fn = fn; g_pool.ctx = ctx; g_pool.ntasks = ntasks;
+    pthread_barrier_wait(&g_pool.start);
+    pool_work(0);
+    pthread_barrier_wait(&g_pool.end);
+    int ok = 1;
+    for (int i = 0; i < NTHREADS; i++)
+        ok &= g_pool.ok[i];
     return ok;
 }
 
@@ -278,6 +306,11 @@ typedef struct {
     int hint_ok_t;          /* result of the last hint_check run */
 } mld_t;
 
+static void own_zetas_init(void);
+static void own_t1_ntt(mld_t *m, int32_t *out);
+static int ml_expandA(mld_t *m, int method, MATRIX *A);
+static void mld_free(mld_t *m);
+
 static int evp_type_of(const char *name)
 {
     if (strcmp(name, "ML-DSA-44") == 0) return EVP_PKEY_ML_DSA_44;
@@ -321,6 +354,14 @@ static mld_t *mld_new(const param_t *p, const uint8_t *pk, size_t pk_len, const 
     m->sig0.c_tilde = m->ct0; m->sig0.c_tilde_len = m->ctl;
     vector_init(&m->sigt.z, m->zt, l); vector_init(&m->sigt.hint, m->ht, k);
     m->sigt.c_tilde = m->ctt; m->sigt.c_tilde_len = m->ctl;
+    /* per-public-key precomputation used by the SF_CACHE variants (depends on pk only) */
+    vector_scale_power2_round_ntt(&m->key->t1, &m->ct1cv);
+    own_zetas_init();
+    own_t1_ntt(m, m->t1ntt_own);
+    if (!ml_expandA(m, EA_OSSL, &m->A0m)) {
+        mld_free(m);
+        return NULL;
+    }
     return m;
 }
 
@@ -616,11 +657,12 @@ static int ml_w_approx(mld_t *m, int method, const ML_DSA_SIG *sig, const MATRIX
     for (size_t i = 0; i < k; i++) {
         int32_t *r = acc + i * 256;
         for (int t = 0; t < 256; t++) {
-            int64_t s = 0;
+            /* one 64-bit accumulation of the l products minus c*t1, then a single
+             * Montgomery reduction: |r| < q, which the lazy NTT^-1 requires */
+            int64_t s = -(int64_t)cn[t] * t1n[i * 256 + t];
             for (size_t j = 0; j < l; j++)
-                s += own_mont_reduce((int64_t)A->m_poly[i * l + j].coeff[t] * z[j * 256 + t]);
-            s -= own_mont_reduce((int64_t)cn[t] * t1n[i * 256 + t]);
-            r[t] = (int32_t)s;
+                s += (int64_t)A->m_poly[i * l + j].coeff[t] * z[j * 256 + t];
+            r[t] = own_mont_reduce(s);
         }
         own_invntt_tomont(r);
         for (int t = 0; t < 256; t++) {
@@ -835,6 +877,16 @@ static int own_mgf1(slh_t *s, int midstate, const uint8_t *seed, size_t seed_len
     return 1;
 }
 
+/* split the digest: md || tree idx || leaf idx (as OpenSSL's get_tree_ids) */
+static void slh_split(slh_t *s, const uint8_t *digest, uint64_t *tree, uint32_t *leaf)
+{
+    const uint8_t *p = digest + s->md_len;
+    size_t tlen = (s->prm->h - s->hm + 7) >> 3, llen = (s->hm + 7) >> 3;
+    uint64_t tmask = (~(uint64_t)0) >> (64 - (s->prm->h - s->hm));
+    *tree = be_bytes(p, tlen) & tmask;
+    *leaf = (uint32_t)(be_bytes(p + tlen, llen) & (((uint64_t)1 << s->hm) - 1));
+}
+
 static int slh_hmsg(slh_t *s, int method, uint8_t *digest, uint64_t *tree, uint32_t *leaf)
 {
     size_t n = s->n;
@@ -862,12 +914,7 @@ static int slh_hmsg(slh_t *s, int method, uint8_t *digest, uint64_t *tree, uint3
         }
         own_mgf1(s, method == HM_LL_MID, seed, 2 * n + sz, digest, s->m);
     }
-    /* split: md || tree idx || leaf idx (as OpenSSL's get_tree_ids) */
-    const uint8_t *p = digest + s->md_len;
-    size_t tlen = (s->prm->h - s->hm + 7) >> 3, llen = (s->hm + 7) >> 3;
-    uint64_t tmask = (~(uint64_t)0) >> (64 - (s->prm->h - s->hm));
-    *tree = be_bytes(p, tlen) & tmask;
-    *leaf = (uint32_t)(be_bytes(p + tlen, llen) & (((uint64_t)1 << s->hm) - 1));
+    slh_split(s, digest, tree, leaf);
     return 1;
 }
 
@@ -1219,31 +1266,43 @@ static void stage_commit(stage_ctx_t *s, int sidx)
 
 int stage_prepare(stage_ctx_t *s)
 {
-    int n = stage_ctx_nstages(s), ok = 1;
-    for (int i = 0; i < n && ok; i++) {
-        ok = stage_op(s, i, 0);
-        if (ok) {
-            stage_sha(s, i, s->sha0[i]);
-            stage_commit(s, i);
-            if (!s->mldsa && i == 0) {
-                /* hmsg: record tree/leaf ids from the committed digest */
-                slh_t *t = s->s;
-                uint64_t tree; uint32_t leaf;
-                slh_hmsg(t, HM_LL, t->digestt, &tree, &leaf); /* cheap re-parse (same digest) */
-                memcpy(t->digestt, t->digest0, 64);
-                t->tree0 = tree; t->leaf0 = leaf;
-                slh_layer_ids(t, tree, leaf);
+    int ok;
+    if (s->mldsa) {
+        ok = 1;
+        for (int i = 0; i < 5 && ok; i++) {
+            ok = stage_op(s, i, 0);
+            if (ok) {
+                stage_sha(s, i, s->sha0[i]);
+                stage_commit(s, i);
             }
         }
+        return ok;
     }
-    if (ok && s->mldsa) {
-        /* build the per-key caches used by the SF_CACHE variants */
-        mld_t *m = s->m;
-        vector_scale_power2_round_ntt(&m->key->t1, &m->ct1cv);
-        own_zetas_init();
-        own_t1_ntt(m, m->t1ntt_own);
+    slh_t *t = s->s;
+    ok = stage_op(s, 0, 0);
+    if (!ok) return 0;
+    stage_sha(s, 0, s->sha0[0]);
+    stage_commit(s, 0);
+    slh_split(t, t->digest0, &t->tree0, &t->leaf0);
+    slh_layer_ids(t, t->tree0, t->leaf0);
+    ok = stage_op(s, 1, 0);
+    if (!ok) return 0;
+    stage_sha(s, 1, s->sha0[1]);
+    stage_commit(s, 1);
+    /* the hypertree layers are sequential (layer i signs root i-1): walk them
+     * with the v0 code to produce every layer's message, WOTS pk and root */
+    const uint8_t *node = t->pkfors0;
+    for (size_t i = 0; i < t->d; i++) {
+        if (!wots_layer(t, X_OSSL, i, node, t->wots0 + i * t->n)
+            || !auth_layer(t, X_OSSL, i, t->wots0 + i * t->n, t->roots0 + i * t->n))
+            return 0;
+        node = t->roots0 + i * t->n;
+        if (i + 1 < t->d)
+            memcpy(s->layer_msgs0 + (i + 1) * t->n, node, t->n);
     }
-    return ok;
+    sha256_hex(t->wots0, t->d * t->n, s->sha0[2]);
+    sha256_hex(t->roots0, t->d * t->n, s->sha0[3]);
+    return memcmp(node, t->pk_root, t->n) == 0;
 }
 
 int stage_run(stage_ctx_t *s, int sidx, int method, char sha[65])
