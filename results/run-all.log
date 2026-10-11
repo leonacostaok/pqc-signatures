@@ -37,3 +37,83 @@ pqcbench-purego
 [noble] SLH-DSA-SHA2-128f   sig  17088 B  self_verify=true  reference_match=true
 [noble] SLH-DSA-SHA2-192s   sig  16224 B  self_verify=true  reference_match=true
 [noble] SLH-DSA-SHA2-192f   sig  35664 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHA2-256s   sig  29792 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHA2-256f   sig  49856 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHAKE-128s  sig   7856 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHAKE-128f  sig  17088 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHAKE-192s  sig  16224 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHAKE-192f  sig  35664 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHAKE-256s  sig  29792 B  self_verify=true  reference_match=true
+[noble] SLH-DSA-SHAKE-256f  sig  49856 B  self_verify=true  reference_match=true
+[noble] Falcon-512          sig    654 B  self_verify=true  reference_match=null
+[noble] Falcon-1024         sig   1276 B  self_verify=true  reference_match=null
+== vectors liboqs
+vectors: 17 params, mismatches: none
+== vectors openssl
+ML-DSA-44            pk=1312 sk=2560 sig=2420 self_verify=1 reference_match=1
+ML-DSA-65            pk=1952 sk=4032 sig=3309 self_verify=1 reference_match=1
+ML-DSA-87            pk=2592 sk=4896 sig=4627 self_verify=1 reference_match=1
+SLH-DSA-SHA2-128s    pk=32 sk=64 sig=7856 self_verify=1 reference_match=1
+SLH-DSA-SHA2-128f    pk=32 sk=64 sig=17088 self_verify=1 reference_match=1
+SLH-DSA-SHA2-192s    pk=48 sk=96 sig=16224 self_verify=1 reference_match=1
+SLH-DSA-SHA2-192f    pk=48 sk=96 sig=35664 self_verify=1 reference_match=1
+SLH-DSA-SHA2-256s    pk=64 sk=128 sig=29792 self_verify=1 reference_match=1
+SLH-DSA-SHA2-256f    pk=64 sk=128 sig=49856 self_verify=1 reference_match=1
+SLH-DSA-SHAKE-128s   pk=32 sk=64 sig=7856 self_verify=1 reference_match=1
+SLH-DSA-SHAKE-128f   pk=32 sk=64 sig=17088 self_verify=1 reference_match=1
+SLH-DSA-SHAKE-192s   pk=48 sk=96 sig=16224 self_verify=1 reference_match=1
+SLH-DSA-SHAKE-192f   pk=48 sk=96 sig=35664 self_verify=1 reference_match=1
+SLH-DSA-SHAKE-256s   pk=64 sk=128 sig=29792 self_verify=1 reference_match=1
+SLH-DSA-SHAKE-256f   pk=64 sk=128 sig=49856 self_verify=1 reference_match=1
+15/15 params match the reference
+== vectors circl
+ML-DSA-44            pk=1312 sk=2560 sig=2420 self_verify=true OK
+ML-DSA-65            pk=1952 sk=4032 sig=3309 self_verify=true OK
+ML-DSA-87            pk=2592 sk=4896 sig=4627 self_verify=true OK
+SLH-DSA-SHA2-128s    pk=32 sk=64 sig=7856 self_verify=true OK
+SLH-DSA-SHA2-128f    pk=32 sk=64 sig=17088 self_verify=true OK
+SLH-DSA-SHA2-192s    pk=48 sk=96 sig=16224 self_verify=true OK
+SLH-DSA-SHA2-192f    pk=48 sk=96 sig=35664 self_verify=true OK
+SLH-DSA-SHA2-256s    pk=64 sk=128 sig=29792 self_verify=true OK
+SLH-DSA-SHA2-256f    pk=64 sk=128 sig=49856 self_verify=true OK
+SLH-DSA-SHAKE-128s   pk=32 sk=64 sig=7856 self_verify=true OK
+SLH-DSA-SHAKE-128f   pk=32 sk=64 sig=17088 self_verify=true OK
+SLH-DSA-SHAKE-192s   pk=48 sk=96 sig=16224 self_verify=true OK
+SLH-DSA-SHAKE-192f   pk=48 sk=96 sig=35664 self_verify=true OK
+SLH-DSA-SHAKE-256s   pk=64 sk=128 sig=29792 self_verify=true OK
+SLH-DSA-SHAKE-256f   pk=64 sk=128 sig=49856 self_verify=true OK
+== vectors rustcrypto
+ML-DSA-44              pk=1312 sk=2560 sig=2420 self_verify=true tamper_rejected=true reference_match=true
+ML-DSA-65              pk=1952 sk=4032 sig=3309 self_verify=true tamper_rejected=true reference_match=true
+ML-DSA-87              pk=2592 sk=4896 sig=4627 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHA2-128s      pk=32 sk=64 sig=7856 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHA2-128f      pk=32 sk=64 sig=17088 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHA2-192s      pk=48 sk=96 sig=16224 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHA2-192f      pk=48 sk=96 sig=35664 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHA2-256s      pk=64 sk=128 sig=29792 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHA2-256f      pk=64 sk=128 sig=49856 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHAKE-128s     pk=32 sk=64 sig=7856 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHAKE-128f     pk=32 sk=64 sig=17088 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHAKE-192s     pk=48 sk=96 sig=16224 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHAKE-192f     pk=48 sk=96 sig=35664 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHAKE-256s     pk=64 sk=128 sig=29792 self_verify=true tamper_rejected=true reference_match=true
+SLH-DSA-SHAKE-256f     pk=64 sk=128 sig=49856 self_verify=true tamper_rejected=true reference_match=true
+all 15 parameter sets match common/reference.json
+== vectors bouncycastle
+ML-DSA-44            pk= 1312 sk= 2560 sig= 2420 self_verify=true MATCH reference
+ML-DSA-65            pk= 1952 sk= 4032 sig= 3309 self_verify=true MATCH reference
+ML-DSA-87            pk= 2592 sk= 4896 sig= 4627 self_verify=true MATCH reference
+SLH-DSA-SHA2-128s    pk=   32 sk=   64 sig= 7856 self_verify=true MATCH reference
+SLH-DSA-SHA2-128f    pk=   32 sk=   64 sig=17088 self_verify=true MATCH reference
+SLH-DSA-SHA2-192s    pk=   48 sk=   96 sig=16224 self_verify=true MATCH reference
+SLH-DSA-SHA2-192f    pk=   48 sk=   96 sig=35664 self_verify=true MATCH reference
+SLH-DSA-SHA2-256s    pk=   64 sk=  128 sig=29792 self_verify=true MATCH reference
+SLH-DSA-SHA2-256f    pk=   64 sk=  128 sig=49856 self_verify=true MATCH reference
+SLH-DSA-SHAKE-128s   pk=   32 sk=   64 sig= 7856 self_verify=true MATCH reference
+SLH-DSA-SHAKE-128f   pk=   32 sk=   64 sig=17088 self_verify=true MATCH reference
+SLH-DSA-SHAKE-192s   pk=   48 sk=   96 sig=16224 self_verify=true MATCH reference
+SLH-DSA-SHAKE-192f   pk=   48 sk=   96 sig=35664 self_verify=true MATCH reference
+SLH-DSA-SHAKE-256s   pk=   64 sk=  128 sig=29792 self_verify=true MATCH reference
+SLH-DSA-SHAKE-256f   pk=   64 sk=  128 sig=49856 self_verify=true MATCH reference
+Falcon-512           pk=  897 sk= 1281 sig=  666 self_verify=true (no byte match expected)
+Falcon-1024          pk= 1793 sk= 2305 sig= 1280 self_verify=true (no byte match expected)
