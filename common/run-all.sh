@@ -39,3 +39,4 @@ done; fi
 
 node "$ROOT/common/check-match.mjs" || echo "!! match check reported problems (see results/MATCH.md)"
 node "$ROOT/common/report.mjs"
+node "$ROOT/common/report-phase2.mjs"

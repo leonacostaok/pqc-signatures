@@ -46,6 +46,36 @@ for (const l of LIBS) {
   out.bench_match[l] = { rows: rows.length, match: m, fails };
   bad += fails.length;
 }
+// 4. validation suite (NIST ACVP + negative) through every variant
+out.validation = {};
+for (const l of LIBS) {
+  const f = `results/${l}/validation.json`;
+  if (!existsSync(new URL(f, root))) continue;
+  const v = rd(f);
+  const fails = v.results.filter((r) => r.pass === false);
+  out.validation[l] = { summary: v.summary, cases: v.results.length, fails: fails.map((r) => `${r.variant} ${r.id}`) };
+  bad += fails.length;
+}
+// 5. verify stages: every alternative matches its v0, and v0 canonical outputs agree across libraries
+out.stages = { per_lib: {}, cross_lib: {} };
+const stageRef = {};
+for (const l of LIBS) {
+  const f = new URL(`results/${l}/stages.jsonl`, root);
+  if (!existsSync(f)) continue;
+  const rows = readFileSync(f, 'utf8').trim().split('\n').filter(Boolean).map((x) => JSON.parse(x));
+  const fails = rows.filter((r) => r.match !== true).map((r) => `${r.variant}/${r.param}`);
+  out.stages.per_lib[l] = { rows: rows.length, fails };
+  bad += fails.length;
+  for (const r of rows.filter((r) => /\.v0$/.test(r.variant))) {
+    const k = `${r.param}/${r.stage}`;
+    (stageRef[k] ??= {})[l] = r.output_sha256;
+  }
+}
+for (const [k, m] of Object.entries(stageRef)) {
+  const vals = new Set(Object.values(m));
+  out.stages.cross_lib[k] = { libs: Object.keys(m).length, agree: vals.size === 1, by_lib: m };
+  if (vals.size !== 1) bad++;
+}
 writeFileSync(new URL('results/match.json', root), JSON.stringify(out, null, 2) + '\n');
 
 // Markdown
@@ -61,6 +91,14 @@ md += `| verifier \\ signer | ${LIBS.join(' | ')} |\n|---|${LIBS.map(() => '---'
 for (const v of vs) md += `| **${v}** | ${LIBS.map((s) => { const c = out.crossverify[`${v}<-${s}`]; return c ? `${c.ok}/${c.ok + c.fail} ok, ${c.tamper_ok} tamper rejected` : '—'; }).join(' | ')} |\n`;
 md += '\n## Benchmark variants matching the reference\n\n| lib | rows | matching |\n|---|---|---|\n';
 for (const [l, b] of Object.entries(out.bench_match)) md += `| ${l} | ${b.rows} | ${b.match}${b.fails.length ? ' (fails: ' + b.fails.slice(0, 10).join(', ') + ')' : ''} |\n`;
+md += '\n## Validation suite (NIST ACVP FIPS 204/205 + negative tests), every case through every variant\n\n| lib | cases run | variants | failures |\n|---|---|---|---|\n';
+for (const [l, v] of Object.entries(out.validation)) md += `| ${l} | ${v.cases} | ${Object.keys(v.summary ?? {}).length} | ${v.fails.length ? v.fails.slice(0, 8).join('<br>') + (v.fails.length > 8 ? ` (+${v.fails.length - 8})` : '') : '0'} |\n`;
+md += '\n## Verify stages: canonical intermediate outputs agree across libraries\n\n';
+const disagree = Object.entries(out.stages.cross_lib).filter(([, v]) => !v.agree);
+md += `${Object.keys(out.stages.cross_lib).length} (param, stage) pairs compared, ${disagree.length} disagreements.\n`;
+for (const [k, v] of disagree) md += `- ${k}: ${Object.entries(v.by_lib).map(([l, h]) => `${l}=${String(h).slice(0, 12)}`).join(', ')}\n`;
+md += '\n| lib | stage rows | alternatives not matching v0 |\n|---|---|---|\n';
+for (const [l, v] of Object.entries(out.stages.per_lib)) md += `| ${l} | ${v.rows} | ${v.fails.length ? v.fails.slice(0, 8).join(', ') : '0'} |\n`;
 md += `\n**Problems found: ${bad}**\n`;
 writeFileSync(new URL('results/MATCH.md', root), md);
 console.log(md);
