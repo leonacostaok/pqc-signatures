@@ -2196,3 +2196,1205 @@ keygen.v0  SLH-DSA-SHAKE-256s     median=   259485106 ns  ops/s=       3.8 cpu_u
 keygen.v5  SLH-DSA-SHAKE-256s     median=    79720530 ns  ops/s=      12.7 cpu_util=3.62 match=true
 sign.v0    SLH-DSA-SHAKE-256s     median=  3424251299 ns  ops/s=       0.3 cpu_util=0.99 match=true
 sign.v4    SLH-DSA-SHAKE-256s     median=  3415597037 ns  ops/s=       0.3 cpu_util=0.99 match=true
+sign.v5    SLH-DSA-SHAKE-256s     median=  1046413806 ns  ops/s=       1.0 cpu_util=3.65 match=true
+verify.v0  SLH-DSA-SHAKE-256s     median=     4151833 ns  ops/s=     222.9 cpu_util=0.99 match=true
+verify.v4  SLH-DSA-SHAKE-256s     median=     4253174 ns  ops/s=     202.1 cpu_util=0.99 match=true
+verify.v5  SLH-DSA-SHAKE-256s     median=     1907049 ns  ops/s=     531.7 cpu_util=3.46 match=true
+keygen.v0  SLH-DSA-SHAKE-256f     median=    22851254 ns  ops/s=      44.9 cpu_util=1.00 match=true
+keygen.v5  SLH-DSA-SHAKE-256f     median=     6870324 ns  ops/s=     147.0 cpu_util=3.69 match=true
+sign.v0    SLH-DSA-SHAKE-256f     median=   322788024 ns  ops/s=       3.0 cpu_util=1.00 match=true
+sign.v4    SLH-DSA-SHAKE-256f     median=   341577449 ns  ops/s=       3.0 cpu_util=0.99 match=true
+sign.v5    SLH-DSA-SHAKE-256f     median=   121332433 ns  ops/s=       8.2 cpu_util=3.61 match=true
+verify.v0  SLH-DSA-SHAKE-256f     median=     8873028 ns  ops/s=      93.9 cpu_util=0.98 match=true
+verify.v4  SLH-DSA-SHAKE-256f     median=     8386237 ns  ops/s=      99.2 cpu_util=0.99 match=true
+verify.v5  SLH-DSA-SHAKE-256f     median=     3461933 ns  ops/s=     291.3 cpu_util=3.47 match=true
+keygen.v1  ML-DSA-44              median=      266290 ns  ops/s=    4053.6 cpu_util=1.00 match=true
+sign.v1    ML-DSA-44              median=      182607 ns  ops/s=    4735.7 cpu_util=0.99 match=true
+verify.v1  ML-DSA-44              median=      141754 ns  ops/s=    7109.4 cpu_util=0.99 match=true
+keygen.v1  ML-DSA-65              median=      320811 ns  ops/s=    2639.2 cpu_util=1.00 match=true
+sign.v1    ML-DSA-65              median=      905369 ns  ops/s=     957.9 cpu_util=0.97 match=true
+verify.v1  ML-DSA-65              median=      185236 ns  ops/s=    4531.5 cpu_util=0.97 match=true
+keygen.v1  ML-DSA-87              median=      533592 ns  ops/s=    1659.4 cpu_util=0.96 match=true
+sign.v1    ML-DSA-87              median=      602957 ns  ops/s=    1470.6 cpu_util=0.99 match=true
+verify.v1  ML-DSA-87              median=      402846 ns  ops/s=    2600.9 cpu_util=0.99 match=true
+keygen.v1  SLH-DSA-SHA2-128s      median=    85301465 ns  ops/s=      11.2 cpu_util=0.99 match=true
+sign.v1    SLH-DSA-SHA2-128s      median=   609316556 ns  ops/s=       1.5 cpu_util=0.99 match=true
+verify.v1  SLH-DSA-SHA2-128s      median=      609380 ns  ops/s=    1572.4 cpu_util=1.00 match=true
+keygen.v1  SLH-DSA-SHA2-128f      median=     1160002 ns  ops/s=     841.8 cpu_util=1.00 match=true
+sign.v1    SLH-DSA-SHA2-128f      median=    29418451 ns  ops/s=      33.0 cpu_util=0.99 match=true
+verify.v1  SLH-DSA-SHA2-128f      median=     1987636 ns  ops/s=     458.1 cpu_util=0.99 match=true
+keygen.v1  SLH-DSA-SHA2-192s      median=   135549495 ns  ops/s=       7.2 cpu_util=0.95 match=true
+sign.v1    SLH-DSA-SHA2-192s      median=  1225423762 ns  ops/s=       0.8 cpu_util=0.98 match=true
+verify.v1  SLH-DSA-SHA2-192s      median=      928265 ns  ops/s=     823.0 cpu_util=0.99 match=true
+keygen.v1  SLH-DSA-SHA2-192f      median=     1721702 ns  ops/s=     523.0 cpu_util=0.99 match=true
+sign.v1    SLH-DSA-SHA2-192f      median=    47551692 ns  ops/s=      20.7 cpu_util=0.99 match=true
+verify.v1  SLH-DSA-SHA2-192f      median=     2679259 ns  ops/s=     332.0 cpu_util=0.97 match=true
+keygen.v1  SLH-DSA-SHA2-256s      median=    73303433 ns  ops/s=      11.8 cpu_util=1.00 match=true
+sign.v1    SLH-DSA-SHA2-256s      median=   986581653 ns  ops/s=       1.0 cpu_util=0.99 match=true
+verify.v1  SLH-DSA-SHA2-256s      median=     1338007 ns  ops/s=     726.4 cpu_util=1.00 match=true
+keygen.v1  SLH-DSA-SHA2-256f      median=     4639428 ns  ops/s=     184.1 cpu_util=1.00 match=true
+sign.v1    SLH-DSA-SHA2-256f      median=    98020292 ns  ops/s=       9.4 cpu_util=0.98 match=true
+verify.v1  SLH-DSA-SHA2-256f      median=     4617886 ns  ops/s=     241.4 cpu_util=0.99 match=true
+keygen.v1  SLH-DSA-SHAKE-128s     median=   236705757 ns  ops/s=       4.2 cpu_util=0.99 match=true
+sign.v1    SLH-DSA-SHAKE-128s     median=  2291702202 ns  ops/s=       0.5 cpu_util=0.99 match=true
+verify.v1  SLH-DSA-SHAKE-128s     median=     1860473 ns  ops/s=     468.9 cpu_util=1.00 match=true
+keygen.v1  SLH-DSA-SHAKE-128f     median=     3752815 ns  ops/s=     259.6 cpu_util=1.00 match=true
+sign.v1    SLH-DSA-SHAKE-128f     median=    91106089 ns  ops/s=      10.8 cpu_util=0.99 match=true
+verify.v1  SLH-DSA-SHAKE-128f     median=     6083659 ns  ops/s=     141.4 cpu_util=0.99 match=true
+keygen.v1  SLH-DSA-SHAKE-192s     median=   476312672 ns  ops/s=       2.0 cpu_util=0.99 match=true
+sign.v1    SLH-DSA-SHAKE-192s     median=  3606275492 ns  ops/s=       0.3 cpu_util=0.99 match=true
+verify.v1  SLH-DSA-SHAKE-192s     median=     2753627 ns  ops/s=     346.7 cpu_util=0.99 match=true
+keygen.v1  SLH-DSA-SHAKE-192f     median=     5612303 ns  ops/s=     166.2 cpu_util=0.97 match=true
+sign.v1    SLH-DSA-SHAKE-192f     median=   156947882 ns  ops/s=       5.5 cpu_util=0.99 match=true
+verify.v1  SLH-DSA-SHAKE-192f     median=     8300645 ns  ops/s=     103.8 cpu_util=0.99 match=true
+keygen.v1  SLH-DSA-SHAKE-256s     median=   223160311 ns  ops/s=       4.5 cpu_util=1.00 match=true
+sign.v1    SLH-DSA-SHAKE-256s     median=  2910861223 ns  ops/s=       0.3 cpu_util=0.99 match=true
+verify.v1  SLH-DSA-SHAKE-256s     median=     4048528 ns  ops/s=     237.0 cpu_util=1.00 match=true
+keygen.v1  SLH-DSA-SHAKE-256f     median=    14335295 ns  ops/s=      64.2 cpu_util=0.98 match=true
+sign.v1    SLH-DSA-SHAKE-256f     median=   287245458 ns  ops/s=       3.5 cpu_util=1.00 match=true
+verify.v1  SLH-DSA-SHAKE-256f     median=     8228094 ns  ops/s=     119.0 cpu_util=0.99 match=true
+keygen.v2  ML-DSA-44              median=      158353 ns  ops/s=    5279.4 cpu_util=0.99 match=true
+sign.v2    ML-DSA-44              median=      194413 ns  ops/s=    4231.4 cpu_util=0.99 match=true
+verify.v2  ML-DSA-44              median=       98973 ns  ops/s=    9691.0 cpu_util=1.00 match=true
+keygen.v2  ML-DSA-65              median=      250244 ns  ops/s=    3593.7 cpu_util=0.98 match=true
+sign.v2    ML-DSA-65              median=      846138 ns  ops/s=    1111.3 cpu_util=0.98 match=true
+verify.v2  ML-DSA-65              median=      163308 ns  ops/s=    5367.2 cpu_util=1.00 match=true
+keygen.v2  ML-DSA-87              median=      476380 ns  ops/s=    1964.9 cpu_util=0.99 match=true
+sign.v2    ML-DSA-87              median=      560925 ns  ops/s=    1656.6 cpu_util=0.98 match=true
+verify.v2  ML-DSA-87              median=      261052 ns  ops/s=    3506.0 cpu_util=0.99 match=true
+keygen.v2  SLH-DSA-SHA2-128s      median=    99649637 ns  ops/s=       9.9 cpu_util=1.00 match=true
+sign.v2    SLH-DSA-SHA2-128s      median=   777217811 ns  ops/s=       1.3 cpu_util=0.99 match=true
+verify.v2  SLH-DSA-SHA2-128s      median=      732923 ns  ops/s=    1319.7 cpu_util=0.99 match=true
+keygen.v2  SLH-DSA-SHA2-128f      median=     1485317 ns  ops/s=     671.1 cpu_util=1.00 match=true
+sign.v2    SLH-DSA-SHA2-128f      median=    34945322 ns  ops/s=      28.2 cpu_util=1.00 match=true
+verify.v2  SLH-DSA-SHA2-128f      median=     2169013 ns  ops/s=     438.9 cpu_util=0.99 match=true
+keygen.v2  SLH-DSA-SHA2-192s      median=   146153550 ns  ops/s=       6.7 cpu_util=1.00 match=true
+sign.v2    SLH-DSA-SHA2-192s      median=  1313908447 ns  ops/s=       0.8 cpu_util=1.00 match=true
+verify.v2  SLH-DSA-SHA2-192s      median=     1062556 ns  ops/s=     876.7 cpu_util=0.99 match=true
+keygen.v2  SLH-DSA-SHA2-192f      median=     2249940 ns  ops/s=     432.5 cpu_util=0.99 match=true
+sign.v2    SLH-DSA-SHA2-192f      median=    59204822 ns  ops/s=      16.2 cpu_util=0.99 match=true
+verify.v2  SLH-DSA-SHA2-192f      median=     3118068 ns  ops/s=     312.2 cpu_util=0.99 match=true
+keygen.v2  SLH-DSA-SHA2-256s      median=    94188911 ns  ops/s=      10.3 cpu_util=1.00 match=true
+sign.v2    SLH-DSA-SHA2-256s      median=  1281503692 ns  ops/s=       0.8 cpu_util=0.98 match=true
+verify.v2  SLH-DSA-SHA2-256s      median=     1580497 ns  ops/s=     627.8 cpu_util=1.00 match=true
+keygen.v2  SLH-DSA-SHA2-256f      median=     7928352 ns  ops/s=     130.2 cpu_util=0.99 match=true
+sign.v2    SLH-DSA-SHA2-256f      median=   119630790 ns  ops/s=       8.3 cpu_util=1.00 match=true
+verify.v2  SLH-DSA-SHA2-256f      median=     3157098 ns  ops/s=     309.7 cpu_util=1.00 match=true
+keygen.v2  SLH-DSA-SHAKE-128s     median=   312022123 ns  ops/s=       3.1 cpu_util=0.98 match=true
+sign.v2    SLH-DSA-SHAKE-128s     median=  2069360716 ns  ops/s=       0.5 cpu_util=0.99 match=true
+verify.v2  SLH-DSA-SHAKE-128s     median=     1856649 ns  ops/s=     465.3 cpu_util=0.99 match=true
+keygen.v2  SLH-DSA-SHAKE-128f     median=     3918531 ns  ops/s=     234.1 cpu_util=0.99 match=true
+sign.v2    SLH-DSA-SHAKE-128f     median=    92079371 ns  ops/s=      10.8 cpu_util=1.00 match=true
+verify.v2  SLH-DSA-SHAKE-128f     median=     5760563 ns  ops/s=     168.0 cpu_util=1.00 match=true
+keygen.v2  SLH-DSA-SHAKE-192s     median=   373211590 ns  ops/s=       2.5 cpu_util=1.00 match=true
+sign.v2    SLH-DSA-SHAKE-192s     median=  3562595479 ns  ops/s=       0.3 cpu_util=0.99 match=true
+verify.v2  SLH-DSA-SHAKE-192s     median=     2682744 ns  ops/s=     364.9 cpu_util=1.00 match=true
+keygen.v2  SLH-DSA-SHAKE-192f     median=     5642528 ns  ops/s=     156.5 cpu_util=1.00 match=true
+sign.v2    SLH-DSA-SHAKE-192f     median=   145861517 ns  ops/s=       6.4 cpu_util=1.00 match=true
+verify.v2  SLH-DSA-SHAKE-192f     median=     7677990 ns  ops/s=     123.7 cpu_util=1.00 match=true
+keygen.v2  SLH-DSA-SHAKE-256s     median=   290607764 ns  ops/s=       3.3 cpu_util=0.99 match=true
+sign.v2    SLH-DSA-SHAKE-256s     median=  3437197144 ns  ops/s=       0.3 cpu_util=0.99 match=true
+verify.v2  SLH-DSA-SHAKE-256s     median=     3971183 ns  ops/s=     214.8 cpu_util=0.98 match=true
+keygen.v2  SLH-DSA-SHAKE-256f     median=    15725488 ns  ops/s=      51.8 cpu_util=0.99 match=true
+sign.v2    SLH-DSA-SHAKE-256f     median=   319688892 ns  ops/s=       3.1 cpu_util=0.96 match=true
+verify.v2  SLH-DSA-SHAKE-256f     median=     8110017 ns  ops/s=     120.4 cpu_util=0.99 match=true
+keygen.v4  ML-DSA-44              median=      156481 ns  ops/s=    5615.2 cpu_util=1.00 match=true
+keygen.v4  ML-DSA-65              median=      253210 ns  ops/s=    3832.7 cpu_util=1.00 match=true
+keygen.v4  ML-DSA-87              median=      426800 ns  ops/s=    2308.7 cpu_util=0.99 match=true
+keygen.v4  SLH-DSA-SHA2-128s      median=   100342769 ns  ops/s=       9.8 cpu_util=0.98 match=true
+keygen.v4  SLH-DSA-SHA2-128f      median=     1560087 ns  ops/s=     586.1 cpu_util=0.98 match=true
+keygen.v4  SLH-DSA-SHA2-192s      median=   146517430 ns  ops/s=       6.6 cpu_util=1.00 match=true
+keygen.v4  SLH-DSA-SHA2-192f      median=     2265151 ns  ops/s=     416.9 cpu_util=0.99 match=true
+keygen.v4  SLH-DSA-SHA2-256s      median=    96095822 ns  ops/s=      10.3 cpu_util=0.99 match=true
+keygen.v4  SLH-DSA-SHA2-256f      median=     5974494 ns  ops/s=     156.9 cpu_util=0.99 match=true
+keygen.v4  SLH-DSA-SHAKE-128s     median=   268133463 ns  ops/s=       3.6 cpu_util=0.99 match=true
+keygen.v4  SLH-DSA-SHAKE-128f     median=     3977335 ns  ops/s=     250.6 cpu_util=1.00 match=true
+keygen.v4  SLH-DSA-SHAKE-192s     median=   393821338 ns  ops/s=       2.4 cpu_util=0.99 match=true
+keygen.v4  SLH-DSA-SHAKE-192f     median=     5836041 ns  ops/s=     156.5 cpu_util=1.00 match=true
+keygen.v4  SLH-DSA-SHAKE-256s     median=   262874431 ns  ops/s=       3.6 cpu_util=1.00 match=true
+keygen.v4  SLH-DSA-SHAKE-256f     median=    15719183 ns  ops/s=      63.1 cpu_util=1.00 match=true
+keygen.v3  ML-DSA-44              median=      164150 ns  ops/s=    5677.3 cpu_util=0.99 match=true
+keygen.v3  ML-DSA-65              median=      275254 ns  ops/s=    3394.2 cpu_util=0.98 match=true
+keygen.v3  ML-DSA-87              median=      459005 ns  ops/s=    1827.9 cpu_util=0.98 match=true
+keygen.v3  SLH-DSA-SHA2-128s      median=    78505865 ns  ops/s=      11.8 cpu_util=0.98 match=true
+keygen.v3  SLH-DSA-SHA2-128f      median=     1241249 ns  ops/s=     726.0 cpu_util=0.99 match=true
+keygen.v3  SLH-DSA-SHA2-192s      median=   116258297 ns  ops/s=       8.6 cpu_util=1.00 match=true
+keygen.v3  SLH-DSA-SHA2-192f      median=     1738631 ns  ops/s=     556.4 cpu_util=1.00 match=true
+keygen.v3  SLH-DSA-SHA2-256s      median=    76970300 ns  ops/s=      12.3 cpu_util=0.99 match=true
+keygen.v3  SLH-DSA-SHA2-256f      median=     4870036 ns  ops/s=     182.3 cpu_util=0.97 match=true
+keygen.v3  SLH-DSA-SHAKE-128s     median=   259706707 ns  ops/s=       3.9 cpu_util=0.99 match=true
+keygen.v3  SLH-DSA-SHAKE-128f     median=     3788770 ns  ops/s=     255.5 cpu_util=0.99 match=true
+keygen.v3  SLH-DSA-SHAKE-192s     median=   360586694 ns  ops/s=       2.7 cpu_util=1.00 match=true
+keygen.v3  SLH-DSA-SHAKE-192f     median=     5628239 ns  ops/s=     169.3 cpu_util=0.98 match=true
+keygen.v3  SLH-DSA-SHAKE-256s     median=   239289245 ns  ops/s=       4.0 cpu_util=0.99 match=true
+keygen.v3  SLH-DSA-SHAKE-256f     median=    14624872 ns  ops/s=      67.0 cpu_util=0.98 match=true
+sign.v3    ML-DSA-44              median=      181768 ns  ops/s=    4790.4 cpu_util=0.97 match=true
+sign.v3    ML-DSA-65              median=      842834 ns  ops/s=    1110.6 cpu_util=0.98 match=true
+sign.v3    ML-DSA-87              median=      572948 ns  ops/s=    1737.1 cpu_util=1.00 match=true
+sign.v3    SLH-DSA-SHA2-128s      median=   663109655 ns  ops/s=       1.5 cpu_util=0.98 match=true
+sign.v3    SLH-DSA-SHA2-128f      median=    31398467 ns  ops/s=      30.1 cpu_util=0.98 match=true
+sign.v3    SLH-DSA-SHA2-192s      median=  1227409307 ns  ops/s=       0.8 cpu_util=0.99 match=true
+sign.v3    SLH-DSA-SHA2-192f      median=    47518273 ns  ops/s=      20.1 cpu_util=0.98 match=true
+sign.v3    SLH-DSA-SHA2-256s      median=   920191452 ns  ops/s=       1.1 cpu_util=1.00 match=true
+sign.v3    SLH-DSA-SHA2-256f      median=   100088974 ns  ops/s=       9.8 cpu_util=0.98 match=true
+sign.v3    SLH-DSA-SHAKE-128s     median=  1930657624 ns  ops/s=       0.5 cpu_util=0.99 match=true
+sign.v3    SLH-DSA-SHAKE-128f     median=    91120318 ns  ops/s=      10.2 cpu_util=1.00 match=true
+sign.v3    SLH-DSA-SHAKE-192s     median=  3455656950 ns  ops/s=       0.3 cpu_util=0.99 match=true
+sign.v3    SLH-DSA-SHAKE-192f     median=   176122341 ns  ops/s=       5.7 cpu_util=0.98 match=true
+sign.v3    SLH-DSA-SHAKE-256s     median=  2928572550 ns  ops/s=       0.3 cpu_util=0.99 match=true
+sign.v3    SLH-DSA-SHAKE-256f     median=   293804066 ns  ops/s=       3.4 cpu_util=1.00 match=true
+verify.v3  ML-DSA-44              median=      106417 ns  ops/s=    8047.7 cpu_util=0.99 match=true
+verify.v3  ML-DSA-65              median=      167874 ns  ops/s=    5423.5 cpu_util=0.99 match=true
+verify.v3  ML-DSA-87              median=      284099 ns  ops/s=    3147.9 cpu_util=0.98 match=true
+verify.v3  SLH-DSA-SHA2-128s      median=      620595 ns  ops/s=    1556.6 cpu_util=0.99 match=true
+verify.v3  SLH-DSA-SHA2-128f      median=     1860720 ns  ops/s=     506.8 cpu_util=0.97 match=true
+verify.v3  SLH-DSA-SHA2-192s      median=      893181 ns  ops/s=     974.8 cpu_util=0.98 match=true
+verify.v3  SLH-DSA-SHA2-192f      median=     2551535 ns  ops/s=     391.0 cpu_util=1.00 match=true
+verify.v3  SLH-DSA-SHA2-256s      median=     1334526 ns  ops/s=     719.1 cpu_util=0.99 match=true
+verify.v3  SLH-DSA-SHA2-256f      median=     2717878 ns  ops/s=     312.4 cpu_util=0.99 match=true
+verify.v3  SLH-DSA-SHAKE-128s     median=     1840078 ns  ops/s=     506.0 cpu_util=0.99 match=true
+verify.v3  SLH-DSA-SHAKE-128f     median=     6003596 ns  ops/s=     155.3 cpu_util=0.99 match=true
+verify.v3  SLH-DSA-SHAKE-192s     median=     2858697 ns  ops/s=     314.0 cpu_util=0.98 match=true
+verify.v3  SLH-DSA-SHAKE-192f     median=     8318475 ns  ops/s=     104.5 cpu_util=0.98 match=true
+verify.v3  SLH-DSA-SHAKE-256s     median=     4127923 ns  ops/s=     222.7 cpu_util=1.00 match=true
+verify.v3  SLH-DSA-SHAKE-256f     median=     8404792 ns  ops/s=     108.9 cpu_util=1.00 match=true
+>> 270 lines written to /home/user/pqc-signatures/results/rustcrypto/bench.jsonl
+== stages rustcrypto  20:28:22
+decode.v0        ML-DSA-44              median=      5564 ns  ops/s=  151927.0 thr=1 match=true
+decode.v1        ML-DSA-44              median=      4429 ns  ops/s=  211077.3 thr=1 match=true
+decode.v5        ML-DSA-44              median=    102330 ns  ops/s=    8484.0 thr=4 match=true
+mu.v0            ML-DSA-44              median=      4579 ns  ops/s=  186538.3 thr=1 match=true
+mu.v1            ML-DSA-44              median=       556 ns  ops/s= 1142398.7 thr=1 match=true
+mu.v2            ML-DSA-44              median=      5320 ns  ops/s=  147180.5 thr=1 match=true
+expandA.v0       ML-DSA-44              median=     39938 ns  ops/s=   21832.5 thr=1 match=true
+expandA.v1       ML-DSA-44              median=     16674 ns  ops/s=   53906.4 thr=1 match=true
+expandA.v2       ML-DSA-44              median=    158934 ns  ops/s=    5924.7 thr=4 match=true
+expandA.v3       ML-DSA-44              median=      1218 ns  ops/s=  617768.9 thr=1 match=true
+expandA.v4       ML-DSA-44              median=     36954 ns  ops/s=   24273.1 thr=1 match=true
+w_approx.v0      ML-DSA-44              median=     39149 ns  ops/s=   23239.1 thr=1 match=true
+w_approx.v1      ML-DSA-44              median=     23966 ns  ops/s=   35806.5 thr=1 match=true
+w_approx.v2      ML-DSA-44              median=     29871 ns  ops/s=   27205.7 thr=1 match=true
+w_approx.v3      ML-DSA-44              median=    177616 ns  ops/s=    5310.7 thr=4 match=true
+w_approx.v4      ML-DSA-44              median=     38700 ns  ops/s=   23452.1 thr=1 match=true
+hint_check.v0    ML-DSA-44              median=     14352 ns  ops/s=   63695.2 thr=1 match=true
+hint_check.v1    ML-DSA-44              median=      8152 ns  ops/s=   98366.3 thr=1 match=true
+hint_check.v2    ML-DSA-44              median=      9208 ns  ops/s=   93043.2 thr=1 match=true
+total.v0         ML-DSA-44              median=    102528 ns  ops/s=    9315.5 thr=1 match=true
+total_best.v0    ML-DSA-44              median=     58434 ns  ops/s=   15110.3 thr=1 match=true
+decode.v0        ML-DSA-65              median=      7843 ns  ops/s=  118161.0 thr=1 match=true
+decode.v1        ML-DSA-65              median=      6455 ns  ops/s=  146315.1 thr=1 match=true
+decode.v5        ML-DSA-65              median=     97985 ns  ops/s=    8405.3 thr=4 match=true
+mu.v0            ML-DSA-65              median=      6593 ns  ops/s=  123522.6 thr=1 match=true
+mu.v1            ML-DSA-65              median=       550 ns  ops/s= 1561534.8 thr=1 match=true
+mu.v2            ML-DSA-65              median=      7307 ns  ops/s=  122699.5 thr=1 match=true
+expandA.v0       ML-DSA-65              median=     76220 ns  ops/s=   12184.9 thr=1 match=true
+expandA.v1       ML-DSA-65              median=     33794 ns  ops/s=   27212.3 thr=1 match=true
+expandA.v2       ML-DSA-65              median=    182438 ns  ops/s=    5049.0 thr=4 match=true
+expandA.v3       ML-DSA-65              median=      2627 ns  ops/s=  348569.5 thr=1 match=true
+expandA.v4       ML-DSA-65              median=     70196 ns  ops/s=   13324.6 thr=1 match=true
+w_approx.v0      ML-DSA-65              median=     58602 ns  ops/s=   14090.3 thr=1 match=true
+w_approx.v1      ML-DSA-65              median=     34204 ns  ops/s=   26711.5 thr=1 match=true
+w_approx.v2      ML-DSA-65              median=     44721 ns  ops/s=   19222.3 thr=1 match=true
+w_approx.v3      ML-DSA-65              median=    171203 ns  ops/s=    5078.7 thr=4 match=true
+w_approx.v4      ML-DSA-65              median=     55392 ns  ops/s=   17074.5 thr=1 match=true
+hint_check.v0    ML-DSA-65              median=     16753 ns  ops/s=   56785.7 thr=1 match=true
+hint_check.v1    ML-DSA-65              median=     10641 ns  ops/s=   86459.8 thr=1 match=true
+hint_check.v2    ML-DSA-65              median=     11993 ns  ops/s=   68138.7 thr=1 match=true
+total.v0         ML-DSA-65              median=    164809 ns  ops/s=    5013.5 thr=1 match=true
+total_best.v0    ML-DSA-65              median=     92197 ns  ops/s=    9061.2 thr=1 match=true
+decode.v0        ML-DSA-87              median=     10268 ns  ops/s=   81930.6 thr=1 match=true
+decode.v1        ML-DSA-87              median=      8407 ns  ops/s=  107481.6 thr=1 match=true
+decode.v5        ML-DSA-87              median=    104270 ns  ops/s=    7584.6 thr=4 match=true
+mu.v0            ML-DSA-87              median=      8565 ns  ops/s=   99122.9 thr=1 match=true
+mu.v1            ML-DSA-87              median=       548 ns  ops/s= 1557969.7 thr=1 match=true
+mu.v2            ML-DSA-87              median=      9291 ns  ops/s=   96540.7 thr=1 match=true
+expandA.v0       ML-DSA-87              median=    158048 ns  ops/s=    4862.7 thr=1 match=true
+expandA.v1       ML-DSA-87              median=     57753 ns  ops/s=   15557.0 thr=1 match=true
+expandA.v2       ML-DSA-87              median=    219993 ns  ops/s=    4277.2 thr=4 match=true
+expandA.v3       ML-DSA-87              median=      3537 ns  ops/s=  263385.6 thr=1 match=true
+expandA.v4       ML-DSA-87              median=    130094 ns  ops/s=    7064.5 thr=1 match=true
+w_approx.v0      ML-DSA-87              median=     84852 ns  ops/s=   11104.2 thr=1 match=true
+w_approx.v1      ML-DSA-87              median=     46709 ns  ops/s=   18714.9 thr=1 match=true
+w_approx.v2      ML-DSA-87              median=     66284 ns  ops/s=   14071.2 thr=1 match=true
+w_approx.v3      ML-DSA-87              median=    166302 ns  ops/s=    5116.4 thr=4 match=true
+w_approx.v4      ML-DSA-87              median=     75264 ns  ops/s=   11913.3 thr=1 match=true
+hint_check.v0    ML-DSA-87              median=     22443 ns  ops/s=   42520.2 thr=1 match=true
+hint_check.v1    ML-DSA-87              median=     14174 ns  ops/s=   61468.9 thr=1 match=true
+hint_check.v2    ML-DSA-87              median=     16073 ns  ops/s=   53069.3 thr=1 match=true
+total.v0         ML-DSA-87              median=    268384 ns  ops/s=    3455.3 thr=1 match=true
+total_best.v0    ML-DSA-87              median=    136414 ns  ops/s=    6988.7 thr=1 match=true
+hmsg.v0          SLH-DSA-SHA2-128s      median=      3038 ns  ops/s=  291806.1 thr=1 match=true
+hmsg.v1          SLH-DSA-SHA2-128s      median=      1334 ns  ops/s=  643222.3 thr=1 match=true
+hmsg.v2          SLH-DSA-SHA2-128s      median=      1388 ns  ops/s=  642971.8 thr=1 match=true
+fors.v0          SLH-DSA-SHA2-128s      median=     63599 ns  ops/s=   14694.4 thr=1 match=true
+fors.v1          SLH-DSA-SHA2-128s      median=     64049 ns  ops/s=   14746.3 thr=1 match=true
+fors.v2          SLH-DSA-SHA2-128s      median=     63775 ns  ops/s=   14293.6 thr=1 match=true
+fors.v3          SLH-DSA-SHA2-128s      median=     81815 ns  ops/s=   12099.6 thr=4 match=true
+ht_wots.v0       SLH-DSA-SHA2-128s      median=    659159 ns  ops/s=    1442.2 thr=1 match=true
+ht_wots.v1       SLH-DSA-SHA2-128s      median=    668987 ns  ops/s=    1385.0 thr=1 match=true
+ht_wots.v2       SLH-DSA-SHA2-128s      median=    667249 ns  ops/s=    1447.8 thr=1 match=true
+ht_wots.v3       SLH-DSA-SHA2-128s      median=    430564 ns  ops/s=    2240.6 thr=4 match=true
+ht_auth.v0       SLH-DSA-SHA2-128s      median=     21972 ns  ops/s=   37992.9 thr=1 match=true
+ht_auth.v1       SLH-DSA-SHA2-128s      median=     21872 ns  ops/s=   35093.9 thr=1 match=true
+ht_auth.v2       SLH-DSA-SHA2-128s      median=     21859 ns  ops/s=   39712.4 thr=1 match=true
+ht_auth.v3       SLH-DSA-SHA2-128s      median=     18197 ns  ops/s=   20518.7 thr=4 match=true
+total.v0         SLH-DSA-SHA2-128s      median=    749623 ns  ops/s=    1269.6 thr=1 match=true
+total_best.v0    SLH-DSA-SHA2-128s      median=    754357 ns  ops/s=    1257.5 thr=1 match=true
+hmsg.v0          SLH-DSA-SHA2-128f      median=      4965 ns  ops/s=  180627.7 thr=1 match=true
+hmsg.v1          SLH-DSA-SHA2-128f      median=      1930 ns  ops/s=  417811.2 thr=1 match=true
+hmsg.v2          SLH-DSA-SHA2-128f      median=      1724 ns  ops/s=  527800.9 thr=1 match=true
+fors.v0          SLH-DSA-SHA2-128f      median=     81142 ns  ops/s=   10429.9 thr=1 match=true
+fors.v1          SLH-DSA-SHA2-128f      median=     82390 ns  ops/s=   10855.8 thr=1 match=true
+fors.v2          SLH-DSA-SHA2-128f      median=     81903 ns  ops/s=   11557.1 thr=1 match=true
+fors.v3          SLH-DSA-SHA2-128f      median=    102444 ns  ops/s=    9238.9 thr=4 match=true
+ht_wots.v0       SLH-DSA-SHA2-128f      median=   2082230 ns  ops/s=     443.8 thr=1 match=true
+ht_wots.v1       SLH-DSA-SHA2-128f      median=   2087948 ns  ops/s=     470.8 thr=1 match=true
+ht_wots.v2       SLH-DSA-SHA2-128f      median=   2125749 ns  ops/s=     456.5 thr=1 match=true
+ht_wots.v3       SLH-DSA-SHA2-128f      median=    762387 ns  ops/s=    1254.3 thr=4 match=true
+ht_auth.v0       SLH-DSA-SHA2-128f      median=     23103 ns  ops/s=   39980.9 thr=1 match=true
+ht_auth.v1       SLH-DSA-SHA2-128f      median=     23419 ns  ops/s=   38167.4 thr=1 match=true
+ht_auth.v2       SLH-DSA-SHA2-128f      median=     23437 ns  ops/s=   37073.6 thr=1 match=true
+ht_auth.v3       SLH-DSA-SHA2-128f      median=     21463 ns  ops/s=   17310.7 thr=4 match=true
+total.v0         SLH-DSA-SHA2-128f      median=   2214988 ns  ops/s=     442.0 thr=1 match=true
+total_best.v0    SLH-DSA-SHA2-128f      median=   2254223 ns  ops/s=     421.2 thr=1 match=true
+hmsg.v0          SLH-DSA-SHA2-192s      median=      4477 ns  ops/s=  210367.5 thr=1 match=true
+hmsg.v1          SLH-DSA-SHA2-192s      median=      1147 ns  ops/s=  794446.3 thr=1 match=true
+hmsg.v2          SLH-DSA-SHA2-192s      median=      1226 ns  ops/s=  709516.9 thr=1 match=true
+fors.v0          SLH-DSA-SHA2-192s      median=     82046 ns  ops/s=   11533.0 thr=1 match=true
+fors.v1          SLH-DSA-SHA2-192s      median=     80693 ns  ops/s=   10839.7 thr=1 match=true
+fors.v2          SLH-DSA-SHA2-192s      median=     80194 ns  ops/s=   11538.3 thr=1 match=true
+fors.v3          SLH-DSA-SHA2-192s      median=    120485 ns  ops/s=    7223.3 thr=4 match=true
+ht_wots.v0       SLH-DSA-SHA2-192s      median=    964085 ns  ops/s=     960.0 thr=1 match=true
+ht_wots.v1       SLH-DSA-SHA2-192s      median=   1034197 ns  ops/s=     885.5 thr=1 match=true
+ht_wots.v2       SLH-DSA-SHA2-192s      median=    984236 ns  ops/s=     938.6 thr=1 match=true
+ht_wots.v3       SLH-DSA-SHA2-192s      median=    585266 ns  ops/s=    1634.8 thr=4 match=true
+ht_auth.v0       SLH-DSA-SHA2-192s      median=     19964 ns  ops/s=   43855.3 thr=1 match=true
+ht_auth.v1       SLH-DSA-SHA2-192s      median=     19997 ns  ops/s=   44038.6 thr=1 match=true
+ht_auth.v2       SLH-DSA-SHA2-192s      median=     19479 ns  ops/s=   48187.5 thr=1 match=true
+ht_auth.v3       SLH-DSA-SHA2-192s      median=     13409 ns  ops/s=   28365.4 thr=4 match=true
+total.v0         SLH-DSA-SHA2-192s      median=   1065700 ns  ops/s=     906.0 thr=1 match=true
+total_best.v0    SLH-DSA-SHA2-192s      median=   1090674 ns  ops/s=     887.1 thr=1 match=true
+hmsg.v0          SLH-DSA-SHA2-192f      median=      9995 ns  ops/s=   81626.7 thr=1 match=true
+hmsg.v1          SLH-DSA-SHA2-192f      median=      1616 ns  ops/s=  544456.5 thr=1 match=true
+hmsg.v2          SLH-DSA-SHA2-192f      median=      1223 ns  ops/s=  660551.5 thr=1 match=true
+fors.v0          SLH-DSA-SHA2-192f      median=     95704 ns  ops/s=    9561.9 thr=1 match=true
+fors.v1          SLH-DSA-SHA2-192f      median=     93510 ns  ops/s=    9271.4 thr=1 match=true
+fors.v2          SLH-DSA-SHA2-192f      median=     98037 ns  ops/s=    8580.0 thr=1 match=true
+fors.v3          SLH-DSA-SHA2-192f      median=     43902 ns  ops/s=   13247.0 thr=4 match=true
+ht_wots.v0       SLH-DSA-SHA2-192f      median=   3030535 ns  ops/s=     309.9 thr=1 match=true
+ht_wots.v1       SLH-DSA-SHA2-192f      median=   3116877 ns  ops/s=     302.5 thr=1 match=true
+ht_wots.v2       SLH-DSA-SHA2-192f      median=   3094847 ns  ops/s=     316.7 thr=1 match=true
+ht_wots.v3       SLH-DSA-SHA2-192f      median=   1016548 ns  ops/s=     943.8 thr=4 match=true
+ht_auth.v0       SLH-DSA-SHA2-192f      median=     21010 ns  ops/s=   38700.5 thr=1 match=true
+ht_auth.v1       SLH-DSA-SHA2-192f      median=     20683 ns  ops/s=   39351.2 thr=1 match=true
+ht_auth.v2       SLH-DSA-SHA2-192f      median=     20663 ns  ops/s=   44637.4 thr=1 match=true
+ht_auth.v3       SLH-DSA-SHA2-192f      median=     29107 ns  ops/s=   12679.8 thr=4 match=true
+total.v0         SLH-DSA-SHA2-192f      median=   3143936 ns  ops/s=     308.9 thr=1 match=true
+total_best.v0    SLH-DSA-SHA2-192f      median=   3260628 ns  ops/s=     294.3 thr=1 match=true
+hmsg.v0          SLH-DSA-SHA2-256s      median=      7089 ns  ops/s=  134637.7 thr=1 match=true
+hmsg.v1          SLH-DSA-SHA2-256s      median=      1155 ns  ops/s=  788389.4 thr=1 match=true
+hmsg.v2          SLH-DSA-SHA2-256s      median=      1213 ns  ops/s=  747200.0 thr=1 match=true
+fors.v0          SLH-DSA-SHA2-256s      median=    106098 ns  ops/s=    8115.8 thr=1 match=true
+fors.v1          SLH-DSA-SHA2-256s      median=    106325 ns  ops/s=    7424.4 thr=1 match=true
+fors.v2          SLH-DSA-SHA2-256s      median=    101962 ns  ops/s=    9421.8 thr=1 match=true
+fors.v3          SLH-DSA-SHA2-256s      median=    102908 ns  ops/s=    8838.7 thr=4 match=true
+ht_wots.v0       SLH-DSA-SHA2-256s      median=   1476533 ns  ops/s=     647.3 thr=1 match=true
+ht_wots.v1       SLH-DSA-SHA2-256s      median=   1625161 ns  ops/s=     541.9 thr=1 match=true
+ht_wots.v2       SLH-DSA-SHA2-256s      median=   1504173 ns  ops/s=     603.7 thr=1 match=true
+ht_wots.v3       SLH-DSA-SHA2-256s      median=    814233 ns  ops/s=    1185.4 thr=4 match=true
+ht_auth.v0       SLH-DSA-SHA2-256s      median=     20151 ns  ops/s=   39134.5 thr=1 match=true
+ht_auth.v1       SLH-DSA-SHA2-256s      median=     19616 ns  ops/s=   39606.8 thr=1 match=true
+ht_auth.v2       SLH-DSA-SHA2-256s      median=     19532 ns  ops/s=   43980.6 thr=1 match=true
+ht_auth.v3       SLH-DSA-SHA2-256s      median=     18836 ns  ops/s=   16055.1 thr=4 match=true
+total.v0         SLH-DSA-SHA2-256s      median=   1629015 ns  ops/s=     536.2 thr=1 match=true
+total_best.v0    SLH-DSA-SHA2-256s      median=   1685744 ns  ops/s=     523.0 thr=1 match=true
+hmsg.v0          SLH-DSA-SHA2-256f      median=     12814 ns  ops/s=   73699.3 thr=1 match=true
+hmsg.v1          SLH-DSA-SHA2-256f      median=      1137 ns  ops/s=  732855.9 thr=1 match=true
+hmsg.v2          SLH-DSA-SHA2-256f      median=      1217 ns  ops/s=  706345.9 thr=1 match=true
+fors.v0          SLH-DSA-SHA2-256f      median=    117915 ns  ops/s=    6091.4 thr=1 match=true
+fors.v1          SLH-DSA-SHA2-256f      median=    115620 ns  ops/s=    6281.0 thr=1 match=true
+fors.v2          SLH-DSA-SHA2-256f      median=    138041 ns  ops/s=    6265.8 thr=1 match=true
+fors.v3          SLH-DSA-SHA2-256f      median=    118836 ns  ops/s=    7770.7 thr=4 match=true
+ht_wots.v0       SLH-DSA-SHA2-256f      median=   3041247 ns  ops/s=     288.8 thr=1 match=true
+ht_wots.v1       SLH-DSA-SHA2-256f      median=   3117291 ns  ops/s=     300.0 thr=1 match=true
+ht_wots.v2       SLH-DSA-SHA2-256f      median=   3480870 ns  ops/s=     261.6 thr=1 match=true
+ht_wots.v3       SLH-DSA-SHA2-256f      median=   1399641 ns  ops/s=     705.1 thr=4 match=true
+ht_auth.v0       SLH-DSA-SHA2-256f      median=     21577 ns  ops/s=   41314.6 thr=1 match=true
+ht_auth.v1       SLH-DSA-SHA2-256f      median=     21365 ns  ops/s=   28902.4 thr=1 match=true
+ht_auth.v2       SLH-DSA-SHA2-256f      median=     21145 ns  ops/s=   34760.8 thr=1 match=true
+ht_auth.v3       SLH-DSA-SHA2-256f      median=     33837 ns  ops/s=   11621.4 thr=4 match=true
+total.v0         SLH-DSA-SHA2-256f      median=   3150568 ns  ops/s=     311.3 thr=1 match=true
+total_best.v0    SLH-DSA-SHA2-256f      median=   3244968 ns  ops/s=     275.3 thr=1 match=true
+hmsg.v0          SLH-DSA-SHAKE-128s     median=      2617 ns  ops/s=  358280.0 thr=1 match=true
+hmsg.v1          SLH-DSA-SHAKE-128s     median=       940 ns  ops/s=  843454.1 thr=1 match=true
+hmsg.v2          SLH-DSA-SHAKE-128s     median=       571 ns  ops/s= 1249502.9 thr=1 match=true
+fors.v0          SLH-DSA-SHAKE-128s     median=    169306 ns  ops/s=    4883.4 thr=1 match=true
+fors.v1          SLH-DSA-SHAKE-128s     median=     83788 ns  ops/s=    8989.3 thr=1 match=true
+fors.v2          SLH-DSA-SHAKE-128s     median=     33534 ns  ops/s=   24647.4 thr=1 match=true
+fors.v3          SLH-DSA-SHAKE-128s     median=    187004 ns  ops/s=    4875.5 thr=4 match=true
+ht_wots.v0       SLH-DSA-SHAKE-128s     median=   1633089 ns  ops/s=     502.8 thr=1 match=true
+ht_wots.v1       SLH-DSA-SHAKE-128s     median=    806451 ns  ops/s=    1117.2 thr=1 match=true
+ht_wots.v2       SLH-DSA-SHAKE-128s     median=    319100 ns  ops/s=    2952.5 thr=1 match=true
+ht_wots.v3       SLH-DSA-SHAKE-128s     median=    699761 ns  ops/s=    1325.1 thr=4 match=true
+ht_auth.v0       SLH-DSA-SHAKE-128s     median=     56666 ns  ops/s=   16252.2 thr=1 match=true
+ht_auth.v1       SLH-DSA-SHAKE-128s     median=     27295 ns  ops/s=   31744.8 thr=1 match=true
+ht_auth.v2       SLH-DSA-SHAKE-128s     median=     11177 ns  ops/s=   77349.3 thr=1 match=true
+ht_auth.v3       SLH-DSA-SHAKE-128s     median=     70681 ns  ops/s=   10503.2 thr=4 match=true
+total.v0         SLH-DSA-SHAKE-128s     median=   1859038 ns  ops/s=     519.5 thr=1 match=true
+total_best.v0    SLH-DSA-SHAKE-128s     median=    414374 ns  ops/s=    2272.7 thr=1 match=true
+hmsg.v0          SLH-DSA-SHAKE-128f     median=      4016 ns  ops/s=  235171.7 thr=1 match=true
+hmsg.v1          SLH-DSA-SHAKE-128f     median=       926 ns  ops/s=  960320.1 thr=1 match=true
+hmsg.v2          SLH-DSA-SHAKE-128f     median=       549 ns  ops/s= 1535851.7 thr=1 match=true
+fors.v0          SLH-DSA-SHAKE-128f     median=    208303 ns  ops/s=    4085.6 thr=1 match=true
+fors.v1          SLH-DSA-SHAKE-128f     median=    100053 ns  ops/s=    9277.1 thr=1 match=true
+fors.v2          SLH-DSA-SHAKE-128f     median=     41698 ns  ops/s=   21624.7 thr=1 match=true
+fors.v3          SLH-DSA-SHAKE-128f     median=    139084 ns  ops/s=    6440.9 thr=4 match=true
+ht_wots.v0       SLH-DSA-SHAKE-128f     median=   5610234 ns  ops/s=     172.3 thr=1 match=true
+ht_wots.v1       SLH-DSA-SHAKE-128f     median=   2774257 ns  ops/s=     360.1 thr=1 match=true
+ht_wots.v2       SLH-DSA-SHAKE-128f     median=   1083269 ns  ops/s=     914.0 thr=1 match=true
+ht_wots.v3       SLH-DSA-SHAKE-128f     median=   2148822 ns  ops/s=     440.9 thr=4 match=true
+ht_auth.v0       SLH-DSA-SHAKE-128f     median=     58679 ns  ops/s=   15343.3 thr=1 match=true
+ht_auth.v1       SLH-DSA-SHAKE-128f     median=     28341 ns  ops/s=   30045.5 thr=1 match=true
+ht_auth.v2       SLH-DSA-SHAKE-128f     median=     11618 ns  ops/s=   77399.3 thr=1 match=true
+ht_auth.v3       SLH-DSA-SHAKE-128f     median=     27818 ns  ops/s=   19221.6 thr=4 match=true
+total.v0         SLH-DSA-SHAKE-128f     median=   6034698 ns  ops/s=     146.2 thr=1 match=true
+total_best.v0    SLH-DSA-SHAKE-128f     median=   1277289 ns  ops/s=     716.5 thr=1 match=true
+hmsg.v0          SLH-DSA-SHAKE-192s     median=      4675 ns  ops/s=  179464.1 thr=1 match=true
+hmsg.v1          SLH-DSA-SHAKE-192s     median=      1348 ns  ops/s=  638217.7 thr=1 match=true
+hmsg.v2          SLH-DSA-SHAKE-192s     median=       968 ns  ops/s=  889825.1 thr=1 match=true
+fors.v0          SLH-DSA-SHAKE-192s     median=    230645 ns  ops/s=    4058.7 thr=1 match=true
+fors.v1          SLH-DSA-SHAKE-192s     median=    111199 ns  ops/s=    7115.7 thr=1 match=true
+fors.v2          SLH-DSA-SHAKE-192s     median=     49735 ns  ops/s=   16645.2 thr=1 match=true
+fors.v3          SLH-DSA-SHAKE-192s     median=    233845 ns  ops/s=    4032.5 thr=4 match=true
+ht_wots.v0       SLH-DSA-SHAKE-192s     median=   2485868 ns  ops/s=     382.6 thr=1 match=true
+ht_wots.v1       SLH-DSA-SHAKE-192s     median=   1254356 ns  ops/s=     672.3 thr=1 match=true
+ht_wots.v2       SLH-DSA-SHAKE-192s     median=    513984 ns  ops/s=    1794.3 thr=1 match=true
+ht_wots.v3       SLH-DSA-SHAKE-192s     median=   1069187 ns  ops/s=     810.8 thr=4 match=true
+ht_auth.v0       SLH-DSA-SHAKE-192s     median=     56473 ns  ops/s=   15852.9 thr=1 match=true
+ht_auth.v1       SLH-DSA-SHAKE-192s     median=     27224 ns  ops/s=   32879.2 thr=1 match=true
+ht_auth.v2       SLH-DSA-SHAKE-192s     median=     11510 ns  ops/s=   80550.6 thr=1 match=true
+ht_auth.v3       SLH-DSA-SHAKE-192s     median=     26676 ns  ops/s=   14882.8 thr=4 match=true
+total.v0         SLH-DSA-SHAKE-192s     median=   2788174 ns  ops/s=     351.9 thr=1 match=true
+total_best.v0    SLH-DSA-SHAKE-192s     median=    609930 ns  ops/s=    1574.4 thr=1 match=true
+hmsg.v0          SLH-DSA-SHAKE-192f     median=     10132 ns  ops/s=   85144.8 thr=1 match=true
+hmsg.v1          SLH-DSA-SHAKE-192f     median=      1349 ns  ops/s=  531550.4 thr=1 match=true
+hmsg.v2          SLH-DSA-SHAKE-192f     median=       979 ns  ops/s=  722729.2 thr=1 match=true
+fors.v0          SLH-DSA-SHAKE-192f     median=    279963 ns  ops/s=    3245.7 thr=1 match=true
+fors.v1          SLH-DSA-SHAKE-192f     median=    131212 ns  ops/s=    6565.8 thr=1 match=true
+fors.v2          SLH-DSA-SHAKE-192f     median=     54902 ns  ops/s=   16177.7 thr=1 match=true
+fors.v3          SLH-DSA-SHAKE-192f     median=    199162 ns  ops/s=    4281.9 thr=4 match=true
+ht_wots.v0       SLH-DSA-SHAKE-192f     median=   7578442 ns  ops/s=     128.5 thr=1 match=true
+ht_wots.v1       SLH-DSA-SHAKE-192f     median=   3758450 ns  ops/s=     259.4 thr=1 match=true
+ht_wots.v2       SLH-DSA-SHAKE-192f     median=   1553244 ns  ops/s=     640.7 thr=1 match=true
+ht_wots.v3       SLH-DSA-SHAKE-192f     median=   3126494 ns  ops/s=     317.8 thr=4 match=true
+ht_auth.v0       SLH-DSA-SHAKE-192f     median=     58738 ns  ops/s=   14273.9 thr=1 match=true
+ht_auth.v1       SLH-DSA-SHAKE-192f     median=     28755 ns  ops/s=   26308.2 thr=1 match=true
+ht_auth.v2       SLH-DSA-SHAKE-192f     median=     12111 ns  ops/s=   56865.3 thr=1 match=true
+ht_auth.v3       SLH-DSA-SHAKE-192f     median=     37728 ns  ops/s=   15413.8 thr=4 match=true
+total.v0         SLH-DSA-SHAKE-192f     median=   7871201 ns  ops/s=     118.5 thr=1 match=true
+total_best.v0    SLH-DSA-SHAKE-192f     median=   1730023 ns  ops/s=     484.9 thr=1 match=true
+hmsg.v0          SLH-DSA-SHAKE-256s     median=      7347 ns  ops/s=  120772.6 thr=1 match=true
+hmsg.v1          SLH-DSA-SHAKE-256s     median=      1339 ns  ops/s=  631233.8 thr=1 match=true
+hmsg.v2          SLH-DSA-SHAKE-256s     median=       980 ns  ops/s=  890921.7 thr=1 match=true
+fors.v0          SLH-DSA-SHAKE-256s     median=    296583 ns  ops/s=    3120.1 thr=1 match=true
+fors.v1          SLH-DSA-SHAKE-256s     median=    146041 ns  ops/s=    5929.0 thr=1 match=true
+fors.v2          SLH-DSA-SHAKE-256s     median=     59461 ns  ops/s=   14273.4 thr=1 match=true
+fors.v3          SLH-DSA-SHAKE-256s     median=    220515 ns  ops/s=    4208.0 thr=4 match=true
+ht_wots.v0       SLH-DSA-SHAKE-256s     median=   3703546 ns  ops/s=     245.7 thr=1 match=true
+ht_wots.v1       SLH-DSA-SHAKE-256s     median=   1861715 ns  ops/s=     517.1 thr=1 match=true
+ht_wots.v2       SLH-DSA-SHAKE-256s     median=    763445 ns  ops/s=    1169.5 thr=1 match=true
+ht_wots.v3       SLH-DSA-SHAKE-256s     median=   1845949 ns  ops/s=     524.7 thr=4 match=true
+ht_auth.v0       SLH-DSA-SHAKE-256s     median=     56439 ns  ops/s=   15834.8 thr=1 match=true
+ht_auth.v1       SLH-DSA-SHAKE-256s     median=     27901 ns  ops/s=   31513.5 thr=1 match=true
+ht_auth.v2       SLH-DSA-SHAKE-256s     median=     10340 ns  ops/s=   67765.8 thr=1 match=true
+ht_auth.v3       SLH-DSA-SHAKE-256s     median=     72410 ns  ops/s=   11407.8 thr=4 match=true
+total.v0         SLH-DSA-SHAKE-256s     median=   4126951 ns  ops/s=     198.0 thr=1 match=true
+total_best.v0    SLH-DSA-SHAKE-256s     median=    879767 ns  ops/s=    1103.9 thr=1 match=true
+hmsg.v0          SLH-DSA-SHAKE-256f     median=     13084 ns  ops/s=   70608.7 thr=1 match=true
+hmsg.v1          SLH-DSA-SHAKE-256f     median=      1340 ns  ops/s=  670853.8 thr=1 match=true
+hmsg.v2          SLH-DSA-SHAKE-256f     median=       988 ns  ops/s=  902456.3 thr=1 match=true
+fors.v0          SLH-DSA-SHAKE-256f     median=    314354 ns  ops/s=    3060.6 thr=1 match=true
+fors.v1          SLH-DSA-SHAKE-256f     median=    157843 ns  ops/s=    5597.5 thr=1 match=true
+fors.v2          SLH-DSA-SHAKE-256f     median=     60880 ns  ops/s=   14496.2 thr=1 match=true
+fors.v3          SLH-DSA-SHAKE-256f     median=    237989 ns  ops/s=    3683.7 thr=4 match=true
+ht_wots.v0       SLH-DSA-SHAKE-256f     median=   8104257 ns  ops/s=     108.7 thr=1 match=true
+ht_wots.v1       SLH-DSA-SHAKE-256f     median=   4107865 ns  ops/s=     209.3 thr=1 match=true
+ht_wots.v2       SLH-DSA-SHAKE-256f     median=   1643593 ns  ops/s=     562.4 thr=1 match=true
+ht_wots.v3       SLH-DSA-SHAKE-256f     median=   3162556 ns  ops/s=     311.1 thr=4 match=true
+ht_auth.v0       SLH-DSA-SHAKE-256f     median=     59999 ns  ops/s=   12621.0 thr=1 match=true
+ht_auth.v1       SLH-DSA-SHAKE-256f     median=     29865 ns  ops/s=   30711.9 thr=1 match=true
+ht_auth.v2       SLH-DSA-SHAKE-256f     median=     12972 ns  ops/s=   67283.8 thr=1 match=true
+ht_auth.v3       SLH-DSA-SHAKE-256f     median=     35290 ns  ops/s=   16164.5 thr=4 match=true
+total.v0         SLH-DSA-SHAKE-256f     median=   8501180 ns  ops/s=     100.3 thr=1 match=true
+total_best.v0    SLH-DSA-SHAKE-256f     median=   1993988 ns  ops/s=     408.4 thr=1 match=true
+decode.v2        ML-DSA-44              median=      5910 ns  ops/s=  146025.8 thr=1 match=true
+mu.v3            ML-DSA-44              median=      4327 ns  ops/s=  201114.1 thr=1 match=true
+hint_check.v3    ML-DSA-44              median=     15142 ns  ops/s=   62426.4 thr=1 match=true
+decode.v2        ML-DSA-65              median=      8303 ns  ops/s=  100634.0 thr=1 match=true
+mu.v3            ML-DSA-65              median=      6108 ns  ops/s=  151668.8 thr=1 match=true
+hint_check.v3    ML-DSA-65              median=     17367 ns  ops/s=   50890.9 thr=1 match=true
+decode.v2        ML-DSA-87              median=     11447 ns  ops/s=   78587.8 thr=1 match=true
+mu.v3            ML-DSA-87              median=      8150 ns  ops/s=  103622.2 thr=1 match=true
+hint_check.v3    ML-DSA-87              median=     23183 ns  ops/s=   38963.3 thr=1 match=true
+hmsg.v3          SLH-DSA-SHA2-128s      median=      2656 ns  ops/s=  321155.6 thr=1 match=true
+fors.v4          SLH-DSA-SHA2-128s      median=     48560 ns  ops/s=   18916.8 thr=1 match=true
+ht_wots.v4       SLH-DSA-SHA2-128s      median=    587544 ns  ops/s=    1447.3 thr=1 match=true
+ht_auth.v4       SLH-DSA-SHA2-128s      median=     16790 ns  ops/s=   53056.4 thr=1 match=true
+hmsg.v3          SLH-DSA-SHA2-128f      median=      5011 ns  ops/s=  174231.5 thr=1 match=true
+fors.v4          SLH-DSA-SHA2-128f      median=     62639 ns  ops/s=   14163.0 thr=1 match=true
+ht_wots.v4       SLH-DSA-SHA2-128f      median=   1710709 ns  ops/s=     515.1 thr=1 match=true
+ht_auth.v4       SLH-DSA-SHA2-128f      median=     17859 ns  ops/s=   45369.7 thr=1 match=true
+hmsg.v3          SLH-DSA-SHA2-192s      median=      4087 ns  ops/s=  228669.1 thr=1 match=true
+fors.v4          SLH-DSA-SHA2-192s      median=     71533 ns  ops/s=   13114.8 thr=1 match=true
+ht_wots.v4       SLH-DSA-SHA2-192s      median=    775622 ns  ops/s=    1174.7 thr=1 match=true
+ht_auth.v4       SLH-DSA-SHA2-192s      median=     17466 ns  ops/s=   52653.6 thr=1 match=true
+hmsg.v3          SLH-DSA-SHA2-192f      median=      9884 ns  ops/s=   86280.3 thr=1 match=true
+fors.v4          SLH-DSA-SHA2-192f      median=     83524 ns  ops/s=   10370.0 thr=1 match=true
+ht_wots.v4       SLH-DSA-SHA2-192f      median=   2505838 ns  ops/s=     376.4 thr=1 match=true
+ht_auth.v4       SLH-DSA-SHA2-192f      median=     18613 ns  ops/s=   47358.4 thr=1 match=true
+hmsg.v3          SLH-DSA-SHA2-256s      median=      6893 ns  ops/s=  131952.6 thr=1 match=true
+fors.v4          SLH-DSA-SHA2-256s      median=     92722 ns  ops/s=    9046.4 thr=1 match=true
+ht_wots.v4       SLH-DSA-SHA2-256s      median=   1215103 ns  ops/s=     792.4 thr=1 match=true
+ht_auth.v4       SLH-DSA-SHA2-256s      median=     17808 ns  ops/s=   49465.2 thr=1 match=true
+hmsg.v3          SLH-DSA-SHA2-256f      median=     12703 ns  ops/s=   72380.7 thr=1 match=true
+fors.v4          SLH-DSA-SHA2-256f      median=     98791 ns  ops/s=    8930.5 thr=1 match=true
+ht_wots.v4       SLH-DSA-SHA2-256f      median=   2534469 ns  ops/s=     374.6 thr=1 match=true
+ht_auth.v4       SLH-DSA-SHA2-256f      median=     20474 ns  ops/s=   38396.7 thr=1 match=true
+hmsg.v3          SLH-DSA-SHAKE-128s     median=      3190 ns  ops/s=  290739.5 thr=1 match=true
+fors.v4          SLH-DSA-SHAKE-128s     median=    146071 ns  ops/s=    5773.6 thr=1 match=true
+ht_wots.v4       SLH-DSA-SHAKE-128s     median=   1589260 ns  ops/s=     625.7 thr=1 match=true
+ht_auth.v4       SLH-DSA-SHAKE-128s     median=     50148 ns  ops/s=   18034.3 thr=1 match=true
+hmsg.v3          SLH-DSA-SHAKE-128f     median=      4462 ns  ops/s=  208827.7 thr=1 match=true
+fors.v4          SLH-DSA-SHAKE-128f     median=    187938 ns  ops/s=    4466.5 thr=1 match=true
+ht_wots.v4       SLH-DSA-SHAKE-128f     median=   5603057 ns  ops/s=     175.4 thr=1 match=true
+ht_auth.v4       SLH-DSA-SHAKE-128f     median=     53718 ns  ops/s=   15614.9 thr=1 match=true
+hmsg.v3          SLH-DSA-SHAKE-192s     median=      4255 ns  ops/s=  219094.4 thr=1 match=true
+fors.v4          SLH-DSA-SHAKE-192s     median=    206899 ns  ops/s=    4417.4 thr=1 match=true
+ht_wots.v4       SLH-DSA-SHAKE-192s     median=   2510948 ns  ops/s=     365.9 thr=1 match=true
+ht_auth.v4       SLH-DSA-SHAKE-192s     median=     50367 ns  ops/s=   16008.9 thr=1 match=true
+hmsg.v3          SLH-DSA-SHAKE-192f     median=     10053 ns  ops/s=   85797.2 thr=1 match=true
+fors.v4          SLH-DSA-SHAKE-192f     median=    256201 ns  ops/s=    3163.3 thr=1 match=true
+ht_wots.v4       SLH-DSA-SHAKE-192f     median=   7505638 ns  ops/s=     120.4 thr=1 match=true
+ht_auth.v4       SLH-DSA-SHAKE-192f     median=     53363 ns  ops/s=   15986.7 thr=1 match=true
+hmsg.v3          SLH-DSA-SHAKE-256s     median=      8642 ns  ops/s=  110720.3 thr=1 match=true
+fors.v4          SLH-DSA-SHAKE-256s     median=    278570 ns  ops/s=    3169.7 thr=1 match=true
+ht_wots.v4       SLH-DSA-SHAKE-256s     median=   3684705 ns  ops/s=     256.4 thr=1 match=true
+ht_auth.v4       SLH-DSA-SHAKE-256s     median=     51554 ns  ops/s=   17233.5 thr=1 match=true
+hmsg.v3          SLH-DSA-SHAKE-256f     median=     12960 ns  ops/s=   68973.3 thr=1 match=true
+fors.v4          SLH-DSA-SHAKE-256f     median=    286332 ns  ops/s=    3001.0 thr=1 match=true
+ht_wots.v4       SLH-DSA-SHAKE-256f     median=   7648495 ns  ops/s=     119.8 thr=1 match=true
+ht_auth.v4       SLH-DSA-SHAKE-256f     median=     54311 ns  ops/s=   15109.3 thr=1 match=true
+decode.v3        ML-DSA-44              median=      5336 ns  ops/s=  160140.3 thr=1 match=true
+mu.v4            ML-DSA-44              median=      4538 ns  ops/s=  207413.5 thr=1 match=true
+hint_check.v4    ML-DSA-44              median=     13272 ns  ops/s=   71774.5 thr=1 match=true
+decode.v3        ML-DSA-65              median=      7257 ns  ops/s=  123645.7 thr=1 match=true
+mu.v4            ML-DSA-65              median=      6407 ns  ops/s=  147439.0 thr=1 match=true
+hint_check.v4    ML-DSA-65              median=     15919 ns  ops/s=   55536.5 thr=1 match=true
+decode.v3        ML-DSA-87              median=     13069 ns  ops/s=   72433.6 thr=1 match=true
+mu.v4            ML-DSA-87              median=      8355 ns  ops/s=   88246.4 thr=1 match=true
+hint_check.v4    ML-DSA-87              median=     21063 ns  ops/s=   42254.2 thr=1 match=true
+hmsg.v4          SLH-DSA-SHA2-128s      median=      2280 ns  ops/s=  380868.2 thr=1 match=true
+hmsg.v4          SLH-DSA-SHA2-128f      median=      3909 ns  ops/s=  236378.5 thr=1 match=true
+hmsg.v4          SLH-DSA-SHA2-192s      median=      3105 ns  ops/s=  297420.8 thr=1 match=true
+hmsg.v4          SLH-DSA-SHA2-192f      median=      7782 ns  ops/s=  120563.8 thr=1 match=true
+hmsg.v4          SLH-DSA-SHA2-256s      median=      6202 ns  ops/s=  150515.4 thr=1 match=true
+hmsg.v4          SLH-DSA-SHA2-256f      median=      9851 ns  ops/s=   87336.4 thr=1 match=true
+hmsg.v4          SLH-DSA-SHAKE-128s     median=      1828 ns  ops/s=  497373.4 thr=1 match=true
+hmsg.v4          SLH-DSA-SHAKE-128f     median=      2935 ns  ops/s=  280710.1 thr=1 match=true
+hmsg.v4          SLH-DSA-SHAKE-192s     median=      3225 ns  ops/s=  276939.1 thr=1 match=true
+hmsg.v4          SLH-DSA-SHAKE-192f     median=      7912 ns  ops/s=  119048.0 thr=1 match=true
+hmsg.v4          SLH-DSA-SHAKE-256s     median=      5307 ns  ops/s=  163784.1 thr=1 match=true
+hmsg.v4          SLH-DSA-SHAKE-256f     median=      9931 ns  ops/s=   95611.6 thr=1 match=true
+decode.v4        ML-DSA-44              median=      6165 ns  ops/s=  120940.3 thr=1 match=true
+mu.v5            ML-DSA-44              median=      4427 ns  ops/s=  192206.1 thr=1 match=true
+expandA.v5       ML-DSA-44              median=     37040 ns  ops/s=   22168.6 thr=1 match=true
+w_approx.v5      ML-DSA-44              median=     41137 ns  ops/s=   23050.8 thr=1 match=true
+hint_check.v5    ML-DSA-44              median=     14460 ns  ops/s=   63794.9 thr=1 match=true
+decode.v4        ML-DSA-65              median=      8389 ns  ops/s=   81663.0 thr=1 match=true
+mu.v5            ML-DSA-65              median=      6392 ns  ops/s=  117267.0 thr=1 match=true
+expandA.v5       ML-DSA-65              median=     69959 ns  ops/s=   11949.6 thr=1 match=true
+w_approx.v5      ML-DSA-65              median=     82162 ns  ops/s=   11859.9 thr=1 match=true
+hint_check.v5    ML-DSA-65              median=     17398 ns  ops/s=   53314.7 thr=1 match=true
+decode.v4        ML-DSA-87              median=     11073 ns  ops/s=   74004.9 thr=1 match=true
+mu.v5            ML-DSA-87              median=      8251 ns  ops/s=  107833.4 thr=1 match=true
+expandA.v5       ML-DSA-87              median=    139685 ns  ops/s=    5796.9 thr=1 match=true
+w_approx.v5      ML-DSA-87              median=     84399 ns  ops/s=   10772.8 thr=1 match=true
+hint_check.v5    ML-DSA-87              median=     23254 ns  ops/s=   33499.4 thr=1 match=true
+hmsg.v5          SLH-DSA-SHA2-128s      median=      2656 ns  ops/s=  283495.2 thr=1 match=true
+fors.v5          SLH-DSA-SHA2-128s      median=     48351 ns  ops/s=   18259.6 thr=1 match=true
+ht_wots.v5       SLH-DSA-SHA2-128s      median=    552133 ns  ops/s=    1558.2 thr=1 match=true
+ht_auth.v5       SLH-DSA-SHA2-128s      median=     16751 ns  ops/s=   45512.5 thr=1 match=true
+hmsg.v5          SLH-DSA-SHA2-128f      median=      4203 ns  ops/s=  197924.7 thr=1 match=true
+fors.v5          SLH-DSA-SHA2-128f      median=     62119 ns  ops/s=   14020.7 thr=1 match=true
+ht_wots.v5       SLH-DSA-SHA2-128f      median=   1722897 ns  ops/s=     499.4 thr=1 match=true
+ht_auth.v5       SLH-DSA-SHA2-128f      median=     17693 ns  ops/s=   43424.4 thr=1 match=true
+hmsg.v5          SLH-DSA-SHA2-192s      median=      4528 ns  ops/s=  202329.6 thr=1 match=true
+fors.v5          SLH-DSA-SHA2-192s      median=     69643 ns  ops/s=   12871.4 thr=1 match=true
+ht_wots.v5       SLH-DSA-SHA2-192s      median=    769074 ns  ops/s=    1254.4 thr=1 match=true
+ht_auth.v5       SLH-DSA-SHA2-192s      median=     17331 ns  ops/s=   49295.9 thr=1 match=true
+hmsg.v5          SLH-DSA-SHA2-192f      median=     10625 ns  ops/s=   87440.9 thr=1 match=true
+fors.v5          SLH-DSA-SHA2-192f      median=     82409 ns  ops/s=    9909.0 thr=1 match=true
+ht_wots.v5       SLH-DSA-SHA2-192f      median=   2463196 ns  ops/s=     390.7 thr=1 match=true
+ht_auth.v5       SLH-DSA-SHA2-192f      median=     18118 ns  ops/s=   49147.4 thr=1 match=true
+hmsg.v5          SLH-DSA-SHA2-256s      median=      8500 ns  ops/s=  111794.2 thr=1 match=true
+fors.v5          SLH-DSA-SHA2-256s      median=     89490 ns  ops/s=   10157.1 thr=1 match=true
+ht_wots.v5       SLH-DSA-SHA2-256s      median=   1229246 ns  ops/s=     738.6 thr=1 match=true
+ht_auth.v5       SLH-DSA-SHA2-256s      median=     17106 ns  ops/s=   51347.9 thr=1 match=true
+hmsg.v5          SLH-DSA-SHA2-256f      median=     14197 ns  ops/s=   66580.6 thr=1 match=true
+fors.v5          SLH-DSA-SHA2-256f      median=     95672 ns  ops/s=    9888.8 thr=1 match=true
+ht_wots.v5       SLH-DSA-SHA2-256f      median=   2529818 ns  ops/s=     386.5 thr=1 match=true
+ht_auth.v5       SLH-DSA-SHA2-256f      median=     18400 ns  ops/s=   50677.8 thr=1 match=true
+hmsg.v5          SLH-DSA-SHAKE-128s     median=      2510 ns  ops/s=  366004.4 thr=1 match=true
+fors.v5          SLH-DSA-SHAKE-128s     median=    144967 ns  ops/s=    6107.5 thr=1 match=true
+ht_wots.v5       SLH-DSA-SHAKE-128s     median=   1610726 ns  ops/s=     566.5 thr=1 match=true
+ht_auth.v5       SLH-DSA-SHAKE-128s     median=     50417 ns  ops/s=   17772.8 thr=1 match=true
+hmsg.v5          SLH-DSA-SHAKE-128f     median=      3635 ns  ops/s=  183805.6 thr=1 match=true
+fors.v5          SLH-DSA-SHAKE-128f     median=    184349 ns  ops/s=    5213.5 thr=1 match=true
+ht_wots.v5       SLH-DSA-SHAKE-128f     median=   5644507 ns  ops/s=     168.6 thr=1 match=true
+ht_auth.v5       SLH-DSA-SHAKE-128f     median=     52229 ns  ops/s=   17577.3 thr=1 match=true
+hmsg.v5          SLH-DSA-SHAKE-192s     median=      3924 ns  ops/s=  228528.1 thr=1 match=true
+fors.v5          SLH-DSA-SHAKE-192s     median=    206885 ns  ops/s=    4292.4 thr=1 match=true
+ht_wots.v5       SLH-DSA-SHAKE-192s     median=   2553049 ns  ops/s=     328.3 thr=1 match=true
+ht_auth.v5       SLH-DSA-SHAKE-192s     median=     50129 ns  ops/s=   18686.7 thr=1 match=true
+hmsg.v5          SLH-DSA-SHAKE-192f     median=      8410 ns  ops/s=  107321.8 thr=1 match=true
+fors.v5          SLH-DSA-SHAKE-192f     median=    248504 ns  ops/s=    3378.8 thr=1 match=true
+ht_wots.v5       SLH-DSA-SHAKE-192f     median=   8211167 ns  ops/s=     113.8 thr=1 match=true
+ht_auth.v5       SLH-DSA-SHAKE-192f     median=     52312 ns  ops/s=   17450.2 thr=1 match=true
+hmsg.v5          SLH-DSA-SHAKE-256s     median=      6822 ns  ops/s=  133716.7 thr=1 match=true
+fors.v5          SLH-DSA-SHAKE-256s     median=    263123 ns  ops/s=    3648.7 thr=1 match=true
+ht_wots.v5       SLH-DSA-SHAKE-256s     median=   3691277 ns  ops/s=     268.4 thr=1 match=true
+ht_auth.v5       SLH-DSA-SHAKE-256s     median=     49969 ns  ops/s=   17668.6 thr=1 match=true
+hmsg.v5          SLH-DSA-SHAKE-256f     median=     11244 ns  ops/s=   76775.2 thr=1 match=true
+fors.v5          SLH-DSA-SHAKE-256f     median=    294305 ns  ops/s=    2791.5 thr=1 match=true
+ht_wots.v5       SLH-DSA-SHAKE-256f     median=   8377503 ns  ops/s=     110.5 thr=1 match=true
+ht_auth.v5       SLH-DSA-SHAKE-256f     median=     53362 ns  ops/s=   15961.2 thr=1 match=true
+>> 408 lines written to /home/user/pqc-signatures/results/rustcrypto/stages.jsonl
+== memory rustcrypto  20:35:23
+stack baseline (thread bookkeeping) = 6440 bytes
+keygen.v0        ML-DSA-44              stack=  201664 heap_alloc=    94272 heap_peak=    90400 match=true
+keygen.v5        ML-DSA-44              stack=  201664 heap_alloc=    94272 heap_peak=    90400 match=true
+sign.v0          ML-DSA-44              stack=  107600 heap_alloc=     6516 heap_peak=     6516 match=true
+sign.v4          ML-DSA-44              stack=   66480 heap_alloc=     6516 heap_peak=     6516 match=true
+sign.v5          ML-DSA-44              stack=  107600 heap_alloc=     6516 heap_peak=     6516 match=true
+verify.v0        ML-DSA-44              stack=   68272 heap_alloc=    28736 heap_peak=    28736 match=true
+verify.v4        ML-DSA-44              stack=   48464 heap_alloc=     4096 heap_peak=     4096 match=true
+verify.v5        ML-DSA-44              stack=   68272 heap_alloc=    28736 heap_peak=    28736 match=true
+decode.v0        ML-DSA-44              stack=   44592 heap_alloc=    32768 heap_peak=    32768 match=true
+mu.v0            ML-DSA-44              stack=       0 heap_alloc=        0 heap_peak=        0 match=true
+expandA.v0       ML-DSA-44              stack=   43096 heap_alloc=        0 heap_peak=        0 match=true
+w_approx.v0      ML-DSA-44              stack=   54768 heap_alloc=        0 heap_peak=        0 match=true
+hint_check.v0    ML-DSA-44              stack=   13078 heap_alloc=      768 heap_peak=      768 match=true
+total.v0         ML-DSA-44              stack=   80608 heap_alloc=      768 heap_peak=      768 match=true
+total_best.v0    ML-DSA-44              stack=   71920 heap_alloc=    29568 heap_peak=    16384 match=true
+keygen.v0        ML-DSA-65              stack=  279088 heap_alloc=   157824 heap_peak=   151840 match=true
+keygen.v5        ML-DSA-65              stack=  279088 heap_alloc=   157824 heap_peak=   151840 match=true
+sign.v0          ML-DSA-65              stack=  161992 heap_alloc=     8429 heap_peak=     8429 match=true
+sign.v4          ML-DSA-65              stack=   91968 heap_alloc=     8429 heap_peak=     8429 match=true
+sign.v5          ML-DSA-65              stack=  161992 heap_alloc=     8429 heap_peak=     8429 match=true
+verify.v0        ML-DSA-65              stack=  103328 heap_alloc=    48192 heap_peak=    48192 match=true
+verify.v4        ML-DSA-65              stack=   54368 heap_alloc=     5120 heap_peak=     5120 match=true
+verify.v5        ML-DSA-65              stack=  103328 heap_alloc=    48192 heap_peak=    48192 match=true
+decode.v0        ML-DSA-65              stack=   63072 heap_alloc=    49152 heap_peak=    49152 match=true
+mu.v0            ML-DSA-65              stack=       0 heap_alloc=        0 heap_peak=        0 match=true
+expandA.v0       ML-DSA-65              stack=   73864 heap_alloc=        0 heap_peak=        0 match=true
+w_approx.v0      ML-DSA-65              stack=   55808 heap_alloc=        0 heap_peak=        0 match=true
+hint_check.v0    ML-DSA-65              stack=   19238 heap_alloc=      768 heap_peak=      768 match=true
+total.v0         ML-DSA-65              stack=   99584 heap_alloc=      768 heap_peak=      768 match=true
+total_best.v0    ML-DSA-65              stack=  122640 heap_alloc=    49088 heap_peak=    30720 match=true
+keygen.v0        ML-DSA-87              stack=  438688 heap_alloc=   259680 heap_peak=   252192 match=true
+keygen.v5        ML-DSA-87              stack=  438688 heap_alloc=   259680 heap_peak=   252192 match=true
+sign.v0          ML-DSA-87              stack=  275432 heap_alloc=    11795 heap_peak=    11795 match=true
+sign.v4          ML-DSA-87              stack=  130432 heap_alloc=    11795 heap_peak=    11795 match=true
+sign.v5          ML-DSA-87              stack=  275432 heap_alloc=    11795 heap_peak=    11795 match=true
+verify.v0        ML-DSA-87              stack=  170144 heap_alloc=    80960 heap_peak=    80960 match=true
+verify.v4        ML-DSA-87              stack=   70032 heap_alloc=     7168 heap_peak=     7168 match=true
+verify.v5        ML-DSA-87              stack=  170144 heap_alloc=    80960 heap_peak=    80960 match=true
+decode.v0        ML-DSA-87              stack=   85648 heap_alloc=    65536 heap_peak=    65536 match=true
+mu.v0            ML-DSA-87              stack=       0 heap_alloc=        0 heap_peak=        0 match=true
+expandA.v0       ML-DSA-87              stack=  131208 heap_alloc=        0 heap_peak=        0 match=true
+w_approx.v0      ML-DSA-87              stack=   72192 heap_alloc=        0 heap_peak=        0 match=true
+hint_check.v0    ML-DSA-87              stack=   25654 heap_alloc=     1024 heap_peak=     1024 match=true
+total.v0         ML-DSA-87              stack=  157048 heap_alloc=     1024 heap_peak=     1024 match=true
+total_best.v0    ML-DSA-87              stack=  213312 heap_alloc=    82176 heap_peak=    57344 match=true
+keygen.v0        SLH-DSA-SHA2-128s      stack=    7120 heap_alloc=       96 heap_peak=       96 match=true
+keygen.v5        SLH-DSA-SHA2-128s      stack=    7120 heap_alloc=       96 heap_peak=       96 match=true
+sign.v0          SLH-DSA-SHA2-128s      stack=   44272 heap_alloc=     7856 heap_peak=     7856 match=true
+sign.v4          SLH-DSA-SHA2-128s      stack=   44208 heap_alloc=     7856 heap_peak=     7856 match=true
+sign.v5          SLH-DSA-SHA2-128s      stack=   44272 heap_alloc=     7856 heap_peak=     7856 match=true
+verify.v0        SLH-DSA-SHA2-128s      stack=   34688 heap_alloc=        0 heap_peak=        0 match=true
+verify.v4        SLH-DSA-SHA2-128s      stack=   34640 heap_alloc=        0 heap_peak=        0 match=true
+verify.v5        SLH-DSA-SHA2-128s      stack=   34688 heap_alloc=        0 heap_peak=        0 match=true
+hmsg.v0          SLH-DSA-SHA2-128s      stack=   42720 heap_alloc=       51 heap_peak=       51 match=true
+fors.v0          SLH-DSA-SHA2-128s      stack=       0 heap_alloc=       16 heap_peak=       16 match=true
+ht_wots.v0       SLH-DSA-SHA2-128s      stack=     672 heap_alloc=      392 heap_peak=      392 match=true
+ht_auth.v0       SLH-DSA-SHA2-128s      stack=       0 heap_alloc=      392 heap_peak=      392 match=true
+total.v0         SLH-DSA-SHA2-128s      stack=   50992 heap_alloc=      179 heap_peak=      179 match=true
+total_best.v0    SLH-DSA-SHA2-128s      stack=    1488 heap_alloc=     8832 heap_peak=     1350 match=true
+keygen.v0        SLH-DSA-SHA2-128f      stack=    2512 heap_alloc=       96 heap_peak=       96 match=true
+keygen.v5        SLH-DSA-SHA2-128f      stack=    2512 heap_alloc=       96 heap_peak=       96 match=true
+sign.v0          SLH-DSA-SHA2-128f      stack=   95824 heap_alloc=    17088 heap_peak=    17088 match=true
+sign.v4          SLH-DSA-SHA2-128f      stack=   95760 heap_alloc=    17088 heap_peak=    17088 match=true
+sign.v5          SLH-DSA-SHA2-128f      stack=   95824 heap_alloc=    17088 heap_peak=    17088 match=true
+verify.v0        SLH-DSA-SHA2-128f      stack=   86768 heap_alloc=        0 heap_peak=        0 match=true
+verify.v4        SLH-DSA-SHA2-128f      stack=   86720 heap_alloc=        0 heap_peak=        0 match=true
+verify.v5        SLH-DSA-SHA2-128f      stack=   86768 heap_alloc=        0 heap_peak=        0 match=true
+hmsg.v0          SLH-DSA-SHA2-128f      stack=  104032 heap_alloc=       59 heap_peak=       59 match=true
+fors.v0          SLH-DSA-SHA2-128f      stack=       0 heap_alloc=       16 heap_peak=       16 match=true
+ht_wots.v0       SLH-DSA-SHA2-128f      stack=     672 heap_alloc=     1232 heap_peak=     1232 match=true
+ht_auth.v0       SLH-DSA-SHA2-128f      stack=       0 heap_alloc=     1232 heap_peak=     1232 match=true
+total.v0         SLH-DSA-SHA2-128f      stack=  121552 heap_alloc=      427 heap_peak=      427 match=true
+total_best.v0    SLH-DSA-SHA2-128f      stack=    1584 heap_alloc=    27345 heap_peak=     1598 match=true
+keygen.v0        SLH-DSA-SHA2-192s      stack=    3600 heap_alloc=      144 heap_peak=      144 match=true
+keygen.v5        SLH-DSA-SHA2-192s      stack=    3600 heap_alloc=      144 heap_peak=      144 match=true
+sign.v0          SLH-DSA-SHA2-192s      stack=   91392 heap_alloc=    16224 heap_peak=    16224 match=true
+sign.v4          SLH-DSA-SHA2-192s      stack=   91296 heap_alloc=    16224 heap_peak=    16224 match=true
+sign.v5          SLH-DSA-SHA2-192s      stack=   91392 heap_alloc=    16224 heap_peak=    16224 match=true
+verify.v0        SLH-DSA-SHA2-192s      stack=   72848 heap_alloc=        0 heap_peak=        0 match=true
+verify.v4        SLH-DSA-SHA2-192s      stack=   72784 heap_alloc=        0 heap_peak=        0 match=true
+verify.v5        SLH-DSA-SHA2-192s      stack=   72848 heap_alloc=        0 heap_peak=        0 match=true
+hmsg.v0          SLH-DSA-SHA2-192s      stack=   89232 heap_alloc=       69 heap_peak=       69 match=true
+fors.v0          SLH-DSA-SHA2-192s      stack=     576 heap_alloc=       24 heap_peak=       24 match=true
+ht_wots.v0       SLH-DSA-SHA2-192s      stack=    2880 heap_alloc=      448 heap_peak=      448 match=true
+ht_auth.v0       SLH-DSA-SHA2-192s      stack=     368 heap_alloc=      448 heap_peak=      448 match=true
+total.v0         SLH-DSA-SHA2-192s      stack=  106128 heap_alloc=      205 heap_peak=      205 match=true
+total_best.v0    SLH-DSA-SHA2-192s      stack=    2112 heap_alloc=    17774 heap_peak=     2600 match=true
+keygen.v0        SLH-DSA-SHA2-192f      stack=    2736 heap_alloc=      144 heap_peak=      144 match=true
+keygen.v5        SLH-DSA-SHA2-192f      stack=    2736 heap_alloc=      144 heap_peak=      144 match=true
+sign.v0          SLH-DSA-SHA2-192f      stack=  205296 heap_alloc=    35664 heap_peak=    35664 match=true
+sign.v4          SLH-DSA-SHA2-192f      stack=  205200 heap_alloc=    35664 heap_peak=    35664 match=true
+sign.v5          SLH-DSA-SHA2-192f      stack=  205296 heap_alloc=    35664 heap_peak=    35664 match=true
+verify.v0        SLH-DSA-SHA2-192f      stack=  185184 heap_alloc=        0 heap_peak=        0 match=true
+verify.v4        SLH-DSA-SHA2-192f      stack=  185120 heap_alloc=        0 heap_peak=        0 match=true
+verify.v5        SLH-DSA-SHA2-192f      stack=  185184 heap_alloc=        0 heap_peak=        0 match=true
+hmsg.v0          SLH-DSA-SHA2-192f      stack=  221008 heap_alloc=       75 heap_peak=       75 match=true
+fors.v0          SLH-DSA-SHA2-192f      stack=    1040 heap_alloc=       24 heap_peak=       24 match=true
+ht_wots.v0       SLH-DSA-SHA2-192f      stack=    2880 heap_alloc=     1408 heap_peak=     1408 match=true
+ht_auth.v0       SLH-DSA-SHA2-192f      stack=     352 heap_alloc=     1408 heap_peak=     1408 match=true
+total.v0         SLH-DSA-SHA2-192f      stack=  257360 heap_alloc=      451 heap_peak=      451 match=true
+total_best.v0    SLH-DSA-SHA2-192f      stack=    2208 heap_alloc=    54777 heap_peak=     2846 match=true
+keygen.v0        SLH-DSA-SHA2-256s      stack=    4624 heap_alloc=      192 heap_peak=      192 match=true
+keygen.v5        SLH-DSA-SHA2-256s      stack=    4624 heap_alloc=      192 heap_peak=      192 match=true
+sign.v0          SLH-DSA-SHA2-256s      stack=  166960 heap_alloc=    29792 heap_peak=    29792 match=true
+sign.v4          SLH-DSA-SHA2-256s      stack=  166784 heap_alloc=    29792 heap_peak=    29792 match=true
+sign.v5          SLH-DSA-SHA2-256s      stack=  166960 heap_alloc=    29792 heap_peak=    29792 match=true
+verify.v0        SLH-DSA-SHA2-256s      stack=  137488 heap_alloc=        0 heap_peak=        0 match=true
+verify.v4        SLH-DSA-SHA2-256s      stack=  137408 heap_alloc=        0 heap_peak=        0 match=true
+verify.v5        SLH-DSA-SHA2-256s      stack=  137488 heap_alloc=        0 heap_peak=        0 match=true
+hmsg.v0          SLH-DSA-SHA2-256s      stack=  167440 heap_alloc=       86 heap_peak=       86 match=true
+fors.v0          SLH-DSA-SHA2-256s      stack=     928 heap_alloc=       32 heap_peak=       32 match=true
+ht_wots.v0       SLH-DSA-SHA2-256s      stack=    4768 heap_alloc=      576 heap_peak=      576 match=true
+ht_auth.v0       SLH-DSA-SHA2-256s      stack=     368 heap_alloc=      576 heap_peak=      576 match=true
+total.v0         SLH-DSA-SHA2-256s      stack=  197952 heap_alloc=      246 heap_peak=      246 match=true
+total_best.v0    SLH-DSA-SHA2-256s      stack=    2160 heap_alloc=    35718 heap_peak=     4505 match=true
+keygen.v0        SLH-DSA-SHA2-256f      stack=    3984 heap_alloc=      192 heap_peak=      192 match=true
+keygen.v5        SLH-DSA-SHA2-256f      stack=    3984 heap_alloc=      192 heap_peak=      192 match=true
+sign.v0          SLH-DSA-SHA2-256f      stack=  282864 heap_alloc=    49856 heap_peak=    49856 match=true
+sign.v4          SLH-DSA-SHA2-256f      stack=  282688 heap_alloc=    49856 heap_peak=    49856 match=true
+sign.v5          SLH-DSA-SHA2-256f      stack=  282864 heap_alloc=    49856 heap_peak=    49856 match=true
+verify.v0        SLH-DSA-SHA2-256f      stack=  255056 heap_alloc=        0 heap_peak=        0 match=true
+verify.v4        SLH-DSA-SHA2-256f      stack=  254976 heap_alloc=        0 heap_peak=        0 match=true
+verify.v5        SLH-DSA-SHA2-256f      stack=  255056 heap_alloc=        0 heap_peak=        0 match=true
+hmsg.v0          SLH-DSA-SHA2-256f      stack=  305072 heap_alloc=       89 heap_peak=       89 match=true
+fors.v0          SLH-DSA-SHA2-256f      stack=    1392 heap_alloc=       32 heap_peak=       32 match=true
+ht_wots.v0       SLH-DSA-SHA2-256f      stack=    4768 heap_alloc=     1224 heap_peak=     1224 match=true
+ht_auth.v0       SLH-DSA-SHA2-256f      stack=     368 heap_alloc=     1224 heap_peak=     1224 match=true
+total.v0         SLH-DSA-SHA2-256f      stack=  355664 heap_alloc=      393 heap_peak=      393 match=true
+total_best.v0    SLH-DSA-SHA2-256f      stack=    2240 heap_alloc=    75048 heap_peak=     4652 match=true
+keygen.v0        SLH-DSA-SHAKE-128s     stack=    8440 heap_alloc=       96 heap_peak=       96 match=true
+keygen.v5        SLH-DSA-SHAKE-128s     stack=    8440 heap_alloc=       96 heap_peak=       96 match=true
+sign.v0          SLH-DSA-SHAKE-128s     stack=   44664 heap_alloc=     7856 heap_peak=     7856 match=true
+sign.v4          SLH-DSA-SHAKE-128s     stack=   44600 heap_alloc=     7856 heap_peak=     7856 match=true
+sign.v5          SLH-DSA-SHAKE-128s     stack=   44664 heap_alloc=     7856 heap_peak=     7856 match=true
+verify.v0        SLH-DSA-SHAKE-128s     stack=   34688 heap_alloc=        0 heap_peak=        0 match=true
+verify.v4        SLH-DSA-SHAKE-128s     stack=   34640 heap_alloc=        0 heap_peak=        0 match=true
+verify.v5        SLH-DSA-SHAKE-128s     stack=   34688 heap_alloc=        0 heap_peak=        0 match=true
+hmsg.v0          SLH-DSA-SHAKE-128s     stack=   42720 heap_alloc=       51 heap_peak=       51 match=true
+fors.v0          SLH-DSA-SHAKE-128s     stack=    1368 heap_alloc=       16 heap_peak=       16 match=true
+ht_wots.v0       SLH-DSA-SHAKE-128s     stack=    1512 heap_alloc=      392 heap_peak=      392 match=true
+ht_auth.v0       SLH-DSA-SHAKE-128s     stack=     328 heap_alloc=      392 heap_peak=      392 match=true
+total.v0         SLH-DSA-SHAKE-128s     stack=   52080 heap_alloc=      179 heap_peak=      179 match=true
+total_best.v0    SLH-DSA-SHAKE-128s     stack=    3808 heap_alloc=    24976 heap_peak=     3590 match=true
+keygen.v0        SLH-DSA-SHAKE-128f     stack=    3832 heap_alloc=       96 heap_peak=       96 match=true
+keygen.v5        SLH-DSA-SHAKE-128f     stack=    3832 heap_alloc=       96 heap_peak=       96 match=true
+sign.v0          SLH-DSA-SHAKE-128f     stack=   96048 heap_alloc=    17088 heap_peak=    17088 match=true
+sign.v4          SLH-DSA-SHAKE-128f     stack=   95984 heap_alloc=    17088 heap_peak=    17088 match=true
+sign.v5          SLH-DSA-SHAKE-128f     stack=   96048 heap_alloc=    17088 heap_peak=    17088 match=true
+verify.v0        SLH-DSA-SHAKE-128f     stack=   86768 heap_alloc=        0 heap_peak=        0 match=true
+verify.v4        SLH-DSA-SHAKE-128f     stack=   86720 heap_alloc=        0 heap_peak=        0 match=true
+verify.v5        SLH-DSA-SHAKE-128f     stack=   86768 heap_alloc=        0 heap_peak=        0 match=true
+hmsg.v0          SLH-DSA-SHAKE-128f     stack=  104032 heap_alloc=       59 heap_peak=       59 match=true
+fors.v0          SLH-DSA-SHAKE-128f     stack=    1720 heap_alloc=       16 heap_peak=       16 match=true
+ht_wots.v0       SLH-DSA-SHAKE-128f     stack=    1512 heap_alloc=     1232 heap_peak=     1232 match=true
+ht_auth.v0       SLH-DSA-SHAKE-128f     stack=     312 heap_alloc=     1232 heap_peak=     1232 match=true
+total.v0         SLH-DSA-SHAKE-128f     stack=  122640 heap_alloc=      427 heap_peak=      427 match=true
+total_best.v0    SLH-DSA-SHAKE-128f     stack=    3808 heap_alloc=    77969 heap_peak=     3838 match=true
+keygen.v0        SLH-DSA-SHAKE-192s     stack=    3768 heap_alloc=      144 heap_peak=      144 match=true
+keygen.v5        SLH-DSA-SHAKE-192s     stack=    3768 heap_alloc=      144 heap_peak=      144 match=true
+sign.v0          SLH-DSA-SHAKE-192s     stack=   91408 heap_alloc=    16224 heap_peak=    16224 match=true
+sign.v4          SLH-DSA-SHAKE-192s     stack=   91312 heap_alloc=    16224 heap_peak=    16224 match=true
+sign.v5          SLH-DSA-SHAKE-192s     stack=   91408 heap_alloc=    16224 heap_peak=    16224 match=true
+verify.v0        SLH-DSA-SHAKE-192s     stack=   72848 heap_alloc=        0 heap_peak=        0 match=true
+verify.v4        SLH-DSA-SHAKE-192s     stack=   72784 heap_alloc=        0 heap_peak=        0 match=true
+verify.v5        SLH-DSA-SHAKE-192s     stack=   72848 heap_alloc=        0 heap_peak=        0 match=true
+hmsg.v0          SLH-DSA-SHAKE-192s     stack=   89232 heap_alloc=       69 heap_peak=       69 match=true
+fors.v0          SLH-DSA-SHAKE-192s     stack=    1560 heap_alloc=       24 heap_peak=       24 match=true
+ht_wots.v0       SLH-DSA-SHAKE-192s     stack=    2872 heap_alloc=      448 heap_peak=      448 match=true
+ht_auth.v0       SLH-DSA-SHAKE-192s     stack=     344 heap_alloc=      448 heap_peak=      448 match=true
+total.v0         SLH-DSA-SHAKE-192s     stack=  106992 heap_alloc=      205 heap_peak=      205 match=true
+total_best.v0    SLH-DSA-SHAKE-192s     stack=    3840 heap_alloc=    41894 heap_peak=     5992 match=true
+keygen.v0        SLH-DSA-SHAKE-192f     stack=    2904 heap_alloc=      144 heap_peak=      144 match=true
+keygen.v5        SLH-DSA-SHAKE-192f     stack=    2904 heap_alloc=      144 heap_peak=      144 match=true
+sign.v0          SLH-DSA-SHAKE-192f     stack=  205312 heap_alloc=    35664 heap_peak=    35664 match=true
+sign.v4          SLH-DSA-SHAKE-192f     stack=  205216 heap_alloc=    35664 heap_peak=    35664 match=true
+sign.v5          SLH-DSA-SHAKE-192f     stack=  205312 heap_alloc=    35664 heap_peak=    35664 match=true
+verify.v0        SLH-DSA-SHAKE-192f     stack=  185184 heap_alloc=        0 heap_peak=        0 match=true
+verify.v4        SLH-DSA-SHAKE-192f     stack=  185120 heap_alloc=        0 heap_peak=        0 match=true
+verify.v5        SLH-DSA-SHAKE-192f     stack=  185184 heap_alloc=        0 heap_peak=        0 match=true
+hmsg.v0          SLH-DSA-SHAKE-192f     stack=  221008 heap_alloc=       75 heap_peak=       75 match=true
+fors.v0          SLH-DSA-SHAKE-192f     stack=    1992 heap_alloc=       24 heap_peak=       24 match=true
+ht_wots.v0       SLH-DSA-SHAKE-192f     stack=    2872 heap_alloc=     1408 heap_peak=     1408 match=true
+ht_auth.v0       SLH-DSA-SHAKE-192f     stack=     328 heap_alloc=     1408 heap_peak=     1408 match=true
+total.v0         SLH-DSA-SHAKE-192f     stack=  258256 heap_alloc=      451 heap_peak=      451 match=true
+total_best.v0    SLH-DSA-SHAKE-192f     stack=    3840 heap_alloc=   130713 heap_peak=     6238 match=true
+keygen.v0        SLH-DSA-SHAKE-256s     stack=    4808 heap_alloc=      192 heap_peak=      192 match=true
+keygen.v5        SLH-DSA-SHAKE-256s     stack=    4808 heap_alloc=      192 heap_peak=      192 match=true
+sign.v0          SLH-DSA-SHAKE-256s     stack=  166976 heap_alloc=    29792 heap_peak=    29792 match=true
+sign.v4          SLH-DSA-SHAKE-256s     stack=  166800 heap_alloc=    29792 heap_peak=    29792 match=true
+sign.v5          SLH-DSA-SHAKE-256s     stack=  166976 heap_alloc=    29792 heap_peak=    29792 match=true
+verify.v0        SLH-DSA-SHAKE-256s     stack=  137488 heap_alloc=        0 heap_peak=        0 match=true
+verify.v4        SLH-DSA-SHAKE-256s     stack=  137408 heap_alloc=        0 heap_peak=        0 match=true
+verify.v5        SLH-DSA-SHAKE-256s     stack=  137488 heap_alloc=        0 heap_peak=        0 match=true
+hmsg.v0          SLH-DSA-SHAKE-256s     stack=  167440 heap_alloc=       86 heap_peak=       86 match=true
+fors.v0          SLH-DSA-SHAKE-256s     stack=    1912 heap_alloc=       32 heap_peak=       32 match=true
+ht_wots.v0       SLH-DSA-SHAKE-256s     stack=    4776 heap_alloc=      576 heap_peak=      576 match=true
+ht_auth.v0       SLH-DSA-SHAKE-256s     stack=     360 heap_alloc=      576 heap_peak=      576 match=true
+total.v0         SLH-DSA-SHAKE-256s     stack=  198864 heap_alloc=      246 heap_peak=      246 match=true
+total_best.v0    SLH-DSA-SHAKE-256s     stack=    3840 heap_alloc=    71302 heap_peak=     8921 match=true
+keygen.v0        SLH-DSA-SHAKE-256f     stack=    4168 heap_alloc=      192 heap_peak=      192 match=true
+keygen.v5        SLH-DSA-SHAKE-256f     stack=    4168 heap_alloc=      192 heap_peak=      192 match=true
+sign.v0          SLH-DSA-SHAKE-256f     stack=  282880 heap_alloc=    49856 heap_peak=    49856 match=true
+sign.v4          SLH-DSA-SHAKE-256f     stack=  282704 heap_alloc=    49856 heap_peak=    49856 match=true
+sign.v5          SLH-DSA-SHAKE-256f     stack=  282880 heap_alloc=    49856 heap_peak=    49856 match=true
+verify.v0        SLH-DSA-SHAKE-256f     stack=  255056 heap_alloc=        0 heap_peak=        0 match=true
+verify.v4        SLH-DSA-SHAKE-256f     stack=  254976 heap_alloc=        0 heap_peak=        0 match=true
+verify.v5        SLH-DSA-SHAKE-256f     stack=  255056 heap_alloc=        0 heap_peak=        0 match=true
+hmsg.v0          SLH-DSA-SHAKE-256f     stack=  305072 heap_alloc=       89 heap_peak=       89 match=true
+fors.v0          SLH-DSA-SHAKE-256f     stack=    2360 heap_alloc=       32 heap_peak=       32 match=true
+ht_wots.v0       SLH-DSA-SHAKE-256f     stack=    4776 heap_alloc=     1224 heap_peak=     1224 match=true
+ht_auth.v0       SLH-DSA-SHAKE-256f     stack=     344 heap_alloc=     1224 heap_peak=     1224 match=true
+total.v0         SLH-DSA-SHAKE-256f     stack=  356560 heap_alloc=      393 heap_peak=      393 match=true
+total_best.v0    SLH-DSA-SHAKE-256f     stack=    3872 heap_alloc=   150856 heap_peak=     9068 match=true
+stack baseline (thread bookkeeping) = 6440 bytes
+keygen.v1        ML-DSA-44              stack=  201744 heap_alloc=    94272 heap_peak=    90400 match=true
+sign.v1          ML-DSA-44              stack=  105680 heap_alloc=     6516 heap_peak=     6516 match=true
+verify.v1        ML-DSA-44              stack=   66384 heap_alloc=    28736 heap_peak=    28736 match=true
+keygen.v1        ML-DSA-65              stack=  279232 heap_alloc=   157824 heap_peak=   151840 match=true
+sign.v1          ML-DSA-65              stack=  162032 heap_alloc=     8429 heap_peak=     8429 match=true
+verify.v1        ML-DSA-65              stack=  103472 heap_alloc=    48192 heap_peak=    48192 match=true
+keygen.v1        ML-DSA-87              stack=  438848 heap_alloc=   259680 heap_peak=   252192 match=true
+sign.v1          ML-DSA-87              stack=  275488 heap_alloc=    11795 heap_peak=    11795 match=true
+verify.v1        ML-DSA-87              stack=  170288 heap_alloc=    80960 heap_peak=    80960 match=true
+keygen.v1        SLH-DSA-SHA2-128s      stack=    7108 heap_alloc=       96 heap_peak=       96 match=true
+sign.v1          SLH-DSA-SHA2-128s      stack=   44256 heap_alloc=     7856 heap_peak=     7856 match=true
+verify.v1        SLH-DSA-SHA2-128s      stack=   34688 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v1        SLH-DSA-SHA2-128f      stack=    2500 heap_alloc=       96 heap_peak=       96 match=true
+sign.v1          SLH-DSA-SHA2-128f      stack=   95824 heap_alloc=    17088 heap_peak=    17088 match=true
+verify.v1        SLH-DSA-SHA2-128f      stack=   86768 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v1        SLH-DSA-SHA2-192s      stack=    3584 heap_alloc=      144 heap_peak=      144 match=true
+sign.v1          SLH-DSA-SHA2-192s      stack=   91408 heap_alloc=    16224 heap_peak=    16224 match=true
+verify.v1        SLH-DSA-SHA2-192s      stack=   72848 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v1        SLH-DSA-SHA2-192f      stack=    2720 heap_alloc=      144 heap_peak=      144 match=true
+sign.v1          SLH-DSA-SHA2-192f      stack=  205296 heap_alloc=    35664 heap_peak=    35664 match=true
+verify.v1        SLH-DSA-SHA2-192f      stack=  185184 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v1        SLH-DSA-SHA2-256s      stack=    4608 heap_alloc=      192 heap_peak=      192 match=true
+sign.v1          SLH-DSA-SHA2-256s      stack=  166944 heap_alloc=    29792 heap_peak=    29792 match=true
+verify.v1        SLH-DSA-SHA2-256s      stack=  137504 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v1        SLH-DSA-SHA2-256f      stack=    3968 heap_alloc=      192 heap_peak=      192 match=true
+sign.v1          SLH-DSA-SHA2-256f      stack=  282864 heap_alloc=    49856 heap_peak=    49856 match=true
+verify.v1        SLH-DSA-SHA2-256f      stack=  255072 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v1        SLH-DSA-SHAKE-128s     stack=    8416 heap_alloc=       96 heap_peak=       96 match=true
+sign.v1          SLH-DSA-SHAKE-128s     stack=   44624 heap_alloc=     7856 heap_peak=     7856 match=true
+verify.v1        SLH-DSA-SHAKE-128s     stack=   34688 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v1        SLH-DSA-SHAKE-128f     stack=    3808 heap_alloc=       96 heap_peak=       96 match=true
+sign.v1          SLH-DSA-SHAKE-128f     stack=   96048 heap_alloc=    17088 heap_peak=    17088 match=true
+verify.v1        SLH-DSA-SHAKE-128f     stack=   86768 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v1        SLH-DSA-SHAKE-192s     stack=    3744 heap_alloc=      144 heap_peak=      144 match=true
+sign.v1          SLH-DSA-SHAKE-192s     stack=   91424 heap_alloc=    16224 heap_peak=    16224 match=true
+verify.v1        SLH-DSA-SHAKE-192s     stack=   72848 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v1        SLH-DSA-SHAKE-192f     stack=    2880 heap_alloc=      144 heap_peak=      144 match=true
+sign.v1          SLH-DSA-SHAKE-192f     stack=  205296 heap_alloc=    35664 heap_peak=    35664 match=true
+verify.v1        SLH-DSA-SHAKE-192f     stack=  185184 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v1        SLH-DSA-SHAKE-256s     stack=    4784 heap_alloc=      192 heap_peak=      192 match=true
+sign.v1          SLH-DSA-SHAKE-256s     stack=  166976 heap_alloc=    29792 heap_peak=    29792 match=true
+verify.v1        SLH-DSA-SHAKE-256s     stack=  137504 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v1        SLH-DSA-SHAKE-256f     stack=    4144 heap_alloc=      192 heap_peak=      192 match=true
+sign.v1          SLH-DSA-SHAKE-256f     stack=  282880 heap_alloc=    49856 heap_peak=    49856 match=true
+verify.v1        SLH-DSA-SHAKE-256f     stack=  255072 heap_alloc=        0 heap_peak=        0 match=true
+stack baseline (thread bookkeeping) = 6440 bytes
+keygen.v2        ML-DSA-44              stack=  198464 heap_alloc=    94272 heap_peak=    90400 match=true
+sign.v2          ML-DSA-44              stack=  107696 heap_alloc=     6516 heap_peak=     6516 match=true
+verify.v2        ML-DSA-44              stack=   58464 heap_alloc=    28736 heap_peak=    28736 match=true
+keygen.v2        ML-DSA-65              stack=  307264 heap_alloc=   157824 heap_peak=   151840 match=true
+sign.v2          ML-DSA-65              stack=  164160 heap_alloc=     8429 heap_peak=     8429 match=true
+verify.v2        ML-DSA-65              stack=   94560 heap_alloc=    48192 heap_peak=    48192 match=true
+keygen.v2        ML-DSA-87              stack=  442976 heap_alloc=   259680 heap_peak=   252192 match=true
+sign.v2          ML-DSA-87              stack=  268432 heap_alloc=    11795 heap_peak=    11795 match=true
+verify.v2        ML-DSA-87              stack=  154464 heap_alloc=    80960 heap_peak=    80960 match=true
+keygen.v2        SLH-DSA-SHA2-128s      stack=    7116 heap_alloc=       96 heap_peak=       96 match=true
+sign.v2          SLH-DSA-SHA2-128s      stack=   52556 heap_alloc=     7856 heap_peak=     7856 match=true
+verify.v2        SLH-DSA-SHA2-128s      stack=   18992 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v2        SLH-DSA-SHA2-128f      stack=    2508 heap_alloc=       96 heap_peak=       96 match=true
+sign.v2          SLH-DSA-SHA2-128f      stack=   85292 heap_alloc=    17088 heap_peak=    17088 match=true
+verify.v2        SLH-DSA-SHA2-128f      stack=   62012 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v2        SLH-DSA-SHA2-192s      stack=    3360 heap_alloc=      144 heap_peak=      144 match=true
+sign.v2          SLH-DSA-SHA2-192s      stack=   97984 heap_alloc=    16224 heap_peak=    16224 match=true
+verify.v2        SLH-DSA-SHA2-192s      stack=   46208 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v2        SLH-DSA-SHA2-192f      stack=    2496 heap_alloc=      144 heap_peak=      144 match=true
+sign.v2          SLH-DSA-SHA2-192f      stack=  176816 heap_alloc=    35664 heap_peak=    35664 match=true
+verify.v2        SLH-DSA-SHA2-192f      stack=  131760 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v2        SLH-DSA-SHA2-256s      stack=    4352 heap_alloc=      192 heap_peak=      192 match=true
+sign.v2          SLH-DSA-SHA2-256s      stack=  177968 heap_alloc=    29792 heap_peak=    29792 match=true
+verify.v2        SLH-DSA-SHA2-256s      stack=   84320 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v2        SLH-DSA-SHA2-256f      stack=    3712 heap_alloc=      192 heap_peak=      192 match=true
+sign.v2          SLH-DSA-SHA2-256f      stack=  296800 heap_alloc=    49856 heap_peak=    49856 match=true
+verify.v2        SLH-DSA-SHA2-256f      stack=  182288 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v2        SLH-DSA-SHAKE-128s     stack=    8320 heap_alloc=       96 heap_peak=       96 match=true
+sign.v2          SLH-DSA-SHAKE-128s     stack=   54208 heap_alloc=     7856 heap_peak=     7856 match=true
+verify.v2        SLH-DSA-SHAKE-128s     stack=   18992 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v2        SLH-DSA-SHAKE-128f     stack=    3712 heap_alloc=       96 heap_peak=       96 match=true
+sign.v2          SLH-DSA-SHAKE-128f     stack=   86928 heap_alloc=    17088 heap_peak=    17088 match=true
+verify.v2        SLH-DSA-SHAKE-128f     stack=   63296 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v2        SLH-DSA-SHAKE-192s     stack=    3616 heap_alloc=      144 heap_peak=      144 match=true
+sign.v2          SLH-DSA-SHAKE-192s     stack=   98672 heap_alloc=    16224 heap_peak=    16224 match=true
+verify.v2        SLH-DSA-SHAKE-192s     stack=   46208 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v2        SLH-DSA-SHAKE-192f     stack=    2752 heap_alloc=      144 heap_peak=      144 match=true
+sign.v2          SLH-DSA-SHAKE-192f     stack=  177472 heap_alloc=    35664 heap_peak=    35664 match=true
+verify.v2        SLH-DSA-SHAKE-192f     stack=  132032 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v2        SLH-DSA-SHAKE-256s     stack=    4624 heap_alloc=      192 heap_peak=      192 match=true
+sign.v2          SLH-DSA-SHAKE-256s     stack=  178672 heap_alloc=    29792 heap_peak=    29792 match=true
+verify.v2        SLH-DSA-SHAKE-256s     stack=   84320 heap_alloc=        0 heap_peak=        0 match=true
+keygen.v2        SLH-DSA-SHAKE-256f     stack=    3984 heap_alloc=      192 heap_peak=      192 match=true
+sign.v2          SLH-DSA-SHAKE-256f     stack=  297488 heap_alloc=    49856 heap_peak=    49856 match=true
+verify.v2        SLH-DSA-SHAKE-256f     stack=  182576 heap_alloc=        0 heap_peak=        0 match=true
+stack baseline (thread bookkeeping) = 6440 bytes
+keygen.v4        ML-DSA-44              stack=  201664 heap_alloc=    94272 heap_peak=    90400 match=true
+keygen.v4        ML-DSA-65              stack=  279088 heap_alloc=   157824 heap_peak=   151840 match=true
+keygen.v4        ML-DSA-87              stack=  438688 heap_alloc=   259680 heap_peak=   252192 match=true
+keygen.v4        SLH-DSA-SHA2-128s      stack=    7120 heap_alloc=       96 heap_peak=       96 match=true
+keygen.v4        SLH-DSA-SHA2-128f      stack=    2512 heap_alloc=       96 heap_peak=       96 match=true
+keygen.v4        SLH-DSA-SHA2-192s      stack=    3600 heap_alloc=      144 heap_peak=      144 match=true
+keygen.v4        SLH-DSA-SHA2-192f      stack=    2736 heap_alloc=      144 heap_peak=      144 match=true
+keygen.v4        SLH-DSA-SHA2-256s      stack=    4624 heap_alloc=      192 heap_peak=      192 match=true
+keygen.v4        SLH-DSA-SHA2-256f      stack=    3984 heap_alloc=      192 heap_peak=      192 match=true
+keygen.v4        SLH-DSA-SHAKE-128s     stack=    8440 heap_alloc=       96 heap_peak=       96 match=true
+keygen.v4        SLH-DSA-SHAKE-128f     stack=    3832 heap_alloc=       96 heap_peak=       96 match=true
+keygen.v4        SLH-DSA-SHAKE-192s     stack=    3768 heap_alloc=      144 heap_peak=      144 match=true
+keygen.v4        SLH-DSA-SHAKE-192f     stack=    2904 heap_alloc=      144 heap_peak=      144 match=true
+keygen.v4        SLH-DSA-SHAKE-256s     stack=    4808 heap_alloc=      192 heap_peak=      192 match=true
+keygen.v4        SLH-DSA-SHAKE-256f     stack=    4168 heap_alloc=      192 heap_peak=      192 match=true
+stack baseline (thread bookkeeping) = 6440 bytes
+keygen.v3        ML-DSA-44              stack=  222576 heap_alloc=    94272 heap_peak=    90400 match=true
+keygen.v3        ML-DSA-65              stack=  352592 heap_alloc=   157824 heap_peak=   151840 match=true
+keygen.v3        ML-DSA-87              stack=  432560 heap_alloc=   259680 heap_peak=   252192 match=true
+keygen.v3        SLH-DSA-SHA2-128s      stack=    7152 heap_alloc=       96 heap_peak=       96 match=true
+keygen.v3        SLH-DSA-SHA2-128f      stack=    2544 heap_alloc=       96 heap_peak=       96 match=true
+keygen.v3        SLH-DSA-SHA2-192s      stack=    3128 heap_alloc=      144 heap_peak=      144 match=true
+keygen.v3        SLH-DSA-SHA2-192f      stack=    2264 heap_alloc=      144 heap_peak=      144 match=true
+keygen.v3        SLH-DSA-SHA2-256s      stack=    4440 heap_alloc=      192 heap_peak=      192 match=true
+keygen.v3        SLH-DSA-SHA2-256f      stack=    3800 heap_alloc=      192 heap_peak=      192 match=true
+keygen.v3        SLH-DSA-SHAKE-128s     stack=    8344 heap_alloc=       96 heap_peak=       96 match=true
+keygen.v3        SLH-DSA-SHAKE-128f     stack=    3064 heap_alloc=       96 heap_peak=       96 match=true
+keygen.v3        SLH-DSA-SHAKE-192s     stack=    3640 heap_alloc=      144 heap_peak=      144 match=true
+keygen.v3        SLH-DSA-SHAKE-192f     stack=    3896 heap_alloc=      144 heap_peak=      144 match=true
+keygen.v3        SLH-DSA-SHAKE-256s     stack=    5448 heap_alloc=      192 heap_peak=      192 match=true
+keygen.v3        SLH-DSA-SHAKE-256f     stack=    5208 heap_alloc=      192 heap_peak=      192 match=true
+stack baseline (thread bookkeeping) = 6440 bytes
+sign.v3          ML-DSA-44              stack=  118576 heap_alloc=     6516 heap_peak=     6516 match=true
+sign.v3          ML-DSA-65              stack=  169840 heap_alloc=     8429 heap_peak=     8429 match=true
+sign.v3          ML-DSA-87              stack=  269240 heap_alloc=    11795 heap_peak=    11795 match=true
+sign.v3          SLH-DSA-SHA2-128s      stack=   44688 heap_alloc=     7856 heap_peak=     7856 match=true
+sign.v3          SLH-DSA-SHA2-128f      stack=   85296 heap_alloc=    17088 heap_peak=    17088 match=true
+sign.v3          SLH-DSA-SHA2-192s      stack=   81560 heap_alloc=    16224 heap_peak=    16224 match=true
+sign.v3          SLH-DSA-SHA2-192f      stack=  176600 heap_alloc=    35664 heap_peak=    35664 match=true
+sign.v3          SLH-DSA-SHA2-256s      stack=  148520 heap_alloc=    29792 heap_peak=    29792 match=true
+sign.v3          SLH-DSA-SHA2-256f      stack=  247304 heap_alloc=    49856 heap_peak=    49856 match=true
+sign.v3          SLH-DSA-SHAKE-128s     stack=   45832 heap_alloc=     7856 heap_peak=     7856 match=true
+sign.v3          SLH-DSA-SHAKE-128f     stack=   87576 heap_alloc=    17088 heap_peak=    17088 match=true
+sign.v3          SLH-DSA-SHAKE-192s     stack=   84136 heap_alloc=    16224 heap_peak=    16224 match=true
+sign.v3          SLH-DSA-SHAKE-192f     stack=  179192 heap_alloc=    35664 heap_peak=    35664 match=true
+sign.v3          SLH-DSA-SHAKE-256s     stack=  150344 heap_alloc=    29792 heap_peak=    29792 match=true
+sign.v3          SLH-DSA-SHAKE-256f     stack=  249096 heap_alloc=    49856 heap_peak=    49856 match=true
+stack baseline (thread bookkeeping) = 6440 bytes
+verify.v3        ML-DSA-44              stack=   67488 heap_alloc=    28736 heap_peak=    28736 match=true
+verify.v3        ML-DSA-65              stack=  105664 heap_alloc=    48192 heap_peak=    48192 match=true
+verify.v3        ML-DSA-87              stack=  157888 heap_alloc=    80960 heap_peak=    80960 match=true
+verify.v3        SLH-DSA-SHA2-128s      stack=   27296 heap_alloc=        0 heap_peak=        0 match=true
+verify.v3        SLH-DSA-SHA2-128f      stack=   63600 heap_alloc=        0 heap_peak=        0 match=true
+verify.v3        SLH-DSA-SHA2-192s      stack=   61792 heap_alloc=        0 heap_peak=        0 match=true
+verify.v3        SLH-DSA-SHA2-192f      stack=  135168 heap_alloc=        0 heap_peak=        0 match=true
+verify.v3        SLH-DSA-SHA2-256s      stack=  115120 heap_alloc=        0 heap_peak=        0 match=true
+verify.v3        SLH-DSA-SHA2-256f      stack=  188864 heap_alloc=        0 heap_peak=        0 match=true
+verify.v3        SLH-DSA-SHAKE-128s     stack=   27296 heap_alloc=        0 heap_peak=        0 match=true
+verify.v3        SLH-DSA-SHAKE-128f     stack=   63600 heap_alloc=        0 heap_peak=        0 match=true
+verify.v3        SLH-DSA-SHAKE-192s     stack=   61792 heap_alloc=        0 heap_peak=        0 match=true
+verify.v3        SLH-DSA-SHAKE-192f     stack=  135168 heap_alloc=        0 heap_peak=        0 match=true
+verify.v3        SLH-DSA-SHAKE-256s     stack=  115120 heap_alloc=        0 heap_peak=        0 match=true
+verify.v3        SLH-DSA-SHAKE-256f     stack=  188864 heap_alloc=        0 heap_peak=        0 match=true
+>> 363 lines written to /home/user/pqc-signatures/results/rustcrypto/memory.jsonl
+== validate rustcrypto  20:38:53
+keygen.v0        pass=195 fail=0 skipped=0
+keygen.v5        pass=195 fail=0 skipped=0
+sign.v0          pass=69 fail=0 skipped=0
+sign.v4          pass=69 fail=0 skipped=0
+sign.v5          pass=69 fail=0 skipped=0
+total.v0         pass=387 fail=0 skipped=0
+total_best.v0    pass=387 fail=0 skipped=0
+verify.v0        pass=387 fail=0 skipped=0
+verify.v4        pass=387 fail=0 skipped=0
+verify.v5        pass=387 fail=0 skipped=0
+keygen.v1        pass=195 fail=0 skipped=0
+sign.v1          pass=69 fail=0 skipped=0
+verify.v1        pass=387 fail=0 skipped=0
+keygen.v2        pass=195 fail=0 skipped=0
+sign.v2          pass=69 fail=0 skipped=0
+verify.v2        pass=387 fail=0 skipped=0
+keygen.v4        pass=195 fail=0 skipped=0
+keygen.v3        pass=195 fail=0 skipped=0
+sign.v3          pass=69 fail=0 skipped=0
+verify.v3        pass=387 fail=0 skipped=0
+keygen.v0        pass=195 fail=0 skipped=0
+keygen.v1        pass=195 fail=0 skipped=0
+keygen.v2        pass=195 fail=0 skipped=0
+keygen.v3        pass=195 fail=0 skipped=0
+keygen.v4        pass=195 fail=0 skipped=0
+keygen.v5        pass=195 fail=0 skipped=0
+sign.v0          pass=69 fail=0 skipped=0
+sign.v1          pass=69 fail=0 skipped=0
+sign.v2          pass=69 fail=0 skipped=0
+sign.v3          pass=69 fail=0 skipped=0
+sign.v4          pass=69 fail=0 skipped=0
+sign.v5          pass=69 fail=0 skipped=0
+total.v0         pass=387 fail=0 skipped=0
+total_best.v0    pass=387 fail=0 skipped=0
+verify.v0        pass=387 fail=0 skipped=0
+verify.v1        pass=387 fail=0 skipped=0
+verify.v2        pass=387 fail=0 skipped=0
+verify.v3        pass=387 fail=0 skipped=0
+verify.v4        pass=387 fail=0 skipped=0
+verify.v5        pass=387 fail=0 skipped=0
+TOTAL pass=4680 fail=0 skipped=0 (4680 result lines)
+== bench bouncycastle  20:43:02
+keygen.v0 jca                ML-DSA-44            n=7708   median=      99.6 us cpu/op=     157.0 us util=1.21 ops/s=    7707.7 match=true
+keygen.v0 jca                ML-DSA-65            n=4613   median=     170.9 us cpu/op=     216.8 us util=1.00 ops/s=    4612.2 match=true
+keygen.v0 jca                ML-DSA-87            n=2954   median=     292.4 us cpu/op=     331.8 us util=0.98 ops/s=    2953.7 match=true
+keygen.v0 jca                SLH-DSA-SHA2-128s    n=7      median=  153205.3 us cpu/op=  158571.4 us util=0.99 ops/s=       6.2 match=true
+keygen.v0 jca                SLH-DSA-SHA2-128f    n=447    median=    1982.7 us cpu/op=    2281.9 us util=1.02 ops/s=     446.3 match=true
+keygen.v0 jca                SLH-DSA-SHA2-192s    n=6      median=  193532.8 us cpu/op=  195000.0 us util=1.00 ops/s=       5.1 match=true
+keygen.v0 jca                SLH-DSA-SHA2-192f    n=316    median=    2991.5 us cpu/op=    3164.6 us util=1.00 ops/s=     315.7 match=true
+keygen.v0 jca                SLH-DSA-SHA2-256s    n=8      median=  135627.0 us cpu/op=  141250.0 us util=1.01 ops/s=       7.1 match=true
+keygen.v0 jca                SLH-DSA-SHA2-256f    n=107    median=    8335.8 us cpu/op=    9439.3 us util=1.00 ops/s=     106.2 match=true
+keygen.v0 jca                SLH-DSA-SHAKE-128s   n=7      median=  145760.0 us cpu/op=  157142.9 us util=1.01 ops/s=       6.4 match=true
+keygen.v0 jca                SLH-DSA-SHAKE-128f   n=401    median=    2283.7 us cpu/op=    2518.7 us util=1.01 ops/s=     400.8 match=true
+keygen.v0 jca                SLH-DSA-SHAKE-192s   n=4      median=  221326.3 us cpu/op=  257500.0 us util=1.00 ops/s=       3.9 match=true
+keygen.v0 jca                SLH-DSA-SHAKE-192f   n=279    median=    3352.0 us cpu/op=    3620.1 us util=1.01 ops/s=     279.0 match=true
+keygen.v0 jca                SLH-DSA-SHAKE-256s   n=7      median=  151075.9 us cpu/op=  160000.0 us util=0.99 ops/s=       6.2 match=true
+keygen.v0 jca                SLH-DSA-SHAKE-256f   n=100    median=    9268.0 us cpu/op=   10000.0 us util=1.00 ops/s=      99.8 match=true
+keygen.v1 jca-reuse          ML-DSA-44            n=8355   median=      98.7 us cpu/op=     118.5 us util=0.99 ops/s=    8354.5 match=true
+keygen.v1 jca-reuse          ML-DSA-65            n=4550   median=     179.0 us cpu/op=     219.8 us util=1.00 ops/s=    4549.0 match=true
+keygen.v1 jca-reuse          ML-DSA-87            n=3140   median=     284.1 us cpu/op=     318.5 us util=1.00 ops/s=    3139.5 match=true
+keygen.v1 jca-reuse          SLH-DSA-SHA2-128s    n=8      median=  130273.8 us cpu/op=  130000.0 us util=1.00 ops/s=       7.7 match=true
+keygen.v1 jca-reuse          SLH-DSA-SHA2-128f    n=483    median=    1994.6 us cpu/op=    2049.7 us util=0.99 ops/s=     482.4 match=true
+keygen.v1 jca-reuse          SLH-DSA-SHA2-192s    n=5      median=  206305.5 us cpu/op=  224000.0 us util=1.00 ops/s=       4.4 match=true
+keygen.v1 jca-reuse          SLH-DSA-SHA2-192f    n=285    median=    3013.0 us cpu/op=    3473.7 us util=0.99 ops/s=     284.7 match=true
+keygen.v1 jca-reuse          SLH-DSA-SHA2-256s    n=7      median=  147014.8 us cpu/op=  147142.9 us util=0.99 ops/s=       6.7 match=true
+keygen.v1 jca-reuse          SLH-DSA-SHA2-256f    n=108    median=    8144.0 us cpu/op=    9444.4 us util=1.02 ops/s=     107.5 match=true
+keygen.v1 jca-reuse          SLH-DSA-SHAKE-128s   n=6      median=  194863.4 us cpu/op=  190000.0 us util=0.98 ops/s=       5.1 match=true
+keygen.v1 jca-reuse          SLH-DSA-SHAKE-128f   n=278    median=    4105.3 us cpu/op=    3956.8 us util=1.10 ops/s=     277.6 match=true
+keygen.v1 jca-reuse          SLH-DSA-SHAKE-192s   n=4      median=  255482.6 us cpu/op=  257500.0 us util=1.00 ops/s=       3.9 match=true
+keygen.v1 jca-reuse          SLH-DSA-SHAKE-192f   n=261    median=    3477.7 us cpu/op=    3831.4 us util=1.00 ops/s=     260.7 match=true
+keygen.v1 jca-reuse          SLH-DSA-SHAKE-256s   n=6      median=  206767.8 us cpu/op=  193333.3 us util=0.99 ops/s=       5.1 match=true
+keygen.v1 jca-reuse          SLH-DSA-SHAKE-256f   n=91     median=    9530.4 us cpu/op=   10879.1 us util=0.99 ops/s=      90.5 match=true
+keygen.v2 lightweight        ML-DSA-44            n=8969   median=      94.2 us cpu/op=     110.4 us util=0.99 ops/s=    8968.2 match=true
+keygen.v2 lightweight        ML-DSA-65            n=5264   median=     161.4 us cpu/op=     188.1 us util=0.99 ops/s=    5263.7 match=true
+keygen.v2 lightweight        ML-DSA-87            n=3130   median=     276.2 us cpu/op=     319.5 us util=1.00 ops/s=    3129.7 match=true
+keygen.v2 lightweight        SLH-DSA-SHA2-128s    n=8      median=  135164.6 us cpu/op=  137500.0 us util=0.99 ops/s=       7.2 match=true
+keygen.v2 lightweight        SLH-DSA-SHA2-128f    n=459    median=    2007.6 us cpu/op=    2156.9 us util=0.99 ops/s=     458.3 match=true
+keygen.v2 lightweight        SLH-DSA-SHA2-192s    n=6      median=  196221.2 us cpu/op=  196666.7 us util=0.99 ops/s=       5.0 match=true
+keygen.v2 lightweight        SLH-DSA-SHA2-192f    n=325    median=    2993.4 us cpu/op=    3046.2 us util=0.99 ops/s=     324.0 match=true
+keygen.v2 lightweight        SLH-DSA-SHA2-256s    n=7      median=  130239.5 us cpu/op=  151428.6 us util=0.99 ops/s=       6.6 match=true
+keygen.v2 lightweight        SLH-DSA-SHA2-256f    n=110    median=    8446.1 us cpu/op=    9000.0 us util=0.99 ops/s=     109.7 match=true
+keygen.v2 lightweight        SLH-DSA-SHAKE-128s   n=7      median=  157988.0 us cpu/op=  158571.4 us util=0.99 ops/s=       6.2 match=true
+keygen.v2 lightweight        SLH-DSA-SHAKE-128f   n=287    median=    2846.7 us cpu/op=    3484.3 us util=1.00 ops/s=     286.9 match=true
+keygen.v2 lightweight        SLH-DSA-SHAKE-192s   n=4      median=  268148.6 us cpu/op=  252500.0 us util=1.00 ops/s=       3.9 match=true
+keygen.v2 lightweight        SLH-DSA-SHAKE-192f   n=297    median=    3343.1 us cpu/op=    3367.0 us util=1.00 ops/s=     296.2 match=true
+keygen.v2 lightweight        SLH-DSA-SHAKE-256s   n=7      median=  158899.2 us cpu/op=  161428.6 us util=0.98 ops/s=       6.1 match=true
+keygen.v2 lightweight        SLH-DSA-SHAKE-256f   n=100    median=    9307.3 us cpu/op=   10000.0 us util=1.00 ops/s=      99.9 match=true
+keygen.v3 internal-seed      ML-DSA-44            n=7688   median=      98.0 us cpu/op=     137.9 us util=1.06 ops/s=    7686.7 match=true
+keygen.v3 internal-seed      ML-DSA-65            n=5342   median=     159.9 us cpu/op=     187.2 us util=1.00 ops/s=    5341.4 match=true
+keygen.v3 internal-seed      ML-DSA-87            n=3101   median=     289.9 us cpu/op=     364.4 us util=1.13 ops/s=    3100.7 match=true
+keygen.v3 internal-seed      SLH-DSA-SHA2-128s    n=7      median=  151360.8 us cpu/op=  145714.3 us util=0.99 ops/s=       6.8 match=true
+keygen.v3 internal-seed      SLH-DSA-SHA2-128f    n=407    median=    2122.1 us cpu/op=    2457.0 us util=1.00 ops/s=     406.8 match=true
+keygen.v3 internal-seed      SLH-DSA-SHA2-192s    n=6      median=  192404.3 us cpu/op=  193333.3 us util=1.00 ops/s=       5.2 match=true
+keygen.v3 internal-seed      SLH-DSA-SHA2-192f    n=275    median=    3060.0 us cpu/op=    3600.0 us util=0.99 ops/s=     274.6 match=true
+keygen.v3 internal-seed      SLH-DSA-SHA2-256s    n=8      median=  132382.3 us cpu/op=  132500.0 us util=1.00 ops/s=       7.5 match=true
+keygen.v3 internal-seed      SLH-DSA-SHA2-256f    n=114    median=    8185.8 us cpu/op=    8596.5 us util=0.98 ops/s=     113.5 match=true
+keygen.v3 internal-seed      SLH-DSA-SHAKE-128s   n=6      median=  156189.6 us cpu/op=  178333.3 us util=0.99 ops/s=       5.6 match=true
+keygen.v3 internal-seed      SLH-DSA-SHAKE-128f   n=410    median=    2285.0 us cpu/op=    2414.6 us util=0.99 ops/s=     409.5 match=true
+keygen.v3 internal-seed      SLH-DSA-SHAKE-192s   n=4      median=  272256.1 us cpu/op=  255000.0 us util=0.99 ops/s=       3.9 match=true
+keygen.v3 internal-seed      SLH-DSA-SHAKE-192f   n=273    median=    3413.2 us cpu/op=    3663.0 us util=1.00 ops/s=     272.5 match=true
+keygen.v3 internal-seed      SLH-DSA-SHAKE-256s   n=7      median=  150538.9 us cpu/op=  150000.0 us util=1.00 ops/s=       6.7 match=true
+keygen.v3 internal-seed      SLH-DSA-SHAKE-256f   n=99     median=    9128.9 us cpu/op=   10101.0 us util=1.00 ops/s=      99.0 match=true
+keygen.v4 parallel           ML-DSA-44            n=16512  median=      53.1 us cpu/op=     169.6 us util=2.80 ops/s=   16500.5 match=true
+keygen.v4 parallel           ML-DSA-65            n=12416  median=      78.7 us cpu/op=     223.9 us util=2.76 ops/s=   12348.3 match=true
+keygen.v4 parallel           ML-DSA-87            n=7296   median=     136.5 us cpu/op=     383.8 us util=2.79 ops/s=    7267.7 match=true
+keygen.v4 parallel           SLH-DSA-SHA2-128s    n=28     median=   37286.5 us cpu/op=  137500.0 us util=3.59 ops/s=      26.1 match=true
+keygen.v4 parallel           SLH-DSA-SHA2-128f    n=1656   median=     576.6 us cpu/op=    2125.6 us util=3.46 ops/s=    1629.1 match=true
+keygen.v4 parallel           SLH-DSA-SHA2-192s    n=20     median=   51323.2 us cpu/op=  204000.0 us util=3.69 ops/s=      18.1 match=true
+keygen.v4 parallel           SLH-DSA-SHA2-192f    n=812    median=    1274.1 us cpu/op=    3990.1 us util=3.19 ops/s=     800.1 match=true
+keygen.v4 parallel           SLH-DSA-SHA2-256s    n=32     median=   35482.8 us cpu/op=  131562.5 us util=3.72 ops/s=      28.3 match=true
+keygen.v4 parallel           SLH-DSA-SHA2-256f    n=316    median=    3297.1 us cpu/op=    9493.7 us util=2.97 ops/s=     312.6 match=true
+keygen.v4 parallel           SLH-DSA-SHAKE-128s   n=20     median=   48186.9 us cpu/op=  186500.0 us util=3.58 ops/s=      19.2 match=true
+keygen.v4 parallel           SLH-DSA-SHAKE-128f   n=1248   median=     725.9 us cpu/op=    2580.1 us util=3.16 ops/s=    1225.6 match=true
+keygen.v4 parallel           SLH-DSA-SHAKE-192s   n=16     median=   72672.9 us cpu/op=  241250.0 us util=3.46 ops/s=      14.3 match=true
+keygen.v4 parallel           SLH-DSA-SHAKE-192f   n=720    median=    1391.9 us cpu/op=    4236.1 us util=3.05 ops/s=     719.7 match=true
+keygen.v4 parallel           SLH-DSA-SHAKE-256s   n=24     median=   41542.4 us cpu/op=  153333.3 us util=3.58 ops/s=      23.3 match=true
+keygen.v4 parallel           SLH-DSA-SHAKE-256f   n=296    median=    3369.5 us cpu/op=   10675.7 us util=3.12 ops/s=     291.9 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench bench --child --out - --budget-ms 1000 --ops keygen --variants keygen.v5 --params ML-DSA-44,ML-DSA-65,ML-DSA-87,SLH-DSA-SHA2-128s,SLH-DSA-SHA2-128f,SLH-DSA-SHA2-192s,SLH-DSA-SHA2-192f,SLH-DSA-SHA2-256s,SLH-DSA-SHA2-256f,SLH-DSA-SHAKE-128s,SLH-DSA-SHAKE-128f,SLH-DSA-SHAKE-192s,SLH-DSA-SHAKE-192f,SLH-DSA-SHAKE-256s,SLH-DSA-SHAKE-256f
+keygen.v5 parallelgc         ML-DSA-44            n=8126   median=      93.9 us cpu/op=     136.6 us util=1.11 ops/s=    8125.2 match=true
+keygen.v5 parallelgc         ML-DSA-65            n=4811   median=     160.7 us cpu/op=     214.1 us util=1.03 ops/s=    4810.5 match=true
+keygen.v5 parallelgc         ML-DSA-87            n=2942   median=     287.1 us cpu/op=     336.5 us util=0.99 ops/s=    2941.2 match=true
+keygen.v5 parallelgc         SLH-DSA-SHA2-128s    n=7      median=  132829.2 us cpu/op=  138571.4 us util=0.97 ops/s=       7.0 match=true
+keygen.v5 parallelgc         SLH-DSA-SHA2-128f    n=499    median=    1874.5 us cpu/op=    2004.0 us util=1.00 ops/s=     499.0 match=true
+keygen.v5 parallelgc         SLH-DSA-SHA2-192s    n=6      median=  195681.4 us cpu/op=  190000.0 us util=0.99 ops/s=       5.2 match=true
+keygen.v5 parallelgc         SLH-DSA-SHA2-192f    n=339    median=    2845.9 us cpu/op=    2920.4 us util=0.99 ops/s=     338.4 match=true
+keygen.v5 parallelgc         SLH-DSA-SHA2-256s    n=8      median=  126981.9 us cpu/op=  128750.0 us util=0.98 ops/s=       7.6 match=true
+keygen.v5 parallelgc         SLH-DSA-SHA2-256f    n=133    median=    7447.9 us cpu/op=    7518.8 us util=0.99 ops/s=     132.3 match=true
+keygen.v5 parallelgc         SLH-DSA-SHAKE-128s   n=7      median=  143941.8 us cpu/op=  145714.3 us util=1.00 ops/s=       6.9 match=true
+keygen.v5 parallelgc         SLH-DSA-SHAKE-128f   n=309    median=    3033.8 us cpu/op=    3236.2 us util=1.00 ops/s=     308.4 match=true
+keygen.v5 parallelgc         SLH-DSA-SHAKE-192s   n=5      median=  215336.1 us cpu/op=  216000.0 us util=1.00 ops/s=       4.6 match=true
+keygen.v5 parallelgc         SLH-DSA-SHAKE-192f   n=195    median=    5921.1 us cpu/op=    5128.2 us util=1.00 ops/s=     194.5 match=true
+keygen.v5 parallelgc         SLH-DSA-SHAKE-256s   n=6      median=  160885.7 us cpu/op=  171666.7 us util=0.98 ops/s=       5.7 match=true
+keygen.v5 parallelgc         SLH-DSA-SHAKE-256f   n=99     median=    9381.9 us cpu/op=   10000.0 us util=0.99 ops/s=      98.6 match=true
+sign.v0   jca                ML-DSA-44            n=5288   median=     167.2 us cpu/op=     295.0 us util=1.56 ops/s=    5286.5 match=true
+sign.v0   jca                ML-DSA-65            n=1311   median=     659.4 us cpu/op=     770.4 us util=1.01 ops/s=    1310.7 match=true
+sign.v0   jca                ML-DSA-87            n=1792   median=     507.5 us cpu/op=     563.6 us util=1.01 ops/s=    1791.6 match=true
+sign.v0   jca                SLH-DSA-SHA2-128s    n=3      median= 1037902.0 us cpu/op= 1046666.7 us util=0.99 ops/s=       0.9 match=true
+sign.v0   jca                SLH-DSA-SHA2-128f    n=20     median=   47655.6 us cpu/op=   53500.0 us util=1.07 ops/s=      20.0 match=true
+sign.v0   jca                SLH-DSA-SHA2-192s    n=3      median= 1934341.9 us cpu/op= 1966666.7 us util=1.00 ops/s=       0.5 match=true
+sign.v0   jca                SLH-DSA-SHA2-192f    n=12     median=   85737.2 us cpu/op=   88333.3 us util=1.00 ops/s=      11.4 match=true
+sign.v0   jca                SLH-DSA-SHA2-256s    n=3      median= 1848235.3 us cpu/op= 1840000.0 us util=1.00 ops/s=       0.5 match=true
+sign.v0   jca                SLH-DSA-SHA2-256f    n=6      median=  176784.9 us cpu/op=  175000.0 us util=0.98 ops/s=       5.6 match=true
+sign.v0   jca                SLH-DSA-SHAKE-128s   n=3      median= 1186560.6 us cpu/op= 1176666.7 us util=1.00 ops/s=       0.8 match=true
+sign.v0   jca                SLH-DSA-SHAKE-128f   n=16     median=   64016.3 us cpu/op=   65625.0 us util=1.00 ops/s=      15.2 match=true
+sign.v0   jca                SLH-DSA-SHAKE-192s   n=3      median= 2052361.8 us cpu/op= 2110000.0 us util=1.00 ops/s=       0.5 match=true
+sign.v0   jca                SLH-DSA-SHAKE-192f   n=9      median=  107203.3 us cpu/op=  112222.2 us util=1.00 ops/s=       8.9 match=true
+sign.v0   jca                SLH-DSA-SHAKE-256s   n=3      median= 1931148.6 us cpu/op= 2020000.0 us util=0.99 ops/s=       0.5 match=true
+sign.v0   jca                SLH-DSA-SHAKE-256f   n=6      median=  200976.4 us cpu/op=  195000.0 us util=0.99 ops/s=       5.1 match=true
+sign.v1   lightweight        ML-DSA-44            n=4945   median=     166.7 us cpu/op=     202.2 us util=1.00 ops/s=    4944.9 match=true
+sign.v1   lightweight        ML-DSA-65            n=1395   median=     657.8 us cpu/op=     716.8 us util=1.00 ops/s=    1394.2 match=true
+sign.v1   lightweight        ML-DSA-87            n=1629   median=     522.1 us cpu/op=     607.7 us util=0.99 ops/s=    1628.6 match=true
+sign.v1   lightweight        SLH-DSA-SHA2-128s    n=3      median= 1261261.5 us cpu/op= 1246666.7 us util=0.98 ops/s=       0.8 match=true
+sign.v1   lightweight        SLH-DSA-SHA2-128f    n=19     median=   52511.7 us cpu/op=   54736.8 us util=0.99 ops/s=      18.1 match=true
+sign.v1   lightweight        SLH-DSA-SHA2-192s    n=3      median= 2562572.5 us cpu/op= 2523333.3 us util=0.99 ops/s=       0.4 match=true
+sign.v1   lightweight        SLH-DSA-SHA2-192f    n=10     median=   88380.1 us cpu/op=   99000.0 us util=0.98 ops/s=       9.9 match=true
+sign.v1   lightweight        SLH-DSA-SHA2-256s    n=3      median= 1896315.4 us cpu/op= 1920000.0 us util=0.99 ops/s=       0.5 match=true
+sign.v1   lightweight        SLH-DSA-SHA2-256f    n=6      median=  183666.9 us cpu/op=  186666.7 us util=1.00 ops/s=       5.4 match=true
+sign.v1   lightweight        SLH-DSA-SHAKE-128s   n=3      median= 1231712.7 us cpu/op= 1233333.3 us util=0.99 ops/s=       0.8 match=true
+sign.v1   lightweight        SLH-DSA-SHAKE-128f   n=16     median=   59408.5 us cpu/op=   64375.0 us util=1.00 ops/s=      15.6 match=true
+sign.v1   lightweight        SLH-DSA-SHAKE-192s   n=3      median= 2674676.7 us cpu/op= 2616666.7 us util=0.99 ops/s=       0.4 match=true
+sign.v1   lightweight        SLH-DSA-SHAKE-192f   n=11     median=   92424.6 us cpu/op=   92727.3 us util=0.99 ops/s=      10.6 match=true
+sign.v1   lightweight        SLH-DSA-SHAKE-256s   n=3      median= 2001887.0 us cpu/op= 1966666.7 us util=0.99 ops/s=       0.5 match=true
+sign.v1   lightweight        SLH-DSA-SHAKE-256f   n=5      median=  200210.0 us cpu/op=  210000.0 us util=0.99 ops/s=       4.7 match=true
+sign.v2   reuse-signer       ML-DSA-44            n=5598   median=     163.5 us cpu/op=     178.6 us util=1.00 ops/s=    5597.9 match=true
+sign.v2   reuse-signer       ML-DSA-65            n=1300   median=     673.8 us cpu/op=     761.5 us util=0.99 ops/s=    1299.4 match=true
+sign.v2   reuse-signer       ML-DSA-87            n=1281   median=     834.6 us cpu/op=     788.4 us util=1.01 ops/s=    1280.9 match=true
+sign.v2   reuse-signer       SLH-DSA-SHA2-128s    n=3      median= 1072885.8 us cpu/op= 1073333.3 us util=0.99 ops/s=       0.9 match=true
+sign.v2   reuse-signer       SLH-DSA-SHA2-128f    n=20     median=   46860.3 us cpu/op=   50500.0 us util=1.01 ops/s=      20.0 match=true
+sign.v2   reuse-signer       SLH-DSA-SHA2-192s    n=3      median= 1936741.6 us cpu/op= 2016666.7 us util=1.00 ops/s=       0.5 match=true
+sign.v2   reuse-signer       SLH-DSA-SHA2-192f    n=12     median=   85938.1 us cpu/op=   85833.3 us util=0.99 ops/s=      11.5 match=true
+sign.v2   reuse-signer       SLH-DSA-SHA2-256s    n=3      median= 1740877.0 us cpu/op= 1733333.3 us util=0.99 ops/s=       0.6 match=true
+sign.v2   reuse-signer       SLH-DSA-SHA2-256f    n=6      median=  175895.4 us cpu/op=  185000.0 us util=1.00 ops/s=       5.4 match=true
+sign.v2   reuse-signer       SLH-DSA-SHAKE-128s   n=3      median= 1214144.6 us cpu/op= 1226666.7 us util=1.00 ops/s=       0.8 match=true
+sign.v2   reuse-signer       SLH-DSA-SHAKE-128f   n=17     median=   54549.0 us cpu/op=   58823.5 us util=0.99 ops/s=      16.9 match=true
+sign.v2   reuse-signer       SLH-DSA-SHAKE-192s   n=3      median= 2097221.6 us cpu/op= 2090000.0 us util=1.00 ops/s=       0.5 match=true
+sign.v2   reuse-signer       SLH-DSA-SHAKE-192f   n=11     median=   93056.2 us cpu/op=   93636.4 us util=0.98 ops/s=      10.4 match=true
+sign.v2   reuse-signer       SLH-DSA-SHAKE-256s   n=3      median= 1837357.1 us cpu/op= 1853333.3 us util=1.00 ops/s=       0.5 match=true
+sign.v2   reuse-signer       SLH-DSA-SHAKE-256f   n=5      median=  205964.2 us cpu/op=  216000.0 us util=0.98 ops/s=       4.5 match=true
+sign.v3   parallel           ML-DSA-44            n=13952  median=      61.7 us cpu/op=     205.0 us util=2.84 ops/s=   13874.8 match=true
+sign.v3   parallel           ML-DSA-65            n=2816   median=     356.2 us cpu/op=    1118.6 us util=3.08 ops/s=    2754.1 match=true
+sign.v3   parallel           ML-DSA-87            n=3648   median=     265.9 us cpu/op=     896.4 us util=3.25 ops/s=    3627.2 match=true
+sign.v3   parallel           SLH-DSA-SHA2-128s    n=4      median=  279436.2 us cpu/op= 1065000.0 us util=3.81 ops/s=       3.6 match=true
+sign.v3   parallel           SLH-DSA-SHA2-128f    n=60     median=   18771.7 us cpu/op=   57333.3 us util=3.25 ops/s=      56.6 match=true
+sign.v3   parallel           SLH-DSA-SHA2-192s    n=4      median=  518664.3 us cpu/op= 2010000.0 us util=3.88 ops/s=       1.9 match=true
+sign.v3   parallel           SLH-DSA-SHA2-192f    n=40     median=   29794.1 us cpu/op=   95000.0 us util=3.39 ops/s=      35.7 match=true
+sign.v3   parallel           SLH-DSA-SHA2-256s    n=4      median=  571998.4 us cpu/op= 2017500.0 us util=3.53 ops/s=       1.7 match=true
+sign.v3   parallel           SLH-DSA-SHA2-256f    n=20     median=   58611.6 us cpu/op=  200500.0 us util=3.37 ops/s=      16.8 match=true
+sign.v3   parallel           SLH-DSA-SHAKE-128s   n=4      median=  386909.4 us cpu/op= 1352500.0 us util=3.50 ops/s=       2.6 match=true
+sign.v3   parallel           SLH-DSA-SHAKE-128f   n=44     median=   23875.3 us cpu/op=   69090.9 us util=2.99 ops/s=      43.2 match=true
+sign.v3   parallel           SLH-DSA-SHAKE-192s   n=4      median=  626446.0 us cpu/op= 2257500.0 us util=3.60 ops/s=       1.6 match=true
+sign.v3   parallel           SLH-DSA-SHAKE-192f   n=40     median=   29745.3 us cpu/op=   99250.0 us util=3.47 ops/s=      35.0 match=true
+sign.v3   parallel           SLH-DSA-SHAKE-256s   n=4      median=  603825.5 us cpu/op= 2170000.0 us util=3.59 ops/s=       1.7 match=true
+sign.v3   parallel           SLH-DSA-SHAKE-256f   n=16     median=   66367.4 us cpu/op=  215000.0 us util=3.36 ops/s=      15.6 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench bench --child --out - --budget-ms 1000 --ops sign --variants sign.v4 --params ML-DSA-44,ML-DSA-65,ML-DSA-87,SLH-DSA-SHA2-128s,SLH-DSA-SHA2-128f,SLH-DSA-SHA2-192s,SLH-DSA-SHA2-192f,SLH-DSA-SHA2-256s,SLH-DSA-SHA2-256f,SLH-DSA-SHAKE-128s,SLH-DSA-SHAKE-128f,SLH-DSA-SHAKE-192s,SLH-DSA-SHAKE-192f,SLH-DSA-SHAKE-256s,SLH-DSA-SHAKE-256f
+sign.v4   c2-only            ML-DSA-44            n=5086   median=     173.7 us cpu/op=     241.8 us util=1.23 ops/s=    5085.5 match=true
+sign.v4   c2-only            ML-DSA-65            n=1468   median=     666.0 us cpu/op=     810.6 us util=1.19 ops/s=    1467.4 match=true
+sign.v4   c2-only            ML-DSA-87            n=1708   median=     526.8 us cpu/op=     591.3 us util=1.01 ops/s=    1707.8 match=true
+sign.v4   c2-only            SLH-DSA-SHA2-128s    n=3      median= 1067312.7 us cpu/op= 1106666.7 us util=0.99 ops/s=       0.9 match=true
+sign.v4   c2-only            SLH-DSA-SHA2-128f    n=19     median=   53028.8 us cpu/op=   54210.5 us util=1.01 ops/s=      18.5 match=true
+sign.v4   c2-only            SLH-DSA-SHA2-192s    n=3      median= 1989281.2 us cpu/op= 2000000.0 us util=0.99 ops/s=       0.5 match=true
+sign.v4   c2-only            SLH-DSA-SHA2-192f    n=12     median=   84818.8 us cpu/op=  101666.7 us util=1.15 ops/s=      11.3 match=true
+sign.v4   c2-only            SLH-DSA-SHA2-256s    n=3      median= 2025633.0 us cpu/op= 1946666.7 us util=0.99 ops/s=       0.5 match=true
+sign.v4   c2-only            SLH-DSA-SHA2-256f    n=6      median=  199070.5 us cpu/op=  193333.3 us util=0.99 ops/s=       5.1 match=true
+sign.v4   c2-only            SLH-DSA-SHAKE-128s   n=3      median= 1246067.0 us cpu/op= 1323333.3 us util=1.02 ops/s=       0.8 match=true
+sign.v4   c2-only            SLH-DSA-SHAKE-128f   n=15     median=   65530.6 us cpu/op=   68000.0 us util=1.01 ops/s=      14.9 match=true
+sign.v4   c2-only            SLH-DSA-SHAKE-192s   n=3      median= 2166893.6 us cpu/op= 2146666.7 us util=1.00 ops/s=       0.5 match=true
+sign.v4   c2-only            SLH-DSA-SHAKE-192f   n=12     median=   89655.9 us cpu/op=   90000.0 us util=1.00 ops/s=      11.1 match=true
+sign.v4   c2-only            SLH-DSA-SHAKE-256s   n=3      median= 1954789.9 us cpu/op= 2006666.7 us util=0.99 ops/s=       0.5 match=true
+sign.v4   c2-only            SLH-DSA-SHAKE-256f   n=5      median=  213752.4 us cpu/op=  222000.0 us util=1.00 ops/s=       4.5 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench bench --child --out - --budget-ms 1000 --ops sign --variants sign.v5 --params ML-DSA-44,ML-DSA-65,ML-DSA-87,SLH-DSA-SHA2-128s,SLH-DSA-SHA2-128f,SLH-DSA-SHA2-192s,SLH-DSA-SHA2-192f,SLH-DSA-SHA2-256s,SLH-DSA-SHA2-256f,SLH-DSA-SHAKE-128s,SLH-DSA-SHAKE-128f,SLH-DSA-SHAKE-192s,SLH-DSA-SHAKE-192f,SLH-DSA-SHAKE-256s,SLH-DSA-SHAKE-256f
+sign.v5   epsilon-nogc       ML-DSA-44            n=2712   median=     226.4 us cpu/op=     593.7 us util=1.61 ops/s=    2711.0 match=true
+sign.v5   epsilon-nogc       ML-DSA-65            n=610    median=    1571.8 us cpu/op=    1655.7 us util=1.01 ops/s=     609.1 match=true
+sign.v5   epsilon-nogc       ML-DSA-87            n=550    median=    1710.1 us cpu/op=    1836.4 us util=1.01 ops/s=     549.3 match=true
+sign.v5   epsilon-nogc       SLH-DSA-SHA2-128s    n=3      median= 1609932.6 us cpu/op= 1673333.3 us util=0.99 ops/s=       0.6 match=true
+sign.v5   epsilon-nogc       SLH-DSA-SHA2-128f    n=13     median=   76335.2 us cpu/op=   90000.0 us util=1.11 ops/s=      12.4 match=true
+sign.v5   epsilon-nogc       SLH-DSA-SHA2-192s    n=3      median= 3282497.1 us cpu/op= 3206666.7 us util=0.99 ops/s=       0.3 match=true
+sign.v5   epsilon-nogc       SLH-DSA-SHA2-192f    n=8      median=  137338.1 us cpu/op=  136250.0 us util=1.00 ops/s=       7.3 match=true
+sign.v5   epsilon-nogc       SLH-DSA-SHA2-256s    n=3      median= 2872738.4 us cpu/op= 2926666.7 us util=1.00 ops/s=       0.3 match=true
+sign.v5   epsilon-nogc       SLH-DSA-SHA2-256f    n=4      median=  328444.7 us cpu/op=  315000.0 us util=1.01 ops/s=       3.2 match=true
+sign.v5   epsilon-nogc       SLH-DSA-SHAKE-128s   n=3      median= 1735467.5 us cpu/op= 1720000.0 us util=1.00 ops/s=       0.6 match=true
+sign.v5   epsilon-nogc       SLH-DSA-SHAKE-128f   n=12     median=   83740.4 us cpu/op=   85000.0 us util=1.01 ops/s=      11.8 match=true
+sign.v5   epsilon-nogc       SLH-DSA-SHAKE-192s   n=3      median= 3425947.5 us cpu/op= 3466666.7 us util=0.99 ops/s=       0.3 match=true
+sign.v5   epsilon-nogc       SLH-DSA-SHAKE-192f   n=7      median=  148766.8 us cpu/op=  150000.0 us util=1.01 ops/s=       6.7 match=true
+sign.v5   epsilon-nogc       SLH-DSA-SHAKE-256s   n=3      median= 3390583.7 us cpu/op= 3423333.3 us util=0.99 ops/s=       0.3 match=true
+  (epsilon heap guard stopped loop after 3 iterations)
+sign.v5   epsilon-nogc       SLH-DSA-SHAKE-256f   n=3      median=  313425.2 us cpu/op=  316666.7 us util=1.01 ops/s=       3.2 match=true
+verify.v0 jca                ML-DSA-44            n=7691   median=     105.4 us cpu/op=     187.2 us util=1.44 ops/s=    7690.5 match=true
+verify.v0 jca                ML-DSA-65            n=4008   median=     210.8 us cpu/op=     459.1 us util=1.84 ops/s=    4007.8 match=true
+verify.v0 jca                ML-DSA-87            n=2775   median=     285.9 us cpu/op=     360.4 us util=1.00 ops/s=    2774.7 match=true
+verify.v0 jca                SLH-DSA-SHA2-128s    n=966    median=     988.3 us cpu/op=    1035.2 us util=1.00 ops/s=     965.3 match=true
+verify.v0 jca                SLH-DSA-SHA2-128f    n=332    median=    2916.5 us cpu/op=    2981.9 us util=0.99 ops/s=     331.7 match=true
+verify.v0 jca                SLH-DSA-SHA2-192s    n=548    median=    1563.0 us cpu/op=    1806.6 us util=0.99 ops/s=     547.3 match=true
+verify.v0 jca                SLH-DSA-SHA2-192f    n=180    median=    5155.4 us cpu/op=    5500.0 us util=0.99 ops/s=     179.5 match=true
+verify.v0 jca                SLH-DSA-SHA2-256s    n=403    median=    2346.8 us cpu/op=    2456.6 us util=0.99 ops/s=     402.7 match=true
+verify.v0 jca                SLH-DSA-SHA2-256f    n=179    median=    4657.3 us cpu/op=    8770.9 us util=1.57 ops/s=     178.4 match=true
+verify.v0 jca                SLH-DSA-SHAKE-128s   n=842    median=    1057.0 us cpu/op=    1187.6 us util=1.00 ops/s=     841.2 match=true
+verify.v0 jca                SLH-DSA-SHAKE-128f   n=283    median=    3411.4 us cpu/op=    3498.2 us util=0.99 ops/s=     282.6 match=true
+verify.v0 jca                SLH-DSA-SHAKE-192s   n=496    median=    1678.8 us cpu/op=    2016.1 us util=1.00 ops/s=     495.4 match=true
+verify.v0 jca                SLH-DSA-SHAKE-192f   n=169    median=    4870.3 us cpu/op=    5976.3 us util=1.01 ops/s=     168.3 match=true
+verify.v0 jca                SLH-DSA-SHAKE-256s   n=362    median=    2479.3 us cpu/op=    2734.8 us util=0.99 ops/s=     360.5 match=true
+verify.v0 jca                SLH-DSA-SHAKE-256f   n=197    median=    4938.3 us cpu/op=    5025.4 us util=0.99 ops/s=     196.1 match=true
+verify.v1 lightweight        ML-DSA-44            n=8191   median=     103.6 us cpu/op=     122.1 us util=1.00 ops/s=    8191.0 match=true
+verify.v1 lightweight        ML-DSA-65            n=5258   median=     166.1 us cpu/op=     224.4 us util=1.18 ops/s=    5257.1 match=true
+verify.v1 lightweight        ML-DSA-87            n=3463   median=     269.9 us cpu/op=     288.8 us util=1.00 ops/s=    3462.3 match=true
+verify.v1 lightweight        SLH-DSA-SHA2-128s    n=830    median=    1018.3 us cpu/op=    1192.8 us util=0.99 ops/s=     829.4 match=true
+verify.v1 lightweight        SLH-DSA-SHA2-128f    n=311    median=    2858.8 us cpu/op=    3215.4 us util=1.00 ops/s=     310.4 match=true
+verify.v1 lightweight        SLH-DSA-SHA2-192s    n=591    median=    1541.6 us cpu/op=    1692.0 us util=1.00 ops/s=     590.4 match=true
+verify.v1 lightweight        SLH-DSA-SHA2-192f    n=192    median=    4576.5 us cpu/op=    5156.3 us util=0.99 ops/s=     191.8 match=true
+verify.v1 lightweight        SLH-DSA-SHA2-256s    n=412    median=    2317.7 us cpu/op=    2378.6 us util=0.98 ops/s=     411.5 match=true
+verify.v1 lightweight        SLH-DSA-SHA2-256f    n=229    median=    4354.7 us cpu/op=    4454.1 us util=1.02 ops/s=     228.7 match=true
+verify.v1 lightweight        SLH-DSA-SHAKE-128s   n=862    median=    1076.2 us cpu/op=    1148.5 us util=0.99 ops/s=     861.2 match=true
+verify.v1 lightweight        SLH-DSA-SHAKE-128f   n=276    median=    3339.2 us cpu/op=    3623.2 us util=1.00 ops/s=     275.7 match=true
+verify.v1 lightweight        SLH-DSA-SHAKE-192s   n=618    median=    1597.2 us cpu/op=    1618.1 us util=1.00 ops/s=     617.6 match=true
+verify.v1 lightweight        SLH-DSA-SHAKE-192f   n=189    median=    4631.6 us cpu/op=    5343.9 us util=1.01 ops/s=     188.2 match=true
+verify.v1 lightweight        SLH-DSA-SHAKE-256s   n=329    median=    2526.8 us cpu/op=    3039.5 us util=1.00 ops/s=     328.7 match=true
+verify.v1 lightweight        SLH-DSA-SHAKE-256f   n=194    median=    4981.6 us cpu/op=    5103.1 us util=0.99 ops/s=     194.0 match=true
