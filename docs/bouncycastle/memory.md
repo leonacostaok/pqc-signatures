@@ -53,120 +53,167 @@ offers no per-operation live-set peak without a heap walk, and pool peak-usage c
 
 <!-- RESULTS -->
 
-## Results (preliminary dev run on a shared 4-core box; memory on 4 params only)
+## Results
 
-stack = peak stack of one op (bytes, resolution = one compiled recursion frame); heap = allocated bytes per op.
+Generated from `results/bouncycastle/memory.jsonl`. Method: probe thread (2 MiB) recurses d constant-size frames then runs the op; deepest d without StackOverflowError (binary search, best of 3, after JIT warm-up through the same path) vs a no-op, times the calibrated frame size; per worker thread (one lane's op): probe thread (2 MiB) recurses d constant-size frames then runs the op; deepest d without StackOverflowError (binary search, best of 3, after JIT warm-up through the same path) vs a no-op, times the calibrated frame size.
 
-### ML-DSA-44
+### keygen: peak stack
 
-| op | variant | stack bytes | heap alloc bytes/op | threads | match |
-|---|---|---|---|---|---|
-| keygen | `keygen.v0` | 1936 | 67968 | 1 | True |
-| keygen | `keygen.v1` | 240 | 67648 | 1 | True |
-| keygen | `keygen.v2` | 448 | 67424 | 1 | True |
-| keygen | `keygen.v3` | 384 | 63328 | 1 | True |
-| keygen | `keygen.v4` | 400 | 63486 | 4 | True |
-| keygen | `keygen.v5` | 948 | 67634 | 1 | True |
-| sign | `sign.v0` | 1088 | 79424 | 1 | True |
-| sign | `sign.v1` | 704 | 78992 | 1 | True |
-| sign | `sign.v2` | 416 | 74176 | 1 | True |
-| sign | `sign.v3` | 240 | 74317 | 4 | True |
-| sign | `sign.v4` | 853 | 79617 | 1 | True |
-| sign | `sign.v5` | 1043 | 79333 | 1 | True |
-| verify | `verify.v0` | 480 | 59560 | 1 | True |
-| verify | `verify.v1` | 160 | 59272 | 1 | True |
-| verify | `verify.v2` | 112 | 55688 | 1 | True |
-| verify | `verify.v3` | 160 | 55837 | 4 | True |
-| verify | `verify.v4` | 1011 | 59436 | 1 | True |
-| verify | `verify.v5` | 1074 | 59928 | 1 | True |
-| verify-stage | `decode.v0` | 64 | 18144 | 1 | True |
-| verify-stage | `mu.v0` | 0 | 1152 | 1 | True |
-| verify-stage | `expandA.v0` | 128 | 31600 | 1 | True |
-| verify-stage | `w_approx.v0` | 64 | 14728 | 1 | True |
-| verify-stage | `hint_check.v0` | 0 | 6536 | 1 | True |
-| verify-stage | `total_best` | 912 | 66616 | 1 | True |
+| param | `keygen.v0` | `keygen.v1` | `keygen.v2` | `keygen.v3` | `keygen.v4` | `keygen.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 1.9 KiB | 411 B | 474 B | 379 B | 411 B | 474 B |
+| ML-DSA-65 | 632 B | 348 B | 348 B | 379 B | 237 B | 474 B |
+| ML-DSA-87 | 632 B | 348 B | 348 B | 379 B | 253 B | 948 B |
+| SLH-DSA-SHA2-128s | 1.5 KiB | 790 B | 916 B | 1.2 KiB | 1.3 KiB | 1.2 KiB |
+| SLH-DSA-SHA2-128f | 1011 B | 727 B | 916 B | 1011 B | 822 B | 1.3 KiB |
+| SLH-DSA-SHA2-192s | 1011 B | 569 B | 695 B | 822 B | 822 B | 1.3 KiB |
+| SLH-DSA-SHA2-192f | 758 B | 158 B | 379 B | 569 B | 569 B | 1.3 KiB |
+| SLH-DSA-SHA2-256s | 758 B | 158 B | 379 B | 569 B | 569 B | 1.2 KiB |
+| SLH-DSA-SHA2-256f | 758 B | 126 B | 348 B | 569 B | 569 B | 1.1 KiB |
+| SLH-DSA-SHAKE-128s | 758 B | 316 B | 474 B | 600 B | 600 B | 1.3 KiB |
+| SLH-DSA-SHAKE-128f | 758 B | 284 B | 474 B | 284 B | 284 B | 1.5 KiB |
+| SLH-DSA-SHAKE-192s | 648 B | 158 B | 158 B | 158 B | 158 B | 1.3 KiB |
+| SLH-DSA-SHAKE-192f | 0 B | 158 B | 0 B | 0 B | 0 B | 1.5 KiB |
+| SLH-DSA-SHAKE-256s | 0 B | 253 B | 158 B | 158 B | 158 B | 1.3 KiB |
+| SLH-DSA-SHAKE-256f | 0 B | 0 B | 0 B | 0 B | 0 B | 1.2 KiB |
 
-### ML-DSA-87
+### keygen: heap allocated per op
 
-| op | variant | stack bytes | heap alloc bytes/op | threads | match |
-|---|---|---|---|---|---|
-| keygen | `keygen.v0` | 704 | 176976 | 1 | True |
-| keygen | `keygen.v1` | 224 | 176792 | 1 | True |
-| keygen | `keygen.v2` | 240 | 176600 | 1 | True |
-| keygen | `keygen.v3` | 288 | 168912 | 1 | True |
-| keygen | `keygen.v4` | 288 | 169054 | 4 | True |
-| keygen | `keygen.v5` | 1074 | 176968 | 1 | True |
-| sign | `sign.v0` | 512 | 201592 | 1 | True |
-| sign | `sign.v1` | 480 | 201336 | 1 | True |
-| sign | `sign.v2` | 480 | 194184 | 1 | True |
-| sign | `sign.v3` | 320 | 194332 | 4 | True |
-| sign | `sign.v4` | 1184 | 202064 | 1 | True |
-| sign | `sign.v5` | 1011 | 202064 | 1 | True |
-| verify | `verify.v0` | 384 | 159544 | 1 | True |
-| verify | `verify.v1` | 480 | 159288 | 1 | True |
-| verify | `verify.v2` | 288 | 154424 | 1 | True |
-| verify | `verify.v3` | 160 | 154563 | 4 | True |
-| verify | `verify.v4` | 1165 | 159812 | 1 | True |
-| verify | `verify.v5` | 0 | 159912 | 1 | True |
-| verify-stage | `decode.v0` | 0 | 34864 | 1 | True |
-| verify-stage | `mu.v0` | 0 | 1152 | 1 | True |
-| verify-stage | `expandA.v0` | 32 | 110336 | 1 | True |
-| verify-stage | `w_approx.v0` | 160 | 26568 | 1 | True |
-| verify-stage | `hint_check.v0` | 0 | 11384 | 1 | True |
-| verify-stage | `total_best` | 896 | 120065 | 1 | True |
+| param | `keygen.v0` | `keygen.v1` | `keygen.v2` | `keygen.v3` | `keygen.v4` | `keygen.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 66.2 KiB | 66.0 KiB | 65.8 KiB | 61.8 KiB | 62.0 KiB | 65.7 KiB |
+| ML-DSA-65 | 108.9 KiB | 108.8 KiB | 108.6 KiB | 102.5 KiB | 102.7 KiB | 108.6 KiB |
+| ML-DSA-87 | 172.8 KiB | 172.6 KiB | 172.5 KiB | 165.0 KiB | 165.1 KiB | 172.5 KiB |
+| SLH-DSA-SHA2-128s | 10.29 MiB | 10.29 MiB | 10.29 MiB | 10.29 MiB | 10.29 MiB | 10.29 MiB |
+| SLH-DSA-SHA2-128f | 167.0 KiB | 166.8 KiB | 166.8 KiB | 166.8 KiB | 166.9 KiB | 166.9 KiB |
+| SLH-DSA-SHA2-192s | 18.34 MiB | 18.34 MiB | 18.34 MiB | 18.34 MiB | 18.34 MiB | 18.34 MiB |
+| SLH-DSA-SHA2-192f | 296.6 KiB | 296.4 KiB | 296.4 KiB | 296.4 KiB | 296.5 KiB | 296.5 KiB |
+| SLH-DSA-SHA2-256s | 14.26 MiB | 14.26 MiB | 14.26 MiB | 14.26 MiB | 14.26 MiB | 14.26 MiB |
+| SLH-DSA-SHA2-256f | 915.7 KiB | 915.5 KiB | 915.5 KiB | 915.5 KiB | 915.6 KiB | 915.6 KiB |
+| SLH-DSA-SHAKE-128s | 10.29 MiB | 10.29 MiB | 10.29 MiB | 10.29 MiB | 10.29 MiB | 10.28 MiB |
+| SLH-DSA-SHAKE-128f | 166.4 KiB | 166.2 KiB | 166.2 KiB | 166.2 KiB | 166.3 KiB | 166.3 KiB |
+| SLH-DSA-SHAKE-192s | 18.34 MiB | 18.34 MiB | 18.34 MiB | 18.34 MiB | 18.34 MiB | 18.33 MiB |
+| SLH-DSA-SHAKE-192f | 295.3 KiB | 295.1 KiB | 295.1 KiB | 295.0 KiB | 295.2 KiB | 295.2 KiB |
+| SLH-DSA-SHAKE-256s | 14.26 MiB | 14.26 MiB | 14.26 MiB | 14.26 MiB | 14.26 MiB | 14.26 MiB |
+| SLH-DSA-SHAKE-256f | 914.4 KiB | 914.2 KiB | 914.2 KiB | 914.1 KiB | 914.4 KiB | 914.1 KiB |
 
-### SLH-DSA-SHA2-128f
+### sign: peak stack
 
-| op | variant | stack bytes | heap alloc bytes/op | threads | match |
-|---|---|---|---|---|---|
-| keygen | `keygen.v0` | 1280 | 171112 | 1 | True |
-| keygen | `keygen.v1` | 896 | 170928 | 1 | True |
-| keygen | `keygen.v2` | 928 | 170880 | 1 | True |
-| keygen | `keygen.v3` | 1024 | 170880 | 1 | True |
-| keygen | `keygen.v4` | 1024 | 171071 | 4 | True |
-| keygen | `keygen.v5` | 1138 | 170912 | 1 | True |
-| sign | `sign.v0` | 1280 | 4100391 | 1 | True |
-| sign | `sign.v1` | 1312 | 4095280 | 1 | True |
-| sign | `sign.v2` | 1120 | 4095072 | 1 | True |
-| sign | `sign.v3` | 1152 | 4095521 | 4 | True |
-| sign | `sign.v4` | 1612 | 4108288 | 1 | True |
-| sign | `sign.v5` | 1675 | 4101952 | 1 | True |
-| verify | `verify.v0` | 896 | 272024 | 1 | True |
-| verify | `verify.v1` | 1056 | 271560 | 1 | True |
-| verify | `verify.v2` | 896 | 271448 | 1 | True |
-| verify | `verify.v3` | 864 | 271622 | 4 | True |
-| verify | `verify.v4` | 1327 | 274064 | 1 | True |
-| verify | `verify.v5` | 1548 | 274064 | 1 | True |
-| verify-stage | `hmsg.v0` | 192 | 872 | 1 | True |
-| verify-stage | `fors.v0` | 32 | 24352 | 1 | True |
-| verify-stage | `ht_wots.v0` | 192 | 217736 | 1 | True |
-| verify-stage | `ht_auth.v0` | 0 | 3624 | 1 | True |
-| verify-stage | `total_best` | 960 | 1262512 | 1 | True |
+| param | `sign.v0` | `sign.v1` | `sign.v2` | `sign.v3` | `sign.v4` | `sign.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 600 B | 379 B | 379 B | 316 B | 537 B | 632 B |
+| ML-DSA-65 | 474 B | 379 B | 379 B | 474 B | 758 B | 1.1 KiB |
+| ML-DSA-87 | 411 B | 379 B | 379 B | 411 B | 758 B | 980 B |
+| SLH-DSA-SHA2-128s | 1.5 KiB | 1.5 KiB | 1.4 KiB | 1.4 KiB | 240.2 KiB | 1.5 KiB |
+| SLH-DSA-SHA2-128f | 1.2 KiB | 1.2 KiB | 1.0 KiB | 1.0 KiB | 1.6 KiB | 1.5 KiB |
+| SLH-DSA-SHA2-192s | 1.1 KiB | 1.2 KiB | 853 B | 853 B | 240.2 KiB | 1.5 KiB |
+| SLH-DSA-SHA2-192f | 411 B | 569 B | 411 B | 411 B | 1.4 KiB | 1.5 KiB |
+| SLH-DSA-SHA2-256s | 537 B | 569 B | 411 B | 411 B | 240.2 KiB | 1.5 KiB |
+| SLH-DSA-SHA2-256f | 411 B | 569 B | 411 B | 411 B | 240.2 KiB | 1.5 KiB |
+| SLH-DSA-SHAKE-128s | 537 B | 664 B | 537 B | 537 B | 240.2 KiB | 1.6 KiB |
+| SLH-DSA-SHAKE-128f | 537 B | 664 B | 537 B | 537 B | 1.6 KiB | 1.6 KiB |
+| SLH-DSA-SHAKE-192s | 0 B | 569 B | 521 B | 506 B | 240.2 KiB | 1.5 KiB |
+| SLH-DSA-SHAKE-192f | 506 B | 616 B | 332 B | 490 B | 1.6 KiB | 1.6 KiB |
+| SLH-DSA-SHAKE-256s | 506 B | 616 B | 490 B | 490 B | 240.2 KiB | 1.6 KiB |
+| SLH-DSA-SHAKE-256f | 0 B | 616 B | 0 B | 506 B | 240.2 KiB | 1.5 KiB |
 
-### SLH-DSA-SHAKE-128s
+### sign: heap allocated per op
 
-| op | variant | stack bytes | heap alloc bytes/op | threads | match |
-|---|---|---|---|---|---|
-| keygen | `keygen.v0` | 1280 | 10782472 | 1 | True |
-| keygen | `keygen.v1` | 896 | 10782288 | 1 | True |
-| keygen | `keygen.v2` | 1120 | 10782272 | 1 | True |
-| keygen | `keygen.v3` | 1216 | 10782272 | 1 | True |
-| keygen | `keygen.v4` | 1216 | 10782846 | 4 | True |
-| keygen | `keygen.v5` | 1359 | 10782512 | 1 | True |
-| sign | `sign.v0` | 1472 | 83767561 | 1 | True |
-| sign | `sign.v1` | 1408 | 83767000 | 1 | True |
-| sign | `sign.v2` | 1344 | 83766792 | 1 | True |
-| sign | `sign.v3` | 1312 | 83767236 | 4 | True |
-| sign | `sign.v4` | 245972 | 83776528 | 1 | True |
-| sign | `sign.v5` | 491912 | 83776528 | 1 | True |
-| verify | `verify.v0` | 784 | 98032 | 1 | True |
-| verify | `verify.v1` | 960 | 97568 | 1 | True |
-| verify | `verify.v2` | 480 | 97456 | 1 | True |
-| verify | `verify.v3` | 480 | 97609 | 4 | True |
-| verify | `verify.v4` | 1327 | 97623 | 1 | True |
-| verify | `verify.v5` | 1344 | 98796 | 1 | True |
-| verify-stage | `hmsg.v0` | 64 | 344 | 1 | True |
-| verify-stage | `fors.v0` | 192 | 14936 | 1 | True |
-| verify-stage | `ht_wots.v0` | 448 | 65664 | 1 | True |
-| verify-stage | `ht_auth.v0` | 0 | 2512 | 1 | True |
-| verify-stage | `total_best` | 960 | 86624 | 1 | True |
+| param | `sign.v0` | `sign.v1` | `sign.v2` | `sign.v3` | `sign.v4` | `sign.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 77.4 KiB | 77.1 KiB | 72.4 KiB | 72.6 KiB | 77.4 KiB | 77.1 KiB |
+| ML-DSA-65 | 141.8 KiB | 141.5 KiB | 135.4 KiB | 135.5 KiB | 142.0 KiB | 142.0 KiB |
+| ML-DSA-87 | 196.9 KiB | 196.6 KiB | 189.6 KiB | 189.8 KiB | 196.9 KiB | 196.9 KiB |
+| SLH-DSA-SHA2-128s | 79.95 MiB | 79.95 MiB | 79.95 MiB | 79.95 MiB | 79.95 MiB | 79.95 MiB |
+| SLH-DSA-SHA2-128f | 3.91 MiB | 3.91 MiB | 3.91 MiB | 3.91 MiB | 3.92 MiB | 3.91 MiB |
+| SLH-DSA-SHA2-192s | 173.08 MiB | 173.08 MiB | 173.08 MiB | 173.08 MiB | 173.09 MiB | 173.09 MiB |
+| SLH-DSA-SHA2-192f | 7.80 MiB | 7.80 MiB | 7.80 MiB | 7.80 MiB | 7.80 MiB | 7.80 MiB |
+| SLH-DSA-SHA2-256s | 180.19 MiB | 180.19 MiB | 180.19 MiB | 180.19 MiB | 180.19 MiB | 180.19 MiB |
+| SLH-DSA-SHA2-256f | 18.62 MiB | 18.62 MiB | 18.62 MiB | 18.62 MiB | 18.62 MiB | 18.62 MiB |
+| SLH-DSA-SHAKE-128s | 79.95 MiB | 79.95 MiB | 79.95 MiB | 79.95 MiB | 79.90 MiB | 79.90 MiB |
+| SLH-DSA-SHAKE-128f | 3.91 MiB | 3.91 MiB | 3.91 MiB | 3.91 MiB | 3.91 MiB | 3.91 MiB |
+| SLH-DSA-SHAKE-192s | 173.08 MiB | 173.08 MiB | 173.08 MiB | 173.08 MiB | 173.03 MiB | 173.03 MiB |
+| SLH-DSA-SHAKE-192f | 7.79 MiB | 7.79 MiB | 7.79 MiB | 7.79 MiB | 7.80 MiB | 7.80 MiB |
+| SLH-DSA-SHAKE-256s | 180.19 MiB | 180.19 MiB | 180.18 MiB | 180.19 MiB | 180.16 MiB | 180.16 MiB |
+| SLH-DSA-SHAKE-256f | 18.62 MiB | 18.62 MiB | 18.62 MiB | 18.62 MiB | 18.62 MiB | 18.62 MiB |
+
+### verify: peak stack
+
+| param | `verify.v0` | `verify.v1` | `verify.v2` | `verify.v3` | `verify.v4` | `verify.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 316 B | 284 B | 284 B | 253 B | 379 B | 1.4 KiB |
+| ML-DSA-65 | 316 B | 284 B | 284 B | 253 B | 379 B | 1011 B |
+| ML-DSA-87 | 316 B | 284 B | 284 B | 253 B | 1.1 KiB | 1011 B |
+| SLH-DSA-SHA2-128s | 916 B | 1.0 KiB | 348 B | 316 B | 1.2 KiB | 1.3 KiB |
+| SLH-DSA-SHA2-128f | 664 B | 790 B | 632 B | 600 B | 1.2 KiB | 1.3 KiB |
+| SLH-DSA-SHA2-192s | 411 B | 411 B | 253 B | 221 B | 1.5 KiB | 1.2 KiB |
+| SLH-DSA-SHA2-192f | 253 B | 411 B | 253 B | 221 B | 1.2 KiB | 1.2 KiB |
+| SLH-DSA-SHA2-256s | 253 B | 411 B | 253 B | 221 B | 1.3 KiB | 8.4 KiB |
+| SLH-DSA-SHA2-256f | 253 B | 316 B | 253 B | 221 B | 1.2 KiB | 1.2 KiB |
+| SLH-DSA-SHAKE-128s | 158 B | 158 B | 158 B | 126 B | 1.3 KiB | 1.1 KiB |
+| SLH-DSA-SHAKE-128f | 158 B | 158 B | 158 B | 126 B | 1.5 KiB | 1.3 KiB |
+| SLH-DSA-SHAKE-192s | 0 B | 158 B | 0 B | 0 B | 1.3 KiB | 3.3 KiB |
+| SLH-DSA-SHAKE-192f | 0 B | 0 B | 79 B | 32 B | 1.4 KiB | 5.8 KiB |
+| SLH-DSA-SHAKE-256s | 126 B | 0 B | 0 B | 0 B | 1.3 KiB | 3.6 KiB |
+| SLH-DSA-SHAKE-256f | 0 B | 0 B | 0 B | 32 B | 1.3 KiB | 1.4 KiB |
+
+### verify: heap allocated per op
+
+| param | `verify.v0` | `verify.v1` | `verify.v2` | `verify.v3` | `verify.v4` | `verify.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 58.2 KiB | 57.9 KiB | 54.4 KiB | 54.5 KiB | 57.9 KiB | 57.9 KiB |
+| ML-DSA-65 | 94.6 KiB | 94.4 KiB | 90.2 KiB | 90.4 KiB | 94.4 KiB | 94.4 KiB |
+| ML-DSA-87 | 155.8 KiB | 155.5 KiB | 150.8 KiB | 150.9 KiB | 155.6 KiB | 155.6 KiB |
+| SLH-DSA-SHA2-128s | 100.0 KiB | 99.5 KiB | 99.4 KiB | 99.4 KiB | 98.9 KiB | 98.4 KiB |
+| SLH-DSA-SHA2-128f | 265.9 KiB | 265.4 KiB | 265.3 KiB | 510.3 KiB | 264.8 KiB | 263.3 KiB |
+| SLH-DSA-SHA2-192s | 172.8 KiB | 172.3 KiB | 172.2 KiB | 172.2 KiB | 171.6 KiB | 171.1 KiB |
+| SLH-DSA-SHA2-192f | 460.5 KiB | 460.0 KiB | 459.9 KiB | 460.0 KiB | 460.2 KiB | 458.2 KiB |
+| SLH-DSA-SHA2-256s | 296.4 KiB | 296.0 KiB | 295.8 KiB | 296.0 KiB | 295.2 KiB | 294.6 KiB |
+| SLH-DSA-SHA2-256f | 560.8 KiB | 560.4 KiB | 560.2 KiB | 560.4 KiB | 560.5 KiB | 558.1 KiB |
+| SLH-DSA-SHAKE-128s | 95.9 KiB | 95.4 KiB | 95.3 KiB | 95.5 KiB | 94.9 KiB | 94.5 KiB |
+| SLH-DSA-SHAKE-128f | 273.5 KiB | 273.1 KiB | 273.0 KiB | 273.1 KiB | 272.9 KiB | 270.6 KiB |
+| SLH-DSA-SHAKE-192s | 171.2 KiB | 170.7 KiB | 170.6 KiB | 170.7 KiB | 170.1 KiB | 169.6 KiB |
+| SLH-DSA-SHAKE-192f | 450.0 KiB | 449.5 KiB | 449.4 KiB | 449.6 KiB | 450.5 KiB | 448.9 KiB |
+| SLH-DSA-SHAKE-256s | 289.8 KiB | 289.3 KiB | 289.2 KiB | 289.3 KiB | 288.5 KiB | 288.4 KiB |
+| SLH-DSA-SHAKE-256f | 560.4 KiB | 559.9 KiB | 559.8 KiB | 560.0 KiB | 559.9 KiB | 559.3 KiB |
+
+### verify-stage: peak stack
+
+| param | `decode.v0` | `expandA.v0` | `fors.v0` | `hint_check.v0` | `hmsg.v0` | `ht_auth.v0` | `ht_wots.v0` | `mu.v0` | `total_best` | `w_approx.v0` |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ML-DSA-44 | 0 B | 0 B | — | 0 B | — | — | — | 0 B | 190 B | 32 B |
+| ML-DSA-65 | 0 B | 0 B | — | 0 B | — | — | — | 0 B | 190 B | 63 B |
+| ML-DSA-87 | 0 B | 0 B | — | 0 B | — | — | — | 0 B | 190 B | 63 B |
+| SLH-DSA-SHA2-128s | — | — | 32 B | — | 95 B | 0 B | 221 B | — | 1011 B | — |
+| SLH-DSA-SHA2-128f | — | — | 32 B | — | 221 B | 0 B | 63 B | — | 664 B | — |
+| SLH-DSA-SHA2-192s | — | — | 0 B | — | 32 B | 0 B | 0 B | — | 632 B | — |
+| SLH-DSA-SHA2-192f | — | — | 0 B | — | 32 B | 0 B | 0 B | — | 316 B | — |
+| SLH-DSA-SHA2-256s | — | — | 0 B | — | 32 B | 0 B | 0 B | — | 0 B | — |
+| SLH-DSA-SHA2-256f | — | — | 0 B | — | 32 B | 0 B | 0 B | — | 63 B | — |
+| SLH-DSA-SHAKE-128s | — | — | 0 B | — | 0 B | 0 B | 0 B | — | 474 B | — |
+| SLH-DSA-SHAKE-128f | — | — | 0 B | — | 0 B | 0 B | 0 B | — | 0 B | — |
+| SLH-DSA-SHAKE-192s | — | — | 0 B | — | 0 B | 0 B | 0 B | — | 0 B | — |
+| SLH-DSA-SHAKE-192f | — | — | 0 B | — | 0 B | 0 B | 0 B | — | 0 B | — |
+| SLH-DSA-SHAKE-256s | — | — | 0 B | — | 0 B | 0 B | 0 B | — | 0 B | — |
+| SLH-DSA-SHAKE-256f | — | — | 0 B | — | 0 B | 0 B | 0 B | — | 0 B | — |
+
+### verify-stage: heap allocated per op
+
+| param | `decode.v0` | `expandA.v0` | `fors.v0` | `hint_check.v0` | `hmsg.v0` | `ht_auth.v0` | `ht_wots.v0` | `mu.v0` | `total_best` | `w_approx.v0` |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ML-DSA-44 | 17.7 KiB | 30.9 KiB | — | 6.4 KiB | — | — | — | 1.1 KiB | 64.6 KiB | 14.4 KiB |
+| ML-DSA-65 | 25.2 KiB | 57.8 KiB | — | 8.5 KiB | — | — | — | 1.1 KiB | 102.1 KiB | 19.6 KiB |
+| ML-DSA-87 | 34.0 KiB | 107.8 KiB | — | 11.1 KiB | — | — | — | 1.1 KiB | 165.2 KiB | 25.9 KiB |
+| SLH-DSA-SHA2-128s | — | — | 14.5 KiB | — | 672 B | 2.5 KiB | 67.3 KiB | — | 428.9 KiB | — |
+| SLH-DSA-SHA2-128f | — | — | 23.8 KiB | — | 872 B | 3.5 KiB | 212.6 KiB | — | 1.20 MiB | — |
+| SLH-DSA-SHA2-192s | — | — | 22.3 KiB | — | 856 B | 2.9 KiB | 121.1 KiB | — | 741.0 KiB | — |
+| SLH-DSA-SHA2-192f | — | — | 28.8 KiB | — | 1.0 KiB | 4.1 KiB | 381.4 KiB | — | 2.38 MiB | — |
+| SLH-DSA-SHA2-256s | — | — | 32.1 KiB | — | 920 B | 3.5 KiB | 219.6 KiB | — | 1.08 MiB | — |
+| SLH-DSA-SHA2-256f | — | — | 38.6 KiB | — | 1.0 KiB | 4.3 KiB | 456.3 KiB | — | 2.08 MiB | — |
+| SLH-DSA-SHAKE-128s | — | — | 14.6 KiB | — | 344 B | 2.5 KiB | 64.1 KiB | — | 98.4 KiB | — |
+| SLH-DSA-SHAKE-128f | — | — | 23.6 KiB | — | 536 B | 3.5 KiB | 221.4 KiB | — | 304.2 KiB | — |
+| SLH-DSA-SHAKE-192s | — | — | 22.4 KiB | — | 360 B | 2.9 KiB | 121.3 KiB | — | 185.2 KiB | — |
+| SLH-DSA-SHAKE-192f | — | — | 28.8 KiB | — | 552 B | 4.1 KiB | 372.7 KiB | — | 454.5 KiB | — |
+| SLH-DSA-SHAKE-256s | — | — | 32.0 KiB | — | 384 B | 3.5 KiB | 214.8 KiB | — | 305.2 KiB | — |
+| SLH-DSA-SHAKE-256f | — | — | 38.6 KiB | — | 504 B | 4.3 KiB | 457.7 KiB | — | 591.5 KiB | — |
+

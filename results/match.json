@@ -1,0 +1,2266 @@
+{
+  "byte_match": {
+    "noble": {
+      "ML-DSA-44": "match",
+      "ML-DSA-65": "match",
+      "ML-DSA-87": "match",
+      "SLH-DSA-SHA2-128s": "match",
+      "SLH-DSA-SHA2-128f": "match",
+      "SLH-DSA-SHA2-192s": "match",
+      "SLH-DSA-SHA2-192f": "match",
+      "SLH-DSA-SHA2-256s": "match",
+      "SLH-DSA-SHA2-256f": "match",
+      "SLH-DSA-SHAKE-128s": "match",
+      "SLH-DSA-SHAKE-128f": "match",
+      "SLH-DSA-SHAKE-192s": "match",
+      "SLH-DSA-SHAKE-192f": "match",
+      "SLH-DSA-SHAKE-256s": "match",
+      "SLH-DSA-SHAKE-256f": "match",
+      "Falcon-512": "self-verify",
+      "Falcon-1024": "self-verify"
+    },
+    "liboqs": {
+      "ML-DSA-44": "match",
+      "ML-DSA-65": "match",
+      "ML-DSA-87": "match",
+      "SLH-DSA-SHA2-128s": "match",
+      "SLH-DSA-SHA2-128f": "match",
+      "SLH-DSA-SHA2-192s": "match",
+      "SLH-DSA-SHA2-192f": "match",
+      "SLH-DSA-SHA2-256s": "match",
+      "SLH-DSA-SHA2-256f": "match",
+      "SLH-DSA-SHAKE-128s": "match",
+      "SLH-DSA-SHAKE-128f": "match",
+      "SLH-DSA-SHAKE-192s": "match",
+      "SLH-DSA-SHAKE-192f": "match",
+      "SLH-DSA-SHAKE-256s": "match",
+      "SLH-DSA-SHAKE-256f": "match",
+      "Falcon-512": "self-verify",
+      "Falcon-1024": "self-verify"
+    },
+    "openssl": {
+      "ML-DSA-44": "match",
+      "ML-DSA-65": "match",
+      "ML-DSA-87": "match",
+      "SLH-DSA-SHA2-128s": "match",
+      "SLH-DSA-SHA2-128f": "match",
+      "SLH-DSA-SHA2-192s": "match",
+      "SLH-DSA-SHA2-192f": "match",
+      "SLH-DSA-SHA2-256s": "match",
+      "SLH-DSA-SHA2-256f": "match",
+      "SLH-DSA-SHAKE-128s": "match",
+      "SLH-DSA-SHAKE-128f": "match",
+      "SLH-DSA-SHAKE-192s": "match",
+      "SLH-DSA-SHAKE-192f": "match",
+      "SLH-DSA-SHAKE-256s": "match",
+      "SLH-DSA-SHAKE-256f": "match"
+    },
+    "circl": {
+      "ML-DSA-44": "match",
+      "ML-DSA-65": "match",
+      "ML-DSA-87": "match",
+      "SLH-DSA-SHA2-128s": "match",
+      "SLH-DSA-SHA2-128f": "match",
+      "SLH-DSA-SHA2-192s": "match",
+      "SLH-DSA-SHA2-192f": "match",
+      "SLH-DSA-SHA2-256s": "match",
+      "SLH-DSA-SHA2-256f": "match",
+      "SLH-DSA-SHAKE-128s": "match",
+      "SLH-DSA-SHAKE-128f": "match",
+      "SLH-DSA-SHAKE-192s": "match",
+      "SLH-DSA-SHAKE-192f": "match",
+      "SLH-DSA-SHAKE-256s": "match",
+      "SLH-DSA-SHAKE-256f": "match"
+    },
+    "rustcrypto": {
+      "ML-DSA-44": "match",
+      "ML-DSA-65": "match",
+      "ML-DSA-87": "match",
+      "SLH-DSA-SHA2-128s": "match",
+      "SLH-DSA-SHA2-128f": "match",
+      "SLH-DSA-SHA2-192s": "match",
+      "SLH-DSA-SHA2-192f": "match",
+      "SLH-DSA-SHA2-256s": "match",
+      "SLH-DSA-SHA2-256f": "match",
+      "SLH-DSA-SHAKE-128s": "match",
+      "SLH-DSA-SHAKE-128f": "match",
+      "SLH-DSA-SHAKE-192s": "match",
+      "SLH-DSA-SHAKE-192f": "match",
+      "SLH-DSA-SHAKE-256s": "match",
+      "SLH-DSA-SHAKE-256f": "match"
+    },
+    "bouncycastle": {
+      "ML-DSA-44": "match",
+      "ML-DSA-65": "match",
+      "ML-DSA-87": "match",
+      "SLH-DSA-SHA2-128s": "match",
+      "SLH-DSA-SHA2-128f": "match",
+      "SLH-DSA-SHA2-192s": "match",
+      "SLH-DSA-SHA2-192f": "match",
+      "SLH-DSA-SHA2-256s": "match",
+      "SLH-DSA-SHA2-256f": "match",
+      "SLH-DSA-SHAKE-128s": "match",
+      "SLH-DSA-SHAKE-128f": "match",
+      "SLH-DSA-SHAKE-192s": "match",
+      "SLH-DSA-SHAKE-192f": "match",
+      "SLH-DSA-SHAKE-256s": "match",
+      "SLH-DSA-SHAKE-256f": "match",
+      "Falcon-512": "self-verify",
+      "Falcon-1024": "self-verify"
+    }
+  },
+  "crossverify": {
+    "noble<-noble": {
+      "ok": 17,
+      "fail": 0,
+      "tamper_ok": 17,
+      "failures": []
+    },
+    "noble<-liboqs": {
+      "ok": 17,
+      "fail": 0,
+      "tamper_ok": 17,
+      "failures": []
+    },
+    "noble<-openssl": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "noble<-circl": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "noble<-rustcrypto": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "noble<-bouncycastle": {
+      "ok": 17,
+      "fail": 0,
+      "tamper_ok": 17,
+      "failures": []
+    },
+    "liboqs<-noble": {
+      "ok": 17,
+      "fail": 0,
+      "tamper_ok": 17,
+      "failures": []
+    },
+    "liboqs<-liboqs": {
+      "ok": 17,
+      "fail": 0,
+      "tamper_ok": 17,
+      "failures": []
+    },
+    "liboqs<-openssl": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "liboqs<-circl": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "liboqs<-rustcrypto": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "liboqs<-bouncycastle": {
+      "ok": 17,
+      "fail": 0,
+      "tamper_ok": 17,
+      "failures": []
+    },
+    "openssl<-noble": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "openssl<-liboqs": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "openssl<-openssl": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "openssl<-circl": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "openssl<-rustcrypto": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "openssl<-bouncycastle": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "circl<-noble": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "circl<-liboqs": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "circl<-openssl": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "circl<-circl": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "circl<-rustcrypto": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "circl<-bouncycastle": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "rustcrypto<-noble": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "rustcrypto<-liboqs": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "rustcrypto<-openssl": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "rustcrypto<-circl": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "rustcrypto<-rustcrypto": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "rustcrypto<-bouncycastle": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "bouncycastle<-noble": {
+      "ok": 17,
+      "fail": 0,
+      "tamper_ok": 17,
+      "failures": []
+    },
+    "bouncycastle<-liboqs": {
+      "ok": 17,
+      "fail": 0,
+      "tamper_ok": 17,
+      "failures": []
+    },
+    "bouncycastle<-openssl": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "bouncycastle<-circl": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "bouncycastle<-rustcrypto": {
+      "ok": 15,
+      "fail": 0,
+      "tamper_ok": 15,
+      "failures": []
+    },
+    "bouncycastle<-bouncycastle": {
+      "ok": 17,
+      "fail": 0,
+      "tamper_ok": 17,
+      "failures": []
+    }
+  },
+  "bench_match": {
+    "noble": {
+      "rows": 298,
+      "match": 298,
+      "fails": []
+    },
+    "liboqs": {
+      "rows": 306,
+      "match": 306,
+      "fails": []
+    },
+    "openssl": {
+      "rows": 246,
+      "match": 246,
+      "fails": []
+    },
+    "circl": {
+      "rows": 270,
+      "match": 270,
+      "fails": []
+    },
+    "rustcrypto": {
+      "rows": 270,
+      "match": 270,
+      "fails": []
+    },
+    "bouncycastle": {
+      "rows": 270,
+      "match": 270,
+      "fails": []
+    }
+  },
+  "validation": {
+    "noble": {
+      "summary": {
+        "keygen.v0": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v1": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v2": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v3": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v4": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v5": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v0": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v1": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v2": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v3": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v4": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v5": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v0": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v1": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v2": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v3": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v4": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v5": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.total": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.total_best": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        }
+      },
+      "cases": 4680,
+      "fails": []
+    },
+    "liboqs": {
+      "summary": {
+        "keygen.v0": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v1": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v2": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v3": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v4": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v5": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v0": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v1": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v2": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v3": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v4": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v5": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v0": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v1": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v2": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v3": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v4": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v5": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.total": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.total_best": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        }
+      },
+      "cases": 4680,
+      "fails": []
+    },
+    "openssl": {
+      "summary": {
+        "keygen.v0": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v1": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v2": {
+          "pass": 75,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v5": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v0": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v1": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v2": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v5": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v0": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v1": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v2": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v5": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.decode.v0": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.decode.v1": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.mu.v0": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.mu.v1": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.mu.v2": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.mu.v5": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.expandA.v0": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.expandA.v1": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.expandA.v2": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.expandA.v5": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.w_approx.v0": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.w_approx.v1": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.w_approx.v2": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.w_approx.v4": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.hint_check.v0": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.hint_check.v1": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.hint_check.v2": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.total": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.total_best": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.hmsg.v0": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.hmsg.v3": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.hmsg.v4": {
+          "pass": 144,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.fors.v0": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.fors.v3": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.fors.v4": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.ht_wots.v0": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.ht_wots.v3": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.ht_wots.v4": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.ht_auth.v0": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.ht_auth.v3": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.ht_auth.v4": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v3": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v3": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v3": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.mu.v3": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.expandA.v3": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.hint_check.v3": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.hmsg.v1": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.fors.v1": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.ht_wots.v1": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.ht_auth.v1": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v4": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v4": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v4": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.decode.v2": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.mu.v4": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.expandA.v4": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.w_approx.v3": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.hint_check.v4": {
+          "pass": 99,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.hmsg.v2": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.fors.v2": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.ht_wots.v2": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        },
+        "stages.ht_auth.v2": {
+          "pass": 288,
+          "fail": 0,
+          "skipped": 0
+        }
+      },
+      "cases": 12363,
+      "fails": []
+    },
+    "circl": {
+      "summary": {
+        "keygen.v0": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v1": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v2": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v3": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v4": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v5": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v0": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v1": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v2": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v3": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v4": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v5": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.total": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.total_best": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v0": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v1": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v2": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v3": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v4": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v5": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        }
+      },
+      "cases": 4680,
+      "fails": []
+    },
+    "rustcrypto": {
+      "summary": {
+        "keygen.v0": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v1": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v2": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v3": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v4": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v5": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v0": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v1": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v2": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v3": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v4": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v5": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "total.v0": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "total_best.v0": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v0": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v1": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v2": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v3": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v4": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v5": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        }
+      },
+      "cases": 4680,
+      "fails": []
+    },
+    "bouncycastle": {
+      "summary": {
+        "keygen.v0": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v1": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v2": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v3": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v4": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "keygen.v5": {
+          "pass": 195,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v0": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v1": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v2": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v3": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v4": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "sign.v5": {
+          "pass": 69,
+          "fail": 0,
+          "skipped": 0
+        },
+        "total.v0": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "total_best": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v0": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v1": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v2": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v3": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v4": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        },
+        "verify.v5": {
+          "pass": 387,
+          "fail": 0,
+          "skipped": 0
+        }
+      },
+      "cases": 4680,
+      "fails": []
+    }
+  },
+  "stages": {
+    "per_lib": {
+      "noble": {
+        "rows": 285,
+        "fails": []
+      },
+      "liboqs": {
+        "rows": 408,
+        "fails": []
+      },
+      "openssl": {
+        "rows": 339,
+        "fails": []
+      },
+      "circl": {
+        "rows": 396,
+        "fails": []
+      },
+      "rustcrypto": {
+        "rows": 408,
+        "fails": []
+      },
+      "bouncycastle": {
+        "rows": 279,
+        "fails": []
+      }
+    },
+    "cross_lib": {
+      "ML-DSA-44/decode": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "41cca2048fdfbd3ef2507d68458dfbb06717a5b23653fa6215b49d8525f8b279",
+          "liboqs": "41cca2048fdfbd3ef2507d68458dfbb06717a5b23653fa6215b49d8525f8b279",
+          "openssl": "41cca2048fdfbd3ef2507d68458dfbb06717a5b23653fa6215b49d8525f8b279",
+          "circl": "41cca2048fdfbd3ef2507d68458dfbb06717a5b23653fa6215b49d8525f8b279",
+          "rustcrypto": "41cca2048fdfbd3ef2507d68458dfbb06717a5b23653fa6215b49d8525f8b279",
+          "bouncycastle": "41cca2048fdfbd3ef2507d68458dfbb06717a5b23653fa6215b49d8525f8b279"
+        }
+      },
+      "ML-DSA-65/decode": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "ed702755ba99b4720eee5fdab34801a318b5642708ccb22d7e65172f36a753f8",
+          "liboqs": "ed702755ba99b4720eee5fdab34801a318b5642708ccb22d7e65172f36a753f8",
+          "openssl": "ed702755ba99b4720eee5fdab34801a318b5642708ccb22d7e65172f36a753f8",
+          "circl": "ed702755ba99b4720eee5fdab34801a318b5642708ccb22d7e65172f36a753f8",
+          "rustcrypto": "ed702755ba99b4720eee5fdab34801a318b5642708ccb22d7e65172f36a753f8",
+          "bouncycastle": "ed702755ba99b4720eee5fdab34801a318b5642708ccb22d7e65172f36a753f8"
+        }
+      },
+      "ML-DSA-87/decode": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "30b0f5110d2e6179005f9efd4703c2cfd28da3cf4ea4e4742923b75d3c3a84cf",
+          "liboqs": "30b0f5110d2e6179005f9efd4703c2cfd28da3cf4ea4e4742923b75d3c3a84cf",
+          "openssl": "30b0f5110d2e6179005f9efd4703c2cfd28da3cf4ea4e4742923b75d3c3a84cf",
+          "circl": "30b0f5110d2e6179005f9efd4703c2cfd28da3cf4ea4e4742923b75d3c3a84cf",
+          "rustcrypto": "30b0f5110d2e6179005f9efd4703c2cfd28da3cf4ea4e4742923b75d3c3a84cf",
+          "bouncycastle": "30b0f5110d2e6179005f9efd4703c2cfd28da3cf4ea4e4742923b75d3c3a84cf"
+        }
+      },
+      "ML-DSA-44/mu": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "53695e8758fa4ff336c81440dc8e61ebcbfa7e4e6b0c3d90f0297eec30887506",
+          "liboqs": "53695e8758fa4ff336c81440dc8e61ebcbfa7e4e6b0c3d90f0297eec30887506",
+          "openssl": "53695e8758fa4ff336c81440dc8e61ebcbfa7e4e6b0c3d90f0297eec30887506",
+          "circl": "53695e8758fa4ff336c81440dc8e61ebcbfa7e4e6b0c3d90f0297eec30887506",
+          "rustcrypto": "53695e8758fa4ff336c81440dc8e61ebcbfa7e4e6b0c3d90f0297eec30887506",
+          "bouncycastle": "53695e8758fa4ff336c81440dc8e61ebcbfa7e4e6b0c3d90f0297eec30887506"
+        }
+      },
+      "ML-DSA-65/mu": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "adf13e3301e0c9a93c149191d4b8144041d4cc752f7d3715a0c9dec81d69a1ec",
+          "liboqs": "adf13e3301e0c9a93c149191d4b8144041d4cc752f7d3715a0c9dec81d69a1ec",
+          "openssl": "adf13e3301e0c9a93c149191d4b8144041d4cc752f7d3715a0c9dec81d69a1ec",
+          "circl": "adf13e3301e0c9a93c149191d4b8144041d4cc752f7d3715a0c9dec81d69a1ec",
+          "rustcrypto": "adf13e3301e0c9a93c149191d4b8144041d4cc752f7d3715a0c9dec81d69a1ec",
+          "bouncycastle": "adf13e3301e0c9a93c149191d4b8144041d4cc752f7d3715a0c9dec81d69a1ec"
+        }
+      },
+      "ML-DSA-87/mu": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "90d3a37f11684c0e19d2c0e45e7360102ee92a47a5fa06992da09e225b4e7433",
+          "liboqs": "90d3a37f11684c0e19d2c0e45e7360102ee92a47a5fa06992da09e225b4e7433",
+          "openssl": "90d3a37f11684c0e19d2c0e45e7360102ee92a47a5fa06992da09e225b4e7433",
+          "circl": "90d3a37f11684c0e19d2c0e45e7360102ee92a47a5fa06992da09e225b4e7433",
+          "rustcrypto": "90d3a37f11684c0e19d2c0e45e7360102ee92a47a5fa06992da09e225b4e7433",
+          "bouncycastle": "90d3a37f11684c0e19d2c0e45e7360102ee92a47a5fa06992da09e225b4e7433"
+        }
+      },
+      "ML-DSA-44/expandA": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "0a9237727482ee2bdfa2828469ba5847f5fb6bc8d03d9b091fe6fcbe7fd344dc",
+          "liboqs": "0a9237727482ee2bdfa2828469ba5847f5fb6bc8d03d9b091fe6fcbe7fd344dc",
+          "openssl": "0a9237727482ee2bdfa2828469ba5847f5fb6bc8d03d9b091fe6fcbe7fd344dc",
+          "circl": "0a9237727482ee2bdfa2828469ba5847f5fb6bc8d03d9b091fe6fcbe7fd344dc",
+          "rustcrypto": "0a9237727482ee2bdfa2828469ba5847f5fb6bc8d03d9b091fe6fcbe7fd344dc",
+          "bouncycastle": "0a9237727482ee2bdfa2828469ba5847f5fb6bc8d03d9b091fe6fcbe7fd344dc"
+        }
+      },
+      "ML-DSA-65/expandA": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "d7eb597b8e60c01d10c90c4c153e507e46249e7cae825439bae13ebe1fbdd462",
+          "liboqs": "d7eb597b8e60c01d10c90c4c153e507e46249e7cae825439bae13ebe1fbdd462",
+          "openssl": "d7eb597b8e60c01d10c90c4c153e507e46249e7cae825439bae13ebe1fbdd462",
+          "circl": "d7eb597b8e60c01d10c90c4c153e507e46249e7cae825439bae13ebe1fbdd462",
+          "rustcrypto": "d7eb597b8e60c01d10c90c4c153e507e46249e7cae825439bae13ebe1fbdd462",
+          "bouncycastle": "d7eb597b8e60c01d10c90c4c153e507e46249e7cae825439bae13ebe1fbdd462"
+        }
+      },
+      "ML-DSA-87/expandA": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "31608f6852a7d348cea29ef987548039c84b171b5cdad4543f887c0f62b43b8e",
+          "liboqs": "31608f6852a7d348cea29ef987548039c84b171b5cdad4543f887c0f62b43b8e",
+          "openssl": "31608f6852a7d348cea29ef987548039c84b171b5cdad4543f887c0f62b43b8e",
+          "circl": "31608f6852a7d348cea29ef987548039c84b171b5cdad4543f887c0f62b43b8e",
+          "rustcrypto": "31608f6852a7d348cea29ef987548039c84b171b5cdad4543f887c0f62b43b8e",
+          "bouncycastle": "31608f6852a7d348cea29ef987548039c84b171b5cdad4543f887c0f62b43b8e"
+        }
+      },
+      "ML-DSA-44/w_approx": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "d5df3e51f5098708ff9b992f78b9dc5aa460f925b56199bd5fd4f2a49d549cff",
+          "liboqs": "d5df3e51f5098708ff9b992f78b9dc5aa460f925b56199bd5fd4f2a49d549cff",
+          "openssl": "d5df3e51f5098708ff9b992f78b9dc5aa460f925b56199bd5fd4f2a49d549cff",
+          "circl": "d5df3e51f5098708ff9b992f78b9dc5aa460f925b56199bd5fd4f2a49d549cff",
+          "rustcrypto": "d5df3e51f5098708ff9b992f78b9dc5aa460f925b56199bd5fd4f2a49d549cff",
+          "bouncycastle": "d5df3e51f5098708ff9b992f78b9dc5aa460f925b56199bd5fd4f2a49d549cff"
+        }
+      },
+      "ML-DSA-65/w_approx": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "9f88be447d63df33450068b6c8a8a50b682d4234064908dd758007d61b52c2b9",
+          "liboqs": "9f88be447d63df33450068b6c8a8a50b682d4234064908dd758007d61b52c2b9",
+          "openssl": "9f88be447d63df33450068b6c8a8a50b682d4234064908dd758007d61b52c2b9",
+          "circl": "9f88be447d63df33450068b6c8a8a50b682d4234064908dd758007d61b52c2b9",
+          "rustcrypto": "9f88be447d63df33450068b6c8a8a50b682d4234064908dd758007d61b52c2b9",
+          "bouncycastle": "9f88be447d63df33450068b6c8a8a50b682d4234064908dd758007d61b52c2b9"
+        }
+      },
+      "ML-DSA-87/w_approx": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "9c543fceff48a4565c52a2ba65a62cab1c16e160c68b098e3e03539dbf3a741c",
+          "liboqs": "9c543fceff48a4565c52a2ba65a62cab1c16e160c68b098e3e03539dbf3a741c",
+          "openssl": "9c543fceff48a4565c52a2ba65a62cab1c16e160c68b098e3e03539dbf3a741c",
+          "circl": "9c543fceff48a4565c52a2ba65a62cab1c16e160c68b098e3e03539dbf3a741c",
+          "rustcrypto": "9c543fceff48a4565c52a2ba65a62cab1c16e160c68b098e3e03539dbf3a741c",
+          "bouncycastle": "9c543fceff48a4565c52a2ba65a62cab1c16e160c68b098e3e03539dbf3a741c"
+        }
+      },
+      "ML-DSA-44/hint_check": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "b70ba5d266e411f1c160ecb0b844ed1dc8de476ee58c5cdae36d6ee568cd1f8f",
+          "liboqs": "b70ba5d266e411f1c160ecb0b844ed1dc8de476ee58c5cdae36d6ee568cd1f8f",
+          "openssl": "b70ba5d266e411f1c160ecb0b844ed1dc8de476ee58c5cdae36d6ee568cd1f8f",
+          "circl": "b70ba5d266e411f1c160ecb0b844ed1dc8de476ee58c5cdae36d6ee568cd1f8f",
+          "rustcrypto": "b70ba5d266e411f1c160ecb0b844ed1dc8de476ee58c5cdae36d6ee568cd1f8f",
+          "bouncycastle": "b70ba5d266e411f1c160ecb0b844ed1dc8de476ee58c5cdae36d6ee568cd1f8f"
+        }
+      },
+      "ML-DSA-65/hint_check": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "b3d673f3b934405c7a0a0602076e55c5a7307fd7d53bd99674cae9517a5e3e53",
+          "liboqs": "b3d673f3b934405c7a0a0602076e55c5a7307fd7d53bd99674cae9517a5e3e53",
+          "openssl": "b3d673f3b934405c7a0a0602076e55c5a7307fd7d53bd99674cae9517a5e3e53",
+          "circl": "b3d673f3b934405c7a0a0602076e55c5a7307fd7d53bd99674cae9517a5e3e53",
+          "rustcrypto": "b3d673f3b934405c7a0a0602076e55c5a7307fd7d53bd99674cae9517a5e3e53",
+          "bouncycastle": "b3d673f3b934405c7a0a0602076e55c5a7307fd7d53bd99674cae9517a5e3e53"
+        }
+      },
+      "ML-DSA-87/hint_check": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "c40ade3f6450e447994d40b970a06ae3f6969dbb8d3f16c0dad4a1f2de6cdc75",
+          "liboqs": "c40ade3f6450e447994d40b970a06ae3f6969dbb8d3f16c0dad4a1f2de6cdc75",
+          "openssl": "c40ade3f6450e447994d40b970a06ae3f6969dbb8d3f16c0dad4a1f2de6cdc75",
+          "circl": "c40ade3f6450e447994d40b970a06ae3f6969dbb8d3f16c0dad4a1f2de6cdc75",
+          "rustcrypto": "c40ade3f6450e447994d40b970a06ae3f6969dbb8d3f16c0dad4a1f2de6cdc75",
+          "bouncycastle": "c40ade3f6450e447994d40b970a06ae3f6969dbb8d3f16c0dad4a1f2de6cdc75"
+        }
+      },
+      "SLH-DSA-SHA2-128s/hmsg": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "c8fc8aa9abe70b16c52e17e43ae0c458f8755a8fbc241a5b404a1dc1e1b3f0eb",
+          "liboqs": "c8fc8aa9abe70b16c52e17e43ae0c458f8755a8fbc241a5b404a1dc1e1b3f0eb",
+          "openssl": "c8fc8aa9abe70b16c52e17e43ae0c458f8755a8fbc241a5b404a1dc1e1b3f0eb",
+          "circl": "c8fc8aa9abe70b16c52e17e43ae0c458f8755a8fbc241a5b404a1dc1e1b3f0eb",
+          "rustcrypto": "c8fc8aa9abe70b16c52e17e43ae0c458f8755a8fbc241a5b404a1dc1e1b3f0eb",
+          "bouncycastle": "c8fc8aa9abe70b16c52e17e43ae0c458f8755a8fbc241a5b404a1dc1e1b3f0eb"
+        }
+      },
+      "SLH-DSA-SHA2-128f/hmsg": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "abdc11b374cbbb04d4cd7a2f7edd7d3d753856b58516dc52e084961873b3e252",
+          "liboqs": "abdc11b374cbbb04d4cd7a2f7edd7d3d753856b58516dc52e084961873b3e252",
+          "openssl": "abdc11b374cbbb04d4cd7a2f7edd7d3d753856b58516dc52e084961873b3e252",
+          "circl": "abdc11b374cbbb04d4cd7a2f7edd7d3d753856b58516dc52e084961873b3e252",
+          "rustcrypto": "abdc11b374cbbb04d4cd7a2f7edd7d3d753856b58516dc52e084961873b3e252",
+          "bouncycastle": "abdc11b374cbbb04d4cd7a2f7edd7d3d753856b58516dc52e084961873b3e252"
+        }
+      },
+      "SLH-DSA-SHA2-192s/hmsg": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "7842c1bbeb55f373e8bc1d184fbaad4a577c721fbe301ca254bc652a07f75ad6",
+          "liboqs": "7842c1bbeb55f373e8bc1d184fbaad4a577c721fbe301ca254bc652a07f75ad6",
+          "openssl": "7842c1bbeb55f373e8bc1d184fbaad4a577c721fbe301ca254bc652a07f75ad6",
+          "circl": "7842c1bbeb55f373e8bc1d184fbaad4a577c721fbe301ca254bc652a07f75ad6",
+          "rustcrypto": "7842c1bbeb55f373e8bc1d184fbaad4a577c721fbe301ca254bc652a07f75ad6",
+          "bouncycastle": "7842c1bbeb55f373e8bc1d184fbaad4a577c721fbe301ca254bc652a07f75ad6"
+        }
+      },
+      "SLH-DSA-SHA2-192f/hmsg": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "99c493efd8b6d2bda134bf7b51b3c06ad3241add93684eea68d0abf81f6b13d9",
+          "liboqs": "99c493efd8b6d2bda134bf7b51b3c06ad3241add93684eea68d0abf81f6b13d9",
+          "openssl": "99c493efd8b6d2bda134bf7b51b3c06ad3241add93684eea68d0abf81f6b13d9",
+          "circl": "99c493efd8b6d2bda134bf7b51b3c06ad3241add93684eea68d0abf81f6b13d9",
+          "rustcrypto": "99c493efd8b6d2bda134bf7b51b3c06ad3241add93684eea68d0abf81f6b13d9",
+          "bouncycastle": "99c493efd8b6d2bda134bf7b51b3c06ad3241add93684eea68d0abf81f6b13d9"
+        }
+      },
+      "SLH-DSA-SHA2-256s/hmsg": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "56f4a9d7c2cde036cb19976de1d1126b3c78fc474bb09826efc38e0056717c1e",
+          "liboqs": "56f4a9d7c2cde036cb19976de1d1126b3c78fc474bb09826efc38e0056717c1e",
+          "openssl": "56f4a9d7c2cde036cb19976de1d1126b3c78fc474bb09826efc38e0056717c1e",
+          "circl": "56f4a9d7c2cde036cb19976de1d1126b3c78fc474bb09826efc38e0056717c1e",
+          "rustcrypto": "56f4a9d7c2cde036cb19976de1d1126b3c78fc474bb09826efc38e0056717c1e",
+          "bouncycastle": "56f4a9d7c2cde036cb19976de1d1126b3c78fc474bb09826efc38e0056717c1e"
+        }
+      },
+      "SLH-DSA-SHA2-256f/hmsg": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "ddc59809e57bff03547d639093a219c52e8e6d701e31c68d31e3b4aeb047debc",
+          "liboqs": "ddc59809e57bff03547d639093a219c52e8e6d701e31c68d31e3b4aeb047debc",
+          "openssl": "ddc59809e57bff03547d639093a219c52e8e6d701e31c68d31e3b4aeb047debc",
+          "circl": "ddc59809e57bff03547d639093a219c52e8e6d701e31c68d31e3b4aeb047debc",
+          "rustcrypto": "ddc59809e57bff03547d639093a219c52e8e6d701e31c68d31e3b4aeb047debc",
+          "bouncycastle": "ddc59809e57bff03547d639093a219c52e8e6d701e31c68d31e3b4aeb047debc"
+        }
+      },
+      "SLH-DSA-SHAKE-128s/hmsg": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "a809d20cefbbc9a56ad99666cf0097ca19255e9e3db6d1785466c37d21e564ad",
+          "liboqs": "a809d20cefbbc9a56ad99666cf0097ca19255e9e3db6d1785466c37d21e564ad",
+          "openssl": "a809d20cefbbc9a56ad99666cf0097ca19255e9e3db6d1785466c37d21e564ad",
+          "circl": "a809d20cefbbc9a56ad99666cf0097ca19255e9e3db6d1785466c37d21e564ad",
+          "rustcrypto": "a809d20cefbbc9a56ad99666cf0097ca19255e9e3db6d1785466c37d21e564ad",
+          "bouncycastle": "a809d20cefbbc9a56ad99666cf0097ca19255e9e3db6d1785466c37d21e564ad"
+        }
+      },
+      "SLH-DSA-SHAKE-128f/hmsg": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "e68b9e6f2ef9d355270b38de316cbcf1f8584218a83334162e90459a0be4c9c0",
+          "liboqs": "e68b9e6f2ef9d355270b38de316cbcf1f8584218a83334162e90459a0be4c9c0",
+          "openssl": "e68b9e6f2ef9d355270b38de316cbcf1f8584218a83334162e90459a0be4c9c0",
+          "circl": "e68b9e6f2ef9d355270b38de316cbcf1f8584218a83334162e90459a0be4c9c0",
+          "rustcrypto": "e68b9e6f2ef9d355270b38de316cbcf1f8584218a83334162e90459a0be4c9c0",
+          "bouncycastle": "e68b9e6f2ef9d355270b38de316cbcf1f8584218a83334162e90459a0be4c9c0"
+        }
+      },
+      "SLH-DSA-SHAKE-192s/hmsg": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "c683c0791117c9533c0e56f4d2458f436753e55b14a53a026c2f5c403f6c7b26",
+          "liboqs": "c683c0791117c9533c0e56f4d2458f436753e55b14a53a026c2f5c403f6c7b26",
+          "openssl": "c683c0791117c9533c0e56f4d2458f436753e55b14a53a026c2f5c403f6c7b26",
+          "circl": "c683c0791117c9533c0e56f4d2458f436753e55b14a53a026c2f5c403f6c7b26",
+          "rustcrypto": "c683c0791117c9533c0e56f4d2458f436753e55b14a53a026c2f5c403f6c7b26",
+          "bouncycastle": "c683c0791117c9533c0e56f4d2458f436753e55b14a53a026c2f5c403f6c7b26"
+        }
+      },
+      "SLH-DSA-SHAKE-192f/hmsg": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "16033c24c326de24e21afc388899da5033a76afd26f0f07f8420954b56508f92",
+          "liboqs": "16033c24c326de24e21afc388899da5033a76afd26f0f07f8420954b56508f92",
+          "openssl": "16033c24c326de24e21afc388899da5033a76afd26f0f07f8420954b56508f92",
+          "circl": "16033c24c326de24e21afc388899da5033a76afd26f0f07f8420954b56508f92",
+          "rustcrypto": "16033c24c326de24e21afc388899da5033a76afd26f0f07f8420954b56508f92",
+          "bouncycastle": "16033c24c326de24e21afc388899da5033a76afd26f0f07f8420954b56508f92"
+        }
+      },
+      "SLH-DSA-SHAKE-256s/hmsg": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "a13b2633ea42b471e096635a582ed55bc0fcb32e57a14aa142304256c606d678",
+          "liboqs": "a13b2633ea42b471e096635a582ed55bc0fcb32e57a14aa142304256c606d678",
+          "openssl": "a13b2633ea42b471e096635a582ed55bc0fcb32e57a14aa142304256c606d678",
+          "circl": "a13b2633ea42b471e096635a582ed55bc0fcb32e57a14aa142304256c606d678",
+          "rustcrypto": "a13b2633ea42b471e096635a582ed55bc0fcb32e57a14aa142304256c606d678",
+          "bouncycastle": "a13b2633ea42b471e096635a582ed55bc0fcb32e57a14aa142304256c606d678"
+        }
+      },
+      "SLH-DSA-SHAKE-256f/hmsg": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "35100d295dbd7e0b8b0ebdbe93fae2d12e61aafe675708c7d48f963e19481fa1",
+          "liboqs": "35100d295dbd7e0b8b0ebdbe93fae2d12e61aafe675708c7d48f963e19481fa1",
+          "openssl": "35100d295dbd7e0b8b0ebdbe93fae2d12e61aafe675708c7d48f963e19481fa1",
+          "circl": "35100d295dbd7e0b8b0ebdbe93fae2d12e61aafe675708c7d48f963e19481fa1",
+          "rustcrypto": "35100d295dbd7e0b8b0ebdbe93fae2d12e61aafe675708c7d48f963e19481fa1",
+          "bouncycastle": "35100d295dbd7e0b8b0ebdbe93fae2d12e61aafe675708c7d48f963e19481fa1"
+        }
+      },
+      "SLH-DSA-SHA2-128s/fors": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "2a427e0e6f4c8a81a9155ae3ac73ef2993853f710c5d98b7ac6acbe8ac008d76",
+          "liboqs": "2a427e0e6f4c8a81a9155ae3ac73ef2993853f710c5d98b7ac6acbe8ac008d76",
+          "openssl": "2a427e0e6f4c8a81a9155ae3ac73ef2993853f710c5d98b7ac6acbe8ac008d76",
+          "circl": "2a427e0e6f4c8a81a9155ae3ac73ef2993853f710c5d98b7ac6acbe8ac008d76",
+          "rustcrypto": "2a427e0e6f4c8a81a9155ae3ac73ef2993853f710c5d98b7ac6acbe8ac008d76",
+          "bouncycastle": "2a427e0e6f4c8a81a9155ae3ac73ef2993853f710c5d98b7ac6acbe8ac008d76"
+        }
+      },
+      "SLH-DSA-SHA2-128f/fors": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "76e2079ce2847dc81c821a41daf44f507250869da34cd0b51f1dd904ab33f253",
+          "liboqs": "76e2079ce2847dc81c821a41daf44f507250869da34cd0b51f1dd904ab33f253",
+          "openssl": "76e2079ce2847dc81c821a41daf44f507250869da34cd0b51f1dd904ab33f253",
+          "circl": "76e2079ce2847dc81c821a41daf44f507250869da34cd0b51f1dd904ab33f253",
+          "rustcrypto": "76e2079ce2847dc81c821a41daf44f507250869da34cd0b51f1dd904ab33f253",
+          "bouncycastle": "76e2079ce2847dc81c821a41daf44f507250869da34cd0b51f1dd904ab33f253"
+        }
+      },
+      "SLH-DSA-SHA2-192s/fors": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "e02d4e10ee454a58c46de6f940fd80c7f6486e548a90a3d1b44c752b07444ec5",
+          "liboqs": "e02d4e10ee454a58c46de6f940fd80c7f6486e548a90a3d1b44c752b07444ec5",
+          "openssl": "e02d4e10ee454a58c46de6f940fd80c7f6486e548a90a3d1b44c752b07444ec5",
+          "circl": "e02d4e10ee454a58c46de6f940fd80c7f6486e548a90a3d1b44c752b07444ec5",
+          "rustcrypto": "e02d4e10ee454a58c46de6f940fd80c7f6486e548a90a3d1b44c752b07444ec5",
+          "bouncycastle": "e02d4e10ee454a58c46de6f940fd80c7f6486e548a90a3d1b44c752b07444ec5"
+        }
+      },
+      "SLH-DSA-SHA2-192f/fors": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "0fc753053e0294a1980fd2dc4966e3e13e0239216e380237315fe672a3d4b283",
+          "liboqs": "0fc753053e0294a1980fd2dc4966e3e13e0239216e380237315fe672a3d4b283",
+          "openssl": "0fc753053e0294a1980fd2dc4966e3e13e0239216e380237315fe672a3d4b283",
+          "circl": "0fc753053e0294a1980fd2dc4966e3e13e0239216e380237315fe672a3d4b283",
+          "rustcrypto": "0fc753053e0294a1980fd2dc4966e3e13e0239216e380237315fe672a3d4b283",
+          "bouncycastle": "0fc753053e0294a1980fd2dc4966e3e13e0239216e380237315fe672a3d4b283"
+        }
+      },
+      "SLH-DSA-SHA2-256s/fors": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "6e0cdc09dcca7b502019673d31bf2b99670dc32bbd3ab9252bb32796941f35c3",
+          "liboqs": "6e0cdc09dcca7b502019673d31bf2b99670dc32bbd3ab9252bb32796941f35c3",
+          "openssl": "6e0cdc09dcca7b502019673d31bf2b99670dc32bbd3ab9252bb32796941f35c3",
+          "circl": "6e0cdc09dcca7b502019673d31bf2b99670dc32bbd3ab9252bb32796941f35c3",
+          "rustcrypto": "6e0cdc09dcca7b502019673d31bf2b99670dc32bbd3ab9252bb32796941f35c3",
+          "bouncycastle": "6e0cdc09dcca7b502019673d31bf2b99670dc32bbd3ab9252bb32796941f35c3"
+        }
+      },
+      "SLH-DSA-SHA2-256f/fors": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "18d77c6f2ade12470433ba6c6d57573371af2533851b933c64363de6d963d373",
+          "liboqs": "18d77c6f2ade12470433ba6c6d57573371af2533851b933c64363de6d963d373",
+          "openssl": "18d77c6f2ade12470433ba6c6d57573371af2533851b933c64363de6d963d373",
+          "circl": "18d77c6f2ade12470433ba6c6d57573371af2533851b933c64363de6d963d373",
+          "rustcrypto": "18d77c6f2ade12470433ba6c6d57573371af2533851b933c64363de6d963d373",
+          "bouncycastle": "18d77c6f2ade12470433ba6c6d57573371af2533851b933c64363de6d963d373"
+        }
+      },
+      "SLH-DSA-SHAKE-128s/fors": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "fd43c53daa97236e7c225c503e2d24f5417680a139ae0062a0dc743431e5dce4",
+          "liboqs": "fd43c53daa97236e7c225c503e2d24f5417680a139ae0062a0dc743431e5dce4",
+          "openssl": "fd43c53daa97236e7c225c503e2d24f5417680a139ae0062a0dc743431e5dce4",
+          "circl": "fd43c53daa97236e7c225c503e2d24f5417680a139ae0062a0dc743431e5dce4",
+          "rustcrypto": "fd43c53daa97236e7c225c503e2d24f5417680a139ae0062a0dc743431e5dce4",
+          "bouncycastle": "fd43c53daa97236e7c225c503e2d24f5417680a139ae0062a0dc743431e5dce4"
+        }
+      },
+      "SLH-DSA-SHAKE-128f/fors": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "9fef76550e3ec598a77ab89226035a0cb03319d368504518319d6c767b9a25f9",
+          "liboqs": "9fef76550e3ec598a77ab89226035a0cb03319d368504518319d6c767b9a25f9",
+          "openssl": "9fef76550e3ec598a77ab89226035a0cb03319d368504518319d6c767b9a25f9",
+          "circl": "9fef76550e3ec598a77ab89226035a0cb03319d368504518319d6c767b9a25f9",
+          "rustcrypto": "9fef76550e3ec598a77ab89226035a0cb03319d368504518319d6c767b9a25f9",
+          "bouncycastle": "9fef76550e3ec598a77ab89226035a0cb03319d368504518319d6c767b9a25f9"
+        }
+      },
+      "SLH-DSA-SHAKE-192s/fors": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "b2d2b8e9db3745db3a6d6a216ec8067a5467fa7eb96832aadf92607c875ddf23",
+          "liboqs": "b2d2b8e9db3745db3a6d6a216ec8067a5467fa7eb96832aadf92607c875ddf23",
+          "openssl": "b2d2b8e9db3745db3a6d6a216ec8067a5467fa7eb96832aadf92607c875ddf23",
+          "circl": "b2d2b8e9db3745db3a6d6a216ec8067a5467fa7eb96832aadf92607c875ddf23",
+          "rustcrypto": "b2d2b8e9db3745db3a6d6a216ec8067a5467fa7eb96832aadf92607c875ddf23",
+          "bouncycastle": "b2d2b8e9db3745db3a6d6a216ec8067a5467fa7eb96832aadf92607c875ddf23"
+        }
+      },
+      "SLH-DSA-SHAKE-192f/fors": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "f134db2c080f691dc912dc6700ea075797d9c850f91fc865799a0e5420c1595e",
+          "liboqs": "f134db2c080f691dc912dc6700ea075797d9c850f91fc865799a0e5420c1595e",
+          "openssl": "f134db2c080f691dc912dc6700ea075797d9c850f91fc865799a0e5420c1595e",
+          "circl": "f134db2c080f691dc912dc6700ea075797d9c850f91fc865799a0e5420c1595e",
+          "rustcrypto": "f134db2c080f691dc912dc6700ea075797d9c850f91fc865799a0e5420c1595e",
+          "bouncycastle": "f134db2c080f691dc912dc6700ea075797d9c850f91fc865799a0e5420c1595e"
+        }
+      },
+      "SLH-DSA-SHAKE-256s/fors": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "2c55764aa2d278d49e9ee500e9989f6e061de25e23381d0215c32ca994b8072b",
+          "liboqs": "2c55764aa2d278d49e9ee500e9989f6e061de25e23381d0215c32ca994b8072b",
+          "openssl": "2c55764aa2d278d49e9ee500e9989f6e061de25e23381d0215c32ca994b8072b",
+          "circl": "2c55764aa2d278d49e9ee500e9989f6e061de25e23381d0215c32ca994b8072b",
+          "rustcrypto": "2c55764aa2d278d49e9ee500e9989f6e061de25e23381d0215c32ca994b8072b",
+          "bouncycastle": "2c55764aa2d278d49e9ee500e9989f6e061de25e23381d0215c32ca994b8072b"
+        }
+      },
+      "SLH-DSA-SHAKE-256f/fors": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "66572eb54e75c66ca0b2b72983ba5837b18cfc14e337bf0e3b349c0845097fe3",
+          "liboqs": "66572eb54e75c66ca0b2b72983ba5837b18cfc14e337bf0e3b349c0845097fe3",
+          "openssl": "66572eb54e75c66ca0b2b72983ba5837b18cfc14e337bf0e3b349c0845097fe3",
+          "circl": "66572eb54e75c66ca0b2b72983ba5837b18cfc14e337bf0e3b349c0845097fe3",
+          "rustcrypto": "66572eb54e75c66ca0b2b72983ba5837b18cfc14e337bf0e3b349c0845097fe3",
+          "bouncycastle": "66572eb54e75c66ca0b2b72983ba5837b18cfc14e337bf0e3b349c0845097fe3"
+        }
+      },
+      "SLH-DSA-SHA2-128s/ht_wots": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "01c5ae13c8d19d41a88e03529b7e8e53d34273e325506fc3500b1633b28293ff",
+          "liboqs": "01c5ae13c8d19d41a88e03529b7e8e53d34273e325506fc3500b1633b28293ff",
+          "openssl": "01c5ae13c8d19d41a88e03529b7e8e53d34273e325506fc3500b1633b28293ff",
+          "circl": "01c5ae13c8d19d41a88e03529b7e8e53d34273e325506fc3500b1633b28293ff",
+          "rustcrypto": "01c5ae13c8d19d41a88e03529b7e8e53d34273e325506fc3500b1633b28293ff",
+          "bouncycastle": "01c5ae13c8d19d41a88e03529b7e8e53d34273e325506fc3500b1633b28293ff"
+        }
+      },
+      "SLH-DSA-SHA2-128f/ht_wots": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "bcd6baad4b322528f94afd7126465ab6a9b4c665de96c5de5c9ff8906d45db53",
+          "liboqs": "bcd6baad4b322528f94afd7126465ab6a9b4c665de96c5de5c9ff8906d45db53",
+          "openssl": "bcd6baad4b322528f94afd7126465ab6a9b4c665de96c5de5c9ff8906d45db53",
+          "circl": "bcd6baad4b322528f94afd7126465ab6a9b4c665de96c5de5c9ff8906d45db53",
+          "rustcrypto": "bcd6baad4b322528f94afd7126465ab6a9b4c665de96c5de5c9ff8906d45db53",
+          "bouncycastle": "bcd6baad4b322528f94afd7126465ab6a9b4c665de96c5de5c9ff8906d45db53"
+        }
+      },
+      "SLH-DSA-SHA2-192s/ht_wots": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "003e3cad335c6b702d85889e0f4e09732ae0ff924fafc1d2f4349e80761353ab",
+          "liboqs": "003e3cad335c6b702d85889e0f4e09732ae0ff924fafc1d2f4349e80761353ab",
+          "openssl": "003e3cad335c6b702d85889e0f4e09732ae0ff924fafc1d2f4349e80761353ab",
+          "circl": "003e3cad335c6b702d85889e0f4e09732ae0ff924fafc1d2f4349e80761353ab",
+          "rustcrypto": "003e3cad335c6b702d85889e0f4e09732ae0ff924fafc1d2f4349e80761353ab",
+          "bouncycastle": "003e3cad335c6b702d85889e0f4e09732ae0ff924fafc1d2f4349e80761353ab"
+        }
+      },
+      "SLH-DSA-SHA2-192f/ht_wots": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "3780dc15d880116fdcd201c70074e27dc7bc78a79c6ac00b10e16ee20de77b54",
+          "liboqs": "3780dc15d880116fdcd201c70074e27dc7bc78a79c6ac00b10e16ee20de77b54",
+          "openssl": "3780dc15d880116fdcd201c70074e27dc7bc78a79c6ac00b10e16ee20de77b54",
+          "circl": "3780dc15d880116fdcd201c70074e27dc7bc78a79c6ac00b10e16ee20de77b54",
+          "rustcrypto": "3780dc15d880116fdcd201c70074e27dc7bc78a79c6ac00b10e16ee20de77b54",
+          "bouncycastle": "3780dc15d880116fdcd201c70074e27dc7bc78a79c6ac00b10e16ee20de77b54"
+        }
+      },
+      "SLH-DSA-SHA2-256s/ht_wots": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "1d44736cf3246df2335b3ce120858f1defbac7c3e1e64e38546520ec441a0bb2",
+          "liboqs": "1d44736cf3246df2335b3ce120858f1defbac7c3e1e64e38546520ec441a0bb2",
+          "openssl": "1d44736cf3246df2335b3ce120858f1defbac7c3e1e64e38546520ec441a0bb2",
+          "circl": "1d44736cf3246df2335b3ce120858f1defbac7c3e1e64e38546520ec441a0bb2",
+          "rustcrypto": "1d44736cf3246df2335b3ce120858f1defbac7c3e1e64e38546520ec441a0bb2",
+          "bouncycastle": "1d44736cf3246df2335b3ce120858f1defbac7c3e1e64e38546520ec441a0bb2"
+        }
+      },
+      "SLH-DSA-SHA2-256f/ht_wots": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "2abb141e2393fb0e3fdc2506c5507177b0facf2564e3033a7d2527d157e5407f",
+          "liboqs": "2abb141e2393fb0e3fdc2506c5507177b0facf2564e3033a7d2527d157e5407f",
+          "openssl": "2abb141e2393fb0e3fdc2506c5507177b0facf2564e3033a7d2527d157e5407f",
+          "circl": "2abb141e2393fb0e3fdc2506c5507177b0facf2564e3033a7d2527d157e5407f",
+          "rustcrypto": "2abb141e2393fb0e3fdc2506c5507177b0facf2564e3033a7d2527d157e5407f",
+          "bouncycastle": "2abb141e2393fb0e3fdc2506c5507177b0facf2564e3033a7d2527d157e5407f"
+        }
+      },
+      "SLH-DSA-SHAKE-128s/ht_wots": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "94ae14623f82f30f7efe9a9acda00adb0e9e01ae110a6e8ebec0534d3fc8d445",
+          "liboqs": "94ae14623f82f30f7efe9a9acda00adb0e9e01ae110a6e8ebec0534d3fc8d445",
+          "openssl": "94ae14623f82f30f7efe9a9acda00adb0e9e01ae110a6e8ebec0534d3fc8d445",
+          "circl": "94ae14623f82f30f7efe9a9acda00adb0e9e01ae110a6e8ebec0534d3fc8d445",
+          "rustcrypto": "94ae14623f82f30f7efe9a9acda00adb0e9e01ae110a6e8ebec0534d3fc8d445",
+          "bouncycastle": "94ae14623f82f30f7efe9a9acda00adb0e9e01ae110a6e8ebec0534d3fc8d445"
+        }
+      },
+      "SLH-DSA-SHAKE-128f/ht_wots": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "88be7509b99a591944753f56c9422f0801d6b987143fb03932617f117bb0d28a",
+          "liboqs": "88be7509b99a591944753f56c9422f0801d6b987143fb03932617f117bb0d28a",
+          "openssl": "88be7509b99a591944753f56c9422f0801d6b987143fb03932617f117bb0d28a",
+          "circl": "88be7509b99a591944753f56c9422f0801d6b987143fb03932617f117bb0d28a",
+          "rustcrypto": "88be7509b99a591944753f56c9422f0801d6b987143fb03932617f117bb0d28a",
+          "bouncycastle": "88be7509b99a591944753f56c9422f0801d6b987143fb03932617f117bb0d28a"
+        }
+      },
+      "SLH-DSA-SHAKE-192s/ht_wots": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "287ba06e0aa6a1077486129e8b9dd6670231538223a95e3025aa181fad2acd02",
+          "liboqs": "287ba06e0aa6a1077486129e8b9dd6670231538223a95e3025aa181fad2acd02",
+          "openssl": "287ba06e0aa6a1077486129e8b9dd6670231538223a95e3025aa181fad2acd02",
+          "circl": "287ba06e0aa6a1077486129e8b9dd6670231538223a95e3025aa181fad2acd02",
+          "rustcrypto": "287ba06e0aa6a1077486129e8b9dd6670231538223a95e3025aa181fad2acd02",
+          "bouncycastle": "287ba06e0aa6a1077486129e8b9dd6670231538223a95e3025aa181fad2acd02"
+        }
+      },
+      "SLH-DSA-SHAKE-192f/ht_wots": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "e7eceda4bcace4b549cad2bd40e413df894052a1abd56f1730b664195f93e460",
+          "liboqs": "e7eceda4bcace4b549cad2bd40e413df894052a1abd56f1730b664195f93e460",
+          "openssl": "e7eceda4bcace4b549cad2bd40e413df894052a1abd56f1730b664195f93e460",
+          "circl": "e7eceda4bcace4b549cad2bd40e413df894052a1abd56f1730b664195f93e460",
+          "rustcrypto": "e7eceda4bcace4b549cad2bd40e413df894052a1abd56f1730b664195f93e460",
+          "bouncycastle": "e7eceda4bcace4b549cad2bd40e413df894052a1abd56f1730b664195f93e460"
+        }
+      },
+      "SLH-DSA-SHAKE-256s/ht_wots": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "dfd295e6f3ed1bff66204a8e48008dc4d60104d85f6d1cfc54f821328d01ba80",
+          "liboqs": "dfd295e6f3ed1bff66204a8e48008dc4d60104d85f6d1cfc54f821328d01ba80",
+          "openssl": "dfd295e6f3ed1bff66204a8e48008dc4d60104d85f6d1cfc54f821328d01ba80",
+          "circl": "dfd295e6f3ed1bff66204a8e48008dc4d60104d85f6d1cfc54f821328d01ba80",
+          "rustcrypto": "dfd295e6f3ed1bff66204a8e48008dc4d60104d85f6d1cfc54f821328d01ba80",
+          "bouncycastle": "dfd295e6f3ed1bff66204a8e48008dc4d60104d85f6d1cfc54f821328d01ba80"
+        }
+      },
+      "SLH-DSA-SHAKE-256f/ht_wots": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "e840db579d31def3ca752f97d4210459281b05c2ad11db7cf48081d4bfd687be",
+          "liboqs": "e840db579d31def3ca752f97d4210459281b05c2ad11db7cf48081d4bfd687be",
+          "openssl": "e840db579d31def3ca752f97d4210459281b05c2ad11db7cf48081d4bfd687be",
+          "circl": "e840db579d31def3ca752f97d4210459281b05c2ad11db7cf48081d4bfd687be",
+          "rustcrypto": "e840db579d31def3ca752f97d4210459281b05c2ad11db7cf48081d4bfd687be",
+          "bouncycastle": "e840db579d31def3ca752f97d4210459281b05c2ad11db7cf48081d4bfd687be"
+        }
+      },
+      "SLH-DSA-SHA2-128s/ht_auth": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "166891c4293ae4e2e4656237bb0e56583a6c54e7182300e19e606c2549116b9a",
+          "liboqs": "166891c4293ae4e2e4656237bb0e56583a6c54e7182300e19e606c2549116b9a",
+          "openssl": "166891c4293ae4e2e4656237bb0e56583a6c54e7182300e19e606c2549116b9a",
+          "circl": "166891c4293ae4e2e4656237bb0e56583a6c54e7182300e19e606c2549116b9a",
+          "rustcrypto": "166891c4293ae4e2e4656237bb0e56583a6c54e7182300e19e606c2549116b9a",
+          "bouncycastle": "166891c4293ae4e2e4656237bb0e56583a6c54e7182300e19e606c2549116b9a"
+        }
+      },
+      "SLH-DSA-SHA2-128f/ht_auth": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "65067dcf4b228f3e3e149e27bc65416b77079d27af18dd75fcf45f2d066da9d0",
+          "liboqs": "65067dcf4b228f3e3e149e27bc65416b77079d27af18dd75fcf45f2d066da9d0",
+          "openssl": "65067dcf4b228f3e3e149e27bc65416b77079d27af18dd75fcf45f2d066da9d0",
+          "circl": "65067dcf4b228f3e3e149e27bc65416b77079d27af18dd75fcf45f2d066da9d0",
+          "rustcrypto": "65067dcf4b228f3e3e149e27bc65416b77079d27af18dd75fcf45f2d066da9d0",
+          "bouncycastle": "65067dcf4b228f3e3e149e27bc65416b77079d27af18dd75fcf45f2d066da9d0"
+        }
+      },
+      "SLH-DSA-SHA2-192s/ht_auth": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "abcc1f496ce94bd293f897919767b827873e278e2712e998e4d7b7efd793227f",
+          "liboqs": "abcc1f496ce94bd293f897919767b827873e278e2712e998e4d7b7efd793227f",
+          "openssl": "abcc1f496ce94bd293f897919767b827873e278e2712e998e4d7b7efd793227f",
+          "circl": "abcc1f496ce94bd293f897919767b827873e278e2712e998e4d7b7efd793227f",
+          "rustcrypto": "abcc1f496ce94bd293f897919767b827873e278e2712e998e4d7b7efd793227f",
+          "bouncycastle": "abcc1f496ce94bd293f897919767b827873e278e2712e998e4d7b7efd793227f"
+        }
+      },
+      "SLH-DSA-SHA2-192f/ht_auth": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "d8399d2c4a79e5aa4cfcb82f83c178cf3beb38ea6359ee437273093b564ab10d",
+          "liboqs": "d8399d2c4a79e5aa4cfcb82f83c178cf3beb38ea6359ee437273093b564ab10d",
+          "openssl": "d8399d2c4a79e5aa4cfcb82f83c178cf3beb38ea6359ee437273093b564ab10d",
+          "circl": "d8399d2c4a79e5aa4cfcb82f83c178cf3beb38ea6359ee437273093b564ab10d",
+          "rustcrypto": "d8399d2c4a79e5aa4cfcb82f83c178cf3beb38ea6359ee437273093b564ab10d",
+          "bouncycastle": "d8399d2c4a79e5aa4cfcb82f83c178cf3beb38ea6359ee437273093b564ab10d"
+        }
+      },
+      "SLH-DSA-SHA2-256s/ht_auth": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "d83061b7644f247a15c8a6b0c6db80be2d26ff4c56e294701ed2ae6db70cbb0d",
+          "liboqs": "d83061b7644f247a15c8a6b0c6db80be2d26ff4c56e294701ed2ae6db70cbb0d",
+          "openssl": "d83061b7644f247a15c8a6b0c6db80be2d26ff4c56e294701ed2ae6db70cbb0d",
+          "circl": "d83061b7644f247a15c8a6b0c6db80be2d26ff4c56e294701ed2ae6db70cbb0d",
+          "rustcrypto": "d83061b7644f247a15c8a6b0c6db80be2d26ff4c56e294701ed2ae6db70cbb0d",
+          "bouncycastle": "d83061b7644f247a15c8a6b0c6db80be2d26ff4c56e294701ed2ae6db70cbb0d"
+        }
+      },
+      "SLH-DSA-SHA2-256f/ht_auth": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "ea237cfaa02c26e99e11520918b0e61177d46038f0a2709d85dcabc15e331044",
+          "liboqs": "ea237cfaa02c26e99e11520918b0e61177d46038f0a2709d85dcabc15e331044",
+          "openssl": "ea237cfaa02c26e99e11520918b0e61177d46038f0a2709d85dcabc15e331044",
+          "circl": "ea237cfaa02c26e99e11520918b0e61177d46038f0a2709d85dcabc15e331044",
+          "rustcrypto": "ea237cfaa02c26e99e11520918b0e61177d46038f0a2709d85dcabc15e331044",
+          "bouncycastle": "ea237cfaa02c26e99e11520918b0e61177d46038f0a2709d85dcabc15e331044"
+        }
+      },
+      "SLH-DSA-SHAKE-128s/ht_auth": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "322f5c37179bf5e21cf2996e25c265fd4c0159cd953048ef6a954e3df2901127",
+          "liboqs": "322f5c37179bf5e21cf2996e25c265fd4c0159cd953048ef6a954e3df2901127",
+          "openssl": "322f5c37179bf5e21cf2996e25c265fd4c0159cd953048ef6a954e3df2901127",
+          "circl": "322f5c37179bf5e21cf2996e25c265fd4c0159cd953048ef6a954e3df2901127",
+          "rustcrypto": "322f5c37179bf5e21cf2996e25c265fd4c0159cd953048ef6a954e3df2901127",
+          "bouncycastle": "322f5c37179bf5e21cf2996e25c265fd4c0159cd953048ef6a954e3df2901127"
+        }
+      },
+      "SLH-DSA-SHAKE-128f/ht_auth": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "08d0d748772faba84c2bc4882223a0858d1fa9fed3e934334087442a5560beea",
+          "liboqs": "08d0d748772faba84c2bc4882223a0858d1fa9fed3e934334087442a5560beea",
+          "openssl": "08d0d748772faba84c2bc4882223a0858d1fa9fed3e934334087442a5560beea",
+          "circl": "08d0d748772faba84c2bc4882223a0858d1fa9fed3e934334087442a5560beea",
+          "rustcrypto": "08d0d748772faba84c2bc4882223a0858d1fa9fed3e934334087442a5560beea",
+          "bouncycastle": "08d0d748772faba84c2bc4882223a0858d1fa9fed3e934334087442a5560beea"
+        }
+      },
+      "SLH-DSA-SHAKE-192s/ht_auth": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "8dc2f628710f21e176f0d0a8027bdcc5faf003c66319247cfd56c66782fd9391",
+          "liboqs": "8dc2f628710f21e176f0d0a8027bdcc5faf003c66319247cfd56c66782fd9391",
+          "openssl": "8dc2f628710f21e176f0d0a8027bdcc5faf003c66319247cfd56c66782fd9391",
+          "circl": "8dc2f628710f21e176f0d0a8027bdcc5faf003c66319247cfd56c66782fd9391",
+          "rustcrypto": "8dc2f628710f21e176f0d0a8027bdcc5faf003c66319247cfd56c66782fd9391",
+          "bouncycastle": "8dc2f628710f21e176f0d0a8027bdcc5faf003c66319247cfd56c66782fd9391"
+        }
+      },
+      "SLH-DSA-SHAKE-192f/ht_auth": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "19487c527f09afc4cb04e38b3f8053cd06b4f20398c080308004cdaaa1082c91",
+          "liboqs": "19487c527f09afc4cb04e38b3f8053cd06b4f20398c080308004cdaaa1082c91",
+          "openssl": "19487c527f09afc4cb04e38b3f8053cd06b4f20398c080308004cdaaa1082c91",
+          "circl": "19487c527f09afc4cb04e38b3f8053cd06b4f20398c080308004cdaaa1082c91",
+          "rustcrypto": "19487c527f09afc4cb04e38b3f8053cd06b4f20398c080308004cdaaa1082c91",
+          "bouncycastle": "19487c527f09afc4cb04e38b3f8053cd06b4f20398c080308004cdaaa1082c91"
+        }
+      },
+      "SLH-DSA-SHAKE-256s/ht_auth": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "830c1eb08d357fdaf368e6fc93ddad918bf1671179c9388bdbc1f798e7510c40",
+          "liboqs": "830c1eb08d357fdaf368e6fc93ddad918bf1671179c9388bdbc1f798e7510c40",
+          "openssl": "830c1eb08d357fdaf368e6fc93ddad918bf1671179c9388bdbc1f798e7510c40",
+          "circl": "830c1eb08d357fdaf368e6fc93ddad918bf1671179c9388bdbc1f798e7510c40",
+          "rustcrypto": "830c1eb08d357fdaf368e6fc93ddad918bf1671179c9388bdbc1f798e7510c40",
+          "bouncycastle": "830c1eb08d357fdaf368e6fc93ddad918bf1671179c9388bdbc1f798e7510c40"
+        }
+      },
+      "SLH-DSA-SHAKE-256f/ht_auth": {
+        "libs": 6,
+        "agree": true,
+        "by_lib": {
+          "noble": "6efadafeee69c18d61c6635b6993e2e4fa880b22b1dbfc4b22c474c0e314bf90",
+          "liboqs": "6efadafeee69c18d61c6635b6993e2e4fa880b22b1dbfc4b22c474c0e314bf90",
+          "openssl": "6efadafeee69c18d61c6635b6993e2e4fa880b22b1dbfc4b22c474c0e314bf90",
+          "circl": "6efadafeee69c18d61c6635b6993e2e4fa880b22b1dbfc4b22c474c0e314bf90",
+          "rustcrypto": "6efadafeee69c18d61c6635b6993e2e4fa880b22b1dbfc4b22c474c0e314bf90",
+          "bouncycastle": "6efadafeee69c18d61c6635b6993e2e4fa880b22b1dbfc4b22c474c0e314bf90"
+        }
+      },
+      "ML-DSA-44/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "ML-DSA-65/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "ML-DSA-87/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "SLH-DSA-SHA2-128s/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "SLH-DSA-SHA2-128f/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "SLH-DSA-SHA2-192s/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "SLH-DSA-SHA2-192f/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "SLH-DSA-SHA2-256s/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "SLH-DSA-SHA2-256f/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "SLH-DSA-SHAKE-128s/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "SLH-DSA-SHAKE-128f/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "SLH-DSA-SHAKE-192s/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "SLH-DSA-SHAKE-192f/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "SLH-DSA-SHAKE-256s/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "SLH-DSA-SHAKE-256f/total": {
+        "libs": 3,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true",
+          "bouncycastle": "true"
+        }
+      },
+      "ML-DSA-44/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      },
+      "ML-DSA-65/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      },
+      "ML-DSA-87/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      },
+      "SLH-DSA-SHA2-128s/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      },
+      "SLH-DSA-SHA2-128f/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      },
+      "SLH-DSA-SHA2-192s/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      },
+      "SLH-DSA-SHA2-192f/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      },
+      "SLH-DSA-SHA2-256s/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      },
+      "SLH-DSA-SHA2-256f/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      },
+      "SLH-DSA-SHAKE-128s/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      },
+      "SLH-DSA-SHAKE-128f/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      },
+      "SLH-DSA-SHAKE-192s/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      },
+      "SLH-DSA-SHAKE-192f/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      },
+      "SLH-DSA-SHAKE-256s/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      },
+      "SLH-DSA-SHAKE-256f/total_best": {
+        "libs": 2,
+        "agree": true,
+        "by_lib": {
+          "noble": "true",
+          "rustcrypto": "true"
+        }
+      }
+    }
+  }
+}

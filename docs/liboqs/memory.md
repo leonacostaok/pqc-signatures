@@ -56,53 +56,179 @@ op). Falcon (PQClean) uses a stack `tmp` buffer of a few KiB for verify and tens
 
 <!-- RESULTS -->
 
-## Results (PRELIMINARY dev run)
+## Results
 
-### keygen: peak stack per op (heap alloc / peak in parentheses when non-zero)
+Generated from `results/liboqs/memory.jsonl`. Method: private pthread stack (16 MiB) re-painted with 0xA5 below the trampoline frame, high-water scan from that frame, minus the trampoline+call overhead of 239 B; private pthread stack (16 MiB) re-painted with 0xA5 below the trampoline frame, high-water scan from that frame, minus the trampoline+call overhead of 247 B.
 
-| variant | ML-DSA-44 | ML-DSA-65 | ML-DSA-87 | SHA2-128s | SHA2-128f | SHA2-192s | SHA2-192f | SHA2-256s | SHA2-256f | SHAKE-128s | SHAKE-128f | SHAKE-192s | SHAKE-192f | SHAKE-256s | SHAKE-256f | Falcon-512 | Falcon-1024 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `keygen.v0` | 30.5 KiB (6352/1152) | 47.5 KiB (9528/1152) | 77.5 KiB (15976/1152) | 3.9 KiB (280/280) | 3.9 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 18.4 KiB (544/544) | 34.9 KiB (544/544) |
-| `keygen.v1` | 30.4 KiB (6352/1152) | 47.4 KiB (9528/1152) | 77.4 KiB (15976/1152) | 3.8 KiB (280/280) | 3.8 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 18.4 KiB (544/544) | 34.9 KiB (544/544) |
-| `keygen.v2` | 30.6 KiB (6352/1152) | 47.6 KiB (9528/1152) | 77.6 KiB (15976/1152) | 3.9 KiB (280/280) | 3.9 KiB (280/280) | 4.4 KiB (280/280) | 4.4 KiB (280/280) | 4.4 KiB (280/280) | 4.4 KiB (280/280) | 3.7 KiB (280/280) | 3.7 KiB (280/280) | 3.7 KiB (280/280) | 3.7 KiB (280/280) | 3.7 KiB (280/280) | 3.7 KiB (280/280) | 18.5 KiB (544/544) | 35.0 KiB (544/544) |
-| `keygen.v3` | 30.4 KiB (6352/1152) | 47.5 KiB (9528/1152) | 77.5 KiB (15976/1152) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.7 KiB (280/280) | 3.7 KiB (280/280) | 3.7 KiB (280/280) | 3.7 KiB (280/280) | 3.9 KiB (280/280) | 3.9 KiB (280/280) | 3.9 KiB (280/280) | 3.9 KiB (280/280) | 3.9 KiB (280/280) | 3.9 KiB (280/280) | 20.7 KiB (544/544) | 37.2 KiB (544/544) |
-| `keygen.v4` | 30.5 KiB (6352/1152) | 47.5 KiB (9528/1152) | 77.5 KiB (15976/1152) | 3.9 KiB (280/280) | 3.9 KiB (280/280) | 4.4 KiB (280/280) | 4.4 KiB (280/280) | 4.4 KiB (280/280) | 4.4 KiB (280/280) | 3.8 KiB (280/280) | 3.8 KiB (280/280) | 3.8 KiB (280/280) | 3.8 KiB (280/280) | 3.8 KiB (280/280) | 3.8 KiB (280/280) | 17.8 KiB (544/544) | 34.5 KiB (544/544) |
-| `keygen.v5` | 30.5 KiB (6352/1152) | 47.5 KiB (9528/1152) | 77.5 KiB (15976/1152) | 3.9 KiB (280/280) | 3.9 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 18.4 KiB (544/544) | 34.9 KiB (544/544) |
+### keygen: peak stack
 
-### sign: peak stack per op (heap alloc / peak in parentheses when non-zero)
+| param | `keygen.v0` | `keygen.v1` | `keygen.v2` | `keygen.v3` | `keygen.v4` | `keygen.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 30.5 KiB | 30.4 KiB | 30.6 KiB | 30.4 KiB | 30.5 KiB | 30.5 KiB |
+| ML-DSA-65 | 47.5 KiB | 47.4 KiB | 47.6 KiB | 47.5 KiB | 47.5 KiB | 47.5 KiB |
+| ML-DSA-87 | 77.5 KiB | 77.4 KiB | 77.6 KiB | 77.5 KiB | 77.5 KiB | 77.5 KiB |
+| SLH-DSA-SHA2-128s | 3.9 KiB | 3.8 KiB | 3.9 KiB | 3.6 KiB | 3.9 KiB | 3.9 KiB |
+| SLH-DSA-SHA2-128f | 3.9 KiB | 3.8 KiB | 3.9 KiB | 3.6 KiB | 3.9 KiB | 3.9 KiB |
+| SLH-DSA-SHA2-192s | 4.3 KiB | 4.3 KiB | 4.4 KiB | 3.7 KiB | 4.4 KiB | 4.3 KiB |
+| SLH-DSA-SHA2-192f | 4.3 KiB | 4.3 KiB | 4.4 KiB | 3.7 KiB | 4.4 KiB | 4.3 KiB |
+| SLH-DSA-SHA2-256s | 4.3 KiB | 4.3 KiB | 4.4 KiB | 3.7 KiB | 4.4 KiB | 4.3 KiB |
+| SLH-DSA-SHA2-256f | 4.3 KiB | 4.3 KiB | 4.4 KiB | 3.7 KiB | 4.4 KiB | 4.3 KiB |
+| SLH-DSA-SHAKE-128s | 3.6 KiB | 3.6 KiB | 3.7 KiB | 3.9 KiB | 3.8 KiB | 3.6 KiB |
+| SLH-DSA-SHAKE-128f | 3.6 KiB | 3.6 KiB | 3.7 KiB | 3.9 KiB | 3.8 KiB | 3.6 KiB |
+| SLH-DSA-SHAKE-192s | 3.6 KiB | 3.6 KiB | 3.7 KiB | 3.9 KiB | 3.8 KiB | 3.6 KiB |
+| SLH-DSA-SHAKE-192f | 3.6 KiB | 3.6 KiB | 3.7 KiB | 3.9 KiB | 3.8 KiB | 3.6 KiB |
+| SLH-DSA-SHAKE-256s | 3.6 KiB | 3.6 KiB | 3.7 KiB | 3.9 KiB | 3.8 KiB | 3.6 KiB |
+| SLH-DSA-SHAKE-256f | 3.6 KiB | 3.6 KiB | 3.7 KiB | 3.9 KiB | 3.8 KiB | 3.6 KiB |
+| Falcon-512 | 18.4 KiB | 18.4 KiB | 18.5 KiB | 20.7 KiB | 17.8 KiB | 18.4 KiB |
+| Falcon-1024 | 34.9 KiB | 34.9 KiB | 35.0 KiB | 37.2 KiB | 34.5 KiB | 34.9 KiB |
 
-| variant | ML-DSA-44 | ML-DSA-65 | ML-DSA-87 | SHA2-128s | SHA2-128f | SHA2-192s | SHA2-192f | SHA2-256s | SHA2-256f | SHAKE-128s | SHAKE-128f | SHAKE-192s | SHAKE-192f | SHAKE-256s | SHAKE-256f | Falcon-512 | Falcon-1024 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `sign.v0` | 48.6 KiB (6536/1152) | 72.6 KiB (17424/1152) | 110.6 KiB (17560/1152) | 4.7 KiB (280/280) | 4.7 KiB (280/280) | 5.1 KiB (280/280) | 5.1 KiB (280/280) | 5.2 KiB (280/280) | 5.2 KiB (280/280) | 4.4 KiB (280/280) | 4.4 KiB (280/280) | 4.4 KiB (280/280) | 4.4 KiB (280/280) | 4.5 KiB (280/280) | 4.5 KiB (280/280) | 44.2 KiB (808/544) | 84.4 KiB (808/544) |
-| `sign.v1` | 48.0 KiB (6536/1152) | 72.0 KiB (17424/1152) | 110.0 KiB (17560/1152) | 4.6 KiB (280/280) | 4.6 KiB (280/280) | 5.0 KiB (280/280) | 5.0 KiB (280/280) | 5.0 KiB (280/280) | 5.0 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 44.3 KiB (808/544) | 84.4 KiB (808/544) |
-| `sign.v2` | 48.5 KiB (6536/1152) | 72.6 KiB (17424/1152) | 110.6 KiB (17560/1152) | 4.7 KiB (280/280) | 4.7 KiB (280/280) | 5.2 KiB (280/280) | 5.2 KiB (280/280) | 5.2 KiB (280/280) | 5.2 KiB (280/280) | 4.5 KiB (280/280) | 4.5 KiB (280/280) | 4.5 KiB (280/280) | 4.5 KiB (280/280) | 4.5 KiB (280/280) | 4.5 KiB (280/280) | 43.8 KiB (808/544) | 84.0 KiB (808/544) |
-| `sign.v3` | 48.6 KiB (6536/1152) | 72.6 KiB (17424/1152) | 110.6 KiB (17560/1152) | 5.5 KiB (280/280) | 5.5 KiB (280/280) | 7.5 KiB (280/280) | 7.5 KiB (280/280) | 7.5 KiB (280/280) | 7.5 KiB (280/280) | 4.5 KiB (280/280) | 4.5 KiB (280/280) | 4.5 KiB (280/280) | 4.5 KiB (280/280) | 4.5 KiB (280/280) | 4.5 KiB (280/280) | 44.2 KiB (808/544) | 84.4 KiB (808/544) |
-| `sign.v4` | 48.5 KiB (6536/1152) | 72.5 KiB (17424/1152) | 110.5 KiB (17560/1152) | 4.7 KiB (280/280) | 4.7 KiB (280/280) | 5.2 KiB (280/280) | 5.2 KiB (280/280) | 5.2 KiB (280/280) | 5.2 KiB (280/280) | 4.6 KiB (280/280) | 4.6 KiB (280/280) | 4.6 KiB (280/280) | 4.6 KiB (280/280) | 4.6 KiB (280/280) | 4.6 KiB (280/280) | 44.4 KiB (808/544) | 84.6 KiB (808/544) |
-| `sign.v5` | 48.6 KiB (6536/1152) | 72.6 KiB (17424/1152) | 110.6 KiB (17560/1152) | 4.7 KiB (280/280) | 4.7 KiB (280/280) | 5.1 KiB (280/280) | 5.1 KiB (280/280) | 5.2 KiB (280/280) | 5.2 KiB (280/280) | 4.4 KiB (280/280) | 4.4 KiB (280/280) | 4.4 KiB (280/280) | 4.4 KiB (280/280) | 4.5 KiB (280/280) | 4.5 KiB (280/280) | 44.2 KiB (808/544) | 84.4 KiB (808/544) |
+### keygen: heap allocated per op
 
-### verify: peak stack per op (heap alloc / peak in parentheses when non-zero)
+| param | `keygen.v0` | `keygen.v1` | `keygen.v2` | `keygen.v3` | `keygen.v4` | `keygen.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 6.2 KiB | 6.2 KiB | 6.2 KiB | 6.2 KiB | 6.2 KiB | 6.2 KiB |
+| ML-DSA-65 | 9.3 KiB | 9.3 KiB | 9.3 KiB | 9.3 KiB | 9.3 KiB | 9.3 KiB |
+| ML-DSA-87 | 15.6 KiB | 15.6 KiB | 15.6 KiB | 15.6 KiB | 15.6 KiB | 15.6 KiB |
+| SLH-DSA-SHA2-128s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-128f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-192s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-192f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-256s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-256f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-128s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-128f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-192s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-192f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-256s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-256f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| Falcon-512 | 544 B | 544 B | 544 B | 544 B | 544 B | 544 B |
+| Falcon-1024 | 544 B | 544 B | 544 B | 544 B | 544 B | 544 B |
 
-| variant | ML-DSA-44 | ML-DSA-65 | ML-DSA-87 | SHA2-128s | SHA2-128f | SHA2-192s | SHA2-192f | SHA2-256s | SHA2-256f | SHAKE-128s | SHAKE-128f | SHAKE-192s | SHAKE-192f | SHAKE-256s | SHAKE-256f | Falcon-512 | Falcon-1024 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `verify.v0` | 29.0 KiB (5664/1152) | 44.1 KiB (7968/1152) | 72.3 KiB (13544/1152) | 4.6 KiB (280/280) | 4.6 KiB (280/280) | 5.0 KiB (280/280) | 5.0 KiB (280/280) | 5.0 KiB (280/280) | 5.0 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.6 KiB (544/544) | 8.6 KiB (544/544) |
-| `verify.v1` | 28.5 KiB (5664/1152) | 43.6 KiB (7968/1152) | 71.8 KiB (13544/1152) | 4.6 KiB (280/280) | 4.6 KiB (280/280) | 5.0 KiB (280/280) | 5.0 KiB (280/280) | 5.0 KiB (280/280) | 5.0 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.7 KiB (544/544) | 8.7 KiB (544/544) |
-| `verify.v2` | 29.0 KiB (5664/1152) | 44.0 KiB (7968/1152) | 72.3 KiB (13544/1152) | 4.5 KiB (280/280) | 4.5 KiB (280/280) | 4.9 KiB (280/280) | 4.9 KiB (280/280) | 4.9 KiB (280/280) | 4.9 KiB (280/280) | 4.2 KiB (280/280) | 4.2 KiB (280/280) | 4.2 KiB (280/280) | 4.2 KiB (280/280) | 4.2 KiB (280/280) | 4.2 KiB (280/280) | 4.7 KiB (544/544) | 8.7 KiB (544/544) |
-| `verify.v3` | 28.8 KiB (5664/1152) | 43.9 KiB (7968/1152) | 72.1 KiB (13544/1152) | 4.1 KiB (280/280) | 4.1 KiB (280/280) | 4.2 KiB (280/280) | 4.2 KiB (280/280) | 4.2 KiB (280/280) | 4.2 KiB (280/280) | 4.1 KiB (280/280) | 4.1 KiB (280/280) | 4.1 KiB (280/280) | 4.1 KiB (280/280) | 4.1 KiB (280/280) | 4.1 KiB (280/280) | 4.6 KiB (544/544) | 8.6 KiB (544/544) |
-| `verify.v4` | 29.0 KiB (5664/1152) | 44.1 KiB (7968/1152) | 72.3 KiB (13544/1152) | 5.5 KiB (280/280) | 5.5 KiB (280/280) | 7.5 KiB (280/280) | 7.5 KiB (280/280) | 7.5 KiB (280/280) | 7.5 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.6 KiB (544/544) | 8.6 KiB (544/544) |
-| `verify.v5` | 29.0 KiB (5664/1152) | 44.1 KiB (7968/1152) | 72.3 KiB (13544/1152) | 4.6 KiB (280/280) | 4.6 KiB (280/280) | 5.0 KiB (280/280) | 5.0 KiB (280/280) | 5.0 KiB (280/280) | 5.0 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.3 KiB (280/280) | 4.6 KiB (544/544) | 8.6 KiB (544/544) |
+### sign: peak stack
 
-### verify-stage: peak stack per op (heap alloc / peak in parentheses when non-zero)
+| param | `sign.v0` | `sign.v1` | `sign.v2` | `sign.v3` | `sign.v4` | `sign.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 48.6 KiB | 48.0 KiB | 48.5 KiB | 48.6 KiB | 48.5 KiB | 48.6 KiB |
+| ML-DSA-65 | 72.6 KiB | 72.0 KiB | 72.6 KiB | 72.6 KiB | 72.5 KiB | 72.6 KiB |
+| ML-DSA-87 | 110.6 KiB | 110.0 KiB | 110.6 KiB | 110.6 KiB | 110.5 KiB | 110.6 KiB |
+| SLH-DSA-SHA2-128s | 4.7 KiB | 4.6 KiB | 4.7 KiB | 5.5 KiB | 4.7 KiB | 4.7 KiB |
+| SLH-DSA-SHA2-128f | 4.7 KiB | 4.6 KiB | 4.7 KiB | 5.5 KiB | 4.7 KiB | 4.7 KiB |
+| SLH-DSA-SHA2-192s | 5.1 KiB | 5.0 KiB | 5.2 KiB | 7.5 KiB | 5.2 KiB | 5.1 KiB |
+| SLH-DSA-SHA2-192f | 5.1 KiB | 5.0 KiB | 5.2 KiB | 7.5 KiB | 5.2 KiB | 5.1 KiB |
+| SLH-DSA-SHA2-256s | 5.2 KiB | 5.0 KiB | 5.2 KiB | 7.5 KiB | 5.2 KiB | 5.2 KiB |
+| SLH-DSA-SHA2-256f | 5.2 KiB | 5.0 KiB | 5.2 KiB | 7.5 KiB | 5.2 KiB | 5.2 KiB |
+| SLH-DSA-SHAKE-128s | 4.4 KiB | 4.3 KiB | 4.5 KiB | 4.5 KiB | 4.6 KiB | 4.4 KiB |
+| SLH-DSA-SHAKE-128f | 4.4 KiB | 4.3 KiB | 4.5 KiB | 4.5 KiB | 4.6 KiB | 4.4 KiB |
+| SLH-DSA-SHAKE-192s | 4.4 KiB | 4.3 KiB | 4.5 KiB | 4.5 KiB | 4.6 KiB | 4.4 KiB |
+| SLH-DSA-SHAKE-192f | 4.4 KiB | 4.3 KiB | 4.5 KiB | 4.5 KiB | 4.6 KiB | 4.4 KiB |
+| SLH-DSA-SHAKE-256s | 4.5 KiB | 4.3 KiB | 4.5 KiB | 4.5 KiB | 4.6 KiB | 4.5 KiB |
+| SLH-DSA-SHAKE-256f | 4.5 KiB | 4.3 KiB | 4.5 KiB | 4.5 KiB | 4.6 KiB | 4.5 KiB |
+| Falcon-512 | 44.2 KiB | 44.3 KiB | 43.8 KiB | 44.2 KiB | 44.4 KiB | 44.2 KiB |
+| Falcon-1024 | 84.4 KiB | 84.4 KiB | 84.0 KiB | 84.4 KiB | 84.6 KiB | 84.4 KiB |
 
-| variant | ML-DSA-44 | ML-DSA-65 | ML-DSA-87 | SHA2-128s | SHA2-128f | SHA2-192s | SHA2-192f | SHA2-256s | SHA2-256f | SHAKE-128s | SHAKE-128f | SHAKE-192s | SHAKE-192f | SHAKE-256s | SHAKE-256f |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `decode.v0` | 0 B (1120/280) | 0 B (280/280) | 0 B (280/280) | — | — | — | — | — | — | — | — | — | — | — | — |
-| `mu.v0` | 432 B (1648/544) | 368 B (808/544) | 368 B (808/544) | — | — | — | — | — | — | — | — | — | — | — | — |
-| `expandA.v0` | 4.2 KiB (4608/1152) | 4.2 KiB (6912/1152) | 4.2 KiB (12488/1152) | — | — | — | — | — | — | — | — | — | — | — | — |
-| `w_approx.v0` | 6.5 KiB (1384/544) | 7.5 KiB (544/544) | 9.5 KiB (544/544) | — | — | — | — | — | — | — | — | — | — | — | — |
-| `hint_check.v0` | 1.4 KiB (1384/544) | 1.3 KiB (544/544) | 1.3 KiB (544/544) | — | — | — | — | — | — | — | — | — | — | — | — |
-| `hmsg.v0` | — | — | — | 740 B (1120/280) | 740 B (280/280) | 1.4 KiB (280/280) | 1.4 KiB (280/280) | 1.4 KiB (280/280) | 1.4 KiB (280/280) | 536 B (280/280) | 536 B (280/280) | 536 B (280/280) | 536 B (280/280) | 536 B (280/280) | 536 B (280/280) |
-| `fors.v0` | — | — | — | 1.9 KiB (1120/280) | 1.9 KiB (280/280) | 2.5 KiB (280/280) | 2.5 KiB (280/280) | 2.5 KiB (280/280) | 2.5 KiB (280/280) | 1.7 KiB (280/280) | 1.7 KiB (280/280) | 1.7 KiB (280/280) | 1.7 KiB (280/280) | 1.7 KiB (280/280) | 1.7 KiB (280/280) |
-| `ht_wots.v0` | — | — | — | 3.2 KiB (1120/280) | 3.2 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 3.6 KiB (280/280) | 2.9 KiB (280/280) | 2.9 KiB (280/280) | 2.9 KiB (280/280) | 2.9 KiB (280/280) | 2.9 KiB (280/280) | 2.9 KiB (280/280) |
-| `ht_auth.v0` | — | — | — | 596 B (1120/280) | 596 B (280/280) | 1.2 KiB (280/280) | 1.2 KiB (280/280) | 1.2 KiB (280/280) | 1.2 KiB (280/280) | 488 B (280/280) | 488 B (280/280) | 488 B (280/280) | 488 B (280/280) | 488 B (280/280) | 488 B (280/280) |
-| `total_best` | 6.3 KiB (1912/544) | 7.3 KiB (1072/544) | 9.3 KiB (1072/544) | 4.5 KiB (1120/280) | 4.5 KiB (280/280) | 5.5 KiB (280/280) | 5.5 KiB (280/280) | 5.5 KiB (280/280) | 5.5 KiB (280/280) | 3.1 KiB (280/280) | 3.1 KiB (280/280) | 3.1 KiB (280/280) | 3.1 KiB (280/280) | 3.1 KiB (280/280) | 3.1 KiB (280/280) |
+### sign: heap allocated per op
+
+| param | `sign.v0` | `sign.v1` | `sign.v2` | `sign.v3` | `sign.v4` | `sign.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 6.4 KiB | 6.4 KiB | 6.4 KiB | 6.4 KiB | 6.4 KiB | 6.4 KiB |
+| ML-DSA-65 | 17.0 KiB | 17.0 KiB | 17.0 KiB | 17.0 KiB | 17.0 KiB | 17.0 KiB |
+| ML-DSA-87 | 17.1 KiB | 17.1 KiB | 17.1 KiB | 17.1 KiB | 17.1 KiB | 17.1 KiB |
+| SLH-DSA-SHA2-128s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-128f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-192s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-192f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-256s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-256f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-128s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-128f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-192s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-192f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-256s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-256f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| Falcon-512 | 808 B | 808 B | 808 B | 808 B | 808 B | 808 B |
+| Falcon-1024 | 808 B | 808 B | 808 B | 808 B | 808 B | 808 B |
+
+### verify: peak stack
+
+| param | `verify.v0` | `verify.v1` | `verify.v2` | `verify.v3` | `verify.v4` | `verify.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 29.0 KiB | 28.5 KiB | 29.0 KiB | 28.8 KiB | 29.0 KiB | 29.0 KiB |
+| ML-DSA-65 | 44.1 KiB | 43.6 KiB | 44.0 KiB | 43.9 KiB | 44.1 KiB | 44.1 KiB |
+| ML-DSA-87 | 72.3 KiB | 71.8 KiB | 72.3 KiB | 72.1 KiB | 72.3 KiB | 72.3 KiB |
+| SLH-DSA-SHA2-128s | 4.6 KiB | 4.6 KiB | 4.5 KiB | 4.1 KiB | 5.5 KiB | 4.6 KiB |
+| SLH-DSA-SHA2-128f | 4.6 KiB | 4.6 KiB | 4.5 KiB | 4.1 KiB | 5.5 KiB | 4.6 KiB |
+| SLH-DSA-SHA2-192s | 5.0 KiB | 5.0 KiB | 4.9 KiB | 4.2 KiB | 7.5 KiB | 5.0 KiB |
+| SLH-DSA-SHA2-192f | 5.0 KiB | 5.0 KiB | 4.9 KiB | 4.2 KiB | 7.5 KiB | 5.0 KiB |
+| SLH-DSA-SHA2-256s | 5.0 KiB | 5.0 KiB | 4.9 KiB | 4.2 KiB | 7.5 KiB | 5.0 KiB |
+| SLH-DSA-SHA2-256f | 5.0 KiB | 5.0 KiB | 4.9 KiB | 4.2 KiB | 7.5 KiB | 5.0 KiB |
+| SLH-DSA-SHAKE-128s | 4.3 KiB | 4.3 KiB | 4.2 KiB | 4.1 KiB | 4.3 KiB | 4.3 KiB |
+| SLH-DSA-SHAKE-128f | 4.3 KiB | 4.3 KiB | 4.2 KiB | 4.1 KiB | 4.3 KiB | 4.3 KiB |
+| SLH-DSA-SHAKE-192s | 4.3 KiB | 4.3 KiB | 4.2 KiB | 4.1 KiB | 4.3 KiB | 4.3 KiB |
+| SLH-DSA-SHAKE-192f | 4.3 KiB | 4.3 KiB | 4.2 KiB | 4.1 KiB | 4.3 KiB | 4.3 KiB |
+| SLH-DSA-SHAKE-256s | 4.3 KiB | 4.3 KiB | 4.2 KiB | 4.1 KiB | 4.3 KiB | 4.3 KiB |
+| SLH-DSA-SHAKE-256f | 4.3 KiB | 4.3 KiB | 4.2 KiB | 4.1 KiB | 4.3 KiB | 4.3 KiB |
+| Falcon-512 | 4.6 KiB | 4.7 KiB | 4.7 KiB | 4.6 KiB | 4.6 KiB | 4.6 KiB |
+| Falcon-1024 | 8.6 KiB | 8.7 KiB | 8.7 KiB | 8.6 KiB | 8.6 KiB | 8.6 KiB |
+
+### verify: heap allocated per op
+
+| param | `verify.v0` | `verify.v1` | `verify.v2` | `verify.v3` | `verify.v4` | `verify.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 5.5 KiB | 5.5 KiB | 5.5 KiB | 5.5 KiB | 5.5 KiB | 5.5 KiB |
+| ML-DSA-65 | 7.8 KiB | 7.8 KiB | 7.8 KiB | 7.8 KiB | 7.8 KiB | 7.8 KiB |
+| ML-DSA-87 | 13.2 KiB | 13.2 KiB | 13.2 KiB | 13.2 KiB | 13.2 KiB | 13.2 KiB |
+| SLH-DSA-SHA2-128s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-128f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-192s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-192f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-256s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHA2-256f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-128s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-128f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-192s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-192f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-256s | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| SLH-DSA-SHAKE-256f | 280 B | 280 B | 280 B | 280 B | 280 B | 280 B |
+| Falcon-512 | 544 B | 544 B | 544 B | 544 B | 544 B | 544 B |
+| Falcon-1024 | 544 B | 544 B | 544 B | 544 B | 544 B | 544 B |
+
+### verify-stage: peak stack
+
+| param | `decode.v0` | `expandA.v0` | `fors.v0` | `hint_check.v0` | `hmsg.v0` | `ht_auth.v0` | `ht_wots.v0` | `mu.v0` | `total_best` | `w_approx.v0` |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ML-DSA-44 | 0 B | 4.2 KiB | — | 1.4 KiB | — | — | — | 432 B | 6.3 KiB | 6.5 KiB |
+| ML-DSA-65 | 0 B | 4.2 KiB | — | 1.3 KiB | — | — | — | 368 B | 7.3 KiB | 7.5 KiB |
+| ML-DSA-87 | 0 B | 4.2 KiB | — | 1.3 KiB | — | — | — | 368 B | 9.3 KiB | 9.5 KiB |
+| SLH-DSA-SHA2-128s | — | — | 1.9 KiB | — | 740 B | 596 B | 3.2 KiB | — | 4.5 KiB | — |
+| SLH-DSA-SHA2-128f | — | — | 1.9 KiB | — | 740 B | 596 B | 3.2 KiB | — | 4.5 KiB | — |
+| SLH-DSA-SHA2-192s | — | — | 2.5 KiB | — | 1.4 KiB | 1.2 KiB | 3.6 KiB | — | 5.5 KiB | — |
+| SLH-DSA-SHA2-192f | — | — | 2.5 KiB | — | 1.4 KiB | 1.2 KiB | 3.6 KiB | — | 5.5 KiB | — |
+| SLH-DSA-SHA2-256s | — | — | 2.5 KiB | — | 1.4 KiB | 1.2 KiB | 3.6 KiB | — | 5.5 KiB | — |
+| SLH-DSA-SHA2-256f | — | — | 2.5 KiB | — | 1.4 KiB | 1.2 KiB | 3.6 KiB | — | 5.5 KiB | — |
+| SLH-DSA-SHAKE-128s | — | — | 1.7 KiB | — | 536 B | 488 B | 2.9 KiB | — | 3.1 KiB | — |
+| SLH-DSA-SHAKE-128f | — | — | 1.7 KiB | — | 536 B | 488 B | 2.9 KiB | — | 3.1 KiB | — |
+| SLH-DSA-SHAKE-192s | — | — | 1.7 KiB | — | 536 B | 488 B | 2.9 KiB | — | 3.1 KiB | — |
+| SLH-DSA-SHAKE-192f | — | — | 1.7 KiB | — | 536 B | 488 B | 2.9 KiB | — | 3.1 KiB | — |
+| SLH-DSA-SHAKE-256s | — | — | 1.7 KiB | — | 536 B | 488 B | 2.9 KiB | — | 3.1 KiB | — |
+| SLH-DSA-SHAKE-256f | — | — | 1.7 KiB | — | 536 B | 488 B | 2.9 KiB | — | 3.1 KiB | — |
+
+### verify-stage: heap allocated per op
+
+| param | `decode.v0` | `expandA.v0` | `fors.v0` | `hint_check.v0` | `hmsg.v0` | `ht_auth.v0` | `ht_wots.v0` | `mu.v0` | `total_best` | `w_approx.v0` |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ML-DSA-44 | 1.1 KiB | 4.5 KiB | — | 1.4 KiB | — | — | — | 1.6 KiB | 1.9 KiB | 1.4 KiB |
+| ML-DSA-65 | 280 B | 6.8 KiB | — | 544 B | — | — | — | 808 B | 1.0 KiB | 544 B |
+| ML-DSA-87 | 280 B | 12.2 KiB | — | 544 B | — | — | — | 808 B | 1.0 KiB | 544 B |
+| SLH-DSA-SHA2-128s | — | — | 1.1 KiB | — | 1.1 KiB | 1.1 KiB | 1.1 KiB | — | 1.1 KiB | — |
+| SLH-DSA-SHA2-128f | — | — | 280 B | — | 280 B | 280 B | 280 B | — | 280 B | — |
+| SLH-DSA-SHA2-192s | — | — | 280 B | — | 280 B | 280 B | 280 B | — | 280 B | — |
+| SLH-DSA-SHA2-192f | — | — | 280 B | — | 280 B | 280 B | 280 B | — | 280 B | — |
+| SLH-DSA-SHA2-256s | — | — | 280 B | — | 280 B | 280 B | 280 B | — | 280 B | — |
+| SLH-DSA-SHA2-256f | — | — | 280 B | — | 280 B | 280 B | 280 B | — | 280 B | — |
+| SLH-DSA-SHAKE-128s | — | — | 280 B | — | 280 B | 280 B | 280 B | — | 280 B | — |
+| SLH-DSA-SHAKE-128f | — | — | 280 B | — | 280 B | 280 B | 280 B | — | 280 B | — |
+| SLH-DSA-SHAKE-192s | — | — | 280 B | — | 280 B | 280 B | 280 B | — | 280 B | — |
+| SLH-DSA-SHAKE-192f | — | — | 280 B | — | 280 B | 280 B | 280 B | — | 280 B | — |
+| SLH-DSA-SHAKE-256s | — | — | 280 B | — | 280 B | 280 B | 280 B | — | 280 B | — |
+| SLH-DSA-SHAKE-256f | — | — | 280 B | — | 280 B | 280 B | 280 B | — | 280 B | — |
 

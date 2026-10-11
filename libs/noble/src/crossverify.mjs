@@ -5,6 +5,11 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { hexToBytes } from '@noble/hashes/utils.js';
 import { LIB, MESSAGE, PARAM_NAMES, loadAlg } from './algs.mjs';
 import { flipBit } from './refcheck.mjs';
+import { falcon512padded, falcon1024padded } from '@noble/post-quantum/falcon.js';
+
+// Falcon signatures come in two encodings: compressed (variable length) and padded (fixed 666 / 1280 bytes,
+// what Bouncy Castle emits). noble exposes them as separate signers, so pick the one matching the length.
+const FALCON_PADDED = { 'Falcon-512': [666, falcon512padded], 'Falcon-1024': [1280, falcon1024padded] };
 
 const [inFile, outFile] = process.argv.slice(2);
 if (!inFile || !outFile) throw new Error('usage: crossverify <artifacts.json> <out.json>');
@@ -12,7 +17,9 @@ const art = JSON.parse(readFileSync(inFile, 'utf8'));
 const results = [];
 for (const e of art.entries || []) {
   if (!PARAM_NAMES.includes(e.param)) continue;
-  const alg = await loadAlg('pkg', e.param);
+  let alg = await loadAlg('pkg', e.param);
+  const fp = FALCON_PADDED[e.param];
+  if (fp && e.sig_hex.length / 2 === fp[0]) alg = fp[1];
   let ok = false;
   let error = null;
   let tamper = false;

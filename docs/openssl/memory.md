@@ -40,419 +40,167 @@
 
 <!-- RESULTS -->
 
-## Results (development run; stack/heap are deterministic, so these are not noisy)
+## Results
 
-### ML-DSA-44
+Generated from `results/openssl/memory.jsonl`. Method: painted 16 MiB pthread stack (pthread_attr_setstack), re-painted below the measuring frame's rsp after an in-thread warm-up, high-water mark of the op.
 
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 2,152 | 47,280 | 42,192 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 1,944 | 47,048 | 41,960 | 1 | ✓ |
-| `keygen.v2` | keygen | default | 1,960 | 47,100 | 41,960 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 1,944 | 47,048 | 41,960 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 2,192 | 47,280 | 42,192 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 2,440 | 47,280 | 42,192 | 1 | ✓ |
-| `sign.v0` | sign | default | 3,672 | 61,016 | 60,464 | 1 | ✓ |
-| `sign.v1` | sign | default | 3,416 | 60,152 | 59,680 | 1 | ✓ |
-| `sign.v2` | sign | default | 3,416 | 60,936 | 60,464 | 1 | ✓ |
-| `sign.v5` | sign | default | 3,416 | 60,152 | 59,680 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 3,824 | 61,016 | 60,464 | 1 | ✓ |
-| `sign.v4` | sign | native | 4,344 | 61,016 | 60,464 | 1 | ✓ |
-| `verify.v0` | verify | default | 3,416 | 40,496 | 39,984 | 1 | ✓ |
-| `verify.v1` | verify | default | 3,128 | 39,632 | 39,200 | 1 | ✓ |
-| `verify.v2` | verify | default | 3,128 | 39,632 | 39,200 | 1 | ✓ |
-| `verify.v5` | verify | default | 3,128 | 39,632 | 39,200 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 3,488 | 40,496 | 39,984 | 1 | ✓ |
-| `verify.v4` | verify | native | 3,352 | 40,496 | 39,984 | 1 | ✓ |
-| `decode.v0` | verify-stage | default | 136 | 0 | 0 | 1 | ✓ |
-| `expandA.v0` | verify-stage | default | 856 | 504 | 504 | 1 | ✓ |
-| `hint_check.v0` | verify-stage | default | 824 | 544 | 504 | 1 | ✓ |
-| `mu.v0` | verify-stage | default | 600 | 504 | 504 | 1 | ✓ |
-| `total` | verify-stage | default | 3,544 | 2,056 | 504 | 1 | ✓ |
-| `total_best` | verify-stage | default | 3,080 | 504 | 504 | 1 | ✓ |
-| `w_approx.v0` | verify-stage | default | 3,368 | 504 | 504 | 1 | ✓ |
+### keygen: peak stack
 
-### ML-DSA-65
+| param | `keygen.v0` | `keygen.v1` | `keygen.v2` | `keygen.v3` | `keygen.v4` | `keygen.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 2.1 KiB | 1.9 KiB | 1.9 KiB | 2.1 KiB | 2.4 KiB | 1.9 KiB |
+| ML-DSA-65 | 2.1 KiB | 1.9 KiB | 1.9 KiB | 2.1 KiB | 2.4 KiB | 1.9 KiB |
+| ML-DSA-87 | 2.1 KiB | 1.9 KiB | 1.9 KiB | 2.1 KiB | 2.4 KiB | 1.9 KiB |
+| SLH-DSA-SHA2-128s | 6.7 KiB | 6.7 KiB | — | 5.9 KiB | 6.7 KiB | 6.7 KiB |
+| SLH-DSA-SHA2-128f | 5.7 KiB | 5.7 KiB | — | 4.7 KiB | 5.7 KiB | 5.7 KiB |
+| SLH-DSA-SHA2-192s | 7.7 KiB | 7.7 KiB | — | 6.0 KiB | 7.7 KiB | 7.7 KiB |
+| SLH-DSA-SHA2-192f | 7.7 KiB | 7.7 KiB | — | 4.8 KiB | 7.7 KiB | 7.7 KiB |
+| SLH-DSA-SHA2-256s | 7.7 KiB | 7.7 KiB | — | 5.8 KiB | 7.7 KiB | 7.7 KiB |
+| SLH-DSA-SHA2-256f | 7.7 KiB | 7.7 KiB | — | 5.0 KiB | 7.7 KiB | 7.7 KiB |
+| SLH-DSA-SHAKE-128s | 6.0 KiB | 5.8 KiB | — | 6.1 KiB | 5.8 KiB | 5.8 KiB |
+| SLH-DSA-SHAKE-128f | 4.8 KiB | 4.6 KiB | — | 4.9 KiB | 4.6 KiB | 4.6 KiB |
+| SLH-DSA-SHAKE-192s | 6.0 KiB | 5.8 KiB | — | 6.1 KiB | 5.8 KiB | 5.8 KiB |
+| SLH-DSA-SHAKE-192f | 4.8 KiB | 4.6 KiB | — | 4.9 KiB | 4.6 KiB | 4.6 KiB |
+| SLH-DSA-SHAKE-256s | 5.8 KiB | 5.6 KiB | — | 5.9 KiB | 5.6 KiB | 5.6 KiB |
+| SLH-DSA-SHAKE-256f | 5.0 KiB | 4.8 KiB | — | 5.1 KiB | 4.8 KiB | 4.8 KiB |
 
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 2,152 | 73,968 | 66,768 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 1,944 | 73,736 | 66,536 | 1 | ✓ |
-| `keygen.v2` | keygen | default | 1,960 | 73,788 | 66,536 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 1,944 | 73,736 | 66,536 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 2,192 | 73,968 | 66,768 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 2,440 | 73,968 | 66,768 | 1 | ✓ |
-| `sign.v0` | sign | default | 3,672 | 92,960 | 92,208 | 1 | ✓ |
-| `sign.v1` | sign | default | 3,416 | 92,096 | 91,424 | 1 | ✓ |
-| `sign.v2` | sign | default | 3,416 | 92,880 | 92,208 | 1 | ✓ |
-| `sign.v5` | sign | default | 3,416 | 92,096 | 91,424 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 3,824 | 92,960 | 92,208 | 1 | ✓ |
-| `sign.v4` | sign | native | 4,344 | 92,960 | 92,208 | 1 | ✓ |
-| `verify.v0` | verify | default | 3,416 | 63,024 | 62,512 | 1 | ✓ |
-| `verify.v1` | verify | default | 3,128 | 62,160 | 61,728 | 1 | ✓ |
-| `verify.v2` | verify | default | 3,128 | 62,160 | 61,728 | 1 | ✓ |
-| `verify.v5` | verify | default | 3,128 | 62,160 | 61,728 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 3,488 | 63,024 | 62,512 | 1 | ✓ |
-| `verify.v4` | verify | native | 3,352 | 63,024 | 62,512 | 1 | ✓ |
-| `decode.v0` | verify-stage | default | 136 | 0 | 0 | 1 | ✓ |
-| `expandA.v0` | verify-stage | default | 856 | 504 | 504 | 1 | ✓ |
-| `hint_check.v0` | verify-stage | default | 824 | 544 | 504 | 1 | ✓ |
-| `mu.v0` | verify-stage | default | 600 | 504 | 504 | 1 | ✓ |
-| `total` | verify-stage | default | 3,544 | 2,056 | 504 | 1 | ✓ |
-| `total_best` | verify-stage | default | 3,080 | 504 | 504 | 1 | ✓ |
-| `w_approx.v0` | verify-stage | default | 3,368 | 504 | 504 | 1 | ✓ |
+### keygen: heap allocated per op
 
-### ML-DSA-87
+| param | `keygen.v0` | `keygen.v1` | `keygen.v2` | `keygen.v3` | `keygen.v4` | `keygen.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 46.2 KiB | 45.9 KiB | 46.0 KiB | 46.2 KiB | 46.2 KiB | 45.9 KiB |
+| ML-DSA-65 | 72.2 KiB | 72.0 KiB | 72.1 KiB | 72.2 KiB | 72.2 KiB | 72.0 KiB |
+| ML-DSA-87 | 111.7 KiB | 111.5 KiB | 111.5 KiB | 111.7 KiB | 111.7 KiB | 111.5 KiB |
+| SLH-DSA-SHA2-128s | 21.7 KiB | 21.4 KiB | — | 21.7 KiB | 21.7 KiB | 21.4 KiB |
+| SLH-DSA-SHA2-128f | 2.0 KiB | 1.7 KiB | — | 2.0 KiB | 2.0 KiB | 1.7 KiB |
+| SLH-DSA-SHA2-192s | 22.0 KiB | 21.7 KiB | — | 22.0 KiB | 22.0 KiB | 21.7 KiB |
+| SLH-DSA-SHA2-192f | 2.3 KiB | 2.0 KiB | — | 2.3 KiB | 2.3 KiB | 2.0 KiB |
+| SLH-DSA-SHA2-256s | 12.0 KiB | 11.7 KiB | — | 12.0 KiB | 12.0 KiB | 11.7 KiB |
+| SLH-DSA-SHA2-256f | 2.6 KiB | 2.3 KiB | — | 2.6 KiB | 2.6 KiB | 2.3 KiB |
+| SLH-DSA-SHAKE-128s | 21.6 KiB | 21.3 KiB | — | 21.6 KiB | 21.6 KiB | 21.3 KiB |
+| SLH-DSA-SHAKE-128f | 1.9 KiB | 1.6 KiB | — | 1.9 KiB | 1.9 KiB | 1.6 KiB |
+| SLH-DSA-SHAKE-192s | 21.6 KiB | 21.3 KiB | — | 21.6 KiB | 21.6 KiB | 21.3 KiB |
+| SLH-DSA-SHAKE-192f | 1.9 KiB | 1.6 KiB | — | 1.9 KiB | 1.9 KiB | 1.6 KiB |
+| SLH-DSA-SHAKE-256s | 11.6 KiB | 11.3 KiB | — | 11.6 KiB | 11.6 KiB | 11.3 KiB |
+| SLH-DSA-SHAKE-256f | 2.2 KiB | 1.9 KiB | — | 2.2 KiB | 2.2 KiB | 1.9 KiB |
 
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 2,152 | 114,384 | 105,680 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 1,944 | 114,152 | 105,448 | 1 | ✓ |
-| `keygen.v2` | keygen | default | 1,960 | 114,204 | 105,448 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 1,944 | 114,152 | 105,448 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 2,192 | 114,384 | 105,680 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 2,440 | 114,384 | 105,680 | 1 | ✓ |
-| `sign.v0` | sign | default | 3,672 | 140,160 | 139,568 | 1 | ✓ |
-| `sign.v1` | sign | default | 3,416 | 139,296 | 138,784 | 1 | ✓ |
-| `sign.v2` | sign | default | 3,416 | 140,080 | 139,568 | 1 | ✓ |
-| `sign.v5` | sign | default | 3,416 | 139,296 | 138,784 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 3,824 | 140,160 | 139,568 | 1 | ✓ |
-| `sign.v4` | sign | native | 4,344 | 140,160 | 139,568 | 1 | ✓ |
-| `verify.v0` | verify | default | 3,416 | 100,144 | 99,632 | 1 | ✓ |
-| `verify.v1` | verify | default | 3,128 | 99,280 | 98,848 | 1 | ✓ |
-| `verify.v2` | verify | default | 3,128 | 99,280 | 98,848 | 1 | ✓ |
-| `verify.v5` | verify | default | 3,128 | 99,280 | 98,848 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 3,488 | 100,144 | 99,632 | 1 | ✓ |
-| `verify.v4` | verify | native | 3,352 | 100,144 | 99,632 | 1 | ✓ |
-| `decode.v0` | verify-stage | default | 136 | 0 | 0 | 1 | ✓ |
-| `expandA.v0` | verify-stage | default | 856 | 504 | 504 | 1 | ✓ |
-| `hint_check.v0` | verify-stage | default | 824 | 544 | 504 | 1 | ✓ |
-| `mu.v0` | verify-stage | default | 600 | 504 | 504 | 1 | ✓ |
-| `total` | verify-stage | default | 3,544 | 2,056 | 504 | 1 | ✓ |
-| `total_best` | verify-stage | default | 3,080 | 504 | 504 | 1 | ✓ |
-| `w_approx.v0` | verify-stage | default | 3,368 | 504 | 504 | 1 | ✓ |
+### sign: peak stack
 
-### SLH-DSA-SHA2-128s
+| param | `sign.v0` | `sign.v1` | `sign.v2` | `sign.v3` | `sign.v4` | `sign.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 3.6 KiB | 3.3 KiB | 3.3 KiB | 3.7 KiB | 4.2 KiB | 3.3 KiB |
+| ML-DSA-65 | 3.6 KiB | 3.3 KiB | 3.3 KiB | 3.7 KiB | 4.2 KiB | 3.3 KiB |
+| ML-DSA-87 | 3.6 KiB | 3.3 KiB | 3.3 KiB | 3.7 KiB | 4.2 KiB | 3.3 KiB |
+| SLH-DSA-SHA2-128s | 8.7 KiB | 7.7 KiB | 7.7 KiB | 7.4 KiB | 8.7 KiB | 7.7 KiB |
+| SLH-DSA-SHA2-128f | 6.7 KiB | 6.7 KiB | 6.7 KiB | 6.2 KiB | 7.7 KiB | 6.7 KiB |
+| SLH-DSA-SHA2-192s | 9.7 KiB | 9.7 KiB | 9.7 KiB | 7.5 KiB | 9.7 KiB | 9.7 KiB |
+| SLH-DSA-SHA2-192f | 7.7 KiB | 7.7 KiB | 7.7 KiB | 6.3 KiB | 7.7 KiB | 7.7 KiB |
+| SLH-DSA-SHA2-256s | 9.7 KiB | 9.7 KiB | 9.7 KiB | 7.3 KiB | 9.7 KiB | 9.7 KiB |
+| SLH-DSA-SHA2-256f | 7.7 KiB | 7.7 KiB | 7.7 KiB | 6.5 KiB | 9.7 KiB | 7.7 KiB |
+| SLH-DSA-SHAKE-128s | 7.5 KiB | 7.3 KiB | 7.3 KiB | 7.6 KiB | 7.5 KiB | 7.3 KiB |
+| SLH-DSA-SHAKE-128f | 6.3 KiB | 6.0 KiB | 6.0 KiB | 6.4 KiB | 6.3 KiB | 6.0 KiB |
+| SLH-DSA-SHAKE-192s | 7.5 KiB | 7.3 KiB | 7.3 KiB | 7.6 KiB | 7.5 KiB | 7.3 KiB |
+| SLH-DSA-SHAKE-192f | 6.3 KiB | 6.0 KiB | 6.0 KiB | 6.4 KiB | 6.3 KiB | 6.0 KiB |
+| SLH-DSA-SHAKE-256s | 7.3 KiB | 7.1 KiB | 7.1 KiB | 7.4 KiB | 7.3 KiB | 7.1 KiB |
+| SLH-DSA-SHAKE-256f | 6.5 KiB | 6.2 KiB | 6.2 KiB | 6.6 KiB | 6.5 KiB | 6.2 KiB |
 
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 6,840 | 22,204 | 1,544 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 6,840 | 21,900 | 1,240 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 6,840 | 21,900 | 1,240 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 6,088 | 22,204 | 1,544 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 6,840 | 22,204 | 1,544 | 1 | ✓ |
-| `sign.v0` | sign | default | 8,888 | 145,632 | 2,152 | 1 | ✓ |
-| `sign.v1` | sign | default | 7,864 | 143,640 | 224 | 1 | ✓ |
-| `sign.v2` | sign | default | 7,864 | 145,552 | 2,152 | 1 | ✓ |
-| `sign.v5` | sign | default | 7,864 | 143,640 | 224 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 7,624 | 145,632 | 2,152 | 1 | ✓ |
-| `sign.v4` | sign | native | 8,888 | 145,632 | 2,152 | 1 | ✓ |
-| `verify.v0` | verify | default | 6,840 | 2,200 | 1,760 | 1 | ✓ |
-| `verify.v1` | verify | default | 5,816 | 544 | 184 | 1 | ✓ |
-| `verify.v5` | verify | default | 5,816 | 544 | 184 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 5,720 | 2,200 | 1,760 | 1 | ✓ |
-| `verify.v4` | verify | native | 6,840 | 2,200 | 1,760 | 1 | ✓ |
-| `fors.v0` | verify-stage | default | 3,768 | 40 | 40 | 1 | ✓ |
-| `hmsg.v0` | verify-stage | default | 2,744 | 184 | 184 | 1 | ✓ |
-| `ht_auth.v0` | verify-stage | default | 1,720 | 0 | 0 | 1 | ✓ |
-| `ht_wots.v0` | verify-stage | default | 6,840 | 280 | 40 | 1 | ✓ |
-| `total` | verify-stage | default | 6,840 | 504 | 184 | 1 | ✓ |
-| `total_best` | verify-stage | default | 3,768 | 0 | 0 | 1 | ✓ |
+### sign: heap allocated per op
 
-### SLH-DSA-SHA2-128f
+| param | `sign.v0` | `sign.v1` | `sign.v2` | `sign.v3` | `sign.v4` | `sign.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 59.6 KiB | 58.7 KiB | 59.5 KiB | 59.6 KiB | 59.6 KiB | 58.7 KiB |
+| ML-DSA-65 | 90.8 KiB | 89.9 KiB | 90.7 KiB | 90.8 KiB | 90.8 KiB | 89.9 KiB |
+| ML-DSA-87 | 136.9 KiB | 136.0 KiB | 136.8 KiB | 136.9 KiB | 136.9 KiB | 136.0 KiB |
+| SLH-DSA-SHA2-128s | 142.2 KiB | 140.3 KiB | 142.1 KiB | 142.2 KiB | 142.2 KiB | 140.3 KiB |
+| SLH-DSA-SHA2-128f | 9.1 KiB | 7.1 KiB | 9.0 KiB | 9.1 KiB | 9.1 KiB | 7.1 KiB |
+| SLH-DSA-SHA2-192s | 142.9 KiB | 140.4 KiB | 142.8 KiB | 142.9 KiB | 142.9 KiB | 140.4 KiB |
+| SLH-DSA-SHA2-192f | 9.8 KiB | 7.3 KiB | 9.7 KiB | 9.8 KiB | 9.8 KiB | 7.3 KiB |
+| SLH-DSA-SHA2-256s | 82.9 KiB | 80.4 KiB | 82.8 KiB | 82.9 KiB | 82.9 KiB | 80.4 KiB |
+| SLH-DSA-SHA2-256f | 13.5 KiB | 11.0 KiB | 13.5 KiB | 13.5 KiB | 13.5 KiB | 11.0 KiB |
+| SLH-DSA-SHAKE-128s | 141.6 KiB | 140.1 KiB | 141.5 KiB | 141.6 KiB | 141.6 KiB | 140.1 KiB |
+| SLH-DSA-SHAKE-128f | 8.5 KiB | 7.0 KiB | 8.4 KiB | 8.5 KiB | 8.5 KiB | 7.0 KiB |
+| SLH-DSA-SHAKE-192s | 141.6 KiB | 140.1 KiB | 141.5 KiB | 141.6 KiB | 141.6 KiB | 140.1 KiB |
+| SLH-DSA-SHAKE-192f | 8.5 KiB | 7.0 KiB | 8.4 KiB | 8.5 KiB | 8.5 KiB | 7.0 KiB |
+| SLH-DSA-SHAKE-256s | 81.6 KiB | 80.1 KiB | 81.5 KiB | 81.6 KiB | 81.6 KiB | 80.1 KiB |
+| SLH-DSA-SHAKE-256f | 12.2 KiB | 10.7 KiB | 12.1 KiB | 12.2 KiB | 12.2 KiB | 10.7 KiB |
 
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 5,816 | 2,044 | 1,544 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 5,816 | 1,740 | 1,240 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 5,816 | 1,740 | 1,240 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 4,840 | 2,044 | 1,544 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 5,816 | 2,044 | 1,544 | 1 | ✓ |
-| `sign.v0` | sign | default | 6,840 | 9,312 | 2,152 | 1 | ✓ |
-| `sign.v1` | sign | default | 6,840 | 7,320 | 224 | 1 | ✓ |
-| `sign.v2` | sign | default | 6,840 | 9,232 | 2,152 | 1 | ✓ |
-| `sign.v5` | sign | default | 6,840 | 7,320 | 224 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 6,376 | 9,312 | 2,152 | 1 | ✓ |
-| `sign.v4` | sign | native | 7,864 | 9,312 | 2,152 | 1 | ✓ |
-| `verify.v0` | verify | default | 6,840 | 2,800 | 1,760 | 1 | ✓ |
-| `verify.v1` | verify | default | 5,816 | 1,144 | 184 | 1 | ✓ |
-| `verify.v5` | verify | default | 5,816 | 1,144 | 184 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 5,720 | 2,800 | 1,760 | 1 | ✓ |
-| `verify.v4` | verify | native | 6,840 | 2,800 | 1,760 | 1 | ✓ |
-| `fors.v0` | verify-stage | default | 3,768 | 40 | 40 | 1 | ✓ |
-| `hmsg.v0` | verify-stage | default | 2,744 | 184 | 184 | 1 | ✓ |
-| `ht_auth.v0` | verify-stage | default | 1,720 | 0 | 0 | 1 | ✓ |
-| `ht_wots.v0` | verify-stage | default | 6,840 | 880 | 40 | 1 | ✓ |
-| `total` | verify-stage | default | 6,840 | 1,104 | 184 | 1 | ✓ |
-| `total_best` | verify-stage | default | 3,768 | 0 | 0 | 1 | ✓ |
+### verify: peak stack
 
-### SLH-DSA-SHA2-192s
+| param | `verify.v0` | `verify.v1` | `verify.v2` | `verify.v3` | `verify.v4` | `verify.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 3.3 KiB | 3.1 KiB | 3.1 KiB | 3.4 KiB | 3.3 KiB | 3.1 KiB |
+| ML-DSA-65 | 3.3 KiB | 3.1 KiB | 3.1 KiB | 3.4 KiB | 3.3 KiB | 3.1 KiB |
+| ML-DSA-87 | 3.3 KiB | 3.1 KiB | 3.1 KiB | 3.4 KiB | 3.3 KiB | 3.1 KiB |
+| SLH-DSA-SHA2-128s | 6.7 KiB | 5.7 KiB | — | 5.6 KiB | 6.7 KiB | 5.7 KiB |
+| SLH-DSA-SHA2-128f | 6.7 KiB | 5.7 KiB | — | 5.6 KiB | 6.7 KiB | 5.7 KiB |
+| SLH-DSA-SHA2-192s | 7.7 KiB | 7.7 KiB | — | 5.6 KiB | 7.7 KiB | 7.7 KiB |
+| SLH-DSA-SHA2-192f | 7.7 KiB | 7.7 KiB | — | 5.6 KiB | 7.7 KiB | 7.7 KiB |
+| SLH-DSA-SHA2-256s | 7.7 KiB | 7.7 KiB | — | 5.6 KiB | 7.7 KiB | 7.7 KiB |
+| SLH-DSA-SHA2-256f | 7.7 KiB | 7.7 KiB | — | 5.6 KiB | 7.7 KiB | 7.7 KiB |
+| SLH-DSA-SHAKE-128s | 5.7 KiB | 5.4 KiB | — | 5.7 KiB | 5.4 KiB | 5.4 KiB |
+| SLH-DSA-SHAKE-128f | 5.7 KiB | 5.4 KiB | — | 5.7 KiB | 5.4 KiB | 5.4 KiB |
+| SLH-DSA-SHAKE-192s | 5.7 KiB | 5.4 KiB | — | 5.7 KiB | 5.4 KiB | 5.4 KiB |
+| SLH-DSA-SHAKE-192f | 5.7 KiB | 5.4 KiB | — | 5.7 KiB | 5.4 KiB | 5.4 KiB |
+| SLH-DSA-SHAKE-256s | 5.7 KiB | 5.4 KiB | — | 5.7 KiB | 5.4 KiB | 5.4 KiB |
+| SLH-DSA-SHAKE-256f | 5.7 KiB | 5.4 KiB | — | 5.7 KiB | 5.4 KiB | 5.4 KiB |
 
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 7,864 | 22,492 | 1,832 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 7,864 | 22,188 | 1,528 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 7,864 | 22,188 | 1,528 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 6,152 | 22,492 | 1,832 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 7,864 | 22,492 | 1,832 | 1 | ✓ |
-| `sign.v0` | sign | default | 9,912 | 146,344 | 2,864 | 1 | ✓ |
-| `sign.v1` | sign | default | 9,912 | 143,752 | 328 | 1 | ✓ |
-| `sign.v2` | sign | default | 9,912 | 146,264 | 2,864 | 1 | ✓ |
-| `sign.v5` | sign | default | 9,912 | 143,752 | 328 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 7,688 | 146,344 | 2,864 | 1 | ✓ |
-| `sign.v4` | sign | native | 9,912 | 146,344 | 2,864 | 1 | ✓ |
-| `verify.v0` | verify | default | 7,864 | 2,592 | 2,152 | 1 | ✓ |
-| `verify.v1` | verify | default | 7,864 | 648 | 288 | 1 | ✓ |
-| `verify.v5` | verify | default | 7,864 | 648 | 288 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 5,720 | 2,592 | 2,152 | 1 | ✓ |
-| `verify.v4` | verify | native | 7,864 | 2,592 | 2,152 | 1 | ✓ |
-| `fors.v0` | verify-stage | default | 3,768 | 40 | 40 | 1 | ✓ |
-| `hmsg.v0` | verify-stage | default | 3,768 | 288 | 288 | 1 | ✓ |
-| `ht_auth.v0` | verify-stage | default | 3,768 | 0 | 0 | 1 | ✓ |
-| `ht_wots.v0` | verify-stage | default | 7,864 | 280 | 40 | 1 | ✓ |
-| `total` | verify-stage | default | 7,864 | 608 | 288 | 1 | ✓ |
-| `total_best` | verify-stage | default | 5,816 | 0 | 0 | 1 | ✓ |
+### verify: heap allocated per op
 
-### SLH-DSA-SHA2-192f
+| param | `verify.v0` | `verify.v1` | `verify.v2` | `verify.v3` | `verify.v4` | `verify.v5` |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | 39.5 KiB | 38.7 KiB | 38.7 KiB | 39.5 KiB | 39.5 KiB | 38.7 KiB |
+| ML-DSA-65 | 61.5 KiB | 60.7 KiB | 60.7 KiB | 61.5 KiB | 61.5 KiB | 60.7 KiB |
+| ML-DSA-87 | 97.8 KiB | 97.0 KiB | 97.0 KiB | 97.8 KiB | 97.8 KiB | 97.0 KiB |
+| SLH-DSA-SHA2-128s | 2.1 KiB | 544 B | — | 2.1 KiB | 2.1 KiB | 544 B |
+| SLH-DSA-SHA2-128f | 2.7 KiB | 1.1 KiB | — | 2.7 KiB | 2.7 KiB | 1.1 KiB |
+| SLH-DSA-SHA2-192s | 2.5 KiB | 648 B | — | 2.5 KiB | 2.5 KiB | 648 B |
+| SLH-DSA-SHA2-192f | 3.1 KiB | 1.2 KiB | — | 3.1 KiB | 3.1 KiB | 1.2 KiB |
+| SLH-DSA-SHA2-256s | 2.6 KiB | 688 B | — | 2.6 KiB | 2.6 KiB | 688 B |
+| SLH-DSA-SHA2-256f | 2.9 KiB | 1.0 KiB | — | 2.9 KiB | 2.9 KiB | 1.0 KiB |
+| SLH-DSA-SHAKE-128s | 1.9 KiB | 360 B | — | 1.9 KiB | 1.9 KiB | 360 B |
+| SLH-DSA-SHAKE-128f | 2.4 KiB | 960 B | — | 2.4 KiB | 2.4 KiB | 960 B |
+| SLH-DSA-SHAKE-192s | 1.9 KiB | 360 B | — | 1.9 KiB | 1.9 KiB | 360 B |
+| SLH-DSA-SHAKE-192f | 2.4 KiB | 960 B | — | 2.4 KiB | 2.4 KiB | 960 B |
+| SLH-DSA-SHAKE-256s | 1.9 KiB | 400 B | — | 1.9 KiB | 1.9 KiB | 400 B |
+| SLH-DSA-SHAKE-256f | 2.3 KiB | 760 B | — | 2.3 KiB | 2.3 KiB | 760 B |
 
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 7,864 | 2,332 | 1,832 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 7,864 | 2,028 | 1,528 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 7,864 | 2,028 | 1,528 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 4,904 | 2,332 | 1,832 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 7,864 | 2,332 | 1,832 | 1 | ✓ |
-| `sign.v0` | sign | default | 7,864 | 10,024 | 2,864 | 1 | ✓ |
-| `sign.v1` | sign | default | 7,864 | 7,432 | 328 | 1 | ✓ |
-| `sign.v2` | sign | default | 7,864 | 9,944 | 2,864 | 1 | ✓ |
-| `sign.v5` | sign | default | 7,864 | 7,432 | 328 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 6,440 | 10,024 | 2,864 | 1 | ✓ |
-| `sign.v4` | sign | native | 7,864 | 10,024 | 2,864 | 1 | ✓ |
-| `verify.v0` | verify | default | 7,864 | 3,192 | 2,152 | 1 | ✓ |
-| `verify.v1` | verify | default | 7,864 | 1,248 | 288 | 1 | ✓ |
-| `verify.v5` | verify | default | 7,864 | 1,248 | 288 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 5,720 | 3,192 | 2,152 | 1 | ✓ |
-| `verify.v4` | verify | native | 7,864 | 3,192 | 2,152 | 1 | ✓ |
-| `fors.v0` | verify-stage | default | 3,768 | 40 | 40 | 1 | ✓ |
-| `hmsg.v0` | verify-stage | default | 3,768 | 288 | 288 | 1 | ✓ |
-| `ht_auth.v0` | verify-stage | default | 3,768 | 0 | 0 | 1 | ✓ |
-| `ht_wots.v0` | verify-stage | default | 7,864 | 880 | 40 | 1 | ✓ |
-| `total` | verify-stage | default | 7,864 | 1,208 | 288 | 1 | ✓ |
-| `total_best` | verify-stage | default | 5,816 | 0 | 0 | 1 | ✓ |
+### verify-stage: peak stack
 
-### SLH-DSA-SHA2-256s
+| param | `decode.v0` | `expandA.v0` | `fors.v0` | `hint_check.v0` | `hmsg.v0` | `ht_auth.v0` | `ht_wots.v0` | `mu.v0` | `total` | `total_best` | `w_approx.v0` |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| ML-DSA-44 | 136 B | 856 B | — | 824 B | — | — | — | 600 B | 3.5 KiB | 3.0 KiB | 3.3 KiB |
+| ML-DSA-65 | 136 B | 856 B | — | 824 B | — | — | — | 600 B | 3.5 KiB | 3.0 KiB | 3.3 KiB |
+| ML-DSA-87 | 136 B | 856 B | — | 824 B | — | — | — | 600 B | 3.5 KiB | 3.0 KiB | 3.3 KiB |
+| SLH-DSA-SHA2-128s | — | — | 3.7 KiB | — | 2.7 KiB | 1.7 KiB | 6.7 KiB | — | 6.7 KiB | 3.7 KiB | — |
+| SLH-DSA-SHA2-128f | — | — | 3.7 KiB | — | 2.7 KiB | 1.7 KiB | 6.7 KiB | — | 6.7 KiB | 3.7 KiB | — |
+| SLH-DSA-SHA2-192s | — | — | 3.7 KiB | — | 3.7 KiB | 3.7 KiB | 7.7 KiB | — | 7.7 KiB | 5.7 KiB | — |
+| SLH-DSA-SHA2-192f | — | — | 3.7 KiB | — | 3.7 KiB | 3.7 KiB | 7.7 KiB | — | 7.7 KiB | 5.7 KiB | — |
+| SLH-DSA-SHA2-256s | — | — | 3.7 KiB | — | 3.7 KiB | 3.7 KiB | 7.7 KiB | — | 7.7 KiB | 5.7 KiB | — |
+| SLH-DSA-SHA2-256f | — | — | 3.7 KiB | — | 3.7 KiB | 3.7 KiB | 7.7 KiB | — | 7.7 KiB | 5.7 KiB | — |
+| SLH-DSA-SHAKE-128s | — | — | 2.4 KiB | — | 1.7 KiB | 1.0 KiB | 5.8 KiB | — | 5.8 KiB | 3.9 KiB | — |
+| SLH-DSA-SHAKE-128f | — | — | 2.4 KiB | — | 1.7 KiB | 1.0 KiB | 5.8 KiB | — | 5.8 KiB | 3.9 KiB | — |
+| SLH-DSA-SHAKE-192s | — | — | 2.4 KiB | — | 1.7 KiB | 1.0 KiB | 5.8 KiB | — | 5.8 KiB | 3.9 KiB | — |
+| SLH-DSA-SHAKE-192f | — | — | 2.4 KiB | — | 1.7 KiB | 1.0 KiB | 5.8 KiB | — | 5.8 KiB | 3.9 KiB | — |
+| SLH-DSA-SHAKE-256s | — | — | 2.4 KiB | — | 1.7 KiB | 1.0 KiB | 5.8 KiB | — | 5.8 KiB | 3.9 KiB | — |
+| SLH-DSA-SHAKE-256f | — | — | 2.4 KiB | — | 1.7 KiB | 1.0 KiB | 5.8 KiB | — | 5.8 KiB | 3.9 KiB | — |
 
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 7,864 | 12,252 | 1,832 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 7,864 | 11,948 | 1,528 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 7,864 | 11,948 | 1,528 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 5,944 | 12,252 | 1,832 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 7,864 | 12,252 | 1,832 | 1 | ✓ |
-| `sign.v0` | sign | default | 9,912 | 84,912 | 2,872 | 1 | ✓ |
-| `sign.v1` | sign | default | 9,912 | 82,320 | 328 | 1 | ✓ |
-| `sign.v2` | sign | default | 9,912 | 84,832 | 2,872 | 1 | ✓ |
-| `sign.v5` | sign | default | 9,912 | 82,320 | 328 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 7,480 | 84,912 | 2,872 | 1 | ✓ |
-| `sign.v4` | sign | native | 9,912 | 84,912 | 2,872 | 1 | ✓ |
-| `verify.v0` | verify | default | 7,864 | 2,632 | 2,152 | 1 | ✓ |
-| `verify.v1` | verify | default | 7,864 | 688 | 288 | 1 | ✓ |
-| `verify.v5` | verify | default | 7,864 | 688 | 288 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 5,720 | 2,632 | 2,152 | 1 | ✓ |
-| `verify.v4` | verify | native | 7,864 | 2,632 | 2,152 | 1 | ✓ |
-| `fors.v0` | verify-stage | default | 3,768 | 40 | 40 | 1 | ✓ |
-| `hmsg.v0` | verify-stage | default | 3,768 | 288 | 288 | 1 | ✓ |
-| `ht_auth.v0` | verify-stage | default | 3,768 | 0 | 0 | 1 | ✓ |
-| `ht_wots.v0` | verify-stage | default | 7,864 | 320 | 40 | 1 | ✓ |
-| `total` | verify-stage | default | 7,864 | 648 | 288 | 1 | ✓ |
-| `total_best` | verify-stage | default | 5,816 | 0 | 0 | 1 | ✓ |
+### verify-stage: heap allocated per op
 
-### SLH-DSA-SHA2-256f
-
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 7,864 | 2,652 | 1,832 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 7,864 | 2,348 | 1,528 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 7,864 | 2,348 | 1,528 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 5,112 | 2,652 | 1,832 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 7,864 | 2,652 | 1,832 | 1 | ✓ |
-| `sign.v0` | sign | default | 7,864 | 13,872 | 2,872 | 1 | ✓ |
-| `sign.v1` | sign | default | 7,864 | 11,280 | 328 | 1 | ✓ |
-| `sign.v2` | sign | default | 7,864 | 13,792 | 2,872 | 1 | ✓ |
-| `sign.v5` | sign | default | 7,864 | 11,280 | 328 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 6,648 | 13,872 | 2,872 | 1 | ✓ |
-| `sign.v4` | sign | native | 9,912 | 13,872 | 2,872 | 1 | ✓ |
-| `verify.v0` | verify | default | 7,864 | 2,992 | 2,152 | 1 | ✓ |
-| `verify.v1` | verify | default | 7,864 | 1,048 | 288 | 1 | ✓ |
-| `verify.v5` | verify | default | 7,864 | 1,048 | 288 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 5,720 | 2,992 | 2,152 | 1 | ✓ |
-| `verify.v4` | verify | native | 7,864 | 2,992 | 2,152 | 1 | ✓ |
-| `fors.v0` | verify-stage | default | 3,768 | 40 | 40 | 1 | ✓ |
-| `hmsg.v0` | verify-stage | default | 3,768 | 288 | 288 | 1 | ✓ |
-| `ht_auth.v0` | verify-stage | default | 3,768 | 0 | 0 | 1 | ✓ |
-| `ht_wots.v0` | verify-stage | default | 7,864 | 680 | 40 | 1 | ✓ |
-| `total` | verify-stage | default | 7,864 | 1,008 | 288 | 1 | ✓ |
-| `total_best` | verify-stage | default | 5,816 | 0 | 0 | 1 | ✓ |
-
-### SLH-DSA-SHAKE-128s
-
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 6,152 | 22,092 | 1,432 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 5,944 | 21,788 | 1,128 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 5,944 | 21,788 | 1,128 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 6,224 | 22,092 | 1,432 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 5,944 | 22,092 | 1,432 | 1 | ✓ |
-| `sign.v0` | sign | default | 7,688 | 144,984 | 1,544 | 1 | ✓ |
-| `sign.v1` | sign | default | 7,432 | 143,440 | 80 | 1 | ✓ |
-| `sign.v2` | sign | default | 7,432 | 144,904 | 1,544 | 1 | ✓ |
-| `sign.v5` | sign | default | 7,432 | 143,440 | 80 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 7,760 | 144,984 | 1,544 | 1 | ✓ |
-| `sign.v4` | sign | native | 7,672 | 144,984 | 1,544 | 1 | ✓ |
-| `verify.v0` | verify | default | 5,800 | 1,904 | 1,544 | 1 | ✓ |
-| `verify.v1` | verify | default | 5,512 | 360 | 40 | 1 | ✓ |
-| `verify.v5` | verify | default | 5,512 | 360 | 40 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 5,872 | 1,904 | 1,544 | 1 | ✓ |
-| `verify.v4` | verify | native | 5,496 | 1,904 | 1,544 | 1 | ✓ |
-| `fors.v0` | verify-stage | default | 2,504 | 40 | 40 | 1 | ✓ |
-| `hmsg.v0` | verify-stage | default | 1,752 | 0 | 0 | 1 | ✓ |
-| `ht_auth.v0` | verify-stage | default | 1,032 | 0 | 0 | 1 | ✓ |
-| `ht_wots.v0` | verify-stage | default | 5,928 | 280 | 40 | 1 | ✓ |
-| `total` | verify-stage | default | 5,960 | 320 | 40 | 1 | ✓ |
-| `total_best` | verify-stage | default | 3,944 | 0 | 0 | 1 | ✓ |
-
-### SLH-DSA-SHAKE-128f
-
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 4,904 | 1,932 | 1,432 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 4,696 | 1,628 | 1,128 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 4,696 | 1,628 | 1,128 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 4,976 | 1,932 | 1,432 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 4,696 | 1,932 | 1,432 | 1 | ✓ |
-| `sign.v0` | sign | default | 6,440 | 8,664 | 1,544 | 1 | ✓ |
-| `sign.v1` | sign | default | 6,184 | 7,120 | 80 | 1 | ✓ |
-| `sign.v2` | sign | default | 6,184 | 8,584 | 1,544 | 1 | ✓ |
-| `sign.v5` | sign | default | 6,184 | 7,120 | 80 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 6,512 | 8,664 | 1,544 | 1 | ✓ |
-| `sign.v4` | sign | native | 6,424 | 8,664 | 1,544 | 1 | ✓ |
-| `verify.v0` | verify | default | 5,800 | 2,504 | 1,544 | 1 | ✓ |
-| `verify.v1` | verify | default | 5,512 | 960 | 40 | 1 | ✓ |
-| `verify.v5` | verify | default | 5,512 | 960 | 40 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 5,872 | 2,504 | 1,544 | 1 | ✓ |
-| `verify.v4` | verify | native | 5,496 | 2,504 | 1,544 | 1 | ✓ |
-| `fors.v0` | verify-stage | default | 2,504 | 40 | 40 | 1 | ✓ |
-| `hmsg.v0` | verify-stage | default | 1,752 | 0 | 0 | 1 | ✓ |
-| `ht_auth.v0` | verify-stage | default | 1,032 | 0 | 0 | 1 | ✓ |
-| `ht_wots.v0` | verify-stage | default | 5,928 | 880 | 40 | 1 | ✓ |
-| `total` | verify-stage | default | 5,960 | 920 | 40 | 1 | ✓ |
-| `total_best` | verify-stage | default | 3,944 | 0 | 0 | 1 | ✓ |
-
-### SLH-DSA-SHAKE-192s
-
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 6,152 | 22,092 | 1,432 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 5,944 | 21,788 | 1,128 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 5,944 | 21,788 | 1,128 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 6,224 | 22,092 | 1,432 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 5,944 | 22,092 | 1,432 | 1 | ✓ |
-| `sign.v0` | sign | default | 7,688 | 144,984 | 1,544 | 1 | ✓ |
-| `sign.v1` | sign | default | 7,432 | 143,440 | 80 | 1 | ✓ |
-| `sign.v2` | sign | default | 7,432 | 144,904 | 1,544 | 1 | ✓ |
-| `sign.v5` | sign | default | 7,432 | 143,440 | 80 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 7,760 | 144,984 | 1,544 | 1 | ✓ |
-| `sign.v4` | sign | native | 7,672 | 144,984 | 1,544 | 1 | ✓ |
-| `verify.v0` | verify | default | 5,800 | 1,904 | 1,544 | 1 | ✓ |
-| `verify.v1` | verify | default | 5,512 | 360 | 40 | 1 | ✓ |
-| `verify.v5` | verify | default | 5,512 | 360 | 40 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 5,872 | 1,904 | 1,544 | 1 | ✓ |
-| `verify.v4` | verify | native | 5,496 | 1,904 | 1,544 | 1 | ✓ |
-| `fors.v0` | verify-stage | default | 2,504 | 40 | 40 | 1 | ✓ |
-| `hmsg.v0` | verify-stage | default | 1,752 | 0 | 0 | 1 | ✓ |
-| `ht_auth.v0` | verify-stage | default | 1,032 | 0 | 0 | 1 | ✓ |
-| `ht_wots.v0` | verify-stage | default | 5,928 | 280 | 40 | 1 | ✓ |
-| `total` | verify-stage | default | 5,960 | 320 | 40 | 1 | ✓ |
-| `total_best` | verify-stage | default | 3,944 | 0 | 0 | 1 | ✓ |
-
-### SLH-DSA-SHAKE-192f
-
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 4,904 | 1,932 | 1,432 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 4,696 | 1,628 | 1,128 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 4,696 | 1,628 | 1,128 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 4,976 | 1,932 | 1,432 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 4,696 | 1,932 | 1,432 | 1 | ✓ |
-| `sign.v0` | sign | default | 6,440 | 8,664 | 1,544 | 1 | ✓ |
-| `sign.v1` | sign | default | 6,184 | 7,120 | 80 | 1 | ✓ |
-| `sign.v2` | sign | default | 6,184 | 8,584 | 1,544 | 1 | ✓ |
-| `sign.v5` | sign | default | 6,184 | 7,120 | 80 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 6,512 | 8,664 | 1,544 | 1 | ✓ |
-| `sign.v4` | sign | native | 6,424 | 8,664 | 1,544 | 1 | ✓ |
-| `verify.v0` | verify | default | 5,800 | 2,504 | 1,544 | 1 | ✓ |
-| `verify.v1` | verify | default | 5,512 | 960 | 40 | 1 | ✓ |
-| `verify.v5` | verify | default | 5,512 | 960 | 40 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 5,872 | 2,504 | 1,544 | 1 | ✓ |
-| `verify.v4` | verify | native | 5,496 | 2,504 | 1,544 | 1 | ✓ |
-| `fors.v0` | verify-stage | default | 2,504 | 40 | 40 | 1 | ✓ |
-| `hmsg.v0` | verify-stage | default | 1,752 | 0 | 0 | 1 | ✓ |
-| `ht_auth.v0` | verify-stage | default | 1,032 | 0 | 0 | 1 | ✓ |
-| `ht_wots.v0` | verify-stage | default | 5,928 | 880 | 40 | 1 | ✓ |
-| `total` | verify-stage | default | 5,960 | 920 | 40 | 1 | ✓ |
-| `total_best` | verify-stage | default | 3,944 | 0 | 0 | 1 | ✓ |
-
-### SLH-DSA-SHAKE-256s
-
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 5,944 | 11,852 | 1,432 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 5,736 | 11,548 | 1,128 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 5,736 | 11,548 | 1,128 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 6,016 | 11,852 | 1,432 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 5,736 | 11,852 | 1,432 | 1 | ✓ |
-| `sign.v0` | sign | default | 7,480 | 83,544 | 1,544 | 1 | ✓ |
-| `sign.v1` | sign | default | 7,224 | 82,000 | 80 | 1 | ✓ |
-| `sign.v2` | sign | default | 7,224 | 83,464 | 1,544 | 1 | ✓ |
-| `sign.v5` | sign | default | 7,224 | 82,000 | 80 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 7,552 | 83,544 | 1,544 | 1 | ✓ |
-| `sign.v4` | sign | native | 7,464 | 83,544 | 1,544 | 1 | ✓ |
-| `verify.v0` | verify | default | 5,800 | 1,944 | 1,544 | 1 | ✓ |
-| `verify.v1` | verify | default | 5,512 | 400 | 40 | 1 | ✓ |
-| `verify.v5` | verify | default | 5,512 | 400 | 40 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 5,872 | 1,944 | 1,544 | 1 | ✓ |
-| `verify.v4` | verify | native | 5,496 | 1,944 | 1,544 | 1 | ✓ |
-| `fors.v0` | verify-stage | default | 2,504 | 40 | 40 | 1 | ✓ |
-| `hmsg.v0` | verify-stage | default | 1,752 | 0 | 0 | 1 | ✓ |
-| `ht_auth.v0` | verify-stage | default | 1,032 | 0 | 0 | 1 | ✓ |
-| `ht_wots.v0` | verify-stage | default | 5,928 | 320 | 40 | 1 | ✓ |
-| `total` | verify-stage | default | 5,960 | 360 | 40 | 1 | ✓ |
-| `total_best` | verify-stage | default | 3,944 | 0 | 0 | 1 | ✓ |
-
-### SLH-DSA-SHAKE-256f
-
-| variant | op | build | stack bytes | heap alloc/op | heap peak | threads | match |
-|---|---|---|---|---|---|---|---|
-| `keygen.v0` | keygen | default | 5,112 | 2,252 | 1,432 | 1 | ✓ |
-| `keygen.v1` | keygen | default | 4,904 | 1,948 | 1,128 | 1 | ✓ |
-| `keygen.v5` | keygen | default | 4,904 | 1,948 | 1,128 | 4 | ✓ |
-| `keygen.v3` | keygen | noasm | 5,184 | 2,252 | 1,432 | 1 | ✓ |
-| `keygen.v4` | keygen | native | 4,904 | 2,252 | 1,432 | 1 | ✓ |
-| `sign.v0` | sign | default | 6,648 | 12,504 | 1,544 | 1 | ✓ |
-| `sign.v1` | sign | default | 6,392 | 10,960 | 80 | 1 | ✓ |
-| `sign.v2` | sign | default | 6,392 | 12,424 | 1,544 | 1 | ✓ |
-| `sign.v5` | sign | default | 6,392 | 10,960 | 80 | 4 | ✓ |
-| `sign.v3` | sign | noasm | 6,720 | 12,504 | 1,544 | 1 | ✓ |
-| `sign.v4` | sign | native | 6,632 | 12,504 | 1,544 | 1 | ✓ |
-| `verify.v0` | verify | default | 5,800 | 2,304 | 1,544 | 1 | ✓ |
-| `verify.v1` | verify | default | 5,512 | 760 | 40 | 1 | ✓ |
-| `verify.v5` | verify | default | 5,512 | 760 | 40 | 4 | ✓ |
-| `verify.v3` | verify | noasm | 5,872 | 2,304 | 1,544 | 1 | ✓ |
-| `verify.v4` | verify | native | 5,496 | 2,304 | 1,544 | 1 | ✓ |
-| `fors.v0` | verify-stage | default | 2,504 | 40 | 40 | 1 | ✓ |
-| `hmsg.v0` | verify-stage | default | 1,752 | 0 | 0 | 1 | ✓ |
-| `ht_auth.v0` | verify-stage | default | 1,032 | 0 | 0 | 1 | ✓ |
-| `ht_wots.v0` | verify-stage | default | 5,928 | 680 | 40 | 1 | ✓ |
-| `total` | verify-stage | default | 5,960 | 720 | 40 | 1 | ✓ |
-| `total_best` | verify-stage | default | 3,944 | 0 | 0 | 1 | ✓ |
+| param | `decode.v0` | `expandA.v0` | `fors.v0` | `hint_check.v0` | `hmsg.v0` | `ht_auth.v0` | `ht_wots.v0` | `mu.v0` | `total` | `total_best` | `w_approx.v0` |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| ML-DSA-44 | 0 B | 504 B | — | 544 B | — | — | — | 504 B | 2.0 KiB | 504 B | 504 B |
+| ML-DSA-65 | 0 B | 504 B | — | 544 B | — | — | — | 504 B | 2.0 KiB | 504 B | 504 B |
+| ML-DSA-87 | 0 B | 504 B | — | 544 B | — | — | — | 504 B | 2.0 KiB | 504 B | 504 B |
+| SLH-DSA-SHA2-128s | — | — | 40 B | — | 184 B | 0 B | 280 B | — | 504 B | 0 B | — |
+| SLH-DSA-SHA2-128f | — | — | 40 B | — | 184 B | 0 B | 880 B | — | 1.1 KiB | 0 B | — |
+| SLH-DSA-SHA2-192s | — | — | 40 B | — | 288 B | 0 B | 280 B | — | 608 B | 0 B | — |
+| SLH-DSA-SHA2-192f | — | — | 40 B | — | 288 B | 0 B | 880 B | — | 1.2 KiB | 0 B | — |
+| SLH-DSA-SHA2-256s | — | — | 40 B | — | 288 B | 0 B | 320 B | — | 648 B | 0 B | — |
+| SLH-DSA-SHA2-256f | — | — | 40 B | — | 288 B | 0 B | 680 B | — | 1008 B | 0 B | — |
+| SLH-DSA-SHAKE-128s | — | — | 40 B | — | 0 B | 0 B | 280 B | — | 320 B | 0 B | — |
+| SLH-DSA-SHAKE-128f | — | — | 40 B | — | 0 B | 0 B | 880 B | — | 920 B | 0 B | — |
+| SLH-DSA-SHAKE-192s | — | — | 40 B | — | 0 B | 0 B | 280 B | — | 320 B | 0 B | — |
+| SLH-DSA-SHAKE-192f | — | — | 40 B | — | 0 B | 0 B | 880 B | — | 920 B | 0 B | — |
+| SLH-DSA-SHAKE-256s | — | — | 40 B | — | 0 B | 0 B | 320 B | — | 360 B | 0 B | — |
+| SLH-DSA-SHAKE-256f | — | — | 40 B | — | 0 B | 0 B | 680 B | — | 720 B | 0 B | — |
 

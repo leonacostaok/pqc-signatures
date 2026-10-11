@@ -3800,3 +3800,569 @@ total_best     verify-stage  ML-DSA-44            stack=190 (res 15.800849883969
 keygen.v0      keygen        ML-DSA-65            stack=632 (res 15.800849883969741) heap/op=111544 match=true
 keygen.v1      keygen        ML-DSA-65            stack=348 (res 15.800849883969741) heap/op=111360 match=true
 keygen.v2      keygen        ML-DSA-65            stack=348 (res 15.800849883969741) heap/op=111168 match=true
+keygen.v3      keygen        ML-DSA-65            stack=379 (res 15.800849883969741) heap/op=104984 match=true
+keygen.v4      keygen        ML-DSA-65            stack=237 (res 15.800849883969741) heap/op=105138 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params ML-DSA-65
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        ML-DSA-65            stack=474 (res 15.800849883969741) heap/op=111202 match=true
+sign.v0        sign          ML-DSA-65            stack=474 (res 15.800849883969741) heap/op=145184 match=true
+sign.v1        sign          ML-DSA-65            stack=379 (res 15.800849883969741) heap/op=144904 match=true
+sign.v2        sign          ML-DSA-65            stack=379 (res 15.800849883969741) heap/op=138616 match=true
+sign.v3        sign          ML-DSA-65            stack=474 (res 15.800849883969741) heap/op=138773 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params ML-DSA-65
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          ML-DSA-65            stack=758 (res 15.800849883969741) heap/op=145434 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params ML-DSA-65
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124541
+sign.v5        sign          ML-DSA-65            stack=1106 (res 15.800849883969741) heap/op=145432 match=true
+verify.v0      verify        ML-DSA-65            stack=316 (res 15.800849883969741) heap/op=96904 match=true
+verify.v1      verify        ML-DSA-65            stack=284 (res 15.800849883969741) heap/op=96624 match=true
+verify.v2      verify        ML-DSA-65            stack=284 (res 15.800849883969741) heap/op=92400 match=true
+verify.v3      verify        ML-DSA-65            stack=253 (res 15.800849883969741) heap/op=92556 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params ML-DSA-65
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v4      verify        ML-DSA-65            stack=379 (res 15.800849883969741) heap/op=96656 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params ML-DSA-65
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v5      verify        ML-DSA-65            stack=1011 (res 15.800849883969741) heap/op=96656 match=true
+decode.v0      verify-stage  ML-DSA-65            stack=0 (res 15.800849883969741) heap/op=25768 match=true
+mu.v0          verify-stage  ML-DSA-65            stack=0 (res 15.800849883969741) heap/op=1152 match=true
+expandA.v0     verify-stage  ML-DSA-65            stack=0 (res 15.800849883969741) heap/op=59192 match=true
+w_approx.v0    verify-stage  ML-DSA-65            stack=63 (res 15.800849883969741) heap/op=20112 match=true
+hint_check.v0  verify-stage  ML-DSA-65            stack=0 (res 15.800849883969741) heap/op=8704 match=true
+total_best     verify-stage  ML-DSA-65            stack=190 (res 15.800849883969741) heap/op=104592 match=true
+keygen.v0      keygen        ML-DSA-87            stack=632 (res 15.800849883969741) heap/op=176976 match=true
+keygen.v1      keygen        ML-DSA-87            stack=348 (res 15.800849883969741) heap/op=176792 match=true
+keygen.v2      keygen        ML-DSA-87            stack=348 (res 15.800849883969741) heap/op=176600 match=true
+keygen.v3      keygen        ML-DSA-87            stack=379 (res 15.800849883969741) heap/op=168912 match=true
+keygen.v4      keygen        ML-DSA-87            stack=253 (res 15.800849883969741) heap/op=169067 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params ML-DSA-87
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        ML-DSA-87            stack=948 (res 15.800849883969741) heap/op=176656 match=true
+sign.v0        sign          ML-DSA-87            stack=411 (res 15.800849883969741) heap/op=201616 match=true
+sign.v1        sign          ML-DSA-87            stack=379 (res 15.800849883969741) heap/op=201336 match=true
+sign.v2        sign          ML-DSA-87            stack=379 (res 15.800849883969741) heap/op=194184 match=true
+sign.v3        sign          ML-DSA-87            stack=411 (res 15.800849883969741) heap/op=194340 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params ML-DSA-87
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          ML-DSA-87            stack=758 (res 15.800849883969741) heap/op=201672 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params ML-DSA-87
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124535
+sign.v5        sign          ML-DSA-87            stack=980 (res 15.800849883969741) heap/op=201672 match=true
+verify.v0      verify        ML-DSA-87            stack=316 (res 15.800849883969741) heap/op=159536 match=true
+verify.v1      verify        ML-DSA-87            stack=284 (res 15.800849883969741) heap/op=159256 match=true
+verify.v2      verify        ML-DSA-87            stack=284 (res 15.800849883969741) heap/op=154392 match=true
+verify.v3      verify        ML-DSA-87            stack=253 (res 15.800849883969741) heap/op=154548 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params ML-DSA-87
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v4      verify        ML-DSA-87            stack=1106 (res 15.800849883969741) heap/op=159381 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params ML-DSA-87
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v5      verify        ML-DSA-87            stack=1011 (res 15.800849883969741) heap/op=159364 match=true
+decode.v0      verify-stage  ML-DSA-87            stack=0 (res 15.800849883969741) heap/op=34864 match=true
+mu.v0          verify-stage  ML-DSA-87            stack=0 (res 15.800849883969741) heap/op=1152 match=true
+expandA.v0     verify-stage  ML-DSA-87            stack=0 (res 15.800849883969741) heap/op=110336 match=true
+w_approx.v0    verify-stage  ML-DSA-87            stack=63 (res 15.800849883969741) heap/op=26568 match=true
+hint_check.v0  verify-stage  ML-DSA-87            stack=0 (res 15.800849883969741) heap/op=11384 match=true
+total_best     verify-stage  ML-DSA-87            stack=190 (res 15.800849883969741) heap/op=169192 match=true
+keygen.v0      keygen        SLH-DSA-SHA2-128s    stack=1485 (res 15.800849883969741) heap/op=10791439 match=true
+keygen.v1      keygen        SLH-DSA-SHA2-128s    stack=790 (res 15.800849883969741) heap/op=10791216 match=true
+keygen.v2      keygen        SLH-DSA-SHA2-128s    stack=916 (res 15.800849883969741) heap/op=10791200 match=true
+keygen.v3      keygen        SLH-DSA-SHA2-128s    stack=1201 (res 15.800849883969741) heap/op=10791200 match=true
+keygen.v4      keygen        SLH-DSA-SHA2-128s    stack=1327 (res 15.800849883969741) heap/op=10791848 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params SLH-DSA-SHA2-128s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        SLH-DSA-SHA2-128s    stack=1201 (res 15.800849883969741) heap/op=10791200 match=true
+sign.v0        sign          SLH-DSA-SHA2-128s    stack=1485 (res 15.800849883969741) heap/op=83834029 match=true
+sign.v1        sign          SLH-DSA-SHA2-128s    stack=1485 (res 15.800849883969741) heap/op=83833336 match=true
+sign.v2        sign          SLH-DSA-SHA2-128s    stack=1454 (res 15.800849883969741) heap/op=83833128 match=true
+sign.v3        sign          SLH-DSA-SHA2-128s    stack=1390 (res 15.800849883969741) heap/op=83833526 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params SLH-DSA-SHA2-128s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          SLH-DSA-SHA2-128s    stack=245972 (res 15.800849883969741) heap/op=83833336 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params SLH-DSA-SHA2-128s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v5        sign          SLH-DSA-SHA2-128s    stack=1517 (res 15.800849883969741) heap/op=83833336 match=true
+verify.v0      verify        SLH-DSA-SHA2-128s    stack=916 (res 15.800849883969741) heap/op=102368 match=true
+verify.v1      verify        SLH-DSA-SHA2-128s    stack=1043 (res 15.800849883969741) heap/op=101880 match=true
+verify.v2      verify        SLH-DSA-SHA2-128s    stack=348 (res 15.800849883969741) heap/op=101768 match=true
+verify.v3      verify        SLH-DSA-SHA2-128s    stack=316 (res 15.800849883969741) heap/op=101781 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params SLH-DSA-SHA2-128s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v4      verify        SLH-DSA-SHA2-128s    stack=1201 (res 15.800849883969741) heap/op=101320 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params SLH-DSA-SHA2-128s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255613 @ 4096 KiB), no-op depth 124541
+verify.v5      verify        SLH-DSA-SHA2-128s    stack=1359 (res 15.79965946931457) heap/op=100744 match=true
+hmsg.v0        verify-stage  SLH-DSA-SHA2-128s    stack=95 (res 15.800849883969741) heap/op=672 match=true
+fors.v0        verify-stage  SLH-DSA-SHA2-128s    stack=32 (res 15.800849883969741) heap/op=14808 match=true
+ht_wots.v0     verify-stage  SLH-DSA-SHA2-128s    stack=221 (res 15.800849883969741) heap/op=68928 match=true
+ht_auth.v0     verify-stage  SLH-DSA-SHA2-128s    stack=0 (res 15.800849883969741) heap/op=2512 match=true
+total_best     verify-stage  SLH-DSA-SHA2-128s    stack=1011 (res 15.800849883969741) heap/op=439216 match=true
+keygen.v0      keygen        SLH-DSA-SHA2-128f    stack=1011 (res 15.800849883969741) heap/op=171008 match=true
+keygen.v1      keygen        SLH-DSA-SHA2-128f    stack=727 (res 15.800849883969741) heap/op=170800 match=true
+keygen.v2      keygen        SLH-DSA-SHA2-128f    stack=916 (res 15.800849883969741) heap/op=170784 match=true
+keygen.v3      keygen        SLH-DSA-SHA2-128f    stack=1011 (res 15.800849883969741) heap/op=170784 match=true
+keygen.v4      keygen        SLH-DSA-SHA2-128f    stack=822 (res 15.800849883969741) heap/op=170946 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params SLH-DSA-SHA2-128f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        SLH-DSA-SHA2-128f    stack=1327 (res 15.800849883969741) heap/op=170912 match=true
+sign.v0        sign          SLH-DSA-SHA2-128f    stack=1201 (res 15.800849883969741) heap/op=4104463 match=true
+sign.v1        sign          SLH-DSA-SHA2-128f    stack=1232 (res 15.800849883969741) heap/op=4103912 match=true
+sign.v2        sign          SLH-DSA-SHA2-128f    stack=1074 (res 15.800849883969741) heap/op=4103704 match=true
+sign.v3        sign          SLH-DSA-SHA2-128f    stack=1074 (res 15.800849883969741) heap/op=4104044 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params SLH-DSA-SHA2-128f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          SLH-DSA-SHA2-128f    stack=1612 (res 15.800849883969741) heap/op=4108288 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params SLH-DSA-SHA2-128f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255607 @ 4096 KiB), no-op depth 124535
+sign.v5        sign          SLH-DSA-SHA2-128f    stack=1580 (res 15.800373696582485) heap/op=4101952 match=true
+verify.v0      verify        SLH-DSA-SHA2-128f    stack=664 (res 15.800849883969741) heap/op=272288 match=true
+verify.v1      verify        SLH-DSA-SHA2-128f    stack=790 (res 15.800849883969741) heap/op=271800 match=true
+verify.v2      verify        SLH-DSA-SHA2-128f    stack=632 (res 15.800849883969741) heap/op=271688 match=true
+verify.v3      verify        SLH-DSA-SHA2-128f    stack=600 (res 15.800849883969741) heap/op=522517 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params SLH-DSA-SHA2-128f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v4      verify        SLH-DSA-SHA2-128f    stack=1264 (res 15.800849883969741) heap/op=271176 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params SLH-DSA-SHA2-128f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v5      verify        SLH-DSA-SHA2-128f    stack=1359 (res 15.800849883969741) heap/op=269576 match=true
+hmsg.v0        verify-stage  SLH-DSA-SHA2-128f    stack=221 (res 15.800849883969741) heap/op=872 match=true
+fors.v0        verify-stage  SLH-DSA-SHA2-128f    stack=32 (res 15.800849883969741) heap/op=24352 match=true
+ht_wots.v0     verify-stage  SLH-DSA-SHA2-128f    stack=63 (res 15.800849883969741) heap/op=217736 match=true
+ht_auth.v0     verify-stage  SLH-DSA-SHA2-128f    stack=0 (res 15.800849883969741) heap/op=3624 match=true
+total_best     verify-stage  SLH-DSA-SHA2-128f    stack=664 (res 15.800849883969741) heap/op=1260976 match=true
+keygen.v0      keygen        SLH-DSA-SHA2-192s    stack=1011 (res 15.800849883969741) heap/op=19234079 match=true
+keygen.v1      keygen        SLH-DSA-SHA2-192s    stack=569 (res 15.800849883969741) heap/op=19233856 match=true
+keygen.v2      keygen        SLH-DSA-SHA2-192s    stack=695 (res 15.800849883969741) heap/op=19233840 match=true
+keygen.v3      keygen        SLH-DSA-SHA2-192s    stack=822 (res 15.800849883969741) heap/op=19233840 match=true
+keygen.v4      keygen        SLH-DSA-SHA2-192s    stack=822 (res 15.800849883969741) heap/op=19234317 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params SLH-DSA-SHA2-192s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        SLH-DSA-SHA2-192s    stack=1296 (res 15.800849883969741) heap/op=19233840 match=true
+sign.v0        sign          SLH-DSA-SHA2-192s    stack=1106 (res 15.800849883969741) heap/op=181492291 match=true
+sign.v1        sign          SLH-DSA-SHA2-192s    stack=1232 (res 15.800849883969741) heap/op=181491664 match=true
+sign.v2        sign          SLH-DSA-SHA2-192s    stack=853 (res 15.800849883969741) heap/op=181491416 match=true
+sign.v3        sign          SLH-DSA-SHA2-192s    stack=853 (res 15.800849883969741) heap/op=181491866 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params SLH-DSA-SHA2-192s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          SLH-DSA-SHA2-192s    stack=245972 (res 15.800849883969741) heap/op=181493840 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params SLH-DSA-SHA2-192s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v5        sign          SLH-DSA-SHA2-192s    stack=1517 (res 15.800849883969741) heap/op=181493840 match=true
+verify.v0      verify        SLH-DSA-SHA2-192s    stack=411 (res 15.800849883969741) heap/op=176936 match=true
+verify.v1      verify        SLH-DSA-SHA2-192s    stack=411 (res 15.800849883969741) heap/op=176448 match=true
+verify.v2      verify        SLH-DSA-SHA2-192s    stack=253 (res 15.800849883969741) heap/op=176304 match=true
+verify.v3      verify        SLH-DSA-SHA2-192s    stack=221 (res 15.800849883969741) heap/op=176333 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params SLH-DSA-SHA2-192s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v4      verify        SLH-DSA-SHA2-192s    stack=1485 (res 15.800849883969741) heap/op=175768 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params SLH-DSA-SHA2-192s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v5      verify        SLH-DSA-SHA2-192s    stack=1232 (res 15.800849883969741) heap/op=175224 match=true
+hmsg.v0        verify-stage  SLH-DSA-SHA2-192s    stack=32 (res 15.800849883969741) heap/op=856 match=true
+fors.v0        verify-stage  SLH-DSA-SHA2-192s    stack=0 (res 15.800849883969741) heap/op=22856 match=true
+ht_wots.v0     verify-stage  SLH-DSA-SHA2-192s    stack=0 (res 15.800849883969741) heap/op=124056 match=true
+ht_auth.v0     verify-stage  SLH-DSA-SHA2-192s    stack=0 (res 15.800849883969741) heap/op=3016 match=true
+total_best     verify-stage  SLH-DSA-SHA2-192s    stack=632 (res 15.800849883969741) heap/op=758736 match=true
+keygen.v0      keygen        SLH-DSA-SHA2-192f    stack=758 (res 15.800849883969741) heap/op=303696 match=true
+keygen.v1      keygen        SLH-DSA-SHA2-192f    stack=158 (res 15.800849883969741) heap/op=303488 match=true
+keygen.v2      keygen        SLH-DSA-SHA2-192f    stack=379 (res 15.800849883969741) heap/op=303472 match=true
+keygen.v3      keygen        SLH-DSA-SHA2-192f    stack=569 (res 15.800849883969741) heap/op=303472 match=true
+keygen.v4      keygen        SLH-DSA-SHA2-192f    stack=569 (res 15.800849883969741) heap/op=303642 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params SLH-DSA-SHA2-192f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        SLH-DSA-SHA2-192f    stack=1359 (res 15.800849883969741) heap/op=303600 match=true
+sign.v0        sign          SLH-DSA-SHA2-192f    stack=411 (res 15.800849883969741) heap/op=8174968 match=true
+sign.v1        sign          SLH-DSA-SHA2-192f    stack=569 (res 15.800849883969741) heap/op=8174432 match=true
+sign.v2        sign          SLH-DSA-SHA2-192f    stack=411 (res 15.800849883969741) heap/op=8174120 match=true
+sign.v3        sign          SLH-DSA-SHA2-192f    stack=411 (res 15.800849883969741) heap/op=8174455 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params SLH-DSA-SHA2-192f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          SLH-DSA-SHA2-192f    stack=1390 (res 15.800849883969741) heap/op=8178840 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params SLH-DSA-SHA2-192f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v5        sign          SLH-DSA-SHA2-192f    stack=1517 (res 15.800849883969741) heap/op=8178840 match=true
+verify.v0      verify        SLH-DSA-SHA2-192f    stack=253 (res 15.800849883969741) heap/op=471544 match=true
+verify.v1      verify        SLH-DSA-SHA2-192f    stack=411 (res 15.800849883969741) heap/op=471056 match=true
+verify.v2      verify        SLH-DSA-SHA2-192f    stack=253 (res 15.800849883969741) heap/op=470928 match=true
+verify.v3      verify        SLH-DSA-SHA2-192f    stack=221 (res 15.800849883969741) heap/op=471089 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params SLH-DSA-SHA2-192f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v4      verify        SLH-DSA-SHA2-192f    stack=1264 (res 15.800849883969741) heap/op=471224 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params SLH-DSA-SHA2-192f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v5      verify        SLH-DSA-SHA2-192f    stack=1201 (res 15.800849883969741) heap/op=469197 match=true
+hmsg.v0        verify-stage  SLH-DSA-SHA2-192f    stack=32 (res 15.800849883969741) heap/op=1056 match=true
+fors.v0        verify-stage  SLH-DSA-SHA2-192f    stack=0 (res 15.800849883969741) heap/op=29448 match=true
+ht_wots.v0     verify-stage  SLH-DSA-SHA2-192f    stack=0 (res 15.800849883969741) heap/op=390552 match=true
+ht_auth.v0     verify-stage  SLH-DSA-SHA2-192f    stack=0 (res 15.800849883969741) heap/op=4152 match=true
+total_best     verify-stage  SLH-DSA-SHA2-192f    stack=316 (res 15.800849883969741) heap/op=2499968 match=true
+keygen.v0      keygen        SLH-DSA-SHA2-256s    stack=758 (res 15.800849883969741) heap/op=14953679 match=true
+keygen.v1      keygen        SLH-DSA-SHA2-256s    stack=158 (res 15.800849883969741) heap/op=14953456 match=true
+keygen.v2      keygen        SLH-DSA-SHA2-256s    stack=379 (res 15.800849883969741) heap/op=14953440 match=true
+keygen.v3      keygen        SLH-DSA-SHA2-256s    stack=569 (res 15.800849883969741) heap/op=14953440 match=true
+keygen.v4      keygen        SLH-DSA-SHA2-256s    stack=569 (res 15.800849883969741) heap/op=14954043 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params SLH-DSA-SHA2-256s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        SLH-DSA-SHA2-256s    stack=1232 (res 15.800849883969741) heap/op=14953568 match=true
+sign.v0        sign          SLH-DSA-SHA2-256s    stack=537 (res 15.800849883969741) heap/op=188938722 match=true
+sign.v1        sign          SLH-DSA-SHA2-256s    stack=569 (res 15.800849883969741) heap/op=188938080 match=true
+sign.v2        sign          SLH-DSA-SHA2-256s    stack=411 (res 15.800849883969741) heap/op=188937792 match=true
+sign.v3        sign          SLH-DSA-SHA2-256s    stack=411 (res 15.800849883969741) heap/op=188938114 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params SLH-DSA-SHA2-256s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          SLH-DSA-SHA2-256s    stack=245972 (res 15.800849883969741) heap/op=188941144 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params SLH-DSA-SHA2-256s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v5        sign          SLH-DSA-SHA2-256s    stack=1517 (res 15.800849883969741) heap/op=188941144 match=true
+verify.v0      verify        SLH-DSA-SHA2-256s    stack=253 (res 15.800849883969741) heap/op=303552 match=true
+verify.v1      verify        SLH-DSA-SHA2-256s    stack=411 (res 15.800849883969741) heap/op=303064 match=true
+verify.v2      verify        SLH-DSA-SHA2-256s    stack=253 (res 15.800849883969741) heap/op=302920 match=true
+verify.v3      verify        SLH-DSA-SHA2-256s    stack=221 (res 15.800849883969741) heap/op=303084 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params SLH-DSA-SHA2-256s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v4      verify        SLH-DSA-SHA2-256s    stack=1296 (res 15.800849883969741) heap/op=302328 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params SLH-DSA-SHA2-256s
+stack calibration: frame = 109.9 bytes (depth 17789 @ 2048 KiB, 36863 @ 4096 KiB), no-op depth 124531
+verify.v5      verify        SLH-DSA-SHA2-256s    stack=8576 (res 109.94820174058928) heap/op=301624 match=true
+hmsg.v0        verify-stage  SLH-DSA-SHA2-256s    stack=32 (res 15.800849883969741) heap/op=920 match=true
+fors.v0        verify-stage  SLH-DSA-SHA2-256s    stack=0 (res 15.800849883969741) heap/op=32864 match=true
+ht_wots.v0     verify-stage  SLH-DSA-SHA2-256s    stack=0 (res 15.800849883969741) heap/op=224896 match=true
+ht_auth.v0     verify-stage  SLH-DSA-SHA2-256s    stack=0 (res 15.800849883969741) heap/op=3632 match=true
+total_best     verify-stage  SLH-DSA-SHA2-256s    stack=0 (res 15.800849883969741) heap/op=1127232 match=true
+keygen.v0      keygen        SLH-DSA-SHA2-256f    stack=758 (res 15.800849883969741) heap/op=937668 match=true
+keygen.v1      keygen        SLH-DSA-SHA2-256f    stack=126 (res 15.800849883969741) heap/op=937456 match=true
+keygen.v2      keygen        SLH-DSA-SHA2-256f    stack=348 (res 15.800849883969741) heap/op=937440 match=true
+keygen.v3      keygen        SLH-DSA-SHA2-256f    stack=569 (res 15.800849883969741) heap/op=937440 match=true
+keygen.v4      keygen        SLH-DSA-SHA2-256f    stack=569 (res 15.800849883969741) heap/op=937625 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params SLH-DSA-SHA2-256f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        SLH-DSA-SHA2-256f    stack=1138 (res 15.800849883969741) heap/op=937568 match=true
+sign.v0        sign          SLH-DSA-SHA2-256f    stack=411 (res 15.800849883969741) heap/op=19523160 match=true
+sign.v1        sign          SLH-DSA-SHA2-256f    stack=569 (res 15.800849883969741) heap/op=19522624 match=true
+sign.v2        sign          SLH-DSA-SHA2-256f    stack=411 (res 15.800849883969741) heap/op=19522336 match=true
+sign.v3        sign          SLH-DSA-SHA2-256f    stack=411 (res 15.800849883969741) heap/op=19522850 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params SLH-DSA-SHA2-256f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          SLH-DSA-SHA2-256f    stack=245972 (res 15.800849883969741) heap/op=19527352 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params SLH-DSA-SHA2-256f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v5        sign          SLH-DSA-SHA2-256f    stack=1517 (res 15.800849883969741) heap/op=19527352 match=true
+verify.v0      verify        SLH-DSA-SHA2-256f    stack=253 (res 15.800849883969741) heap/op=574296 match=true
+verify.v1      verify        SLH-DSA-SHA2-256f    stack=316 (res 15.800849883969741) heap/op=573808 match=true
+verify.v2      verify        SLH-DSA-SHA2-256f    stack=253 (res 15.800849883969741) heap/op=573664 match=true
+verify.v3      verify        SLH-DSA-SHA2-256f    stack=221 (res 15.800849883969741) heap/op=573848 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params SLH-DSA-SHA2-256f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v4      verify        SLH-DSA-SHA2-256f    stack=1264 (res 15.800849883969741) heap/op=573976 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params SLH-DSA-SHA2-256f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v5      verify        SLH-DSA-SHA2-256f    stack=1201 (res 15.800849883969741) heap/op=571456 match=true
+hmsg.v0        verify-stage  SLH-DSA-SHA2-256f    stack=32 (res 15.800849883969741) heap/op=1048 match=true
+fors.v0        verify-stage  SLH-DSA-SHA2-256f    stack=0 (res 15.800849883969741) heap/op=39560 match=true
+ht_wots.v0     verify-stage  SLH-DSA-SHA2-256f    stack=0 (res 15.800849883969741) heap/op=467240 match=true
+ht_auth.v0     verify-stage  SLH-DSA-SHA2-256f    stack=0 (res 15.800849883969741) heap/op=4440 match=true
+total_best     verify-stage  SLH-DSA-SHA2-256f    stack=63 (res 15.800849883969741) heap/op=2180728 match=true
+keygen.v0      keygen        SLH-DSA-SHAKE-128s   stack=758 (res 15.800849883969741) heap/op=10790720 match=true
+keygen.v1      keygen        SLH-DSA-SHAKE-128s   stack=316 (res 15.800849883969741) heap/op=10790512 match=true
+keygen.v2      keygen        SLH-DSA-SHAKE-128s   stack=474 (res 15.800849883969741) heap/op=10790496 match=true
+keygen.v3      keygen        SLH-DSA-SHAKE-128s   stack=600 (res 15.800849883969741) heap/op=10790496 match=true
+keygen.v4      keygen        SLH-DSA-SHAKE-128s   stack=600 (res 15.800849883969741) heap/op=10791034 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params SLH-DSA-SHAKE-128s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        SLH-DSA-SHAKE-128s   stack=1359 (res 15.800849883969741) heap/op=10782512 match=true
+sign.v0        sign          SLH-DSA-SHAKE-128s   stack=537 (res 15.800849883969741) heap/op=83832317 match=true
+sign.v1        sign          SLH-DSA-SHAKE-128s   stack=664 (res 15.800849883969741) heap/op=83831720 match=true
+sign.v2        sign          SLH-DSA-SHAKE-128s   stack=537 (res 15.800849883969741) heap/op=83831512 match=true
+sign.v3        sign          SLH-DSA-SHAKE-128s   stack=537 (res 15.800849883969741) heap/op=83831902 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params SLH-DSA-SHAKE-128s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          SLH-DSA-SHAKE-128s   stack=245972 (res 15.800849883969741) heap/op=83776528 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params SLH-DSA-SHAKE-128s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255613 @ 4096 KiB), no-op depth 124541
+sign.v5        sign          SLH-DSA-SHAKE-128s   stack=1675 (res 15.79965946931457) heap/op=83776528 match=true
+verify.v0      verify        SLH-DSA-SHAKE-128s   stack=158 (res 15.800849883969741) heap/op=98184 match=true
+verify.v1      verify        SLH-DSA-SHAKE-128s   stack=158 (res 15.800849883969741) heap/op=97696 match=true
+verify.v2      verify        SLH-DSA-SHAKE-128s   stack=158 (res 15.800849883969741) heap/op=97584 match=true
+verify.v3      verify        SLH-DSA-SHAKE-128s   stack=126 (res 15.800849883969741) heap/op=97742 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params SLH-DSA-SHAKE-128s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v4      verify        SLH-DSA-SHAKE-128s   stack=1296 (res 15.800849883969741) heap/op=97216 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params SLH-DSA-SHAKE-128s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v5      verify        SLH-DSA-SHAKE-128s   stack=1169 (res 15.800849883969741) heap/op=96768 match=true
+hmsg.v0        verify-stage  SLH-DSA-SHAKE-128s   stack=0 (res 15.800849883969741) heap/op=344 match=true
+fors.v0        verify-stage  SLH-DSA-SHAKE-128s   stack=0 (res 15.800849883969741) heap/op=14936 match=true
+ht_wots.v0     verify-stage  SLH-DSA-SHAKE-128s   stack=0 (res 15.800849883969741) heap/op=65664 match=true
+ht_auth.v0     verify-stage  SLH-DSA-SHAKE-128s   stack=0 (res 15.800849883969741) heap/op=2512 match=true
+total_best     verify-stage  SLH-DSA-SHAKE-128s   stack=474 (res 15.800849883969741) heap/op=100720 match=true
+keygen.v0      keygen        SLH-DSA-SHAKE-128f   stack=758 (res 15.800849883969741) heap/op=170432 match=true
+keygen.v1      keygen        SLH-DSA-SHAKE-128f   stack=284 (res 15.800849883969741) heap/op=170224 match=true
+keygen.v2      keygen        SLH-DSA-SHAKE-128f   stack=474 (res 15.800849883969741) heap/op=170208 match=true
+keygen.v3      keygen        SLH-DSA-SHAKE-128f   stack=284 (res 15.800849883969741) heap/op=170160 match=true
+keygen.v4      keygen        SLH-DSA-SHAKE-128f   stack=284 (res 15.800849883969741) heap/op=170333 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params SLH-DSA-SHAKE-128f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        SLH-DSA-SHAKE-128f   stack=1517 (res 15.800849883969741) heap/op=170288 match=true
+sign.v0        sign          SLH-DSA-SHAKE-128f   stack=537 (res 15.800849883969741) heap/op=4099696 match=true
+sign.v1        sign          SLH-DSA-SHAKE-128f   stack=664 (res 15.800849883969741) heap/op=4099160 match=true
+sign.v2        sign          SLH-DSA-SHAKE-128f   stack=537 (res 15.800849883969741) heap/op=4098952 match=true
+sign.v3        sign          SLH-DSA-SHAKE-128f   stack=537 (res 15.800849883969741) heap/op=4099275 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params SLH-DSA-SHAKE-128f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          SLH-DSA-SHAKE-128f   stack=1643 (res 15.800849883969741) heap/op=4100832 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params SLH-DSA-SHAKE-128f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v5        sign          SLH-DSA-SHAKE-128f   stack=1675 (res 15.800849883969741) heap/op=4094832 match=true
+verify.v0      verify        SLH-DSA-SHAKE-128f   stack=158 (res 15.800849883969741) heap/op=280104 match=true
+verify.v1      verify        SLH-DSA-SHAKE-128f   stack=158 (res 15.800849883969741) heap/op=279616 match=true
+verify.v2      verify        SLH-DSA-SHAKE-128f   stack=158 (res 15.800849883969741) heap/op=279504 match=true
+verify.v3      verify        SLH-DSA-SHAKE-128f   stack=126 (res 15.800849883969741) heap/op=279664 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params SLH-DSA-SHAKE-128f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255613 @ 4096 KiB), no-op depth 124541
+verify.v4      verify        SLH-DSA-SHAKE-128f   stack=1548 (res 15.79965946931457) heap/op=279496 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params SLH-DSA-SHAKE-128f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v5      verify        SLH-DSA-SHAKE-128f   stack=1327 (res 15.800849883969741) heap/op=277120 match=true
+hmsg.v0        verify-stage  SLH-DSA-SHAKE-128f   stack=0 (res 15.800849883969741) heap/op=536 match=true
+fors.v0        verify-stage  SLH-DSA-SHAKE-128f   stack=0 (res 15.800849883969741) heap/op=24168 match=true
+ht_wots.v0     verify-stage  SLH-DSA-SHAKE-128f   stack=0 (res 15.800849883969741) heap/op=226664 match=true
+ht_auth.v0     verify-stage  SLH-DSA-SHAKE-128f   stack=0 (res 15.800849883969741) heap/op=3624 match=true
+total_best     verify-stage  SLH-DSA-SHAKE-128f   stack=0 (res 15.800849883969741) heap/op=311482 match=true
+keygen.v0      keygen        SLH-DSA-SHAKE-192s   stack=648 (res 15.800849883969741) heap/op=19232639 match=true
+keygen.v1      keygen        SLH-DSA-SHAKE-192s   stack=158 (res 15.800849883969741) heap/op=19232416 match=true
+keygen.v2      keygen        SLH-DSA-SHAKE-192s   stack=158 (res 15.800849883969741) heap/op=19232400 match=true
+keygen.v3      keygen        SLH-DSA-SHAKE-192s   stack=158 (res 15.800849883969741) heap/op=19232352 match=true
+keygen.v4      keygen        SLH-DSA-SHAKE-192s   stack=158 (res 15.800849883969741) heap/op=19232965 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params SLH-DSA-SHAKE-192s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        SLH-DSA-SHAKE-192s   stack=1359 (res 15.800849883969741) heap/op=19224416 match=true
+sign.v0        sign          SLH-DSA-SHAKE-192s   stack=0 (res 15.800849883969741) heap/op=181491875 match=true
+sign.v1        sign          SLH-DSA-SHAKE-192s   stack=569 (res 15.800849883969741) heap/op=181491248 match=true
+sign.v2        sign          SLH-DSA-SHAKE-192s   stack=521 (res 15.800849883969741) heap/op=181491000 match=true
+sign.v3        sign          SLH-DSA-SHAKE-192s   stack=506 (res 15.800849883969741) heap/op=181491266 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params SLH-DSA-SHAKE-192s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          SLH-DSA-SHAKE-192s   stack=245972 (res 15.800849883969741) heap/op=181436440 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params SLH-DSA-SHAKE-192s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v5        sign          SLH-DSA-SHAKE-192s   stack=1517 (res 15.800849883969741) heap/op=181436440 match=true
+verify.v0      verify        SLH-DSA-SHAKE-192s   stack=0 (res 15.800849883969741) heap/op=175272 match=true
+verify.v1      verify        SLH-DSA-SHAKE-192s   stack=158 (res 15.800849883969741) heap/op=174784 match=true
+verify.v2      verify        SLH-DSA-SHAKE-192s   stack=0 (res 15.800849883969741) heap/op=174656 match=true
+verify.v3      verify        SLH-DSA-SHAKE-192s   stack=0 (res 15.800849883969741) heap/op=174814 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params SLH-DSA-SHAKE-192s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v4      verify        SLH-DSA-SHAKE-192s   stack=1296 (res 15.800849883969741) heap/op=174184 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params SLH-DSA-SHAKE-192s
+stack calibration: frame = 43.9 bytes (depth 17789 @ 2048 KiB, 65535 @ 4096 KiB), no-op depth 124531
+verify.v5      verify        SLH-DSA-SHAKE-192s   stack=3338 (res 43.92309303397143) heap/op=173640 match=true
+hmsg.v0        verify-stage  SLH-DSA-SHAKE-192s   stack=0 (res 15.800849883969741) heap/op=360 match=true
+fors.v0        verify-stage  SLH-DSA-SHAKE-192s   stack=0 (res 15.800849883969741) heap/op=22984 match=true
+ht_wots.v0     verify-stage  SLH-DSA-SHAKE-192s   stack=0 (res 15.800849883969741) heap/op=124216 match=true
+ht_auth.v0     verify-stage  SLH-DSA-SHAKE-192s   stack=0 (res 15.800849883969741) heap/op=3016 match=true
+total_best     verify-stage  SLH-DSA-SHAKE-192s   stack=0 (res 15.800849883969741) heap/op=189602 match=true
+keygen.v0      keygen        SLH-DSA-SHAKE-192f   stack=0 (res 15.800849883969741) heap/op=302384 match=true
+keygen.v1      keygen        SLH-DSA-SHAKE-192f   stack=158 (res 15.800849883969741) heap/op=302176 match=true
+keygen.v2      keygen        SLH-DSA-SHAKE-192f   stack=0 (res 15.800849883969741) heap/op=302160 match=true
+keygen.v3      keygen        SLH-DSA-SHAKE-192f   stack=0 (res 15.800849883969741) heap/op=302112 match=true
+keygen.v4      keygen        SLH-DSA-SHAKE-192f   stack=0 (res 15.800849883969741) heap/op=302281 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params SLH-DSA-SHAKE-192f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        SLH-DSA-SHAKE-192f   stack=1485 (res 15.800849883969741) heap/op=302240 match=true
+sign.v0        sign          SLH-DSA-SHAKE-192f   stack=506 (res 15.800849883969741) heap/op=8172767 match=true
+sign.v1        sign          SLH-DSA-SHAKE-192f   stack=616 (res 15.800849883969741) heap/op=8172216 match=true
+sign.v2        sign          SLH-DSA-SHAKE-192f   stack=332 (res 15.800849883969741) heap/op=8171968 match=true
+sign.v3        sign          SLH-DSA-SHAKE-192f   stack=490 (res 15.800849883969741) heap/op=8172232 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params SLH-DSA-SHAKE-192f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          SLH-DSA-SHAKE-192f   stack=1643 (res 15.800849883969741) heap/op=8173888 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params SLH-DSA-SHAKE-192f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v5        sign          SLH-DSA-SHAKE-192f   stack=1675 (res 15.800849883969741) heap/op=8174224 match=true
+verify.v0      verify        SLH-DSA-SHAKE-192f   stack=0 (res 15.800849883969741) heap/op=460808 match=true
+verify.v1      verify        SLH-DSA-SHAKE-192f   stack=0 (res 15.800849883969741) heap/op=460320 match=true
+verify.v2      verify        SLH-DSA-SHAKE-192f   stack=79 (res 15.800849883969741) heap/op=460192 match=true
+verify.v3      verify        SLH-DSA-SHAKE-192f   stack=32 (res 15.800849883969741) heap/op=460372 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params SLH-DSA-SHAKE-192f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255607 @ 4096 KiB), no-op depth 124535
+verify.v4      verify        SLH-DSA-SHAKE-192f   stack=1422 (res 15.800373696582485) heap/op=461302 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params SLH-DSA-SHAKE-192f
+stack calibration: frame = 66.9 bytes (depth 17789 @ 2048 KiB, 49151 @ 4096 KiB), no-op depth 124531
+verify.v5      verify        SLH-DSA-SHAKE-192f   stack=5951 (res 66.86920477010395) heap/op=459640 match=true
+hmsg.v0        verify-stage  SLH-DSA-SHAKE-192f   stack=0 (res 15.800849883969741) heap/op=552 match=true
+fors.v0        verify-stage  SLH-DSA-SHAKE-192f   stack=0 (res 15.800849883969741) heap/op=29448 match=true
+ht_wots.v0     verify-stage  SLH-DSA-SHAKE-192f   stack=0 (res 15.800849883969741) heap/op=381632 match=true
+ht_auth.v0     verify-stage  SLH-DSA-SHAKE-192f   stack=0 (res 15.800849883969741) heap/op=4152 match=true
+total_best     verify-stage  SLH-DSA-SHAKE-192f   stack=0 (res 15.800849883969741) heap/op=465376 match=true
+keygen.v0      keygen        SLH-DSA-SHAKE-256s   stack=0 (res 15.800849883969741) heap/op=14952367 match=true
+keygen.v1      keygen        SLH-DSA-SHAKE-256s   stack=253 (res 15.800849883969741) heap/op=14952144 match=true
+keygen.v2      keygen        SLH-DSA-SHAKE-256s   stack=158 (res 15.800849883969741) heap/op=14952128 match=true
+keygen.v3      keygen        SLH-DSA-SHAKE-256s   stack=158 (res 15.800849883969741) heap/op=14952080 match=true
+keygen.v4      keygen        SLH-DSA-SHAKE-256s   stack=158 (res 15.800849883969741) heap/op=14952493 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params SLH-DSA-SHAKE-256s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        SLH-DSA-SHAKE-256s   stack=1359 (res 15.800849883969741) heap/op=14948240 match=true
+sign.v0        sign          SLH-DSA-SHAKE-256s   stack=506 (res 15.800849883969741) heap/op=188938426 match=true
+sign.v1        sign          SLH-DSA-SHAKE-256s   stack=616 (res 15.800849883969741) heap/op=188937784 match=true
+sign.v2        sign          SLH-DSA-SHAKE-256s   stack=490 (res 15.800849883969741) heap/op=188937496 match=true
+sign.v3        sign          SLH-DSA-SHAKE-256s   stack=490 (res 15.800849883969741) heap/op=188937762 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params SLH-DSA-SHAKE-256s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          SLH-DSA-SHAKE-256s   stack=245972 (res 15.800849883969741) heap/op=188908208 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params SLH-DSA-SHAKE-256s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255613 @ 4096 KiB), no-op depth 124541
+sign.v5        sign          SLH-DSA-SHAKE-256s   stack=1675 (res 15.79965946931457) heap/op=188908208 match=true
+verify.v0      verify        SLH-DSA-SHAKE-256s   stack=126 (res 15.800849883969741) heap/op=296744 match=true
+verify.v1      verify        SLH-DSA-SHAKE-256s   stack=0 (res 15.800849883969741) heap/op=296256 match=true
+verify.v2      verify        SLH-DSA-SHAKE-256s   stack=0 (res 15.800849883969741) heap/op=296112 match=true
+verify.v3      verify        SLH-DSA-SHAKE-256s   stack=0 (res 15.800849883969741) heap/op=296273 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params SLH-DSA-SHAKE-256s
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v4      verify        SLH-DSA-SHAKE-256s   stack=1359 (res 15.800849883969741) heap/op=295440 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params SLH-DSA-SHAKE-256s
+stack calibration: frame = 43.9 bytes (depth 17789 @ 2048 KiB, 65535 @ 4096 KiB), no-op depth 124531
+verify.v5      verify        SLH-DSA-SHAKE-256s   stack=3690 (res 43.92309303397143) heap/op=295285 match=true
+hmsg.v0        verify-stage  SLH-DSA-SHAKE-256s   stack=0 (res 15.800849883969741) heap/op=384 match=true
+fors.v0        verify-stage  SLH-DSA-SHAKE-256s   stack=0 (res 15.800849883969741) heap/op=32800 match=true
+ht_wots.v0     verify-stage  SLH-DSA-SHAKE-256s   stack=0 (res 15.800849883969741) heap/op=220000 match=true
+ht_auth.v0     verify-stage  SLH-DSA-SHAKE-256s   stack=0 (res 15.800849883969741) heap/op=3632 match=true
+total_best     verify-stage  SLH-DSA-SHAKE-256s   stack=0 (res 15.800849883969741) heap/op=312475 match=true
+keygen.v0      keygen        SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=936352 match=true
+keygen.v1      keygen        SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=936144 match=true
+keygen.v2      keygen        SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=936128 match=true
+keygen.v3      keygen        SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=936080 match=true
+keygen.v4      keygen        SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=936320 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops keygen --variants keygen.v5 --params SLH-DSA-SHAKE-256f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+keygen.v5      keygen        SLH-DSA-SHAKE-256f   stack=1264 (res 15.800849883969741) heap/op=936080 match=true
+sign.v0        sign          SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=19525688 match=true
+sign.v1        sign          SLH-DSA-SHAKE-256f   stack=616 (res 15.800849883969741) heap/op=19525152 match=true
+sign.v2        sign          SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=19524864 match=true
+sign.v3        sign          SLH-DSA-SHAKE-256f   stack=506 (res 15.800849883969741) heap/op=19525322 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v4 --params SLH-DSA-SHAKE-256f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v4        sign          SLH-DSA-SHAKE-256f   stack=245972 (res 15.800849883969741) heap/op=19525544 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops sign --variants sign.v5 --params SLH-DSA-SHAKE-256f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+sign.v5        sign          SLH-DSA-SHAKE-256f   stack=1517 (res 15.800849883969741) heap/op=19525800 match=true
+verify.v0      verify        SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=573864 match=true
+verify.v1      verify        SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=573376 match=true
+verify.v2      verify        SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=573232 match=true
+verify.v3      verify        SLH-DSA-SHAKE-256f   stack=32 (res 15.800849883969741) heap/op=573397 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v4 --params SLH-DSA-SHAKE-256f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124531
+verify.v4      verify        SLH-DSA-SHAKE-256f   stack=1327 (res 15.800849883969741) heap/op=573364 match=true
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench memory --child --out - --ops verify --variants verify.v5 --params SLH-DSA-SHAKE-256f
+stack calibration: frame = 15.8 bytes (depth 122879 @ 2048 KiB, 255603 @ 4096 KiB), no-op depth 124535
+verify.v5      verify        SLH-DSA-SHAKE-256f   stack=1454 (res 15.800849883969741) heap/op=572734 match=true
+hmsg.v0        verify-stage  SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=504 match=true
+fors.v0        verify-stage  SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=39496 match=true
+ht_wots.v0     verify-stage  SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=468728 match=true
+ht_auth.v0     verify-stage  SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=4440 match=true
+total_best     verify-stage  SLH-DSA-SHAKE-256f   stack=0 (res 15.800849883969741) heap/op=605704 match=true
+== validate bouncycastle  22:09:44
+651 cases loaded from /home/user/pqc-signatures/common/validation/validation.json.gz
+keygen.v0    pass=195 fail=0 (11.6 s)
+keygen.v1    pass=195 fail=0 (11.8 s)
+keygen.v2    pass=195 fail=0 (10.4 s)
+keygen.v3    pass=195 fail=0 (10.8 s)
+keygen.v4    pass=195 fail=0 (14.3 s)
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench validate --child --variants keygen.v5 /home/user/pqc-signatures/common/validation/validation.json.gz -
+keygen.v5    pass=195 fail=0 (10.7 s)
+sign.v0      pass=69 fail=0 (22.6 s)
+sign.v1      pass=69 fail=0 (22.0 s)
+sign.v2      pass=69 fail=0 (21.6 s)
+sign.v3      pass=69 fail=0 (24.6 s)
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:-TieredCompilation -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench validate --child --variants sign.v4 /home/user/pqc-signatures/common/validation/validation.json.gz -
+sign.v4      pass=69 fail=0 (22.2 s)
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms8g -Xmx8g -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench validate --child --variants sign.v5 /home/user/pqc-signatures/common/validation/validation.json.gz -
+sign.v5      pass=69 fail=0 (22.5 s)
+verify.v0    pass=387 fail=0 (1.0 s)
+verify.v1    pass=387 fail=0 (1.1 s)
+verify.v2    pass=387 fail=0 (0.9 s)
+verify.v3    pass=387 fail=0 (1.5 s)
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:+UseParallelGC -Xms2g -Xmx2g -Xmn1200m -XX:+AlwaysPreTouch -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench validate --child --variants verify.v4 /home/user/pqc-signatures/common/validation/validation.json.gz -
+verify.v4    pass=387 fail=0 (1.2 s)
+[child] /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:MaxInlineLevel=30 -XX:MaxInlineSize=120 -XX:FreqInlineSize=1200 -XX:InlineSmallCode=6000 -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -Dpqc.common=/home/user/pqc-signatures/common -cp /home/user/pqc-signatures/libs/bouncycastle/build/classes:/home/user/pqc-signatures/libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:/home/user/pqc-signatures/libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench validate --child --variants verify.v5 /home/user/pqc-signatures/common/validation/validation.json.gz -
+verify.v5    pass=387 fail=0 (1.2 s)
+total.v0     pass=387 fail=0 (1.1 s)
+total_best   pass=387 fail=0 (1.3 s)
+summary: {"keygen.v0":{"pass":195,"fail":0,"skipped":0},"keygen.v1":{"pass":195,"fail":0,"skipped":0},"keygen.v2":{"pass":195,"fail":0,"skipped":0},"keygen.v3":{"pass":195,"fail":0,"skipped":0},"keygen.v4":{"pass":195,"fail":0,"skipped":0},"keygen.v5":{"pass":195,"fail":0,"skipped":0},"sign.v0":{"pass":69,"fail":0,"skipped":0},"sign.v1":{"pass":69,"fail":0,"skipped":0},"sign.v2":{"pass":69,"fail":0,"skipped":0},"sign.v3":{"pass":69,"fail":0,"skipped":0},"sign.v4":{"pass":69,"fail":0,"skipped":0},"sign.v5":{"pass":69,"fail":0,"skipped":0},"total.v0":{"pass":387,"fail":0,"skipped":0},"total_best":{"pass":387,"fail":0,"skipped":0},"verify.v0":{"pass":387,"fail":0,"skipped":0},"verify.v1":{"pass":387,"fail":0,"skipped":0},"verify.v2":{"pass":387,"fail":0,"skipped":0},"verify.v3":{"pass":387,"fail":0,"skipped":0},"verify.v4":{"pass":387,"fail":0,"skipped":0},"verify.v5":{"pass":387,"fail":0,"skipped":0}}
+4680 results, 0 failures
+# Signature match report
+
+Every library derives keys from the same seeds in `common/vectors.json` and signs the same message deterministically. `match` = public key, secret key and signature are byte-identical to `common/reference.json`. Falcon is not byte-matchable across libraries (no standard seed format, randomized salt), so it is checked by self-verify and cross-verification only.
+
+| param | noble | liboqs | openssl | circl | rustcrypto | bouncycastle |
+|---|---|---|---|---|---|---|
+| ML-DSA-44 | match | match | match | match | match | match |
+| ML-DSA-65 | match | match | match | match | match | match |
+| ML-DSA-87 | match | match | match | match | match | match |
+| SLH-DSA-SHA2-128s | match | match | match | match | match | match |
+| SLH-DSA-SHA2-128f | match | match | match | match | match | match |
+| SLH-DSA-SHA2-192s | match | match | match | match | match | match |
+| SLH-DSA-SHA2-192f | match | match | match | match | match | match |
+| SLH-DSA-SHA2-256s | match | match | match | match | match | match |
+| SLH-DSA-SHA2-256f | match | match | match | match | match | match |
+| SLH-DSA-SHAKE-128s | match | match | match | match | match | match |
+| SLH-DSA-SHAKE-128f | match | match | match | match | match | match |
+| SLH-DSA-SHAKE-192s | match | match | match | match | match | match |
+| SLH-DSA-SHAKE-192f | match | match | match | match | match | match |
+| SLH-DSA-SHAKE-256s | match | match | match | match | match | match |
+| SLH-DSA-SHAKE-256f | match | match | match | match | match | match |
+| Falcon-512 | self-verify | self-verify | — | — | — | self-verify |
+| Falcon-1024 | self-verify | self-verify | — | — | — | self-verify |
+
+## Cross-verification (rows verify signatures produced by columns)
+
+| verifier \ signer | noble | liboqs | openssl | circl | rustcrypto | bouncycastle |
+|---|---|---|---|---|---|---|
+| **noble** | 17/17 ok, 17 tamper rejected | 17/17 ok, 17 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/17 ok, 17 tamper rejected |
+| **liboqs** | 17/17 ok, 17 tamper rejected | 17/17 ok, 17 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 17/17 ok, 17 tamper rejected |
+| **openssl** | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected |
+| **circl** | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected |
+| **rustcrypto** | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected |
+| **bouncycastle** | 17/17 ok, 17 tamper rejected | 17/17 ok, 17 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 15/15 ok, 15 tamper rejected | 17/17 ok, 17 tamper rejected |
+
+## Benchmark variants matching the reference
+
+| lib | rows | matching |
+|---|---|---|
+| noble | 298 | 298 |
+| liboqs | 306 | 306 |
+| openssl | 246 | 246 |
+| circl | 270 | 270 |
+| rustcrypto | 270 | 270 |
+| bouncycastle | 270 | 270 |
+
+## Validation suite (NIST ACVP FIPS 204/205 + negative tests), every case through every variant
+
+| lib | cases run | variants | failures |
+|---|---|---|---|
+| noble | 4680 | 20 | 0 |
+| liboqs | 4680 | 20 | 0 |
+| openssl | 12363 | 65 | 0 |
+| circl | 4680 | 20 | 0 |
+| rustcrypto | 4680 | 20 | 0 |
+| bouncycastle | 4680 | 20 | 0 |
+
+## Verify stages: canonical intermediate outputs agree across libraries
+
+93 (param, stage) pairs compared, 0 disagreements.
+
+| lib | stage rows | alternatives not matching v0 |
+|---|---|---|
+| noble | 285 | 0 |
+| liboqs | 408 | 0 |
+| openssl | 339 | 0 |
+| circl | 396 | 0 |
+| rustcrypto | 408 | 0 |
+| bouncycastle | 279 | 0 |
+
+**Problems found: 2**
+
+!! match check reported problems (see results/MATCH.md)
+wrote RESULTS.md and docs tables for noble, liboqs, openssl, circl, rustcrypto, bouncycastle
+phase 2 report written for noble,liboqs,openssl,circl,rustcrypto,bouncycastle / noble,liboqs,openssl,circl,rustcrypto,bouncycastle
+== ALL DONE 22:13:30

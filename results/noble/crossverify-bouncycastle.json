@@ -94,13 +94,13 @@
   },
   {
    "param": "Falcon-512",
-   "ok": false,
+   "ok": true,
    "error": null,
    "tamper_rejected": true
   },
   {
    "param": "Falcon-1024",
-   "ok": false,
+   "ok": true,
    "error": null,
    "tamper_rejected": true
   }
