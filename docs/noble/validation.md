@@ -33,3 +33,30 @@ Falcon is not in the suite.
 ## Results
 
 <!-- RESULTS -->
+
+_Full-suite dev run (651 cases, every variant, no skips; machine shared with other agents):_
+
+| variant | pass | fail | skipped |
+|---|---:|---:|---:|
+| keygen.v0 | 195 | 0 | 0 |
+| keygen.v1 | 195 | 0 | 0 |
+| keygen.v2 | 195 | 0 | 0 |
+| keygen.v3 | 195 | 0 | 0 |
+| keygen.v4 | 195 | 0 | 0 |
+| keygen.v5 | 195 | 0 | 0 |
+| sign.v0 | 69 | 0 | 0 |
+| sign.v1 | 69 | 0 | 0 |
+| sign.v2 | 69 | 0 | 0 |
+| sign.v3 | 69 | 0 | 0 |
+| sign.v4 | 69 | 0 | 0 |
+| sign.v5 | 69 | 0 | 0 |
+| verify.v0 | 387 | 0 | 0 |
+| verify.v1 | 387 | 0 | 0 |
+| verify.v2 | 387 | 0 | 0 |
+| verify.v3 | 387 | 0 | 0 |
+| verify.v4 | 387 | 0 | 0 |
+| verify.v5 | 387 | 0 | 0 |
+| stages.total | 387 | 0 | 0 |
+| stages.total_best | 387 | 0 | 0 |
+
+**Conclusion.** All 20 variants (keygen/sign/verify v0–v5 including keycache, pkcache, fastjs, native-hash, bun and worker variants, plus the stage pipelines stages.total / stages.total_best) pass every applicable case: 195 keygen, 69 siggen, 387 sigver each — no failures to explain, no library bug found.

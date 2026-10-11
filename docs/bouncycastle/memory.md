@@ -43,11 +43,17 @@ offers no per-operation live-set peak without a heap walk, and pool peak-usage c
   60-80 KB of allocation per op (the A matrix alone is k*l*256 ints), SLH-DSA signing allocates megabytes.
 * The JCA layer (`*.v0` jca, fresh `getInstance` per op) is the stack outlier at ~25 KiB because the provider
   lookup / `Signature` initialisation call chain is deep; the lightweight API variants stay around 1 KiB.
-* Stage lines show where the allocation goes inside a verify (expandA and decode for ML-DSA).
+* Stage lines show where the allocation goes inside a verify (expandA and decode for ML-DSA, ht_wots for
+  SLH-DSA). A side finding: the `total_best` pipeline for the SHA2 sets allocates ~4-5x more than BC's verify
+  (1.26 MB vs 272 KB for SHA2-128f) because the JDK-SHA-256 backend clones a `MessageDigest` midstate per hash
+  call; it is still ~2x faster, but a production version would keep a reusable digest instead of `clone()`.
+* Stack numbers of 0-200 bytes for single stages are real for JIT-compiled code: HotSpot inlines the small BC
+  methods into the caller so the stage runs in the probe lambda's own frame; numbers vary by one or two frames
+  (16-32 bytes) between JVM runs as inlining decisions change.
 
 <!-- RESULTS -->
 
-## Results (preliminary dev run on a shared 4-core box)
+## Results (preliminary dev run on a shared 4-core box; memory on 4 params only)
 
 stack = peak stack of one op (bytes, resolution = one compiled recursion frame); heap = allocated bytes per op.
 
@@ -73,12 +79,12 @@ stack = peak stack of one op (bytes, resolution = one compiled recursion frame);
 | verify | `verify.v3` | 160 | 55837 | 4 | True |
 | verify | `verify.v4` | 1011 | 59436 | 1 | True |
 | verify | `verify.v5` | 1074 | 59928 | 1 | True |
-| verify-stage | `decode.v0` | 0 | 18144 | 1 | True |
+| verify-stage | `decode.v0` | 64 | 18144 | 1 | True |
 | verify-stage | `mu.v0` | 0 | 1152 | 1 | True |
-| verify-stage | `expandA.v0` | 0 | 31600 | 1 | True |
-| verify-stage | `w_approx.v0` | 32 | 14728 | 1 | True |
+| verify-stage | `expandA.v0` | 128 | 31600 | 1 | True |
+| verify-stage | `w_approx.v0` | 64 | 14728 | 1 | True |
 | verify-stage | `hint_check.v0` | 0 | 6536 | 1 | True |
-| verify-stage | `total_best` | 1120 | 66616 | 1 | True |
+| verify-stage | `total_best` | 912 | 66616 | 1 | True |
 
 ### ML-DSA-87
 
@@ -104,10 +110,10 @@ stack = peak stack of one op (bytes, resolution = one compiled recursion frame);
 | verify | `verify.v5` | 0 | 159912 | 1 | True |
 | verify-stage | `decode.v0` | 0 | 34864 | 1 | True |
 | verify-stage | `mu.v0` | 0 | 1152 | 1 | True |
-| verify-stage | `expandA.v0` | 0 | 110336 | 1 | True |
-| verify-stage | `w_approx.v0` | 32 | 26568 | 1 | True |
+| verify-stage | `expandA.v0` | 32 | 110336 | 1 | True |
+| verify-stage | `w_approx.v0` | 160 | 26568 | 1 | True |
 | verify-stage | `hint_check.v0` | 0 | 11384 | 1 | True |
-| verify-stage | `total_best` | 1120 | 120312 | 1 | True |
+| verify-stage | `total_best` | 896 | 120065 | 1 | True |
 
 ### SLH-DSA-SHA2-128f
 
@@ -131,11 +137,11 @@ stack = peak stack of one op (bytes, resolution = one compiled recursion frame);
 | verify | `verify.v3` | 864 | 271622 | 4 | True |
 | verify | `verify.v4` | 1327 | 274064 | 1 | True |
 | verify | `verify.v5` | 1548 | 274064 | 1 | True |
-| verify-stage | `hmsg.v0` | None | 872 | 1 | False java.lang.RuntimeException: probe failed with java.lang.ArrayIndexOutOfBoundsException: Index 16 out of bounds for length 16 |
-| verify-stage | `fors.v0` | 112 | 24376 | 1 | True |
-| verify-stage | `ht_wots.v0` | 224 | 217384 | 1 | True |
+| verify-stage | `hmsg.v0` | 192 | 872 | 1 | True |
+| verify-stage | `fors.v0` | 32 | 24352 | 1 | True |
+| verify-stage | `ht_wots.v0` | 192 | 217736 | 1 | True |
 | verify-stage | `ht_auth.v0` | 0 | 3624 | 1 | True |
-| verify-stage | `total_best` | 960 | 1262497 | 1 | True |
+| verify-stage | `total_best` | 960 | 1262512 | 1 | True |
 
 ### SLH-DSA-SHAKE-128s
 
@@ -159,8 +165,8 @@ stack = peak stack of one op (bytes, resolution = one compiled recursion frame);
 | verify | `verify.v3` | 480 | 97609 | 4 | True |
 | verify | `verify.v4` | 1327 | 97623 | 1 | True |
 | verify | `verify.v5` | 1344 | 98796 | 1 | True |
-| verify-stage | `hmsg.v0` | None | 344 | 1 | False java.lang.RuntimeException: probe failed with java.lang.IllegalStateException: attempt to absorb while squeezing |
-| verify-stage | `fors.v0` | None | None | 1 | False java.lang.IllegalStateException: attempt to absorb while squeezing |
-| verify-stage | `ht_wots.v0` | None | None | 1 | False java.lang.IllegalStateException: attempt to absorb while squeezing |
-| verify-stage | `ht_auth.v0` | None | None | 1 | False java.lang.IllegalStateException: attempt to absorb while squeezing |
-| verify-stage | `total_best` | 1104 | 86486 | 1 | True |
+| verify-stage | `hmsg.v0` | 64 | 344 | 1 | True |
+| verify-stage | `fors.v0` | 192 | 14936 | 1 | True |
+| verify-stage | `ht_wots.v0` | 448 | 65664 | 1 | True |
+| verify-stage | `ht_auth.v0` | 0 | 2512 | 1 | True |
+| verify-stage | `total_best` | 960 | 86624 | 1 | True |

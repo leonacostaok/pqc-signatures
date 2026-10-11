@@ -67,7 +67,14 @@ final class Memory {
                     Map<String, Object> line = header(sv.id, "verify-stage", pn, stage, 1);
                     try {
                         byte[] expect = sop.canon(sop.run());
-                        measureOp(() -> sop.run(), o -> Arrays.equals(sop.canon(o), expect), 1, false, line);
+                        // a StackOverflowError inside a shared BC engine (digest state) breaks it, so every stack probe
+                        // gets a fresh context + stage op
+                        ProbeFactory f = () -> {
+                            Object cx2 = ml ? new Stages.MlCtx(alg, in) : new Stages.SlhCtx(alg, in);
+                            Stages.StageOp op2 = ml ? Stages.mlOp(sv, (Stages.MlCtx) cx2) : Stages.slhOp(sv, (Stages.SlhCtx) cx2);
+                            return simple(op2::run);
+                        };
+                        measureOp(() -> sop.run(), o -> Arrays.equals(sop.canon(o), expect), 1, false, line, f);
                     } catch (Throwable t) { line.put("match", false); line.put("error", t.toString()); }
                     emit(sink, line);
                 }
@@ -141,6 +148,10 @@ final class Memory {
     }
 
     static void measureOp(Callable<Object> op, Check check, int batch, boolean multi, Map<String, Object> line) throws Exception {
+        measureOp(op, check, batch, multi, line, () -> simple(op));
+    }
+
+    static void measureOp(Callable<Object> op, Check check, int batch, boolean multi, Map<String, Object> line, ProbeFactory f) throws Exception {
         boolean match = check.ok(op.call());
         long t0 = System.nanoTime(); int n = 0;
         while ((System.nanoTime() - t0 < 1_000_000_000L || n < 20) && System.nanoTime() - t0 < 3_000_000_000L) { if (!check.ok(op.call())) match = false; n++; }
@@ -148,7 +159,6 @@ final class Memory {
         long[] h = heapPerOp(op, batch, multi);
         line.put("heap_alloc_bytes_per_op", h[0]); line.put("heap_peak_bytes", null);
         line.put("heap_method", multi ? "ThreadMXBean.getTotalThreadAllocatedBytes delta / ops (all threads)" : "ThreadMXBean.getThreadAllocatedBytes delta / ops (measuring thread)");
-        ProbeFactory f = () -> simple(op);
         putStack(line, stackBytes(f, isSlow(f)), STACK_METHOD);
     }
 

@@ -101,7 +101,7 @@ the same key repeatedly; `validate` runs `total_best` with the composition recor
 
 <!-- RESULTS -->
 
-## Results (preliminary dev run on a shared 4-core box)
+## Results (preliminary dev run on a shared 4-core box; memory on 4 params only)
 
 Median wall per stage execution (us); speedup = median of `<stage>.v0` / median of the variant; match = canonical output equals v0's.
 

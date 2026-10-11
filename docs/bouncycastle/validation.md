@@ -61,7 +61,7 @@ SLH-DSA "s" siggen cases in the six sign variants. Nothing had to be explained a
 
 <!-- RESULTS -->
 
-## Results (preliminary dev run on a shared 4-core box)
+## Results (preliminary dev run on a shared 4-core box; memory on 4 params only)
 
 | variant | pass | fail | skipped |
 |---|---|---|---|
