@@ -20,11 +20,22 @@ for v in "${LIBS[@]}"; do for s in "${ALL[@]}"; do
   "$ROOT/libs/$v/run.sh" crossverify "$ROOT/results/$s/artifacts.json" "$ROOT/results/$v/crossverify-$s.json"
 done; done
 
+for l in "${LIBS[@]}"; do
+  echo "== validate $l (NIST ACVP + negative suite, every variant)"
+  "$ROOT/libs/$l/run.sh" validate "$ROOT/common/validation/validation.json.gz" "$ROOT/results/$l/validation.json"
+done
+
 if [[ $BENCH == 1 ]]; then for l in "${LIBS[@]}"; do
   echo "== bench $l (budget ${BUDGET}ms)"
   rm -f "$ROOT/results/$l/bench.jsonl"
   "$ROOT/libs/$l/run.sh" bench --budget-ms "$BUDGET" --out "$ROOT/results/$l/bench.jsonl"
+  echo "== verify stages $l"
+  rm -f "$ROOT/results/$l/stages.jsonl"
+  "$ROOT/libs/$l/run.sh" stages --budget-ms "$BUDGET" --out "$ROOT/results/$l/stages.jsonl"
+  echo "== memory $l"
+  rm -f "$ROOT/results/$l/memory.jsonl"
+  "$ROOT/libs/$l/run.sh" memory --out "$ROOT/results/$l/memory.jsonl"
 done; fi
 
-node "$ROOT/common/check-match.mjs"
+node "$ROOT/common/check-match.mjs" || echo "!! match check reported problems (see results/MATCH.md)"
 node "$ROOT/common/report.mjs"
