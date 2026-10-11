@@ -10,10 +10,14 @@ with the byte 0xA5 before the run. After `pthread_join` the region is scanned fr
 that is not 0xA5; `stack_bytes` is the distance from that address to the top of the region, minus the high-water
 mark of an empty function run the same way (glibc puts the thread descriptor / TLS at the top of a user-supplied
 stack and the start routine has its own frames; that baseline is ~2-3 KiB and is reported in `stack_method`).
-Resolution: the scan is byte-exact, but the baseline and the trampoline differ by a few words between runs, so
-`stack_resolution_bytes` is reported as 16. The measured op is a warm second call (the first call of a liboqs
-binary performs one-time initialisation such as the SHA-3 dispatch and the `OQS_SIG` object creation, which is
-not part of an operation). Inputs (keys, message, signature, the stage state) live outside the measured stack.
+Resolution: the scan is byte-exact, but glibc's thread start code dirties the stack just below the start
+routine before calling it, so the trampoline re-paints everything below its own frame except a 256-byte safety
+margin and the high-water mark is taken from that frame; usage inside the margin is not resolvable (a stage that
+needs less than ~256 B, e.g. ML-DSA `decode`, reads 0), hence `stack_resolution_bytes: 256`. The trampoline's own
+call overhead (measured with an empty function) is subtracted. The measured op is a warm second call (the first
+call of a liboqs binary performs one-time initialisation such as the SHA-3 dispatch and the `OQS_SIG` object
+creation, which is not part of an operation). Inputs (keys, message, signature, the stage state) live outside the
+measured stack.
 
 **Heap.** The driver is linked statically with an allocator interposer (`libs/liboqs/src/memhook.c`) that
 replaces `malloc/calloc/realloc/free/memalign/posix_memalign/aligned_alloc/valloc` and forwards to glibc's
@@ -34,14 +38,21 @@ slhdsa-c keeps everything on the stack too (ADRS, the `slh_var_t` with SHA-2 mid
 lookups in the `fasthash` flavour (none: `SHA256_Transform` is stateless) and liboqs's `OQS_SIG` wrapper (none per
 op). Falcon (PQClean) uses a stack `tmp` buffer of a few KiB for verify and tens of KiB for keygen/sign.
 
-## Conclusions (preliminary)
+## Conclusions (preliminary dev run, all 17 params, all variants; `results/liboqs/memory.jsonl`)
 
-Dev numbers: ML-DSA-44 verify ~28 KiB stack (the A^ matrix dominates), ML-DSA-87 sign ~110 KiB; SLH-DSA
-verify ~3 KiB and sign/keygen a few KiB regardless of parameter set (slhdsa-c is written for small stacks);
-Falcon-512 verify ~3 KiB. Heap per op: ML-DSA verify ~5.7 KB allocated / 1.1 KB peak (SHAKE contexts),
-SLH-DSA 280 B (a single `OQS_SIG`-level buffer), stages allocate only when they hash. The `cached` pipeline
-(`total_best`) needs the least stack of the ML-DSA verifiers (4.8 KiB) because the matrix lives in the
-per-key cache rather than on the stack. The threaded variants have the same per-worker footprint as `v0`.
+- **ML-DSA (mldsa-native, all on the stack):** keygen 31 / 54 / 79 KiB, sign 50 / 85 / 113 KiB, verify 30 / 50 / 74 KiB
+  for ML-DSA-44 / 65 / 87; the A^ matrix (k x l KiB) plus a few polynomial vectors. Heap: 5.7-17.6 KB allocated per
+  op with a 1.1 KB peak, all of it liboqs's SHA-3 layer allocating and freeing Keccak states (`OQS_SHA3_*_inc_init`
+  uses `OQS_MEM_aligned_alloc`; the 4-way contexts are the largest). The direct-API variants are ~0.5 KiB smaller
+  (no `OQS_SIG` wrapper frames); build flavours differ by a few hundred bytes (inlining); the threaded variant has
+  the same per-worker footprint.
+- **SLH-DSA (slhdsa-c):** 3.7-4.8 KiB stack for every op and every parameter set (ADRS, `slh_var_t` with the SHA-2
+  midstates, FORS roots `k*n`, WOTS temporary `len*n`), no heap of its own; the constant 280 B heap is one
+  `OQS_randombytes` / wrapper allocation. Per stage: ht_wots ~3 KiB, fors ~1.9 KiB, hmsg 0.5-0.7 KiB, ht_auth 0.5 KiB.
+- **Falcon (PQClean):** keygen 36 KiB, sign 86 KiB (the FFT temporaries), verify 9 KiB.
+- **Verify stages (ML-DSA):** w_approx 6.7-9.7 KiB (NTT(z) copy, two polynomials), expandA 4.3 KiB (4-way Keccak
+  state), hint_check 1.4 KiB, mu 0.4 KiB, decode below the 256 B resolution. `total_best` runs in 6.4-9.5 KiB
+  because A^ lives in the per-key cache instead of the stack, versus 30-74 KiB for the library's verify.
 
 <!-- RESULTS -->
 

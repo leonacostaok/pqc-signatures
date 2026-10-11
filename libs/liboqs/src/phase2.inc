@@ -465,7 +465,7 @@ static int cmd_memory(int argc, char **argv) {
 		printf("{\"lib\":\"liboqs\",\"variant\":\"%s\",\"op\":\"%s\",", variant, stage ? "verify-stage" : op);
 		if (stage) printf("\"stage\":\"%s\",", stage);
 		printf("\"param\":\"%s\",\"stack_bytes\":%zu,\"stack_method\":\"private pthread stack (16 MiB) re-painted with 0xA5 below the trampoline frame, high-water scan from that frame, minus the trampoline+call overhead of %zu B\","
-		       "\"stack_resolution_bytes\":16,\"heap_alloc_bytes_per_op\":%zu,\"heap_peak_bytes\":%zu,"
+		       "\"stack_resolution_bytes\":256,\"heap_alloc_bytes_per_op\":%zu,\"heap_peak_bytes\":%zu,"
 		       "\"heap_method\":\"interposed malloc/calloc/realloc/memalign in the static binary (malloc_usable_size accounting)\",\"threads\":%d,\"match\":%s}\n",
 		       p->name, stack, g_paint_baseline, heap_total, heap_peak, threads, match ? "true" : "false");
 		fflush(stdout);
