@@ -7,3 +7,7 @@ libs/*/out/
 *.class
 results/*/artifacts*.json
 results/.done/
+results/.resume.sh
+results/noble/memjob*.log
+results/noble/memjobs.*
+results/noble/memory.part*.jsonl
