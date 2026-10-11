@@ -535,8 +535,72 @@ pub fn ht_wots_raw<P: ParameterSet>(rs: &RawSuite, ht: &[u8], h: &HmsgOut, msgs:
     out
 }
 
-/// v2: all d*len chains flattened and advanced four at a time in lockstep on the 4-lane Keccak
-/// (lanes whose chain is already finished keep hashing a dummy; SHA2 falls back to scalar raw).
+
+/// A WOTS+ chain to advance: layer, chain index, start digit, the chain's signature element.
+pub struct Chain<'a> {
+    pub layer: usize,
+    pub idx: usize,
+    pub start: u8,
+    pub sig: &'a [u8],
+}
+
+/// Advances many WOTS+ chains on the 4-lane Keccak with a work list: each lane runs one chain and
+/// pulls the next one as soon as its chain ends, so no lane hashes dummies except at the very end.
+/// Returns the chain ends in input order.
+pub fn chains_x4<P: ParameterSet>(rs: &RawSuite, chains: &[Chain], li: &[(u64, u32)]) -> Vec<Bytes> {
+    let n = P::N::USIZE;
+    let total = chains.len();
+    let mut out = vec![vec![0u8; n]; total];
+    let mut next = 0usize;
+    // lane state: (chain index, next step) ; None = idle
+    let mut lane: [Option<(usize, u8)>; 4] = [None; 4];
+    let mut vals = [[0u8; 64]; 4];
+    let mut load = |l: usize, lane: &mut [Option<(usize, u8)>; 4], vals: &mut [[u8; 64]; 4], out: &mut Vec<Bytes>, next: &mut usize| {
+        lane[l] = None;
+        while *next < total {
+            let c = &chains[*next];
+            *next += 1;
+            if c.start >= 15 {
+                out[*next - 1][..n].copy_from_slice(&c.sig[..n]);
+                continue;
+            }
+            vals[l][..n].copy_from_slice(&c.sig[..n]);
+            lane[l] = Some((*next - 1, c.start));
+            break;
+        }
+    };
+    for l in 0..4 {
+        load(l, &mut lane, &mut vals, &mut out, &mut next);
+    }
+    while lane.iter().any(|x| x.is_some()) {
+        let mut ads = [[0u8; 32]; 4];
+        let cur = vals;
+        let mut ms: [&[u8]; 4] = [&[]; 4];
+        for l in 0..4 {
+            let (ci, step) = lane[l].unwrap_or((0, 0));
+            let c = &chains[ci];
+            ads[l] = adrs32(c.layer as u32, li[c.layer].0, T_WOTS_HASH, li[c.layer].1, c.idx as u32, u32::from(step));
+            ms[l] = &cur[l][..n];
+        }
+        let mut res = [[0u8; 64]; 4];
+        rs.f_x4(&ads, &ms, &mut res);
+        for l in 0..4 {
+            if let Some((ci, step)) = lane[l] {
+                vals[l] = res[l];
+                if step + 1 >= 15 {
+                    out[ci][..n].copy_from_slice(&vals[l][..n]);
+                    load(l, &mut lane, &mut vals, &mut out, &mut next);
+                } else {
+                    lane[l] = Some((ci, step + 1));
+                }
+            }
+        }
+    }
+    out
+}
+
+/// v2: all d*len chains on the 4-lane Keccak with a work list (a lane pulls the next chain as soon
+/// as its chain ends); SHA2 sets dispatch to the scalar raw path.
 pub fn ht_wots_x4<P: ParameterSet>(rs: &RawSuite, ht: &[u8], h: &HmsgOut, msgs: &[Bytes]) -> Vec<Bytes> {
     if !rs.lanes4() {
         return ht_wots_raw::<P>(rs, ht, h, msgs);
@@ -544,47 +608,19 @@ pub fn ht_wots_x4<P: ParameterSet>(rs: &RawSuite, ht: &[u8], h: &HmsgOut, msgs: 
     let (n, len, d) = (P::N::USIZE, P::WotsSigLen::USIZE, P::D::USIZE);
     let li = layer_indices::<P>(h.idx_tree, h.idx_leaf);
     let digits: Vec<Vec<u8>> = (0..d).map(|j| wots_digits(&msgs[j])).collect();
-    let total = d * len;
-    let mut chain_out = vec![0u8; total * n];
-    let mut c0 = 0;
-    while c0 < total {
-        let lanes: [usize; 4] = [c0.min(total - 1), (c0 + 1).min(total - 1), (c0 + 2).min(total - 1), (c0 + 3).min(total - 1)];
-        let mut vals = [[0u8; 64]; 4];
-        let mut start = [0u8; 4];
-        for l in 0..4 {
-            let (j, i) = (lanes[l] / len, lanes[l] % len);
-            let xs = xmss_sig_slice::<P>(ht, j);
-            vals[l][..n].copy_from_slice(&xs[i * n..(i + 1) * n]);
-            start[l] = digits[j][i];
+    let mut chains = Vec::with_capacity(d * len);
+    for j in 0..d {
+        let xs = xmss_sig_slice::<P>(ht, j);
+        for i in 0..len {
+            chains.push(Chain { layer: j, idx: i, start: digits[j][i], sig: &xs[i * n..(i + 1) * n] });
         }
-        for step in 0..15u8 {
-            let mut ads = [[0u8; 32]; 4];
-            let mut ms: [&[u8]; 4] = [&[]; 4];
-            let cur = vals;
-            for l in 0..4 {
-                let (j, i) = (lanes[l] / len, lanes[l] % len);
-                ads[l] = adrs32(j as u32, li[j].0, T_WOTS_HASH, li[j].1, i as u32, u32::from(step));
-                ms[l] = &cur[l][..n];
-            }
-            let mut res = [[0u8; 64]; 4];
-            rs.f_x4(&ads, &ms, &mut res);
-            for l in 0..4 {
-                if step >= start[l] {
-                    vals[l] = res[l];
-                }
-            }
-        }
-        for l in 0..4 {
-            if c0 + l < total {
-                chain_out[(c0 + l) * n..(c0 + l + 1) * n].copy_from_slice(&vals[l][..n]);
-            }
-        }
-        c0 += 4;
     }
+    let ends = chains_x4::<P>(rs, &chains, &li);
     (0..d)
         .map(|j| {
+            let flat: Vec<u8> = ends[j * len..(j + 1) * len].concat();
             let mut pk = vec![0u8; n];
-            rs.t(&adrs32(j as u32, li[j].0, T_WOTS_PK, li[j].1, 0, 0), &chain_out[j * len * n..(j + 1) * len * n], &mut pk);
+            rs.t(&adrs32(j as u32, li[j].0, T_WOTS_PK, li[j].1, 0, 0), &flat, &mut pk);
             pk
         })
         .collect()
@@ -851,44 +887,15 @@ fn wots_layer_raw<P: ParameterSet>(rs: &RawSuite, ht: &[u8], li: &[(u64, u32)], 
     pk
 }
 
-/// One layer's WOTS+ pkFromSig with chains advanced four at a time.
+/// One layer's WOTS+ pkFromSig with its chains on the 4-lane work-list engine.
 fn wots_layer_x4<P: ParameterSet>(rs: &RawSuite, ht: &[u8], li: &[(u64, u32)], j: usize, msg: &[u8]) -> Bytes {
     let (n, len) = (P::N::USIZE, P::WotsSigLen::USIZE);
     let xs = xmss_sig_slice::<P>(ht, j);
     let digits = wots_digits(msg);
-    let mut chain_out = vec![0u8; len * n];
-    let mut c0 = 0;
-    while c0 < len {
-        let lanes: [usize; 4] = [c0.min(len - 1), (c0 + 1).min(len - 1), (c0 + 2).min(len - 1), (c0 + 3).min(len - 1)];
-        let mut vals = [[0u8; 64]; 4];
-        for l in 0..4 {
-            vals[l][..n].copy_from_slice(&xs[lanes[l] * n..(lanes[l] + 1) * n]);
-        }
-        for step in 0..15u8 {
-            let mut ads = [[0u8; 32]; 4];
-            let mut ms: [&[u8]; 4] = [&[]; 4];
-            let cur = vals;
-            for l in 0..4 {
-                ads[l] = adrs32(j as u32, li[j].0, T_WOTS_HASH, li[j].1, lanes[l] as u32, u32::from(step));
-                ms[l] = &cur[l][..n];
-            }
-            let mut res = [[0u8; 64]; 4];
-            rs.f_x4(&ads, &ms, &mut res);
-            for l in 0..4 {
-                if step >= digits[lanes[l]] {
-                    vals[l] = res[l];
-                }
-            }
-        }
-        for l in 0..4 {
-            if c0 + l < len {
-                chain_out[(c0 + l) * n..(c0 + l + 1) * n].copy_from_slice(&vals[l][..n]);
-            }
-        }
-        c0 += 4;
-    }
+    let chains: Vec<Chain> = (0..len).map(|i| Chain { layer: j, idx: i, start: digits[i], sig: &xs[i * n..(i + 1) * n] }).collect();
+    let flat: Vec<u8> = chains_x4::<P>(rs, &chains, li).concat();
     let mut pk = vec![0u8; n];
-    rs.t(&adrs32(j as u32, li[j].0, T_WOTS_PK, li[j].1, 0, 0), &chain_out, &mut pk);
+    rs.t(&adrs32(j as u32, li[j].0, T_WOTS_PK, li[j].1, 0, 0), &flat, &mut pk);
     pk
 }
 

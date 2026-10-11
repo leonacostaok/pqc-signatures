@@ -127,13 +127,13 @@ inputs (`stage` field) plus the `total` and `total_best` pipelines on raw bytes.
 | SLH-DSA-SHA2-256s | verify-stage ht_auth | `ht_auth.v0` | 368 | 576 | 576 | 1 | ✓ |
 | SLH-DSA-SHA2-256s | verify-stage ht_wots | `ht_wots.v0` | 4768 | 576 | 576 | 1 | ✓ |
 | SLH-DSA-SHA2-256s | verify-stage total | `total.v0` | 197952 | 246 | 246 | 1 | ✓ |
-| SLH-DSA-SHA2-256s | verify-stage total_best | `total_best.v0` | 3120 | 35142 | 4441 | 1 | ✓ |
-| SLH-DSA-SHAKE-128f | keygen | `keygen.v0` | 3840 | 96 | 96 | 1 | ✓ |
+| SLH-DSA-SHA2-256s | verify-stage total_best | `total_best.v0` | 2160 | 35718 | 4505 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | keygen | `keygen.v0` | 3832 | 96 | 96 | 1 | ✓ |
 | SLH-DSA-SHAKE-128f | keygen | `keygen.v1` | 3720 | 96 | 96 | 1 | ✓ |
 | SLH-DSA-SHAKE-128f | keygen | `keygen.v2` | 3712 | 96 | 96 | 1 | ✓ |
 | SLH-DSA-SHAKE-128f | keygen | `keygen.v3` | 3064 | 96 | 96 | 1 | ✓ |
 | SLH-DSA-SHAKE-128f | keygen | `keygen.v4` | 3840 | 96 | 96 | 1 | ✓ |
-| SLH-DSA-SHAKE-128f | keygen | `keygen.v5` | 3840 | 96 | 96 | 4 | ✓ |
+| SLH-DSA-SHAKE-128f | keygen | `keygen.v5` | 3832 | 96 | 96 | 4 | ✓ |
 | SLH-DSA-SHAKE-128f | sign | `sign.v0` | 96048 | 17088 | 17088 | 1 | ✓ |
 | SLH-DSA-SHAKE-128f | sign | `sign.v1` | 96048 | 17088 | 17088 | 1 | ✓ |
 | SLH-DSA-SHAKE-128f | sign | `sign.v2` | 86928 | 17088 | 17088 | 1 | ✓ |
@@ -146,9 +146,9 @@ inputs (`stage` field) plus the `total` and `total_best` pipelines on raw bytes.
 | SLH-DSA-SHAKE-128f | verify | `verify.v3` | 63600 | 0 | 0 | 1 | ✓ |
 | SLH-DSA-SHAKE-128f | verify | `verify.v4` | 86720 | 0 | 0 | 1 | ✓ |
 | SLH-DSA-SHAKE-128f | verify | `verify.v5` | 86768 | 0 | 0 | 4 | ✓ |
-| SLH-DSA-SHAKE-128f | verify-stage fors | `fors.v0` | 1728 | 16 | 16 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | verify-stage fors | `fors.v0` | 1720 | 16 | 16 | 1 | ✓ |
 | SLH-DSA-SHAKE-128f | verify-stage hmsg | `hmsg.v0` | 104032 | 59 | 59 | 1 | ✓ |
-| SLH-DSA-SHAKE-128f | verify-stage ht_auth | `ht_auth.v0` | 320 | 1232 | 1232 | 1 | ✓ |
-| SLH-DSA-SHAKE-128f | verify-stage ht_wots | `ht_wots.v0` | 1520 | 1232 | 1232 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | verify-stage ht_auth | `ht_auth.v0` | 312 | 1232 | 1232 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | verify-stage ht_wots | `ht_wots.v0` | 1512 | 1232 | 1232 | 1 | ✓ |
 | SLH-DSA-SHAKE-128f | verify-stage total | `total.v0` | 122640 | 427 | 427 | 1 | ✓ |
-| SLH-DSA-SHAKE-128f | verify-stage total_best | `total_best.v0` | 5152 | 16369 | 1118 | 1 | ✓ |
+| SLH-DSA-SHAKE-128f | verify-stage total_best | `total_best.v0` | 3808 | 77969 | 3838 | 1 | ✓ |
