@@ -36,13 +36,86 @@ pub fn keccak_f1600(st: &mut [u64; 25]) {
 
 #[cfg(target_arch = "x86_64")]
 mod avx2 {
-    use super::{PI, RC, RHO};
+    use super::RC;
     use core::arch::x86_64::*;
 
+    macro_rules! rol {
+        ($v:expr, $r:literal) => {{
+            let v = $v;
+            _mm256_or_si256(_mm256_slli_epi64::<$r>(v), _mm256_srli_epi64::<{ 64 - $r }>(v))
+        }};
+    }
+
     #[inline(always)]
-    unsafe fn rotl(v: __m256i, r: u32) -> __m256i {
-        // variable-count shifts (counts >= 64 yield zero, so r = 0 is handled naturally)
-        _mm256_or_si256(_mm256_sll_epi64(v, _mm_cvtsi32_si128(r as i32)), _mm256_srl_epi64(v, _mm_cvtsi32_si128((64 - r) as i32)))
+    unsafe fn x5(a: __m256i, b: __m256i, c: __m256i, d: __m256i, e: __m256i) -> __m256i {
+        _mm256_xor_si256(_mm256_xor_si256(_mm256_xor_si256(a, b), _mm256_xor_si256(c, d)), e)
+    }
+
+    /// One fully unrolled Keccak round on four lanes (immediate-count rotations).
+    #[inline(always)]
+    unsafe fn round(a: &mut [__m256i; 25], rc: i64) {
+        let c0 = x5(a[0], a[5], a[10], a[15], a[20]);
+        let c1 = x5(a[1], a[6], a[11], a[16], a[21]);
+        let c2 = x5(a[2], a[7], a[12], a[17], a[22]);
+        let c3 = x5(a[3], a[8], a[13], a[18], a[23]);
+        let c4 = x5(a[4], a[9], a[14], a[19], a[24]);
+        let d0 = _mm256_xor_si256(c4, rol!(c1, 1));
+        let d1 = _mm256_xor_si256(c0, rol!(c2, 1));
+        let d2 = _mm256_xor_si256(c1, rol!(c3, 1));
+        let d3 = _mm256_xor_si256(c2, rol!(c4, 1));
+        let d4 = _mm256_xor_si256(c3, rol!(c0, 1));
+        let mut b: [__m256i; 25] = [_mm256_setzero_si256(); 25];
+        b[0] = _mm256_xor_si256(a[0], d0);
+        b[10] = rol!(_mm256_xor_si256(a[1], d1), 1);
+        b[20] = rol!(_mm256_xor_si256(a[2], d2), 62);
+        b[5] = rol!(_mm256_xor_si256(a[3], d3), 28);
+        b[15] = rol!(_mm256_xor_si256(a[4], d4), 27);
+        b[16] = rol!(_mm256_xor_si256(a[5], d0), 36);
+        b[1] = rol!(_mm256_xor_si256(a[6], d1), 44);
+        b[11] = rol!(_mm256_xor_si256(a[7], d2), 6);
+        b[21] = rol!(_mm256_xor_si256(a[8], d3), 55);
+        b[6] = rol!(_mm256_xor_si256(a[9], d4), 20);
+        b[7] = rol!(_mm256_xor_si256(a[10], d0), 3);
+        b[17] = rol!(_mm256_xor_si256(a[11], d1), 10);
+        b[2] = rol!(_mm256_xor_si256(a[12], d2), 43);
+        b[12] = rol!(_mm256_xor_si256(a[13], d3), 25);
+        b[22] = rol!(_mm256_xor_si256(a[14], d4), 39);
+        b[23] = rol!(_mm256_xor_si256(a[15], d0), 41);
+        b[8] = rol!(_mm256_xor_si256(a[16], d1), 45);
+        b[18] = rol!(_mm256_xor_si256(a[17], d2), 15);
+        b[3] = rol!(_mm256_xor_si256(a[18], d3), 21);
+        b[13] = rol!(_mm256_xor_si256(a[19], d4), 8);
+        b[14] = rol!(_mm256_xor_si256(a[20], d0), 18);
+        b[24] = rol!(_mm256_xor_si256(a[21], d1), 2);
+        b[9] = rol!(_mm256_xor_si256(a[22], d2), 61);
+        b[19] = rol!(_mm256_xor_si256(a[23], d3), 56);
+        b[4] = rol!(_mm256_xor_si256(a[24], d4), 14);
+        a[0] = _mm256_xor_si256(b[0], _mm256_andnot_si256(b[1], b[2]));
+        a[1] = _mm256_xor_si256(b[1], _mm256_andnot_si256(b[2], b[3]));
+        a[2] = _mm256_xor_si256(b[2], _mm256_andnot_si256(b[3], b[4]));
+        a[3] = _mm256_xor_si256(b[3], _mm256_andnot_si256(b[4], b[0]));
+        a[4] = _mm256_xor_si256(b[4], _mm256_andnot_si256(b[0], b[1]));
+        a[5] = _mm256_xor_si256(b[5], _mm256_andnot_si256(b[6], b[7]));
+        a[6] = _mm256_xor_si256(b[6], _mm256_andnot_si256(b[7], b[8]));
+        a[7] = _mm256_xor_si256(b[7], _mm256_andnot_si256(b[8], b[9]));
+        a[8] = _mm256_xor_si256(b[8], _mm256_andnot_si256(b[9], b[5]));
+        a[9] = _mm256_xor_si256(b[9], _mm256_andnot_si256(b[5], b[6]));
+        a[10] = _mm256_xor_si256(b[10], _mm256_andnot_si256(b[11], b[12]));
+        a[11] = _mm256_xor_si256(b[11], _mm256_andnot_si256(b[12], b[13]));
+        a[12] = _mm256_xor_si256(b[12], _mm256_andnot_si256(b[13], b[14]));
+        a[13] = _mm256_xor_si256(b[13], _mm256_andnot_si256(b[14], b[10]));
+        a[14] = _mm256_xor_si256(b[14], _mm256_andnot_si256(b[10], b[11]));
+        a[15] = _mm256_xor_si256(b[15], _mm256_andnot_si256(b[16], b[17]));
+        a[16] = _mm256_xor_si256(b[16], _mm256_andnot_si256(b[17], b[18]));
+        a[17] = _mm256_xor_si256(b[17], _mm256_andnot_si256(b[18], b[19]));
+        a[18] = _mm256_xor_si256(b[18], _mm256_andnot_si256(b[19], b[15]));
+        a[19] = _mm256_xor_si256(b[19], _mm256_andnot_si256(b[15], b[16]));
+        a[20] = _mm256_xor_si256(b[20], _mm256_andnot_si256(b[21], b[22]));
+        a[21] = _mm256_xor_si256(b[21], _mm256_andnot_si256(b[22], b[23]));
+        a[22] = _mm256_xor_si256(b[22], _mm256_andnot_si256(b[23], b[24]));
+        a[23] = _mm256_xor_si256(b[23], _mm256_andnot_si256(b[24], b[20]));
+        a[24] = _mm256_xor_si256(b[24], _mm256_andnot_si256(b[20], b[21]));
+        a[0] = _mm256_xor_si256(a[0], _mm256_set1_epi64x(rc));
     }
 
     #[target_feature(enable = "avx2")]
@@ -51,34 +124,8 @@ mod avx2 {
         for i in 0..25 {
             a[i] = _mm256_set_epi64x(st[3][i] as i64, st[2][i] as i64, st[1][i] as i64, st[0][i] as i64);
         }
-        let mut b: [__m256i; 25] = [_mm256_setzero_si256(); 25];
-        for round in 0..24 {
-            // theta
-            let mut c = [_mm256_setzero_si256(); 5];
-            for x in 0..5 {
-                c[x] = _mm256_xor_si256(
-                    _mm256_xor_si256(_mm256_xor_si256(a[x], a[x + 5]), _mm256_xor_si256(a[x + 10], a[x + 15])),
-                    a[x + 20],
-                );
-            }
-            for x in 0..5 {
-                let d = _mm256_xor_si256(c[(x + 4) % 5], rotl(c[(x + 1) % 5], 1));
-                for y in 0..5 {
-                    a[x + 5 * y] = _mm256_xor_si256(a[x + 5 * y], d);
-                }
-            }
-            // rho + pi
-            for i in 0..25 {
-                b[PI[i]] = rotl(a[i], RHO[i]);
-            }
-            // chi
-            for y in 0..5 {
-                for x in 0..5 {
-                    a[x + 5 * y] = _mm256_xor_si256(b[x + 5 * y], _mm256_andnot_si256(b[(x + 1) % 5 + 5 * y], b[(x + 2) % 5 + 5 * y]));
-                }
-            }
-            // iota
-            a[0] = _mm256_xor_si256(a[0], _mm256_set1_epi64x(RC[round] as i64));
+        for r in 0..24 {
+            round(&mut a, RC[r] as i64);
         }
         for i in 0..25 {
             let mut tmp = [0u64; 4];
