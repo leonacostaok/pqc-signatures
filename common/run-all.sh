@@ -20,11 +20,6 @@ for v in "${LIBS[@]}"; do for s in "${ALL[@]}"; do
   "$ROOT/libs/$v/run.sh" crossverify "$ROOT/results/$s/artifacts.json" "$ROOT/results/$v/crossverify-$s.json"
 done; done
 
-for l in "${LIBS[@]}"; do
-  echo "== validate $l (NIST ACVP + negative suite, every variant)"
-  "$ROOT/libs/$l/run.sh" validate "$ROOT/common/validation/validation.json.gz" "$ROOT/results/$l/validation.json"
-done
-
 if [[ $BENCH == 1 ]]; then for l in "${LIBS[@]}"; do
   echo "== bench $l (budget ${BUDGET}ms)"
   rm -f "$ROOT/results/$l/bench.jsonl"
@@ -37,6 +32,12 @@ if [[ $BENCH == 1 ]]; then for l in "${LIBS[@]}"; do
   "$ROOT/libs/$l/run.sh" memory --out "$ROOT/results/$l/memory.jsonl"
 done; fi
 
+for l in "${LIBS[@]}"; do
+  echo "== validate $l (NIST ACVP + negative suite, every variant)"
+  "$ROOT/libs/$l/run.sh" validate "$ROOT/common/validation/validation.json.gz" "$ROOT/results/$l/validation.json"
+done
+
+# validate runs last: some libraries assemble their total_best verify from the fresh stages.jsonl
 node "$ROOT/common/check-match.mjs" || echo "!! match check reported problems (see results/MATCH.md)"
 node "$ROOT/common/report.mjs"
 node "$ROOT/common/report-phase2.mjs"
