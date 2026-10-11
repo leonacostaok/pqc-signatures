@@ -42,3 +42,32 @@ No library bug was found by the suite. Two observations worth recording:
   implementation does prepend `0 ‖ |ctx| ‖ ctx` correctly — the ACVP context vectors pass.
 
 <!-- RESULTS -->
+
+## Summary (PRELIMINARY: dev run on a loaded shared box, short budgets; the orchestrator overwrites this section)
+
+4680 (case, variant) results.
+
+| variant | pass | fail | skipped |
+|---|---|---|---|
+| `keygen.v0` | 195 | 0 | 0 |
+| `keygen.v1` | 195 | 0 | 0 |
+| `keygen.v2` | 195 | 0 | 0 |
+| `keygen.v3` | 195 | 0 | 0 |
+| `keygen.v4` | 195 | 0 | 0 |
+| `keygen.v5` | 195 | 0 | 0 |
+| `sign.v0` | 69 | 0 | 0 |
+| `sign.v1` | 69 | 0 | 0 |
+| `sign.v2` | 69 | 0 | 0 |
+| `sign.v3` | 69 | 0 | 0 |
+| `sign.v4` | 69 | 0 | 0 |
+| `sign.v5` | 69 | 0 | 0 |
+| `total.v0` | 387 | 0 | 0 |
+| `total_best.v0` | 387 | 0 | 0 |
+| `verify.v0` | 387 | 0 | 0 |
+| `verify.v1` | 387 | 0 | 0 |
+| `verify.v2` | 387 | 0 | 0 |
+| `verify.v3` | 387 | 0 | 0 |
+| `verify.v4` | 387 | 0 | 0 |
+| `verify.v5` | 387 | 0 | 0 |
+
+Failures: 0

@@ -179,6 +179,12 @@ impl RawSuite {
             Fam::Sha2L35 => self.sha512_tail(adrs, &[ms], out),
         }
     }
+    /// True when the 4-lane path is real (SHAKE suite + AVX2 Keccak verified); otherwise the x4
+    /// functions dispatch to the scalar raw implementations (lockstep without SIMD would only add work).
+    #[inline]
+    pub fn lanes4(&self) -> bool {
+        self.fam == Fam::Shake && fasthash::x4_available()
+    }
     /// Four F calls at once (SHAKE: 4-lane Keccak; SHA2: four scalar calls).
     #[inline]
     pub fn f_x4(&self, adrs: &[[u8; 32]; 4], m: &[&[u8]; 4], out: &mut [[u8; 64]; 4]) {
@@ -390,6 +396,9 @@ pub fn fors_raw<P: ParameterSet>(rs: &RawSuite, fors: &[u8], h: &HmsgOut) -> Byt
 
 /// v2: the k FORS trees walked four at a time in lockstep on the 4-lane Keccak (SHA2: scalar raw).
 pub fn fors_x4<P: ParameterSet>(rs: &RawSuite, fors: &[u8], h: &HmsgOut) -> Bytes {
+    if !rs.lanes4() {
+        return fors_raw::<P>(rs, fors, h);
+    }
     let (n, k, a) = (P::N::USIZE, P::K::USIZE, P::A::U32);
     let idx = fors_indices::<P>(&h.md);
     let mut roots = vec![0u8; k * n];
@@ -529,6 +538,9 @@ pub fn ht_wots_raw<P: ParameterSet>(rs: &RawSuite, ht: &[u8], h: &HmsgOut, msgs:
 /// v2: all d*len chains flattened and advanced four at a time in lockstep on the 4-lane Keccak
 /// (lanes whose chain is already finished keep hashing a dummy; SHA2 falls back to scalar raw).
 pub fn ht_wots_x4<P: ParameterSet>(rs: &RawSuite, ht: &[u8], h: &HmsgOut, msgs: &[Bytes]) -> Vec<Bytes> {
+    if !rs.lanes4() {
+        return ht_wots_raw::<P>(rs, ht, h, msgs);
+    }
     let (n, len, d) = (P::N::USIZE, P::WotsSigLen::USIZE, P::D::USIZE);
     let li = layer_indices::<P>(h.idx_tree, h.idx_leaf);
     let digits: Vec<Vec<u8>> = (0..d).map(|j| wots_digits(&msgs[j])).collect();
@@ -662,6 +674,9 @@ pub fn ht_auth_raw<P: ParameterSet>(rs: &RawSuite, ht: &[u8], h: &HmsgOut, wots_
 
 /// v2: the d layers' auth paths climbed four at a time in lockstep on the 4-lane Keccak.
 pub fn ht_auth_x4<P: ParameterSet>(rs: &RawSuite, ht: &[u8], h: &HmsgOut, wots_pks: &[Bytes], pk_root: &[u8]) -> AuthOut {
+    if !rs.lanes4() {
+        return ht_auth_raw::<P>(rs, ht, h, wots_pks, pk_root);
+    }
     let (n, d) = (P::N::USIZE, P::D::USIZE);
     let li = layer_indices::<P>(h.idx_tree, h.idx_leaf);
     let mut roots = vec![vec![0u8; n]; d];
@@ -791,7 +806,7 @@ pub fn verify_total_best<P: ParameterSet>(pk: &[u8], msg: &[u8], ctx: &[u8], sig
     let li = layer_indices::<P>(h.idx_tree, h.idx_leaf);
     let mut m = fors_pk;
     for j in 0..P::D::USIZE {
-        let wpk = wots_layer_x4::<P>(&rs, v.ht, &li, j, &m);
+        let wpk = if rs.lanes4() { wots_layer_x4::<P>(&rs, v.ht, &li, j, &m) } else { wots_layer_raw::<P>(&rs, v.ht, &li, j, &m) };
         let auth = auth_slice::<P>(v.ht, j);
         let mut node = wpk;
         let mut tmp = vec![0u8; n];
@@ -811,6 +826,29 @@ pub fn verify_total_best<P: ParameterSet>(pk: &[u8], msg: &[u8], ctx: &[u8], sig
         m = node;
     }
     m.as_slice() == &pk[n..]
+}
+
+/// One layer's WOTS+ pkFromSig on the scalar raw suite.
+fn wots_layer_raw<P: ParameterSet>(rs: &RawSuite, ht: &[u8], li: &[(u64, u32)], j: usize, msg: &[u8]) -> Bytes {
+    let (n, len) = (P::N::USIZE, P::WotsSigLen::USIZE);
+    let (tree, leaf) = li[j];
+    let xs = xmss_sig_slice::<P>(ht, j);
+    let digits = wots_digits(msg);
+    let mut tmp = vec![0u8; len * n];
+    let mut cur = vec![0u8; n];
+    let mut nxt = vec![0u8; n];
+    for i in 0..len {
+        cur.copy_from_slice(&xs[i * n..(i + 1) * n]);
+        for step in digits[i]..15 {
+            let ad = adrs32(j as u32, tree, T_WOTS_HASH, leaf, i as u32, u32::from(step));
+            rs.f(&ad, &cur, &mut nxt);
+            cur.copy_from_slice(&nxt);
+        }
+        tmp[i * n..(i + 1) * n].copy_from_slice(&cur);
+    }
+    let mut pk = vec![0u8; n];
+    rs.t(&adrs32(j as u32, tree, T_WOTS_PK, leaf, 0, 0), &tmp, &mut pk);
+    pk
 }
 
 /// One layer's WOTS+ pkFromSig with chains advanced four at a time.
