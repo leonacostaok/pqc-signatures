@@ -6,3 +6,4 @@ libs/*/out/
 *.o
 *.class
 results/*/artifacts*.json
+results/.done/
