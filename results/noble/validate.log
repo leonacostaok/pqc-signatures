@@ -8,3 +8,4 @@
 [noble] validate sign.v1            pass   69  fail   0  skipped   0  (185.6s)
 [noble] validate sign.v2            pass   69  fail   0  skipped   0  (84.1s)
 [noble] validate sign.v3            pass   69  fail   0  skipped   0  (222.3s)
+[noble] validate sign.v4            pass   69  fail   0  skipped   0  (179.1s)

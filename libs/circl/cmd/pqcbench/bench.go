@@ -237,10 +237,10 @@ func cpuTime() time.Duration {
 const maxCalls = 100000
 
 type stats struct {
-	iterations                int
-	median, mean, p95, min    int64
-	cpuPerOp                  int64
-	cpuUtil, opsPerSec        float64
+	iterations             int
+	median, mean, p95, min int64
+	cpuPerOp               int64
+	cpuUtil, opsPerSec     float64
 }
 
 // measure times run() (batch ops per call) per the contract: warm-up (>= 1 op,

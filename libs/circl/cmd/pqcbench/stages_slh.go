@@ -10,11 +10,11 @@ import (
 // slhStages implements the SLH-DSA verify stages (hmsg, fors, ht_wots, ht_auth)
 // on top of the vendored CIRCL slhdsa package.
 type slhStages struct {
-	id  slhdsa.ID
-	pub slhdsa.PublicKey
-	v   *slhdsa.Verifier
-	st  *slhdsa.State // CIRCL hashers
-	alt *slhdsa.State // SHA-2 midstate (SHA2 sets) or stdlib SHA-3 (SHAKE sets)
+	id   slhdsa.ID
+	pub  slhdsa.PublicKey
+	v    *slhdsa.Verifier
+	st   *slhdsa.State // CIRCL hashers
+	alt  *slhdsa.State // SHA-2 midstate (SHA2 sets) or stdlib SHA-3 (SHAKE sets)
 	pool []*slhdsa.State
 
 	pk, msg, ctx, sig, msgPrime []byte
@@ -25,11 +25,11 @@ type slhStages struct {
 	idxTree                     [][3]uint32
 	msgs, wots, roots           [][]byte
 	// scratch
-	sh       slhdsa.HMsgOut
-	spk      []byte
-	sw, sr   [][]byte
-	swFlat   []byte
-	srFlat   []byte
+	sh        slhdsa.HMsgOut
+	spk       []byte
+	sw, sr    [][]byte
+	swFlat    []byte
+	srFlat    []byte
 	cpk, cctx []byte
 }
 

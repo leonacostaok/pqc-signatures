@@ -13,8 +13,8 @@ import (
 	"runtime"
 	"sync"
 
-	"pqcbench/vendorcircl/sha3"
 	common "pqcbench/vendorcircl/dilithium"
+	"pqcbench/vendorcircl/sha3"
 )
 
 // DecodedPk is pkDecode output: rho and t1 (plus the packed t1 for tr).

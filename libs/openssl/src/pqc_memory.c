@@ -2,10 +2,10 @@
  * pqc_memory.c - peak stack / heap per operation (CONTRACT.md phase 2 C).
  *
  * Stack: the operation runs on a pthread whose 16 MiB stack we allocate and
- * paint with 0xA5; afterwards the lowest non-painted byte gives the high-water
- * mark. The same measurement with an empty thread function (glibc's TLS block,
- * start frame, ...) is subtracted, so stack_bytes is what the operation itself
- * used (resolution: 16 bytes, i.e. the stack alignment).
+ * paint with 0xA5. The trampoline first runs the op once (per-thread lazy
+ * initialisation), then re-paints everything below its own frame and runs the
+ * op again; the lowest non-painted byte gives the op's high-water mark
+ * (resolution: 16 bytes, i.e. the stack alignment).
  * Heap: CRYPTO_set_mem_functions installs counting malloc/realloc/free before
  * any OpenSSL allocation, so every OpenSSL allocation (and only those) is
  * counted: total bytes allocated during the op and the peak of live bytes
@@ -77,29 +77,43 @@ void mem_hooks_install(void)
 typedef struct {
     int (*fn)(void *);
     void *arg;
+    uint8_t *stk;           /* base of the painted stack */
     int ret;
+    size_t used;
     uint64_t alloc0, alloc1, live0, peak1;
 } run_arg_t;
 
 static void *stack_tramp(void *a)
 {
     run_arg_t *r = a;
+    volatile uint8_t marker = 0;
+    uint8_t *sp = (uint8_t *)&marker;
+    /* warm-up inside this thread: per-thread lazy initialisations of OpenSSL
+     * (thread-local error state, RNG child contexts, ...) and the deeper
+     * frames of the pthread start-up code must not be attributed to the op */
+    r->fn(r->arg);
+    /* re-paint everything below the current frame (minus the red zone) */
+    memset(r->stk, PAINT, (size_t)(sp - 256 - r->stk));
     r->alloc0 = atomic_load(&g_alloc_total);
     r->live0 = atomic_load(&g_live);
     atomic_store(&g_peak, r->live0);
     r->ret = r->fn(r->arg);
     r->alloc1 = atomic_load(&g_alloc_total);
     r->peak1 = atomic_load(&g_peak);
+    size_t i = 0;
+    while (r->stk + i < sp - 256 && r->stk[i] == PAINT)
+        i++;
+    r->used = (size_t)(sp - 256 - (r->stk + i));
     return NULL;
 }
 
-static int noop_fn(void *a) { (void)a; return 1; }
-
-/* returns the stack high-water mark in bytes (from the top of the stack) */
-static size_t run_on_painted_stack(run_arg_t *r)
+/* runs r->fn twice on a painted 16 MiB stack; fills r->used (bytes below the
+ * trampoline frame touched by the second, measured, call) and the heap deltas */
+static void run_on_painted_stack(run_arg_t *r)
 {
     uint8_t *stk = aligned_alloc(4096, STACK_SIZE);
     memset(stk, PAINT, STACK_SIZE);
+    r->stk = stk;
     pthread_attr_t at;
     pthread_t th;
     pthread_attr_init(&at);
@@ -108,23 +122,17 @@ static size_t run_on_painted_stack(run_arg_t *r)
         die("pthread_create failed");
     pthread_join(th, NULL);
     pthread_attr_destroy(&at);
-    size_t i = 0;
-    while (i < STACK_SIZE && stk[i] == PAINT)
-        i++;
     free(stk);
-    return STACK_SIZE - i;
 }
-
-static size_t g_baseline = 0;
 
 static size_t measure(int (*fn)(void *), void *arg, int *ret, uint64_t *alloc, uint64_t *peak)
 {
-    run_arg_t r = { fn, arg, 0, 0, 0, 0, 0 };
-    size_t used = run_on_painted_stack(&r);
+    run_arg_t r = { fn, arg, NULL, 0, 0, 0, 0, 0, 0 };
+    run_on_painted_stack(&r);
     *ret = r.ret;
     *alloc = r.alloc1 - r.alloc0;
     *peak = r.peak1 > r.live0 ? r.peak1 - r.live0 : 0;
-    return used > g_baseline ? used - g_baseline : 0;
+    return r.used;
 }
 
 static void emit_mem(FILE *out, const char *variant, const char *op, const char *stage, const char *param,
@@ -135,7 +143,7 @@ static void emit_mem(FILE *out, const char *variant, const char *op, const char 
     if (stage)
         fprintf(out, "\"stage\":\"%s\",", stage);
     fprintf(out, "\"param\":\"%s\",\"stack_bytes\":%zu,\"stack_method\":\"painted 16 MiB pthread stack (pthread_attr_setstack), "
-                 "high-water mark minus empty-thread baseline\",\"stack_resolution_bytes\":16,", param, stack);
+                 "re-painted below the measuring frame after an in-thread warm-up, high-water mark of the op\",\"stack_resolution_bytes\":16,", param, stack);
     if (g_hooks)
         fprintf(out, "\"heap_alloc_bytes_per_op\":%llu,\"heap_peak_bytes\":%llu,\"heap_method\":\"CRYPTO_set_mem_functions "
                      "counting allocator: bytes allocated during the op / peak live bytes above the pre-op level (OpenSSL allocations only)\",",
@@ -166,14 +174,7 @@ int cmd_memory(vectors_t *V, const char *out_path, const char *params)
     FILE *out = fopen(out_path, "a");
     if (out == NULL)
         die("cannot open %s", out_path);
-    /* baseline: empty thread on a painted stack (take the max of a few runs) */
-    for (int i = 0; i < 3; i++) {
-        run_arg_t r = { noop_fn, NULL, 0, 0, 0, 0, 0 };
-        size_t b = run_on_painted_stack(&r);
-        if (b > g_baseline) g_baseline = b;
-    }
-    fprintf(stderr, "[%s] empty-thread stack baseline: %zu bytes, heap hooks: %s\n", BUILD_LABEL, g_baseline,
-            g_hooks ? "installed" : "NOT installed");
+    fprintf(stderr, "[%s] memory: heap hooks %s\n", BUILD_LABEL, g_hooks ? "installed" : "NOT installed");
     int bad = 0;
     for (int pi = 0; pi < V->nparams; pi++) {
         param_t *p = &V->params[pi];

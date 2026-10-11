@@ -90,12 +90,30 @@ libs/circl/run.sh build
 libs/circl/run.sh vectors results/circl/artifacts.json
 libs/circl/run.sh crossverify results/<other>/artifacts.json results/circl/crossverify-<other>.json
 libs/circl/run.sh bench --out results/circl/bench.jsonl [--budget-ms 1000] [--params ..] [--ops ..] [--variants ..]
+# Phase 2
+libs/circl/run.sh validate common/validation/validation.json.gz results/circl/validation.json
+libs/circl/run.sh stages --out results/circl/stages.jsonl [--budget-ms 1000] [--params ..] [--stages ..]
+libs/circl/run.sh memory --out results/circl/memory.jsonl [--params ..]
 ```
+
+## Phase 2 (validation, verify stages, memory)
+
+- `validate`: every ACVP/negative case through every variant of the matching process (keygen.v0-5,
+  sign.v0-5, verify.v0-5 plus `verify.total` and `verify.total_best`); the default binary spawns the other
+  three build flavors as sub-processes and merges their results. See `validation.md`.
+- `stages`: ML-DSA verify split into `decode, mu, expandA, w_approx, hint_check` and SLH-DSA verify into
+  `hmsg, fors, ht_wots, ht_auth`, each with CIRCL's own code as v0 plus alternatives, and `total` /
+  `total_best` pipelines. CIRCL's internals are Go `internal` packages, so verbatim copies live under
+  `libs/circl/vendorcircl/` (license kept, only import paths rewritten) with harness-added `stages.go`
+  entry points. See `verify-stages.md`.
+- `memory`: peak goroutine stack per op by pre-growing and painting a goroutine stack (GC off, async
+  preemption off) and heap via `runtime.MemStats`. See `memory.md`.
 
 `crossverify` and `bench` always write their output and exit 0; failures are reported in the `ok` /
 `match` fields (plus a warning on stderr). `vectors` exits non-zero if any digest differs from the reference.
 A full `bench` (18 variants x 15 params, 1 s budget) takes roughly 10-15 minutes because SLH-DSA "s" signing
-costs about 2 s per operation in CIRCL.
+costs about 2 s per operation in CIRCL; a full `validate` about 6-7 minutes (the SLH-DSA "s" sigGen cases run
+through all six sign variants, nothing is skipped); a full `stages` about 8 minutes; `memory` about 1 minute.
 
 ## Cross-verification status (development run)
 

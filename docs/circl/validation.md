@@ -55,3 +55,28 @@ No library bug was found in CIRCL v1.6.5 by this suite. The only behaviour worth
 and `mldsa.Verify` returns `false` (not an error) for signatures of the wrong length.
 
 <!-- RESULTS -->
+
+| variant | pass | fail | skipped |
+|---|---:|---:|---:|
+| keygen.v0 | 195 | 0 | 0 |
+| keygen.v1 | 195 | 0 | 0 |
+| keygen.v2 | 195 | 0 | 0 |
+| keygen.v3 | 195 | 0 | 0 |
+| keygen.v4 | 195 | 0 | 0 |
+| keygen.v5 | 195 | 0 | 0 |
+| sign.v0 | 69 | 0 | 0 |
+| sign.v1 | 69 | 0 | 0 |
+| sign.v2 | 69 | 0 | 0 |
+| sign.v3 | 69 | 0 | 0 |
+| sign.v4 | 69 | 0 | 0 |
+| sign.v5 | 69 | 0 | 0 |
+| verify.total | 387 | 0 | 0 |
+| verify.total_best | 387 | 0 | 0 |
+| verify.v0 | 387 | 0 | 0 |
+| verify.v1 | 387 | 0 | 0 |
+| verify.v2 | 387 | 0 | 0 |
+| verify.v3 | 387 | 0 | 0 |
+| verify.v4 | 387 | 0 | 0 |
+| verify.v5 | 387 | 0 | 0 |
+
+Total results: 4680; failures: 0.

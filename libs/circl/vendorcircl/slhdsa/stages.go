@@ -10,8 +10,8 @@ package slhdsa
 import (
 	"bytes"
 	"crypto/sha256"
-	"crypto/sha512"
 	stdsha3 "crypto/sha3"
+	"crypto/sha512"
 	"encoding"
 	"hash"
 	"runtime"
@@ -33,9 +33,9 @@ func NewVerifier(pub *PublicKey) *Verifier {
 	return &Verifier{p: p, pub: pub, st: p.NewStatePub(pub.seed)}
 }
 
-func (v *Verifier) N() int      { return int(v.p.n) }
-func (v *Verifier) K() int      { return int(v.p.k) }
-func (v *Verifier) D() int      { return int(v.p.d) }
+func (v *Verifier) N() int       { return int(v.p.n) }
+func (v *Verifier) K() int       { return int(v.p.k) }
+func (v *Verifier) D() int       { return int(v.p.d) }
 func (v *Verifier) IsSHA2() bool { return v.p.isSHA2 }
 func (v *Verifier) Root() []byte { return v.pub.root }
 

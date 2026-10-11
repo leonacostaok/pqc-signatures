@@ -315,8 +315,11 @@ impl RawSha256 {
             self.consumed += full as u64;
             data = &data[full..];
         }
-        self.buf[..data.len()].copy_from_slice(data);
-        self.fill = data.len();
+        if !data.is_empty() {
+            // only reached with an empty or just-flushed buffer
+            self.buf[..data.len()].copy_from_slice(data);
+            self.fill = data.len();
+        }
     }
     /// Finalize into `out` (first `out.len()` bytes of the digest).
     #[inline]
@@ -383,8 +386,11 @@ impl RawSha512 {
             self.consumed += full as u64;
             data = &data[full..];
         }
-        self.buf[..data.len()].copy_from_slice(data);
-        self.fill = data.len();
+        if !data.is_empty() {
+            // only reached with an empty or just-flushed buffer
+            self.buf[..data.len()].copy_from_slice(data);
+            self.fill = data.len();
+        }
     }
     #[inline]
     pub fn finalize_into(mut self, out: &mut [u8]) {
