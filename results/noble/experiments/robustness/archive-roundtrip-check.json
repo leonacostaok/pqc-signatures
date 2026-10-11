@@ -1,0 +1,10 @@
+{
+  "schema": "noble-robustness-archive-roundtrip-v1",
+  "archive_manifest_sha256": "4962caec51124f56c359f79285ce372675672169cd665917fe0e19f9c256bc8b",
+  "archives_checked": 4,
+  "raw_files_recovered": 4824,
+  "reports_reaudited_from_extracted_files": 4,
+  "raw_samples_reaudited": 4800,
+  "independent_output_identical": true,
+  "deterministic_rearchive_sha256_identical": true
+}

@@ -2,6 +2,8 @@
 
 This experiment reduces modular reductions and temporary polynomial allocations in noble ML-DSA key generation, public-key derivation, signing, and verification. The candidate applies a small patch to the unmodified `@noble/post-quantum` 0.7.1 package, independently of this repository's existing vendor and native-hash variants. Existing benchmark variants and historical measurements retain their original meanings.
 
+The [fresh-input robustness follow-up](robustness.md) adds fresh caller buffers, first operations in new processes, balanced randomized ordering, and separate comparisons for noble 0.7.0/0.7.1 on Node 22/24. The measurements below remain the original experiment.
+
 ## Change and arithmetic
 
 The original matrix-vector product constructs `MultiplyNTTs(A[i][j], v[j])` for every column and then adds that temporary polynomial to the row accumulator. `DotNTTs` sums the row's products coefficient by coefficient and reduces once per coefficient. Signing uses its existing matrix; the other operations sample one public matrix row before multiplying it. Sampling order, signature encoding, randomness, validation, domain separation, and explicit cleanup are preserved.

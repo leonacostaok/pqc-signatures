@@ -1,0 +1,712 @@
+{
+  "reports": [
+    {
+      "file": "fresh-0.7.0-node22.json",
+      "sha256": "f1bb8ed583e5ad8499f211948fc8bb0ba0c85671e610fe5e2d05a9f8d449c741",
+      "pairs_checked": 600,
+      "raw_samples_checked": 1200,
+      "balanced_order": true,
+      "summaries": [
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "keygen",
+          "speedup": 1.132172897921674,
+          "minimum_fork_speedup": 1.1305726382343257
+        },
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "getPublicKey",
+          "speedup": 1.141033525533658,
+          "minimum_fork_speedup": 1.1380361912812689
+        },
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "sign",
+          "speedup": 1.0951180994819445,
+          "minimum_fork_speedup": 1.065766437715111
+        },
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "verify",
+          "speedup": 1.1050842635709328,
+          "minimum_fork_speedup": 1.0954160411610707
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "keygen",
+          "speedup": 1.1691332049819438,
+          "minimum_fork_speedup": 1.1684663631227028
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "getPublicKey",
+          "speedup": 1.193592285849045,
+          "minimum_fork_speedup": 1.1898408734834378
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "sign",
+          "speedup": 1.1176956972973868,
+          "minimum_fork_speedup": 1.106698045126665
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "verify",
+          "speedup": 1.1328926769220518,
+          "minimum_fork_speedup": 1.1324179657897777
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "keygen",
+          "speedup": 1.2332276863149516,
+          "minimum_fork_speedup": 1.2297297086719596
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "getPublicKey",
+          "speedup": 1.2490154108973823,
+          "minimum_fork_speedup": 1.2406947977138358
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "sign",
+          "speedup": 1.1889672583300763,
+          "minimum_fork_speedup": 1.155306232493711
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "verify",
+          "speedup": 1.1869859523163373,
+          "minimum_fork_speedup": 1.1824406401757823
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "keygen",
+          "speedup": 1.0183584143853106,
+          "minimum_fork_speedup": 1.0132323993396422
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "getPublicKey",
+          "speedup": 1.0168649481608774,
+          "minimum_fork_speedup": 1.0077694718261183
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "sign",
+          "speedup": 1.0119109283929775,
+          "minimum_fork_speedup": 0.990643760803437
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "verify",
+          "speedup": 1.012852838189696,
+          "minimum_fork_speedup": 1.002829820402885
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "keygen",
+          "speedup": 1.0227182268174837,
+          "minimum_fork_speedup": 1.0130271753496065
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "getPublicKey",
+          "speedup": 1.0292239007222492,
+          "minimum_fork_speedup": 1.0151619036259314
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "sign",
+          "speedup": 1.0555453263159147,
+          "minimum_fork_speedup": 1.049539832591471
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "verify",
+          "speedup": 1.0263645041562768,
+          "minimum_fork_speedup": 1.0171206703400435
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "keygen",
+          "speedup": 1.0417058456262058,
+          "minimum_fork_speedup": 1.0367662459338578
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "getPublicKey",
+          "speedup": 1.0266525972882727,
+          "minimum_fork_speedup": 1.0243248074760651
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "sign",
+          "speedup": 1.025562062884803,
+          "minimum_fork_speedup": 0.9912564982972432
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "verify",
+          "speedup": 1.02833082760837,
+          "minimum_fork_speedup": 1.0102725671851949
+        }
+      ]
+    },
+    {
+      "file": "fresh-0.7.0-node24.json",
+      "sha256": "ad5bdbddd627ebdd60c4f8e56f22aafd7f625c572b4773c74728495b24890821",
+      "pairs_checked": 600,
+      "raw_samples_checked": 1200,
+      "balanced_order": true,
+      "summaries": [
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "keygen",
+          "speedup": 1.1814890010776686,
+          "minimum_fork_speedup": 1.1761089329785888
+        },
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "getPublicKey",
+          "speedup": 1.1987398453177602,
+          "minimum_fork_speedup": 1.198644072224512
+        },
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "sign",
+          "speedup": 1.094124298352984,
+          "minimum_fork_speedup": 1.0818919518514905
+        },
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "verify",
+          "speedup": 1.1006850164090702,
+          "minimum_fork_speedup": 1.0947486641114106
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "keygen",
+          "speedup": 1.2259145953660475,
+          "minimum_fork_speedup": 1.2205107941690438
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "getPublicKey",
+          "speedup": 1.2580339631608406,
+          "minimum_fork_speedup": 1.2455545872565637
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "sign",
+          "speedup": 1.1239171747750205,
+          "minimum_fork_speedup": 1.116330731955101
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "verify",
+          "speedup": 1.1294767299429678,
+          "minimum_fork_speedup": 1.1241972739971482
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "keygen",
+          "speedup": 1.309691145095524,
+          "minimum_fork_speedup": 1.3030250094724405
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "getPublicKey",
+          "speedup": 1.3369536146795382,
+          "minimum_fork_speedup": 1.3248032250679782
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "sign",
+          "speedup": 1.1821034724261918,
+          "minimum_fork_speedup": 1.1603044881856628
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "verify",
+          "speedup": 1.1865108631940093,
+          "minimum_fork_speedup": 1.1800424514946695
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "keygen",
+          "speedup": 1.0281418556055573,
+          "minimum_fork_speedup": 1.0177518812710877
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "getPublicKey",
+          "speedup": 1.017649845350979,
+          "minimum_fork_speedup": 1.0009726852915062
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "sign",
+          "speedup": 1.0408250270960353,
+          "minimum_fork_speedup": 1.0257336934398316
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "verify",
+          "speedup": 1.029098993466926,
+          "minimum_fork_speedup": 1.0170805080984378
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "keygen",
+          "speedup": 1.0602050495856858,
+          "minimum_fork_speedup": 1.0456812715098998
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "getPublicKey",
+          "speedup": 1.0396217412615076,
+          "minimum_fork_speedup": 1.0331414816973528
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "sign",
+          "speedup": 1.0486352943177712,
+          "minimum_fork_speedup": 1.0446767103948487
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "verify",
+          "speedup": 1.0498320601228976,
+          "minimum_fork_speedup": 1.027541992718246
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "keygen",
+          "speedup": 1.0721338740137845,
+          "minimum_fork_speedup": 1.0521793683517409
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "getPublicKey",
+          "speedup": 1.0635122054762676,
+          "minimum_fork_speedup": 1.055171830189034
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "sign",
+          "speedup": 1.0473240088868598,
+          "minimum_fork_speedup": 1.0339088072037455
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "verify",
+          "speedup": 1.042498179221789,
+          "minimum_fork_speedup": 1.0331297936525838
+        }
+      ]
+    },
+    {
+      "file": "fresh-0.7.1-node22.json",
+      "sha256": "d3dd4012880de7a761a6305f1bb56a65ede9dfdd0e79f4aeb2f6c351665dee6c",
+      "pairs_checked": 600,
+      "raw_samples_checked": 1200,
+      "balanced_order": true,
+      "summaries": [
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "keygen",
+          "speedup": 1.1332494289251545,
+          "minimum_fork_speedup": 1.1305310183133632
+        },
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "getPublicKey",
+          "speedup": 1.1411444512593347,
+          "minimum_fork_speedup": 1.136809312427344
+        },
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "sign",
+          "speedup": 1.0912495727250644,
+          "minimum_fork_speedup": 1.0776946341043003
+        },
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "verify",
+          "speedup": 1.1016213155658297,
+          "minimum_fork_speedup": 1.097349966100539
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "keygen",
+          "speedup": 1.1708931680508186,
+          "minimum_fork_speedup": 1.1695107985526931
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "getPublicKey",
+          "speedup": 1.1948781452185302,
+          "minimum_fork_speedup": 1.1834917226324106
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "sign",
+          "speedup": 1.1229339051517102,
+          "minimum_fork_speedup": 1.1123042709628974
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "verify",
+          "speedup": 1.1406784207375928,
+          "minimum_fork_speedup": 1.1302135430340556
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "keygen",
+          "speedup": 1.2308352696757208,
+          "minimum_fork_speedup": 1.227501509170866
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "getPublicKey",
+          "speedup": 1.245611454344108,
+          "minimum_fork_speedup": 1.238609139792814
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "sign",
+          "speedup": 1.1832970639420994,
+          "minimum_fork_speedup": 1.146834274818946
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "verify",
+          "speedup": 1.1893291840199858,
+          "minimum_fork_speedup": 1.1864583697227071
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "keygen",
+          "speedup": 1.0420308435429524,
+          "minimum_fork_speedup": 1.0018767656101244
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "getPublicKey",
+          "speedup": 1.0242648581082925,
+          "minimum_fork_speedup": 0.997867132140122
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "sign",
+          "speedup": 1.0138230422848826,
+          "minimum_fork_speedup": 1.0007321843648578
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "verify",
+          "speedup": 1.0257180318199106,
+          "minimum_fork_speedup": 1.0075797596780647
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "keygen",
+          "speedup": 1.028995923915675,
+          "minimum_fork_speedup": 1.021985750958848
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "getPublicKey",
+          "speedup": 1.0361044085532582,
+          "minimum_fork_speedup": 1.0267417896616386
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "sign",
+          "speedup": 1.0420243570387095,
+          "minimum_fork_speedup": 1.019819882248302
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "verify",
+          "speedup": 1.0236146110160027,
+          "minimum_fork_speedup": 1.0157302097906977
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "keygen",
+          "speedup": 1.0447066426402571,
+          "minimum_fork_speedup": 1.029587138613379
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "getPublicKey",
+          "speedup": 1.0408390796623284,
+          "minimum_fork_speedup": 1.0310856334726655
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "sign",
+          "speedup": 1.0204669468949614,
+          "minimum_fork_speedup": 1.0097882120180426
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "verify",
+          "speedup": 1.0300692143428976,
+          "minimum_fork_speedup": 1.0121795706291736
+        }
+      ]
+    },
+    {
+      "file": "fresh-0.7.1-node24.json",
+      "sha256": "871f759e43b3781d50b280eef0f837733bcaaadf1ac6088288f1a61e96e08c9e",
+      "pairs_checked": 600,
+      "raw_samples_checked": 1200,
+      "balanced_order": true,
+      "summaries": [
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "keygen",
+          "speedup": 1.1794338215136704,
+          "minimum_fork_speedup": 1.176352337761812
+        },
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "getPublicKey",
+          "speedup": 1.2022478150983356,
+          "minimum_fork_speedup": 1.1915175942564808
+        },
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "sign",
+          "speedup": 1.0920032107363595,
+          "minimum_fork_speedup": 1.0814056572692303
+        },
+        {
+          "mode": "warm",
+          "level": 44,
+          "operation": "verify",
+          "speedup": 1.1033553881049696,
+          "minimum_fork_speedup": 1.0968247077260123
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "keygen",
+          "speedup": 1.2341275562214347,
+          "minimum_fork_speedup": 1.2233181385261922
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "getPublicKey",
+          "speedup": 1.2596182481401883,
+          "minimum_fork_speedup": 1.2578300830074354
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "sign",
+          "speedup": 1.123383741366243,
+          "minimum_fork_speedup": 1.1198730317140182
+        },
+        {
+          "mode": "warm",
+          "level": 65,
+          "operation": "verify",
+          "speedup": 1.1357405292950262,
+          "minimum_fork_speedup": 1.1293769188491534
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "keygen",
+          "speedup": 1.3085556629954402,
+          "minimum_fork_speedup": 1.3000161306161746
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "getPublicKey",
+          "speedup": 1.3330421462032178,
+          "minimum_fork_speedup": 1.3289446214237088
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "sign",
+          "speedup": 1.1826429365466518,
+          "minimum_fork_speedup": 1.1581668788304853
+        },
+        {
+          "mode": "warm",
+          "level": 87,
+          "operation": "verify",
+          "speedup": 1.1872511398633836,
+          "minimum_fork_speedup": 1.1843276098677369
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "keygen",
+          "speedup": 1.0208350865045084,
+          "minimum_fork_speedup": 1.0071393613701023
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "getPublicKey",
+          "speedup": 1.0066903853868343,
+          "minimum_fork_speedup": 0.9907954417627418
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "sign",
+          "speedup": 1.029555249262395,
+          "minimum_fork_speedup": 0.9921869479657115
+        },
+        {
+          "mode": "single",
+          "level": 44,
+          "operation": "verify",
+          "speedup": 1.0204697934093472,
+          "minimum_fork_speedup": 1.012245440667329
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "keygen",
+          "speedup": 1.0452094237630751,
+          "minimum_fork_speedup": 1.0144976094321243
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "getPublicKey",
+          "speedup": 1.0422026111909461,
+          "minimum_fork_speedup": 1.0246352159564442
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "sign",
+          "speedup": 1.0560139129049984,
+          "minimum_fork_speedup": 1.0533824235322975
+        },
+        {
+          "mode": "single",
+          "level": 65,
+          "operation": "verify",
+          "speedup": 1.062575960673922,
+          "minimum_fork_speedup": 1.0091549716114638
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "keygen",
+          "speedup": 1.0740753824345464,
+          "minimum_fork_speedup": 1.0473787016280376
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "getPublicKey",
+          "speedup": 1.0809792091288957,
+          "minimum_fork_speedup": 1.061700013927413
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "sign",
+          "speedup": 1.0649725348101002,
+          "minimum_fork_speedup": 1.0164882576160714
+        },
+        {
+          "mode": "single",
+          "level": 87,
+          "operation": "verify",
+          "speedup": 1.053048452378858,
+          "minimum_fork_speedup": 1.0381657990625923
+        }
+      ]
+    }
+  ]
+}
