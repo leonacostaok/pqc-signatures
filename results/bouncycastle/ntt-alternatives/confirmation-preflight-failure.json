@@ -1,0 +1,6 @@
+{
+  "stage": "unsealed Python syntax preflight",
+  "exit_code": 1,
+  "error": "SyntaxError: invalid syntax, confirmation_prepare.py line53: else384 token",
+  "correction": "Insert whitespace between else and 384 before any preparation or measurement."
+}

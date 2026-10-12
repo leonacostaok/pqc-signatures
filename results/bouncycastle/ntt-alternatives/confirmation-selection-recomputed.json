@@ -1,0 +1,332 @@
+{
+  "rule": "A cell replicates the Java25 screen only if it qualified there and independently improves aggregate Java17 wall and calling-thread CPU by at least 3%, with all four Java17 wall rounds improving. A candidate is supported only if at least one cell replicates and no other Java17 cell has both aggregate wall regression above 3% and all four wall rounds slower. Retain every loss and allocation result. Java25 and Java17 timings are never combined; this bounded cross-runtime/held-out-key confirmation does not establish statistical significance or universal performance.",
+  "result": {
+    "companion": {
+      "replicated_cells": [
+        "ml_dsa_44/sign",
+        "ml_dsa_65/sign"
+      ],
+      "blocking_regressions": [],
+      "all_cells": [
+        {
+          "cell": "ml_dsa_44/keygen",
+          "wall_percent": -2.021511021342981,
+          "cpu_percent": -1.2934045381824744,
+          "allocation_percent": 0.3473484826727935,
+          "faster_wall_rounds": 3,
+          "qualifies_on_java17": false,
+          "replicates_screen": false,
+          "blocking_regression": false,
+          "wall_slower_observations": 193,
+          "wall_round_ratios": [
+            1.049255457970741,
+            0.9936454006093188,
+            1.0083899469446356,
+            1.0321640954633917
+          ]
+        },
+        {
+          "cell": "ml_dsa_44/sign",
+          "wall_percent": -6.2574251674971215,
+          "cpu_percent": -5.337399075192106,
+          "allocation_percent": 0.0,
+          "faster_wall_rounds": 4,
+          "qualifies_on_java17": true,
+          "replicates_screen": true,
+          "blocking_regression": false,
+          "wall_slower_observations": 64,
+          "wall_round_ratios": [
+            1.0756196047581559,
+            1.0381079180348924,
+            1.0936581297123185,
+            1.0592811260966142
+          ]
+        },
+        {
+          "cell": "ml_dsa_44/verify",
+          "wall_percent": -0.6446118156058,
+          "cpu_percent": -0.053941186706107924,
+          "allocation_percent": -0.15870201305079323,
+          "faster_wall_rounds": 2,
+          "qualifies_on_java17": false,
+          "replicates_screen": false,
+          "blocking_regression": false,
+          "wall_slower_observations": 260,
+          "wall_round_ratios": [
+            1.0637554822183177,
+            0.9827980608023438,
+            1.0183891350825907,
+            0.9636455413132263
+          ]
+        },
+        {
+          "cell": "ml_dsa_65/keygen",
+          "wall_percent": -1.6544618046435255,
+          "cpu_percent": -2.3427467115516465,
+          "allocation_percent": -0.3144763967993236,
+          "faster_wall_rounds": 3,
+          "qualifies_on_java17": false,
+          "replicates_screen": false,
+          "blocking_regression": false,
+          "wall_slower_observations": 123,
+          "wall_round_ratios": [
+            0.9871749532111687,
+            1.0321447308748257,
+            1.0163201239360196,
+            1.0322773928508535
+          ]
+        },
+        {
+          "cell": "ml_dsa_65/sign",
+          "wall_percent": -6.3316745089686215,
+          "cpu_percent": -5.725832434476863,
+          "allocation_percent": -0.1734915147984073,
+          "faster_wall_rounds": 4,
+          "qualifies_on_java17": true,
+          "replicates_screen": true,
+          "blocking_regression": false,
+          "wall_slower_observations": 56,
+          "wall_round_ratios": [
+            1.0981981161405463,
+            1.0580421702329899,
+            1.0455350886521102,
+            1.0677856301137452
+          ]
+        },
+        {
+          "cell": "ml_dsa_65/verify",
+          "wall_percent": 1.4300133616085287,
+          "cpu_percent": -0.529904441402862,
+          "allocation_percent": -0.3772785554612357,
+          "faster_wall_rounds": 2,
+          "qualifies_on_java17": false,
+          "replicates_screen": false,
+          "blocking_regression": false,
+          "wall_slower_observations": 234,
+          "wall_round_ratios": [
+            1.0036069833624703,
+            1.020277234843134,
+            0.9814359874735913,
+            0.938924033150611
+          ]
+        },
+        {
+          "cell": "ml_dsa_87/keygen",
+          "wall_percent": -1.2198547647719327,
+          "cpu_percent": -1.762243797195251,
+          "allocation_percent": 0.0,
+          "faster_wall_rounds": 2,
+          "qualifies_on_java17": false,
+          "replicates_screen": false,
+          "blocking_regression": false,
+          "wall_slower_observations": 176,
+          "wall_round_ratios": [
+            0.9856061067001685,
+            1.135054036987692,
+            1.0163529307452202,
+            0.9264024790328934
+          ]
+        },
+        {
+          "cell": "ml_dsa_87/sign",
+          "wall_percent": -2.1846570208681304,
+          "cpu_percent": -3.3981577955618625,
+          "allocation_percent": -0.31441648721455273,
+          "faster_wall_rounds": 3,
+          "qualifies_on_java17": false,
+          "replicates_screen": false,
+          "blocking_regression": false,
+          "wall_slower_observations": 106,
+          "wall_round_ratios": [
+            1.030069055604043,
+            1.0521095452985307,
+            1.03370949479663,
+            0.9763910738140521
+          ]
+        },
+        {
+          "cell": "ml_dsa_87/verify",
+          "wall_percent": -3.821784267723105,
+          "cpu_percent": -1.7534559065680244,
+          "allocation_percent": -0.002739913827254359,
+          "faster_wall_rounds": 3,
+          "qualifies_on_java17": false,
+          "replicates_screen": false,
+          "blocking_regression": false,
+          "wall_slower_observations": 184,
+          "wall_round_ratios": [
+            1.0649197571386495,
+            1.1237478441677309,
+            1.0527404767002784,
+            0.9222835595540759
+          ]
+        }
+      ],
+      "supported_by_frozen_rule": true
+    },
+    "both": {
+      "replicated_cells": [
+        "ml_dsa_44/sign",
+        "ml_dsa_87/sign"
+      ],
+      "blocking_regressions": [],
+      "all_cells": [
+        {
+          "cell": "ml_dsa_44/keygen",
+          "wall_percent": 20.542635314298696,
+          "cpu_percent": 2.7445413371189,
+          "allocation_percent": 0.20392888402673837,
+          "faster_wall_rounds": 2,
+          "qualifies_on_java17": false,
+          "replicates_screen": false,
+          "blocking_regression": false,
+          "wall_slower_observations": 223,
+          "wall_round_ratios": [
+            0.8107674322637686,
+            1.035727777721168,
+            0.5939007003052912,
+            1.0521488663877103
+          ]
+        },
+        {
+          "cell": "ml_dsa_44/sign",
+          "wall_percent": -7.931598263049322,
+          "cpu_percent": -6.952196001402234,
+          "allocation_percent": 0.21069872140444534,
+          "faster_wall_rounds": 4,
+          "qualifies_on_java17": true,
+          "replicates_screen": true,
+          "blocking_regression": false,
+          "wall_slower_observations": 37,
+          "wall_round_ratios": [
+            1.0653722008739117,
+            1.0645864565860101,
+            1.1303522260720866,
+            1.0842726566518242
+          ]
+        },
+        {
+          "cell": "ml_dsa_44/verify",
+          "wall_percent": -1.4200426829642177,
+          "cpu_percent": 0.16356359839917456,
+          "allocation_percent": -0.1548020618781898,
+          "faster_wall_rounds": 2,
+          "qualifies_on_java17": false,
+          "replicates_screen": false,
+          "blocking_regression": false,
+          "wall_slower_observations": 258,
+          "wall_round_ratios": [
+            0.9951671681964586,
+            1.0228467761193851,
+            1.081612616608463,
+            0.9574584284683343
+          ]
+        },
+        {
+          "cell": "ml_dsa_65/keygen",
+          "wall_percent": 3.9179451602587845,
+          "cpu_percent": -0.9251293560251894,
+          "allocation_percent": 0.0,
+          "faster_wall_rounds": 2,
+          "qualifies_on_java17": false,
+          "replicates_screen": false,
+          "blocking_regression": false,
+          "wall_slower_observations": 190,
+          "wall_round_ratios": [
+            1.0010597581582397,
+            1.048060204665313,
+            0.8499997436322941,
+            0.9742669741044417
+          ]
+        },
+        {
+          "cell": "ml_dsa_65/sign",
+          "wall_percent": 12.44800771105905,
+          "cpu_percent": -5.772759746172273,
+          "allocation_percent": -0.12750381183270765,
+          "faster_wall_rounds": 3,
+          "qualifies_on_java17": false,
+          "replicates_screen": false,
+          "blocking_regression": false,
+          "wall_slower_observations": 70,
+          "wall_round_ratios": [
+            1.1154431952306518,
+            0.5594591449644254,
+            1.0594908638731284,
+            1.1231375619175559
+          ]
+        },
+        {
+          "cell": "ml_dsa_65/verify",
+          "wall_percent": 0.43501703420187887,
+          "cpu_percent": -2.2363976543566477,
+          "allocation_percent": -0.3772785554612357,
+          "faster_wall_rounds": 1,
+          "qualifies_on_java17": false,
+          "replicates_screen": false,
+          "blocking_regression": false,
+          "wall_slower_observations": 171,
+          "wall_round_ratios": [
+            1.0481834475183276,
+            0.9954410765001437,
+            0.9468714887011667,
+            0.9948726083093913
+          ]
+        },
+        {
+          "cell": "ml_dsa_87/keygen",
+          "wall_percent": 0.5152366318459611,
+          "cpu_percent": -1.1072276159654781,
+          "allocation_percent": -0.37384841336952634,
+          "faster_wall_rounds": 1,
+          "qualifies_on_java17": false,
+          "replicates_screen": false,
+          "blocking_regression": false,
+          "wall_slower_observations": 179,
+          "wall_round_ratios": [
+            0.9815716475902676,
+            0.9458846324252563,
+            1.1075419404413576,
+            0.960260096789438
+          ]
+        },
+        {
+          "cell": "ml_dsa_87/sign",
+          "wall_percent": -5.423605386390284,
+          "cpu_percent": -5.549613159236511,
+          "allocation_percent": 0.15720824360727637,
+          "faster_wall_rounds": 4,
+          "qualifies_on_java17": true,
+          "replicates_screen": true,
+          "blocking_regression": false,
+          "wall_slower_observations": 48,
+          "wall_round_ratios": [
+            1.0501592988837514,
+            1.0812167824369572,
+            1.0275503968923887,
+            1.070945682533617
+          ]
+        },
+        {
+          "cell": "ml_dsa_87/verify",
+          "wall_percent": -3.0624650381957497,
+          "cpu_percent": -1.8819730595918016,
+          "allocation_percent": -0.0008838431700852745,
+          "faster_wall_rounds": 2,
+          "qualifies_on_java17": false,
+          "replicates_screen": false,
+          "blocking_regression": false,
+          "wall_slower_observations": 254,
+          "wall_round_ratios": [
+            0.986137942109265,
+            1.207659011817108,
+            1.0310025419566393,
+            0.9168169949161381
+          ]
+        }
+      ],
+      "supported_by_frozen_rule": true
+    }
+  },
+  "measurement_pooling": false
+}

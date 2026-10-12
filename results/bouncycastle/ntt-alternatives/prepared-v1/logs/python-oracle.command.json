@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/libs/bouncycastle/experiments/ntt-alternatives/arithmetic_oracle.py",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/prepared-v1/baseline-src/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/Ntt.java"
+  ],
+  "cwd": null,
+  "started_at": "2026-10-12T07:58:22.316712+00:00"
+}

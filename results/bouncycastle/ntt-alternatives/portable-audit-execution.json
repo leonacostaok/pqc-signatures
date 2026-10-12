@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/portable-audit/libs/bouncycastle/experiments/ntt-alternatives/audit.py",
+    "--plan",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/portable-audit/results/bouncycastle/ntt-alternatives/screen-plan-v2/protocol.json",
+    "--timing",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/portable-audit/results/bouncycastle/ntt-alternatives/screen-timing",
+    "--allocation",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/portable-audit/results/bouncycastle/ntt-alternatives/screen-allocation",
+    "--out",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/portable-audit.json"
+  ],
+  "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/portable-audit",
+  "exit_code": 0,
+  "stdout": "{\n  \"schema\": \"bc-ntt-audit-v1\",\n  \"passed\": true,\n  \"plan_sha256\": \"2407ed7f9c9454bf803d86b74340f6846c4921ebaefc74543b1d2396d396e424\",\n  \"manifest_sha256\": \"bb280c8513f09283317d29b91d46f42d3edb0d729b308943e3208e5b36e5c797\",\n  \"portable_source_and_fixture_checks\": true,\n  \"local_binary_checks\": \"passed\",\n  \"local_runtime_checks\": \"passed\",\n  \"processes_checked\": 288,\n  \"output_rows_checked\": 36864\n}\n",
+  "stderr": "",
+  "completed_at": "2026-10-12T12:37:42.031656+00:00",
+  "scope": "Relocated portable source/fixture/raw evidence and copied sealed checker; optional original local classes/runtime remained available and were also checked."
+}

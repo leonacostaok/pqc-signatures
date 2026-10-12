@@ -1,0 +1,148 @@
+{
+  "schema": "bc-ntt-audit-v1",
+  "passed": true,
+  "plan_sha256": "2407ed7f9c9454bf803d86b74340f6846c4921ebaefc74543b1d2396d396e424",
+  "manifest_sha256": "bb280c8513f09283317d29b91d46f42d3edb0d729b308943e3208e5b36e5c797",
+  "portable_source_and_fixture_checks": true,
+  "local_binary_checks": "passed",
+  "local_runtime_checks": "passed",
+  "processes_checked": 0,
+  "output_rows_checked": 0,
+  "summary": [
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "keygen",
+      "variant": "fused"
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "keygen",
+      "variant": "companion"
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "keygen",
+      "variant": "both"
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "sign",
+      "variant": "fused"
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "sign",
+      "variant": "companion"
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "sign",
+      "variant": "both"
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "verify",
+      "variant": "fused"
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "verify",
+      "variant": "companion"
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "verify",
+      "variant": "both"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "keygen",
+      "variant": "fused"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "keygen",
+      "variant": "companion"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "keygen",
+      "variant": "both"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "variant": "fused"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "variant": "companion"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "variant": "both"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "verify",
+      "variant": "fused"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "verify",
+      "variant": "companion"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "verify",
+      "variant": "both"
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "keygen",
+      "variant": "fused"
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "keygen",
+      "variant": "companion"
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "keygen",
+      "variant": "both"
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "sign",
+      "variant": "fused"
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "sign",
+      "variant": "companion"
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "sign",
+      "variant": "both"
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "verify",
+      "variant": "fused"
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "verify",
+      "variant": "companion"
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "verify",
+      "variant": "both"
+    }
+  ]
+}

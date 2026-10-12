@@ -1,0 +1,102 @@
+[
+  {
+    "file": "prepare.py",
+    "mode": "minus-O",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "-O",
+      "libs/bouncycastle/experiments/ntt-alternatives/prepare.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/libs/bouncycastle/experiments/ntt-alternatives/prepare.py\", line 6, in <module>\n    raise RuntimeError('Python optimization is forbidden, including PYTHONOPTIMIZE')\nRuntimeError: Python optimization is forbidden, including PYTHONOPTIMIZE\n"
+  },
+  {
+    "file": "prepare.py",
+    "mode": "environment",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "libs/bouncycastle/experiments/ntt-alternatives/prepare.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/libs/bouncycastle/experiments/ntt-alternatives/prepare.py\", line 6, in <module>\n    raise RuntimeError('Python optimization is forbidden, including PYTHONOPTIMIZE')\nRuntimeError: Python optimization is forbidden, including PYTHONOPTIMIZE\n"
+  },
+  {
+    "file": "protocol.py",
+    "mode": "minus-O",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "-O",
+      "libs/bouncycastle/experiments/ntt-alternatives/protocol.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/libs/bouncycastle/experiments/ntt-alternatives/protocol.py\", line 6, in <module>\n    raise RuntimeError('Python optimization is forbidden, including PYTHONOPTIMIZE')\nRuntimeError: Python optimization is forbidden, including PYTHONOPTIMIZE\n"
+  },
+  {
+    "file": "protocol.py",
+    "mode": "environment",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "libs/bouncycastle/experiments/ntt-alternatives/protocol.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/libs/bouncycastle/experiments/ntt-alternatives/protocol.py\", line 6, in <module>\n    raise RuntimeError('Python optimization is forbidden, including PYTHONOPTIMIZE')\nRuntimeError: Python optimization is forbidden, including PYTHONOPTIMIZE\n"
+  },
+  {
+    "file": "audit.py",
+    "mode": "minus-O",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "-O",
+      "libs/bouncycastle/experiments/ntt-alternatives/audit.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/libs/bouncycastle/experiments/ntt-alternatives/audit.py\", line 6, in <module>\n    raise RuntimeError('Python optimization is forbidden, including PYTHONOPTIMIZE')\nRuntimeError: Python optimization is forbidden, including PYTHONOPTIMIZE\n"
+  },
+  {
+    "file": "audit.py",
+    "mode": "environment",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "libs/bouncycastle/experiments/ntt-alternatives/audit.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/libs/bouncycastle/experiments/ntt-alternatives/audit.py\", line 6, in <module>\n    raise RuntimeError('Python optimization is forbidden, including PYTHONOPTIMIZE')\nRuntimeError: Python optimization is forbidden, including PYTHONOPTIMIZE\n"
+  },
+  {
+    "file": "arithmetic_oracle.py",
+    "mode": "minus-O",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "-O",
+      "libs/bouncycastle/experiments/ntt-alternatives/arithmetic_oracle.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/libs/bouncycastle/experiments/ntt-alternatives/arithmetic_oracle.py\", line 8, in <module>\n    raise RuntimeError(\"Python optimization is forbidden, including PYTHONOPTIMIZE\")\nRuntimeError: Python optimization is forbidden, including PYTHONOPTIMIZE\n"
+  },
+  {
+    "file": "arithmetic_oracle.py",
+    "mode": "environment",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "libs/bouncycastle/experiments/ntt-alternatives/arithmetic_oracle.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/libs/bouncycastle/experiments/ntt-alternatives/arithmetic_oracle.py\", line 8, in <module>\n    raise RuntimeError(\"Python optimization is forbidden, including PYTHONOPTIMIZE\")\nRuntimeError: Python optimization is forbidden, including PYTHONOPTIMIZE\n"
+  }
+]

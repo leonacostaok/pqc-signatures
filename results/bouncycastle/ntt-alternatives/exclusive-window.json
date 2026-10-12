@@ -1,0 +1,13 @@
+{
+  "grant": "2026-10-12T08:10:34.916197+00:00",
+  "release_recorded_at": "2026-10-12T08:14:34.048033+00:00",
+  "plan_sha256": "2407ed7f9c9454bf803d86b74340f6846c4921ebaefc74543b1d2396d396e424",
+  "timing_processes": 144,
+  "allocation_processes": 144,
+  "collector_exits": [
+    0,
+    0
+  ],
+  "controlled_workload_policy": "Root and other agents quiet during collection; released before heavy audit/compression.",
+  "limitation": "OS and unrelated background workloads are not fully controlled."
+}

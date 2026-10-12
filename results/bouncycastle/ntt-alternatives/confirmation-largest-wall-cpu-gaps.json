@@ -1,0 +1,138 @@
+{
+  "exclusions": 0,
+  "note": "Descriptive only. Every row remains in totals; a wall/CPU gap is not a diagnosis of its cause.",
+  "rows": [
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "variant": "both",
+      "round": 1,
+      "case_id": "ntt-java17-confirm-measured-v1/ml_dsa_65/60",
+      "wall_ns": 14959583,
+      "cpu_ns": 1428000,
+      "wall_minus_cpu_ns": 13531583,
+      "stdout": "052.stdout"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "variant": "both",
+      "round": 1,
+      "case_id": "ntt-java17-confirm-measured-v1/ml_dsa_65/100",
+      "wall_ns": 12858708,
+      "cpu_ns": 549000,
+      "wall_minus_cpu_ns": 12309708,
+      "stdout": "052.stdout"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "variant": "both",
+      "round": 1,
+      "case_id": "ntt-java17-confirm-measured-v1/ml_dsa_65/101",
+      "wall_ns": 10903542,
+      "cpu_ns": 631000,
+      "wall_minus_cpu_ns": 10272542,
+      "stdout": "052.stdout"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "variant": "both",
+      "round": 1,
+      "case_id": "ntt-java17-confirm-measured-v1/ml_dsa_65/6",
+      "wall_ns": 4625000,
+      "cpu_ns": 1210000,
+      "wall_minus_cpu_ns": 3415000,
+      "stdout": "052.stdout"
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "keygen",
+      "variant": "both",
+      "round": 0,
+      "case_id": "ntt-java17-confirm-measured-v1/ml_dsa_44/116",
+      "wall_ns": 2523958,
+      "cpu_ns": 154000,
+      "wall_minus_cpu_ns": 2369958,
+      "stdout": "020.stdout"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "variant": "both",
+      "round": 1,
+      "case_id": "ntt-java17-confirm-measured-v1/ml_dsa_65/52",
+      "wall_ns": 2624291,
+      "cpu_ns": 303000,
+      "wall_minus_cpu_ns": 2321291,
+      "stdout": "052.stdout"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "variant": "both",
+      "round": 1,
+      "case_id": "ntt-java17-confirm-measured-v1/ml_dsa_65/34",
+      "wall_ns": 2748625,
+      "cpu_ns": 1013000,
+      "wall_minus_cpu_ns": 1735625,
+      "stdout": "052.stdout"
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "keygen",
+      "variant": "both",
+      "round": 2,
+      "case_id": "ntt-java17-confirm-measured-v1/ml_dsa_44/110",
+      "wall_ns": 1556250,
+      "cpu_ns": 117000,
+      "wall_minus_cpu_ns": 1439250,
+      "stdout": "072.stdout"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "variant": "both",
+      "round": 1,
+      "case_id": "ntt-java17-confirm-measured-v1/ml_dsa_65/53",
+      "wall_ns": 2087375,
+      "cpu_ns": 698000,
+      "wall_minus_cpu_ns": 1389375,
+      "stdout": "052.stdout"
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "keygen",
+      "variant": "both",
+      "round": 1,
+      "case_id": "ntt-java17-confirm-measured-v1/ml_dsa_87/127",
+      "wall_ns": 1625542,
+      "cpu_ns": 267000,
+      "wall_minus_cpu_ns": 1358542,
+      "stdout": "049.stdout"
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "variant": "both",
+      "round": 1,
+      "case_id": "ntt-java17-confirm-measured-v1/ml_dsa_65/23",
+      "wall_ns": 1921541,
+      "cpu_ns": 588000,
+      "wall_minus_cpu_ns": 1333541,
+      "stdout": "052.stdout"
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "sign",
+      "variant": "baseline",
+      "round": 2,
+      "case_id": "ntt-java17-confirm-measured-v1/ml_dsa_44/108",
+      "wall_ns": 1562667,
+      "cpu_ns": 321000,
+      "wall_minus_cpu_ns": 1241667,
+      "stdout": "067.stdout"
+    }
+  ]
+}

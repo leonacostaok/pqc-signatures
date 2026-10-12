@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin/javac",
+    "-J-XX:ActiveProcessorCount=2",
+    "--release",
+    "17",
+    "-cp",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/prepared-v1/baseline",
+    "-d",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/confirmation-prepared-v1/driver",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/confirmation-prepared-v1/driver-sources/MLDeep.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/confirmation-prepared-v1/driver-sources/MalformedCheck.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/confirmation-prepared-v1/driver-sources/NTTBench.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/confirmation-prepared-v1/driver-sources/NTTGate.java"
+  ],
+  "cwd": null,
+  "started_at": "2026-10-12T12:43:07.095066+00:00"
+}

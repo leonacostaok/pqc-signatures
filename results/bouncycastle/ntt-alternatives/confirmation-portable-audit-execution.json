@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-10-12T13:01:13.503370+00:00",
+  "commands": [
+    {
+      "argv": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/confirmation-portable-audit/libs/bouncycastle/experiments/ntt-alternatives/confirmation_audit.py",
+        "--plan",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/confirmation-portable-audit/results/bouncycastle/ntt-alternatives/confirmation-plan-v1/protocol.json",
+        "--timing",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/confirmation-portable-audit/results/bouncycastle/ntt-alternatives/confirmation-timing",
+        "--allocation",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/confirmation-portable-audit/results/bouncycastle/ntt-alternatives/confirmation-allocation",
+        "--out",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/confirmation-portable-audit.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/confirmation-portable-audit/libs/bouncycastle/experiments/ntt-alternatives/confirmation_supplement.py",
+        "audit",
+        "--manifest",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/confirmation-portable-audit/results/bouncycastle/ntt-alternatives/confirmation-prepared-v1/manifest.json",
+        "--out",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/confirmation-supplement-portable-audit.json"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "note": "Source and fixtures relocated; original pinned local production/native classes and runtimes remain available and were checked. This is not an absent-binary test."
+}
