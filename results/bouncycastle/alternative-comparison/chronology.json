@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "initial_only": false,
+  "processes": 1464,
+  "no_recorded_benchmark_overlap": true,
+  "initial_native_gates_before_first_benchmark": true,
+  "source_execution_sha256": {
+    "ntt-screen-timing": "4f799ea8de2bb30fe12085217809c5d7bb19ad25eabdbbbe72b43d794adfd1fc",
+    "ntt-screen-allocation": "4382f81d5f74b0b3c70df573849587ba6fdfd50eee8be8ba73e557ba49f7fc81",
+    "ntt-confirmation-timing": "49b7fc04eb5784da4a49a8333c661f3714bec5858bdf2214e087c4e22ffb3762",
+    "ntt-confirmation-allocation": "2e26070cf07afb2e48bb8f471620c7974362182e8d6a744d12904d617c49d891",
+    "matrix": "936475e7be35535af854569558ed9fa362bce88f0a8ceeef1f596b0ebd3267f0",
+    "wots-screen": "d87a94e20a1614e5e113518026764f922ed7d75f2a554648d3454819f9677390",
+    "wots-followup": "b4a98b2a461d4e55f6a49a9e823b2265d0ebee198490276129e8cf3d3c084cd6"
+  },
+  "cohorts": {
+    "ntt-screen-timing": {
+      "processes": 144,
+      "start": "2026-10-12T08:10:52.949063+00:00",
+      "end": "2026-10-12T08:12:26.957075+00:00",
+      "longest_process_seconds": 1.508456
+    },
+    "ntt-screen-allocation": {
+      "processes": 144,
+      "start": "2026-10-12T08:12:35.186205+00:00",
+      "end": "2026-10-12T08:14:08.750810+00:00",
+      "longest_process_seconds": 1.484906
+    },
+    "ntt-confirmation-timing": {
+      "processes": 108,
+      "start": "2026-10-12T12:57:37.909836+00:00",
+      "end": "2026-10-12T12:58:47.281304+00:00",
+      "longest_process_seconds": 1.080641
+    },
+    "ntt-confirmation-allocation": {
+      "processes": 108,
+      "start": "2026-10-12T12:58:49.436841+00:00",
+      "end": "2026-10-12T12:59:58.076871+00:00",
+      "longest_process_seconds": 1.230014
+    },
+    "matrix-timing": {
+      "processes": 144,
+      "start": "2026-10-12T08:14:42.355237+00:00",
+      "end": "2026-10-12T08:16:19.696558+00:00",
+      "longest_process_seconds": 1.534469
+    },
+    "matrix-allocation": {
+      "processes": 144,
+      "start": "2026-10-12T08:16:19.700159+00:00",
+      "end": "2026-10-12T11:47:38.409085+00:00",
+      "longest_process_seconds": 4070.605315
+    },
+    "wots-screen": {
+      "processes": 288,
+      "start": "2026-10-12T08:04:08.458516+00:00",
+      "end": "2026-10-12T08:07:57.694726+00:00",
+      "longest_process_seconds": 1.72044
+    },
+    "wots-followup": {
+      "processes": 384,
+      "start": "2026-10-12T12:46:27.046922+00:00",
+      "end": "2026-10-12T12:56:20.046684+00:00",
+      "longest_process_seconds": 5.624222
+    }
+  },
+  "processes_over_10_seconds": [
+    {
+      "cohort": "matrix-allocation",
+      "index": 224,
+      "mode": "allocation",
+      "start": "2026-10-12T08:17:13.684382+00:00",
+      "end": "2026-10-12T08:31:00.872817+00:00",
+      "seconds": 827.188435
+    },
+    {
+      "cohort": "matrix-allocation",
+      "index": 229,
+      "mode": "allocation",
+      "start": "2026-10-12T08:31:09.403928+00:00",
+      "end": "2026-10-12T08:33:55.911809+00:00",
+      "seconds": 166.507881
+    },
+    {
+      "cohort": "matrix-allocation",
+      "index": 239,
+      "mode": "allocation",
+      "start": "2026-10-12T08:34:11.605944+00:00",
+      "end": "2026-10-12T08:35:12.786299+00:00",
+      "seconds": 61.180355
+    },
+    {
+      "cohort": "matrix-allocation",
+      "index": 247,
+      "mode": "allocation",
+      "start": "2026-10-12T08:35:20.795685+00:00",
+      "end": "2026-10-12T09:43:11.401000+00:00",
+      "seconds": 4070.605315
+    },
+    {
+      "cohort": "matrix-allocation",
+      "index": 264,
+      "mode": "allocation",
+      "start": "2026-10-12T09:43:24.507439+00:00",
+      "end": "2026-10-12T10:18:08.188524+00:00",
+      "seconds": 2083.681085
+    },
+    {
+      "cohort": "matrix-allocation",
+      "index": 276,
+      "mode": "allocation",
+      "start": "2026-10-12T10:18:17.588676+00:00",
+      "end": "2026-10-12T11:19:08.194217+00:00",
+      "seconds": 3650.605541
+    },
+    {
+      "cohort": "matrix-allocation",
+      "index": 284,
+      "mode": "allocation",
+      "start": "2026-10-12T11:19:16.482380+00:00",
+      "end": "2026-10-12T11:47:34.447725+00:00",
+      "seconds": 1697.965345
+    }
+  ],
+  "limits": "Recorded benchmark chronology only; does not establish host isolation or explain long durations. Allocation cohorts do not measure operation time."
+}

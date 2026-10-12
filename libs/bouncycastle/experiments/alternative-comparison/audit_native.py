@@ -30,6 +30,8 @@ plans = {
     'wots': args.wots_root / 'results/bouncycastle/wots-alternatives/manifest.json',
 }
 prepared = {k: json.loads(p.read_text()) for k, p in plans.items()}
+bindings = json.loads((out / 'experiment-bindings.json').read_text())
+assert all(sha(path) == bindings[group]['sha256'] for group, path in plans.items())
 checked = []
 for group, variants in expected.items():
     for variant in variants:

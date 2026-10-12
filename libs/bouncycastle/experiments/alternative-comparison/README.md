@@ -21,3 +21,7 @@ python3 libs/bouncycastle/experiments/alternative-comparison/audit_native.py
 ```
 
 This last command checks stored records, source/runner identities and pinned vector hashes; it does not need the original absolute binary paths and does not rerun cryptography. A passing saved-evidence audit does not prove that unavailable binaries would pass again. All entry points reject optimized Python because their checks use assertions.
+
+`audit_chronology.py` checks every recorded benchmark process interval across the campaigns and verifies that the initial native gates preceded collection. It detects overlapping recorded benchmark processes; it cannot establish host isolation. `--initial-only` checks the three first-stage screens without their selected followups.
+
+After the group audits have been saved under `results/bouncycastle/alternative-comparison/`, `report_measurements.py` renders every comparison into `docs/bouncycastle/alternative-measurements.md` and its machine-readable companion. Green/red marks numerical direction, not confidence. Static memory costs and unmeasured peak/GC metrics are documented separately.

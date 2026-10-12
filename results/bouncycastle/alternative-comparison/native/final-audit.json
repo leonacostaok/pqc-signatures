@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "variants": [
+    {
+      "label": "ntt-baseline",
+      "native_methods": 17,
+      "record_sha256": "823a60870cdef5aa638ad2c602f9662df981548a211f8ffb9cf75644d30727ee"
+    },
+    {
+      "label": "ntt-fused",
+      "native_methods": 17,
+      "record_sha256": "6c152271eb618272ad4aadcf13ac3db55bfc133b67bc92396c6ee98ba27303f7"
+    },
+    {
+      "label": "ntt-companion",
+      "native_methods": 17,
+      "record_sha256": "37cc58f22c90a9158a0d87289c19ed244ffdb009111d1115ea5f3fa92194f4d1"
+    },
+    {
+      "label": "ntt-both",
+      "native_methods": 17,
+      "record_sha256": "b5d210b437978b9ecfa639f9d06005d510e74aac926fdcd507140650eecfcb5b"
+    },
+    {
+      "label": "matrix-baseline",
+      "native_methods": 17,
+      "record_sha256": "21e31d7de7e0bd55db9e143dc577e568627ac5ed69fdd5bf911a2859fe5a7a93"
+    },
+    {
+      "label": "matrix-lazy",
+      "native_methods": 17,
+      "record_sha256": "8bc5286e6e3c7155810fe421c30cd623a77297ff10b22555331bc94e865cdb93"
+    },
+    {
+      "label": "matrix-stream",
+      "native_methods": 17,
+      "record_sha256": "1ecf1f0f885bdcab66516cd17770b6e23ddad5be123082f8e81fd734142f106a"
+    },
+    {
+      "label": "matrix-combined",
+      "native_methods": 17,
+      "record_sha256": "876cef2944bb3e299304808416d3eb389c19d845d8853b6c79d55a934edc73e7"
+    },
+    {
+      "label": "wots-baseline",
+      "native_methods": 4,
+      "record_sha256": "940992498e6daa2e783a910843f3235a892daf283f90cc504c06cca1872da659"
+    },
+    {
+      "label": "wots-object_hoist",
+      "native_methods": 4,
+      "record_sha256": "787cc864e7f10b43297c9bb6e9919a13f2e09ce1d25d6518107eec6c382f6e5f"
+    },
+    {
+      "label": "wots-field_rewrite",
+      "native_methods": 4,
+      "record_sha256": "38c7e9a443d204c0436f313c4631ccc3d6e41beb5b4acd9042b584d663a21190"
+    },
+    {
+      "label": "wots-two_addresses",
+      "native_methods": 4,
+      "record_sha256": "a36bce5ab2a00dcc8034cbd509c13372993d2669387e0af36844f3d6a11768e9"
+    },
+    {
+      "label": "wots-buffer",
+      "native_methods": 4,
+      "record_sha256": "45b1eaecc7f871367246359c9040cfb779eb0bb7263f997960b7b1a7989907e2"
+    },
+    {
+      "label": "wots-buffer_peeled",
+      "native_methods": 4,
+      "record_sha256": "11ae0d2a555efd8f1242d7d2f3617ee0aa4d88e3d274f16ecd98b3aef343ccdf"
+    }
+  ],
+  "scope": "Saved native test evidence and pinned vector identities; no local binary or cryptographic rerun."
+}

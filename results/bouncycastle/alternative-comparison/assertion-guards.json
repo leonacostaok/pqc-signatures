@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "script": "libs/bouncycastle/experiments/alternative-comparison/audit_chronology.py",
+      "mode": "flag",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "script": "libs/bouncycastle/experiments/alternative-comparison/audit_chronology.py",
+      "mode": "environment",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "script": "libs/bouncycastle/experiments/alternative-comparison/audit_native.py",
+      "mode": "flag",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "script": "libs/bouncycastle/experiments/alternative-comparison/audit_native.py",
+      "mode": "environment",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "script": "libs/bouncycastle/experiments/alternative-comparison/prepare_native.py",
+      "mode": "flag",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "script": "libs/bouncycastle/experiments/alternative-comparison/prepare_native.py",
+      "mode": "environment",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "script": "libs/bouncycastle/experiments/alternative-comparison/report_measurements.py",
+      "mode": "flag",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "script": "libs/bouncycastle/experiments/alternative-comparison/report_measurements.py",
+      "mode": "environment",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "script": "libs/bouncycastle/experiments/alternative-comparison/run_native.py",
+      "mode": "flag",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "script": "libs/bouncycastle/experiments/alternative-comparison/run_native.py",
+      "mode": "environment",
+      "exit_code": 1,
+      "rejected": true
+    }
+  ]
+}
