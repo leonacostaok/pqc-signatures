@@ -1,0 +1,26 @@
+{
+  "schema": "completion-report-audit-v1",
+  "passed": true,
+  "timing_cells": 309,
+  "statuses": {
+    "measured": 117,
+    "baseline_only": 174,
+    "not_provided": 18
+  },
+  "paired_resource_metrics": 1899,
+  "baseline_resource_metrics": 341,
+  "unavailable_resource_metrics": 12,
+  "serial_collection_batches": [
+    "rustcrypto",
+    "bouncycastle",
+    "liboqs/baseline-timing",
+    "openssl/baseline-timing",
+    "liboqs/resources",
+    "openssl/resources",
+    "circl/resource",
+    "noble/resource",
+    "noble/baseline",
+    "circl/baseline"
+  ],
+  "scope": "Integrated saved-evidence hashes, coverage, percentages and batch chronology; provider raw-result checks are separate; not an independent cryptographic audit"
+}

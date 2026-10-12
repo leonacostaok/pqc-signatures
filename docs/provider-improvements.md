@@ -17,7 +17,7 @@ Noble removes temporary NTT products and reduces once per coefficient; it adds n
 
 Liboqs replaces portable SHA2 compression with the configured OpenSSL backend and adds no cache. Its upstream algorithm already retains public prefix state. The new temporary SHA contexts are explicitly cleansed. Fallback configurations preserve portable compression.
 
-CIRCL and OpenSSL prepare public hash prefixes within each operation. Timings include that preparation and cleanup; neither patch retains key-dependent state across API operations. They trade small additional operation-local storage for less repeated hashing. Native-library reports specify which key import or decoding work lies outside their timed API calls.
+CIRCL prepares public hash prefixes within each operation. OpenSSL owns its prefix in the hash/EVP context, which a caller may retain or reuse. The timing experiments include context preparation and cleanup. Both trade additional storage for less repeated hashing; neither adds a global key cache. Native-library reports specify which key import or decoding work lies outside their timed API calls.
 
 RustCrypto avoids deriving a public key twice during construction. It fills the same pre-existing public-key cache with already computed values; its warmed signing and verification paths remain unchanged. Bouncy Castle replaces a bounded BigInteger bit buffer with integer arithmetic, without introducing a cache. The original shared-JVM protocol showed systematic SHAKE verification losses; separate-JVM parameter medians ranged from 0.990× to 1.005× with substantial fork variation. Both runs remain in the evidence. The draft claims reduced allocation, not faster complete verification.
 
@@ -29,7 +29,7 @@ Noble's arithmetic oracle and two-version/runtime study, liboqs's executed-case 
 
 The [original harness audit](https://github.com/leonacostaok/pqc-signatures/pull/3) documents separate remaining cache, bounds, acceptance and measurement defects. These production experiments use their own gates; their success does not repair the original harness or establish a general fastest-provider ranking.
 
-All pull requests are authored from `leonacostaok`. Noble, liboqs, CIRCL, RustCrypto and OpenSSL are open upstream and marked ready for review. Bouncy Castle retains its allocation-only personal-fork draft while further alternatives are investigated. The evidence repository is public. Liboqs and OpenSSL contribution-policy disclosures and personal attestations remain unresolved; publication does not establish compliance or CLA completion.
+Pull requests are authored from `leonacostaok`. Noble #56 was closed by its maintainer over complexity versus benefit; the other four upstream patches remain under review in the last recorded snapshot. OpenSSL’s CLA check passed on the signed head. The repository includes AI-assisted supporting tests, experiments and analysis; published evidence and passing checks are not cryptographic certification. See the [concise assessment](performance-summary.md) and [recorded PR revisions](../results/resource-regressions/pr-heads.json).
 
 The [independent BC follow-up check](../results/bouncycastle/independent-isolated-check.json) matches every saved process output, exit status and pair against the final summaries. Reproduce it with `python3 libs/bouncycastle/experiments/audit-isolated.py results/bouncycastle/experiments/fors-isolated-jdk25-arm64.json /path/to/new-check.json`.
 

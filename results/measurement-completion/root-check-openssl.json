@@ -1,0 +1,38 @@
+{
+  "complete": true,
+  "provider": "openssl",
+  "mode": "saved-evidence",
+  "processes": 512,
+  "raw_rows": 1160,
+  "baseline_cells": 24,
+  "resource_cells": 18,
+  "numeric_mutations_rejected": 3,
+  "summary_sha256": "4f987e0a4f49469cf050fdcc25584329be782adbe20e5c1daad2ac6b0bce94c4",
+  "checker_sha256": "62049b2d98adadeaee3f480aac7f5d4fef2b730815edb630c4ce6725d9616ce1",
+  "inventory_sha256": "a5249ecb55c9ed25dc959832bec97018c6b252ad23e38318424cee572a4b9c26",
+  "saved_artifacts_verified": 447,
+  "local_original_artifacts_verified": null,
+  "local_verification_unavailable": [
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+      "sha256": "5987d3e6ffbd513229c9b273f34c3b5bb2d67252d82938958bddd12a1afd6aee",
+      "reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/baseline/libcrypto.a",
+      "sha256": "4c336a0026dbc7627bcf27309499dba7dbaeafc7b47a741ba565307eb5b46b3a",
+      "reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/candidate",
+      "sha256": "674dac41c34d0c70aa5f02cbeebc2405e7d9fc253424bc7f289d6035bfdcf366",
+      "reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/candidate/libcrypto.a",
+      "sha256": "b776f4ef8ead66fbb84d99da260b4638ffb5698f5d83e2fd995c05bb9b85ed15",
+      "reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    }
+  ],
+  "scope": "Committed source/configuration/fixture hashes; complete raw process identities/results; independent means, medians and all percentages. Compiled binaries verified only with --local-builds; historical command provenance is not a fresh build or execution."
+}

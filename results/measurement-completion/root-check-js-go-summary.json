@@ -1,0 +1,16 @@
+{
+  "noble": {
+    "passed": true,
+    "summary_sha256": "8f2b9cc7a1a68f93f6f46db18e8dbfe6092d94bf98fac254ea0c68eb7f7b67fe",
+    "baseline_cells": 42,
+    "resource_cells": 24,
+    "scope": "Recomputed all summary fields from committed raw evidence; normalized only output-path provenance and its derived counter-summary hash"
+  },
+  "circl": {
+    "passed": true,
+    "summary_sha256": "e06394a33d55ba90b16ed1861cb0067b19cc2419faf551cce56aa88189b84ec6",
+    "baseline_cells": 27,
+    "resource_cells": 36,
+    "scope": "Recomputed all summary fields from committed raw evidence; normalized only output-path provenance and its derived counter-summary hash"
+  }
+}
