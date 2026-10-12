@@ -1,0 +1,23 @@
+{
+  "command": [
+    "cc",
+    "-std=c11",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-ablation/sha512-only/include",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/ten-new-keys/driver.c",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-ablation/sha512-only/lib/liboqs.a",
+    "-L/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib",
+    "-lcrypto",
+    "-lpthread",
+    "-o",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-ablation/sha512-only/driver"
+  ],
+  "started_utc": "2026-10-12T02:18:17.835438+00:00",
+  "finished_utc": "2026-10-12T02:18:17.954244+00:00",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

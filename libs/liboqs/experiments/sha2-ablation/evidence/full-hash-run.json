@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-ablation/check_hashes.py",
+    "--baseline",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs",
+    "--candidate",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance",
+    "--build",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-ablation/hash-full",
+    "--evidence",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-ablation/evidence/hash-full",
+    "--expect256",
+    "1",
+    "--expect512",
+    "1"
+  ],
+  "started_utc": "2026-10-12T02:18:28.857151+00:00",
+  "finished_utc": "2026-10-12T02:18:32.445496+00:00",
+  "returncode": 0,
+  "stdout": "{\n  \"results\": {\n    \"openssl\": {\n      \"passed_checks\": 5710\n    },\n    \"portable\": {\n      \"passed_checks\": 5710\n    },\n    \"dlopen-fallback\": {\n      \"passed_checks\": 5710\n    },\n    \"no-deprecated-fallback\": {\n      \"passed_checks\": 5710\n    }\n  },\n  \"backend_probe\": \"SHA256_Transform calls: 1; SHA512_Transform calls: 1\\ncleanse calls: 2; bytes: 328; failed: 0\"\n}\n",
+  "stderr": ""
+}

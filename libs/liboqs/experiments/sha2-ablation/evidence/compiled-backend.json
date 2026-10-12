@@ -1,0 +1,50 @@
+{
+  "original": {
+    "256": {
+      "object_sha256": "00d61e42033573321ca33755a2315f1d66d3174c306124fe5163996325d2eb92",
+      "undefined_symbols": "_bzero\n_memcpy\n",
+      "enabled": false
+    },
+    "512": {
+      "object_sha256": "cffa47863173ebd4d7e9ff807dca93e6059135e3b6350bdbced8b596aa229ac0",
+      "undefined_symbols": "_bzero\n_memcpy\n",
+      "enabled": false
+    }
+  },
+  "sha256-only": {
+    "256": {
+      "object_sha256": "c937eec0eb714f1911523540b6d3efa12d5980c5e718cac95d823f94a2cf705a",
+      "undefined_symbols": "_OPENSSL_cleanse\n_SHA256_Transform\n_bzero\n_memcpy\n",
+      "enabled": true
+    },
+    "512": {
+      "object_sha256": "b2c1b700a6fe2a95251228c56f67b5c34ee8337fe87cdb107c5a3f9d5c3037ed",
+      "undefined_symbols": "_bzero\n_memcpy\n",
+      "enabled": false
+    }
+  },
+  "sha512-only": {
+    "256": {
+      "object_sha256": "521d4661aef6d9c24f779ccde56c719f3352d750a84798d9f12c53f3fc0351d6",
+      "undefined_symbols": "_bzero\n_memcpy\n",
+      "enabled": false
+    },
+    "512": {
+      "object_sha256": "d1a64c03b766b286c9262b68966097b7ee9beeaf5ec3cf83e0860076e78c767c",
+      "undefined_symbols": "_OPENSSL_cleanse\n_SHA512_Transform\n_bzero\n_memcpy\n",
+      "enabled": true
+    }
+  },
+  "full": {
+    "256": {
+      "object_sha256": "a329033fd354634e61faa6aa8f10adf15e505ad2730502bbca24967c111469ea",
+      "undefined_symbols": "_OPENSSL_cleanse\n_SHA256_Transform\n_bzero\n_memcpy\n",
+      "enabled": true
+    },
+    "512": {
+      "object_sha256": "6374d26e9365ef6d32bd366a6f72e9e3bc48c7be231f8483fc6e2c29f4840a0c",
+      "undefined_symbols": "_OPENSSL_cleanse\n_SHA512_Transform\n_bzero\n_memcpy\n",
+      "enabled": true
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-ablation/sha256-only/tests/test_slh_dsa_sha2"
+  ],
+  "started_utc": "2026-10-12T02:18:05.393810+00:00",
+  "finished_utc": "2026-10-12T02:18:05.963449+00:00",
+  "returncode": 0,
+  "stdout": "SLH-DSA private SHA-2 differential tests passed\n",
+  "stderr": ""
+}

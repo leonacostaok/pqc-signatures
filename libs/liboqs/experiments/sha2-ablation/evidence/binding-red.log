@@ -1,0 +1,13 @@
+..F.
+======================================================================
+FAIL: test_reject_wrong_executable_input_count_failure_or_chronology (__main__.Completion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-ablation/check_runner.py", line 28, in test_reject_wrong_executable_input_count_failure_or_chronology
+    with self.assertRaises(ValueError):run.check_command_status('full',folder,bad,status)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+FAILED (failures=1)
