@@ -34,7 +34,7 @@ Speedup is total original time divided by total changed time across ten keys; ab
 | SHAKE-128f | sign | 1.0033× | 1.0028× | 2 |
 | SHAKE-128f | verify | 1.0002× | 0.9987× | 5 |
 
-The SHA2-192s key-generation wall ratio of 1.4473× is not evidence for a comparable computational gain: its process-CPU ratio is only 1.0351×. All individual observations remain in the raw evidence; this short pass does not establish the cause of the discrepancy.
+The SHA2-192s key-generation wall ratio of 1.4473× is not evidence for a comparable computational gain: its process-CPU ratio is only 1.0351×. The last original key-generation call takes 113.727 ms wall but 26.903 ms CPU, versus 20.908 ms wall/CPU for the changed call; that pair accounts for approximately 98.4% of the total wall-time difference. The median paired wall ratio is 1.0107×. All individual observations remain in the raw evidence; this short pass does not establish the cause of the discrepancy.
 
 See the [raw summary and per-key times](../../results/openssl/ten-key-order/summary.json), [independent cross-provider recomputation](../../results/ten-key-order/independent-check.json), [collector regression checks](../../results/openssl/ten-key-order/collector-regressions.json), and [global execution chronology](../../results/ten-key-order/execution/execution.json). This single candidate-first pass can expose sensitivity to new keys and reversed order; it cannot remove time-dependent machine load or establish a steady-state performance guarantee. It supplements the earlier balanced repeated comparison.
 

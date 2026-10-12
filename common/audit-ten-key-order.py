@@ -9,7 +9,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PROVIDERS = ['openssl', 'liboqs', 'noble', 'circl', 'rustcrypto', 'bouncycastle']
-COUNTS = dict(zip(PROVIDERS, [7, 6, 3, 7, 3, 12]))
+SHA2 = [f'SLH-DSA-SHA2-{n}{v}' for n in [128,192,256] for v in ['f','s']]
+EXPECTED = {
+    'openssl': set(SHA2 + ['SLH-DSA-SHAKE-128f']),
+    'circl': set(SHA2 + ['SLH-DSA-SHAKE-128f']),
+    'liboqs': {f'SLH_DSA_PURE_SHA2_{n}{v}' for n in [128,192,256] for v in ['F','S']},
+    'noble': {'44','65','87'},
+    'rustcrypto': {'ML-DSA-44','ML-DSA-65','ML-DSA-87'},
+    'bouncycastle': {f'{h}_{n}{v}' for h in ['sha2','shake'] for n in [128,192,256] for v in ['f','s']},
+}
 
 def read(p):
     return json.loads(p.read_text())
@@ -22,11 +30,23 @@ def require(ok, message):
         raise ValueError(message)
 
 
-def load(provider, root, side, bindings):
+def bind_batch(data, batch, start_key='started_at', end_key='finished_at'):
+    require(data['variant'] == batch['variant'], 'variant mismatch')
+    start = datetime.fromisoformat(data[start_key].replace('Z','+00:00'))
+    end = datetime.fromisoformat(data[end_key].replace('Z','+00:00'))
+    outer_start = datetime.fromisoformat(batch['started_at'])
+    outer_end = datetime.fromisoformat(batch['finished_at'])
+    # JS/Go reports truncate ISO timestamps to whole seconds.
+    tolerance = 1 if batch['provider'] in ['noble','circl'] else 0
+    require(start <= end and (outer_start-start).total_seconds() <= tolerance and (end-outer_end).total_seconds() <= tolerance, 'batch outside coordinator interval')
+
+
+def load(provider, root, side, bindings, batch):
     if provider == 'openssl':
         base = root / 'results/openssl/ten-key-order'
         completion = read(base / side / 'complete.json')
         require(completion['complete'], 'OpenSSL incomplete')
+        bind_batch(completion, batch)
         rows = []
         for name, digest in completion['raw_sha256'].items():
             path = base / side / name
@@ -39,6 +59,8 @@ def load(provider, root, side, bindings):
     if provider == 'liboqs':
         base = root / 'libs/liboqs/experiments/ten-new-keys/evidence' / ('final-'+side)
         data = read(base / 'result.json')
+        bind_batch(data, batch, 'started_utc', 'finished_utc')
+        require(data['rows'] == [json.loads(line) for line in (base/'stdout.jsonl').read_text().splitlines()], 'liboqs parsed rows differ from raw')
         require(data['complete'] and sha(base/'outputs.bin') == data['artifact_sha256'], 'liboqs artifact')
         require(sha(base/'stdout.jsonl') == data['raw_sha256'], 'liboqs raw hash')
         bindings[str(base/'outputs.bin')] = sha(base/'outputs.bin')
@@ -48,6 +70,7 @@ def load(provider, root, side, bindings):
     stem = 'tenkeys' if provider in ['noble','circl'] else 'tenkey'
     path = root / 'results' / provider / 'experiments' / (stem+'-'+side+'.json')
     data = read(path)
+    bind_batch(data, batch)
     require(data['variant'] == side and data['provider'] == provider, 'batch identity')
     bindings[str(path)] = sha(path)
     rows = []
@@ -87,7 +110,8 @@ def main():
     require(sha(ROOT/'common/run-ten-key-order.py')==execution['coordinator_sha256'], 'coordinator hash')
     expected=[(p,s) for s in ['candidate','baseline'] for p in PROVIDERS]
     last=None
-    for batch,identity in zip(execution['batches'],expected):
+    for batch,identity,planned in zip(execution['batches'],expected,execution['plan']['batches']):
+        require(all(batch[k] == planned[k] for k in ['provider','variant','cwd','argv']), 'execution differs from plan')
         require((batch['provider'],batch['variant'])==identity and batch['exit_code']==0,'order/status')
         start,end=map(datetime.fromisoformat,[batch['started_at'],batch['finished_at']])
         require(start<=end and (last is None or last<=start),'overlapping batches')
@@ -98,7 +122,7 @@ def main():
     summary=[]
     key_count=0
     for provider in PROVIDERS:
-        sides={s:load(provider,roots[provider],s,bindings) for s in ['candidate','baseline']}
+        sides={s:load(provider,roots[provider],s,bindings,next(b for b in execution['batches'] if (b['provider'],b['variant'])==(provider,s))) for s in ['candidate','baseline']}
         if provider=='liboqs':
             base=roots[provider]/'libs/liboqs/experiments/ten-new-keys/evidence'
             require((base/'final-candidate/outputs.bin').read_bytes()==(base/'final-baseline/outputs.bin').read_bytes(),'liboqs exact bytes')
@@ -106,7 +130,7 @@ def main():
         require(all(len(maps[s])==len(sides[s]) for s in sides),'duplicate rows')
         require(maps['candidate'].keys()==maps['baseline'].keys(),'case mismatch')
         params=sorted({p for p,i in maps['candidate']})
-        require(len(params)==COUNTS[provider], 'parameter count')
+        require(set(params)==EXPECTED[provider], 'parameter set')
         for param in params:
             require(sorted(i for p,i in maps['candidate'] if p==param)==list(range(10)), 'ten keys')
             outputs=[maps['candidate'][param,i][0] for i in range(10)]
