@@ -1,0 +1,8 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/ten-key-order/baseline",
+    "baseline",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/results/openssl/ten-key-order/inputs/SLH-DSA-SHA2-192s.txt"
+  ],
+  "started_at": "2026-10-12T02:03:48.796176+00:00"
+}

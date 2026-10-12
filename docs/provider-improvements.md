@@ -32,3 +32,7 @@ The [original harness audit](https://github.com/leonacostaok/pqc-signatures/pull
 All drafts are authored from `leonacostaok`. Noble, CIRCL and RustCrypto drafts target upstream. Liboqs, OpenSSL and Bouncy Castle review drafts target personal forks because their upstream submission policies require disclosure or submitter attestations that need resolution before a later upstream submission. Evidence links target this private repository and require access.
 
 The [independent BC follow-up check](../results/bouncycastle/independent-isolated-check.json) matches every saved process output, exit status and pair against the final summaries. Reproduce it with `python3 libs/bouncycastle/experiments/audit-isolated.py results/bouncycastle/experiments/fors-isolated-jdk25-arm64.json /path/to/new-check.json`.
+
+## Fresh ten-key follow-up
+
+The [candidate-first follow-up](ten-key-order.md) generates ten new keys per parameter, runs all changed providers before any original, and preserves exact-output checks, raw per-key wall/CPU timings and every loss. It reproduces the large liboqs gain and the affected noble/CIRCL/OpenSSL and Rust construction gains; Bouncy Castle latency remains mixed.

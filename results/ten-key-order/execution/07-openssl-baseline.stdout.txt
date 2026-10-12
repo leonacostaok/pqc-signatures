@@ -1,0 +1,7 @@
+baseline SLH-DSA-SHA2-128f 10 keys PASS
+baseline SLH-DSA-SHA2-128s 10 keys PASS
+baseline SLH-DSA-SHA2-192f 10 keys PASS
+baseline SLH-DSA-SHA2-192s 10 keys PASS
+baseline SLH-DSA-SHA2-256f 10 keys PASS
+baseline SLH-DSA-SHA2-256s 10 keys PASS
+baseline SLH-DSA-SHAKE-128f 10 keys PASS

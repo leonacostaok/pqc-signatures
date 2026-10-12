@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "variant": "candidate",
+  "started_at": "2026-10-12T02:01:29.974501+00:00",
+  "finished_at": "2026-10-12T02:01:37.673654+00:00",
+  "keys": 70,
+  "manifest_sha256": "d002e3431533bfb0376e04f4752d62c624aaf68fcfb9101616196de1e3763228",
+  "raw_sha256": {
+    "SLH-DSA-SHA2-128f.jsonl": "46b4bb79a26c0f57f49941da4793622b66f025476691f5181a8d6ad9e79fe7f3",
+    "SLH-DSA-SHA2-128s.jsonl": "09c92b8b3567c7c58d7eb3e38f577cf0622a0888cf4995118c2bb402c0c367e2",
+    "SLH-DSA-SHA2-192f.jsonl": "c27ac3d31822e0eb002cc6fe39cd28a632cb854b7d3163d094c3cda83951c6f7",
+    "SLH-DSA-SHA2-192s.jsonl": "dd018415226fc83d6877b9679a19699aa2184fcfe61b899069345ecc55c29f94",
+    "SLH-DSA-SHA2-256f.jsonl": "977c1e2d4763ef7a7778b022d75fc1dbfa5a248339eeb12f702c1f4a232ba16d",
+    "SLH-DSA-SHA2-256s.jsonl": "9ff6739479a3bb5fb779a3b682a868f8fa2d418059d9451da92009f004c89cf2",
+    "SLH-DSA-SHAKE-128f.jsonl": "e7cd49740bc7beb22d09d22cfbf07292bd26d3288def5f188e6548ba3ca577cf"
+  }
+}

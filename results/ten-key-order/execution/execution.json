@@ -1,0 +1,470 @@
+{
+  "schema": "pqc-ten-key-global-order-v1",
+  "complete": true,
+  "started_at": "2026-10-12T02:01:29.887671+00:00",
+  "plan_sha256": "38113979bb7e4e22fe2debfbdba52f0f0cccedfd53fafca65e675910eedc8e38",
+  "coordinator_sha256": "ea1bf56e1d22c3782033f87b8a303d5b9b062124f3a7176f5b6e890e4cd19f80",
+  "plan": {
+    "schema": "pqc-ten-key-plan-v1",
+    "created_at": "2026-10-12T02:01:29.822645+00:00",
+    "keys_per_parameter": 10,
+    "providers": [
+      "openssl",
+      "liboqs",
+      "noble",
+      "circl",
+      "rustcrypto",
+      "bouncycastle"
+    ],
+    "batches": [
+      {
+        "provider": "openssl",
+        "variant": "candidate",
+        "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance",
+        "argv": [
+          "python3",
+          "libs/openssl/experiments/ten-key-order/run.py",
+          "run",
+          "--side",
+          "candidate",
+          "--exclusive-window-granted"
+        ]
+      },
+      {
+        "provider": "liboqs",
+        "variant": "candidate",
+        "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance",
+        "argv": [
+          "python3",
+          "libs/liboqs/experiments/ten-new-keys/run.py",
+          "measure",
+          "--variant",
+          "candidate",
+          "--exclusive-window"
+        ]
+      },
+      {
+        "provider": "noble",
+        "variant": "candidate",
+        "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/noble-robustness",
+        "argv": [
+          "python3",
+          "libs/noble/experiments/tenkeys/run.py",
+          "batch",
+          "--variant",
+          "candidate",
+          "--out",
+          "results/noble/experiments/tenkeys-candidate.json"
+        ]
+      },
+      {
+        "provider": "circl",
+        "variant": "candidate",
+        "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/circl-performance",
+        "argv": [
+          "python3",
+          "libs/circl/experiments/tenkeys/run.py",
+          "batch",
+          "--variant",
+          "candidate",
+          "--out",
+          "results/circl/experiments/tenkeys-candidate.json"
+        ]
+      },
+      {
+        "provider": "rustcrypto",
+        "variant": "candidate",
+        "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance",
+        "argv": [
+          "python3",
+          "libs/rustcrypto/experiments/tenkey.py",
+          "batch",
+          "--manifest",
+          "libs/rustcrypto/build/keygen-reuse/tenkey-b9df94ee5da7eab7/manifest.json",
+          "--variant",
+          "candidate",
+          "--out",
+          "results/rustcrypto/experiments/tenkey-candidate.json"
+        ]
+      },
+      {
+        "provider": "bouncycastle",
+        "variant": "candidate",
+        "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance",
+        "argv": [
+          "python3",
+          "libs/bouncycastle/experiments/tenkey.py",
+          "batch",
+          "--manifest",
+          "libs/bouncycastle/build/fors-base2b/tenkey-1ea29159f5844818/manifest.json",
+          "--variant",
+          "candidate",
+          "--out",
+          "results/bouncycastle/experiments/tenkey-candidate.json"
+        ]
+      },
+      {
+        "provider": "openssl",
+        "variant": "baseline",
+        "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance",
+        "argv": [
+          "python3",
+          "libs/openssl/experiments/ten-key-order/run.py",
+          "run",
+          "--side",
+          "baseline",
+          "--exclusive-window-granted"
+        ]
+      },
+      {
+        "provider": "liboqs",
+        "variant": "baseline",
+        "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance",
+        "argv": [
+          "python3",
+          "libs/liboqs/experiments/ten-new-keys/run.py",
+          "measure",
+          "--variant",
+          "baseline",
+          "--exclusive-window"
+        ]
+      },
+      {
+        "provider": "noble",
+        "variant": "baseline",
+        "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/noble-robustness",
+        "argv": [
+          "python3",
+          "libs/noble/experiments/tenkeys/run.py",
+          "batch",
+          "--variant",
+          "baseline",
+          "--out",
+          "results/noble/experiments/tenkeys-baseline.json",
+          "--candidate",
+          "results/noble/experiments/tenkeys-candidate.json"
+        ]
+      },
+      {
+        "provider": "circl",
+        "variant": "baseline",
+        "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/circl-performance",
+        "argv": [
+          "python3",
+          "libs/circl/experiments/tenkeys/run.py",
+          "batch",
+          "--variant",
+          "baseline",
+          "--out",
+          "results/circl/experiments/tenkeys-baseline.json",
+          "--candidate",
+          "results/circl/experiments/tenkeys-candidate.json"
+        ]
+      },
+      {
+        "provider": "rustcrypto",
+        "variant": "baseline",
+        "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance",
+        "argv": [
+          "python3",
+          "libs/rustcrypto/experiments/tenkey.py",
+          "batch",
+          "--manifest",
+          "libs/rustcrypto/build/keygen-reuse/tenkey-b9df94ee5da7eab7/manifest.json",
+          "--variant",
+          "baseline",
+          "--out",
+          "results/rustcrypto/experiments/tenkey-baseline.json",
+          "--candidate",
+          "results/rustcrypto/experiments/tenkey-candidate.json"
+        ]
+      },
+      {
+        "provider": "bouncycastle",
+        "variant": "baseline",
+        "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance",
+        "argv": [
+          "python3",
+          "libs/bouncycastle/experiments/tenkey.py",
+          "batch",
+          "--manifest",
+          "libs/bouncycastle/build/fors-base2b/tenkey-1ea29159f5844818/manifest.json",
+          "--variant",
+          "baseline",
+          "--out",
+          "results/bouncycastle/experiments/tenkey-baseline.json",
+          "--candidate",
+          "results/bouncycastle/experiments/tenkey-candidate.json"
+        ]
+      }
+    ]
+  },
+  "batches": [
+    {
+      "provider": "openssl",
+      "variant": "candidate",
+      "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance",
+      "argv": [
+        "python3",
+        "libs/openssl/experiments/ten-key-order/run.py",
+        "run",
+        "--side",
+        "candidate",
+        "--exclusive-window-granted"
+      ],
+      "started_at": "2026-10-12T02:01:29.888532+00:00",
+      "exit_code": 0,
+      "stdout": "01-openssl-candidate.stdout.txt",
+      "stderr": "01-openssl-candidate.stderr.txt",
+      "finished_at": "2026-10-12T02:01:37.682633+00:00",
+      "stdout_sha256": "2f233c8c992067d3cb78ba43b8f56438d670c09bee6f5a506c0ae78186467531",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "provider": "liboqs",
+      "variant": "candidate",
+      "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance",
+      "argv": [
+        "python3",
+        "libs/liboqs/experiments/ten-new-keys/run.py",
+        "measure",
+        "--variant",
+        "candidate",
+        "--exclusive-window"
+      ],
+      "started_at": "2026-10-12T02:01:37.683787+00:00",
+      "exit_code": 0,
+      "stdout": "02-liboqs-candidate.stdout.txt",
+      "stderr": "02-liboqs-candidate.stderr.txt",
+      "finished_at": "2026-10-12T02:01:44.678889+00:00",
+      "stdout_sha256": "cf58bed0c0e6976356df6581d68ae4e333109ce7610dcb31babc2b9f7ab64004",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "provider": "noble",
+      "variant": "candidate",
+      "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/noble-robustness",
+      "argv": [
+        "python3",
+        "libs/noble/experiments/tenkeys/run.py",
+        "batch",
+        "--variant",
+        "candidate",
+        "--out",
+        "results/noble/experiments/tenkeys-candidate.json"
+      ],
+      "started_at": "2026-10-12T02:01:44.679855+00:00",
+      "exit_code": 0,
+      "stdout": "03-noble-candidate.stdout.txt",
+      "stderr": "03-noble-candidate.stderr.txt",
+      "finished_at": "2026-10-12T02:01:50.360505+00:00",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "9a3c45e927ccac6835af8a9d43b429e6d365436111e8c741a3788e1902abfef6"
+    },
+    {
+      "provider": "circl",
+      "variant": "candidate",
+      "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/circl-performance",
+      "argv": [
+        "python3",
+        "libs/circl/experiments/tenkeys/run.py",
+        "batch",
+        "--variant",
+        "candidate",
+        "--out",
+        "results/circl/experiments/tenkeys-candidate.json"
+      ],
+      "started_at": "2026-10-12T02:01:50.361550+00:00",
+      "exit_code": 0,
+      "stdout": "04-circl-candidate.stdout.txt",
+      "stderr": "04-circl-candidate.stderr.txt",
+      "finished_at": "2026-10-12T02:02:04.488855+00:00",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "7bf347b7a06f7a8582cfa97548eecdd04c2aad75aca326218df76a9f7164299a"
+    },
+    {
+      "provider": "rustcrypto",
+      "variant": "candidate",
+      "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance",
+      "argv": [
+        "python3",
+        "libs/rustcrypto/experiments/tenkey.py",
+        "batch",
+        "--manifest",
+        "libs/rustcrypto/build/keygen-reuse/tenkey-b9df94ee5da7eab7/manifest.json",
+        "--variant",
+        "candidate",
+        "--out",
+        "results/rustcrypto/experiments/tenkey-candidate.json"
+      ],
+      "started_at": "2026-10-12T02:02:04.490155+00:00",
+      "exit_code": 0,
+      "stdout": "05-rustcrypto-candidate.stdout.txt",
+      "stderr": "05-rustcrypto-candidate.stderr.txt",
+      "finished_at": "2026-10-12T02:02:04.748132+00:00",
+      "stdout_sha256": "c90dabbefedafd71ee5dc19b14e8dfe2dbc2f06b855db535572b107470e07916",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "provider": "bouncycastle",
+      "variant": "candidate",
+      "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance",
+      "argv": [
+        "python3",
+        "libs/bouncycastle/experiments/tenkey.py",
+        "batch",
+        "--manifest",
+        "libs/bouncycastle/build/fors-base2b/tenkey-1ea29159f5844818/manifest.json",
+        "--variant",
+        "candidate",
+        "--out",
+        "results/bouncycastle/experiments/tenkey-candidate.json"
+      ],
+      "started_at": "2026-10-12T02:02:04.749082+00:00",
+      "exit_code": 0,
+      "stdout": "06-bouncycastle-candidate.stdout.txt",
+      "stderr": "06-bouncycastle-candidate.stderr.txt",
+      "finished_at": "2026-10-12T02:03:46.849833+00:00",
+      "stdout_sha256": "3045f6c7ea7af4c12556e23497ce5031a6280c956b2da0cc5b270b327c0ba518",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "provider": "openssl",
+      "variant": "baseline",
+      "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance",
+      "argv": [
+        "python3",
+        "libs/openssl/experiments/ten-key-order/run.py",
+        "run",
+        "--side",
+        "baseline",
+        "--exclusive-window-granted"
+      ],
+      "started_at": "2026-10-12T02:03:46.851953+00:00",
+      "exit_code": 0,
+      "stdout": "07-openssl-baseline.stdout.txt",
+      "stderr": "07-openssl-baseline.stderr.txt",
+      "finished_at": "2026-10-12T02:03:55.724308+00:00",
+      "stdout_sha256": "793aa45c00d73e002910b9074a8a1c20133f6179f7d6ca5384ff07c4a7c7f521",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "provider": "liboqs",
+      "variant": "baseline",
+      "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance",
+      "argv": [
+        "python3",
+        "libs/liboqs/experiments/ten-new-keys/run.py",
+        "measure",
+        "--variant",
+        "baseline",
+        "--exclusive-window"
+      ],
+      "started_at": "2026-10-12T02:03:55.725763+00:00",
+      "exit_code": 0,
+      "stdout": "08-liboqs-baseline.stdout.txt",
+      "stderr": "08-liboqs-baseline.stderr.txt",
+      "finished_at": "2026-10-12T02:04:27.471046+00:00",
+      "stdout_sha256": "c6cf7940f6a39b9547a28ea6c89798e822f160e7a0d4070aa8c88b4860e7f310",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "provider": "noble",
+      "variant": "baseline",
+      "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/noble-robustness",
+      "argv": [
+        "python3",
+        "libs/noble/experiments/tenkeys/run.py",
+        "batch",
+        "--variant",
+        "baseline",
+        "--out",
+        "results/noble/experiments/tenkeys-baseline.json",
+        "--candidate",
+        "results/noble/experiments/tenkeys-candidate.json"
+      ],
+      "started_at": "2026-10-12T02:04:27.472522+00:00",
+      "exit_code": 0,
+      "stdout": "09-noble-baseline.stdout.txt",
+      "stderr": "09-noble-baseline.stderr.txt",
+      "finished_at": "2026-10-12T02:04:33.970716+00:00",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "aa36f44da352159d8e0083d99a813b241dc9186fc8a5f227753cd42caae7ec8d"
+    },
+    {
+      "provider": "circl",
+      "variant": "baseline",
+      "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/circl-performance",
+      "argv": [
+        "python3",
+        "libs/circl/experiments/tenkeys/run.py",
+        "batch",
+        "--variant",
+        "baseline",
+        "--out",
+        "results/circl/experiments/tenkeys-baseline.json",
+        "--candidate",
+        "results/circl/experiments/tenkeys-candidate.json"
+      ],
+      "started_at": "2026-10-12T02:04:33.972056+00:00",
+      "exit_code": 0,
+      "stdout": "10-circl-baseline.stdout.txt",
+      "stderr": "10-circl-baseline.stderr.txt",
+      "finished_at": "2026-10-12T02:04:52.846230+00:00",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "4645b44b87e85b897896f2d1c0df6abe678f3266cc176be0b40ab155b2f50f13"
+    },
+    {
+      "provider": "rustcrypto",
+      "variant": "baseline",
+      "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance",
+      "argv": [
+        "python3",
+        "libs/rustcrypto/experiments/tenkey.py",
+        "batch",
+        "--manifest",
+        "libs/rustcrypto/build/keygen-reuse/tenkey-b9df94ee5da7eab7/manifest.json",
+        "--variant",
+        "baseline",
+        "--out",
+        "results/rustcrypto/experiments/tenkey-baseline.json",
+        "--candidate",
+        "results/rustcrypto/experiments/tenkey-candidate.json"
+      ],
+      "started_at": "2026-10-12T02:04:52.847956+00:00",
+      "exit_code": 0,
+      "stdout": "11-rustcrypto-baseline.stdout.txt",
+      "stderr": "11-rustcrypto-baseline.stderr.txt",
+      "finished_at": "2026-10-12T02:04:53.126892+00:00",
+      "stdout_sha256": "8ace73e166e12d683bb3c7fd3128423c9cfd5a811229ba116fb94431b3d6cdb9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "provider": "bouncycastle",
+      "variant": "baseline",
+      "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance",
+      "argv": [
+        "python3",
+        "libs/bouncycastle/experiments/tenkey.py",
+        "batch",
+        "--manifest",
+        "libs/bouncycastle/build/fors-base2b/tenkey-1ea29159f5844818/manifest.json",
+        "--variant",
+        "baseline",
+        "--out",
+        "results/bouncycastle/experiments/tenkey-baseline.json",
+        "--candidate",
+        "results/bouncycastle/experiments/tenkey-candidate.json"
+      ],
+      "started_at": "2026-10-12T02:04:53.128455+00:00",
+      "exit_code": 0,
+      "stdout": "12-bouncycastle-baseline.stdout.txt",
+      "stderr": "12-bouncycastle-baseline.stderr.txt",
+      "finished_at": "2026-10-12T02:06:34.467913+00:00",
+      "stdout_sha256": "801af22e3bb19bac6c7c812c4c57b0f69b756c5f241c2cc138b2816f7805c956",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "method": "One ten-key batch per parameter and variant; all candidate batches finish before the first baseline batch starts; no concurrent child processes.",
+  "finished_at": "2026-10-12T02:06:34.469640+00:00"
+}

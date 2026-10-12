@@ -1,0 +1,2439 @@
+{
+  "complete": true,
+  "scope": "one ten-key batch per parameter, all candidate before baseline; sensitivity check, not a balanced repeated benchmark",
+  "exact_outputs_match": true,
+  "completions": {
+    "candidate": {
+      "complete": true,
+      "variant": "candidate",
+      "started_at": "2026-10-12T02:01:29.974501+00:00",
+      "finished_at": "2026-10-12T02:01:37.673654+00:00",
+      "keys": 70,
+      "manifest_sha256": "d002e3431533bfb0376e04f4752d62c624aaf68fcfb9101616196de1e3763228",
+      "raw_sha256": {
+        "SLH-DSA-SHA2-128f.jsonl": "46b4bb79a26c0f57f49941da4793622b66f025476691f5181a8d6ad9e79fe7f3",
+        "SLH-DSA-SHA2-128s.jsonl": "09c92b8b3567c7c58d7eb3e38f577cf0622a0888cf4995118c2bb402c0c367e2",
+        "SLH-DSA-SHA2-192f.jsonl": "c27ac3d31822e0eb002cc6fe39cd28a632cb854b7d3163d094c3cda83951c6f7",
+        "SLH-DSA-SHA2-192s.jsonl": "dd018415226fc83d6877b9679a19699aa2184fcfe61b899069345ecc55c29f94",
+        "SLH-DSA-SHA2-256f.jsonl": "977c1e2d4763ef7a7778b022d75fc1dbfa5a248339eeb12f702c1f4a232ba16d",
+        "SLH-DSA-SHA2-256s.jsonl": "9ff6739479a3bb5fb779a3b682a868f8fa2d418059d9451da92009f004c89cf2",
+        "SLH-DSA-SHAKE-128f.jsonl": "e7cd49740bc7beb22d09d22cfbf07292bd26d3288def5f188e6548ba3ca577cf"
+      }
+    },
+    "baseline": {
+      "complete": true,
+      "variant": "baseline",
+      "started_at": "2026-10-12T02:03:46.969784+00:00",
+      "finished_at": "2026-10-12T02:03:55.715124+00:00",
+      "keys": 70,
+      "manifest_sha256": "d002e3431533bfb0376e04f4752d62c624aaf68fcfb9101616196de1e3763228",
+      "raw_sha256": {
+        "SLH-DSA-SHA2-128f.jsonl": "02242aa640909e093f2f8a792132d895ad27c3a2d4b02db0558a2f44c6b5c97e",
+        "SLH-DSA-SHA2-128s.jsonl": "632643ce13fe91878970ad8088d35cc46b8a2b6a5ee5cc5e6f8c5e38857efaaf",
+        "SLH-DSA-SHA2-192f.jsonl": "b5f655bf1e443dd4c8091929c2f61cf8bece3f184c292c9e728d66280f048e28",
+        "SLH-DSA-SHA2-192s.jsonl": "93726df8894885fcfe5fd41e7f491ad8eff461bf57006f5c95a119ddeb63e56a",
+        "SLH-DSA-SHA2-256f.jsonl": "dbe6b9f1c0c4e0488d12f5a7e3551abe764d0aeb6b06fbe9c1b81ee4186913a9",
+        "SLH-DSA-SHA2-256s.jsonl": "f28b2e3d3ae2b5b4c1aaeca2e68fbd828efa5df02b3653fc2254e98519326967",
+        "SLH-DSA-SHAKE-128f.jsonl": "83b87920d1b3ad7b7651fd0f4530af4bf009e9f61a8c81ca5d0389cdfbdcdbed"
+      }
+    }
+  },
+  "pairs": [
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "keygen",
+      "key_index": 0,
+      "candidate_wall_ns": 243000,
+      "baseline_wall_ns": 257000,
+      "candidate_cpu_ns": 244000,
+      "baseline_cpu_ns": 258000,
+      "speedup": 1.0576131687242798
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "keygen",
+      "key_index": 1,
+      "candidate_wall_ns": 244000,
+      "baseline_wall_ns": 247000,
+      "candidate_cpu_ns": 244000,
+      "baseline_cpu_ns": 248000,
+      "speedup": 1.0122950819672132
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "keygen",
+      "key_index": 2,
+      "candidate_wall_ns": 247000,
+      "baseline_wall_ns": 248000,
+      "candidate_cpu_ns": 247000,
+      "baseline_cpu_ns": 248000,
+      "speedup": 1.0040485829959513
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "keygen",
+      "key_index": 3,
+      "candidate_wall_ns": 244000,
+      "baseline_wall_ns": 246000,
+      "candidate_cpu_ns": 244000,
+      "baseline_cpu_ns": 246000,
+      "speedup": 1.0081967213114753
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "keygen",
+      "key_index": 4,
+      "candidate_wall_ns": 245000,
+      "baseline_wall_ns": 241000,
+      "candidate_cpu_ns": 246000,
+      "baseline_cpu_ns": 242000,
+      "speedup": 0.9836734693877551
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "keygen",
+      "key_index": 5,
+      "candidate_wall_ns": 262000,
+      "baseline_wall_ns": 241000,
+      "candidate_cpu_ns": 258000,
+      "baseline_cpu_ns": 241000,
+      "speedup": 0.9198473282442748
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "keygen",
+      "key_index": 6,
+      "candidate_wall_ns": 243000,
+      "baseline_wall_ns": 241000,
+      "candidate_cpu_ns": 243000,
+      "baseline_cpu_ns": 242000,
+      "speedup": 0.9917695473251029
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "keygen",
+      "key_index": 7,
+      "candidate_wall_ns": 242000,
+      "baseline_wall_ns": 244000,
+      "candidate_cpu_ns": 243000,
+      "baseline_cpu_ns": 245000,
+      "speedup": 1.0082644628099173
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "keygen",
+      "key_index": 8,
+      "candidate_wall_ns": 241000,
+      "baseline_wall_ns": 242000,
+      "candidate_cpu_ns": 242000,
+      "baseline_cpu_ns": 242000,
+      "speedup": 1.004149377593361
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "keygen",
+      "key_index": 9,
+      "candidate_wall_ns": 242000,
+      "baseline_wall_ns": 247000,
+      "candidate_cpu_ns": 243000,
+      "baseline_cpu_ns": 249000,
+      "speedup": 1.0206611570247934
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "key_index": 0,
+      "candidate_wall_ns": 5716000,
+      "baseline_wall_ns": 5715000,
+      "candidate_cpu_ns": 5702000,
+      "baseline_cpu_ns": 5699000,
+      "speedup": 0.9998250524842547
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "key_index": 1,
+      "candidate_wall_ns": 5653000,
+      "baseline_wall_ns": 5747000,
+      "candidate_cpu_ns": 5654000,
+      "baseline_cpu_ns": 5734000,
+      "speedup": 1.0166283389350788
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "key_index": 2,
+      "candidate_wall_ns": 5645000,
+      "baseline_wall_ns": 5696000,
+      "candidate_cpu_ns": 5645000,
+      "baseline_cpu_ns": 5682000,
+      "speedup": 1.0090345438441097
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "key_index": 3,
+      "candidate_wall_ns": 5679000,
+      "baseline_wall_ns": 5822000,
+      "candidate_cpu_ns": 5680000,
+      "baseline_cpu_ns": 5789000,
+      "speedup": 1.0251804895228034
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "key_index": 4,
+      "candidate_wall_ns": 5776000,
+      "baseline_wall_ns": 5713000,
+      "candidate_cpu_ns": 5739000,
+      "baseline_cpu_ns": 5692000,
+      "speedup": 0.9890927977839336
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "key_index": 5,
+      "candidate_wall_ns": 5807000,
+      "baseline_wall_ns": 5672000,
+      "candidate_cpu_ns": 5794000,
+      "baseline_cpu_ns": 5673000,
+      "speedup": 0.9767521956259687
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "key_index": 6,
+      "candidate_wall_ns": 5635000,
+      "baseline_wall_ns": 5654000,
+      "candidate_cpu_ns": 5637000,
+      "baseline_cpu_ns": 5654000,
+      "speedup": 1.0033717834960072
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "key_index": 7,
+      "candidate_wall_ns": 5649000,
+      "baseline_wall_ns": 5654000,
+      "candidate_cpu_ns": 5650000,
+      "baseline_cpu_ns": 5655000,
+      "speedup": 1.000885112409276
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "key_index": 8,
+      "candidate_wall_ns": 5697000,
+      "baseline_wall_ns": 5748000,
+      "candidate_cpu_ns": 5685000,
+      "baseline_cpu_ns": 5736000,
+      "speedup": 1.0089520800421274
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "key_index": 9,
+      "candidate_wall_ns": 5657000,
+      "baseline_wall_ns": 5640000,
+      "candidate_cpu_ns": 5657000,
+      "baseline_cpu_ns": 5641000,
+      "speedup": 0.9969948736079194
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "key_index": 0,
+      "candidate_wall_ns": 374000,
+      "baseline_wall_ns": 372000,
+      "candidate_cpu_ns": 373000,
+      "baseline_cpu_ns": 373000,
+      "speedup": 0.9946524064171123
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "key_index": 1,
+      "candidate_wall_ns": 347000,
+      "baseline_wall_ns": 359000,
+      "candidate_cpu_ns": 347000,
+      "baseline_cpu_ns": 359000,
+      "speedup": 1.0345821325648414
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "key_index": 2,
+      "candidate_wall_ns": 364000,
+      "baseline_wall_ns": 333000,
+      "candidate_cpu_ns": 347000,
+      "baseline_cpu_ns": 333000,
+      "speedup": 0.9148351648351648
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "key_index": 3,
+      "candidate_wall_ns": 353000,
+      "baseline_wall_ns": 385000,
+      "candidate_cpu_ns": 353000,
+      "baseline_cpu_ns": 387000,
+      "speedup": 1.0906515580736544
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "key_index": 4,
+      "candidate_wall_ns": 345000,
+      "baseline_wall_ns": 338000,
+      "candidate_cpu_ns": 344000,
+      "baseline_cpu_ns": 339000,
+      "speedup": 0.9797101449275363
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "key_index": 5,
+      "candidate_wall_ns": 357000,
+      "baseline_wall_ns": 356000,
+      "candidate_cpu_ns": 357000,
+      "baseline_cpu_ns": 356000,
+      "speedup": 0.9971988795518207
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "key_index": 6,
+      "candidate_wall_ns": 365000,
+      "baseline_wall_ns": 383000,
+      "candidate_cpu_ns": 366000,
+      "baseline_cpu_ns": 375000,
+      "speedup": 1.0493150684931507
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "key_index": 7,
+      "candidate_wall_ns": 351000,
+      "baseline_wall_ns": 365000,
+      "candidate_cpu_ns": 353000,
+      "baseline_cpu_ns": 367000,
+      "speedup": 1.03988603988604
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "key_index": 8,
+      "candidate_wall_ns": 369000,
+      "baseline_wall_ns": 377000,
+      "candidate_cpu_ns": 369000,
+      "baseline_cpu_ns": 372000,
+      "speedup": 1.021680216802168
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "key_index": 9,
+      "candidate_wall_ns": 346000,
+      "baseline_wall_ns": 347000,
+      "candidate_cpu_ns": 348000,
+      "baseline_cpu_ns": 348000,
+      "speedup": 1.0028901734104045
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "keygen",
+      "key_index": 0,
+      "candidate_wall_ns": 15393000,
+      "baseline_wall_ns": 15398000,
+      "candidate_cpu_ns": 15345000,
+      "baseline_cpu_ns": 15337000,
+      "speedup": 1.0003248229714805
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "keygen",
+      "key_index": 1,
+      "candidate_wall_ns": 15550000,
+      "baseline_wall_ns": 15353000,
+      "candidate_cpu_ns": 15512000,
+      "baseline_cpu_ns": 15326000,
+      "speedup": 0.987331189710611
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "keygen",
+      "key_index": 2,
+      "candidate_wall_ns": 15445000,
+      "baseline_wall_ns": 15501000,
+      "candidate_cpu_ns": 15372000,
+      "baseline_cpu_ns": 15433000,
+      "speedup": 1.0036257688572354
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "keygen",
+      "key_index": 3,
+      "candidate_wall_ns": 15282000,
+      "baseline_wall_ns": 15494000,
+      "candidate_cpu_ns": 15272000,
+      "baseline_cpu_ns": 15400000,
+      "speedup": 1.0138725297735898
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "keygen",
+      "key_index": 4,
+      "candidate_wall_ns": 15444000,
+      "baseline_wall_ns": 15584000,
+      "candidate_cpu_ns": 15360000,
+      "baseline_cpu_ns": 15505000,
+      "speedup": 1.009065009065009
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "keygen",
+      "key_index": 5,
+      "candidate_wall_ns": 15378000,
+      "baseline_wall_ns": 15494000,
+      "candidate_cpu_ns": 15335000,
+      "baseline_cpu_ns": 15410000,
+      "speedup": 1.0075432435947458
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "keygen",
+      "key_index": 6,
+      "candidate_wall_ns": 15295000,
+      "baseline_wall_ns": 15505000,
+      "candidate_cpu_ns": 15281000,
+      "baseline_cpu_ns": 15471000,
+      "speedup": 1.0137299771167048
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "keygen",
+      "key_index": 7,
+      "candidate_wall_ns": 15303000,
+      "baseline_wall_ns": 15696000,
+      "candidate_cpu_ns": 15285000,
+      "baseline_cpu_ns": 15536000,
+      "speedup": 1.0256812389727505
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "keygen",
+      "key_index": 8,
+      "candidate_wall_ns": 15364000,
+      "baseline_wall_ns": 15531000,
+      "candidate_cpu_ns": 15341000,
+      "baseline_cpu_ns": 15466000,
+      "speedup": 1.0108695652173914
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "keygen",
+      "key_index": 9,
+      "candidate_wall_ns": 15496000,
+      "baseline_wall_ns": 15425000,
+      "candidate_cpu_ns": 15449000,
+      "baseline_cpu_ns": 15361000,
+      "speedup": 0.9954181724315952
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "key_index": 0,
+      "candidate_wall_ns": 118572000,
+      "baseline_wall_ns": 118926000,
+      "candidate_cpu_ns": 118342000,
+      "baseline_cpu_ns": 118517000,
+      "speedup": 1.002985527780589
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "key_index": 1,
+      "candidate_wall_ns": 118778000,
+      "baseline_wall_ns": 118742000,
+      "candidate_cpu_ns": 118469000,
+      "baseline_cpu_ns": 118364000,
+      "speedup": 0.999696913569853
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "key_index": 2,
+      "candidate_wall_ns": 118151000,
+      "baseline_wall_ns": 119136000,
+      "candidate_cpu_ns": 117902000,
+      "baseline_cpu_ns": 118625000,
+      "speedup": 1.0083367893627646
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "key_index": 3,
+      "candidate_wall_ns": 118485000,
+      "baseline_wall_ns": 119610000,
+      "candidate_cpu_ns": 118028000,
+      "baseline_cpu_ns": 118879000,
+      "speedup": 1.009494872768705
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "key_index": 4,
+      "candidate_wall_ns": 118463000,
+      "baseline_wall_ns": 118884000,
+      "candidate_cpu_ns": 117987000,
+      "baseline_cpu_ns": 118449000,
+      "speedup": 1.003553852257667
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "key_index": 5,
+      "candidate_wall_ns": 125037000,
+      "baseline_wall_ns": 118967000,
+      "candidate_cpu_ns": 118783000,
+      "baseline_cpu_ns": 118522000,
+      "speedup": 0.951454369506626
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "key_index": 6,
+      "candidate_wall_ns": 118587000,
+      "baseline_wall_ns": 119080000,
+      "candidate_cpu_ns": 118319000,
+      "baseline_cpu_ns": 118582000,
+      "speedup": 1.004157285368548
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "key_index": 7,
+      "candidate_wall_ns": 118799000,
+      "baseline_wall_ns": 119017000,
+      "candidate_cpu_ns": 118381000,
+      "baseline_cpu_ns": 118585000,
+      "speedup": 1.0018350322814165
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "key_index": 8,
+      "candidate_wall_ns": 118897000,
+      "baseline_wall_ns": 119018000,
+      "candidate_cpu_ns": 118264000,
+      "baseline_cpu_ns": 118525000,
+      "speedup": 1.001017687578324
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "key_index": 9,
+      "candidate_wall_ns": 117919000,
+      "baseline_wall_ns": 119204000,
+      "candidate_cpu_ns": 117736000,
+      "baseline_cpu_ns": 118675000,
+      "speedup": 1.0108973108659334
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "key_index": 0,
+      "candidate_wall_ns": 130000,
+      "baseline_wall_ns": 130000,
+      "candidate_cpu_ns": 131000,
+      "baseline_cpu_ns": 130000,
+      "speedup": 1.0
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "key_index": 1,
+      "candidate_wall_ns": 136000,
+      "baseline_wall_ns": 139000,
+      "candidate_cpu_ns": 135000,
+      "baseline_cpu_ns": 140000,
+      "speedup": 1.0220588235294117
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "key_index": 2,
+      "candidate_wall_ns": 134000,
+      "baseline_wall_ns": 143000,
+      "candidate_cpu_ns": 135000,
+      "baseline_cpu_ns": 144000,
+      "speedup": 1.0671641791044777
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "key_index": 3,
+      "candidate_wall_ns": 135000,
+      "baseline_wall_ns": 145000,
+      "candidate_cpu_ns": 135000,
+      "baseline_cpu_ns": 146000,
+      "speedup": 1.0740740740740742
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "key_index": 4,
+      "candidate_wall_ns": 126000,
+      "baseline_wall_ns": 125000,
+      "candidate_cpu_ns": 127000,
+      "baseline_cpu_ns": 126000,
+      "speedup": 0.9920634920634921
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "key_index": 5,
+      "candidate_wall_ns": 136000,
+      "baseline_wall_ns": 133000,
+      "candidate_cpu_ns": 136000,
+      "baseline_cpu_ns": 133000,
+      "speedup": 0.9779411764705882
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "key_index": 6,
+      "candidate_wall_ns": 130000,
+      "baseline_wall_ns": 132000,
+      "candidate_cpu_ns": 130000,
+      "baseline_cpu_ns": 132000,
+      "speedup": 1.0153846153846153
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "key_index": 7,
+      "candidate_wall_ns": 129000,
+      "baseline_wall_ns": 132000,
+      "candidate_cpu_ns": 129000,
+      "baseline_cpu_ns": 131000,
+      "speedup": 1.0232558139534884
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "key_index": 8,
+      "candidate_wall_ns": 129000,
+      "baseline_wall_ns": 132000,
+      "candidate_cpu_ns": 129000,
+      "baseline_cpu_ns": 132000,
+      "speedup": 1.0232558139534884
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "key_index": 9,
+      "candidate_wall_ns": 138000,
+      "baseline_wall_ns": 138000,
+      "candidate_cpu_ns": 139000,
+      "baseline_cpu_ns": 140000,
+      "speedup": 1.0
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "keygen",
+      "key_index": 0,
+      "candidate_wall_ns": 390000,
+      "baseline_wall_ns": 331000,
+      "candidate_cpu_ns": 370000,
+      "baseline_cpu_ns": 331000,
+      "speedup": 0.8487179487179487
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "keygen",
+      "key_index": 1,
+      "candidate_wall_ns": 331000,
+      "baseline_wall_ns": 344000,
+      "candidate_cpu_ns": 332000,
+      "baseline_cpu_ns": 347000,
+      "speedup": 1.039274924471299
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "keygen",
+      "key_index": 2,
+      "candidate_wall_ns": 348000,
+      "baseline_wall_ns": 332000,
+      "candidate_cpu_ns": 349000,
+      "baseline_cpu_ns": 334000,
+      "speedup": 0.9540229885057471
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "keygen",
+      "key_index": 3,
+      "candidate_wall_ns": 344000,
+      "baseline_wall_ns": 332000,
+      "candidate_cpu_ns": 344000,
+      "baseline_cpu_ns": 332000,
+      "speedup": 0.9651162790697675
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "keygen",
+      "key_index": 4,
+      "candidate_wall_ns": 348000,
+      "baseline_wall_ns": 334000,
+      "candidate_cpu_ns": 350000,
+      "baseline_cpu_ns": 336000,
+      "speedup": 0.9597701149425287
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "keygen",
+      "key_index": 5,
+      "candidate_wall_ns": 331000,
+      "baseline_wall_ns": 338000,
+      "candidate_cpu_ns": 331000,
+      "baseline_cpu_ns": 340000,
+      "speedup": 1.0211480362537764
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "keygen",
+      "key_index": 6,
+      "candidate_wall_ns": 333000,
+      "baseline_wall_ns": 342000,
+      "candidate_cpu_ns": 334000,
+      "baseline_cpu_ns": 342000,
+      "speedup": 1.027027027027027
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "keygen",
+      "key_index": 7,
+      "candidate_wall_ns": 338000,
+      "baseline_wall_ns": 342000,
+      "candidate_cpu_ns": 338000,
+      "baseline_cpu_ns": 346000,
+      "speedup": 1.0118343195266273
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "keygen",
+      "key_index": 8,
+      "candidate_wall_ns": 332000,
+      "baseline_wall_ns": 336000,
+      "candidate_cpu_ns": 332000,
+      "baseline_cpu_ns": 337000,
+      "speedup": 1.0120481927710843
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "keygen",
+      "key_index": 9,
+      "candidate_wall_ns": 330000,
+      "baseline_wall_ns": 347000,
+      "candidate_cpu_ns": 331000,
+      "baseline_cpu_ns": 347000,
+      "speedup": 1.0515151515151515
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "sign",
+      "key_index": 0,
+      "candidate_wall_ns": 9442000,
+      "baseline_wall_ns": 10342000,
+      "candidate_cpu_ns": 9418000,
+      "baseline_cpu_ns": 10318000,
+      "speedup": 1.0953187883922897
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "sign",
+      "key_index": 1,
+      "candidate_wall_ns": 9426000,
+      "baseline_wall_ns": 10419000,
+      "candidate_cpu_ns": 9427000,
+      "baseline_cpu_ns": 10375000,
+      "speedup": 1.1053469127943985
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "sign",
+      "key_index": 2,
+      "candidate_wall_ns": 9394000,
+      "baseline_wall_ns": 10441000,
+      "candidate_cpu_ns": 9368000,
+      "baseline_cpu_ns": 10359000,
+      "speedup": 1.111454119650841
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "sign",
+      "key_index": 3,
+      "candidate_wall_ns": 9402000,
+      "baseline_wall_ns": 10241000,
+      "candidate_cpu_ns": 9403000,
+      "baseline_cpu_ns": 10230000,
+      "speedup": 1.0892363326951713
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "sign",
+      "key_index": 4,
+      "candidate_wall_ns": 9306000,
+      "baseline_wall_ns": 10360000,
+      "candidate_cpu_ns": 9297000,
+      "baseline_cpu_ns": 10300000,
+      "speedup": 1.1132602621964325
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "sign",
+      "key_index": 5,
+      "candidate_wall_ns": 9335000,
+      "baseline_wall_ns": 10507000,
+      "candidate_cpu_ns": 9323000,
+      "baseline_cpu_ns": 10397000,
+      "speedup": 1.125549009105517
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "sign",
+      "key_index": 6,
+      "candidate_wall_ns": 9448000,
+      "baseline_wall_ns": 10424000,
+      "candidate_cpu_ns": 9394000,
+      "baseline_cpu_ns": 10364000,
+      "speedup": 1.1033022861981372
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "sign",
+      "key_index": 7,
+      "candidate_wall_ns": 9278000,
+      "baseline_wall_ns": 10276000,
+      "candidate_cpu_ns": 9277000,
+      "baseline_cpu_ns": 10244000,
+      "speedup": 1.107566285837465
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "sign",
+      "key_index": 8,
+      "candidate_wall_ns": 9344000,
+      "baseline_wall_ns": 10337000,
+      "candidate_cpu_ns": 9333000,
+      "baseline_cpu_ns": 10301000,
+      "speedup": 1.1062714041095891
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "sign",
+      "key_index": 9,
+      "candidate_wall_ns": 9277000,
+      "baseline_wall_ns": 10397000,
+      "candidate_cpu_ns": 9277000,
+      "baseline_cpu_ns": 10362000,
+      "speedup": 1.1207286838417592
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "verify",
+      "key_index": 0,
+      "candidate_wall_ns": 542000,
+      "baseline_wall_ns": 559000,
+      "candidate_cpu_ns": 542000,
+      "baseline_cpu_ns": 560000,
+      "speedup": 1.0313653136531364
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "verify",
+      "key_index": 1,
+      "candidate_wall_ns": 536000,
+      "baseline_wall_ns": 573000,
+      "candidate_cpu_ns": 536000,
+      "baseline_cpu_ns": 574000,
+      "speedup": 1.0690298507462686
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "verify",
+      "key_index": 2,
+      "candidate_wall_ns": 528000,
+      "baseline_wall_ns": 583000,
+      "candidate_cpu_ns": 529000,
+      "baseline_cpu_ns": 584000,
+      "speedup": 1.1041666666666667
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "verify",
+      "key_index": 3,
+      "candidate_wall_ns": 613000,
+      "baseline_wall_ns": 585000,
+      "candidate_cpu_ns": 596000,
+      "baseline_cpu_ns": 586000,
+      "speedup": 0.9543230016313213
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "verify",
+      "key_index": 4,
+      "candidate_wall_ns": 525000,
+      "baseline_wall_ns": 561000,
+      "candidate_cpu_ns": 526000,
+      "baseline_cpu_ns": 562000,
+      "speedup": 1.0685714285714285
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "verify",
+      "key_index": 5,
+      "candidate_wall_ns": 528000,
+      "baseline_wall_ns": 568000,
+      "candidate_cpu_ns": 528000,
+      "baseline_cpu_ns": 569000,
+      "speedup": 1.0757575757575757
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "verify",
+      "key_index": 6,
+      "candidate_wall_ns": 515000,
+      "baseline_wall_ns": 566000,
+      "candidate_cpu_ns": 516000,
+      "baseline_cpu_ns": 566000,
+      "speedup": 1.0990291262135923
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "verify",
+      "key_index": 7,
+      "candidate_wall_ns": 520000,
+      "baseline_wall_ns": 567000,
+      "candidate_cpu_ns": 521000,
+      "baseline_cpu_ns": 568000,
+      "speedup": 1.0903846153846153
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "verify",
+      "key_index": 8,
+      "candidate_wall_ns": 508000,
+      "baseline_wall_ns": 552000,
+      "candidate_cpu_ns": 509000,
+      "baseline_cpu_ns": 552000,
+      "speedup": 1.0866141732283465
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "verify",
+      "key_index": 9,
+      "candidate_wall_ns": 508000,
+      "baseline_wall_ns": 551000,
+      "candidate_cpu_ns": 508000,
+      "baseline_cpu_ns": 551000,
+      "speedup": 1.0846456692913387
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "keygen",
+      "key_index": 0,
+      "candidate_wall_ns": 21011000,
+      "baseline_wall_ns": 21221000,
+      "candidate_cpu_ns": 20980000,
+      "baseline_cpu_ns": 21147000,
+      "speedup": 1.0099947646470897
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "keygen",
+      "key_index": 1,
+      "candidate_wall_ns": 21006000,
+      "baseline_wall_ns": 21247000,
+      "candidate_cpu_ns": 20986000,
+      "baseline_cpu_ns": 21173000,
+      "speedup": 1.01147291250119
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "keygen",
+      "key_index": 2,
+      "candidate_wall_ns": 21361000,
+      "baseline_wall_ns": 21385000,
+      "candidate_cpu_ns": 21305000,
+      "baseline_cpu_ns": 21291000,
+      "speedup": 1.0011235429052947
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "keygen",
+      "key_index": 3,
+      "candidate_wall_ns": 21419000,
+      "baseline_wall_ns": 21319000,
+      "candidate_cpu_ns": 21227000,
+      "baseline_cpu_ns": 21227000,
+      "speedup": 0.995331247957421
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "keygen",
+      "key_index": 4,
+      "candidate_wall_ns": 21198000,
+      "baseline_wall_ns": 21263000,
+      "candidate_cpu_ns": 21066000,
+      "baseline_cpu_ns": 21196000,
+      "speedup": 1.0030663270119822
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "keygen",
+      "key_index": 5,
+      "candidate_wall_ns": 21154000,
+      "baseline_wall_ns": 21126000,
+      "candidate_cpu_ns": 21067000,
+      "baseline_cpu_ns": 21053000,
+      "speedup": 0.99867637326274
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "keygen",
+      "key_index": 6,
+      "candidate_wall_ns": 21061000,
+      "baseline_wall_ns": 21319000,
+      "candidate_cpu_ns": 20998000,
+      "baseline_cpu_ns": 21228000,
+      "speedup": 1.012250130573097
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "keygen",
+      "key_index": 7,
+      "candidate_wall_ns": 20935000,
+      "baseline_wall_ns": 21404000,
+      "candidate_cpu_ns": 20931000,
+      "baseline_cpu_ns": 21303000,
+      "speedup": 1.0224026749462622
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "keygen",
+      "key_index": 8,
+      "candidate_wall_ns": 20875000,
+      "baseline_wall_ns": 21263000,
+      "candidate_cpu_ns": 20875000,
+      "baseline_cpu_ns": 21201000,
+      "speedup": 1.0185868263473055
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "keygen",
+      "key_index": 9,
+      "candidate_wall_ns": 20908000,
+      "baseline_wall_ns": 113727000,
+      "candidate_cpu_ns": 20908000,
+      "baseline_cpu_ns": 26903000,
+      "speedup": 5.439401186148842
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "sign",
+      "key_index": 0,
+      "candidate_wall_ns": 216179000,
+      "baseline_wall_ns": 248472000,
+      "candidate_cpu_ns": 215903000,
+      "baseline_cpu_ns": 247405000,
+      "speedup": 1.149380837176599
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "sign",
+      "key_index": 1,
+      "candidate_wall_ns": 217093000,
+      "baseline_wall_ns": 247802000,
+      "candidate_cpu_ns": 216574000,
+      "baseline_cpu_ns": 246860000,
+      "speedup": 1.1414555052442963
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "sign",
+      "key_index": 2,
+      "candidate_wall_ns": 217482000,
+      "baseline_wall_ns": 248126000,
+      "candidate_cpu_ns": 216847000,
+      "baseline_cpu_ns": 247163000,
+      "speedup": 1.140903615011817
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "sign",
+      "key_index": 3,
+      "candidate_wall_ns": 246454000,
+      "baseline_wall_ns": 248014000,
+      "candidate_cpu_ns": 218473000,
+      "baseline_cpu_ns": 247149000,
+      "speedup": 1.006329781622534
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "sign",
+      "key_index": 4,
+      "candidate_wall_ns": 217127000,
+      "baseline_wall_ns": 247930000,
+      "candidate_cpu_ns": 216505000,
+      "baseline_cpu_ns": 246866000,
+      "speedup": 1.1418662810244695
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "sign",
+      "key_index": 5,
+      "candidate_wall_ns": 216691000,
+      "baseline_wall_ns": 248628000,
+      "candidate_cpu_ns": 216428000,
+      "baseline_cpu_ns": 247376000,
+      "speedup": 1.1473849859938807
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "sign",
+      "key_index": 6,
+      "candidate_wall_ns": 216331000,
+      "baseline_wall_ns": 247941000,
+      "candidate_cpu_ns": 216130000,
+      "baseline_cpu_ns": 246964000,
+      "speedup": 1.1461186792461553
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "sign",
+      "key_index": 7,
+      "candidate_wall_ns": 216822000,
+      "baseline_wall_ns": 248569000,
+      "candidate_cpu_ns": 216364000,
+      "baseline_cpu_ns": 247348000,
+      "speedup": 1.1464196437630867
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "sign",
+      "key_index": 8,
+      "candidate_wall_ns": 216131000,
+      "baseline_wall_ns": 257413000,
+      "candidate_cpu_ns": 215750000,
+      "baseline_cpu_ns": 250175000,
+      "speedup": 1.1910045296602523
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "sign",
+      "key_index": 9,
+      "candidate_wall_ns": 216501000,
+      "baseline_wall_ns": 286590000,
+      "candidate_cpu_ns": 216187000,
+      "baseline_cpu_ns": 255528000,
+      "speedup": 1.3237352252414538
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "verify",
+      "key_index": 0,
+      "candidate_wall_ns": 208000,
+      "baseline_wall_ns": 238000,
+      "candidate_cpu_ns": 210000,
+      "baseline_cpu_ns": 237000,
+      "speedup": 1.1442307692307692
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "verify",
+      "key_index": 1,
+      "candidate_wall_ns": 204000,
+      "baseline_wall_ns": 254000,
+      "candidate_cpu_ns": 204000,
+      "baseline_cpu_ns": 254000,
+      "speedup": 1.2450980392156863
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "verify",
+      "key_index": 2,
+      "candidate_wall_ns": 199000,
+      "baseline_wall_ns": 231000,
+      "candidate_cpu_ns": 199000,
+      "baseline_cpu_ns": 232000,
+      "speedup": 1.1608040201005025
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "verify",
+      "key_index": 3,
+      "candidate_wall_ns": 198000,
+      "baseline_wall_ns": 227000,
+      "candidate_cpu_ns": 199000,
+      "baseline_cpu_ns": 227000,
+      "speedup": 1.1464646464646464
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "verify",
+      "key_index": 4,
+      "candidate_wall_ns": 201000,
+      "baseline_wall_ns": 231000,
+      "candidate_cpu_ns": 201000,
+      "baseline_cpu_ns": 232000,
+      "speedup": 1.1492537313432836
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "verify",
+      "key_index": 5,
+      "candidate_wall_ns": 196000,
+      "baseline_wall_ns": 247000,
+      "candidate_cpu_ns": 197000,
+      "baseline_cpu_ns": 244000,
+      "speedup": 1.260204081632653
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "verify",
+      "key_index": 6,
+      "candidate_wall_ns": 200000,
+      "baseline_wall_ns": 244000,
+      "candidate_cpu_ns": 201000,
+      "baseline_cpu_ns": 244000,
+      "speedup": 1.22
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "verify",
+      "key_index": 7,
+      "candidate_wall_ns": 208000,
+      "baseline_wall_ns": 234000,
+      "candidate_cpu_ns": 209000,
+      "baseline_cpu_ns": 233000,
+      "speedup": 1.125
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "verify",
+      "key_index": 8,
+      "candidate_wall_ns": 210000,
+      "baseline_wall_ns": 287000,
+      "candidate_cpu_ns": 211000,
+      "baseline_cpu_ns": 269000,
+      "speedup": 1.3666666666666667
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "verify",
+      "key_index": 9,
+      "candidate_wall_ns": 203000,
+      "baseline_wall_ns": 240000,
+      "candidate_cpu_ns": 204000,
+      "baseline_cpu_ns": 241000,
+      "speedup": 1.1822660098522169
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "keygen",
+      "key_index": 0,
+      "candidate_wall_ns": 888000,
+      "baseline_wall_ns": 953000,
+      "candidate_cpu_ns": 888000,
+      "baseline_cpu_ns": 922000,
+      "speedup": 1.0731981981981982
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "keygen",
+      "key_index": 1,
+      "candidate_wall_ns": 884000,
+      "baseline_wall_ns": 919000,
+      "candidate_cpu_ns": 884000,
+      "baseline_cpu_ns": 923000,
+      "speedup": 1.0395927601809956
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "keygen",
+      "key_index": 2,
+      "candidate_wall_ns": 907000,
+      "baseline_wall_ns": 1051000,
+      "candidate_cpu_ns": 897000,
+      "baseline_cpu_ns": 982000,
+      "speedup": 1.1587651598676958
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "keygen",
+      "key_index": 3,
+      "candidate_wall_ns": 915000,
+      "baseline_wall_ns": 953000,
+      "candidate_cpu_ns": 918000,
+      "baseline_cpu_ns": 951000,
+      "speedup": 1.0415300546448087
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "keygen",
+      "key_index": 4,
+      "candidate_wall_ns": 893000,
+      "baseline_wall_ns": 960000,
+      "candidate_cpu_ns": 896000,
+      "baseline_cpu_ns": 955000,
+      "speedup": 1.0750279955207167
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "keygen",
+      "key_index": 5,
+      "candidate_wall_ns": 883000,
+      "baseline_wall_ns": 904000,
+      "candidate_cpu_ns": 883000,
+      "baseline_cpu_ns": 907000,
+      "speedup": 1.0237825594563987
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "keygen",
+      "key_index": 6,
+      "candidate_wall_ns": 883000,
+      "baseline_wall_ns": 906000,
+      "candidate_cpu_ns": 884000,
+      "baseline_cpu_ns": 907000,
+      "speedup": 1.0260475651189127
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "keygen",
+      "key_index": 7,
+      "candidate_wall_ns": 883000,
+      "baseline_wall_ns": 909000,
+      "candidate_cpu_ns": 883000,
+      "baseline_cpu_ns": 912000,
+      "speedup": 1.0294450736126841
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "keygen",
+      "key_index": 8,
+      "candidate_wall_ns": 891000,
+      "baseline_wall_ns": 891000,
+      "candidate_cpu_ns": 890000,
+      "baseline_cpu_ns": 893000,
+      "speedup": 1.0
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "keygen",
+      "key_index": 9,
+      "candidate_wall_ns": 884000,
+      "baseline_wall_ns": 888000,
+      "candidate_cpu_ns": 885000,
+      "baseline_cpu_ns": 889000,
+      "speedup": 1.004524886877828
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "sign",
+      "key_index": 0,
+      "candidate_wall_ns": 19537000,
+      "baseline_wall_ns": 22416000,
+      "candidate_cpu_ns": 19489000,
+      "baseline_cpu_ns": 21790000,
+      "speedup": 1.1473614167988944
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "sign",
+      "key_index": 1,
+      "candidate_wall_ns": 19575000,
+      "baseline_wall_ns": 22742000,
+      "candidate_cpu_ns": 19556000,
+      "baseline_cpu_ns": 21898000,
+      "speedup": 1.1617879948914431
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "sign",
+      "key_index": 2,
+      "candidate_wall_ns": 19523000,
+      "baseline_wall_ns": 22372000,
+      "candidate_cpu_ns": 19482000,
+      "baseline_cpu_ns": 22018000,
+      "speedup": 1.1459304410182862
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "sign",
+      "key_index": 3,
+      "candidate_wall_ns": 19593000,
+      "baseline_wall_ns": 23750000,
+      "candidate_cpu_ns": 19528000,
+      "baseline_cpu_ns": 22507000,
+      "speedup": 1.2121676108814372
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "sign",
+      "key_index": 4,
+      "candidate_wall_ns": 19554000,
+      "baseline_wall_ns": 21853000,
+      "candidate_cpu_ns": 19526000,
+      "baseline_cpu_ns": 21684000,
+      "speedup": 1.1175718523064335
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "sign",
+      "key_index": 5,
+      "candidate_wall_ns": 19585000,
+      "baseline_wall_ns": 21885000,
+      "candidate_cpu_ns": 19544000,
+      "baseline_cpu_ns": 21595000,
+      "speedup": 1.1174368138881798
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "sign",
+      "key_index": 6,
+      "candidate_wall_ns": 19609000,
+      "baseline_wall_ns": 22231000,
+      "candidate_cpu_ns": 19561000,
+      "baseline_cpu_ns": 21828000,
+      "speedup": 1.1337141108674589
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "sign",
+      "key_index": 7,
+      "candidate_wall_ns": 19412000,
+      "baseline_wall_ns": 21730000,
+      "candidate_cpu_ns": 19412000,
+      "baseline_cpu_ns": 21546000,
+      "speedup": 1.1194106738100145
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "sign",
+      "key_index": 8,
+      "candidate_wall_ns": 19631000,
+      "baseline_wall_ns": 21645000,
+      "candidate_cpu_ns": 19600000,
+      "baseline_cpu_ns": 21535000,
+      "speedup": 1.102592837858489
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "sign",
+      "key_index": 9,
+      "candidate_wall_ns": 19535000,
+      "baseline_wall_ns": 21569000,
+      "candidate_cpu_ns": 19536000,
+      "baseline_cpu_ns": 21504000,
+      "speedup": 1.1041208088047094
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "verify",
+      "key_index": 0,
+      "candidate_wall_ns": 537000,
+      "baseline_wall_ns": 603000,
+      "candidate_cpu_ns": 536000,
+      "baseline_cpu_ns": 605000,
+      "speedup": 1.1229050279329609
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "verify",
+      "key_index": 1,
+      "candidate_wall_ns": 535000,
+      "baseline_wall_ns": 583000,
+      "candidate_cpu_ns": 534000,
+      "baseline_cpu_ns": 583000,
+      "speedup": 1.0897196261682243
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "verify",
+      "key_index": 2,
+      "candidate_wall_ns": 544000,
+      "baseline_wall_ns": 645000,
+      "candidate_cpu_ns": 544000,
+      "baseline_cpu_ns": 633000,
+      "speedup": 1.1856617647058822
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "verify",
+      "key_index": 3,
+      "candidate_wall_ns": 558000,
+      "baseline_wall_ns": 588000,
+      "candidate_cpu_ns": 549000,
+      "baseline_cpu_ns": 590000,
+      "speedup": 1.053763440860215
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "verify",
+      "key_index": 4,
+      "candidate_wall_ns": 531000,
+      "baseline_wall_ns": 577000,
+      "candidate_cpu_ns": 532000,
+      "baseline_cpu_ns": 576000,
+      "speedup": 1.0866290018832392
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "verify",
+      "key_index": 5,
+      "candidate_wall_ns": 545000,
+      "baseline_wall_ns": 602000,
+      "candidate_cpu_ns": 544000,
+      "baseline_cpu_ns": 604000,
+      "speedup": 1.1045871559633027
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "verify",
+      "key_index": 6,
+      "candidate_wall_ns": 549000,
+      "baseline_wall_ns": 585000,
+      "candidate_cpu_ns": 550000,
+      "baseline_cpu_ns": 585000,
+      "speedup": 1.0655737704918034
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "verify",
+      "key_index": 7,
+      "candidate_wall_ns": 529000,
+      "baseline_wall_ns": 583000,
+      "candidate_cpu_ns": 529000,
+      "baseline_cpu_ns": 583000,
+      "speedup": 1.1020793950850662
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "verify",
+      "key_index": 8,
+      "candidate_wall_ns": 548000,
+      "baseline_wall_ns": 595000,
+      "candidate_cpu_ns": 549000,
+      "baseline_cpu_ns": 596000,
+      "speedup": 1.0857664233576643
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "verify",
+      "key_index": 9,
+      "candidate_wall_ns": 527000,
+      "baseline_wall_ns": 599000,
+      "candidate_cpu_ns": 528000,
+      "baseline_cpu_ns": 600000,
+      "speedup": 1.1366223908918407
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "keygen",
+      "key_index": 0,
+      "candidate_wall_ns": 14222000,
+      "baseline_wall_ns": 15737000,
+      "candidate_cpu_ns": 14193000,
+      "baseline_cpu_ns": 14851000,
+      "speedup": 1.106525101954718
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "keygen",
+      "key_index": 1,
+      "candidate_wall_ns": 14087000,
+      "baseline_wall_ns": 14654000,
+      "candidate_cpu_ns": 14088000,
+      "baseline_cpu_ns": 14462000,
+      "speedup": 1.0402498757719885
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "keygen",
+      "key_index": 2,
+      "candidate_wall_ns": 14156000,
+      "baseline_wall_ns": 14338000,
+      "candidate_cpu_ns": 14131000,
+      "baseline_cpu_ns": 14256000,
+      "speedup": 1.0128567391918621
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "keygen",
+      "key_index": 3,
+      "candidate_wall_ns": 14160000,
+      "baseline_wall_ns": 14225000,
+      "candidate_cpu_ns": 14129000,
+      "baseline_cpu_ns": 14192000,
+      "speedup": 1.004590395480226
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "keygen",
+      "key_index": 4,
+      "candidate_wall_ns": 14102000,
+      "baseline_wall_ns": 14209000,
+      "candidate_cpu_ns": 14103000,
+      "baseline_cpu_ns": 14193000,
+      "speedup": 1.007587576230322
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "keygen",
+      "key_index": 5,
+      "candidate_wall_ns": 14104000,
+      "baseline_wall_ns": 14334000,
+      "candidate_cpu_ns": 14105000,
+      "baseline_cpu_ns": 14277000,
+      "speedup": 1.0163074305161657
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "keygen",
+      "key_index": 6,
+      "candidate_wall_ns": 14314000,
+      "baseline_wall_ns": 14135000,
+      "candidate_cpu_ns": 14281000,
+      "baseline_cpu_ns": 14138000,
+      "speedup": 0.9874947603744586
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "keygen",
+      "key_index": 7,
+      "candidate_wall_ns": 14336000,
+      "baseline_wall_ns": 14124000,
+      "candidate_cpu_ns": 14273000,
+      "baseline_cpu_ns": 14124000,
+      "speedup": 0.9852120535714286
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "keygen",
+      "key_index": 8,
+      "candidate_wall_ns": 14340000,
+      "baseline_wall_ns": 14319000,
+      "candidate_cpu_ns": 14287000,
+      "baseline_cpu_ns": 14263000,
+      "speedup": 0.9985355648535564
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "keygen",
+      "key_index": 9,
+      "candidate_wall_ns": 14221000,
+      "baseline_wall_ns": 14393000,
+      "candidate_cpu_ns": 14201000,
+      "baseline_cpu_ns": 14351000,
+      "speedup": 1.0120947893959638
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "sign",
+      "key_index": 0,
+      "candidate_wall_ns": 203228000,
+      "baseline_wall_ns": 248707000,
+      "candidate_cpu_ns": 202665000,
+      "baseline_cpu_ns": 244289000,
+      "speedup": 1.2237831401184875
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "sign",
+      "key_index": 1,
+      "candidate_wall_ns": 202486000,
+      "baseline_wall_ns": 241503000,
+      "candidate_cpu_ns": 202332000,
+      "baseline_cpu_ns": 241024000,
+      "speedup": 1.1926898649783195
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "sign",
+      "key_index": 2,
+      "candidate_wall_ns": 202780000,
+      "baseline_wall_ns": 241754000,
+      "candidate_cpu_ns": 202416000,
+      "baseline_cpu_ns": 241210000,
+      "speedup": 1.1921984416609133
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "sign",
+      "key_index": 3,
+      "candidate_wall_ns": 202234000,
+      "baseline_wall_ns": 241174000,
+      "candidate_cpu_ns": 202037000,
+      "baseline_cpu_ns": 240785000,
+      "speedup": 1.1925492251550185
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "sign",
+      "key_index": 4,
+      "candidate_wall_ns": 202170000,
+      "baseline_wall_ns": 240835000,
+      "candidate_cpu_ns": 202030000,
+      "baseline_cpu_ns": 240615000,
+      "speedup": 1.1912499381708463
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "sign",
+      "key_index": 5,
+      "candidate_wall_ns": 202705000,
+      "baseline_wall_ns": 241709000,
+      "candidate_cpu_ns": 202420000,
+      "baseline_cpu_ns": 241228000,
+      "speedup": 1.1924175526010705
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "sign",
+      "key_index": 6,
+      "candidate_wall_ns": 203294000,
+      "baseline_wall_ns": 241322000,
+      "candidate_cpu_ns": 202851000,
+      "baseline_cpu_ns": 240804000,
+      "speedup": 1.1870591360295926
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "sign",
+      "key_index": 7,
+      "candidate_wall_ns": 203398000,
+      "baseline_wall_ns": 241236000,
+      "candidate_cpu_ns": 202924000,
+      "baseline_cpu_ns": 240818000,
+      "speedup": 1.1860293611539936
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "sign",
+      "key_index": 8,
+      "candidate_wall_ns": 203408000,
+      "baseline_wall_ns": 241357000,
+      "candidate_cpu_ns": 202926000,
+      "baseline_cpu_ns": 240919000,
+      "speedup": 1.186565916778101
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "sign",
+      "key_index": 9,
+      "candidate_wall_ns": 202839000,
+      "baseline_wall_ns": 242664000,
+      "candidate_cpu_ns": 202257000,
+      "baseline_cpu_ns": 241631000,
+      "speedup": 1.1963379823406741
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "verify",
+      "key_index": 0,
+      "candidate_wall_ns": 291000,
+      "baseline_wall_ns": 335000,
+      "candidate_cpu_ns": 291000,
+      "baseline_cpu_ns": 336000,
+      "speedup": 1.1512027491408934
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "verify",
+      "key_index": 1,
+      "candidate_wall_ns": 293000,
+      "baseline_wall_ns": 326000,
+      "candidate_cpu_ns": 293000,
+      "baseline_cpu_ns": 326000,
+      "speedup": 1.1126279863481228
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "verify",
+      "key_index": 2,
+      "candidate_wall_ns": 287000,
+      "baseline_wall_ns": 336000,
+      "candidate_cpu_ns": 287000,
+      "baseline_cpu_ns": 337000,
+      "speedup": 1.170731707317073
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "verify",
+      "key_index": 3,
+      "candidate_wall_ns": 286000,
+      "baseline_wall_ns": 392000,
+      "candidate_cpu_ns": 286000,
+      "baseline_cpu_ns": 379000,
+      "speedup": 1.3706293706293706
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "verify",
+      "key_index": 4,
+      "candidate_wall_ns": 287000,
+      "baseline_wall_ns": 328000,
+      "candidate_cpu_ns": 288000,
+      "baseline_cpu_ns": 329000,
+      "speedup": 1.1428571428571428
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "verify",
+      "key_index": 5,
+      "candidate_wall_ns": 282000,
+      "baseline_wall_ns": 360000,
+      "candidate_cpu_ns": 282000,
+      "baseline_cpu_ns": 361000,
+      "speedup": 1.2765957446808511
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "verify",
+      "key_index": 6,
+      "candidate_wall_ns": 288000,
+      "baseline_wall_ns": 327000,
+      "candidate_cpu_ns": 289000,
+      "baseline_cpu_ns": 328000,
+      "speedup": 1.1354166666666667
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "verify",
+      "key_index": 7,
+      "candidate_wall_ns": 293000,
+      "baseline_wall_ns": 327000,
+      "candidate_cpu_ns": 293000,
+      "baseline_cpu_ns": 329000,
+      "speedup": 1.1160409556313993
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "verify",
+      "key_index": 8,
+      "candidate_wall_ns": 293000,
+      "baseline_wall_ns": 342000,
+      "candidate_cpu_ns": 293000,
+      "baseline_cpu_ns": 344000,
+      "speedup": 1.1672354948805461
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "verify",
+      "key_index": 9,
+      "candidate_wall_ns": 297000,
+      "baseline_wall_ns": 338000,
+      "candidate_cpu_ns": 297000,
+      "baseline_cpu_ns": 340000,
+      "speedup": 1.138047138047138
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "keygen",
+      "key_index": 0,
+      "candidate_wall_ns": 1356000,
+      "baseline_wall_ns": 1362000,
+      "candidate_cpu_ns": 1358000,
+      "baseline_cpu_ns": 1362000,
+      "speedup": 1.0044247787610618
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "keygen",
+      "key_index": 1,
+      "candidate_wall_ns": 1358000,
+      "baseline_wall_ns": 1521000,
+      "candidate_cpu_ns": 1359000,
+      "baseline_cpu_ns": 1471000,
+      "speedup": 1.1200294550810015
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "keygen",
+      "key_index": 2,
+      "candidate_wall_ns": 1360000,
+      "baseline_wall_ns": 1431000,
+      "candidate_cpu_ns": 1360000,
+      "baseline_cpu_ns": 1418000,
+      "speedup": 1.0522058823529412
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "keygen",
+      "key_index": 3,
+      "candidate_wall_ns": 1364000,
+      "baseline_wall_ns": 1358000,
+      "candidate_cpu_ns": 1365000,
+      "baseline_cpu_ns": 1359000,
+      "speedup": 0.9956011730205279
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "keygen",
+      "key_index": 4,
+      "candidate_wall_ns": 1362000,
+      "baseline_wall_ns": 1358000,
+      "candidate_cpu_ns": 1364000,
+      "baseline_cpu_ns": 1358000,
+      "speedup": 0.9970631424375918
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "keygen",
+      "key_index": 5,
+      "candidate_wall_ns": 1455000,
+      "baseline_wall_ns": 1356000,
+      "candidate_cpu_ns": 1427000,
+      "baseline_cpu_ns": 1358000,
+      "speedup": 0.931958762886598
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "keygen",
+      "key_index": 6,
+      "candidate_wall_ns": 1360000,
+      "baseline_wall_ns": 1359000,
+      "candidate_cpu_ns": 1361000,
+      "baseline_cpu_ns": 1363000,
+      "speedup": 0.9992647058823529
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "keygen",
+      "key_index": 7,
+      "candidate_wall_ns": 1355000,
+      "baseline_wall_ns": 1360000,
+      "candidate_cpu_ns": 1356000,
+      "baseline_cpu_ns": 1362000,
+      "speedup": 1.003690036900369
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "keygen",
+      "key_index": 8,
+      "candidate_wall_ns": 1357000,
+      "baseline_wall_ns": 1355000,
+      "candidate_cpu_ns": 1358000,
+      "baseline_cpu_ns": 1356000,
+      "speedup": 0.9985261606484893
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "keygen",
+      "key_index": 9,
+      "candidate_wall_ns": 1361000,
+      "baseline_wall_ns": 1363000,
+      "candidate_cpu_ns": 1361000,
+      "baseline_cpu_ns": 1364000,
+      "speedup": 1.0014695077149156
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "sign",
+      "key_index": 0,
+      "candidate_wall_ns": 32069000,
+      "baseline_wall_ns": 31948000,
+      "candidate_cpu_ns": 31933000,
+      "baseline_cpu_ns": 31872000,
+      "speedup": 0.9962268857775421
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "sign",
+      "key_index": 1,
+      "candidate_wall_ns": 31811000,
+      "baseline_wall_ns": 31867000,
+      "candidate_cpu_ns": 31754000,
+      "baseline_cpu_ns": 31814000,
+      "speedup": 1.0017603973468296
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "sign",
+      "key_index": 2,
+      "candidate_wall_ns": 31877000,
+      "baseline_wall_ns": 31943000,
+      "candidate_cpu_ns": 31821000,
+      "baseline_cpu_ns": 31906000,
+      "speedup": 1.0020704583241835
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "sign",
+      "key_index": 3,
+      "candidate_wall_ns": 31766000,
+      "baseline_wall_ns": 32100000,
+      "candidate_cpu_ns": 31719000,
+      "baseline_cpu_ns": 31972000,
+      "speedup": 1.0105143864509223
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "sign",
+      "key_index": 4,
+      "candidate_wall_ns": 31893000,
+      "baseline_wall_ns": 31952000,
+      "candidate_cpu_ns": 31809000,
+      "baseline_cpu_ns": 31892000,
+      "speedup": 1.0018499357225723
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "sign",
+      "key_index": 5,
+      "candidate_wall_ns": 31858000,
+      "baseline_wall_ns": 32142000,
+      "candidate_cpu_ns": 31828000,
+      "baseline_cpu_ns": 32028000,
+      "speedup": 1.0089145583526902
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "sign",
+      "key_index": 6,
+      "candidate_wall_ns": 31898000,
+      "baseline_wall_ns": 31945000,
+      "candidate_cpu_ns": 31850000,
+      "baseline_cpu_ns": 31858000,
+      "speedup": 1.0014734466110728
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "sign",
+      "key_index": 7,
+      "candidate_wall_ns": 31819000,
+      "baseline_wall_ns": 31808000,
+      "candidate_cpu_ns": 31777000,
+      "baseline_cpu_ns": 31762000,
+      "speedup": 0.999654294603853
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "sign",
+      "key_index": 8,
+      "candidate_wall_ns": 31872000,
+      "baseline_wall_ns": 31977000,
+      "candidate_cpu_ns": 31828000,
+      "baseline_cpu_ns": 31910000,
+      "speedup": 1.0032944277108433
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "sign",
+      "key_index": 9,
+      "candidate_wall_ns": 31760000,
+      "baseline_wall_ns": 32001000,
+      "candidate_cpu_ns": 31718000,
+      "baseline_cpu_ns": 31901000,
+      "speedup": 1.007588161209068
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "verify",
+      "key_index": 0,
+      "candidate_wall_ns": 1995000,
+      "baseline_wall_ns": 2000000,
+      "candidate_cpu_ns": 1996000,
+      "baseline_cpu_ns": 2001000,
+      "speedup": 1.0025062656641603
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "verify",
+      "key_index": 1,
+      "candidate_wall_ns": 1937000,
+      "baseline_wall_ns": 1981000,
+      "candidate_cpu_ns": 1937000,
+      "baseline_cpu_ns": 1952000,
+      "speedup": 1.022715539494063
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "verify",
+      "key_index": 2,
+      "candidate_wall_ns": 1955000,
+      "baseline_wall_ns": 1870000,
+      "candidate_cpu_ns": 1936000,
+      "baseline_cpu_ns": 1871000,
+      "speedup": 0.9565217391304348
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "verify",
+      "key_index": 3,
+      "candidate_wall_ns": 1862000,
+      "baseline_wall_ns": 1873000,
+      "candidate_cpu_ns": 1863000,
+      "baseline_cpu_ns": 1875000,
+      "speedup": 1.0059076262083781
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "verify",
+      "key_index": 4,
+      "candidate_wall_ns": 1995000,
+      "baseline_wall_ns": 1979000,
+      "candidate_cpu_ns": 1996000,
+      "baseline_cpu_ns": 1981000,
+      "speedup": 0.9919799498746867
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "verify",
+      "key_index": 5,
+      "candidate_wall_ns": 1878000,
+      "baseline_wall_ns": 1910000,
+      "candidate_cpu_ns": 1879000,
+      "baseline_cpu_ns": 1900000,
+      "speedup": 1.0170394036208732
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "verify",
+      "key_index": 6,
+      "candidate_wall_ns": 1916000,
+      "baseline_wall_ns": 1945000,
+      "candidate_cpu_ns": 1917000,
+      "baseline_cpu_ns": 1935000,
+      "speedup": 1.0151356993736953
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "verify",
+      "key_index": 7,
+      "candidate_wall_ns": 1942000,
+      "baseline_wall_ns": 1930000,
+      "candidate_cpu_ns": 1943000,
+      "baseline_cpu_ns": 1931000,
+      "speedup": 0.9938208032955715
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "verify",
+      "key_index": 8,
+      "candidate_wall_ns": 1924000,
+      "baseline_wall_ns": 1923000,
+      "candidate_cpu_ns": 1925000,
+      "baseline_cpu_ns": 1924000,
+      "speedup": 0.9994802494802495
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "verify",
+      "key_index": 9,
+      "candidate_wall_ns": 1944000,
+      "baseline_wall_ns": 1941000,
+      "candidate_cpu_ns": 1945000,
+      "baseline_cpu_ns": 1942000,
+      "speedup": 0.9984567901234568
+    }
+  ],
+  "summary": [
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "keygen",
+      "keys": 10,
+      "median_key_speedup": 1.0061730494524181,
+      "total_time_speedup": 1.000407664084794,
+      "min_key_speedup": 0.9198473282442748,
+      "max_key_speedup": 1.0576131687242798,
+      "key_losses": 3,
+      "total_wall_ns": {
+        "candidate": 2453000,
+        "baseline": 2454000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "keys": 10,
+      "median_key_speedup": 1.0021284479526416,
+      "total_time_speedup": 1.002582844291387,
+      "min_key_speedup": 0.9767521956259687,
+      "max_key_speedup": 1.0251804895228034,
+      "key_losses": 4,
+      "total_wall_ns": {
+        "candidate": 56914000,
+        "baseline": 57061000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "keys": 10,
+      "median_key_speedup": 1.0122851951062861,
+      "total_time_speedup": 1.0123214785774293,
+      "min_key_speedup": 0.9148351648351648,
+      "max_key_speedup": 1.0906515580736544,
+      "key_losses": 4,
+      "total_wall_ns": {
+        "candidate": 3571000,
+        "baseline": 3615000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "keygen",
+      "keys": 10,
+      "median_key_speedup": 1.0083041263298775,
+      "total_time_speedup": 1.0066969795388112,
+      "min_key_speedup": 0.987331189710611,
+      "max_key_speedup": 1.0256812389727505,
+      "key_losses": 2,
+      "total_wall_ns": {
+        "candidate": 153950000,
+        "baseline": 154981000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "keys": 10,
+      "median_key_speedup": 1.003269690019128,
+      "total_time_speedup": 0.9990735830183739,
+      "min_key_speedup": 0.951454369506626,
+      "max_key_speedup": 1.0108973108659334,
+      "key_losses": 2,
+      "total_wall_ns": {
+        "candidate": 1191688000,
+        "baseline": 1190584000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "keys": 10,
+      "median_key_speedup": 1.0187217194570135,
+      "total_time_speedup": 1.0196523053665911,
+      "min_key_speedup": 0.9779411764705882,
+      "max_key_speedup": 1.0740740740740742,
+      "key_losses": 2,
+      "total_wall_ns": {
+        "candidate": 1323000,
+        "baseline": 1349000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "keygen",
+      "keys": 10,
+      "median_key_speedup": 1.0119412561488557,
+      "total_time_speedup": 0.9862773722627737,
+      "min_key_speedup": 0.8487179487179487,
+      "max_key_speedup": 1.0515151515151515,
+      "key_losses": 4,
+      "total_wall_ns": {
+        "candidate": 3425000,
+        "baseline": 3378000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "sign",
+      "keys": 10,
+      "median_key_speedup": 1.106918844973527,
+      "total_time_speedup": 1.107760645795071,
+      "min_key_speedup": 1.0892363326951713,
+      "max_key_speedup": 1.125549009105517,
+      "key_losses": 0,
+      "total_wall_ns": {
+        "candidate": 93652000,
+        "baseline": 103744000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "verify",
+      "keys": 10,
+      "median_key_speedup": 1.080201622524457,
+      "total_time_speedup": 1.0642494833740372,
+      "min_key_speedup": 0.9543230016313213,
+      "max_key_speedup": 1.1041666666666667,
+      "key_losses": 1,
+      "total_wall_ns": {
+        "candidate": 5323000,
+        "baseline": 5665000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "keygen",
+      "keys": 10,
+      "median_key_speedup": 1.01073383857414,
+      "total_time_speedup": 1.4472900705453995,
+      "min_key_speedup": 0.995331247957421,
+      "max_key_speedup": 5.439401186148842,
+      "key_losses": 2,
+      "total_wall_ns": {
+        "candidate": 210928000,
+        "baseline": 305274000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "sign",
+      "keys": 10,
+      "median_key_speedup": 1.146269161504621,
+      "total_time_speedup": 1.1514349664126773,
+      "min_key_speedup": 1.006329781622534,
+      "max_key_speedup": 1.3237352252414538,
+      "key_losses": 0,
+      "total_wall_ns": {
+        "candidate": 2196811000,
+        "baseline": 2529485000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "verify",
+      "keys": 10,
+      "median_key_speedup": 1.1715350149763597,
+      "total_time_speedup": 1.2002960039467192,
+      "min_key_speedup": 1.125,
+      "max_key_speedup": 1.3666666666666667,
+      "key_losses": 0,
+      "total_wall_ns": {
+        "candidate": 2027000,
+        "baseline": 2433000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "keygen",
+      "keys": 10,
+      "median_key_speedup": 1.0345189168968398,
+      "total_time_speedup": 1.0474694198182022,
+      "min_key_speedup": 1.0,
+      "max_key_speedup": 1.1587651598676958,
+      "key_losses": 0,
+      "total_wall_ns": {
+        "candidate": 8911000,
+        "baseline": 9334000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "sign",
+      "keys": 10,
+      "median_key_speedup": 1.1265623923387367,
+      "total_time_speedup": 1.136223242684885,
+      "min_key_speedup": 1.102592837858489,
+      "max_key_speedup": 1.2121676108814372,
+      "key_losses": 0,
+      "total_wall_ns": {
+        "candidate": 195554000,
+        "baseline": 222193000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "verify",
+      "keys": 10,
+      "median_key_speedup": 1.0958995106266451,
+      "total_time_speedup": 1.1030908754395705,
+      "min_key_speedup": 1.053763440860215,
+      "max_key_speedup": 1.1856617647058822,
+      "key_losses": 0,
+      "total_wall_ns": {
+        "candidate": 5403000,
+        "baseline": 5960000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "keygen",
+      "keys": 10,
+      "median_key_speedup": 1.0098411828131428,
+      "total_time_speedup": 1.0170794553723546,
+      "min_key_speedup": 0.9852120535714286,
+      "max_key_speedup": 1.106525101954718,
+      "key_losses": 3,
+      "total_wall_ns": {
+        "candidate": 142042000,
+        "baseline": 144468000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "sign",
+      "keys": 10,
+      "median_key_speedup": 1.192307997130992,
+      "total_time_speedup": 1.1940896466526205,
+      "min_key_speedup": 1.1860293611539936,
+      "max_key_speedup": 1.2237831401184875,
+      "key_losses": 0,
+      "total_wall_ns": {
+        "candidate": 2028542000,
+        "baseline": 2422261000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "verify",
+      "keys": 10,
+      "median_key_speedup": 1.147029945999018,
+      "total_time_speedup": 1.1774249223334483,
+      "min_key_speedup": 1.1126279863481228,
+      "max_key_speedup": 1.3706293706293706,
+      "key_losses": 0,
+      "total_wall_ns": {
+        "candidate": 2897000,
+        "baseline": 3411000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "keygen",
+      "keys": 10,
+      "median_key_speedup": 1.0003671067986342,
+      "total_time_speedup": 1.0098626534190531,
+      "min_key_speedup": 0.931958762886598,
+      "max_key_speedup": 1.1200294550810015,
+      "key_losses": 5,
+      "total_wall_ns": {
+        "candidate": 13688000,
+        "baseline": 13823000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "sign",
+      "keys": 10,
+      "median_key_speedup": 1.001960197023378,
+      "total_time_speedup": 1.0033268157038255,
+      "min_key_speedup": 0.9962268857775421,
+      "max_key_speedup": 1.0105143864509223,
+      "key_losses": 2,
+      "total_wall_ns": {
+        "candidate": 318623000,
+        "baseline": 319683000
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "verify",
+      "keys": 10,
+      "median_key_speedup": 1.000993257572205,
+      "total_time_speedup": 1.0002067397146992,
+      "min_key_speedup": 0.9565217391304348,
+      "max_key_speedup": 1.022715539494063,
+      "key_losses": 5,
+      "total_wall_ns": {
+        "candidate": 19348000,
+        "baseline": 19352000
+      }
+    }
+  ]
+}

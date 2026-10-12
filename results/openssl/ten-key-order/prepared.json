@@ -1,0 +1,77 @@
+{
+  "schema": "openssl-ten-key-prepared-v1",
+  "prepared_at": "2026-10-12T01:55:45.942023+00:00",
+  "baseline_commit": "122db7eb076bf0625df87b91bcc2dccfaccc4900",
+  "candidate_commit": "cb722554afced3c3232104b15693c203734864cf",
+  "parameters": [
+    "SLH-DSA-SHA2-128f",
+    "SLH-DSA-SHA2-128s",
+    "SLH-DSA-SHA2-192f",
+    "SLH-DSA-SHA2-192s",
+    "SLH-DSA-SHA2-256f",
+    "SLH-DSA-SHA2-256s",
+    "SLH-DSA-SHAKE-128f"
+  ],
+  "keys_per_parameter": 10,
+  "warmup_keys_per_parameter": 1,
+  "binaries": {
+    "baseline": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/ten-key-order/baseline",
+    "candidate": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/ten-key-order/candidate"
+  },
+  "hashes": {
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/baseline/libcrypto.a": "4c336a0026dbc7627bcf27309499dba7dbaeafc7b47a741ba565307eb5b46b3a",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/ten-key-order/baseline": "90c157d217f94ca26d4ccdcb7a2a384b010f1fb63b53eac56964abdf19609e6b",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/candidate/libcrypto.a": "b776f4ef8ead66fbb84d99da260b4638ffb5698f5d83e2fd995c05bb9b85ed15",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/ten-key-order/candidate": "02748d8098bccf469380fb97830592039c80fcb97ef77de65af38f690833e36d",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/results/openssl/ten-key-order/inputs/SLH-DSA-SHA2-128f.txt": "52ab8d1408522814a8c2c318135b8f497a903bebe8dd260904ad33f9d35ebd0e",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/results/openssl/ten-key-order/inputs/SLH-DSA-SHA2-128s.txt": "2230f34684467203db26f86e6856f1bb68f76b481405cb0a05b6e7f0a67ded63",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/results/openssl/ten-key-order/inputs/SLH-DSA-SHA2-192f.txt": "d54e140161f4016f2f5e748d2360b5db04191af1ed9502761623a40b102fb04e",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/results/openssl/ten-key-order/inputs/SLH-DSA-SHA2-192s.txt": "141d79be5c3c64baac37ef463cac1162439a1ffb3c643338c76b9cc041bf834c",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/results/openssl/ten-key-order/inputs/SLH-DSA-SHA2-256f.txt": "78171e5c21aba24ed3a28a5fd573d5d484b245545dbb0ff65bfe29f212e1f794",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/results/openssl/ten-key-order/inputs/SLH-DSA-SHA2-256s.txt": "2128420c02c4a3e1f660bf2b0e23eebf3d6caa631f4d170e4c6500e742115f15",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/results/openssl/ten-key-order/inputs/SLH-DSA-SHAKE-128f.txt": "95737debab89c382b83940f29632524376e626b598da4a4d25bac269c92ed26e",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/experiments/ten-key-order/driver.c": "6694d3b937d66e081716bda31be4dcc406140bfa382b5cd68dcb6ff197027281",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/experiments/ten-key-order/run.py": "c424d4878702d6eaa93aacc8f0bba9c10f302ed248340065566357e43faeb8b7",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/experiments/sha512-prefix-driver.c": "cea67ee60ddd0a6436d3f3b6420638e5ba630dbd75c8a124fbfc8748645cb6c2"
+  },
+  "build": {
+    "baseline": {
+      "command": [
+        "cc",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/baseline/include",
+        "-I/Users/dandelionlabs/development/personal/openssl/worktrees/slh-sha512-baseline/include",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/experiments/ten-key-order/driver.c",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/baseline/libcrypto.a",
+        "-lpthread",
+        "-o",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/ten-key-order/baseline"
+      ],
+      "stdout": "",
+      "stderr": ""
+    },
+    "candidate": {
+      "command": [
+        "cc",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/candidate/include",
+        "-I/Users/dandelionlabs/development/personal/openssl/worktrees/slh-sha512-prefix/include",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/experiments/ten-key-order/driver.c",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/candidate/libcrypto.a",
+        "-lpthread",
+        "-o",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/ten-key-order/candidate"
+      ],
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "smoke_exact_outputs_and_tamper_passed": true,
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.2.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "python_optimize": 0
+}

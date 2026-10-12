@@ -1,0 +1,13 @@
+Fresh process candidate: sha2_128f, ten new keys
+Fresh process candidate: sha2_128s, ten new keys
+Fresh process candidate: sha2_192f, ten new keys
+Fresh process candidate: sha2_192s, ten new keys
+Fresh process candidate: sha2_256f, ten new keys
+Fresh process candidate: sha2_256s, ten new keys
+Fresh process candidate: shake_128f, ten new keys
+Fresh process candidate: shake_128s, ten new keys
+Fresh process candidate: shake_192f, ten new keys
+Fresh process candidate: shake_192s, ten new keys
+Fresh process candidate: shake_256f, ten new keys
+Fresh process candidate: shake_256s, ten new keys
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/results/bouncycastle/experiments/tenkey-candidate.json

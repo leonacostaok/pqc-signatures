@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "variant": "baseline",
+  "started_at": "2026-10-12T02:03:46.969784+00:00",
+  "finished_at": "2026-10-12T02:03:55.715124+00:00",
+  "keys": 70,
+  "manifest_sha256": "d002e3431533bfb0376e04f4752d62c624aaf68fcfb9101616196de1e3763228",
+  "raw_sha256": {
+    "SLH-DSA-SHA2-128f.jsonl": "02242aa640909e093f2f8a792132d895ad27c3a2d4b02db0558a2f44c6b5c97e",
+    "SLH-DSA-SHA2-128s.jsonl": "632643ce13fe91878970ad8088d35cc46b8a2b6a5ee5cc5e6f8c5e38857efaaf",
+    "SLH-DSA-SHA2-192f.jsonl": "b5f655bf1e443dd4c8091929c2f61cf8bece3f184c292c9e728d66280f048e28",
+    "SLH-DSA-SHA2-192s.jsonl": "93726df8894885fcfe5fd41e7f491ad8eff461bf57006f5c95a119ddeb63e56a",
+    "SLH-DSA-SHA2-256f.jsonl": "dbe6b9f1c0c4e0488d12f5a7e3551abe764d0aeb6b06fbe9c1b81ee4186913a9",
+    "SLH-DSA-SHA2-256s.jsonl": "f28b2e3d3ae2b5b4c1aaeca2e68fbd828efa5df02b3653fc2254e98519326967",
+    "SLH-DSA-SHAKE-128f.jsonl": "83b87920d1b3ad7b7651fd0f4530af4bf009e9f61a8c81ca5d0389cdfbdcdbed"
+  }
+}
