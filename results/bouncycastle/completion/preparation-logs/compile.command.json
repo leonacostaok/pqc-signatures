@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/javac",
+    "-J-XX:ActiveProcessorCount=2",
+    "--release",
+    "8",
+    "-sourcepath",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-bc-completion/libs/bouncycastle/build/completion/prepared-3c77380c1f371a02/baseline-src/core/src/main/java",
+    "-d",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-bc-completion/libs/bouncycastle/build/completion/prepared-3c77380c1f371a02/baseline",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-bc-completion/libs/bouncycastle/build/completion/prepared-3c77380c1f371a02/baseline-src/core/src/main/java/org/bouncycastle/crypto/generators/MLDSAKeyPairGenerator.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-bc-completion/libs/bouncycastle/build/completion/prepared-3c77380c1f371a02/baseline-src/core/src/main/java/org/bouncycastle/crypto/generators/SLHDSAKeyPairGenerator.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-bc-completion/libs/bouncycastle/build/completion/prepared-3c77380c1f371a02/baseline-src/core/src/main/java/org/bouncycastle/crypto/signers/MLDSASigner.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-bc-completion/libs/bouncycastle/build/completion/prepared-3c77380c1f371a02/baseline-src/core/src/main/java/org/bouncycastle/crypto/signers/SLHDSASigner.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-bc-completion/libs/bouncycastle/build/completion/prepared-3c77380c1f371a02/baseline-src/core/src/main/java/org/bouncycastle/pqc/crypto/falcon/FalconKeyPairGenerator.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-bc-completion/libs/bouncycastle/build/completion/prepared-3c77380c1f371a02/baseline-src/core/src/main/java/org/bouncycastle/pqc/crypto/falcon/FalconSigner.java"
+  ],
+  "cwd": "None",
+  "started_at": "2026-10-12T06:43:16.948781+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "command": [
+    "cargo",
+    "build",
+    "--offline",
+    "--release"
+  ],
+  "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-bc-completion/libs/rustcrypto/build/completion/prepared-039949d56d911a53",
+  "started_at": "2026-10-12T06:38:19.847052+00:00"
+}

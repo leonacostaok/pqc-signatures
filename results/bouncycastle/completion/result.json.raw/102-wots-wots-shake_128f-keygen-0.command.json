@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java",
+    "-Xms64m",
+    "-Xmx512m",
+    "-XX:ActiveProcessorCount=2",
+    "-XX:+UseG1GC",
+    "-cp",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-bc-completion/libs/bouncycastle/build/completion/prepared-3c77380c1f371a02/driver:/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/candidate-classes:/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-bc-completion/libs/bouncycastle/build/completion/prepared-3c77380c1f371a02/baseline",
+    "CompletionProbe",
+    "resource",
+    "shake_128f",
+    "wots",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/fixtures.tsv",
+    "keygen",
+    "100",
+    "10"
+  ],
+  "cwd": "None",
+  "started_at": "2026-10-12T06:49:00.508319+00:00"
+}

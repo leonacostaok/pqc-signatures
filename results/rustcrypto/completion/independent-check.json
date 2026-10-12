@@ -1,0 +1,23 @@
+{
+  "schema": "rust-bc-completion-independent-v1",
+  "pass": true,
+  "counts": {
+    "rustcrypto": {
+      "processes": 54,
+      "measured_operation_rows": 1620,
+      "baseline_cells": 45,
+      "paired_resource_cells": 3
+    },
+    "bouncycastle": {
+      "processes": 113,
+      "measured_operation_rows": 10950,
+      "baseline_cells": 15,
+      "paired_resource_cells": 27
+    }
+  },
+  "result_sha256": {
+    "rustcrypto": "1c35515a462263fd1cb52ae9cbeaa99635475f530f5ea3b8518cdcbc0f0a1029",
+    "bouncycastle": "3a2fd09ea31c757cb14c46343e3c8b297c85e444ff180d93d5df352a81cc9772"
+  },
+  "checker_sha256": "4b7c0121aee9a2107819e317ff3f3a5229a2fc0c7763baaa296a5cc3bd5facf4"
+}

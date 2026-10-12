@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-bc-completion/libs/rustcrypto/build/completion/prepared-039949d56d911a53/normal",
+    "collect",
+    "SLH-DSA-SHAKE-256s",
+    "baseline"
+  ],
+  "cwd": "None",
+  "started_at": "2026-10-12T06:45:09.093639+00:00"
+}
