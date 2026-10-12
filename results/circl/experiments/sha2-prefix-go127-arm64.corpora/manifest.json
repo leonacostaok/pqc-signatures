@@ -1,0 +1,36 @@
+{
+  "schema": "circl-prefix-corpora-v1",
+  "files": [
+    {
+      "file": "fixture-10.json",
+      "sha256": "58a9f25e3889b17b338183638810ba32bf0f252e2a5938ffb78dbf27735d8367",
+      "bytes": 744076,
+      "cases": 21
+    },
+    {
+      "file": "fixture-11.json",
+      "sha256": "10734b625db986d442b46a3415fa471876183b599e15ee372d1b9baa0c5ce03f",
+      "bytes": 744076,
+      "cases": 21
+    },
+    {
+      "file": "fixture-12.json",
+      "sha256": "4ca818de129e1349b813b154d060854b4bf622a04ab1eb0af6cd20ae824c9003",
+      "bytes": 744076,
+      "cases": 21
+    },
+    {
+      "file": "fixture-13.json",
+      "sha256": "dbcd62c5993c1f780d0344749d1ba9bf84f69224778d3a7c4e11b9af1f9ab23f",
+      "bytes": 744076,
+      "cases": 21
+    },
+    {
+      "file": "fixture-14.json",
+      "sha256": "554e20c5c3e730e3a4a5b154acb0c949105dbec54b4e5f6ba04207957c0c38ac",
+      "bytes": 744076,
+      "cases": 21
+    }
+  ],
+  "source_report_sha256": "bb528fc0bfbd0b201115ed3a53938fb34f6da4faecadd0629901dadb43e7d3f6"
+}

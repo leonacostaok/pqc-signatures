@@ -1,0 +1,10 @@
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/circl-performance/libs/circl/build/tools/golangci-lint-2.12.2-darwin-arm64/golangci-lint run
+../../../../../../../opt/homebrew/Cellar/go/1.27.0/libexec/src/crypto/internal/randutil/randutil.go:11:2: could not import math/rand/v2 (/opt/homebrew/Cellar/go/1.27.0/libexec/src/math/rand/v2/rand.go:213:17: method must have no type parameters) (typecheck)
+	"math/rand/v2"
+	^
+../../../../../../../opt/homebrew/Cellar/go/1.27.0/libexec/src/crypto/internal/randutil/randutil.go:21:5: undefined: rand (typecheck)
+	if rand.Uint64()&1 == 1 {
+	   ^
+2 issues:
+* typecheck: 2
+make: *** [lint] Error 1

@@ -1,0 +1,137 @@
+{
+  "provenance": {
+    "upstream": "91db3e785ba2635b4f24a023e1ad76d2780e2865",
+    "inputs": {
+      "libs/circl/experiments/sha2-prefix/run.py": "06a3307801620f5f4128553c7232d6d0115218ce476ea6c39d01088e0e0165bf",
+      "libs/circl/experiments/sha2-prefix/main.go": "3818cf567b194302832ba55e3cad652fd0dcccd581e3a6dc35fa8ea4a3f1604f",
+      "libs/circl/experiments/sha2-prefix/production.patch": "3144497059b7a98335ff10f51666aa6dc4b1e0215519d1027714f45520d79e57",
+      "libs/circl/experiments/sha2-prefix/tests.patch": "d8e4c95b38816644518cd28c6cb5446911e9f5a35d4e7330284f6898e5e691ef",
+      "common/validation/validation.json.gz": "8e6269ebc60979b76ef25030fc1871883aba8395f9ded57ec19ab0ad8b2a5685"
+    },
+    "binaries": {
+      "baseline": "fd4e50d779d139961f2eb0954b128af55c8136d9ada804927a8ff365401dffd9",
+      "candidate": "fd4e50d779d139961f2eb0954b128af55c8136d9ada804927a8ff365401dffd9"
+    },
+    "sources": {
+      "baseline": "9e08f7a7c6f73fc54e89f7afa302e18ff370eb66043588b09d8583964827dd78",
+      "candidate": "9e08f7a7c6f73fc54e89f7afa302e18ff370eb66043588b09d8583964827dd78"
+    },
+    "go": "go version go1.27.0 darwin/arm64",
+    "go_env": {
+      "GOAMD64": "",
+      "GOARCH": "arm64",
+      "GOARM64": "v8.0",
+      "GOEXPERIMENT": "",
+      "GOOS": "darwin"
+    },
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "GOMAXPROCS": "1",
+    "build_flags": [
+      "-trimpath",
+      "-pgo=off"
+    ]
+  },
+  "vectors": {
+    "baseline": {
+      "checked": 432,
+      "counts": {
+        "SLH-DSA-SHA2-128f/keygen": 10,
+        "SLH-DSA-SHA2-128f/siggen": 2,
+        "SLH-DSA-SHA2-128f/sigver": 24,
+        "SLH-DSA-SHA2-128s/keygen": 10,
+        "SLH-DSA-SHA2-128s/siggen": 2,
+        "SLH-DSA-SHA2-128s/sigver": 24,
+        "SLH-DSA-SHA2-192f/keygen": 10,
+        "SLH-DSA-SHA2-192f/siggen": 2,
+        "SLH-DSA-SHA2-192f/sigver": 24,
+        "SLH-DSA-SHA2-192s/keygen": 10,
+        "SLH-DSA-SHA2-192s/siggen": 2,
+        "SLH-DSA-SHA2-192s/sigver": 24,
+        "SLH-DSA-SHA2-256f/keygen": 10,
+        "SLH-DSA-SHA2-256f/siggen": 2,
+        "SLH-DSA-SHA2-256f/sigver": 24,
+        "SLH-DSA-SHA2-256s/keygen": 10,
+        "SLH-DSA-SHA2-256s/siggen": 2,
+        "SLH-DSA-SHA2-256s/sigver": 24,
+        "SLH-DSA-SHAKE-128f/keygen": 10,
+        "SLH-DSA-SHAKE-128f/siggen": 2,
+        "SLH-DSA-SHAKE-128f/sigver": 24,
+        "SLH-DSA-SHAKE-128s/keygen": 10,
+        "SLH-DSA-SHAKE-128s/siggen": 2,
+        "SLH-DSA-SHAKE-128s/sigver": 24,
+        "SLH-DSA-SHAKE-192f/keygen": 10,
+        "SLH-DSA-SHAKE-192f/siggen": 2,
+        "SLH-DSA-SHAKE-192f/sigver": 24,
+        "SLH-DSA-SHAKE-192s/keygen": 10,
+        "SLH-DSA-SHAKE-192s/siggen": 2,
+        "SLH-DSA-SHAKE-192s/sigver": 24,
+        "SLH-DSA-SHAKE-256f/keygen": 10,
+        "SLH-DSA-SHAKE-256f/siggen": 2,
+        "SLH-DSA-SHAKE-256f/sigver": 24,
+        "SLH-DSA-SHAKE-256s/keygen": 10,
+        "SLH-DSA-SHAKE-256s/siggen": 2,
+        "SLH-DSA-SHAKE-256s/sigver": 24
+      }
+    },
+    "candidate": {
+      "checked": 432,
+      "counts": {
+        "SLH-DSA-SHA2-128f/keygen": 10,
+        "SLH-DSA-SHA2-128f/siggen": 2,
+        "SLH-DSA-SHA2-128f/sigver": 24,
+        "SLH-DSA-SHA2-128s/keygen": 10,
+        "SLH-DSA-SHA2-128s/siggen": 2,
+        "SLH-DSA-SHA2-128s/sigver": 24,
+        "SLH-DSA-SHA2-192f/keygen": 10,
+        "SLH-DSA-SHA2-192f/siggen": 2,
+        "SLH-DSA-SHA2-192f/sigver": 24,
+        "SLH-DSA-SHA2-192s/keygen": 10,
+        "SLH-DSA-SHA2-192s/siggen": 2,
+        "SLH-DSA-SHA2-192s/sigver": 24,
+        "SLH-DSA-SHA2-256f/keygen": 10,
+        "SLH-DSA-SHA2-256f/siggen": 2,
+        "SLH-DSA-SHA2-256f/sigver": 24,
+        "SLH-DSA-SHA2-256s/keygen": 10,
+        "SLH-DSA-SHA2-256s/siggen": 2,
+        "SLH-DSA-SHA2-256s/sigver": 24,
+        "SLH-DSA-SHAKE-128f/keygen": 10,
+        "SLH-DSA-SHAKE-128f/siggen": 2,
+        "SLH-DSA-SHAKE-128f/sigver": 24,
+        "SLH-DSA-SHAKE-128s/keygen": 10,
+        "SLH-DSA-SHAKE-128s/siggen": 2,
+        "SLH-DSA-SHAKE-128s/sigver": 24,
+        "SLH-DSA-SHAKE-192f/keygen": 10,
+        "SLH-DSA-SHAKE-192f/siggen": 2,
+        "SLH-DSA-SHAKE-192f/sigver": 24,
+        "SLH-DSA-SHAKE-192s/keygen": 10,
+        "SLH-DSA-SHAKE-192s/siggen": 2,
+        "SLH-DSA-SHAKE-192s/sigver": 24,
+        "SLH-DSA-SHAKE-256f/keygen": 10,
+        "SLH-DSA-SHAKE-256f/siggen": 2,
+        "SLH-DSA-SHAKE-256f/sigver": 24,
+        "SLH-DSA-SHAKE-256s/keygen": 10,
+        "SLH-DSA-SHAKE-256s/siggen": 2,
+        "SLH-DSA-SHAKE-256s/sigver": 24
+      }
+    }
+  },
+  "varied": {
+    "baseline": {
+      "caller_inputs_preserved": true,
+      "checked": 21,
+      "negative_checks_per_case": 7
+    },
+    "candidate": {
+      "caller_inputs_preserved": true,
+      "checked": 21,
+      "negative_checks_per_case": 7
+    }
+  },
+  "checked_at": "2026-10-11T22:58:05Z",
+  "logs": {
+    "upstream-tests.log": "0795c74f50b402a3549f70483aec3e6c98a8c9e0e637ee7cbeb32bfb07cd708c",
+    "race-tests.log": "d96d737c800f20f45ad14aa3afeffaeeba695e98306cd37103ee2f1982880ba9",
+    "vet.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

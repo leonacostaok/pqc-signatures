@@ -1,0 +1,17 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/cloudflare/circl/sign/slhdsa
+cpu: Apple M1 Pro
+BenchmarkSlhdsaFast/SLH-DSA-SHA2-128f/GenerateKey-8         	       2	    341333 ns/op
+BenchmarkSlhdsaFast/SLH-DSA-SHA2-128f/SignRandomized-8      	       2	   7877770 ns/op
+BenchmarkSlhdsaFast/SLH-DSA-SHA2-128f/SignDeterministic-8   	       2	   7759020 ns/op
+BenchmarkSlhdsaFast/SLH-DSA-SHA2-128f/Verify-8              	       2	    484458 ns/op
+BenchmarkSlhdsaFast/SLH-DSA-SHA2-192f/GenerateKey-8         	       2	    492688 ns/op
+BenchmarkSlhdsaFast/SLH-DSA-SHA2-192f/SignRandomized-8      	       2	  13621792 ns/op
+BenchmarkSlhdsaFast/SLH-DSA-SHA2-192f/SignDeterministic-8   	       2	  13718396 ns/op
+BenchmarkSlhdsaFast/SLH-DSA-SHA2-192f/Verify-8              	       2	    742916 ns/op
+BenchmarkSlhdsaFast/SLH-DSA-SHA2-256f/GenerateKey-8         	       2	   1276542 ns/op
+BenchmarkSlhdsaFast/SLH-DSA-SHA2-256f/SignRandomized-8      	       2	  33188771 ns/op
+BenchmarkSlhdsaFast/SLH-DSA-SHA2-256f/SignDeterministic-8   	       2	  28222062 ns/op
+BenchmarkSlhdsaFast/SLH-DSA-SHA2-256f/Verify-8              	       2	    748520 ns/op
+PASS

@@ -1,0 +1,124 @@
+?   	github.com/cloudflare/circl	[no test files]
+?   	github.com/cloudflare/circl/abe	[no test files]
+?   	github.com/cloudflare/circl/abe/cpabe	[no test files]
+ok  	github.com/cloudflare/circl/abe/cpabe/tkn20	15.971s
+ok  	github.com/cloudflare/circl/abe/cpabe/tkn20/internal/dsl	1.094s
+ok  	github.com/cloudflare/circl/abe/cpabe/tkn20/internal/tkn	17.703s
+?   	github.com/cloudflare/circl/blindsign	[no test files]
+ok  	github.com/cloudflare/circl/blindsign/blindrsa	2.619s
+?   	github.com/cloudflare/circl/blindsign/blindrsa/internal/common	[no test files]
+?   	github.com/cloudflare/circl/blindsign/blindrsa/internal/keys	[no test files]
+ok  	github.com/cloudflare/circl/blindsign/blindrsa/partiallyblindrsa	3.716s
+?   	github.com/cloudflare/circl/cipher	[no test files]
+ok  	github.com/cloudflare/circl/cipher/ascon	2.494s
+?   	github.com/cloudflare/circl/dh	[no test files]
+ok  	github.com/cloudflare/circl/dh/csidh	7.922s
+ok  	github.com/cloudflare/circl/dh/curve4q	4.180s
+ok  	github.com/cloudflare/circl/dh/sidh	54.803s
+?   	github.com/cloudflare/circl/dh/sidh/internal/common	[no test files]
+ok  	github.com/cloudflare/circl/dh/sidh/internal/p434	2.921s
+ok  	github.com/cloudflare/circl/dh/sidh/internal/p503	3.136s
+ok  	github.com/cloudflare/circl/dh/sidh/internal/p751	3.771s
+ok  	github.com/cloudflare/circl/dh/x25519	1.586s
+ok  	github.com/cloudflare/circl/dh/x448	2.672s
+?   	github.com/cloudflare/circl/ecc	[no test files]
+ok  	github.com/cloudflare/circl/ecc/bls12381	17.488s
+ok  	github.com/cloudflare/circl/ecc/bls12381/ff	14.414s
+ok  	github.com/cloudflare/circl/ecc/fourq	3.368s
+ok  	github.com/cloudflare/circl/ecc/goldilocks	4.473s
+ok  	github.com/cloudflare/circl/ecc/p384	41.856s
+ok  	github.com/cloudflare/circl/expander	1.108s
+ok  	github.com/cloudflare/circl/group	11.029s
+ok  	github.com/cloudflare/circl/hpke	2.736s
+?   	github.com/cloudflare/circl/internal/conv	[no test files]
+?   	github.com/cloudflare/circl/internal/nist	[no test files]
+ok  	github.com/cloudflare/circl/internal/sha3	1.180s
+?   	github.com/cloudflare/circl/internal/test	[no test files]
+?   	github.com/cloudflare/circl/kem	[no test files]
+ok  	github.com/cloudflare/circl/kem/frodo	4.437s
+?   	github.com/cloudflare/circl/kem/frodo/frodo640shake	[no test files]
+ok  	github.com/cloudflare/circl/kem/hybrid	1.161s
+ok  	github.com/cloudflare/circl/kem/kyber	1.499s
+?   	github.com/cloudflare/circl/kem/kyber/kyber1024	[no test files]
+?   	github.com/cloudflare/circl/kem/kyber/kyber512	[no test files]
+?   	github.com/cloudflare/circl/kem/kyber/kyber768	[no test files]
+ok  	github.com/cloudflare/circl/kem/mlkem	1.056s
+?   	github.com/cloudflare/circl/kem/mlkem/mlkem1024	[no test files]
+?   	github.com/cloudflare/circl/kem/mlkem/mlkem512	[no test files]
+?   	github.com/cloudflare/circl/kem/mlkem/mlkem768	[no test files]
+ok  	github.com/cloudflare/circl/kem/schemes	1.170s
+?   	github.com/cloudflare/circl/kem/sike	[no test files]
+?   	github.com/cloudflare/circl/kem/sike/sikep434	[no test files]
+?   	github.com/cloudflare/circl/kem/sike/sikep503	[no test files]
+?   	github.com/cloudflare/circl/kem/sike/sikep751	[no test files]
+ok  	github.com/cloudflare/circl/kem/xwing	1.218s
+ok  	github.com/cloudflare/circl/math	4.115s
+ok  	github.com/cloudflare/circl/math/fp25519	0.980s
+ok  	github.com/cloudflare/circl/math/fp448	1.041s
+ok  	github.com/cloudflare/circl/math/mlsbset	1.221s
+ok  	github.com/cloudflare/circl/math/polynomial	1.185s
+ok  	github.com/cloudflare/circl/oprf	3.699s
+?   	github.com/cloudflare/circl/ot	[no test files]
+ok  	github.com/cloudflare/circl/ot/simot	1.653s
+?   	github.com/cloudflare/circl/pke	[no test files]
+?   	github.com/cloudflare/circl/pke/kyber	[no test files]
+ok  	github.com/cloudflare/circl/pke/kyber/internal/common	2.518s
+?   	github.com/cloudflare/circl/pke/kyber/internal/common/params	[no test files]
+?   	github.com/cloudflare/circl/pke/kyber/kyber1024	[no test files]
+ok  	github.com/cloudflare/circl/pke/kyber/kyber1024/internal	3.807s
+?   	github.com/cloudflare/circl/pke/kyber/kyber512	[no test files]
+ok  	github.com/cloudflare/circl/pke/kyber/kyber512/internal	3.051s
+?   	github.com/cloudflare/circl/pke/kyber/kyber768	[no test files]
+ok  	github.com/cloudflare/circl/pke/kyber/kyber768/internal	2.580s
+ok  	github.com/cloudflare/circl/pki	4.631s
+ok  	github.com/cloudflare/circl/secretsharing	1.379s
+ok  	github.com/cloudflare/circl/sign	1.192s [no tests to run]
+ok  	github.com/cloudflare/circl/sign/bls	13.865s
+ok  	github.com/cloudflare/circl/sign/dilithium	2.915s
+?   	github.com/cloudflare/circl/sign/dilithium/mode2	[no test files]
+ok  	github.com/cloudflare/circl/sign/dilithium/mode2/internal	2.906s
+?   	github.com/cloudflare/circl/sign/dilithium/mode3	[no test files]
+ok  	github.com/cloudflare/circl/sign/dilithium/mode3/internal	3.420s
+?   	github.com/cloudflare/circl/sign/dilithium/mode5	[no test files]
+ok  	github.com/cloudflare/circl/sign/dilithium/mode5/internal	3.777s
+ok  	github.com/cloudflare/circl/sign/ed25519	2.575s
+ok  	github.com/cloudflare/circl/sign/ed448	1.664s
+ok  	github.com/cloudflare/circl/sign/eddilithium2	3.072s
+ok  	github.com/cloudflare/circl/sign/eddilithium3	4.312s
+ok  	github.com/cloudflare/circl/sign/internal/dilithium	1.219s
+?   	github.com/cloudflare/circl/sign/internal/dilithium/params	[no test files]
+?   	github.com/cloudflare/circl/sign/mldsa	[no test files]
+ok  	github.com/cloudflare/circl/sign/mldsa/mldsa44	1.331s
+ok  	github.com/cloudflare/circl/sign/mldsa/mldsa44/internal	2.064s
+ok  	github.com/cloudflare/circl/sign/mldsa/mldsa65	1.329s
+ok  	github.com/cloudflare/circl/sign/mldsa/mldsa65/internal	2.629s
+ok  	github.com/cloudflare/circl/sign/mldsa/mldsa87	1.746s
+ok  	github.com/cloudflare/circl/sign/mldsa/mldsa87/internal	3.190s
+ok  	github.com/cloudflare/circl/sign/schemes	21.589s
+ok  	github.com/cloudflare/circl/sign/slhdsa	38.860s
+?   	github.com/cloudflare/circl/simd	[no test files]
+ok  	github.com/cloudflare/circl/simd/keccakf1600	1.436s
+?   	github.com/cloudflare/circl/tss	[no test files]
+ok  	github.com/cloudflare/circl/tss/rsa	12.426s
+?   	github.com/cloudflare/circl/tss/rsa/internal	[no test files]
+?   	github.com/cloudflare/circl/tss/rsa/internal/pss	[no test files]
+?   	github.com/cloudflare/circl/vdaf	[no test files]
+ok  	github.com/cloudflare/circl/vdaf/prio3	1.312s
+ok  	github.com/cloudflare/circl/vdaf/prio3/arith	1.553s
+?   	github.com/cloudflare/circl/vdaf/prio3/arith/fp128	[no test files]
+?   	github.com/cloudflare/circl/vdaf/prio3/arith/fp64	[no test files]
+ok  	github.com/cloudflare/circl/vdaf/prio3/count	0.995s
+ok  	github.com/cloudflare/circl/vdaf/prio3/histogram	1.041s
+?   	github.com/cloudflare/circl/vdaf/prio3/internal/cursor	[no test files]
+?   	github.com/cloudflare/circl/vdaf/prio3/internal/flp	[no test files]
+?   	github.com/cloudflare/circl/vdaf/prio3/internal/flp_test	[no test files]
+?   	github.com/cloudflare/circl/vdaf/prio3/internal/prio3	[no test files]
+ok  	github.com/cloudflare/circl/vdaf/prio3/mhcv	1.064s
+ok  	github.com/cloudflare/circl/vdaf/prio3/sum	1.412s
+ok  	github.com/cloudflare/circl/vdaf/prio3/sumvec	1.948s
+ok  	github.com/cloudflare/circl/xof	1.948s
+ok  	github.com/cloudflare/circl/xof/k12	1.925s
+?   	github.com/cloudflare/circl/zk	[no test files]
+ok  	github.com/cloudflare/circl/zk/dl	1.547s
+ok  	github.com/cloudflare/circl/zk/dleq	1.538s
+ok  	github.com/cloudflare/circl/zk/qndleq	1.139s

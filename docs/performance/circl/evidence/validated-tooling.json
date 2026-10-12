@@ -1,0 +1,21 @@
+{
+  "lint": {
+    "version": "2.12.2",
+    "binary_sha256": "691b9100ce968ff0009b6b7757ef6a585e31ae9ab11dfe0340ebb6e8e21fdc3d",
+    "release_archive_sha256": "a9c54498731b3128f79e090be6110f3e5fffccc617b08142ed244d4126c73f29",
+    "toolchain": "go1.26.2 darwin/arm64",
+    "command": "GOMAXPROCS=2 GOTOOLCHAIN=go1.26.2 make lint GOLANGCILINT=<isolated binary>",
+    "result": "0 issues",
+    "log_sha256": "ed5c0ff94210b57c3c0d967d56b08b060b745c14ae4a1a75d5f4c456c9af0954"
+  },
+  "shadow": {
+    "module_version": "golang.org/x/tools v0.49.0",
+    "binary_sha256": "98738f2e61dccd874d7e8c5ba0972d4a4b8ed57c417541c8a66ccaa2bea600f6",
+    "toolchain": "go1.27.0 darwin/arm64",
+    "command": "GOMAXPROCS=2 go vet -vettool=<isolated shadow> ./...",
+    "result": "exit 0, no findings",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "production_files_equal_correctness_snapshot": true,
+  "note": "The pinned lint binary cannot parse Go1.27 stdlib generic method syntax; the retained first attempt failed during stdlib type checking. The same lint succeeded with Go1.26.2, the version used to build the pinned linter. No source fix was needed; benchmark Go1.27 snapshot remains unchanged."
+}

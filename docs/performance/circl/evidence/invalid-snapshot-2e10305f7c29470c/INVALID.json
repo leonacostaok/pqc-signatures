@@ -1,0 +1,18 @@
+{
+  "valid": false,
+  "reason": "git apply discovered the parent benchmark repository and silently skipped every patch path in nested archive snapshots. Candidate state.go and prefixbench were identical to baseline; focused tests ran zero tests. These copied-source checks prove no candidate correctness and must not support performance claims. Direct production worktree tests and exploratory pilot use different, genuinely patched sources.",
+  "snapshots": [
+    "e5019859bd90b803",
+    "2e10305f7c29470c"
+  ],
+  "identical_state_sha256": "9e08f7a7c6f73fc54e89f7afa302e18ff370eb66043588b09d8583964827dd78",
+  "identical_binary_sha256": "fd4e50d779d139961f2eb0954b128af55c8136d9ada804927a8ff365401dffd9",
+  "files": {
+    "prepared.json": "27cc5cc3bb1878084437568ab2ae1186a9d0f4738c3d2b67a8ab25f3a2731ec0",
+    "gate.json": "e136c82cbc1799abaf52b96732383b4ffd3306a2039f467faaea5cad7d73b1e0",
+    "check-result.json": "e136c82cbc1799abaf52b96732383b4ffd3306a2039f467faaea5cad7d73b1e0",
+    "upstream-tests.log": "0795c74f50b402a3549f70483aec3e6c98a8c9e0e637ee7cbeb32bfb07cd708c",
+    "race-tests.log": "d96d737c800f20f45ad14aa3afeffaeeba695e98306cd37103ee2f1982880ba9",
+    "vet.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
