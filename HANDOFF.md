@@ -10,4 +10,4 @@ Root verification passed: Rust/BC raw checks, both C portable checks and four ma
 
 Recommendations and limitations are in `docs/performance-summary.md`. liboqs and seed-based Rust construction are favorable; OpenSSL/CIRCL/noble remain workload-dependent. Bouncy Castle allocation reductions retain latency/RSS regressions. Exact consumed stack, exact intra-operation managed-heap peaks, and Node total allocation/GC CPU are not established. C unchanged-path baseline probes measure timing only. AI-assisted supporting testing is disclosed without claiming an independent cryptographic audit.
 
-Remaining publication steps: sign the final report commit, fast-forward PR2 and update its concise description. The benchmark work is complete; no background measurements remain.
+Published report commit `b53bd66` to PR2 by fast-forward push and updated its title/body with concise findings and evidence links. The PR is open, not merged. All requested measurement/report work within the stated feasible scope is complete; no background measurements remain.

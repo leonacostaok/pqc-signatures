@@ -40,4 +40,4 @@
 - [x] Independently recompute percentages, check source identities/raw links/completion counts, and review metric boundaries.
 - [x] Integrate provider commits and update complete table/CSV without replacing historical observations.
 - [x] Rewrite README and concise findings with AI disclosure, percentage costs, conditional worth-it decisions, and remaining measured/unsupported/unavailable coverage.
-- [ ] Run final report/link/coverage checks, commit with the user's signoff, publish to the existing evidence PR, and report completion and exact residual limitations.
+- [x] Run final report/link/coverage checks, commit with the user's signoff, publish to the existing evidence PR, and report completion and exact residual limitations.
