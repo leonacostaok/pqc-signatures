@@ -1,0 +1,14 @@
+{
+  "raw_rows_checked": 576,
+  "paired_rows": 288,
+  "min_individual_ratio": 4.139880680607555,
+  "summary_cells_verified": 12,
+  "sign_range": [
+    4.268651171375877,
+    5.2761415751775
+  ],
+  "verify_range": [
+    4.410684742603888,
+    5.28771833578204
+  ]
+}

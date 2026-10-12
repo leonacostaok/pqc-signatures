@@ -1,6 +1,6 @@
 # Publication preparation
 
-Proposed PR title and existing commit title: `Accelerate SLH-DSA SHA-2 compression with OpenSSL`. The upstream candidate commit is `b14f1b616f938698ebc0bf8b75b3736c30e1502c`. The concise body is in `upstream-pr-body.md`. The coordinator plans an initial review draft against the user's personal liboqs fork. Replace `PRIVATE_EVIDENCE_COMMIT` with the actual committed benchmark evidence SHA before publication; it is deliberately an unresolved placeholder. The link targets the user's private repository and requires access. No push or PR has been made.
+The [review draft](https://github.com/leonacostaok/liboqs/pull/1) is open in the personal fork, with production commit `b14f1b616f938698ebc0bf8b75b3736c30e1502c` and immutable [benchmark evidence](https://github.com/leonacostaok/pqc-signatures/tree/57229259515d6efa710d235d4e0a0d6ab17b4a1c/libs/liboqs/experiments/sha2-openssl). The evidence repository is private and requires access. The local `upstream-pr-body.md` remains a reusable template with an explicit evidence-commit placeholder; the actual draft body contains the resolved link. This is a personal-fork review draft, not an upstream submission.
 
 The upstream contribution policy must be resolved before any later upstream submission. The pinned [CONTRIBUTING.md line 28](https://github.com/open-quantum-safe/liboqs/blob/fd44469daeffe6b28f031f54f9bb66cbae69a572/CONTRIBUTING.md#L28) says:
 

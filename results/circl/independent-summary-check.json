@@ -1,0 +1,156 @@
+{
+  "source_sha256": "bb528fc0bfbd0b201115ed3a53938fb34f6da4faecadd0629901dadb43e7d3f6",
+  "pairs_checked": 420,
+  "summaries_checked": 21,
+  "balanced_orders": true,
+  "whole_three_case_cycles": true,
+  "summary": [
+    {
+      "param": "SLH-DSA-SHA2-128f",
+      "op": "keygen",
+      "speedup": 1.3359622035761478,
+      "fork_min": 1.32533783599601,
+      "fork_max": 1.3431610994150094
+    },
+    {
+      "param": "SLH-DSA-SHA2-128f",
+      "op": "sign",
+      "speedup": 1.3222602824558263,
+      "fork_min": 1.3162960104441268,
+      "fork_max": 1.3272664196239468
+    },
+    {
+      "param": "SLH-DSA-SHA2-128f",
+      "op": "verify",
+      "speedup": 1.3336989090630784,
+      "fork_min": 1.3317518426876933,
+      "fork_max": 1.336986600316056
+    },
+    {
+      "param": "SLH-DSA-SHA2-128s",
+      "op": "keygen",
+      "speedup": 1.3414908406016297,
+      "fork_min": 1.3383953764594057,
+      "fork_max": 1.343224930722737
+    },
+    {
+      "param": "SLH-DSA-SHA2-128s",
+      "op": "sign",
+      "speedup": 1.3306416072139544,
+      "fork_min": 1.325715157903119,
+      "fork_max": 1.3421714529634374
+    },
+    {
+      "param": "SLH-DSA-SHA2-128s",
+      "op": "verify",
+      "speedup": 1.323025247305398,
+      "fork_min": 1.307292581752181,
+      "fork_max": 1.3303458310237763
+    },
+    {
+      "param": "SLH-DSA-SHA2-192f",
+      "op": "keygen",
+      "speedup": 1.3393412263640627,
+      "fork_min": 1.3259202034959887,
+      "fork_max": 1.340405493943039
+    },
+    {
+      "param": "SLH-DSA-SHA2-192f",
+      "op": "sign",
+      "speedup": 1.3565887603794191,
+      "fork_min": 1.3556645428094956,
+      "fork_max": 1.3597812271636767
+    },
+    {
+      "param": "SLH-DSA-SHA2-192f",
+      "op": "verify",
+      "speedup": 1.3876481259852964,
+      "fork_min": 1.385855962987089,
+      "fork_max": 1.3926681779771666
+    },
+    {
+      "param": "SLH-DSA-SHA2-192s",
+      "op": "keygen",
+      "speedup": 1.34622409009009,
+      "fork_min": 1.344747452189279,
+      "fork_max": 1.3488900630605332
+    },
+    {
+      "param": "SLH-DSA-SHA2-192s",
+      "op": "sign",
+      "speedup": 1.3601196940047795,
+      "fork_min": 1.3565710846655863,
+      "fork_max": 1.3865560637858745
+    },
+    {
+      "param": "SLH-DSA-SHA2-192s",
+      "op": "verify",
+      "speedup": 1.4245955786530717,
+      "fork_min": 1.4097166382533195,
+      "fork_max": 1.4355820426489134
+    },
+    {
+      "param": "SLH-DSA-SHA2-256f",
+      "op": "keygen",
+      "speedup": 1.3287431009557025,
+      "fork_min": 1.324455980078406,
+      "fork_max": 1.33428936773123
+    },
+    {
+      "param": "SLH-DSA-SHA2-256f",
+      "op": "sign",
+      "speedup": 1.35143129408086,
+      "fork_min": 1.350614347045908,
+      "fork_max": 1.370070195668705
+    },
+    {
+      "param": "SLH-DSA-SHA2-256f",
+      "op": "verify",
+      "speedup": 1.3878655513415632,
+      "fork_min": 1.3843258155415734,
+      "fork_max": 1.3917670196173109
+    },
+    {
+      "param": "SLH-DSA-SHA2-256s",
+      "op": "keygen",
+      "speedup": 1.333489355918236,
+      "fork_min": 1.3296962860159929,
+      "fork_max": 1.3405309718829184
+    },
+    {
+      "param": "SLH-DSA-SHA2-256s",
+      "op": "sign",
+      "speedup": 1.369490045952903,
+      "fork_min": 1.3667480732228308,
+      "fork_max": 1.3715689590319744
+    },
+    {
+      "param": "SLH-DSA-SHA2-256s",
+      "op": "verify",
+      "speedup": 1.4146161404859603,
+      "fork_min": 1.4054898243211678,
+      "fork_max": 1.4258997038365475
+    },
+    {
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "keygen",
+      "speedup": 1.0020775666589308,
+      "fork_min": 0.9971557550147727,
+      "fork_max": 1.0034106764510227
+    },
+    {
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "speedup": 0.9998715784089509,
+      "fork_min": 0.9978240827929374,
+      "fork_max": 1.0032373380526274
+    },
+    {
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "verify",
+      "speedup": 1.0020793217927957,
+      "fork_min": 1.0010242281091775,
+      "fork_max": 1.0058365286586395
+    }
+  ]
+}

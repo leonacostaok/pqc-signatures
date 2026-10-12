@@ -12,6 +12,8 @@ The unchanged baseline passed the complete upstream ML-DSA all-features suite on
 
 Before the production edit, new regression tests passed on baseline for all three parameter sets. They compare the cached key to independently derived and decoded verification keys, check clone/drop lifetime behavior and seed preservation, and exercise valid and invalid verification with empty and maximum-length contexts. The candidate complete all-features, default and no-default-features release suites passed, including the new tests; the alloc-only release library suite also passed. These runs use the installed native Rust 1.93 toolchain. The upstream MSRV and cross-target no-std CI matrices were not run locally and are not claimed.
 
+Upstream CI subsequently passed for the exact production commit: stable and Rust 1.85 tests, ARM and WebAssembly `no_std` builds, Clippy, documentation, formatting and spelling checks. The [saved check results](../../results/rustcrypto/experiments/upstream-ci-checks.json) and [run identity](../../results/rustcrypto/experiments/upstream-ci-run.json) link the public workflows and bind them to `fcbaba75e2f265f0b944e4c28beceddf95910ff5`.
+
 ## Experiment design
 
 The standalone [runner](../../libs/rustcrypto/experiments/keygen.py) builds baseline and patched copies from the same pinned revision and lockfile. The experiment copies rename their package identities so both implementations can coexist in one process; production algorithm sources otherwise differ only by the reviewed patch. Builds use the release profile with default features and `zeroize`. Compiler version, flags, source trees, patch, corpus, Cargo manifests and lockfile, driver and executable hashes are recorded before timing and checked afterward.

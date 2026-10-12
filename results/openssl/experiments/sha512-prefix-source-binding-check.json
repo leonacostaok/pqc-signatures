@@ -403,5 +403,17 @@
       "cpu_aggregate_round_losses": 21,
       "cpu_fork_losses": 5
     }
-  ]
+  ],
+  "root_independent_audit_parameter_summaries_match": true,
+  "affected_observations": {
+    "case_pairs": 720,
+    "wall_case_pair_losses": 12,
+    "cpu_case_pair_losses": 11,
+    "minimum_raw_wall_ratio": 0.840064001008331,
+    "minimum_raw_cpu_ratio": 0.8399220841099231,
+    "minimum_case_wall_median": 1.0722023550207518,
+    "minimum_case_cpu_median": 1.0723309132384975,
+    "minimum_case_fork_wall_median": 1.0697396790050187,
+    "exclusions": 0
+  }
 }
