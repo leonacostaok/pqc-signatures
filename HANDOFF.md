@@ -1,9 +1,7 @@
-# Resource audit handoff
+# Performance comparison handoff
 
-Branch: `audit/resource-regressions`, based on `81393c3`.
+Branch: `docs/performance-comparison`, based on `929d442`.
 
-The five published patch revisions are recorded in `results/resource-regressions/pr-heads.json`. Provider audit commits are integrated on this branch; `docs/audit/published-resource-regressions.md` links all reports. Allocation, cleanup, source identity, retained timing losses, and measurement limits are documented. No production patches or upstream PRs were changed.
+Generated `docs/audit/complete-performance-comparison.md` and corresponding CSV with `common/report-performance-tradeoffs.py`. There are 102 library/parameter rows and 309 action cells, including the three Rust combined-operation cells. 117 cells have measured coordinated ten-key results; 192 are explicitly unmeasured. Color indicates observed metric direction, not significance. Memory notes refer to the audited patches; newer BC alternatives have a separate table and local evidence commit references.
 
-Integration recomputed noble/CIRCL raw summaries and checked Rust metric/drop equality, OpenSSL failure coverage, and liboqs hash outputs. Actual tradeoffs remain: CIRCL allocation traffic, OpenSSL context storage, liboqs local stack frames, and noble live-row/heap observations. Full peak-memory and concurrent memory-pressure measurements remain future work.
-
-Bouncy Castle experiments remain in their separate worktrees and are not integrated here; their prior latency regressions prevent an unconditional speed claim. The provider-performance worktree's existing local correction is untouched.
+Verified original raw input hashes, cell count, percentages, and blank unknown values. No new benchmark or production change. Missing uniform all-library measurements, whole-operation peak stack/heap and GC-pressure tests remain future measurement work, not fabricated zeroes.

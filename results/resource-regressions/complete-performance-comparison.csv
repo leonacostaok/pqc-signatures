@@ -1,0 +1,310 @@
+library,language,parameter,operation,status,baseline_ms,candidate_ms,time_saved_percent,resource_note
+Noble,TypeScript / JavaScript,ML-DSA-44,keygen,measured,1.6345622,1.3136666000000001,19.63189898799813,🟢 16 KiB fewer polynomial payload bytes in keygen/verify; signing depends on retries. 🔴 More simultaneous public-row storage; post-GC heap medians +1.7–9.8 KB across cells. ⚪ Peak/stack unmeasured.
+Noble,TypeScript / JavaScript,ML-DSA-44,sign,measured,9.0638375,7.7539999,14.451247608973572,🟢 16 KiB fewer polynomial payload bytes in keygen/verify; signing depends on retries. 🔴 More simultaneous public-row storage; post-GC heap medians +1.7–9.8 KB across cells. ⚪ Peak/stack unmeasured.
+Noble,TypeScript / JavaScript,ML-DSA-44,verify,measured,2.0249042,1.7641126999999999,12.879201890143744,🟢 16 KiB fewer polynomial payload bytes in keygen/verify; signing depends on retries. 🔴 More simultaneous public-row storage; post-GC heap medians +1.7–9.8 KB across cells. ⚪ Peak/stack unmeasured.
+liboqs,C,ML-DSA-44,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,ML-DSA-44,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,ML-DSA-44,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,ML-DSA-44,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,ML-DSA-44,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,ML-DSA-44,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,ML-DSA-44,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,ML-DSA-44,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,ML-DSA-44,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,ML-DSA-44,keygen,measured,0.1208666,0.1056748,12.569063744657338,"⚪ Heap counts/bytes/retention unchanged in tested cases. 🟢 Constructor local frame 182,384 → 142,352 B. No tracing GC; total stack peak unmeasured."
+RustCrypto,Rust,ML-DSA-44,sign,measured,0.1992459,0.1901415,4.569429032165784,"⚪ Heap counts/bytes/retention unchanged in tested cases. 🟢 Constructor local frame 182,384 → 142,352 B. No tracing GC; total stack peak unmeasured."
+RustCrypto,Rust,ML-DSA-44,verify,measured,0.0368251,0.036770800000000006,0.1474537747351623,"⚪ Heap counts/bytes/retention unchanged in tested cases. 🟢 Constructor local frame 182,384 → 142,352 B. No tracing GC; total stack peak unmeasured."
+Bouncy Castle,Java,ML-DSA-44,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,ML-DSA-44,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,ML-DSA-44,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,ML-DSA-65,keygen,measured,2.4287292000000003,2.0462416,15.748466317282306,🟢 30 KiB fewer polynomial payload bytes in keygen/verify; signing depends on retries. 🔴 More simultaneous public-row storage; post-GC heap medians +1.7–9.8 KB across cells. ⚪ Peak/stack unmeasured.
+Noble,TypeScript / JavaScript,ML-DSA-65,sign,measured,23.264941699999998,20.3131251,12.687831493684765,🟢 30 KiB fewer polynomial payload bytes in keygen/verify; signing depends on retries. 🔴 More simultaneous public-row storage; post-GC heap medians +1.7–9.8 KB across cells. ⚪ Peak/stack unmeasured.
+Noble,TypeScript / JavaScript,ML-DSA-65,verify,measured,3.0044334,2.6266083,12.575585799305788,🟢 30 KiB fewer polynomial payload bytes in keygen/verify; signing depends on retries. 🔴 More simultaneous public-row storage; post-GC heap medians +1.7–9.8 KB across cells. ⚪ Peak/stack unmeasured.
+liboqs,C,ML-DSA-65,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,ML-DSA-65,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,ML-DSA-65,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,ML-DSA-65,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,ML-DSA-65,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,ML-DSA-65,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,ML-DSA-65,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,ML-DSA-65,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,ML-DSA-65,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,ML-DSA-65,keygen,measured,0.23072489999999998,0.1937083,16.043608643887154,"⚪ Heap counts/bytes/retention unchanged in tested cases. 🟢 Constructor local frame 214,736 → 176,800 B. No tracing GC; total stack peak unmeasured."
+RustCrypto,Rust,ML-DSA-65,sign,measured,0.7611833,0.7539751,0.9469729564481999,"⚪ Heap counts/bytes/retention unchanged in tested cases. 🟢 Constructor local frame 214,736 → 176,800 B. No tracing GC; total stack peak unmeasured."
+RustCrypto,Rust,ML-DSA-65,verify,measured,0.0526875,0.0527875,-0.18979833926453527,"⚪ Heap counts/bytes/retention unchanged in tested cases. 🟢 Constructor local frame 214,736 → 176,800 B. No tracing GC; total stack peak unmeasured."
+Bouncy Castle,Java,ML-DSA-65,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,ML-DSA-65,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,ML-DSA-65,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,ML-DSA-87,keygen,measured,3.8107,3.1080377,18.439192274385285,🟢 56 KiB fewer polynomial payload bytes in keygen/verify; signing depends on retries. 🔴 More simultaneous public-row storage; post-GC heap medians +1.7–9.8 KB across cells. ⚪ Peak/stack unmeasured.
+Noble,TypeScript / JavaScript,ML-DSA-87,sign,measured,22.5102333,18.7206291,16.835028537887254,🟢 56 KiB fewer polynomial payload bytes in keygen/verify; signing depends on retries. 🔴 More simultaneous public-row storage; post-GC heap medians +1.7–9.8 KB across cells. ⚪ Peak/stack unmeasured.
+Noble,TypeScript / JavaScript,ML-DSA-87,verify,measured,4.6069915,3.8823748,15.7286311468124,🟢 56 KiB fewer polynomial payload bytes in keygen/verify; signing depends on retries. 🔴 More simultaneous public-row storage; post-GC heap medians +1.7–9.8 KB across cells. ⚪ Peak/stack unmeasured.
+liboqs,C,ML-DSA-87,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,ML-DSA-87,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,ML-DSA-87,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,ML-DSA-87,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,ML-DSA-87,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,ML-DSA-87,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,ML-DSA-87,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,ML-DSA-87,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,ML-DSA-87,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,ML-DSA-87,keygen,measured,0.3129209,0.2635127,15.789357629995315,"⚪ Heap counts/bytes/retention unchanged in tested cases. 🟢 Constructor local frame 398,704 → 343,328 B. No tracing GC; total stack peak unmeasured."
+RustCrypto,Rust,ML-DSA-87,sign,measured,0.7087126,0.7001583,1.2070196014576262,"⚪ Heap counts/bytes/retention unchanged in tested cases. 🟢 Constructor local frame 398,704 → 343,328 B. No tracing GC; total stack peak unmeasured."
+RustCrypto,Rust,ML-DSA-87,verify,measured,0.0862252,0.07835410000000001,9.128537828848183,"⚪ Heap counts/bytes/retention unchanged in tested cases. 🟢 Constructor local frame 398,704 → 343,328 B. No tracing GC; total stack peak unmeasured."
+Bouncy Castle,Java,ML-DSA-87,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,ML-DSA-87,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,ML-DSA-87,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-128f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-128f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-128f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHA2-128f,keygen,measured,1.1481,0.2111,81.61309990418954,"⚪ No OpenSSL allocator calls in focused hashes. SHA256 local frames: 🟢 compression −16 B; 🔴 update/final +112 B, one-shot +128 B. No tracing GC; total stack peak unmeasured."
+liboqs,C,SLH-DSA-SHA2-128f,sign,measured,26.8591,5.0798,81.08722928169595,"⚪ No OpenSSL allocator calls in focused hashes. SHA256 local frames: 🟢 compression −16 B; 🔴 update/final +112 B, one-shot +128 B. No tracing GC; total stack peak unmeasured."
+liboqs,C,SLH-DSA-SHA2-128f,verify,measured,1.6403,0.3094,81.13759678107664,"⚪ No OpenSSL allocator calls in focused hashes. SHA256 local frames: 🟢 compression −16 B; 🔴 update/final +112 B, one-shot +128 B. No tracing GC; total stack peak unmeasured."
+OpenSSL,C,SLH-DSA-SHA2-128f,keygen,measured,0.2454,0.2453,0.04074979625101616,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHA2-128f,sign,measured,5.7061,5.6914,0.25761903927375984,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHA2-128f,verify,measured,0.3615,0.3571,1.2171507607192211,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+CIRCL,Go,SLH-DSA-SHA2-128f,keygen,measured,0.4428458,0.32950409999999997,25.593942631949997,"🔴 Normally +12 objects / +1,088 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+CIRCL,Go,SLH-DSA-SHA2-128f,sign,measured,10.1285166,7.6859376,24.115861151868966,"🔴 Normally +12 objects / +1,088 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+CIRCL,Go,SLH-DSA-SHA2-128f,verify,measured,0.6190416999999999,0.4600252,25.687526381502245,"🔴 Normally +12 objects / +1,088 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+RustCrypto,Rust,SLH-DSA-SHA2-128f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHA2-128f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHA2-128f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,SLH-DSA-SHA2-128f,keygen,measured,1.9288542,1.8975708,1.621864420856689,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHA2-128f,sign,measured,44.2062917,43.9343795,0.6150984159569273,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHA2-128f,verify,measured,2.8210791,2.8243665,-0.11652987681203264,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-128s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-128s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-128s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHA2-128s,keygen,measured,73.4345,13.5766,81.51195963750008,"⚪ No OpenSSL allocator calls in focused hashes. SHA256 local frames: 🟢 compression −16 B; 🔴 update/final +112 B, one-shot +128 B. No tracing GC; total stack peak unmeasured."
+liboqs,C,SLH-DSA-SHA2-128s,sign,measured,561.9969,107.113,80.94064219927192,"⚪ No OpenSSL allocator calls in focused hashes. SHA256 local frames: 🟢 compression −16 B; 🔴 update/final +112 B, one-shot +128 B. No tracing GC; total stack peak unmeasured."
+liboqs,C,SLH-DSA-SHA2-128s,verify,measured,0.569,0.1097,80.72056239015816,"⚪ No OpenSSL allocator calls in focused hashes. SHA256 local frames: 🟢 compression −16 B; 🔴 update/final +112 B, one-shot +128 B. No tracing GC; total stack peak unmeasured."
+OpenSSL,C,SLH-DSA-SHA2-128s,keygen,measured,15.4981,15.395,0.665242836218638,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHA2-128s,sign,measured,119.0584,119.1688,-0.09272760258831614,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHA2-128s,verify,measured,0.1349,0.1323,1.927353595255743,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+CIRCL,Go,SLH-DSA-SHA2-128s,keygen,measured,28.0790792,20.9376876,25.43314027192174,"🔴 Normally +12 objects / +1,088 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+CIRCL,Go,SLH-DSA-SHA2-128s,sign,measured,213.2795249,162.4563038,23.829395308260082,"🔴 Normally +12 objects / +1,088 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+CIRCL,Go,SLH-DSA-SHA2-128s,verify,measured,0.2248666,0.17332920000000002,22.91909959060172,"🔴 Normally +12 objects / +1,088 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+RustCrypto,Rust,SLH-DSA-SHA2-128s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHA2-128s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHA2-128s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,SLH-DSA-SHA2-128s,keygen,measured,105.13938759999999,104.8276292,0.29651913247400463,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHA2-128s,sign,measured,805.443975,802.9421167,0.31061853805536277,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHA2-128s,verify,measured,1.0384042,0.9722542,6.370351737791502,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-192f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-192f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-192f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHA2-192f,keygen,measured,1.6638,0.3164,80.98329126096887,⚪ No OpenSSL allocator calls in focused hash probes. 🔴 Some local stack frames +112–240 B; SHA256 compression −16 B. No tracing GC; total stack peak unmeasured.
+liboqs,C,SLH-DSA-SHA2-192f,sign,measured,43.9069,9.3152,78.78420020543469,⚪ No OpenSSL allocator calls in focused hash probes. 🔴 Some local stack frames +112–240 B; SHA256 compression −16 B. No tracing GC; total stack peak unmeasured.
+liboqs,C,SLH-DSA-SHA2-192f,verify,measured,2.3822,0.4994,79.03618503903954,⚪ No OpenSSL allocator calls in focused hash probes. 🔴 Some local stack frames +112–240 B; SHA256 compression −16 B. No tracing GC; total stack peak unmeasured.
+OpenSSL,C,SLH-DSA-SHA2-192f,keygen,measured,0.3378,0.3425,-1.3913558318531694,🔴 +1 allocation and +224 requested B per hash context; clone has same cost. 🟢 Tested failure cleanup passes. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHA2-192f,sign,measured,10.3744,9.3652,9.727791486736582,🔴 +1 allocation and +224 requested B per hash context; clone has same cost. 🟢 Tested failure cleanup passes. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHA2-192f,verify,measured,0.5665,0.5323,6.03706972639011,🔴 +1 allocation and +224 requested B per hash context; clone has same cost. 🟢 Tested failure cleanup passes. ⚪ Stack peak unmeasured; no tracing GC.
+CIRCL,Go,SLH-DSA-SHA2-192f,keygen,measured,0.6500207,0.4963289,23.644139332793557,"🔴 Normally +12 objects / +1,376 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+CIRCL,Go,SLH-DSA-SHA2-192f,sign,measured,18.6151957,13.701179,26.397878266732377,"🔴 Normally +12 objects / +1,376 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+CIRCL,Go,SLH-DSA-SHA2-192f,verify,measured,1.0072669,0.7228042,28.241045149006684,"🔴 Normally +12 objects / +1,376 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+RustCrypto,Rust,SLH-DSA-SHA2-192f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHA2-192f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHA2-192f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,SLH-DSA-SHA2-192f,keygen,measured,2.6869752,2.7002542999999997,-0.4942025516275761,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHA2-192f,sign,measured,70.2566042,70.6395708,-0.5450969405093931,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHA2-192f,verify,measured,3.9934791,4.0114417,-0.4497982723886018,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-192s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-192s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-192s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHA2-192s,keygen,measured,106.8767,20.2737,81.03075787332506,⚪ No OpenSSL allocator calls in focused hash probes. 🔴 Some local stack frames +112–240 B; SHA256 compression −16 B. No tracing GC; total stack peak unmeasured.
+liboqs,C,SLH-DSA-SHA2-192s,sign,measured,988.6339,218.1679,77.93238730737436,⚪ No OpenSSL allocator calls in focused hash probes. 🔴 Some local stack frames +112–240 B; SHA256 compression −16 B. No tracing GC; total stack peak unmeasured.
+liboqs,C,SLH-DSA-SHA2-192s,verify,measured,0.8249,0.194,76.48199781791732,⚪ No OpenSSL allocator calls in focused hash probes. 🔴 Some local stack frames +112–240 B; SHA256 compression −16 B. No tracing GC; total stack peak unmeasured.
+OpenSSL,C,SLH-DSA-SHA2-192s,keygen,measured,30.5274,21.0928,30.905350603064786,🔴 +1 allocation and +224 requested B per hash context; clone has same cost. 🟢 Tested failure cleanup passes. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHA2-192s,sign,measured,252.9485,219.6811,13.151847115124227,🔴 +1 allocation and +224 requested B per hash context; clone has same cost. 🟢 Tested failure cleanup passes. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHA2-192s,verify,measured,0.2433,0.2027,16.6872174270448,🔴 +1 allocation and +224 requested B per hash context; clone has same cost. 🟢 Tested failure cleanup passes. ⚪ Stack peak unmeasured; no tracing GC.
+CIRCL,Go,SLH-DSA-SHA2-192s,keygen,measured,41.809008299999995,31.1002458,25.613529082439392,"🔴 Normally +12 objects / +1,376 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+CIRCL,Go,SLH-DSA-SHA2-192s,sign,measured,437.66547510000004,318.2741167,27.279135593850732,"🔴 Normally +12 objects / +1,376 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+CIRCL,Go,SLH-DSA-SHA2-192s,verify,measured,0.39374990000000004,0.2789251,29.16186137444099,"🔴 Normally +12 objects / +1,376 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+RustCrypto,Rust,SLH-DSA-SHA2-192s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHA2-192s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHA2-192s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,SLH-DSA-SHA2-192s,keygen,measured,153.17771240000002,154.54925830000002,-0.8953952102499274,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHA2-192s,sign,measured,1446.8049001,1454.5750001,-0.537052369636215,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHA2-192s,verify,measured,1.4177167,1.3848667,2.317106090377574,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-256f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-256f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-256f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHA2-256f,keygen,measured,4.4884,0.8419,81.24275911237856,⚪ No OpenSSL allocator calls in focused hash probes. 🔴 Some local stack frames +112–240 B; SHA256 compression −16 B. No tracing GC; total stack peak unmeasured.
+liboqs,C,SLH-DSA-SHA2-256f,sign,measured,90.4062,19.1816,78.78287108627505,⚪ No OpenSSL allocator calls in focused hash probes. 🔴 Some local stack frames +112–240 B; SHA256 compression −16 B. No tracing GC; total stack peak unmeasured.
+liboqs,C,SLH-DSA-SHA2-256f,verify,measured,2.4107,0.5126,78.73646658646867,⚪ No OpenSSL allocator calls in focused hash probes. 🔴 Some local stack frames +112–240 B; SHA256 compression −16 B. No tracing GC; total stack peak unmeasured.
+OpenSSL,C,SLH-DSA-SHA2-256f,keygen,measured,0.9334,0.8911,4.531819155774586,🔴 +1 allocation and +224 requested B per hash context; clone has same cost. 🟢 Tested failure cleanup passes. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHA2-256f,sign,measured,22.2193,19.5554,11.98912657014397,🔴 +1 allocation and +224 requested B per hash context; clone has same cost. 🟢 Tested failure cleanup passes. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHA2-256f,verify,measured,0.596,0.5403,9.345637583892618,🔴 +1 allocation and +224 requested B per hash context; clone has same cost. 🟢 Tested failure cleanup passes. ⚪ Stack peak unmeasured; no tracing GC.
+CIRCL,Go,SLH-DSA-SHA2-256f,keygen,measured,1.7386708999999998,1.2826043999999999,26.230754767909215,"🔴 Normally +12 objects / +1,376 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+CIRCL,Go,SLH-DSA-SHA2-256f,sign,measured,38.6703251,28.0618543,27.433104771079364,"🔴 Normally +12 objects / +1,376 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+CIRCL,Go,SLH-DSA-SHA2-256f,verify,measured,1.0396373,0.7484418,28.009335563470074,"🔴 Normally +12 objects / +1,376 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+RustCrypto,Rust,SLH-DSA-SHA2-256f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHA2-256f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHA2-256f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,SLH-DSA-SHA2-256f,keygen,measured,7.1199377,7.1581999000000005,-0.5373951516457698,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHA2-256f,sign,measured,145.2967916,146.1466959,-0.5849436113770423,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHA2-256f,verify,measured,4.3073501,4.0950668,4.928396695685356,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-256s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-256s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHA2-256s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHA2-256s,keygen,measured,72.0602,13.4244,81.37057626817578,⚪ No OpenSSL allocator calls in focused hash probes. 🔴 Some local stack frames +112–240 B; SHA256 compression −16 B. No tracing GC; total stack peak unmeasured.
+liboqs,C,SLH-DSA-SHA2-256s,sign,measured,876.1769,209.2582,76.11690059393257,⚪ No OpenSSL allocator calls in focused hash probes. 🔴 Some local stack frames +112–240 B; SHA256 compression −16 B. No tracing GC; total stack peak unmeasured.
+liboqs,C,SLH-DSA-SHA2-256s,verify,measured,1.2058,0.2777,76.96964670758003,⚪ No OpenSSL allocator calls in focused hash probes. 🔴 Some local stack frames +112–240 B; SHA256 compression −16 B. No tracing GC; total stack peak unmeasured.
+OpenSSL,C,SLH-DSA-SHA2-256s,keygen,measured,14.4468,14.2042,1.6792646122324673,🔴 +1 allocation and +224 requested B per hash context; clone has same cost. 🟢 Tested failure cleanup passes. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHA2-256s,sign,measured,242.2261,202.8542,16.25419391221673,🔴 +1 allocation and +224 requested B per hash context; clone has same cost. 🟢 Tested failure cleanup passes. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHA2-256s,verify,measured,0.3411,0.2897,15.068894752272065,🔴 +1 allocation and +224 requested B per hash context; clone has same cost. 🟢 Tested failure cleanup passes. ⚪ Stack peak unmeasured; no tracing GC.
+CIRCL,Go,SLH-DSA-SHA2-256s,keygen,measured,28.3075751,20.427633399999998,27.836865828892567,"🔴 Normally +12 objects / +1,376 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+CIRCL,Go,SLH-DSA-SHA2-256s,sign,measured,410.0927542,295.1030709,28.039920755078775,"🔴 Normally +12 objects / +1,376 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+CIRCL,Go,SLH-DSA-SHA2-256s,verify,measured,0.5586086,0.3909583,30.01212297841458,"🔴 Normally +12 objects / +1,376 allocated B per operation. Potential extra GC pressure, not measured GC latency. Setup local frames unchanged; argument/result areas +24/+32 B; peak unknown."
+RustCrypto,Rust,SLH-DSA-SHA2-256s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHA2-256s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHA2-256s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,SLH-DSA-SHA2-256s,keygen,measured,102.4511708,102.03419190000001,0.40700257180467103,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHA2-256s,sign,measured,1316.2605001,1308.795629,0.5671271833677993,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHA2-256s,verify,measured,2.0217667,1.9729041,2.4168268277442673,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-128f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-128f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-128f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-128f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-128f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-128f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,SLH-DSA-SHAKE-128f,keygen,measured,1.3823,1.3688,0.9766331476524615,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHAKE-128f,sign,measured,31.9683,31.8623,0.3315784699217672,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHAKE-128f,verify,measured,1.9352,1.9348,0.020669698222408606,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+CIRCL,Go,SLH-DSA-SHAKE-128f,keygen,measured,2.3466001000000003,2.3332501,0.5689081833756049,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+CIRCL,Go,SLH-DSA-SHAKE-128f,sign,measured,54.9280709,54.68345,0.4453476992580807,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+CIRCL,Go,SLH-DSA-SHAKE-128f,verify,measured,3.3014582999999997,3.3034042,-0.058940620270742095,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+RustCrypto,Rust,SLH-DSA-SHAKE-128f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHAKE-128f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHAKE-128f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,SLH-DSA-SHAKE-128f,keygen,measured,1.5960792,1.6039415,-0.4926008684280836,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHAKE-128f,sign,measured,37.6825835,37.3145916,0.9765569815562092,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHAKE-128f,verify,measured,2.4225541,2.3518085,2.920289788368402,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-128s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-128s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-128s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-128s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-128s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-128s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,SLH-DSA-SHAKE-128s,keygen,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHAKE-128s,sign,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHAKE-128s,verify,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+CIRCL,Go,SLH-DSA-SHAKE-128s,keygen,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+CIRCL,Go,SLH-DSA-SHAKE-128s,sign,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+CIRCL,Go,SLH-DSA-SHAKE-128s,verify,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+RustCrypto,Rust,SLH-DSA-SHAKE-128s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHAKE-128s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHAKE-128s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,SLH-DSA-SHAKE-128s,keygen,measured,98.0790084,97.8001584,0.28431160199209327,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHAKE-128s,sign,measured,753.8182417,752.9866043,0.11032333180536202,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHAKE-128s,verify,measured,0.9342668000000001,0.8885793000000001,4.890198388725786,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-192f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-192f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-192f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-192f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-192f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-192f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,SLH-DSA-SHAKE-192f,keygen,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHAKE-192f,sign,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHAKE-192f,verify,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+CIRCL,Go,SLH-DSA-SHAKE-192f,keygen,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+CIRCL,Go,SLH-DSA-SHAKE-192f,sign,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+CIRCL,Go,SLH-DSA-SHAKE-192f,verify,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+RustCrypto,Rust,SLH-DSA-SHAKE-192f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHAKE-192f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHAKE-192f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,SLH-DSA-SHAKE-192f,keygen,measured,2.3084083,2.5141959,-8.914696763133279,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHAKE-192f,sign,measured,60.2785541,64.7033833,-7.340635929420869,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHAKE-192f,verify,measured,3.388908,3.8609709,-13.929646363961478,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-192s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-192s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-192s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-192s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-192s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-192s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,SLH-DSA-SHAKE-192s,keygen,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHAKE-192s,sign,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHAKE-192s,verify,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+CIRCL,Go,SLH-DSA-SHAKE-192s,keygen,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+CIRCL,Go,SLH-DSA-SHAKE-192s,sign,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+CIRCL,Go,SLH-DSA-SHAKE-192s,verify,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+RustCrypto,Rust,SLH-DSA-SHAKE-192s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHAKE-192s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHAKE-192s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,SLH-DSA-SHAKE-192s,keygen,measured,147.4908748,144.97187530000002,1.707901931842093,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHAKE-192s,sign,measured,1313.5396415,1339.8492167,-2.002952508533018,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHAKE-192s,verify,measured,1.3036082,1.2867291,1.2947985445320165,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-256f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-256f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-256f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-256f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-256f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-256f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,SLH-DSA-SHAKE-256f,keygen,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHAKE-256f,sign,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHAKE-256f,verify,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+CIRCL,Go,SLH-DSA-SHAKE-256f,keygen,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+CIRCL,Go,SLH-DSA-SHAKE-256f,sign,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+CIRCL,Go,SLH-DSA-SHAKE-256f,verify,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+RustCrypto,Rust,SLH-DSA-SHAKE-256f,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHAKE-256f,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHAKE-256f,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,SLH-DSA-SHAKE-256f,keygen,measured,6.1214043,6.2047833,-1.3620894146789242,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHAKE-256f,sign,measured,124.284679,125.1380335,-0.6866127883711215,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHAKE-256f,verify,measured,3.5473251,3.515721,0.8909276457350956,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-256s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-256s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,SLH-DSA-SHAKE-256s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-256s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-256s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,SLH-DSA-SHAKE-256s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,SLH-DSA-SHAKE-256s,keygen,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHAKE-256s,sign,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+OpenSSL,C,SLH-DSA-SHAKE-256s,verify,not_measured,,,,🔴 Hash-context structure +8 B; no extra context allocation. Timing control. ⚪ Stack peak unmeasured; no tracing GC.
+CIRCL,Go,SLH-DSA-SHAKE-256s,keygen,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+CIRCL,Go,SLH-DSA-SHAKE-256s,sign,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+CIRCL,Go,SLH-DSA-SHAKE-256s,verify,not_measured,,,,⚪ Control: allocation counters unchanged for 128f; other SHAKE sets not newly measured. Peak/GC latency unknown.
+RustCrypto,Rust,SLH-DSA-SHAKE-256s,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHAKE-256s,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,SLH-DSA-SHAKE-256s,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,SLH-DSA-SHAKE-256s,keygen,measured,96.7881,98.7361207,-2.0126655033005036,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHAKE-256s,sign,measured,1169.2973583,1170.6120335,-0.1124329231284138,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Bouncy Castle,Java,SLH-DSA-SHAKE-256s,verify,measured,1.8686165,1.8509582,0.9449932610570477,🟢 Earlier FORS candidate: verification allocation −2.8–7.3% across sets. 🟡 Latency mixed. Stack/peak/GC pause gain unmeasured. New WOTS experiment is separate.
+Noble,TypeScript / JavaScript,Falcon-512,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,Falcon-512,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,Falcon-512,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,Falcon-512,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,Falcon-512,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,Falcon-512,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,Falcon-512,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,Falcon-512,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,Falcon-512,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,Falcon-512,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,Falcon-512,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,Falcon-512,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,Falcon-512,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,Falcon-512,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,Falcon-512,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,Falcon-512,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,Falcon-512,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,Falcon-512,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,Falcon-1024,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,Falcon-1024,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Noble,TypeScript / JavaScript,Falcon-1024,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,Falcon-1024,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,Falcon-1024,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+liboqs,C,Falcon-1024,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,Falcon-1024,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,Falcon-1024,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+OpenSSL,C,Falcon-1024,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,Falcon-1024,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,Falcon-1024,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+CIRCL,Go,Falcon-1024,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,Falcon-1024,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,Falcon-1024,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,Falcon-1024,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,Falcon-1024,keygen,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,Falcon-1024,sign,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+Bouncy Castle,Java,Falcon-1024,verify,not_measured,,,,⚪ No evaluated patch/resource delta in this comparison; not a zero-cost or zero-gain measurement.
+RustCrypto,Rust,ML-DSA-44,keygen_sign,measured,0.31572479999999997,0.3073208,2.661811805724479,"⚪ Heap counts/bytes/retention unchanged in tested cases. 🟢 Constructor local frame 182,384 → 142,352 B. No tracing GC; total stack peak unmeasured."
+RustCrypto,Rust,ML-DSA-65,keygen_sign,measured,0.9954542,0.9437709,5.191931482131473,"⚪ Heap counts/bytes/retention unchanged in tested cases. 🟢 Constructor local frame 214,736 → 176,800 B. No tracing GC; total stack peak unmeasured."
+RustCrypto,Rust,ML-DSA-87,keygen_sign,measured,1.0344208000000001,0.9742,5.8216926805802816,"⚪ Heap counts/bytes/retention unchanged in tested cases. 🟢 Constructor local frame 398,704 → 343,328 B. No tracing GC; total stack peak unmeasured."
