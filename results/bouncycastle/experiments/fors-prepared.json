@@ -1,0 +1,38 @@
+{
+  "schema": "bc-fors-base2b-prepared-v1",
+  "upstream_commit": "c314b9cdffa3958a0eff5344f8fdcdb0181ed830",
+  "java": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java",
+  "java_version": "openjdk version \"25.0.4.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS, mixed mode, sharing)\n",
+  "baseline": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/baseline",
+  "candidate": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/candidate",
+  "driver": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/driver",
+  "fixtures": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/fixtures.bin",
+  "checks": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/checks",
+  "correctness": {
+    "differential_cases": 48,
+    "negative_parity_cases": 240,
+    "operations": [
+      "keygen",
+      "sign",
+      "verify"
+    ],
+    "caller_inputs_unchanged": true
+  },
+  "corpus": "fors-base2b-v1/204",
+  "release": 8,
+  "jvm_environment": {
+    "JAVA_TOOL_OPTIONS": "",
+    "JDK_JAVA_OPTIONS": ""
+  },
+  "provenance": {
+    "libs/bouncycastle/experiments/ForsOperations.java": "02a4433bc401b695c4e4672a2e20f0735c684583d694a1e9db96b46facb8f30a",
+    "libs/bouncycastle/experiments/ForsBenchmark.java": "fd248620e7309ab0ec5e09ebdb6d7b7601c7d6d3fac8c185c9e82ec379b42f7d",
+    "libs/bouncycastle/experiments/ForsAllocationCheck.java": "9a58e9b4600e8bdf9310b824641f2d61409fa447ac1941ce7692093e72156d97",
+    "libs/bouncycastle/experiments/fors.py": "b93ca80c74a15f7e09198dfef9623cd9387b5d9d8d7015027ac1cfe42752473a",
+    "libs/bouncycastle/patches/fors-base2b.patch": "ce1829dff5abd139ae80b2764625922bb4ff42138bcee2e962ec73d6cd8921e2",
+    "fixture": "b68537703f7e28b1b99c21be063f0be20abbdfd9e47c09f41d418f99c6e83a0b",
+    "baseline_classes": "17be0149192d23c0bedeeede1778d3e5bccd93d40ab703f1a2eed8a389900ee5",
+    "candidate_classes": "8b37c96be155a85e3abc2ca0f86c628e8640dd9c3d3db5a5f1501b9f933ce9e8",
+    "driver_classes": "0f434a44397e67d96d93579c645863add2dbaae0bfee07a557461367a8e3c381"
+  }
+}

@@ -1,0 +1,1 @@
+{"variant":"baseline","valid_cases":24,"tamper_cases":24,"class_source":"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/baseline"}

@@ -1,0 +1,121 @@
+diff --git a/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/Fors.java b/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/Fors.java
+index e19cf31..7edfbf9 100644
+--- a/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/Fors.java
++++ b/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/Fors.java
+@@ -1,6 +1,5 @@
+ package org.bouncycastle.crypto.signers.slhdsa;
+ 
+-import java.math.BigInteger;
+ import java.util.LinkedList;
+ 
+ import org.bouncycastle.util.Arrays;
+@@ -147,18 +146,20 @@ static int[] base2B(byte[] msg, int b, int outLen)
+         int[] baseB = new int[outLen];
+         int i = 0;
+         int bits = 0;
+-        BigInteger total = BigInteger.ZERO;
++        int total = 0;
++        int mask = (1 << b) - 1;
+ 
+         for (int o = 0; o < outLen; o++)
+         {
+             while (bits < b)
+             {
+-                total = total.shiftLeft(8).add(BigInteger.valueOf(msg[i] & 0xff));
++                total = (total << 8) | (msg[i] & 0xff);
+                 i+= 1;
+                 bits += 8;
+             }
+             bits -= b;
+-            baseB[o] = (total.shiftRight(bits).mod(BigInteger.valueOf(2).pow(b))).intValue();
++            // FORS uses at most 14 bits per index; the unread window fits in an int.
++            baseB[o] = (total >>> bits) & mask;
+         }
+ 
+         return baseB;
+diff --git a/core/src/test/java/org/bouncycastle/crypto/signers/slhdsa/AllTests.java b/core/src/test/java/org/bouncycastle/crypto/signers/slhdsa/AllTests.java
+new file mode 100644
+index 0000000..cb9544c
+--- /dev/null
++++ b/core/src/test/java/org/bouncycastle/crypto/signers/slhdsa/AllTests.java
+@@ -0,0 +1,16 @@
++package org.bouncycastle.crypto.signers.slhdsa;
++
++import junit.framework.Test;
++import junit.framework.TestCase;
++import junit.framework.TestSuite;
++
++public class AllTests
++    extends TestCase
++{
++    public static Test suite()
++    {
++        TestSuite suite = new TestSuite("SLH-DSA internal tests");
++        suite.addTestSuite(ForsTest.class);
++        return suite;
++    }
++}
+diff --git a/core/src/test/java/org/bouncycastle/crypto/signers/slhdsa/ForsTest.java b/core/src/test/java/org/bouncycastle/crypto/signers/slhdsa/ForsTest.java
+new file mode 100644
+index 0000000..5982f66
+--- /dev/null
++++ b/core/src/test/java/org/bouncycastle/crypto/signers/slhdsa/ForsTest.java
+@@ -0,0 +1,58 @@
++package org.bouncycastle.crypto.signers.slhdsa;
++
++import java.util.Random;
++
++import junit.framework.TestCase;
++
++public class ForsTest
++    extends TestCase
++{
++    public void testBase2BBitOrder()
++    {
++        byte[] message = {(byte)0xab, (byte)0xcd, (byte)0xef};
++        int[] expected = {42, 60, 55, 47};
++        int[] actual = Fors.base2B(message, 6, 4);
++        for (int i = 0; i < expected.length; ++i)
++        {
++            assertEquals(expected[i], actual[i]);
++        }
++        assertEquals(0, Fors.base2B(new byte[0], 14, 0).length);
++    }
++
++    public void testBase2BParameterSets()
++    {
++        int[][] parameters = {{6, 33}, {12, 14}, {8, 33}, {14, 17}, {9, 35}, {14, 22}};
++        Random random = new Random(204);
++        for (int p = 0; p < parameters.length; ++p)
++        {
++            int width = parameters[p][0];
++            for (int count = 1; count <= parameters[p][1]; ++count)
++            {
++                byte[] message = new byte[(width * count + 7) / 8];
++                for (int trial = 0; trial < 16; ++trial)
++                {
++                    random.nextBytes(message);
++                    if (trial < 2)
++                    {
++                        java.util.Arrays.fill(message, (byte)(trial == 0 ? 0 : 0xff));
++                    }
++                    byte[] original = (byte[])message.clone();
++                    int[] actual = Fors.base2B(message, width, count);
++                    assertEquals(count, actual.length);
++                    for (int i = 0; i < count; ++i)
++                    {
++                        // Read individual MSB-first bits independently of the byte-buffer implementation.
++                        int expected = 0;
++                        for (int j = 0; j < width; ++j)
++                        {
++                            int bit = i * width + j;
++                            expected = (expected << 1) | ((message[bit / 8] >>> (7 - bit % 8)) & 1);
++                        }
++                        assertEquals(expected, actual[i]);
++                    }
++                    assertTrue(java.util.Arrays.equals(original, message));
++                }
++            }
++        }
++    }
++}

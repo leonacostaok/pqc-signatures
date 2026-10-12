@@ -1,0 +1,540 @@
+
+Welcome to Gradle 9.1.0!
+
+Here are the highlights of this release:
+ - Full Java 25 support
+ - Native task graph visualization
+ - Enhanced console output
+
+For more details see https://docs.gradle.org/9.1.0/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.1.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Environment setup:
+Looking for JDK ENV 'BC_JDK8' found  null
+Looking for JDK ENV 'BC_JDK11' found  null
+Looking for JDK ENV 'BC_JDK17' found  null
+Looking for JDK ENV 'BC_JDK21' found  null
+Looking for JDK ENV 'BC_JDK25' found  null
+
+> Task :core:compileJava
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1ObjectDescriptor.java:29: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1ObjectDescriptor.java:67: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1Primitive.java:38: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IOException if there is a problem parsing the data, or parsing did not exhaust the available data.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IOException if there is a problem parsing the data, or parsing did not exhaust the available data.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1Primitive.java:68: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IOException if there is a problem parsing the data.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IOException if there is a problem parsing the data.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1GraphicString.java:24: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1GraphicString.java:62: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1Sequence.java:76: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1Sequence.java:122: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1OctetString.java:123: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1OctetString.java:140: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1Set.java:115: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1Set.java:161: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1T61String.java:28: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1T61String.java:66: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1UTCTime.java:51: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1UTCTime.java:90: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1UTCTime.java:185: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception ParseException if the date string cannot be parsed.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws ParseException if the date string cannot be parsed.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1UTCTime.java:200: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception ParseException if the date string cannot be parsed.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws ParseException if the date string cannot be parsed.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1VisibleString.java:30: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1VisibleString.java:69: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1UTF8String.java:24: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1UTF8String.java:62: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1BMPString.java:31: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1BMPString.java:69: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1GeneralString.java:31: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1GeneralString.java:70: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/x509/Extension.java:382: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if conversion is not possible
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if conversion is not possible'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1Boolean.java:54: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1Boolean.java:107: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/x509/SubjectPublicKeyInfo.java:112: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IOException - if the bit string doesn't represent a DER
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IOException - if the bit string doesn't represent a DER'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/x509/SubjectPublicKeyInfo.java:126: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IOException - if the bit string doesn't represent a DER
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IOException - if the bit string doesn't represent a DER'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1IA5String.java:30: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1IA5String.java:68: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1UniversalString.java:30: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1UniversalString.java:68: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1Null.java:34: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1PrintableString.java:50: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1PrintableString.java:88: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1Enumerated.java:26: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1Enumerated.java:58: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/x509/X509Extension.java:240: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if conversion is not possible
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if conversion is not possible'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/x509/Attribute.java:21: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1NumericString.java:34: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1NumericString.java:72: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1VideotexString.java:24: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/ASN1VideotexString.java:62: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the tagged object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the tagged object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/asn1/pkcs/Attribute.java:21: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the object cannot be converted.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the object cannot be converted.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/AsymmetricBlockCipher.java:40: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception InvalidCipherTextException data decrypts improperly.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws InvalidCipherTextException data decrypts improperly.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/AsymmetricBlockCipher.java:41: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException the input data is too large for the cipher.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException the input data is too large for the cipher.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/encodings/ISO9796d1Encoding.java:201: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception InvalidCipherTextException if the decrypted block is not a valid ISO 9796 bit string
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws InvalidCipherTextException if the decrypted block is not a valid ISO 9796 bit string'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/encodings/OAEPEncoding.java:201: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception InvalidCipherTextException if the decrypted block turns out to
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws InvalidCipherTextException if the decrypted block turns out to'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/BlockCipher.java:15: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the params argument is
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the params argument is'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/BlockCipher.java:43: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if there isn't enough data in input , or
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if there isn't enough data in input , or'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/BlockCipher.java:45: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the cipher isn't initialised.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the cipher isn't initialised.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/paddings/PaddedBufferedBlockCipher.java:58: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the params argument is
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the params argument is'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/paddings/PaddedBufferedBlockCipher.java:142: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if there isn't enough space in out.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if there isn't enough space in out.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/paddings/PaddedBufferedBlockCipher.java:143: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the cipher isn't initialised.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the cipher isn't initialised.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/paddings/PaddedBufferedBlockCipher.java:173: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if there isn't enough space in out.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if there isn't enough space in out.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/paddings/PaddedBufferedBlockCipher.java:174: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the cipher isn't initialised.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the cipher isn't initialised.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/paddings/PaddedBufferedBlockCipher.java:243: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if there is insufficient space in out for
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if there is insufficient space in out for'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/paddings/PaddedBufferedBlockCipher.java:245: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the underlying cipher is not
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the underlying cipher is not'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/paddings/PaddedBufferedBlockCipher.java:247: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception InvalidCipherTextException if padding is expected and not found.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws InvalidCipherTextException if padding is expected and not found.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/DefaultBufferedBlockCipher.java:90: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the params argument is
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the params argument is'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/DefaultBufferedBlockCipher.java:175: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if there isn't enough space in out.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if there isn't enough space in out.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/DefaultBufferedBlockCipher.java:176: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the cipher isn't initialised.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the cipher isn't initialised.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/DefaultBufferedBlockCipher.java:205: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if there isn't enough space in out.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if there isn't enough space in out.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/DefaultBufferedBlockCipher.java:206: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the cipher isn't initialised.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the cipher isn't initialised.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/DefaultBufferedBlockCipher.java:314: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if there is insufficient space in out for
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if there is insufficient space in out for'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/DefaultBufferedBlockCipher.java:316: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the underlying cipher is not
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the underlying cipher is not'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/DefaultBufferedBlockCipher.java:318: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception InvalidCipherTextException if padding is expected and not found.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws InvalidCipherTextException if padding is expected and not found.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/DefaultBufferedBlockCipher.java:319: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if the input is not block size
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if the input is not block size'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/BufferedBlockCipher.java:173: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if there isn't enough space in out.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if there isn't enough space in out.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/BufferedBlockCipher.java:174: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the cipher isn't initialised.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the cipher isn't initialised.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/BufferedBlockCipher.java:203: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if there isn't enough space in out.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if there isn't enough space in out.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/BufferedBlockCipher.java:204: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the cipher isn't initialised.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the cipher isn't initialised.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/paddings/BlockCipherPadding.java:43: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception InvalidCipherTextException if the padding is badly formed
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws InvalidCipherTextException if the padding is badly formed'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/OldCTSBlockCipher.java:87: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception org.bouncycastle.crypto.DataLengthException if there isn't enough space in out.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws org.bouncycastle.crypto.DataLengthException if there isn't enough space in out.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/OldCTSBlockCipher.java:88: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the cipher isn't initialised.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the cipher isn't initialised.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/OldCTSBlockCipher.java:120: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception org.bouncycastle.crypto.DataLengthException if there isn't enough space in out.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws org.bouncycastle.crypto.DataLengthException if there isn't enough space in out.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/OldCTSBlockCipher.java:121: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the cipher isn't initialised.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the cipher isn't initialised.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/OldCTSBlockCipher.java:190: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception org.bouncycastle.crypto.DataLengthException if there is insufficient space in out for
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws org.bouncycastle.crypto.DataLengthException if there is insufficient space in out for'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/OldCTSBlockCipher.java:192: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the underlying cipher is not
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the underlying cipher is not'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/OldCTSBlockCipher.java:194: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception org.bouncycastle.crypto.InvalidCipherTextException if cipher text decrypts wrongly (in
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws org.bouncycastle.crypto.InvalidCipherTextException if cipher text decrypts wrongly (in'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/StreamCipher.java:14: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the params argument is
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the params argument is'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/StreamCipher.java:44: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if the output buffer is too small.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if the output buffer is too small.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/OFBBlockCipher.java:57: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the params argument is
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the params argument is'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/OFBBlockCipher.java:134: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if there isn't enough data in in, or
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if there isn't enough data in in, or'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/OFBBlockCipher.java:136: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the cipher isn't initialised.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the cipher isn't initialised.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/GOFBBlockCipher.java:62: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the params argument is
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the params argument is'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/GOFBBlockCipher.java:142: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if there isn't enough data in in, or
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if there isn't enough data in in, or'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/GOFBBlockCipher.java:144: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the cipher isn't initialised.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the cipher isn't initialised.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/AEADCipher.java:28: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the params argument is inappropriate.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the params argument is inappropriate.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/AEADCipher.java:65: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if the output buffer is too small.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if the output buffer is too small.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/AEADCipher.java:79: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if the output buffer is too small.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if the output buffer is too small.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/PGPCFBBlockCipher.java:95: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception DataLengthException if there isn't enough data in in, or
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws DataLengthException if there isn't enough data in in, or'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/PGPCFBBlockCipher.java:97: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalStateException if the cipher isn't initialised.
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalStateException if the cipher isn't initialised.'?
+/Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/core/src/main/java/org/bouncycastle/crypto/modes/PGPCFBBlockCipher.java:148: warning: [PreferThrowsTag] Prefer the @throws javadoc tag instead of @exception.
+     * @exception IllegalArgumentException if the params argument is
+       ^
+    (see https://errorprone.info/bugpattern/PreferThrowsTag)
+  Did you mean '* @throws IllegalArgumentException if the params argument is'?
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+
+> Task :core:processResources NO-SOURCE
+> Task :core:classes
+
+> Task :core:compileTestJava
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+3 warnings
+
+[Incubating] Problems report is available at: file:///Users/dandelionlabs/development/personal/bc-java/worktrees/fors-base2b/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.1.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1m 37s
+2 actionable tasks: 2 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.1.0/userguide/configuration_cache_enabling.html

@@ -1,0 +1,26 @@
+$ /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java -Xmx512m -XX:ActiveProcessorCount=2 -cp /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/driver ForsBenchmark check /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/baseline /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/candidate /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/fixtures.bin
+{"differential_cases":48,"negative_parity_cases":240,"operations":["keygen","sign","verify"],"caller_inputs_unchanged":true}
+Checking sha2_128f
+Checking sha2_128f_with_sha256
+Checking sha2_128s
+Checking sha2_128s_with_sha256
+Checking sha2_192f
+Checking sha2_192f_with_sha512
+Checking sha2_192s
+Checking sha2_192s_with_sha512
+Checking sha2_256f
+Checking sha2_256f_with_sha512
+Checking sha2_256s
+Checking sha2_256s_with_sha512
+Checking shake_128f
+Checking shake_128f_with_shake128
+Checking shake_128s
+Checking shake_128s_with_shake128
+Checking shake_192f
+Checking shake_192f_with_shake256
+Checking shake_192s
+Checking shake_192s_with_shake256
+Checking shake_256f
+Checking shake_256f_with_shake256
+Checking shake_256s
+Checking shake_256s_with_shake256

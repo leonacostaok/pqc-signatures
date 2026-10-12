@@ -1,0 +1,252 @@
+{
+  "upstream": "https://github.com/bcgit/bc-test-data",
+  "revision": "3c385e9f4c0b12ce5a86d2b29a17fb3b68dd4e1a",
+  "files": [
+    {
+      "path": "pqc/crypto/slhdsa/SLH-DSA-keyGen.txt",
+      "bytes": 74952,
+      "git_blob": "59dc2f5f43594b895194b477ed3fb1d169303d18",
+      "sha256": "18c7483308aefd47a61cbde5990aaba51090aeaa6bcc03bf894b342a1a96ae26"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/SLH-DSA-sigGen.txt",
+      "bytes": 12729841,
+      "git_blob": "349d5e9492def16ef43e2ed3bf8db706b9ff80fd",
+      "sha256": "d5123b31b6dc0f4471dc186692fb869578a82c4daef5a175830f87f853d83a8f"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/SLH-DSA-sigVer.txt",
+      "bytes": 6425902,
+      "git_blob": "bf7bcbafa0d77bb557e31e5cffaee1efecf178b4",
+      "sha256": "b55b8133ce664494507902e83cad1490d3a7b37e75637a2481b8bfab770cb76e"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/acvp/keyGen_SLH-DSA-SHA2-128s.txt",
+      "bytes": 3300,
+      "git_blob": "c4046681c047ddf8b818123c32a31919f28d8884",
+      "sha256": "f3c0caffa6ef0106f14f6443469c15722bd5bcc97f36cc71c55b084aa9ed579f"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/acvp/keyGen_SLH-DSA-SHA2-192f.txt",
+      "bytes": 4740,
+      "git_blob": "93945b4a7dfd450b05fb70683b43d7e2acdb3c86",
+      "sha256": "c42cef1f56e66fc7ee1e81af0f3c01598a39c9227d1b1634157d5b25480a1da4"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/acvp/keyGen_SLH-DSA-SHAKE-192s.txt",
+      "bytes": 4740,
+      "git_blob": "8a23a8af46396b5775f54851004bb6f8a4563d99",
+      "sha256": "55f743fd6f3666d4fd09b611bbba105d0eed89d54db72ea9c284645a76048220"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/acvp/keyGen_SLH-DSA-SHAKE-256f.txt",
+      "bytes": 6180,
+      "git_blob": "e9e528e353a6026ac5dbe1051a625423edd41999",
+      "sha256": "f95a0c68c94c091ab04ebf23b71539fe87ef2afdca53d88aac20ea7c3db245b4"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/acvp/sigGen_SLH-DSA-SHA2-192s.txt",
+      "bytes": 580960,
+      "git_blob": "75d651791c203d5440383c276a60600a6668de7b",
+      "sha256": "e29ec20d49ca79f9fedb83cc2e9c12e07ea0dcf4e951f51dd0716527fa169901"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/acvp/sigGen_SLH-DSA-SHA2-256f.txt",
+      "bytes": 2164548,
+      "git_blob": "ce41b3f9e72393d0fadf6de5a8d386fc834a2577",
+      "sha256": "98a320b5de5338c5eff25bc030d3b02043188e7d40eabce1dfdccf25322dfd21"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/acvp/sigGen_SLH-DSA-SHAKE-128f.txt",
+      "bytes": 700304,
+      "git_blob": "1252a435fed035146cb852947fadb08e4b714a51",
+      "sha256": "e2b69a859a4c5cc8c84b91e2938cab71f689259adcb57087f0bc0448fb0338e4"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/acvp/sigGen_SLH-DSA-SHAKE-192s.txt",
+      "bytes": 575672,
+      "git_blob": "dc0079edc61400f019ed580da35a7ec228203556",
+      "sha256": "244ca21cf78fa30301fadf30a41e0a5d8c0bf6f30746d5694d9885758c69e569"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/acvp/sigGen_SLH-DSA-SHAKE-256f.txt",
+      "bytes": 2167122,
+      "git_blob": "22a16c5aab7874017607e53a4cf30f7603dc39a9",
+      "sha256": "71b31e1329d517998d587f568ed5db025ef44229a933dff0ce9c1d6dbf5fe8a5"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/acvp/sigVer_SLH-DSA-SHA2-192s.txt",
+      "bytes": 343220,
+      "git_blob": "eb594f4f611c8325b14ea1afac6fb26e3f24a39f",
+      "sha256": "57145760c7bf4a004e37914c05dcf944ddcb9b75db4398e8da55c9d75fa0f6a3"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/acvp/sigVer_SLH-DSA-SHA2-256f.txt",
+      "bytes": 975681,
+      "git_blob": "1b2d9ab3d4b28a8cfaade832dc6ada0d35bb9b66",
+      "sha256": "f044bb6edc3d37c6a45177291f3dd89c05635db7bd0e55dd8f5ab93b559750c5"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/acvp/sigVer_SLH-DSA-SHAKE-128f.txt",
+      "bytes": 315794,
+      "git_blob": "efd1026668aed2121a13e8d056eefa85ea84101a",
+      "sha256": "93d986eaa4c858ce915946887255a21de5a18ab2abeee2c66d24b3494b04ebd6"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/acvp/sigVer_SLH-DSA-SHAKE-192s.txt",
+      "bytes": 348584,
+      "git_blob": "a7631de67952295caf182017e612318efce65016",
+      "sha256": "2ce8c2e23a4f611bc47b9470c82d7b5d54039ac5662a588b81d2c512133fa654"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/acvp/sigVer_SLH-DSA-SHAKE-256f.txt",
+      "bytes": 974082,
+      "git_blob": "7ff96c26f936d7bb906aa1f011530f193e7bfece",
+      "sha256": "d328b0d47f6db36174ee1558875db741dda42aa10982ac18eba4e6292b9ebf65"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/sha2-128f-sha256.rsp",
+      "bytes": 3827566,
+      "git_blob": "f6ec3b375c2f72ba2e91124fa8bf1eace0caf49d",
+      "sha256": "628a971df2be6b7eacfcadf23bee26b370bc0188485974193640776c7499a1d2"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/sha2-128f.rsp",
+      "bytes": 3796871,
+      "git_blob": "22e5ed9d9db2643d60da3a389dd7b6a312ce37d2",
+      "sha256": "23f54a1c7971200b3bd523adba94f38a1ebb1c00497a796c061ab9b13d68d419"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/sha2-128s-sha256.rsp",
+      "bytes": 1981566,
+      "git_blob": "99114d707c52327c7f131246dd09664015e43b2e",
+      "sha256": "48aa9e587878805a2d71e0a6a09f10aaebdae8bb3c4f5a1f2e80a73cc6489279"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/sha2-128s.rsp",
+      "bytes": 1950692,
+      "git_blob": "a92316de543980d234486761aa23012e3eb9aa12",
+      "sha256": "4ddbfbab1956061cfe0765b6cde1d3c34954b5c4e3d22b4572f9ed3b2803d47c"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/sha2-192f-sha512.rsp",
+      "bytes": 7571816,
+      "git_blob": "552c0f21d97de7003569d4e8da48cc4b5029c03b",
+      "sha256": "b8bcd23cf1bea0de9610da5e1b4addfa1da0b8e83f4a3315a763bec191592e11"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/sha2-192f.rsp",
+      "bytes": 7528286,
+      "git_blob": "1055a0073311f3737ce8a121dcb7f6015e263ee4",
+      "sha256": "48adaded392bec3662fcdd5750f396dc5dc3052475a86bc4f4f67c78df8096e1"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/sha2-192s-sha512.rsp",
+      "bytes": 3684066,
+      "git_blob": "9b57816755a3b2476d5f688e22e8c8d779175169",
+      "sha256": "5733b3239d3b81a1bd2c06646d6309c06f266344754e311cb70da575a5049e15"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/sha2-192s.rsp",
+      "bytes": 3640882,
+      "git_blob": "081f06fe57b8c9a87361c55e138e6e27413c9239",
+      "sha256": "d581c0ae5962d8f6f27899a1e4db90aa80a7e58514a09e8853f36c6329e3a4a2"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/sha2-256f-sha512.rsp",
+      "bytes": 10425966,
+      "git_blob": "0ad7eeea6b2096fa4f09908a882442eec4a61330",
+      "sha256": "854024e4f5a9d59b8a500c78d8586f0d7981e36a9af177fecacde5347c4f268b"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/sha2-256f.rsp",
+      "bytes": 10383191,
+      "git_blob": "a444018a5aba8068016e9b5fb34f7753c8303d1e",
+      "sha256": "29a01c941d12c4b88045b360d0f66e753b3d6d730e1b003a63873a814673e6ee"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/sha2-256s-sha512.rsp",
+      "bytes": 6415666,
+      "git_blob": "8a8f1721d0762f30be940bb19a1433ac51a99ede",
+      "sha256": "c2d7805e24c7e99bdb179583a4745875da3ad340f2305e43475983a5184b34af"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/sha2-256s.rsp",
+      "bytes": 6369894,
+      "git_blob": "3b60c55d4135fc550d45f90b15ff2b199b36ed07",
+      "sha256": "6f383a60023129ad71f466bea37b9fcd30cf5439cb53f3e85bc6907b7480e213"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/shake-128f-shake128.rsp",
+      "bytes": 3829569,
+      "git_blob": "d6e5a5a4dd03fb6e69664683e00ba44051fc1b54",
+      "sha256": "ba501cdfe72a8269148c71d5fe84e17741faeb27d4ac1624644244fd1e5ea5a6"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/shake-128f.rsp",
+      "bytes": 3796449,
+      "git_blob": "7d039e6592b4ee38ebf1d54d621d2ade31012f0c",
+      "sha256": "a2e8f0536c5a2a660bdedf81ebc9060642a12b1582da5e35234f4cc820fd9ddc"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/shake-128s-shake128.rsp",
+      "bytes": 1982319,
+      "git_blob": "39e85042a6e01f12d8dd0022ff4696306524ce7d",
+      "sha256": "a84c3755bf1a716926e5f64eff12abe87b8a72dfbf35a621605bfbd3acd83949"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/shake-128s.rsp",
+      "bytes": 1950749,
+      "git_blob": "559af2acb19559c9a4604f083a95ab61eca9c2c6",
+      "sha256": "9815d533aab0ecdab3bf7c9d19fd38584d8270bd24247d323db04ca452f07232"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/shake-192f-shake256.rsp",
+      "bytes": 7573569,
+      "git_blob": "5a685c97fae63ccd8ec72867c1526845e97ed837",
+      "sha256": "f825cf07928b88f7c78bccde6eadad26e6494a29d0d01aeaa84241ff19250dc4"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/shake-192f.rsp",
+      "bytes": 7528224,
+      "git_blob": "46ee052bd6d66e29c61c8cc3a190e43738dfbd1c",
+      "sha256": "e0d568a05d8fc912f8a896eb22e3f62825f1d5ab29e1d1a2555463be0641cdde"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/shake-192s-shake256.rsp",
+      "bytes": 3684569,
+      "git_blob": "1b538aab5a314238b100129fb2cd1ce1b14d05b0",
+      "sha256": "02f5f2db82368d43b68046f71cd54ce0db5a8fd94c5a6b95fb13af3578aa667b"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/shake-192s.rsp",
+      "bytes": 3639413,
+      "git_blob": "b4931c20f406030b0aa7e0c0d8e013517bc31b6f",
+      "sha256": "3387d07c5ffd94f58a67097c3f79cf62b883b23afa4ef807b6618f3f513a263e"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/shake-256f-shake256.rsp",
+      "bytes": 10423469,
+      "git_blob": "200be7cb2ad002500db59fb114901c896d1d5457",
+      "sha256": "807b527c55f0fe83cc726a26de4111976592d4fc3eae2b64c52bca1b27eadf41"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/shake-256f.rsp",
+      "bytes": 10382211,
+      "git_blob": "7ec0628c4dcb8f1a371f8f54d3dceec9e0170585",
+      "sha256": "046c2b0f23f1e7bf220c58cef5b0f1e63386a7a42c69d59ff2768de9f6fddce5"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/shake-256s-shake256.rsp",
+      "bytes": 6412419,
+      "git_blob": "19dcc391f2052b5ac3eaf27eb638b4b6582d5aaf",
+      "sha256": "b50272901eda9679b7b990b5bfa442e759c0ea00e0ff69a9200f582cf0f41def"
+    },
+    {
+      "path": "pqc/crypto/slhdsa/shake-256s.rsp",
+      "bytes": 6369522,
+      "git_blob": "60c3b09ceec67813d0c6c1e36c791879f19396c3",
+      "sha256": "fa85754373605fed3580310079831c7c03f261bda701670654692459046d3657"
+    }
+  ]
+}

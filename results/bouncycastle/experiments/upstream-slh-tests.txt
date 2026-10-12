@@ -1,0 +1,25 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.1.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Environment setup:
+Looking for JDK ENV 'BC_JDK8' found  null
+Looking for JDK ENV 'BC_JDK11' found  null
+Looking for JDK ENV 'BC_JDK17' found  null
+Looking for JDK ENV 'BC_JDK21' found  null
+Looking for JDK ENV 'BC_JDK25' found  null
+
+> Task :core:compileJava UP-TO-DATE
+> Task :core:processResources NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:compileTestJava UP-TO-DATE
+> Task :core:processTestResources
+> Task :core:testClasses
+
+> Task :core:test
+
+AllTests > org.bouncycastle.asn1.test.ASN1SequenceParserTest.testHeavilyBERNestedSequence FAILED
+    java.io.FileNotFoundException at null:-1
+
+AllTests > org.bouncycastle.asn1.test.ASN1SequenceParserTest.testHeavilyDLNestedSequence FAILED
+    java.io.FileNotFoundException at null:-1

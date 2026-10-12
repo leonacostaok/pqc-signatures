@@ -1,0 +1,238 @@
+{
+  "schema": "bc-fors-isolated-independent-review-v1",
+  "source_sha256": "27d9e21234635a8827d63e43ec0df4f5e258b14e206055f5e5187099eafda821",
+  "pairs": 72,
+  "processes": 144,
+  "rows": 864,
+  "summary_cells": 12,
+  "raw_files": 793,
+  "checks": [
+    "All raw stdout, command, status, metrics and pair records match; no stderr and every exit zero",
+    "All full two-case cycles, minimum budgets and exact six-round coverage checked",
+    "Exact fork/parameter coverage and three baseline-first/three candidate-first pairs per parameter",
+    "Independent sorted-middle wall/CPU medians, pair ratios and summary/range recomputation",
+    "Original and isolated frozen sources, classes, JDK binary and exact binary corpus hashes match",
+    "Prepared checks exact 24 valid and 24 tampered signatures per variant; Python optimize=0"
+  ],
+  "cpu_wall_min": 0.2620681189826657,
+  "cpu_wall_median": 1.0014174490283243,
+  "cpu_wall_max": 1.1151101613117347,
+  "summary": [
+    {
+      "parameter": "sha2_128f",
+      "speedup": 0.995093294785963,
+      "fork_min": 0.9160057865192446,
+      "fork_max": 1.0072341299893846,
+      "cpu_speedup": 0.9954345808422508,
+      "baseline_ns": 2576828.2110416666,
+      "candidate_ns": 2617777.0208333335,
+      "winning_pairs": 3,
+      "pair_speedups": [
+        0.9644839263330776,
+        1.0032777805058677,
+        0.9869088090660584,
+        0.9160057865192446,
+        1.004388056740635,
+        1.0072341299893846
+      ]
+    },
+    {
+      "parameter": "sha2_128s",
+      "speedup": 1.0048729377659549,
+      "fork_min": 0.921514063709766,
+      "fork_max": 1.0955543603768074,
+      "cpu_speedup": 1.0043088325995346,
+      "baseline_ns": 900141.9717818602,
+      "candidate_ns": 897368.5924203495,
+      "winning_pairs": 4,
+      "pair_speedups": [
+        1.004643033128402,
+        1.0088775365462606,
+        1.0955543603768074,
+        0.921514063709766,
+        0.9694068878501694,
+        1.0051028424035076
+      ]
+    },
+    {
+      "parameter": "sha2_192f",
+      "speedup": 1.0002722001775814,
+      "fork_min": 0.9836362505244103,
+      "fork_max": 1.0476403312129987,
+      "cpu_speedup": 0.9943467940801431,
+      "baseline_ns": 3842066.5984848486,
+      "candidate_ns": 3793767.8361185384,
+      "winning_pairs": 3,
+      "pair_speedups": [
+        1.0476403312129987,
+        0.995340848353947,
+        0.9836362505244103,
+        1.005203552001216,
+        0.9855465838546934,
+        1.0175349311821889
+      ]
+    },
+    {
+      "parameter": "sha2_192s",
+      "speedup": 0.9951600169523964,
+      "fork_min": 0.9674604470100062,
+      "fork_max": 1.016394404500606,
+      "cpu_speedup": 0.9962835175972354,
+      "baseline_ns": 1289362.2445955186,
+      "candidate_ns": 1296840.9560513315,
+      "winning_pairs": 3,
+      "pair_speedups": [
+        1.0132362436717788,
+        0.984043245737722,
+        1.003836953839029,
+        1.016394404500606,
+        0.9864830800657638,
+        0.9674604470100062
+      ]
+    },
+    {
+      "parameter": "sha2_256f",
+      "speedup": 1.0035407026123941,
+      "fork_min": 0.9974375232060048,
+      "fork_max": 1.0408900209472163,
+      "cpu_speedup": 1.007829262413117,
+      "baseline_ns": 3926412.6272490527,
+      "candidate_ns": 3841773.2007575757,
+      "winning_pairs": 4,
+      "pair_speedups": [
+        1.0031868565547533,
+        1.0374740768839605,
+        1.0038945486700352,
+        0.9989090937472561,
+        1.0408900209472163,
+        0.9974375232060048
+      ]
+    },
+    {
+      "parameter": "sha2_256s",
+      "speedup": 0.990174878009134,
+      "fork_min": 0.9630643287270375,
+      "fork_max": 1.03269129189704,
+      "cpu_speedup": 0.9936615554539278,
+      "baseline_ns": 1920025.4363636365,
+      "candidate_ns": 1938403.4286057693,
+      "winning_pairs": 2,
+      "pair_speedups": [
+        0.9994253069657573,
+        0.9758577541189585,
+        1.03269129189704,
+        0.9630643287270375,
+        1.0263777045620548,
+        0.9809244490525105
+      ]
+    },
+    {
+      "parameter": "shake_128f",
+      "speedup": 1.004061144601569,
+      "fork_min": 1.0007589381776718,
+      "fork_max": 1.0120985241746134,
+      "cpu_speedup": 1.0037043375768293,
+      "baseline_ns": 2169344.200431035,
+      "candidate_ns": 2160216.3124269433,
+      "winning_pairs": 6,
+      "pair_speedups": [
+        1.0120985241746134,
+        1.0047116816806,
+        1.0100319060191147,
+        1.0007589381776718,
+        1.0034106075225377,
+        1.0016851746431101
+      ]
+    },
+    {
+      "parameter": "shake_128s",
+      "speedup": 1.0044645309651052,
+      "fork_min": 0.9994539979310082,
+      "fork_max": 1.009678633288378,
+      "cpu_speedup": 1.0050235344243281,
+      "baseline_ns": 746356.9550644063,
+      "candidate_ns": 743509.8016518739,
+      "winning_pairs": 4,
+      "pair_speedups": [
+        1.0040594538571337,
+        0.9994539979310082,
+        1.009678633288378,
+        1.0049320067377505,
+        1.004869608073077,
+        0.9996464476953233
+      ]
+    },
+    {
+      "parameter": "shake_192f",
+      "speedup": 1.0049179376755168,
+      "fork_min": 0.9981744247963269,
+      "fork_max": 1.5957863095915237,
+      "cpu_speedup": 1.0031292009793389,
+      "baseline_ns": 3266301.814102564,
+      "candidate_ns": 3246370.730769231,
+      "winning_pairs": 4,
+      "pair_speedups": [
+        0.9983332395250433,
+        1.0080689600966433,
+        0.9981744247963269,
+        1.5957863095915237,
+        1.0115935254405077,
+        1.0017669152543904
+      ]
+    },
+    {
+      "parameter": "shake_192s",
+      "speedup": 1.0039454106427748,
+      "fork_min": 0.9872371319675501,
+      "fork_max": 1.0196928153330609,
+      "cpu_speedup": 1.006841302040737,
+      "baseline_ns": 1091332.7445652173,
+      "candidate_ns": 1090590.5336956521,
+      "winning_pairs": 4,
+      "pair_speedups": [
+        0.9978176318270229,
+        1.007606733039032,
+        1.0062595879307328,
+        1.0016312333548165,
+        0.9872371319675501,
+        1.0196928153330609
+      ]
+    },
+    {
+      "parameter": "shake_256f",
+      "speedup": 1.0046750737600256,
+      "fork_min": 0.9975556183412553,
+      "fork_max": 1.0067674753638618,
+      "cpu_speedup": 1.0060781117731763,
+      "baseline_ns": 3249887.419871795,
+      "candidate_ns": 3236979.8365384615,
+      "winning_pairs": 5,
+      "pair_speedups": [
+        1.0066261378936856,
+        1.0010450210924622,
+        0.9975556183412553,
+        1.0067674753638618,
+        1.0060279658332185,
+        1.0033221816868327
+      ]
+    },
+    {
+      "parameter": "shake_256s",
+      "speedup": 0.9990283358338636,
+      "fork_min": 0.9935363504324444,
+      "fork_max": 1.002407768621354,
+      "cpu_speedup": 0.9992566980215074,
+      "baseline_ns": 1584134.0981012657,
+      "candidate_ns": 1590228.112341772,
+      "winning_pairs": 2,
+      "pair_speedups": [
+        0.9999908297921467,
+        0.9935363504324444,
+        0.9980658418755806,
+        1.0011898073781653,
+        1.002407768621354,
+        0.9959127904208505
+      ]
+    }
+  ]
+}
