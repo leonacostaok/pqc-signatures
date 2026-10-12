@@ -36,3 +36,7 @@ The [independent BC follow-up check](../results/bouncycastle/independent-isolate
 ## Fresh ten-key follow-up
 
 The [candidate-first follow-up](ten-key-order.md) generates ten new keys per parameter, runs all changed providers before any original, and preserves exact-output checks, raw per-key wall/CPU timings and every loss. It reproduces the large liboqs gain and the affected noble/CIRCL/OpenSSL and Rust construction gains; Bouncy Castle latency remains mixed.
+
+## liboqs patch size
+
+A [four-variant ablation](../libs/liboqs/experiments/sha2-ablation/RESULTS.md) tests whether SHA-256-only or SHA-512-only acceleration preserves the full gains. SHA-256-only matches the SHA2-128 results closely but costs 21–37% more signing time and 22–39% more verification time on SHA2-192/256. Both runtime adapters remain justified for all six sets. The maintained draft removes [three redundant test-build lines](../results/liboqs/sha2-trim/README.md); its production code is unchanged.

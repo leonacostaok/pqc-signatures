@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "checks": [
+    {
+      "mutated_field": "median_within_three_percent_of_full",
+      "rejected": true
+    },
+    {
+      "mutated_field": "individual_key_losses_vs_original",
+      "rejected": true
+    },
+    {
+      "mutated_field": "median_latency_penalty_vs_full",
+      "rejected": true
+    }
+  ]
+}

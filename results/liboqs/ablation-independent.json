@@ -1,0 +1,1282 @@
+{
+  "complete": true,
+  "scope": "Archived raw-data verification; live source/build/backend gates are recorded by the experiment runner",
+  "batches": 24,
+  "distinct_test_keys": 60,
+  "measured_key_pipelines": 1440,
+  "raw_operation_timings": 4320,
+  "variant_vs_original_operation_pairs": 3240,
+  "exact_outputs_match": true,
+  "serial_order_verified": true,
+  "summary_cells": 54,
+  "result_sha256": {
+    "01-original": "dbef4d35d86d25cdc119c8b7aa5776e809a1d2822a6d5abb18fcb8108717d040",
+    "01-sha256-only": "6d52a0dd121c0673e35c2d6768892ceb2f3151a149230544c39b3fa9b4fda35e",
+    "01-sha512-only": "e0f7648cdf1dfef811a96cea93a39a3d3c0bd3c989999cff30d92f05b2db6ac8",
+    "01-full": "70e2e80abf8bdd0b8867ab50afa0cff26a9e2293b86913b1313bcefa77877d75",
+    "02-full": "7cb861c851225a4548db0029b0ef011bb9027f6395a1d9040ecdd821112e4a3e",
+    "02-sha512-only": "29652010c6be3eb9b33a03ad09571f2f3d14bf1a2c7d43ee2ca2b6854fa54b9f",
+    "02-sha256-only": "54120a22529ce0586cbdd682d7f193d646f29b8f139f7a65ec536862b699f16b",
+    "02-original": "16b3149eee0c567fd334568bf9002e863a79b078d238f70a56add4d63edcd3e8",
+    "03-sha256-only": "7aeb1a4c252a13bfe2269e50cc11f71130a19c3f4eac2cbf530251317bfcf92e",
+    "03-full": "65fcdbabd863756422daa6e2c765bb9c618020e7e5582c3b0d4653762fc9f2a5",
+    "03-original": "56cdbe94b9fd434f5ce34f2a3608c4bf1a0fb7b5946fe89070945a0ec5afecff",
+    "03-sha512-only": "9cb04be96308cec587166442fff82352d4b3530be84276d59dae9aac0d17e4f7",
+    "04-sha512-only": "4427dadbb2c8b1b69685c2a34b663966d2c37b24734e984eccb505261a5400b0",
+    "04-original": "09e909dd6c370c86bd9598e51d99b66f064c8d538130a49a06141366f10b6937",
+    "04-full": "2098c44a53a24e78c94ddc857117c5b075398fbcdad03196c3a83b22298ac35a",
+    "04-sha256-only": "6aaf29ec347c3c3c1720487945bd821eaaeef6393af256c6c5ac5eafabf52c0f",
+    "05-full": "5d3ae9b6d171107ba9bbe1145b9a16dae3aa6a79ddc244fb30a2028fb75058e6",
+    "05-original": "9aab1766caf14ddfd003414bc66cfe051e4396ec698357bc40976bcbf85aa985",
+    "05-sha512-only": "73222270c5315721601272111e2a6ae783be191ae08e7122d8fa94200998b272",
+    "05-sha256-only": "7c1b525ece89e57f7e5f61a822571ad24eb3007c01c21359a8966c280d0e02e9",
+    "06-sha256-only": "47f4047e65edb37f30a5cb4816c9383c6a4eed690d0fc1fd138b19cf5f695367",
+    "06-sha512-only": "8588683cc3db5a24b5a99bffd3aca95313687c29da02ca210a411a42b6d3e513",
+    "06-original": "d8f2a34803116f21462306fe3c97e8c92b4f417d1e66822e58df95535b91f2b2",
+    "06-full": "dbd483f0075310c7aa7b60a40a2e48f78ac6b1187e53de48f1eb9cd6a5bb36de"
+  },
+  "summary": [
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 5.419921353798211,
+        "relative_time_to_full": 0.9997633696166588,
+        "relative_time_range": [
+          0.9827425373134329,
+          1.0189663347558084
+        ],
+        "latency_penalty_to_full": -0.00023663038334120756
+      },
+      "cpu": {
+        "speedup_vs_original": 5.402094869793894,
+        "relative_time_to_full": 0.9988454009331791,
+        "relative_time_range": [
+          0.9896907216494846,
+          1.0137180700094608
+        ],
+        "latency_penalty_to_full": -0.001154599066820916
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 5.299843353193454,
+        "relative_time_to_full": 1.0001175292299997,
+        "relative_time_range": [
+          0.9413997407887428,
+          1.0256697745780716
+        ],
+        "latency_penalty_to_full": 0.00011752922999974658
+      },
+      "cpu": {
+        "speedup_vs_original": 5.294508382710873,
+        "relative_time_to_full": 1.0002459556462142,
+        "relative_time_range": [
+          0.9772066608913273,
+          1.0054946137030545
+        ],
+        "latency_penalty_to_full": 0.0002459556462142132
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 5.300423790614801,
+        "relative_time_to_full": 1.0019869227611302,
+        "relative_time_range": [
+          0.9679075738125802,
+          1.011956160743939
+        ],
+        "latency_penalty_to_full": 0.0019869227611302165
+      },
+      "cpu": {
+        "speedup_vs_original": 5.280283723192758,
+        "relative_time_to_full": 0.9971895170578429,
+        "relative_time_range": [
+          0.9782820097244732,
+          1.0106135986733003
+        ],
+        "latency_penalty_to_full": -0.002810482942157133
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 5.42361944676938,
+        "relative_time_to_full": 0.9998595676976016,
+        "relative_time_range": [
+          0.9859841603779681,
+          1.0640765502744365
+        ],
+        "latency_penalty_to_full": -0.00014043230239835225
+      },
+      "cpu": {
+        "speedup_vs_original": 5.4006811526841485,
+        "relative_time_to_full": 1.0014372526059998,
+        "relative_time_range": [
+          0.9943102877935825,
+          1.0086391347675714
+        ],
+        "latency_penalty_to_full": 0.0014372526059998059
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 5.273970915343624,
+        "relative_time_to_full": 0.9963566281789209,
+        "relative_time_range": [
+          0.9380130497037665,
+          1.1175006769816889
+        ],
+        "latency_penalty_to_full": -0.0036433718210791
+      },
+      "cpu": {
+        "speedup_vs_original": 5.267501645393022,
+        "relative_time_to_full": 0.998207335519017,
+        "relative_time_range": [
+          0.9889942541551452,
+          1.0175297998160975
+        ],
+        "latency_penalty_to_full": -0.0017926644809830306
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 5.1827484415511424,
+        "relative_time_to_full": 0.9932682066913952,
+        "relative_time_range": [
+          0.9554794520547946,
+          1.0118613138686132
+        ],
+        "latency_penalty_to_full": -0.00673179330860485
+      },
+      "cpu": {
+        "speedup_vs_original": 5.168100913844981,
+        "relative_time_to_full": 0.9936825743764661,
+        "relative_time_range": [
+          0.9755884917175239,
+          1.0045495905368518
+        ],
+        "latency_penalty_to_full": -0.006317425623533879
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 5.030670228858191,
+        "relative_time_to_full": 1.0568030844632568,
+        "relative_time_range": [
+          0.9023081052066559,
+          1.1212216624685138
+        ],
+        "latency_penalty_to_full": 0.05680308446325677
+      },
+      "cpu": {
+        "speedup_vs_original": 5.023688534407581,
+        "relative_time_to_full": 1.0541444971292928,
+        "relative_time_range": [
+          1.0177315805564047,
+          1.056882463859208
+        ],
+        "latency_penalty_to_full": 0.05414449712929281
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 3.9223744767748645,
+        "relative_time_to_full": 1.206989681282423,
+        "relative_time_range": [
+          1.0048842547285635,
+          1.223838553258287
+        ],
+        "latency_penalty_to_full": 0.206989681282423
+      },
+      "cpu": {
+        "speedup_vs_original": 3.926932071541744,
+        "relative_time_to_full": 1.2061884554771338,
+        "relative_time_range": [
+          1.138770918010521,
+          1.2169775696699645
+        ],
+        "latency_penalty_to_full": 0.20618845547713383
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 4.005547109472296,
+        "relative_time_to_full": 1.2233634644276399,
+        "relative_time_range": [
+          1.1570650058388479,
+          1.2442762902599922
+        ],
+        "latency_penalty_to_full": 0.22336346442763988
+      },
+      "cpu": {
+        "speedup_vs_original": 3.9951297588840022,
+        "relative_time_to_full": 1.2173369244690047,
+        "relative_time_range": [
+          1.1825444377870982,
+          1.2263060086723105
+        ],
+        "latency_penalty_to_full": 0.21733692446900466
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 5.041085803565743,
+        "relative_time_to_full": 1.0331482103382368,
+        "relative_time_range": [
+          0.9258020519324826,
+          1.052440334041103
+        ],
+        "latency_penalty_to_full": 0.03314821033823678
+      },
+      "cpu": {
+        "speedup_vs_original": 5.030284434557394,
+        "relative_time_to_full": 1.0433116292304603,
+        "relative_time_range": [
+          1.0185734943451155,
+          1.0496623278813615
+        ],
+        "latency_penalty_to_full": 0.04331162923046028
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 3.5566222563299092,
+        "relative_time_to_full": 1.2724180621462589,
+        "relative_time_range": [
+          1.2062883504972073,
+          1.396499699072234
+        ],
+        "latency_penalty_to_full": 0.27241806214625885
+      },
+      "cpu": {
+        "speedup_vs_original": 3.553633484686793,
+        "relative_time_to_full": 1.271531852967525,
+        "relative_time_range": [
+          1.2645934059248518,
+          1.2823019082717235
+        ],
+        "latency_penalty_to_full": 0.271531852967525
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 3.1354666425748516,
+        "relative_time_to_full": 1.3890563170270114,
+        "relative_time_range": [
+          1.2094657919400187,
+          1.4160346695557964
+        ],
+        "latency_penalty_to_full": 0.3890563170270114
+      },
+      "cpu": {
+        "speedup_vs_original": 3.129367262316706,
+        "relative_time_to_full": 1.3870664761385902,
+        "relative_time_range": [
+          1.3188775510204083,
+          1.414054054054054
+        ],
+        "latency_penalty_to_full": 0.38706647613859024
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 4.925851409160338,
+        "relative_time_to_full": 1.0635649895403705,
+        "relative_time_range": [
+          0.9839150891782471,
+          1.5200855716662705
+        ],
+        "latency_penalty_to_full": 0.06356498954037049
+      },
+      "cpu": {
+        "speedup_vs_original": 4.920784814115271,
+        "relative_time_to_full": 1.0626640339675055,
+        "relative_time_range": [
+          1.0566282081469272,
+          1.1597039866316543
+        ],
+        "latency_penalty_to_full": 0.06266403396750553
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 3.860724280049784,
+        "relative_time_to_full": 1.2119991544021782,
+        "relative_time_range": [
+          1.1883984918442647,
+          1.435390865774272
+        ],
+        "latency_penalty_to_full": 0.2119991544021782
+      },
+      "cpu": {
+        "speedup_vs_original": 3.842442762260527,
+        "relative_time_to_full": 1.2197779416194934,
+        "relative_time_range": [
+          1.2159799664719542,
+          1.26944666363812
+        ],
+        "latency_penalty_to_full": 0.21977794161949338
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 3.7657476342591742,
+        "relative_time_to_full": 1.2588104795161639,
+        "relative_time_range": [
+          1.2429367672496636,
+          1.2839289201327866
+        ],
+        "latency_penalty_to_full": 0.25881047951616387
+      },
+      "cpu": {
+        "speedup_vs_original": 3.7566083363670963,
+        "relative_time_to_full": 1.2618894160824796,
+        "relative_time_range": [
+          1.2481681450057849,
+          1.2796014067995312
+        ],
+        "latency_penalty_to_full": 0.2618894160824796
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 4.9403084523426255,
+        "relative_time_to_full": 1.0650990274709917,
+        "relative_time_range": [
+          0.9911126508151178,
+          1.1105561204420464
+        ],
+        "latency_penalty_to_full": 0.06509902747099172
+      },
+      "cpu": {
+        "speedup_vs_original": 4.931175698553512,
+        "relative_time_to_full": 1.0657737411347892,
+        "relative_time_range": [
+          1.0626324239913782,
+          1.0758916678999555
+        ],
+        "latency_penalty_to_full": 0.06577374113478918
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 3.1043081174590172,
+        "relative_time_to_full": 1.3694121731320008,
+        "relative_time_range": [
+          1.3634234364583855,
+          1.4096632224700822
+        ],
+        "latency_penalty_to_full": 0.3694121731320008
+      },
+      "cpu": {
+        "speedup_vs_original": 3.1128273582406134,
+        "relative_time_to_full": 1.36609463739991,
+        "relative_time_range": [
+          1.3645380322945622,
+          1.3721035040713405
+        ],
+        "latency_penalty_to_full": 0.3660946373999101
+      }
+    },
+    {
+      "variant": "sha256-only",
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 3.237385819502412,
+        "relative_time_to_full": 1.377847024961961,
+        "relative_time_range": [
+          1.3660942637924736,
+          1.3994147768836869
+        ],
+        "latency_penalty_to_full": 0.377847024961961
+      },
+      "cpu": {
+        "speedup_vs_original": 3.232835677351664,
+        "relative_time_to_full": 1.3782619033544348,
+        "relative_time_range": [
+          1.3639679066374908,
+          1.3961228968544257
+        ],
+        "latency_penalty_to_full": 0.37826190335443477
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 0.9973871920273418,
+        "relative_time_to_full": 5.442996132240022,
+        "relative_time_range": [
+          5.355410447761194,
+          5.541488857278331
+        ],
+        "latency_penalty_to_full": 4.442996132240022
+      },
+      "cpu": {
+        "speedup_vs_original": 0.9996075816860808,
+        "relative_time_to_full": 5.407539795994474,
+        "relative_time_range": [
+          5.36738519212746,
+          5.482497634815515
+        ],
+        "latency_penalty_to_full": 4.407539795994474
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 1.0016763722848503,
+        "relative_time_to_full": 5.28972450096005,
+        "relative_time_range": [
+          4.983558600259212,
+          5.3338341999644125
+        ],
+        "latency_penalty_to_full": 4.28972450096005
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0017108844993934,
+        "relative_time_to_full": 5.285739563505551,
+        "relative_time_range": [
+          5.167869862354413,
+          5.326486186970633
+        ],
+        "latency_penalty_to_full": 4.285739563505551
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 0.9976746874806657,
+        "relative_time_to_full": 5.288028769522482,
+        "relative_time_range": [
+          5.186195826645265,
+          5.364662902690136
+        ],
+        "latency_penalty_to_full": 4.288028769522482
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0002507814078805,
+        "relative_time_to_full": 5.263616027261795,
+        "relative_time_range": [
+          5.203769905752356,
+          5.31608623548922
+        ],
+        "latency_penalty_to_full": 4.263616027261795
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 1.0007403685980725,
+        "relative_time_to_full": 5.399161992476663,
+        "relative_time_range": [
+          5.294720365330901,
+          5.458036167722846
+        ],
+        "latency_penalty_to_full": 4.399161992476663
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0018123256371538,
+        "relative_time_to_full": 5.388548987143986,
+        "relative_time_range": [
+          5.3611490408838325,
+          5.430690367310813
+        ],
+        "latency_penalty_to_full": 4.388548987143986
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 1.0050370083855444,
+        "relative_time_to_full": 5.260024023787973,
+        "relative_time_range": [
+          4.834474539359175,
+          5.379007716701709
+        ],
+        "latency_penalty_to_full": 4.260024023787973
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0017448454135947,
+        "relative_time_to_full": 5.247878784581531,
+        "relative_time_range": [
+          5.203310364820266,
+          5.301986863618106
+        ],
+        "latency_penalty_to_full": 4.247878784581531
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 1.0078857821643825,
+        "relative_time_to_full": 5.072038542852496,
+        "relative_time_range": [
+          4.833904109589041,
+          5.218065693430657
+        ],
+        "latency_penalty_to_full": 4.072038542852496
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0086501995748636,
+        "relative_time_to_full": 5.066493360162278,
+        "relative_time_range": [
+          4.926765475152572,
+          5.166515013648771
+        ],
+        "latency_penalty_to_full": 4.066493360162278
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 1.0047591387302017,
+        "relative_time_to_full": 5.2547276985736895,
+        "relative_time_range": [
+          4.455984970477724,
+          5.6883942766295705
+        ],
+        "latency_penalty_to_full": 4.2547276985736895
+      },
+      "cpu": {
+        "speedup_vs_original": 1.00576361416268,
+        "relative_time_to_full": 5.230480170878863,
+        "relative_time_range": [
+          5.06909202078875,
+          5.427165979054268
+        ],
+        "latency_penalty_to_full": 4.230480170878863
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 1.0392288472450102,
+        "relative_time_to_full": 4.564159013184257,
+        "relative_time_range": [
+          3.746970694471629,
+          4.695427324237439
+        ],
+        "latency_penalty_to_full": 3.5641590131842573
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0437577808962317,
+        "relative_time_to_full": 4.5417197886116565,
+        "relative_time_range": [
+          4.253722417620288,
+          4.601281733144885
+        ],
+        "latency_penalty_to_full": 3.5417197886116565
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 1.0484619253134346,
+        "relative_time_to_full": 4.652705955262254,
+        "relative_time_range": [
+          4.396585176561894,
+          4.719975614712457
+        ],
+        "latency_penalty_to_full": 3.6527059552622543
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0511018839407429,
+        "relative_time_to_full": 4.633957389094904,
+        "relative_time_range": [
+          4.504893149590573,
+          4.660204081632653
+        ],
+        "latency_penalty_to_full": 3.6339573890949044
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 1.0099921368443607,
+        "relative_time_to_full": 5.1447988592320435,
+        "relative_time_range": [
+          4.624536317119997,
+          5.324216992003007
+        ],
+        "latency_penalty_to_full": 4.1447988592320435
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0104531647197956,
+        "relative_time_to_full": 5.2030792839233655,
+        "relative_time_range": [
+          5.067786790266513,
+          5.262804536648449
+        ],
+        "latency_penalty_to_full": 4.2030792839233655
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 1.0603653505276247,
+        "relative_time_to_full": 4.23237028157423,
+        "relative_time_range": [
+          4.099753526066081,
+          4.368636050516647
+        ],
+        "latency_penalty_to_full": 3.23237028157423
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0623344601738682,
+        "relative_time_to_full": 4.2535476184208925,
+        "relative_time_range": [
+          4.2374026376047595,
+          4.297215702208195
+        ],
+        "latency_penalty_to_full": 3.2535476184208925
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 1.0880702614882565,
+        "relative_time_to_full": 3.9749103916958193,
+        "relative_time_range": [
+          3.479850046860356,
+          4.159718462371413
+        ],
+        "latency_penalty_to_full": 2.9749103916958193
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0969470453878265,
+        "relative_time_to_full": 3.9596514589560403,
+        "relative_time_range": [
+          3.781122448979592,
+          4.044252563410685
+        ],
+        "latency_penalty_to_full": 2.9596514589560403
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 1.012623556416694,
+        "relative_time_to_full": 5.2030480375421115,
+        "relative_time_range": [
+          4.779844621949885,
+          5.305422838031534
+        ],
+        "latency_penalty_to_full": 4.2030480375421115
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0128069560890332,
+        "relative_time_to_full": 5.195473414604361,
+        "relative_time_range": [
+          5.13327054391335,
+          5.247489239598278
+        ],
+        "latency_penalty_to_full": 4.195473414604361
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 1.0506372429562851,
+        "relative_time_to_full": 4.460287247150097,
+        "relative_time_range": [
+          4.346442325140633,
+          4.58988906154013
+        ],
+        "latency_penalty_to_full": 3.460287247150097
+      },
+      "cpu": {
+        "speedup_vs_original": 1.049451045410224,
+        "relative_time_to_full": 4.476225630062194,
+        "relative_time_range": [
+          4.45598398946457,
+          4.5253692999357735
+        ],
+        "latency_penalty_to_full": 3.476225630062194
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 1.0610763027679648,
+        "relative_time_to_full": 4.471347653282426,
+        "relative_time_range": [
+          4.428214491639439,
+          4.538957234915055
+        ],
+        "latency_penalty_to_full": 3.471347653282426
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0608025154245495,
+        "relative_time_to_full": 4.472727144847558,
+        "relative_time_range": [
+          4.434053220208253,
+          4.509769441187964
+        ],
+        "latency_penalty_to_full": 3.472727144847558
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 1.0172352199794432,
+        "relative_time_to_full": 5.177859422503694,
+        "relative_time_range": [
+          4.66767709742107,
+          5.231613979128889
+        ],
+        "latency_penalty_to_full": 4.177859422503694
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0140442266472847,
+        "relative_time_to_full": 5.182977443348001,
+        "relative_time_range": [
+          5.111085858400721,
+          5.20667455971585
+        ],
+        "latency_penalty_to_full": 4.182977443348001
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 1.0929221239238687,
+        "relative_time_to_full": 3.896796567999286,
+        "relative_time_range": [
+          3.8571537775756286,
+          4.253449078482405
+        ],
+        "latency_penalty_to_full": 2.896796567999286
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0926774531142223,
+        "relative_time_to_full": 3.8944033821731563,
+        "relative_time_range": [
+          3.8856453206601564,
+          3.910948813135474
+        ],
+        "latency_penalty_to_full": 2.8944033821731563
+      }
+    },
+    {
+      "variant": "sha512-only",
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 1.093874206476453,
+        "relative_time_to_full": 4.090479393309437,
+        "relative_time_range": [
+          4.033441208198489,
+          4.124090247452693
+        ],
+        "latency_penalty_to_full": 3.0904793933094368
+      },
+      "cpu": {
+        "speedup_vs_original": 1.0923652670920336,
+        "relative_time_to_full": 4.087122236824342,
+        "relative_time_range": [
+          4.069152787834902,
+          4.107155830003633
+        ],
+        "latency_penalty_to_full": 3.0871222368243423
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 5.447427887199227,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 5.421196916476358,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 5.294761591925772,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 5.286658739476789,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 5.278888731995679,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 5.26383327600612,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 5.420325852662206,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 5.390046768282561,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 5.256624460984243,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 5.2538982791281,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 5.176848213301994,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 5.158951319381256,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 5.291583257506824,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 5.265840562889801,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 4.749130040248714,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 4.722063249482968,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 4.8720200780784815,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 4.857798035881019,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 5.1916608519304095,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 5.237043247727506,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 4.515364889929495,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 4.528208544346343,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 4.3448356942134545,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 4.34316842964272,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 5.242558385239025,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 5.255924646308215,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 4.6870308546035515,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 4.712644071419387,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 4.7555488298379665,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 4.74535781510715,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "operation": "keygen",
+      "wall": {
+        "speedup_vs_original": 5.265375846452395,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 5.258793911921838,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "operation": "sign",
+      "wall": {
+        "speedup_vs_original": 4.268299948745972,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 4.257155974765883,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    },
+    {
+      "variant": "full",
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "operation": "verify",
+      "wall": {
+        "speedup_vs_original": 4.483260553129549,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      },
+      "cpu": {
+        "speedup_vs_original": 4.467879425256262,
+        "relative_time_to_full": 1.0,
+        "relative_time_range": [
+          1.0,
+          1.0
+        ],
+        "latency_penalty_to_full": 0.0
+      }
+    }
+  ]
+}
