@@ -1,0 +1,22 @@
+[
+  {
+    "script": "run.py",
+    "exit_code": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/run.py\", line 6, in <module>\n    raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n"
+  },
+  {
+    "script": "prescribe.py",
+    "exit_code": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/prescribe.py\", line 6, in <module>\n    raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n"
+  },
+  {
+    "script": "audit.py",
+    "exit_code": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/audit.py\", line 5, in <module>\n    raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n"
+  },
+  {
+    "script": "rebuild.py",
+    "exit_code": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/rebuild.py\", line 4, in <module>\n    if sys.flags.optimize:raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n"
+  }
+]

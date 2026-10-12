@@ -1,0 +1,77 @@
+--- a/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/WotsPlus.java
++++ b/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/WotsPlus.java
+@@ -58,7 +58,15 @@
+         for (int j = 0; j < s; ++j)
+         {
+             adrs.setHashAddress(i + j);
+-            result = engine.F(pkSeed, adrs, result);
++            if (j == 0)
++            {
++                result = engine.F(pkSeed, adrs, result);
++            }
++            else
++            {
++                // F consumes its input before writing the output, so later steps can reuse it.
++                engine.F(pkSeed, adrs, result, result);
++            }
+         }
+         return result;
+     }
+--- a/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/SLHDSAEngine.java
++++ b/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/SLHDSAEngine.java
+@@ -95,6 +95,8 @@
+ 
+     abstract byte[] F(byte[] pkSeed, ADRS adrs, byte[] m1);
+ 
++    abstract void F(byte[] pkSeed, ADRS adrs, byte[] m1, byte[] output);
++
+     abstract byte[] H(byte[] pkSeed, ADRS adrs, byte[] m1, byte[] m2);
+ 
+     abstract IndexedDigest H_msg(byte[] prf, byte[] pkSeed, byte[] pkRoot, byte[] msgPrefix, byte[] msg);
+@@ -161,13 +163,20 @@
+ 
+         public byte[] F(byte[] pkSeed, ADRS adrs, byte[] m1)
+         {
++            byte[] output = new byte[N];
++            F(pkSeed, adrs, m1, output);
++            return output;
++        }
++
++        void F(byte[] pkSeed, ADRS adrs, byte[] m1, byte[] output)
++        {
+             ((Memoable)sha256).reset(sha256Memo);
+ 
+             updateCompressedADRS(sha256, adrs);
+             sha256.update(m1, 0, m1.length);
+             sha256.doFinal(sha256Buf, 0);
+ 
+-            return Arrays.copyOfRange(sha256Buf, 0, N);
++            System.arraycopy(sha256Buf, 0, output, 0, N);
+         }
+ 
+         public byte[] H(byte[] pkSeed, ADRS adrs, byte[] m1, byte[] m2)
+@@ -324,16 +333,17 @@
+ 
+         byte[] F(byte[] pkSeed, ADRS adrs, byte[] m1)
+         {
+-            byte[] mTheta = m1;
+-
+             byte[] rv = new byte[N];
+-
++            F(pkSeed, adrs, m1, rv);
++            return rv;
++        }
++
++        void F(byte[] pkSeed, ADRS adrs, byte[] m1, byte[] output)
++        {
+             treeDigest.update(pkSeed, 0, pkSeed.length);
+             treeDigest.update(adrs.value, 0, adrs.value.length);
+-            treeDigest.update(mTheta, 0, mTheta.length);
+-            treeDigest.doFinal(rv, 0, rv.length);
+-
+-            return rv;
++            treeDigest.update(m1, 0, m1.length);
++            treeDigest.doFinal(output, 0, N);
+         }
+ 
+         byte[] H(byte[] pkSeed, ADRS adrs, byte[] m1, byte[] m2)

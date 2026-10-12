@@ -1,0 +1,9 @@
+# Bouncy Castle WOTS alternatives
+
+Six isolated implementations have passed source-bound correctness checks; measurement has not started. The candidates separate address allocation, redundant field clearing, their previous combined comparator, and chain-buffer loop shape. They start from Bouncy Castle `c314b9cdffa3958a0eff5344f8fdcdb0181ed830` and add no cross-call cache.
+
+Each implementation passed 24 dirty-address transcript cases across n=16/24/32, 2,514 real SHA2/SHAKE chain cases, and 234 whole-operation checks. The latter comprise all twelve fixture keys for each of six fast parameter sets and one distinct key for each of six slow sets, each through key generation, signing and verification. Exact outputs, caller ownership, explicit entropy consumption, retained outputs and tampered-signature rejection are checked. The transcript engine is a test double; these gates do not replace independent conformance or maintainer review.
+
+The prespecified first screen contains 288 fresh JVMs: six independent reference/candidate comparisons, SHA2/SHAKE-128f, three operations, separate latency/allocation modes, and two balanced pairs. Every process warms on two disjoint keys for twenty calls, then measures ten other distinct keys exactly once. Key decoding is outside timing and operation initialization is inside. The short warmup and small pair count make this a screen, not steady-state or all-parameter performance evidence. All losses and unchanged verification controls will remain visible.
+
+[Reproduction and variant definitions](../../libs/bouncycastle/experiments/wots-alternatives/README.md), [sealed plan](../../results/bouncycastle/wots-alternatives/plan.json), and [correctness gates](../../results/bouncycastle/wots-alternatives/gates.json) retain the exact scope. The plan also specifies how individual mechanisms may advance to SHA2/SHAKE-192f/256f confirmation; selected confirmation must be labeled and cannot erase screen losses.

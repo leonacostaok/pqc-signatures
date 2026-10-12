@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java",
+    "-Xms64m",
+    "-Xmx512m",
+    "-XX:ActiveProcessorCount=2",
+    "-XX:+UseG1GC",
+    "-cp",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/build/wots-alternatives/baseline-driver:/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/build/wots-alternatives/baseline-classes",
+    "org.bouncycastle.crypto.signers.slhdsa.WotsAlternativeProbe",
+    "check",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/results/bouncycastle/wots-alternatives/preparation/fixtures.tsv",
+    "sha2_256f",
+    "baseline",
+    "all",
+    "0",
+    "0"
+  ],
+  "started_at": "2026-10-12T07:58:33.890423+00:00"
+}

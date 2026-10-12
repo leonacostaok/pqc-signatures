@@ -1,0 +1,3483 @@
+{
+  "created_at": "2026-10-12T08:00:32.541366+00:00",
+  "jobs": [
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 0,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "object_hoist",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 0,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "field_rewrite",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 0,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "two_addresses",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "buffer",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "baseline",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 0,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "buffer_peeled",
+      "warmup_calls": 20
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer_peeled"
+      ],
+      "fork": 1,
+      "variant": "baseline",
+      "warmup_calls": 20
+    }
+  ],
+  "manifest_sha256": "5de31b1005d3b920cf19cd24240160615f834fc0f07affb3d6d7522dfe466f98",
+  "collector_sha256": "16df6484c8c3f4ad41c9d6dffab1aaa399cf539e402033a008296cb7ff9e0d43",
+  "plan_writer_sha256": "4a5fd991d5f672119fbb31edb9724fe626e77d69ba19f23a022e3168e65d9cb4",
+  "audit_sha256": "702d6fe4a2b3e98174ee707b2cc5787e96b02f91d034ee5e076c405c81e46bc4",
+  "scope": "SHA2/SHAKE128f lean screen;20 calls on2 disjoint warmup keys;10 distinct measured keys once/process;two balanced independent process pairs per comparison;timing and allocation separate;no steady-state claim.",
+  "followup": {
+    "parameters": [
+      "sha2_192f",
+      "sha2_256f",
+      "shake_192f",
+      "shake_256f"
+    ],
+    "warmup_calls": 20,
+    "measured_keys_per_process": 10,
+    "pairs": 2,
+    "modes": [
+      "bench",
+      "allocation"
+    ],
+    "selection": "Evaluate each address/buffer mechanism separately against stock. Advance if any targeted128f operation shows both pairs with lower allocation and no targeted128f cell shows a clear latency regression, OR any targeted128f operation has repeatable latency improvement. Clear regression means wall and thread CPU each exceed stock by more than2% in both pairs. Repeatable improvement means wall and thread CPU each fall by at least2% in both pairs. Address targets are keygen/sign; buffer targets include verification. Keep all initial losers and explicitly label confirmation as selected. Never combine mechanisms. Compare selected buffer peeling to both stock and old buffer.",
+    "limits": "Selection thresholds are screening rules,not significance tests; unchanged address-verification controls remain visible. All four192/256f configurations run for every selected mechanism."
+  }
+}
