@@ -1,0 +1,11 @@
+{
+  "fast": {
+    "pass": 432,
+    "fail": 0
+  },
+  "vendor": {
+    "pass": 432,
+    "fail": 0
+  },
+  "failures": []
+}

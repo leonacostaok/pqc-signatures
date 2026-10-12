@@ -1,0 +1,311 @@
+{
+  "commit": "80c832da",
+  "host": {
+    "rust": "rustc 1.93.0 (254b59607 2026-01-19)",
+    "java": "Java HotSpot 22.0.1+8-16",
+    "os": "macOS; not the development-results Linux VM"
+  },
+  "upstream_downloads": [
+    {
+      "url": "https://static.crates.io/crates/ml-dsa/ml-dsa-0.1.1.crate",
+      "sha256": "add6b9d92e496f16f4526d68ff29da1483aba4b119baeab8bed3b9e3544a6f3d",
+      "bytes": 54905
+    },
+    {
+      "url": "https://static.crates.io/crates/slh-dsa/slh-dsa-0.2.0-rc.5.crate",
+      "sha256": "371c02fe34044d8866ddf7cb0e8204a87ef31a39f0408bed41c4253ea9dd61ed",
+      "bytes": 43361
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.86/bcprov-jdk18on-1.86-sources.jar",
+      "sha256": "34a8b7dcb030a08ddd5356d3d5be962f9299ca5275e1460273186f8fdbe44c34",
+      "bytes": 4909869
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.86/bcprov-jdk18on-1.86.jar",
+      "sha256": "2af190b300cbb0b35e248ccf5f4a06b6072030aeb3da7a98ec73abe5b4cb371f",
+      "bytes": 7224011
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.86/bcutil-jdk18on-1.86.jar",
+      "sha256": "1c268e15f785aafb1e4670d8d6e5f856f69475e96c162dadcd1ff9b350e9139f",
+      "bytes": 789287
+    }
+  ],
+  "vendor_diff": {
+    "ml-dsa": {
+      "files": [
+        {
+          "file": "src/algebra.rs",
+          "exact": false
+        },
+        {
+          "file": "src/crypto.rs",
+          "exact": false
+        },
+        {
+          "file": "src/encode.rs",
+          "exact": false
+        },
+        {
+          "file": "src/hint.rs",
+          "exact": false
+        },
+        {
+          "file": "src/lib.rs",
+          "exact": false
+        },
+        {
+          "file": "src/ntt.rs",
+          "exact": false
+        },
+        {
+          "file": "src/param.rs",
+          "exact": false
+        },
+        {
+          "file": "src/pkcs8.rs",
+          "exact": true
+        },
+        {
+          "file": "src/sampling.rs",
+          "exact": false
+        },
+        {
+          "file": "src/signing.rs",
+          "exact": false
+        },
+        {
+          "file": "src/verifying.rs",
+          "exact": false
+        }
+      ],
+      "classification": "All changed source content consists solely of visibility/doc-hidden/lint changes. After normalizing pub, pub(crate), doc(hidden) and lint attributes, every source file matches upstream."
+    },
+    "slh-dsa": {
+      "files": [
+        {
+          "file": "src/address.rs",
+          "exact": false
+        },
+        {
+          "file": "src/fors.rs",
+          "exact": false
+        },
+        {
+          "file": "src/hashes/sha2.rs",
+          "exact": true
+        },
+        {
+          "file": "src/hashes/shake.rs",
+          "exact": true
+        },
+        {
+          "file": "src/hashes.rs",
+          "exact": false
+        },
+        {
+          "file": "src/hypertree.rs",
+          "exact": false
+        },
+        {
+          "file": "src/lib.rs",
+          "exact": false
+        },
+        {
+          "file": "src/signature_encoding.rs",
+          "exact": false
+        },
+        {
+          "file": "src/signing_key.rs",
+          "exact": false
+        },
+        {
+          "file": "src/util.rs",
+          "exact": false
+        },
+        {
+          "file": "src/verifying_key.rs",
+          "exact": false
+        },
+        {
+          "file": "src/wots.rs",
+          "exact": false
+        },
+        {
+          "file": "src/xmss.rs",
+          "exact": false
+        }
+      ],
+      "classification": "All changed source content consists solely of visibility/doc-hidden/lint changes. After normalizing pub, pub(crate), doc(hidden) and lint attributes, every source file matches upstream."
+    },
+    "bouncycastle": [
+      {
+        "file": "src/bc/Keccak.java",
+        "kind": "custom"
+      },
+      {
+        "file": "src/bc/mldsa/MLDSAEngine.java",
+        "kind": "unchanged after package rename"
+      },
+      {
+        "file": "src/bc/mldsa/MlStages.java",
+        "kind": "custom"
+      },
+      {
+        "file": "src/bc/mldsa/Ntt.java",
+        "kind": "unchanged after package rename"
+      },
+      {
+        "file": "src/bc/mldsa/Packing.java",
+        "kind": "unchanged after package rename"
+      },
+      {
+        "file": "src/bc/mldsa/Poly.java",
+        "kind": "unchanged after package rename"
+      },
+      {
+        "file": "src/bc/mldsa/PolyVec.java",
+        "kind": "modified; see report"
+      },
+      {
+        "file": "src/bc/mldsa/PolyVecMatrix.java",
+        "kind": "modified; see report"
+      },
+      {
+        "file": "src/bc/mldsa/Reduce.java",
+        "kind": "unchanged after package rename"
+      },
+      {
+        "file": "src/bc/mldsa/Rounding.java",
+        "kind": "unchanged after package rename"
+      },
+      {
+        "file": "src/bc/mldsa/Symmetric.java",
+        "kind": "unchanged after package rename"
+      },
+      {
+        "file": "src/bc/slhdsa/ADRS.java",
+        "kind": "unchanged after package rename"
+      },
+      {
+        "file": "src/bc/slhdsa/AltEngines.java",
+        "kind": "custom"
+      },
+      {
+        "file": "src/bc/slhdsa/FastHash.java",
+        "kind": "custom"
+      },
+      {
+        "file": "src/bc/slhdsa/Fors.java",
+        "kind": "unchanged after package rename"
+      },
+      {
+        "file": "src/bc/slhdsa/HT.java",
+        "kind": "unchanged after package rename"
+      },
+      {
+        "file": "src/bc/slhdsa/IndexedDigest.java",
+        "kind": "modified; see report"
+      },
+      {
+        "file": "src/bc/slhdsa/NodeEntry.java",
+        "kind": "unchanged after package rename"
+      },
+      {
+        "file": "src/bc/slhdsa/SIG.java",
+        "kind": "unchanged after package rename"
+      },
+      {
+        "file": "src/bc/slhdsa/SIG_FORS.java",
+        "kind": "unchanged after package rename"
+      },
+      {
+        "file": "src/bc/slhdsa/SIG_XMSS.java",
+        "kind": "unchanged after package rename"
+      },
+      {
+        "file": "src/bc/slhdsa/SLHDSAEngine.java",
+        "kind": "modified; see report"
+      },
+      {
+        "file": "src/bc/slhdsa/SlhStages.java",
+        "kind": "custom"
+      },
+      {
+        "file": "src/bc/slhdsa/WotsPlus.java",
+        "kind": "unchanged after package rename"
+      }
+    ]
+  },
+  "java_correctness": {
+    "command": "javac --release 21 -d libs/bouncycastle/build/audit-classes -cp libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar @libs/bouncycastle/build/audit-sources.txt; javac --release 21 -d libs/bouncycastle/build/audit-classes -cp libs/bouncycastle/build/audit-classes:libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar libs/bouncycastle/build/AuditCheck.java; java -XX:ActiveProcessorCount=2 -cp libs/bouncycastle/build/audit-classes:libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar AuditCheck",
+    "output": "Falcon-512 length=666 header=57 BCverify=true\nFalcon-1024 length=1280 header=58 BCverify=true\nstage pipeline one-at-a-time validation tested=5328 failed=0 counts={decode.v0=99, decode.v1=99, expandA.v0=99, expandA.v1=99, expandA.v2=99, expandA.v3=99, fors.v0=288, fors.v1=288, fors.v2=288, fors.v3=288, hint_check.v0=99, hint_check.v1=99, hint_check.v2=99, hmsg.v0=288, hmsg.v1=288, ht_auth.v0=288, ht_auth.v1=288, ht_auth.v3=288, ht_wots.v0=288, ht_wots.v1=288, ht_wots.v2=288, ht_wots.v4=288, mu.v0=99, mu.v1=99, mu.v2=99, w_approx.v0=99, w_approx.v1=99, w_approx.v2=99, w_approx.v3=99}\n",
+    "scope": "387 supplied sigver cases. For each applicable composable non-JVM-flag stage implementation, substitute only that stage into v0 pipeline. No throughput benchmark. Does not cover all joint compositions, JVM flags, signing, keygen, or Rust runtime."
+  },
+  "validation_failure_exit": {
+    "command": "java -XX:ActiveProcessorCount=2 -cp libs/bouncycastle/build/audit-classes:libs/bouncycastle/deps/bcprov-jdk18on-1.86.jar:libs/bouncycastle/deps/bcutil-jdk18on-1.86.jar Bench validate --variants verify.v0 libs/bouncycastle/build/audit-failure-suite.json.gz libs/bouncycastle/build/audit-failure-result.json",
+    "fixture": "First ML-DSA-44 sigver case in supplied suite with expected boolean inverted and id changed. Fixture did not change production suite.",
+    "exit_code": 0,
+    "result": {
+      "lib": "bouncycastle",
+      "lib_version": "1.86",
+      "results": [
+        {
+          "id": "audit-deliberately-wrong-expectation",
+          "variant": "verify.v0",
+          "pass": false,
+          "got": false,
+          "error": null,
+          "reason": "modified message"
+        }
+      ],
+      "summary": {
+        "verify.v0": {
+          "pass": 0,
+          "fail": 1,
+          "skipped": 0
+        }
+      }
+    }
+  },
+  "rust_build": {
+    "command": "PQC_BUILD_TAG=base CARGO_BUILD_JOBS=2 cargo build --locked --release --manifest-path libs/rustcrypto/Cargo.toml --target-dir libs/rustcrypto/target/audit-base",
+    "exit_code": 101,
+    "error": "error[E0425]: cannot find function pthread_attr_setstack in crate libc; src/memory.rs:40:26",
+    "notes": "Both vendored crates compiled; harness failed. No production source changes or platform port attempted."
+  },
+  "falcon_reproduction": {
+    "Falcon-512": {
+      "padded_bytes": 666,
+      "compressed_bytes": 653,
+      "BC_verify": true,
+      "noble_falcon512": false,
+      "noble_trimmed_falcon512": true,
+      "noble_falcon512padded": true
+    },
+    "Falcon-1024": {
+      "padded_bytes": 1280,
+      "compressed_bytes": 1273,
+      "BC_verify": true,
+      "noble_falcon1024": false,
+      "noble_trimmed_falcon1024": true,
+      "noble_falcon1024padded": true
+    },
+    "note": "Fresh BC deterministic-seeded artifacts generated only for these two parameters. Noble pinned installed module imported directly from libs/noble/node_modules/@noble/post-quantum/falcon.js. No full benchmark.",
+    "noble_version": "0.7.1"
+  },
+  "java_composition_cwd": [
+    {
+      "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/signature-audit",
+      "exit_code": 0,
+      "stdout": "{decode=decode.v1, mu=mu.v0, expandA=expandA.v0, w_approx=w_approx.v0, hint_check=hint_check.v1}"
+    },
+    {
+      "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/signature-audit/libs/bouncycastle",
+      "exit_code": 0,
+      "stdout": "{decode=decode.v1, mu=mu.v0, expandA=expandA.v3, w_approx=w_approx.v3, hint_check=hint_check.v1}"
+    }
+  ],
+  "upstream_checksum_note": "Hashes are locally computed over the exact-version files downloaded from the official distribution endpoints. A later attempt to retrieve adjacent published checksum metadata failed with an SSL EOF; no independent checksum-match claim is made."
+}

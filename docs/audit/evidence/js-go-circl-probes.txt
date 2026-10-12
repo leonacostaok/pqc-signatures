@@ -1,0 +1,20 @@
+=== RUN   TestAuditSLHCacheAfterMalformedKey
+best=false initial-valid=true malformed=false original-valid-after-malformed=false
+    audit_test.go:9: state poisoned: best=false before=true malformed=false after=false
+best=true initial-valid=true malformed=false original-valid-after-malformed=false
+    audit_test.go:9: state poisoned: best=true before=true malformed=false after=false
+--- FAIL: TestAuditSLHCacheAfterMalformedKey (0.28s)
+=== RUN   TestAuditMLCacheAliasesPrepareInput
+ML-DSA-44 mutated-pk cached=true fresh=false
+    audit_test.go:14: cache accepted mutated key for ML-DSA-44
+ML-DSA-65 mutated-pk cached=true fresh=false
+    audit_test.go:14: cache accepted mutated key for ML-DSA-65
+ML-DSA-87 mutated-pk cached=true fresh=false
+    audit_test.go:14: cache accepted mutated key for ML-DSA-87
+--- FAIL: TestAuditMLCacheAliasesPrepareInput (0.27s)
+=== RUN   TestAuditTimingAccounting
+empty op + 1ms untimed checker: reported ops/sec=+Inf CPU utilization=+Inf iterations=5
+--- PASS: TestAuditTimingAccounting (0.02s)
+FAIL
+FAIL	pqcbench/build/audit-harness	0.785s
+FAIL
