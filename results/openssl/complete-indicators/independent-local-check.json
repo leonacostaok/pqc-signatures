@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "provider": "openssl",
+  "mode": "saved-evidence plus local-builds",
+  "processes": 512,
+  "raw_rows": 1160,
+  "baseline_cells": 24,
+  "resource_cells": 18,
+  "numeric_mutations_rejected": 3,
+  "summary_sha256": "4f987e0a4f49469cf050fdcc25584329be782adbe20e5c1daad2ac6b0bce94c4",
+  "checker_sha256": "62049b2d98adadeaee3f480aac7f5d4fef2b730815edb630c4ce6725d9616ce1",
+  "inventory_sha256": "a5249ecb55c9ed25dc959832bec97018c6b252ad23e38318424cee572a4b9c26",
+  "saved_artifacts_verified": 447,
+  "local_original_artifacts_verified": 451,
+  "local_verification_unavailable": [],
+  "scope": "Committed source/configuration/fixture hashes; complete raw process identities/results; independent means, medians and all percentages. Compiled binaries verified only with --local-builds; historical command provenance is not a fresh build or execution."
+}

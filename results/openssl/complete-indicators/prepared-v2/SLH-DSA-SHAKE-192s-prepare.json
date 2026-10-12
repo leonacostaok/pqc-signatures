@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+    "prepare",
+    "SLH-DSA-SHAKE-192s",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.input",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.outputs"
+  ],
+  "started_at": "2026-10-12T06:51:09.722642+00:00",
+  "finished_at": "2026-10-12T06:51:24.024040+00:00",
+  "returncode": 0,
+  "stdout": "{\"complete\":true,\"records\":11,\"verified\":true,\"tamper_rejected\":true}\n",
+  "stderr": ""
+}

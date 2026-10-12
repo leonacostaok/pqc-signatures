@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+    "prepare",
+    "Falcon-1024",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.input",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.outputs"
+  ],
+  "started_at": "2026-10-12T06:51:44.026486+00:00",
+  "finished_at": "2026-10-12T06:51:44.264289+00:00",
+  "returncode": 0,
+  "stdout": "{\"complete\":true,\"records\":11,\"verified\":true,\"tamper_rejected\":true}\n",
+  "stderr": ""
+}

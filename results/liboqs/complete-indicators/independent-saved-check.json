@@ -1,0 +1,53 @@
+{
+  "complete": true,
+  "provider": "liboqs",
+  "mode": "saved-evidence",
+  "processes": 539,
+  "raw_rows": 1430,
+  "baseline_cells": 33,
+  "resource_cells": 18,
+  "numeric_mutations_rejected": 3,
+  "summary_sha256": "81c0821588f3385262296856b2620d46bee777570f90f340b25e7a7a5627c6c4",
+  "checker_sha256": "62049b2d98adadeaee3f480aac7f5d4fef2b730815edb630c4ce6725d9616ce1",
+  "inventory_sha256": "3e76f108d28e1bd437bc0b8c1333755f0a87b96417c30cfe1ed51fd26591a6f5",
+  "saved_artifacts_verified": 206,
+  "local_original_artifacts_verified": null,
+  "local_verification_unavailable": [
+    {
+      "original_path": "/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib/libcrypto.3.dylib",
+      "sha256": "a7e687f76c5b69423480050f6bfa91dc2c2f616866476cca485ebc2b68ed0b15",
+      "reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+      "sha256": "8d11edf6dfe40ba6100177206fe3c9face65e079ba62400f8697466066df8a19",
+      "reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/baseline/lib/liboqs.a",
+      "sha256": "3959b768646d4e427f151ec99881d802f9b944618f817d4ca529d05f0e7aa521",
+      "reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/candidate",
+      "sha256": "4769d4f535192c6ff9094d7d2cf3f38d99efaa4556b23a4948203488d9092f1b",
+      "reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/lib/liboqs.a",
+      "sha256": "c86a787170a16f9d39d7dcca2d66213f8b8a3283616bb5c34d6baaea1f071cdd",
+      "reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+      "sha256": "7446741ef5b769fb7b7c4b2c174861737c18ac7572e864f097467619be93ec60",
+      "reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/baseline-extended-make/lib/liboqs.a",
+      "sha256": "13de375faee783cb9d19ef23b624ea6e58cd0a3249df7c9e58bb0669c6f8b1cf",
+      "reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    }
+  ],
+  "scope": "Committed source/configuration/fixture hashes; complete raw process identities/results; independent means, medians and all percentages. Compiled binaries verified only with --local-builds; historical command provenance is not a fresh build or execution."
+}

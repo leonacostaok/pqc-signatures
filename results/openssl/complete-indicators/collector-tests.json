@@ -1,0 +1,9 @@
+{
+  "command": [
+    "python3",
+    "libs/openssl/experiments/complete-indicators/test_collect.py"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.001s\n\nOK\n"
+}

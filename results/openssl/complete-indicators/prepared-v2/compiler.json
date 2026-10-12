@@ -1,0 +1,11 @@
+{
+  "command": [
+    "cc",
+    "--version"
+  ],
+  "started_at": "2026-10-12T06:52:05.947744+00:00",
+  "finished_at": "2026-10-12T06:52:06.055111+00:00",
+  "returncode": 0,
+  "stdout": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.2.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "stderr": ""
+}

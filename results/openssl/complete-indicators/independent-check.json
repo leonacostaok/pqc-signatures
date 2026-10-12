@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "provider": "openssl",
+  "processes": 512,
+  "raw_rows": 1160,
+  "baseline_cells": 24,
+  "resource_cells": 18,
+  "numeric_mutations_rejected": 3,
+  "summary_sha256": "4f987e0a4f49469cf050fdcc25584329be782adbe20e5c1daad2ac6b0bce94c4",
+  "checker_sha256": "29259535ac2f8a5e0c4bbf0743b63a2845218167c245e8be06b54744dfb3ccd6",
+  "scope": "source/build/input hashes; complete raw process identities/results; independent means, medians and all percentages"
+}

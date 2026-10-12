@@ -1,0 +1,632 @@
+{
+  "complete": true,
+  "kind": "precollection diagnostic-mode smoke; not benchmark evidence",
+  "manifest_sha256": "79a0a4b3a9e91eef7e5de459b2f433070d0b0b301d5db6d70c034189e7f50e19",
+  "source_sha256": "3f8a154c0cf86895ec93e5a403f48d6bc1bc729716c931a3403b18c842991001",
+  "executed": [
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 0,
+        "side": "baseline",
+        "mode": "allocation",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+        "allocation",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "0",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:37.801071+00:00",
+      "finished_at": "2026-10-12T06:54:37.809127+00:00",
+      "returncode": 0,
+      "raw_file": "000.jsonl",
+      "raw_sha256": "83681269a1821be7df0f1e522bba1350a29604627662c226f907f951a9879040",
+      "stderr_file": "000.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 1,
+        "side": "baseline",
+        "mode": "allocation",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+        "allocation",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "1",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:37.810076+00:00",
+      "finished_at": "2026-10-12T06:54:37.868748+00:00",
+      "returncode": 0,
+      "raw_file": "001.jsonl",
+      "raw_sha256": "071270872eef347a908b049a23f25317b2e42d5c105fc26b783cc5391324e4df",
+      "stderr_file": "001.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 2,
+        "side": "baseline",
+        "mode": "allocation",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+        "allocation",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "2",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:37.869378+00:00",
+      "finished_at": "2026-10-12T06:54:37.877465+00:00",
+      "returncode": 0,
+      "raw_file": "002.jsonl",
+      "raw_sha256": "006a6ac3bd8d51c68a5ccf251e5c2a028c089a7db2dd1ffe2ff0f9a2f6ad1225",
+      "stderr_file": "002.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 0,
+        "side": "baseline",
+        "mode": "rss",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+        "rss",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "0",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:37.877831+00:00",
+      "finished_at": "2026-10-12T06:54:37.883290+00:00",
+      "returncode": 0,
+      "raw_file": "003.jsonl",
+      "raw_sha256": "f3285ee1650d43bc920e9a8c7058e336842c42b3d0d50dc34a31af1449824ad2",
+      "stderr_file": "003.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 1,
+        "side": "baseline",
+        "mode": "rss",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+        "rss",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "1",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:37.883732+00:00",
+      "finished_at": "2026-10-12T06:54:37.915003+00:00",
+      "returncode": 0,
+      "raw_file": "004.jsonl",
+      "raw_sha256": "9ed33b821ed1749ec8159c708535d2ba680fd3cbf4e4a8d98ff06d201f5b0f7c",
+      "stderr_file": "004.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 2,
+        "side": "baseline",
+        "mode": "rss",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+        "rss",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "2",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:37.915746+00:00",
+      "finished_at": "2026-10-12T06:54:37.922116+00:00",
+      "returncode": 0,
+      "raw_file": "005.jsonl",
+      "raw_sha256": "0c122a3d60f24986cf91f237e5df4f3d459526eec256cb0a32283722ab908a6e",
+      "stderr_file": "005.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 0,
+        "side": "baseline",
+        "mode": "stack-a5",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+        "stack-a5",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "0",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:37.922593+00:00",
+      "finished_at": "2026-10-12T06:54:37.941761+00:00",
+      "returncode": 0,
+      "raw_file": "006.jsonl",
+      "raw_sha256": "a5908642d81ca6f1a206c3f21548d109fd11906123f97579d2342392ac8ee6ba",
+      "stderr_file": "006.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 1,
+        "side": "baseline",
+        "mode": "stack-a5",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+        "stack-a5",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "1",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:37.942762+00:00",
+      "finished_at": "2026-10-12T06:54:38.013127+00:00",
+      "returncode": 0,
+      "raw_file": "007.jsonl",
+      "raw_sha256": "aa41aabe55238faadd6cfa0fef3281dac3fcb167cb22068afe5fafd0e4bd01a3",
+      "stderr_file": "007.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 2,
+        "side": "baseline",
+        "mode": "stack-a5",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+        "stack-a5",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "2",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.013989+00:00",
+      "finished_at": "2026-10-12T06:54:38.033416+00:00",
+      "returncode": 0,
+      "raw_file": "008.jsonl",
+      "raw_sha256": "747744ed25b285e2a25fb11c2c0a43cc629fcdd52c502f3b2ca9e90290ae7db6",
+      "stderr_file": "008.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 2,
+        "side": "baseline",
+        "mode": "stack-5a",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+        "stack-5a",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "2",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.033990+00:00",
+      "finished_at": "2026-10-12T06:54:38.053028+00:00",
+      "returncode": 0,
+      "raw_file": "009.jsonl",
+      "raw_sha256": "032612d5d8cffd3164f0480a1b07f557916ef77278fba849fc17996b43409f82",
+      "stderr_file": "009.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 2,
+        "side": "baseline",
+        "mode": "stack-control-a5",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+        "stack-control-a5",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "2",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.053596+00:00",
+      "finished_at": "2026-10-12T06:54:38.071197+00:00",
+      "returncode": 0,
+      "raw_file": "010.jsonl",
+      "raw_sha256": "1fb109cf332f9de624807622c67dc1ba5f6666900704118d45d5790875db872a",
+      "stderr_file": "010.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 2,
+        "side": "baseline",
+        "mode": "stack-control-5a",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+        "stack-control-5a",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "2",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.071783+00:00",
+      "finished_at": "2026-10-12T06:54:38.089403+00:00",
+      "returncode": 0,
+      "raw_file": "011.jsonl",
+      "raw_sha256": "d7277a5a48b49b9ef83be660ea580f6aec08e7b4d98e6bcebc8bb25fad7d6ac8",
+      "stderr_file": "011.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 0,
+        "side": "candidate",
+        "mode": "allocation",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/candidate",
+        "allocation",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "0",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.090005+00:00",
+      "finished_at": "2026-10-12T06:54:38.095072+00:00",
+      "returncode": 0,
+      "raw_file": "012.jsonl",
+      "raw_sha256": "83681269a1821be7df0f1e522bba1350a29604627662c226f907f951a9879040",
+      "stderr_file": "012.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 1,
+        "side": "candidate",
+        "mode": "allocation",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/candidate",
+        "allocation",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "1",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.095595+00:00",
+      "finished_at": "2026-10-12T06:54:38.109896+00:00",
+      "returncode": 0,
+      "raw_file": "013.jsonl",
+      "raw_sha256": "071270872eef347a908b049a23f25317b2e42d5c105fc26b783cc5391324e4df",
+      "stderr_file": "013.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 2,
+        "side": "candidate",
+        "mode": "allocation",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/candidate",
+        "allocation",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "2",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.110486+00:00",
+      "finished_at": "2026-10-12T06:54:38.115419+00:00",
+      "returncode": 0,
+      "raw_file": "014.jsonl",
+      "raw_sha256": "006a6ac3bd8d51c68a5ccf251e5c2a028c089a7db2dd1ffe2ff0f9a2f6ad1225",
+      "stderr_file": "014.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 0,
+        "side": "candidate",
+        "mode": "rss",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/candidate",
+        "rss",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "0",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.115984+00:00",
+      "finished_at": "2026-10-12T06:54:38.120556+00:00",
+      "returncode": 0,
+      "raw_file": "015.jsonl",
+      "raw_sha256": "5fe98f0b8ba7c7f5d32de6b4c6958b823cd0b2ced35495ccb564b513586dfcee",
+      "stderr_file": "015.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 1,
+        "side": "candidate",
+        "mode": "rss",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/candidate",
+        "rss",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "1",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.121181+00:00",
+      "finished_at": "2026-10-12T06:54:38.130741+00:00",
+      "returncode": 0,
+      "raw_file": "016.jsonl",
+      "raw_sha256": "f4e2ef7e5b7261192202aca1c185dda3ca3064732729c9f7f1b0ed2f3f1b7f46",
+      "stderr_file": "016.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 2,
+        "side": "candidate",
+        "mode": "rss",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/candidate",
+        "rss",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "2",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.131385+00:00",
+      "finished_at": "2026-10-12T06:54:38.135873+00:00",
+      "returncode": 0,
+      "raw_file": "017.jsonl",
+      "raw_sha256": "0532dc27cc96b3413ffd0e11a9e01eacd04f280905b947a9570a0d4d712346f8",
+      "stderr_file": "017.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 0,
+        "side": "candidate",
+        "mode": "stack-a5",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/candidate",
+        "stack-a5",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "0",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.136510+00:00",
+      "finished_at": "2026-10-12T06:54:38.152820+00:00",
+      "returncode": 0,
+      "raw_file": "018.jsonl",
+      "raw_sha256": "6a27551d96cda621080e5f90fdf7a2a10096e57b0c156dd9c7ca66157c33a489",
+      "stderr_file": "018.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 1,
+        "side": "candidate",
+        "mode": "stack-a5",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/candidate",
+        "stack-a5",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "1",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.153893+00:00",
+      "finished_at": "2026-10-12T06:54:38.180312+00:00",
+      "returncode": 0,
+      "raw_file": "019.jsonl",
+      "raw_sha256": "224b1bd3a99429bfad357305b4b2bf46fc006cd4c5bb42712ff6a6cf7451edc9",
+      "stderr_file": "019.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 2,
+        "side": "candidate",
+        "mode": "stack-a5",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/candidate",
+        "stack-a5",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "2",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.181024+00:00",
+      "finished_at": "2026-10-12T06:54:38.197052+00:00",
+      "returncode": 0,
+      "raw_file": "020.jsonl",
+      "raw_sha256": "f9d94d1f9f58e04e7f540056c7b965a0cb01ae808609cc13ba66039d05da25db",
+      "stderr_file": "020.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 2,
+        "side": "candidate",
+        "mode": "stack-5a",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/candidate",
+        "stack-5a",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "2",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.197934+00:00",
+      "finished_at": "2026-10-12T06:54:38.214516+00:00",
+      "returncode": 0,
+      "raw_file": "021.jsonl",
+      "raw_sha256": "3e9a0cbb2e3a3a60b6300e490c5bf06ce759f3e2066d84270484231e7844ad83",
+      "stderr_file": "021.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 2,
+        "side": "candidate",
+        "mode": "stack-control-a5",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/candidate",
+        "stack-control-a5",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "2",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.215600+00:00",
+      "finished_at": "2026-10-12T06:54:38.232005+00:00",
+      "returncode": 0,
+      "raw_file": "022.jsonl",
+      "raw_sha256": "1fb109cf332f9de624807622c67dc1ba5f6666900704118d45d5790875db872a",
+      "stderr_file": "022.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "op": 2,
+        "side": "candidate",
+        "mode": "stack-control-5a",
+        "key": 1,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/candidate",
+        "stack-control-5a",
+        "SLH_DSA_PURE_SHA2_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+        "2",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:54:38.233231+00:00",
+      "finished_at": "2026-10-12T06:54:38.249693+00:00",
+      "returncode": 0,
+      "raw_file": "023.jsonl",
+      "raw_sha256": "d7277a5a48b49b9ef83be660ea580f6aec08e7b4d98e6bcebc8bb25fad7d6ac8",
+      "stderr_file": "023.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

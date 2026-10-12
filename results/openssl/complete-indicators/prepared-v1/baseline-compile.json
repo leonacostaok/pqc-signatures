@@ -1,0 +1,19 @@
+{
+  "command": [
+    "cc",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/baseline/include",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/experiments/complete-indicators/driver.c",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/baseline/libcrypto.a",
+    "-lpthread",
+    "-o",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v1/baseline"
+  ],
+  "started_at": "2026-10-12T06:42:02.339515+00:00",
+  "finished_at": "2026-10-12T06:42:02.525770+00:00",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "In file included from /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/experiments/complete-indicators/driver.c:4:\n/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/baseline/include/openssl/crypto.h:22:10: fatal error: 'openssl/macros.h' file not found\n   22 | #include <openssl/macros.h>\n      |          ^~~~~~~~~~~~~~~~~~\n1 error generated.\n"
+}

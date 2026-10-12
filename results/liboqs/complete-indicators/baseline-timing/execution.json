@@ -1,0 +1,3482 @@
+{
+  "schema": "c-provider-indicators-execution-v1",
+  "complete": true,
+  "provider": "liboqs",
+  "phase": "baseline-timing",
+  "manifest": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/ready.json",
+  "manifest_sha256": "ad0b32e475e6b268d95819238f444d4ed9d00940173678cfc68583ba66077e7a",
+  "collector_sha256": "a9bb110a29345cbc771763c982a9b57d19afcaa28ec6218785408de1dfa7df1c",
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "python_optimization": 0,
+  "started_at": "2026-10-12T06:55:52.060114+00:00",
+  "jobs": [
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "Falcon-1024",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "Falcon-512",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "Falcon-1024",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "Falcon-512",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "Falcon-512",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "Falcon-1024",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "Falcon-512",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "Falcon-1024",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "Falcon-1024",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "Falcon-1024",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "Falcon-512",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "Falcon-512",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "Falcon-512",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "Falcon-1024",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "Falcon-512",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "Falcon-1024",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "Falcon-512",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "Falcon-1024",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 1,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "op": 0,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "op": 2,
+      "side": "extended",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    }
+  ],
+  "executed": [
+    {
+      "index": 0,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:55:52.061161+00:00",
+      "finished_at": "2026-10-12T06:55:52.076348+00:00",
+      "returncode": 0,
+      "raw_file": "000.jsonl",
+      "raw_sha256": "caa2b3f59ff0401a3d6834953ae4b85d1ad6243b36087587cfe325f3fd1370bf",
+      "stderr_file": "000.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 1,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:55:52.077392+00:00",
+      "finished_at": "2026-10-12T06:55:52.093723+00:00",
+      "returncode": 0,
+      "raw_file": "001.jsonl",
+      "raw_sha256": "02f0824d3b7591a18fded532fc81f96444b899e60567b4188d3b0faa669334a3",
+      "stderr_file": "001.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 2,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:55:52.094765+00:00",
+      "finished_at": "2026-10-12T06:55:52.101438+00:00",
+      "returncode": 0,
+      "raw_file": "002.jsonl",
+      "raw_sha256": "0825b7025b08e3364a6a6d3b617ea140be0d08278cdc77f1611e7b6aa3882be5",
+      "stderr_file": "002.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 3,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:55:52.102542+00:00",
+      "finished_at": "2026-10-12T06:55:52.108606+00:00",
+      "returncode": 0,
+      "raw_file": "003.jsonl",
+      "raw_sha256": "4326fd10881a37833b626dc884224b1e4629dc42c174ace69b5e12d0c3c18bc0",
+      "stderr_file": "003.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 4,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128f",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:55:52.109680+00:00",
+      "finished_at": "2026-10-12T06:55:52.135816+00:00",
+      "returncode": 0,
+      "raw_file": "004.jsonl",
+      "raw_sha256": "f77b8f49d3cbfc763fb820fb22ba581f6faa8c5b3717b7bec8f318c753600d8f",
+      "stderr_file": "004.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 5,
+      "job": {
+        "parameter": "Falcon-1024",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-1024",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:55:52.136920+00:00",
+      "finished_at": "2026-10-12T06:55:52.360029+00:00",
+      "returncode": 0,
+      "raw_file": "005.jsonl",
+      "raw_sha256": "3544612b9972a04a94c8a72a0aa54da9dea51d64e3bfe9167415bd5c3330ef1b",
+      "stderr_file": "005.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 6,
+      "job": {
+        "parameter": "Falcon-512",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-512",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:55:52.361456+00:00",
+      "finished_at": "2026-10-12T06:55:52.369551+00:00",
+      "returncode": 0,
+      "raw_file": "006.jsonl",
+      "raw_sha256": "8f32da55a48d267f7496ee221d4d9ae8888ffd89e6d0afeff6e9eb0531c6c747",
+      "stderr_file": "006.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 7,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:55:52.370708+00:00",
+      "finished_at": "2026-10-12T06:55:52.398566+00:00",
+      "returncode": 0,
+      "raw_file": "007.jsonl",
+      "raw_sha256": "61109c0cc6f72639b24bde3824c8f83d14e8f49d8b1b505e5191c723222e97ee",
+      "stderr_file": "007.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 8,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:55:52.399718+00:00",
+      "finished_at": "2026-10-12T06:55:59.923625+00:00",
+      "returncode": 0,
+      "raw_file": "008.jsonl",
+      "raw_sha256": "da50f248804bc97279ec798973de734d5acce9ff05f2580d15684518529a6946",
+      "stderr_file": "008.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 9,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:55:59.924956+00:00",
+      "finished_at": "2026-10-12T06:56:13.442186+00:00",
+      "returncode": 0,
+      "raw_file": "009.jsonl",
+      "raw_sha256": "df801775ce2364192d3bacb2584eb01fbf853e10cfeed84e6686d4a8ae97f4f9",
+      "stderr_file": "009.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 10,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:13.443622+00:00",
+      "finished_at": "2026-10-12T06:56:13.454006+00:00",
+      "returncode": 0,
+      "raw_file": "010.jsonl",
+      "raw_sha256": "9d4270607637d70edc619dfddbf3069de40c7a3eb00c28bccf3c4985206eac52",
+      "stderr_file": "010.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 11,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:13.455245+00:00",
+      "finished_at": "2026-10-12T06:56:14.908019+00:00",
+      "returncode": 0,
+      "raw_file": "011.jsonl",
+      "raw_sha256": "8aa76c96e39af2c1fe928404d4ead9b99d78ffc717077c56cf16f24fe199d555",
+      "stderr_file": "011.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 12,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128f",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:14.909780+00:00",
+      "finished_at": "2026-10-12T06:56:15.276939+00:00",
+      "returncode": 0,
+      "raw_file": "012.jsonl",
+      "raw_sha256": "39dab42d7ad0431e58400b4f9574470319d35713fcc38c15cd9257e3f5958bd2",
+      "stderr_file": "012.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 13,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:15.278220+00:00",
+      "finished_at": "2026-10-12T06:56:15.284752+00:00",
+      "returncode": 0,
+      "raw_file": "013.jsonl",
+      "raw_sha256": "5e10ec86d6a747378ab78991fdd88c68c93519fa473d604fb4986aec9dbafe11",
+      "stderr_file": "013.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 14,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128f",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:15.286019+00:00",
+      "finished_at": "2026-10-12T06:56:15.306056+00:00",
+      "returncode": 0,
+      "raw_file": "014.jsonl",
+      "raw_sha256": "d7bf51910ffc81ad55b4f92f3ee8ca8fbd038152bcce221cf9eecd7b87027d2a",
+      "stderr_file": "014.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 15,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:15.307348+00:00",
+      "finished_at": "2026-10-12T06:56:16.558873+00:00",
+      "returncode": 0,
+      "raw_file": "015.jsonl",
+      "raw_sha256": "9d0e2b327dcc4a999536ca617827ad45e90536e1a0613a6f57f72cd74a3e87a7",
+      "stderr_file": "015.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 16,
+      "job": {
+        "parameter": "Falcon-1024",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-1024",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:16.560358+00:00",
+      "finished_at": "2026-10-12T06:56:16.568240+00:00",
+      "returncode": 0,
+      "raw_file": "016.jsonl",
+      "raw_sha256": "e06bc9075bf06074fca0461d22b59f00bd8dd893439d26870ab07cccb470e729",
+      "stderr_file": "016.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 17,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:16.569650+00:00",
+      "finished_at": "2026-10-12T06:56:16.617858+00:00",
+      "returncode": 0,
+      "raw_file": "017.jsonl",
+      "raw_sha256": "38e8e667759ecf107726579021b3bf90099b87c8db09fc69b0ada0343d7b4044",
+      "stderr_file": "017.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 18,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:16.639317+00:00",
+      "finished_at": "2026-10-12T06:56:16.655373+00:00",
+      "returncode": 0,
+      "raw_file": "018.jsonl",
+      "raw_sha256": "56382a1ce38be5457aafcb2838cfa97cabf7a97653da091d55c4d4c34c02326b",
+      "stderr_file": "018.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 19,
+      "job": {
+        "parameter": "Falcon-512",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-512",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:16.656820+00:00",
+      "finished_at": "2026-10-12T06:56:16.733939+00:00",
+      "returncode": 0,
+      "raw_file": "019.jsonl",
+      "raw_sha256": "c47388d5f0956bc9266e1a98b01f8ec3c5e89b4980e1240d7d280e3782db48e2",
+      "stderr_file": "019.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 20,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:16.735362+00:00",
+      "finished_at": "2026-10-12T06:56:17.724930+00:00",
+      "returncode": 0,
+      "raw_file": "020.jsonl",
+      "raw_sha256": "270c0d037bdfdf93bc4bef3b8fd722ad228ba4ed958eb7e69f2e22e0fc67067e",
+      "stderr_file": "020.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 21,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:17.726343+00:00",
+      "finished_at": "2026-10-12T06:56:17.734524+00:00",
+      "returncode": 0,
+      "raw_file": "021.jsonl",
+      "raw_sha256": "ec862046570918fe7c5bac805c7a3a34005091f82bf453042a4e13ab7a81e49d",
+      "stderr_file": "021.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 22,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:17.735880+00:00",
+      "finished_at": "2026-10-12T06:56:17.742692+00:00",
+      "returncode": 0,
+      "raw_file": "022.jsonl",
+      "raw_sha256": "d040fc31029952c6711247b54854b6e0cf6b60d02b71dfb8efa3b1532e2941a5",
+      "stderr_file": "022.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 23,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:17.744293+00:00",
+      "finished_at": "2026-10-12T06:56:17.813784+00:00",
+      "returncode": 0,
+      "raw_file": "023.jsonl",
+      "raw_sha256": "bc223a54b9f2b77721a245e37af4ed83bc0a1280751fcec6a2edcbb46296f66b",
+      "stderr_file": "023.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 24,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:17.815693+00:00",
+      "finished_at": "2026-10-12T06:56:18.419066+00:00",
+      "returncode": 0,
+      "raw_file": "024.jsonl",
+      "raw_sha256": "ba9407a2a20c118c8ab54c811e831a05d11d27d041229bf6cf2effa99cb67893",
+      "stderr_file": "024.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 25,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:18.420803+00:00",
+      "finished_at": "2026-10-12T06:56:19.377514+00:00",
+      "returncode": 0,
+      "raw_file": "025.jsonl",
+      "raw_sha256": "eeba6f1434897fd74750d49993632d68b75bd2181e0d4e5f48bac615cdd6c8e2",
+      "stderr_file": "025.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 26,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:19.379324+00:00",
+      "finished_at": "2026-10-12T06:56:19.416327+00:00",
+      "returncode": 0,
+      "raw_file": "026.jsonl",
+      "raw_sha256": "a1d57d248804a674b254a76d95eb731fe683cbd7bd77cc7af63af176195c3a50",
+      "stderr_file": "026.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 27,
+      "job": {
+        "parameter": "Falcon-512",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-512",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:19.417786+00:00",
+      "finished_at": "2026-10-12T06:56:19.422721+00:00",
+      "returncode": 0,
+      "raw_file": "027.jsonl",
+      "raw_sha256": "9a0c4675d6f369cf2cb3340a39ec8c62596b5b40f02640ec26ed12dd2e85ed9f",
+      "stderr_file": "027.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 28,
+      "job": {
+        "parameter": "Falcon-1024",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-1024",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:19.424113+00:00",
+      "finished_at": "2026-10-12T06:56:19.432950+00:00",
+      "returncode": 0,
+      "raw_file": "028.jsonl",
+      "raw_sha256": "8bf6cabad267f103142527683717bef221c8e466f18f02b3b8836be13007f38b",
+      "stderr_file": "028.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 29,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:19.434353+00:00",
+      "finished_at": "2026-10-12T06:56:19.439497+00:00",
+      "returncode": 0,
+      "raw_file": "029.jsonl",
+      "raw_sha256": "19c54debb6fb316e034d9b78357e6ad2835f120e6f1968205d60254263769a61",
+      "stderr_file": "029.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 30,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:19.440921+00:00",
+      "finished_at": "2026-10-12T06:56:31.610606+00:00",
+      "returncode": 0,
+      "raw_file": "030.jsonl",
+      "raw_sha256": "938eeaf2a4cd3c7e38b6abe7a17cc326e0485065a238d533258ef95578b20d94",
+      "stderr_file": "030.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 31,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:31.612534+00:00",
+      "finished_at": "2026-10-12T06:56:31.620503+00:00",
+      "returncode": 0,
+      "raw_file": "031.jsonl",
+      "raw_sha256": "9c3855477ed56192a0da39dfe4367e648844d5c8ef3f85761994ff4d39e28fb6",
+      "stderr_file": "031.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 32,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:31.621994+00:00",
+      "finished_at": "2026-10-12T06:56:31.643881+00:00",
+      "returncode": 0,
+      "raw_file": "032.jsonl",
+      "raw_sha256": "52fa39263c53b063679eabe0c3aed860729708b86ce3a97dd262e931f414a782",
+      "stderr_file": "032.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 33,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:31.645379+00:00",
+      "finished_at": "2026-10-12T06:56:31.652260+00:00",
+      "returncode": 0,
+      "raw_file": "033.jsonl",
+      "raw_sha256": "1ba3ac7f265ae4bc65c7c1886b9b6c29f8659879f3634047460034b281aa9d76",
+      "stderr_file": "033.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 34,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:31.653758+00:00",
+      "finished_at": "2026-10-12T06:56:32.608961+00:00",
+      "returncode": 0,
+      "raw_file": "034.jsonl",
+      "raw_sha256": "3c1efc65b8ab2249f6355fb6bdab974ef0f2a80b662d001478c0ea2e2f5605a7",
+      "stderr_file": "034.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 35,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:32.610910+00:00",
+      "finished_at": "2026-10-12T06:56:32.616755+00:00",
+      "returncode": 0,
+      "raw_file": "035.jsonl",
+      "raw_sha256": "bad4d7487d5743e88b3f46720261bb9615ded6aa806ecfef652ae6398436a864",
+      "stderr_file": "035.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 36,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:32.618324+00:00",
+      "finished_at": "2026-10-12T06:56:33.220159+00:00",
+      "returncode": 0,
+      "raw_file": "036.jsonl",
+      "raw_sha256": "7c60c72e71e5a6d7965eee824f2a885c867f59b59d8e1c10aa308f92d3b44f45",
+      "stderr_file": "036.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 37,
+      "job": {
+        "parameter": "Falcon-512",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-512",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:33.222098+00:00",
+      "finished_at": "2026-10-12T06:56:33.291204+00:00",
+      "returncode": 0,
+      "raw_file": "037.jsonl",
+      "raw_sha256": "5dad495a75b7d3b07b72e46b69b75fbab648e78b9f2b663f8f6c2d31cdcc2f77",
+      "stderr_file": "037.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 38,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:33.293030+00:00",
+      "finished_at": "2026-10-12T06:56:33.300250+00:00",
+      "returncode": 0,
+      "raw_file": "038.jsonl",
+      "raw_sha256": "76bcd3c6a1f3bdb273ee746d7436101e58863f617f99c7eea0af1222bb06131f",
+      "stderr_file": "038.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 39,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:33.301833+00:00",
+      "finished_at": "2026-10-12T06:56:33.323183+00:00",
+      "returncode": 0,
+      "raw_file": "039.jsonl",
+      "raw_sha256": "d57ca63c6e9e5bd54aba4ceea4c16b9011db2d548e6c5f13a70cd35243ae1c7f",
+      "stderr_file": "039.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 40,
+      "job": {
+        "parameter": "Falcon-1024",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-1024",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:33.324792+00:00",
+      "finished_at": "2026-10-12T06:56:33.334795+00:00",
+      "returncode": 0,
+      "raw_file": "040.jsonl",
+      "raw_sha256": "f81c1df9435a6abfc62ec8fe3b2d38e5969dab30891c517d095bb73ca24e7f81",
+      "stderr_file": "040.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 41,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:33.336399+00:00",
+      "finished_at": "2026-10-12T06:56:33.372940+00:00",
+      "returncode": 0,
+      "raw_file": "041.jsonl",
+      "raw_sha256": "bcd04732372c4ea09b4cb98860238542d575b63a32d59a41afae67cb74f20332",
+      "stderr_file": "041.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 42,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:33.374576+00:00",
+      "finished_at": "2026-10-12T06:56:45.551839+00:00",
+      "returncode": 0,
+      "raw_file": "042.jsonl",
+      "raw_sha256": "5bf8625579bf0da79a915da02840d4429d366f71e239f8ac20c8d65876881026",
+      "stderr_file": "042.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 43,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:45.554401+00:00",
+      "finished_at": "2026-10-12T06:56:45.573497+00:00",
+      "returncode": 0,
+      "raw_file": "043.jsonl",
+      "raw_sha256": "935584f39943b60d3d51ce9edce2c060f5377a696ff8fe234f2d13b052b1d8a9",
+      "stderr_file": "043.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 44,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:45.575227+00:00",
+      "finished_at": "2026-10-12T06:56:45.582038+00:00",
+      "returncode": 0,
+      "raw_file": "044.jsonl",
+      "raw_sha256": "7f152b8ae907d9d15b8524fd739df5bf1c5da3a56a9aebba8e254d5c9d5663d7",
+      "stderr_file": "044.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 45,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128f",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:45.583755+00:00",
+      "finished_at": "2026-10-12T06:56:45.605037+00:00",
+      "returncode": 0,
+      "raw_file": "045.jsonl",
+      "raw_sha256": "04c57748bd7fb6f39126ecee9b0b1122c28a196d955e88e1c28e4f7dfa751644",
+      "stderr_file": "045.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 46,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:45.606734+00:00",
+      "finished_at": "2026-10-12T06:56:45.620144+00:00",
+      "returncode": 0,
+      "raw_file": "046.jsonl",
+      "raw_sha256": "c4d7d3b54755c09c4ac1199125d892c9afa244580abb7ef286d1ac4ea99bbc00",
+      "stderr_file": "046.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 47,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128f",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:45.622116+00:00",
+      "finished_at": "2026-10-12T06:56:45.647846+00:00",
+      "returncode": 0,
+      "raw_file": "047.jsonl",
+      "raw_sha256": "675391c302b809ab7c0be3804cf7090fe7ac9892ffa421c3144e8d27c383e1ef",
+      "stderr_file": "047.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 48,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:45.649579+00:00",
+      "finished_at": "2026-10-12T06:56:45.715353+00:00",
+      "returncode": 0,
+      "raw_file": "048.jsonl",
+      "raw_sha256": "fa0e335d2e6b03efb5cfa78f60db2afd9f13843532974502f5b21a1f9cb0b309",
+      "stderr_file": "048.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 49,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:45.717185+00:00",
+      "finished_at": "2026-10-12T06:56:45.723467+00:00",
+      "returncode": 0,
+      "raw_file": "049.jsonl",
+      "raw_sha256": "8f3c877eb9a60fa46feef242f80497ae4cb7d1bf2e547f45a55dbab880c22583",
+      "stderr_file": "049.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 50,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:45.725251+00:00",
+      "finished_at": "2026-10-12T06:56:45.730015+00:00",
+      "returncode": 0,
+      "raw_file": "050.jsonl",
+      "raw_sha256": "30828ab295ffdf706f340e5fa7f4d42843f98b99d01cc76e3baf8e34de3ad3f2",
+      "stderr_file": "050.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 51,
+      "job": {
+        "parameter": "Falcon-1024",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-1024",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:45.731786+00:00",
+      "finished_at": "2026-10-12T06:56:45.954361+00:00",
+      "returncode": 0,
+      "raw_file": "051.jsonl",
+      "raw_sha256": "6647528fc593b746e582a7d1bd7d8a0ac880079c90080d247625c4f8869ba2c8",
+      "stderr_file": "051.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 52,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:45.956368+00:00",
+      "finished_at": "2026-10-12T06:56:45.964247+00:00",
+      "returncode": 0,
+      "raw_file": "052.jsonl",
+      "raw_sha256": "2d9514bfd4e2490603ae10d24d9734929068660d4b7d3dd38f43e7e239d17f25",
+      "stderr_file": "052.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 53,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:45.966119+00:00",
+      "finished_at": "2026-10-12T06:56:45.971509+00:00",
+      "returncode": 0,
+      "raw_file": "053.jsonl",
+      "raw_sha256": "93a6e6611fd4d7c61fa802dbbe185d2eaddc74fcade94cdcf9d6d2432901cb3b",
+      "stderr_file": "053.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 54,
+      "job": {
+        "parameter": "Falcon-1024",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-1024",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:45.973602+00:00",
+      "finished_at": "2026-10-12T06:56:45.978708+00:00",
+      "returncode": 0,
+      "raw_file": "054.jsonl",
+      "raw_sha256": "a0da66c6783b2fcaa81607eb899a4821896bce37f6b6721bd4dd945a24cac8e3",
+      "stderr_file": "054.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 55,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:45.980848+00:00",
+      "finished_at": "2026-10-12T06:56:46.017485+00:00",
+      "returncode": 0,
+      "raw_file": "055.jsonl",
+      "raw_sha256": "2eaf834402afa5cce743783ecc8c29d6c7849f04bac6dab823e539d63e4fc96a",
+      "stderr_file": "055.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 56,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:46.019996+00:00",
+      "finished_at": "2026-10-12T06:56:59.526761+00:00",
+      "returncode": 0,
+      "raw_file": "056.jsonl",
+      "raw_sha256": "1f5ba3802ff929cd5ea78acafdac0249e15a0670be063f92cc2bc780641667ac",
+      "stderr_file": "056.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 57,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:56:59.529201+00:00",
+      "finished_at": "2026-10-12T06:57:07.042190+00:00",
+      "returncode": 0,
+      "raw_file": "057.jsonl",
+      "raw_sha256": "adba816f3fe317c5a7beda3427b9d2dc9aa5cad304d9e18e67638aaff514e8a9",
+      "stderr_file": "057.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 58,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:07.044247+00:00",
+      "finished_at": "2026-10-12T06:57:07.051485+00:00",
+      "returncode": 0,
+      "raw_file": "058.jsonl",
+      "raw_sha256": "0cc98eac6d1f91c73b97db484563efeb0b60a5c8ae2ebaacf13dc56eb0ad6f59",
+      "stderr_file": "058.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 59,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:07.053452+00:00",
+      "finished_at": "2026-10-12T06:57:07.082282+00:00",
+      "returncode": 0,
+      "raw_file": "059.jsonl",
+      "raw_sha256": "0a670d42386b01807851f70b6b9de5f495fe09c60a6f8d563a406a21793653ca",
+      "stderr_file": "059.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 60,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128f",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:07.084285+00:00",
+      "finished_at": "2026-10-12T06:57:07.450684+00:00",
+      "returncode": 0,
+      "raw_file": "060.jsonl",
+      "raw_sha256": "17e724bda16caa8600a592741f2dcf4aef5b939fc02e8365d74bb4edcbd8992f",
+      "stderr_file": "060.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 61,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:07.452837+00:00",
+      "finished_at": "2026-10-12T06:57:08.696011+00:00",
+      "returncode": 0,
+      "raw_file": "061.jsonl",
+      "raw_sha256": "0774c9e4df3f539fa040467e002571c63a1117dd691182da6112cc97a6a19360",
+      "stderr_file": "061.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 62,
+      "job": {
+        "parameter": "Falcon-512",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-512",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:08.698357+00:00",
+      "finished_at": "2026-10-12T06:57:08.707184+00:00",
+      "returncode": 0,
+      "raw_file": "062.jsonl",
+      "raw_sha256": "fecdd8945db6164343861324da3012cc8b21025086f52ba45a04b36a09bdcba2",
+      "stderr_file": "062.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 63,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:08.709220+00:00",
+      "finished_at": "2026-10-12T06:57:10.150615+00:00",
+      "returncode": 0,
+      "raw_file": "063.jsonl",
+      "raw_sha256": "f011a7bb614051f9794dc07468d769baa039abfb9c013b05bb99f1f28d232be2",
+      "stderr_file": "063.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 64,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:10.153732+00:00",
+      "finished_at": "2026-10-12T06:57:11.141101+00:00",
+      "returncode": 0,
+      "raw_file": "064.jsonl",
+      "raw_sha256": "aecc3e0707fef3628bea5c655fea204d3eb2702ef3dab0f80562ed151846ff28",
+      "stderr_file": "064.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 65,
+      "job": {
+        "parameter": "Falcon-512",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-512",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:11.143260+00:00",
+      "finished_at": "2026-10-12T06:57:11.148886+00:00",
+      "returncode": 0,
+      "raw_file": "065.jsonl",
+      "raw_sha256": "fbd24bfe20355987816322bd72873e0464ce766a0f6ced5d36848f7ab3951487",
+      "stderr_file": "065.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 66,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:11.151009+00:00",
+      "finished_at": "2026-10-12T06:57:24.643308+00:00",
+      "returncode": 0,
+      "raw_file": "066.jsonl",
+      "raw_sha256": "e767a264130a643eef69b166f9123ce1df8b8ffee85fa4648c4dba4e717b732b",
+      "stderr_file": "066.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 67,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:24.646208+00:00",
+      "finished_at": "2026-10-12T06:57:25.892788+00:00",
+      "returncode": 0,
+      "raw_file": "067.jsonl",
+      "raw_sha256": "1798065755853e50fc2f7b2afe8dbcebad453f78b0fff04d58dc38dd216b7cf2",
+      "stderr_file": "067.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 68,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:25.895316+00:00",
+      "finished_at": "2026-10-12T06:57:26.878484+00:00",
+      "returncode": 0,
+      "raw_file": "068.jsonl",
+      "raw_sha256": "76c484a04c2c8dae647bce397095f2c0a614bf929b23a188cb4f30b8db6fd4aa",
+      "stderr_file": "068.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 69,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:26.881659+00:00",
+      "finished_at": "2026-10-12T06:57:26.889960+00:00",
+      "returncode": 0,
+      "raw_file": "069.jsonl",
+      "raw_sha256": "de6c26858cc0e203f0a480c45eced523cffa546c07cf111dea5a1645441fccb1",
+      "stderr_file": "069.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 70,
+      "job": {
+        "parameter": "Falcon-512",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-512",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:26.892177+00:00",
+      "finished_at": "2026-10-12T06:57:26.898018+00:00",
+      "returncode": 0,
+      "raw_file": "070.jsonl",
+      "raw_sha256": "0cb24b29c579f467bb1fcafc297563860dedabc2f5247e48a704dbcc300ce2dd",
+      "stderr_file": "070.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 71,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:26.900151+00:00",
+      "finished_at": "2026-10-12T06:57:26.936991+00:00",
+      "returncode": 0,
+      "raw_file": "071.jsonl",
+      "raw_sha256": "f363a6a37e7846522163f88bf24dc71a07f545f94438476050762b928c06761c",
+      "stderr_file": "071.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 72,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:26.939182+00:00",
+      "finished_at": "2026-10-12T06:57:26.944153+00:00",
+      "returncode": 0,
+      "raw_file": "072.jsonl",
+      "raw_sha256": "b3976acb7feee498c8a6d7bd151e7b338a1a1124a55c3a22194ef779f22b9e3a",
+      "stderr_file": "072.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 73,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:26.946287+00:00",
+      "finished_at": "2026-10-12T06:57:26.953187+00:00",
+      "returncode": 0,
+      "raw_file": "073.jsonl",
+      "raw_sha256": "966839985bc3668715960ee09ad38825ed898e812f6a8d63e3c12aeeb7fcf11a",
+      "stderr_file": "073.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 74,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:26.955394+00:00",
+      "finished_at": "2026-10-12T06:57:26.961026+00:00",
+      "returncode": 0,
+      "raw_file": "074.jsonl",
+      "raw_sha256": "8325da6da3741e8b055cc1908fe62e51c778cbafb05ac51e9e880f2b54b50673",
+      "stderr_file": "074.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 75,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:26.963435+00:00",
+      "finished_at": "2026-10-12T06:57:26.969836+00:00",
+      "returncode": 0,
+      "raw_file": "075.jsonl",
+      "raw_sha256": "9f5380eec6de8a05a0f7ebdaf635ca986fb87b8a0705773bd9f982599995e12f",
+      "stderr_file": "075.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 76,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:26.972108+00:00",
+      "finished_at": "2026-10-12T06:57:26.979534+00:00",
+      "returncode": 0,
+      "raw_file": "076.jsonl",
+      "raw_sha256": "5f836a585dd2afa8fb2b3007b351771d51d5400e3228f6bd6bb305dcf4b58942",
+      "stderr_file": "076.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 77,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:26.981756+00:00",
+      "finished_at": "2026-10-12T06:57:27.046114+00:00",
+      "returncode": 0,
+      "raw_file": "077.jsonl",
+      "raw_sha256": "4756a66aac45e347b2d4e347675b07c288e5e462a27530df448fedd85d5fc410",
+      "stderr_file": "077.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 78,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:27.048792+00:00",
+      "finished_at": "2026-10-12T06:57:27.054038+00:00",
+      "returncode": 0,
+      "raw_file": "078.jsonl",
+      "raw_sha256": "3e20978b8fd97e74161a2a32741719102a5e2590af5f1ab40a5be3cca44fac80",
+      "stderr_file": "078.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 79,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:27.056415+00:00",
+      "finished_at": "2026-10-12T06:57:27.062351+00:00",
+      "returncode": 0,
+      "raw_file": "079.jsonl",
+      "raw_sha256": "84c5e89903f3b4f0e7d88b190ad119f213b5f2b47a4167c07998ef0148213259",
+      "stderr_file": "079.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 80,
+      "job": {
+        "parameter": "Falcon-1024",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-1024",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:27.064677+00:00",
+      "finished_at": "2026-10-12T06:57:27.297323+00:00",
+      "returncode": 0,
+      "raw_file": "080.jsonl",
+      "raw_sha256": "b2bcea3f066b7c4a0ca3c90b6b81536c1336e2ce21b2709cece332d257acca13",
+      "stderr_file": "080.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 81,
+      "job": {
+        "parameter": "Falcon-512",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-512",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:27.300045+00:00",
+      "finished_at": "2026-10-12T06:57:27.307555+00:00",
+      "returncode": 0,
+      "raw_file": "081.jsonl",
+      "raw_sha256": "7d9c09c1bf729e0348f734b711cb6d62d7f3c66c0260a8ce2c5f4b1acc4e5084",
+      "stderr_file": "081.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 82,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:27.309951+00:00",
+      "finished_at": "2026-10-12T06:57:27.323076+00:00",
+      "returncode": 0,
+      "raw_file": "082.jsonl",
+      "raw_sha256": "b206134e93c225cacc8945ac913f382bb9cb48c17ffe8ea423510f5752d00405",
+      "stderr_file": "082.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 83,
+      "job": {
+        "parameter": "Falcon-1024",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-1024",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:27.325420+00:00",
+      "finished_at": "2026-10-12T06:57:27.334602+00:00",
+      "returncode": 0,
+      "raw_file": "083.jsonl",
+      "raw_sha256": "464a51e887ecbc89df5d66aad7ad66ea02366e6166e11b7ae6d6eb6cfc11d2d6",
+      "stderr_file": "083.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 84,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:27.336980+00:00",
+      "finished_at": "2026-10-12T06:57:34.841088+00:00",
+      "returncode": 0,
+      "raw_file": "084.jsonl",
+      "raw_sha256": "3a972ae59e75d784dbc5344a8fe15155a659c87b8e65dc06540ee076bfbb251a",
+      "stderr_file": "084.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 85,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:34.843935+00:00",
+      "finished_at": "2026-10-12T06:57:34.882830+00:00",
+      "returncode": 0,
+      "raw_file": "085.jsonl",
+      "raw_sha256": "907f7e9e076bbfab55622d00ad51882e42122baaa650abc772b98fbc26a48dd6",
+      "stderr_file": "085.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 86,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:34.885323+00:00",
+      "finished_at": "2026-10-12T06:57:34.891238+00:00",
+      "returncode": 0,
+      "raw_file": "086.jsonl",
+      "raw_sha256": "0afdac9658958b55b5564004a860c0437510809be3511fa04fdedcfb661474a9",
+      "stderr_file": "086.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 87,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:34.893620+00:00",
+      "finished_at": "2026-10-12T06:57:35.851584+00:00",
+      "returncode": 0,
+      "raw_file": "087.jsonl",
+      "raw_sha256": "571400f21fe39f1e9aac7edb1e14b3a4ff8a5cebaa534a82ac9abb257a64dad9",
+      "stderr_file": "087.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 88,
+      "job": {
+        "parameter": "Falcon-512",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-512",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:35.854290+00:00",
+      "finished_at": "2026-10-12T06:57:35.922384+00:00",
+      "returncode": 0,
+      "raw_file": "088.jsonl",
+      "raw_sha256": "632649a5722aea8a65be661e1f82128bdb133d9bc46a984b46da72d3591d9ab5",
+      "stderr_file": "088.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 89,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:35.925121+00:00",
+      "finished_at": "2026-10-12T06:57:35.946100+00:00",
+      "returncode": 0,
+      "raw_file": "089.jsonl",
+      "raw_sha256": "3dea8ea86e9ec96c9f78e4275cef59f66782b312a79bb6167ca3b349ba5ae0f7",
+      "stderr_file": "089.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 90,
+      "job": {
+        "parameter": "Falcon-1024",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "Falcon-1024",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:35.948552+00:00",
+      "finished_at": "2026-10-12T06:57:35.953892+00:00",
+      "returncode": 0,
+      "raw_file": "090.jsonl",
+      "raw_sha256": "58b3045912bd8c3b5e382c79596c2cd6166858b2b5c8527a909e923ff5252e9e",
+      "stderr_file": "090.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 91,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:35.956365+00:00",
+      "finished_at": "2026-10-12T06:57:35.972708+00:00",
+      "returncode": 0,
+      "raw_file": "091.jsonl",
+      "raw_sha256": "7e24740d3945253376bb6882787401a49d92c5b5600effecc43c51111a712633",
+      "stderr_file": "091.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 92,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128f",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:35.975195+00:00",
+      "finished_at": "2026-10-12T06:57:36.340489+00:00",
+      "returncode": 0,
+      "raw_file": "092.jsonl",
+      "raw_sha256": "79f5d15ad41296403d662ac7a1bfb7a4bd8ba9268fa8097cec4081eefbebdcf0",
+      "stderr_file": "092.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 93,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:36.344186+00:00",
+      "finished_at": "2026-10-12T06:57:36.945438+00:00",
+      "returncode": 0,
+      "raw_file": "093.jsonl",
+      "raw_sha256": "eee3b87e6ff6cd20f846d1842651c99e5f7fe8025072e4fb39386783a576e633",
+      "stderr_file": "093.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 94,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:36.948414+00:00",
+      "finished_at": "2026-10-12T06:57:38.389124+00:00",
+      "returncode": 0,
+      "raw_file": "094.jsonl",
+      "raw_sha256": "cc2203bf9f4f12341b626009d923cdd7e006f444362a460c3807c6ac5b315623",
+      "stderr_file": "094.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 95,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_192F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:38.391884+00:00",
+      "finished_at": "2026-10-12T06:57:38.420100+00:00",
+      "returncode": 0,
+      "raw_file": "095.jsonl",
+      "raw_sha256": "bfca3f60ff65915aaa4f0a9b19264a875283e2375e45c08a3ffbca1b4bb48f6c",
+      "stderr_file": "095.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 96,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 1,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_256S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:38.422667+00:00",
+      "finished_at": "2026-10-12T06:57:50.586390+00:00",
+      "returncode": 0,
+      "raw_file": "096.jsonl",
+      "raw_sha256": "591713298ae284042766e9bd4f23baf22010bf8f3b0e794035862f9d6f78dfbb",
+      "stderr_file": "096.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 97,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128f",
+        "op": 0,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:50.589498+00:00",
+      "finished_at": "2026-10-12T06:57:50.612348+00:00",
+      "returncode": 0,
+      "raw_file": "097.jsonl",
+      "raw_sha256": "5bdcd336d882df46311512b311c49df5b8ebb6ca9fd5e5d7510f54f9d888fc0a",
+      "stderr_file": "097.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 98,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128f",
+        "op": 2,
+        "side": "extended",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+        "timing",
+        "SLH_DSA_PURE_SHAKE_128F",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:50.614983+00:00",
+      "finished_at": "2026-10-12T06:57:50.641001+00:00",
+      "returncode": 0,
+      "raw_file": "098.jsonl",
+      "raw_sha256": "3ddb97d922ea66177c86cf02d44be0780e0a2fb72edf0e4d0fd3080de473c861",
+      "stderr_file": "098.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "finished_at": "2026-10-12T06:57:50.691324+00:00"
+}

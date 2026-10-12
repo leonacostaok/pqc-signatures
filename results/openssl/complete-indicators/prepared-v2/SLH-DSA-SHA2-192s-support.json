@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+    "support",
+    "SLH-DSA-SHA2-192s"
+  ],
+  "started_at": "2026-10-12T06:50:33.311470+00:00",
+  "finished_at": "2026-10-12T06:50:33.316306+00:00",
+  "returncode": 0,
+  "stdout": "{\"available\":true}\n",
+  "stderr": ""
+}

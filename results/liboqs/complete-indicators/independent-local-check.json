@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "provider": "liboqs",
+  "mode": "saved-evidence plus local-builds",
+  "processes": 539,
+  "raw_rows": 1430,
+  "baseline_cells": 33,
+  "resource_cells": 18,
+  "numeric_mutations_rejected": 3,
+  "summary_sha256": "81c0821588f3385262296856b2620d46bee777570f90f340b25e7a7a5627c6c4",
+  "checker_sha256": "62049b2d98adadeaee3f480aac7f5d4fef2b730815edb630c4ce6725d9616ce1",
+  "inventory_sha256": "3e76f108d28e1bd437bc0b8c1333755f0a87b96417c30cfe1ed51fd26591a6f5",
+  "saved_artifacts_verified": 206,
+  "local_original_artifacts_verified": 213,
+  "local_verification_unavailable": [],
+  "scope": "Committed source/configuration/fixture hashes; complete raw process identities/results; independent means, medians and all percentages. Compiled binaries verified only with --local-builds; historical command provenance is not a fresh build or execution."
+}

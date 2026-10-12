@@ -1,0 +1,22 @@
+{
+  "command": [
+    "cc",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-DUSE_OQS",
+    "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/baseline-extended-make/include",
+    "-I/opt/homebrew/Cellar/openssl@3/3.6.4_1/include",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/experiments/complete-indicators/driver.c",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/baseline-extended-make/lib/liboqs.a",
+    "/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib/libcrypto.3.dylib",
+    "-lpthread",
+    "-o",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended"
+  ],
+  "started_at": "2026-10-12T06:42:03.136155+00:00",
+  "finished_at": "2026-10-12T06:42:03.327987+00:00",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}
