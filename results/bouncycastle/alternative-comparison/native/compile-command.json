@@ -1,0 +1,15 @@
+[
+  "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/javac",
+  "-J-XX:ActiveProcessorCount=2",
+  "--release",
+  "8",
+  "-cp",
+  "/Users/dandelionlabs/development/personal/bc-java/libs/junit-4.13.2.jar",
+  "-sourcepath",
+  "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/libs/bouncycastle/build/alternative-comparison/native/source/core/src/main/java:/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/libs/bouncycastle/build/alternative-comparison/native/source/core/src/test/java",
+  "-d",
+  "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/libs/bouncycastle/build/alternative-comparison/native/classes",
+  "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/libs/bouncycastle/build/alternative-comparison/native/source/core/src/test/java/org/bouncycastle/pqc/crypto/test/MLDSATest.java",
+  "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/libs/bouncycastle/build/alternative-comparison/native/source/core/src/test/java/org/bouncycastle/pqc/crypto/test/MLDSAWycheproofTest.java",
+  "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/libs/bouncycastle/build/alternative-comparison/native/source/core/src/test/java/org/bouncycastle/pqc/crypto/test/SLHDSATest.java"
+]

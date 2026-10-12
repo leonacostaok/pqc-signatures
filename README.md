@@ -10,6 +10,7 @@ Performance experiments for post-quantum signatures in noble (TypeScript/JavaScr
 - [Resource audit](docs/audit/published-resource-regressions.md): cleanup, local stack frames and the limits of each probe.
 - [Production experiments](docs/provider-improvements.md): individual patches, source revisions, protocols and pull requests.
 - [Bouncy Castle research](docs/bouncycastle/pattern-research.md): new arithmetic/coding candidates and a preliminary address-hoisting screen.
+- [Bouncy Castle alternatives](docs/bouncycastle/alternative-comparison.md): separate NTT, matrix and WOTS experiments with fresh-key comparisons and additional native correctness tests.
 - [Raw data](results/) and [measurement contract](common/CONTRACT.md): inputs, checks and reproduction details.
 
 Compare each patch with its own baseline. The reports identify hardware, versions, API boundaries and measurement limitations; they do not establish a universally fastest library. Lower allocation does not necessarily mean lower peak memory or faster execution.

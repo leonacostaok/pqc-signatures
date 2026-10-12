@@ -1,0 +1,14 @@
+{
+  "ntt": {
+    "path": "../bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/prepared-v1/manifest.json",
+    "sha256": "bb280c8513f09283317d29b91d46f42d3edb0d729b308943e3208e5b36e5c797"
+  },
+  "matrix": {
+    "path": "../bc-matrix-alternatives/results/bouncycastle/matrix-alternatives/prepared.json",
+    "sha256": "205a29cd5dcee49f238f73b27709edf48a3429b07f2be32b403a8df63159b988"
+  },
+  "wots": {
+    "path": "../bc-wots-alternatives/results/bouncycastle/wots-alternatives/manifest.json",
+    "sha256": "5de31b1005d3b920cf19cd24240160615f834fc0f07affb3d6d7522dfe466f98"
+  }
+}
