@@ -1,0 +1,112 @@
+[
+  {
+    "repo": "paulmillr/noble-post-quantum",
+    "pr": 56,
+    "url": "https://github.com/paulmillr/noble-post-quantum/pull/56",
+    "worktree": "/Users/dandelionlabs/development/personal/noble-post-quantum/worktrees/signoff-20261012",
+    "remote": "https://github.com/leonacostaok/noble-post-quantum.git",
+    "head_branch": "perf/mldsa-rowdot",
+    "old_head": "a9d2880774ce4d6dd01d00195ec4a3a9391aac95",
+    "new_head": "39d56d145aa0127f3117f191aec0522aeb76397f",
+    "commits": [
+      {
+        "old": "92b798ef8f6e5f34dbeb3b4ddab248b8382e6081",
+        "new": "36c04d709787cb251c761b17f04c16d1aa3436fb",
+        "tree": "8faa0fcf7520f36917e541d01d6e5aa2408bb584"
+      },
+      {
+        "old": "a9d2880774ce4d6dd01d00195ec4a3a9391aac95",
+        "new": "39d56d145aa0127f3117f191aec0522aeb76397f",
+        "tree": "8050d82386c4e32ef3e4d4a659a083ce9fc7981f"
+      }
+    ],
+    "tree_identical": true,
+    "remote_verified": true,
+    "pr_verified": true
+  },
+  {
+    "repo": "open-quantum-safe/liboqs",
+    "pr": 2625,
+    "url": "https://github.com/open-quantum-safe/liboqs/pull/2625",
+    "worktree": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012",
+    "remote": "https://github.com/leonacostaok/liboqs.git",
+    "head_branch": "perf/slh-dsa-sha2-openssl",
+    "old_head": "dd039f5f899aefb24b86b94c4b5cba1b2ec39f2f",
+    "new_head": "94b42a7232057236dcb3dd56310df3d9d0a1cbd7",
+    "commits": [
+      {
+        "old": "b14f1b616f938698ebc0bf8b75b3736c30e1502c",
+        "new": "39765662cf9820782c4c68d24cbd40ec4c09b6af",
+        "tree": "2e06ac9762ba731cb51c837bb2682b0806a7b088"
+      },
+      {
+        "old": "dd039f5f899aefb24b86b94c4b5cba1b2ec39f2f",
+        "new": "94b42a7232057236dcb3dd56310df3d9d0a1cbd7",
+        "tree": "2fa651336fae4d370c4ff10192ee64781ee0bff7"
+      }
+    ],
+    "tree_identical": true,
+    "remote_verified": true,
+    "pr_verified": true
+  },
+  {
+    "repo": "cloudflare/circl",
+    "pr": 708,
+    "url": "https://github.com/cloudflare/circl/pull/708",
+    "worktree": "/Users/dandelionlabs/development/personal/circl/worktrees/signoff-20261012",
+    "remote": "https://github.com/leonacostaok/circl.git",
+    "head_branch": "perf/slhdsa-sha2-prefix",
+    "old_head": "d3f651b7e088a33a3e697761d67f8b2e408e33e0",
+    "new_head": "1c31496b567c27e672979358befd2505cb735fa9",
+    "commits": [
+      {
+        "old": "d3f651b7e088a33a3e697761d67f8b2e408e33e0",
+        "new": "1c31496b567c27e672979358befd2505cb735fa9",
+        "tree": "787099d7716786a961c0f9304bb0a75e7db0cf3d"
+      }
+    ],
+    "tree_identical": true,
+    "remote_verified": true,
+    "pr_verified": true
+  },
+  {
+    "repo": "RustCrypto/signatures",
+    "pr": 1461,
+    "url": "https://github.com/RustCrypto/signatures/pull/1461",
+    "worktree": "/Users/dandelionlabs/development/personal/rustcrypto-signatures/worktrees/signoff-20261012",
+    "remote": "https://github.com/leonacostaok/signatures.git",
+    "head_branch": "perf/mldsa-keygen-reuse",
+    "old_head": "fcbaba75e2f265f0b944e4c28beceddf95910ff5",
+    "new_head": "43cad14d86b36607a3c4b47c59c30d91145f64c1",
+    "commits": [
+      {
+        "old": "fcbaba75e2f265f0b944e4c28beceddf95910ff5",
+        "new": "43cad14d86b36607a3c4b47c59c30d91145f64c1",
+        "tree": "5c4df0e9b79f35230e55f57bb9406368fb891846"
+      }
+    ],
+    "tree_identical": true,
+    "remote_verified": true,
+    "pr_verified": true
+  },
+  {
+    "repo": "openssl/openssl",
+    "pr": 33196,
+    "url": "https://github.com/openssl/openssl/pull/33196",
+    "worktree": "/Users/dandelionlabs/development/personal/openssl/worktrees/signoff-20261012",
+    "remote": "https://github.com/leonacostaok/openssl.git",
+    "head_branch": "perf/slh-sha512-prefix",
+    "old_head": "cb722554afced3c3232104b15693c203734864cf",
+    "new_head": "857cb293518745277fcf2594e8042fcc6eda549c",
+    "commits": [
+      {
+        "old": "cb722554afced3c3232104b15693c203734864cf",
+        "new": "857cb293518745277fcf2594e8042fcc6eda549c",
+        "tree": "653ebcce3034ab838d215dcc263469d8e13b3f98"
+      }
+    ],
+    "tree_identical": true,
+    "remote_verified": true,
+    "pr_verified": true
+  }
+]

@@ -40,3 +40,7 @@ The [candidate-first follow-up](ten-key-order.md) generates ten new keys per par
 ## liboqs patch size
 
 A [four-variant ablation](../libs/liboqs/experiments/sha2-ablation/RESULTS.md) tests whether SHA-256-only or SHA-512-only acceleration preserves the full gains. SHA-256-only matches the SHA2-128 results closely but costs 21–37% more signing time and 22–39% more verification time on SHA2-192/256. Both runtime adapters remain justified for all six sets. The maintained draft removes [three redundant test-build lines](../results/liboqs/sha2-trim/README.md); its production code is unchanged.
+
+## Commit sign-offs
+
+On 2026-10-12 the five upstream PRs were updated with `Signed-off-by: Leon Acosta <leon@quantakrypto.com>` and matching author/committer identities. The [old-to-new commit map](../results/signoff-20261012.json) verifies identical Git trees for every rewritten commit; the benchmark source snapshots remain unchanged. Both liboqs DCO checks passed on the new head. Hosted checks for rewritten heads must be assessed separately from older check records.
