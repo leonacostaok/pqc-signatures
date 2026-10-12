@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "python3",
+    "-O",
+    "libs/noble/experiments/published-memory/run.py",
+    "prepare"
+  ],
+  "exit_code": 1,
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/run.py\", line 5, in <module>\n    if sys.flags.optimize: raise RuntimeError('Run without Python optimization')\nRuntimeError: Run without Python optimization\n"
+}

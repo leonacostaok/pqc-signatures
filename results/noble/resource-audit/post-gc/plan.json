@@ -1,0 +1,578 @@
+[
+  {
+    "round": 0,
+    "parameter": 44,
+    "operation": "keygen",
+    "variant": "baseline"
+  },
+  {
+    "round": 0,
+    "parameter": 44,
+    "operation": "keygen",
+    "variant": "candidate"
+  },
+  {
+    "round": 0,
+    "parameter": 44,
+    "operation": "getPublicKey",
+    "variant": "candidate"
+  },
+  {
+    "round": 0,
+    "parameter": 44,
+    "operation": "getPublicKey",
+    "variant": "baseline"
+  },
+  {
+    "round": 0,
+    "parameter": 44,
+    "operation": "sign",
+    "variant": "baseline"
+  },
+  {
+    "round": 0,
+    "parameter": 44,
+    "operation": "sign",
+    "variant": "candidate"
+  },
+  {
+    "round": 0,
+    "parameter": 44,
+    "operation": "verify",
+    "variant": "candidate"
+  },
+  {
+    "round": 0,
+    "parameter": 44,
+    "operation": "verify",
+    "variant": "baseline"
+  },
+  {
+    "round": 0,
+    "parameter": 65,
+    "operation": "keygen",
+    "variant": "candidate"
+  },
+  {
+    "round": 0,
+    "parameter": 65,
+    "operation": "keygen",
+    "variant": "baseline"
+  },
+  {
+    "round": 0,
+    "parameter": 65,
+    "operation": "getPublicKey",
+    "variant": "baseline"
+  },
+  {
+    "round": 0,
+    "parameter": 65,
+    "operation": "getPublicKey",
+    "variant": "candidate"
+  },
+  {
+    "round": 0,
+    "parameter": 65,
+    "operation": "sign",
+    "variant": "candidate"
+  },
+  {
+    "round": 0,
+    "parameter": 65,
+    "operation": "sign",
+    "variant": "baseline"
+  },
+  {
+    "round": 0,
+    "parameter": 65,
+    "operation": "verify",
+    "variant": "baseline"
+  },
+  {
+    "round": 0,
+    "parameter": 65,
+    "operation": "verify",
+    "variant": "candidate"
+  },
+  {
+    "round": 0,
+    "parameter": 87,
+    "operation": "keygen",
+    "variant": "baseline"
+  },
+  {
+    "round": 0,
+    "parameter": 87,
+    "operation": "keygen",
+    "variant": "candidate"
+  },
+  {
+    "round": 0,
+    "parameter": 87,
+    "operation": "getPublicKey",
+    "variant": "candidate"
+  },
+  {
+    "round": 0,
+    "parameter": 87,
+    "operation": "getPublicKey",
+    "variant": "baseline"
+  },
+  {
+    "round": 0,
+    "parameter": 87,
+    "operation": "sign",
+    "variant": "baseline"
+  },
+  {
+    "round": 0,
+    "parameter": 87,
+    "operation": "sign",
+    "variant": "candidate"
+  },
+  {
+    "round": 0,
+    "parameter": 87,
+    "operation": "verify",
+    "variant": "candidate"
+  },
+  {
+    "round": 0,
+    "parameter": 87,
+    "operation": "verify",
+    "variant": "baseline"
+  },
+  {
+    "round": 1,
+    "parameter": 44,
+    "operation": "keygen",
+    "variant": "candidate"
+  },
+  {
+    "round": 1,
+    "parameter": 44,
+    "operation": "keygen",
+    "variant": "baseline"
+  },
+  {
+    "round": 1,
+    "parameter": 44,
+    "operation": "getPublicKey",
+    "variant": "baseline"
+  },
+  {
+    "round": 1,
+    "parameter": 44,
+    "operation": "getPublicKey",
+    "variant": "candidate"
+  },
+  {
+    "round": 1,
+    "parameter": 44,
+    "operation": "sign",
+    "variant": "candidate"
+  },
+  {
+    "round": 1,
+    "parameter": 44,
+    "operation": "sign",
+    "variant": "baseline"
+  },
+  {
+    "round": 1,
+    "parameter": 44,
+    "operation": "verify",
+    "variant": "baseline"
+  },
+  {
+    "round": 1,
+    "parameter": 44,
+    "operation": "verify",
+    "variant": "candidate"
+  },
+  {
+    "round": 1,
+    "parameter": 65,
+    "operation": "keygen",
+    "variant": "baseline"
+  },
+  {
+    "round": 1,
+    "parameter": 65,
+    "operation": "keygen",
+    "variant": "candidate"
+  },
+  {
+    "round": 1,
+    "parameter": 65,
+    "operation": "getPublicKey",
+    "variant": "candidate"
+  },
+  {
+    "round": 1,
+    "parameter": 65,
+    "operation": "getPublicKey",
+    "variant": "baseline"
+  },
+  {
+    "round": 1,
+    "parameter": 65,
+    "operation": "sign",
+    "variant": "baseline"
+  },
+  {
+    "round": 1,
+    "parameter": 65,
+    "operation": "sign",
+    "variant": "candidate"
+  },
+  {
+    "round": 1,
+    "parameter": 65,
+    "operation": "verify",
+    "variant": "candidate"
+  },
+  {
+    "round": 1,
+    "parameter": 65,
+    "operation": "verify",
+    "variant": "baseline"
+  },
+  {
+    "round": 1,
+    "parameter": 87,
+    "operation": "keygen",
+    "variant": "candidate"
+  },
+  {
+    "round": 1,
+    "parameter": 87,
+    "operation": "keygen",
+    "variant": "baseline"
+  },
+  {
+    "round": 1,
+    "parameter": 87,
+    "operation": "getPublicKey",
+    "variant": "baseline"
+  },
+  {
+    "round": 1,
+    "parameter": 87,
+    "operation": "getPublicKey",
+    "variant": "candidate"
+  },
+  {
+    "round": 1,
+    "parameter": 87,
+    "operation": "sign",
+    "variant": "candidate"
+  },
+  {
+    "round": 1,
+    "parameter": 87,
+    "operation": "sign",
+    "variant": "baseline"
+  },
+  {
+    "round": 1,
+    "parameter": 87,
+    "operation": "verify",
+    "variant": "baseline"
+  },
+  {
+    "round": 1,
+    "parameter": 87,
+    "operation": "verify",
+    "variant": "candidate"
+  },
+  {
+    "round": 2,
+    "parameter": 44,
+    "operation": "keygen",
+    "variant": "baseline"
+  },
+  {
+    "round": 2,
+    "parameter": 44,
+    "operation": "keygen",
+    "variant": "candidate"
+  },
+  {
+    "round": 2,
+    "parameter": 44,
+    "operation": "getPublicKey",
+    "variant": "candidate"
+  },
+  {
+    "round": 2,
+    "parameter": 44,
+    "operation": "getPublicKey",
+    "variant": "baseline"
+  },
+  {
+    "round": 2,
+    "parameter": 44,
+    "operation": "sign",
+    "variant": "baseline"
+  },
+  {
+    "round": 2,
+    "parameter": 44,
+    "operation": "sign",
+    "variant": "candidate"
+  },
+  {
+    "round": 2,
+    "parameter": 44,
+    "operation": "verify",
+    "variant": "candidate"
+  },
+  {
+    "round": 2,
+    "parameter": 44,
+    "operation": "verify",
+    "variant": "baseline"
+  },
+  {
+    "round": 2,
+    "parameter": 65,
+    "operation": "keygen",
+    "variant": "candidate"
+  },
+  {
+    "round": 2,
+    "parameter": 65,
+    "operation": "keygen",
+    "variant": "baseline"
+  },
+  {
+    "round": 2,
+    "parameter": 65,
+    "operation": "getPublicKey",
+    "variant": "baseline"
+  },
+  {
+    "round": 2,
+    "parameter": 65,
+    "operation": "getPublicKey",
+    "variant": "candidate"
+  },
+  {
+    "round": 2,
+    "parameter": 65,
+    "operation": "sign",
+    "variant": "candidate"
+  },
+  {
+    "round": 2,
+    "parameter": 65,
+    "operation": "sign",
+    "variant": "baseline"
+  },
+  {
+    "round": 2,
+    "parameter": 65,
+    "operation": "verify",
+    "variant": "baseline"
+  },
+  {
+    "round": 2,
+    "parameter": 65,
+    "operation": "verify",
+    "variant": "candidate"
+  },
+  {
+    "round": 2,
+    "parameter": 87,
+    "operation": "keygen",
+    "variant": "baseline"
+  },
+  {
+    "round": 2,
+    "parameter": 87,
+    "operation": "keygen",
+    "variant": "candidate"
+  },
+  {
+    "round": 2,
+    "parameter": 87,
+    "operation": "getPublicKey",
+    "variant": "candidate"
+  },
+  {
+    "round": 2,
+    "parameter": 87,
+    "operation": "getPublicKey",
+    "variant": "baseline"
+  },
+  {
+    "round": 2,
+    "parameter": 87,
+    "operation": "sign",
+    "variant": "baseline"
+  },
+  {
+    "round": 2,
+    "parameter": 87,
+    "operation": "sign",
+    "variant": "candidate"
+  },
+  {
+    "round": 2,
+    "parameter": 87,
+    "operation": "verify",
+    "variant": "candidate"
+  },
+  {
+    "round": 2,
+    "parameter": 87,
+    "operation": "verify",
+    "variant": "baseline"
+  },
+  {
+    "round": 3,
+    "parameter": 44,
+    "operation": "keygen",
+    "variant": "candidate"
+  },
+  {
+    "round": 3,
+    "parameter": 44,
+    "operation": "keygen",
+    "variant": "baseline"
+  },
+  {
+    "round": 3,
+    "parameter": 44,
+    "operation": "getPublicKey",
+    "variant": "baseline"
+  },
+  {
+    "round": 3,
+    "parameter": 44,
+    "operation": "getPublicKey",
+    "variant": "candidate"
+  },
+  {
+    "round": 3,
+    "parameter": 44,
+    "operation": "sign",
+    "variant": "candidate"
+  },
+  {
+    "round": 3,
+    "parameter": 44,
+    "operation": "sign",
+    "variant": "baseline"
+  },
+  {
+    "round": 3,
+    "parameter": 44,
+    "operation": "verify",
+    "variant": "baseline"
+  },
+  {
+    "round": 3,
+    "parameter": 44,
+    "operation": "verify",
+    "variant": "candidate"
+  },
+  {
+    "round": 3,
+    "parameter": 65,
+    "operation": "keygen",
+    "variant": "baseline"
+  },
+  {
+    "round": 3,
+    "parameter": 65,
+    "operation": "keygen",
+    "variant": "candidate"
+  },
+  {
+    "round": 3,
+    "parameter": 65,
+    "operation": "getPublicKey",
+    "variant": "candidate"
+  },
+  {
+    "round": 3,
+    "parameter": 65,
+    "operation": "getPublicKey",
+    "variant": "baseline"
+  },
+  {
+    "round": 3,
+    "parameter": 65,
+    "operation": "sign",
+    "variant": "baseline"
+  },
+  {
+    "round": 3,
+    "parameter": 65,
+    "operation": "sign",
+    "variant": "candidate"
+  },
+  {
+    "round": 3,
+    "parameter": 65,
+    "operation": "verify",
+    "variant": "candidate"
+  },
+  {
+    "round": 3,
+    "parameter": 65,
+    "operation": "verify",
+    "variant": "baseline"
+  },
+  {
+    "round": 3,
+    "parameter": 87,
+    "operation": "keygen",
+    "variant": "candidate"
+  },
+  {
+    "round": 3,
+    "parameter": 87,
+    "operation": "keygen",
+    "variant": "baseline"
+  },
+  {
+    "round": 3,
+    "parameter": 87,
+    "operation": "getPublicKey",
+    "variant": "baseline"
+  },
+  {
+    "round": 3,
+    "parameter": 87,
+    "operation": "getPublicKey",
+    "variant": "candidate"
+  },
+  {
+    "round": 3,
+    "parameter": 87,
+    "operation": "sign",
+    "variant": "candidate"
+  },
+  {
+    "round": 3,
+    "parameter": 87,
+    "operation": "sign",
+    "variant": "baseline"
+  },
+  {
+    "round": 3,
+    "parameter": 87,
+    "operation": "verify",
+    "variant": "baseline"
+  },
+  {
+    "round": 3,
+    "parameter": 87,
+    "operation": "verify",
+    "variant": "candidate"
+  }
+]
