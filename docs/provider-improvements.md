@@ -5,10 +5,10 @@ These are comparisons of narrow production patches against each provider's own p
 | Provider and scope | Supported result | Report | Review draft |
 | --- | --- | --- | --- |
 | noble ML-DSA | Signing 1.091–1.189×; verification 1.101–1.189× across two library and two Node versions | [Fresh-input/version study](https://github.com/leonacostaok/pqc-signatures/blob/9288288f2fd95fa53a9320b90e513577d94323e0/docs/noble/robustness.md) | [noble #56](https://github.com/paulmillr/noble-post-quantum/pull/56) |
-| liboqs SLH-DSA SHA2 | Signing 4.269–5.276×; verification 4.411–5.288× | [Compression backend](../libs/liboqs/experiments/sha2-openssl/README.md) | [Personal-fork #1](https://github.com/leonacostaok/liboqs/pull/1) |
+| liboqs SLH-DSA SHA2 | Signing 4.269–5.276×; verification 4.411–5.288× | [Compression backend](../libs/liboqs/experiments/sha2-openssl/README.md) | [liboqs #2625](https://github.com/open-quantum-safe/liboqs/pull/2625) |
 | CIRCL SLH-DSA SHA2 | Signing 1.322–1.369×; verification 1.323–1.425×; key generation 1.329–1.346× | [Public-prefix reuse](performance/circl/README.md) | [CIRCL #708](https://github.com/cloudflare/circl/pull/708) |
 | RustCrypto ML-DSA | Key construction 1.173–1.177×; fresh-key signing 1.038–1.067×; warmed signing/verification near parity | [Constructor reuse](rustcrypto/keygen-reuse.md) | [RustCrypto #1461](https://github.com/RustCrypto/signatures/pull/1461) |
-| OpenSSL SLH-DSA SHA2-192/256 | Signing 1.094–1.195×; verification 1.073–1.172×; unchanged controls near parity | [SHA-512 prefix](openssl/sha512-prefix.md) | [Personal-fork #1](https://github.com/leonacostaok/openssl/pull/1) |
+| OpenSSL SLH-DSA SHA2-192/256 | Signing 1.094–1.195×; verification 1.073–1.172×; unchanged controls near parity | [SHA-512 prefix](openssl/sha512-prefix.md) | [OpenSSL #33196](https://github.com/openssl/openssl/pull/33196) |
 | Bouncy Castle SLH-DSA | Complete verification allocates 2.8–7.3% fewer bytes; a whole-verification latency gain is not established | [FORS bit extraction](bouncycastle/fors-base2b.md) | [Personal-fork #1](https://github.com/leonacostaok/bc-java/pull/1) |
 
 ## What is reused
@@ -29,7 +29,7 @@ Noble's arithmetic oracle and two-version/runtime study, liboqs's executed-case 
 
 The [original harness audit](https://github.com/leonacostaok/pqc-signatures/pull/3) documents separate remaining cache, bounds, acceptance and measurement defects. These production experiments use their own gates; their success does not repair the original harness or establish a general fastest-provider ranking.
 
-All drafts are authored from `leonacostaok`. Noble, CIRCL and RustCrypto drafts target upstream. Liboqs, OpenSSL and Bouncy Castle review drafts target personal forks because their upstream submission policies require disclosure or submitter attestations that need resolution before a later upstream submission. Evidence links target this private repository and require access.
+All drafts are authored from `leonacostaok`. Noble, liboqs, CIRCL, RustCrypto and OpenSSL now have upstream drafts. Bouncy Castle retains its allocation-only personal-fork draft while further alternatives are investigated. The evidence repository is public. Liboqs and OpenSSL contribution-policy disclosures and personal attestations remain unresolved; draft publication does not establish compliance or CLA completion.
 
 The [independent BC follow-up check](../results/bouncycastle/independent-isolated-check.json) matches every saved process output, exit status and pair against the final summaries. Reproduce it with `python3 libs/bouncycastle/experiments/audit-isolated.py results/bouncycastle/experiments/fors-isolated-jdk25-arm64.json /path/to/new-check.json`.
 
