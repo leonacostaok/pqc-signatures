@@ -1,0 +1,120 @@
+{
+  "checked_at": "2026-10-12T03:34:47.064299+00:00",
+  "pull_requests": [
+    {
+      "repository": "paulmillr/noble-post-quantum",
+      "number": 56,
+      "command": [
+        "gh",
+        "pr",
+        "view",
+        "56",
+        "--repo",
+        "paulmillr/noble-post-quantum",
+        "--json",
+        "url,title,headRefOid,baseRefOid,isDraft,state"
+      ],
+      "exit_code": 0,
+      "response": {
+        "baseRefOid": "48e493397e69fa3e377bd454ff5261b1a7e22651",
+        "headRefOid": "39d56d145aa0127f3117f191aec0522aeb76397f",
+        "isDraft": false,
+        "state": "CLOSED",
+        "title": "ML-DSA: 1.09\u20131.19\u00d7 sign/verify speedup",
+        "url": "https://github.com/paulmillr/noble-post-quantum/pull/56"
+      }
+    },
+    {
+      "repository": "open-quantum-safe/liboqs",
+      "number": 2625,
+      "command": [
+        "gh",
+        "pr",
+        "view",
+        "2625",
+        "--repo",
+        "open-quantum-safe/liboqs",
+        "--json",
+        "url,title,headRefOid,baseRefOid,isDraft,state"
+      ],
+      "exit_code": 0,
+      "response": {
+        "baseRefOid": "fd44469daeffe6b28f031f54f9bb66cbae69a572",
+        "headRefOid": "94b42a7232057236dcb3dd56310df3d9d0a1cbd7",
+        "isDraft": false,
+        "state": "OPEN",
+        "title": "SLH-DSA SHA2: ~4\u20135\u00d7 sign/verify speedup",
+        "url": "https://github.com/open-quantum-safe/liboqs/pull/2625"
+      }
+    },
+    {
+      "repository": "cloudflare/circl",
+      "number": 708,
+      "command": [
+        "gh",
+        "pr",
+        "view",
+        "708",
+        "--repo",
+        "cloudflare/circl",
+        "--json",
+        "url,title,headRefOid,baseRefOid,isDraft,state"
+      ],
+      "exit_code": 0,
+      "response": {
+        "baseRefOid": "91db3e785ba2635b4f24a023e1ad76d2780e2865",
+        "headRefOid": "1c31496b567c27e672979358befd2505cb735fa9",
+        "isDraft": false,
+        "state": "OPEN",
+        "title": "SLH-DSA SHA2: 1.32\u20131.43\u00d7 sign/verify speedup",
+        "url": "https://github.com/cloudflare/circl/pull/708"
+      }
+    },
+    {
+      "repository": "RustCrypto/signatures",
+      "number": 1461,
+      "command": [
+        "gh",
+        "pr",
+        "view",
+        "1461",
+        "--repo",
+        "RustCrypto/signatures",
+        "--json",
+        "url,title,headRefOid,baseRefOid,isDraft,state"
+      ],
+      "exit_code": 0,
+      "response": {
+        "baseRefOid": "a84081789729c96dabb35f96cd000e434b247e02",
+        "headRefOid": "43cad14d86b36607a3c4b47c59c30d91145f64c1",
+        "isDraft": false,
+        "state": "OPEN",
+        "title": "ML-DSA: 1.17\u20131.18\u00d7 faster key construction",
+        "url": "https://github.com/RustCrypto/signatures/pull/1461"
+      }
+    },
+    {
+      "repository": "openssl/openssl",
+      "number": 33196,
+      "command": [
+        "gh",
+        "pr",
+        "view",
+        "33196",
+        "--repo",
+        "openssl/openssl",
+        "--json",
+        "url,title,headRefOid,baseRefOid,isDraft,state"
+      ],
+      "exit_code": 0,
+      "response": {
+        "baseRefOid": "122db7eb076bf0625df87b91bcc2dccfaccc4900",
+        "headRefOid": "857cb293518745277fcf2594e8042fcc6eda549c",
+        "isDraft": false,
+        "state": "OPEN",
+        "title": "SLH-DSA SHA2-192/256: 1.07\u20131.20\u00d7 sign/verify speedup",
+        "url": "https://github.com/openssl/openssl/pull/33196"
+      }
+    }
+  ]
+}
