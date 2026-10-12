@@ -111,7 +111,7 @@ out = ROOT / 'results/library-times'
 out.mkdir(exist_ok=True)
 (out / 'comparison.json').write_text(json.dumps(dict(source_sha256=sources, scope='descriptive cross-study observations; not a matched provider ranking', cells=rows, minima=minima), indent=2) + '\n')
 with (out / 'comparison.csv').open('w', newline='') as f:
-    w = csv.DictWriter(f, fieldnames=list(rows[0]))
+    w = csv.DictWriter(f, fieldnames=list(rows[0]), lineterminator="\n")
     w.writeheader()
     w.writerows(rows)
 (ROOT / 'docs/library-times.md').write_text('\n'.join(lines) + '\n')
