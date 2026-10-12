@@ -1,0 +1,135 @@
+{
+  "schema": "rust-resource-source-binding-v1",
+  "live_pr": {
+    "baseRefOid": "a84081789729c96dabb35f96cd000e434b247e02",
+    "headRefName": "perf/mldsa-keygen-reuse",
+    "headRefOid": "43cad14d86b36607a3c4b47c59c30d91145f64c1",
+    "headRepositoryOwner": {
+      "id": "MDQ6VXNlcjcyOTM3OTE=",
+      "name": "Leon Acosta",
+      "login": "leonacostaok"
+    },
+    "number": 1461,
+    "state": "OPEN",
+    "url": "https://github.com/RustCrypto/signatures/pull/1461"
+  },
+  "original_manifest_sha256": "55d96b68a6dd3b3e7433156490238ecec6a66e7e85da22027a4bfa2de6e9e7cb",
+  "resource_manifest_sha256": "4a873d040358bbaf4fd0159272270af0fcee7467a907c82c075444900d12fdfd",
+  "original_and_signed_commit_trees": {
+    "fcbaba75e2f265f0b944e4c28beceddf95910ff5": "5c4df0e9b79f35230e55f57bb9406368fb891846",
+    "43cad14d86b36607a3c4b47c59c30d91145f64c1": "5c4df0e9b79f35230e55f57bb9406368fb891846"
+  },
+  "source_files": [
+    {
+      "variant": "baseline",
+      "path": "ml-dsa/src/algebra.rs",
+      "sha256": "ac0bb61438a6f714a529576e6ceab84fd13d1da5c82293d95e28345b8056a0f0"
+    },
+    {
+      "variant": "baseline",
+      "path": "ml-dsa/src/crypto.rs",
+      "sha256": "be4847a6f690f864e98267a50cb28eb08f8a69f9ff1604fff17326fb270abc23"
+    },
+    {
+      "variant": "baseline",
+      "path": "ml-dsa/src/encode.rs",
+      "sha256": "ace1529c51c118f481aa595a5da7950acf5d8a857847ffe630fc0aefb7f4635b"
+    },
+    {
+      "variant": "baseline",
+      "path": "ml-dsa/src/hint.rs",
+      "sha256": "256bbc438889474f61821e4526e3690768058b7893b0cb467c401b251723fef3"
+    },
+    {
+      "variant": "baseline",
+      "path": "ml-dsa/src/lib.rs",
+      "sha256": "9378f245171c1712843adc0db3c5ead52b617bd45fad5714c4b35a043bb377cf"
+    },
+    {
+      "variant": "baseline",
+      "path": "ml-dsa/src/ntt.rs",
+      "sha256": "6461fa2933c816906a9baae09df8b6f989a2e9e058fd7607cdc7c8951100af06"
+    },
+    {
+      "variant": "baseline",
+      "path": "ml-dsa/src/param.rs",
+      "sha256": "380a16fbb93ef547bc6a51b79eb6b4af90f81523712e38c4844f4d0918181623"
+    },
+    {
+      "variant": "baseline",
+      "path": "ml-dsa/src/pkcs8.rs",
+      "sha256": "b6b723df4a96dd851dc9f96e2219e7dc2860fd68fd8faa1741fc18ee98e21e2e"
+    },
+    {
+      "variant": "baseline",
+      "path": "ml-dsa/src/sampling.rs",
+      "sha256": "b7690e0db7dfdf88b6a630337cbfeb7d6c99821d80a5643a0a923ea6fbcf374b"
+    },
+    {
+      "variant": "baseline",
+      "path": "ml-dsa/src/signing.rs",
+      "sha256": "fb3878e57eeb9530f7a0a2b2ff7226533ecf1ee07f4fdd8aed0245f32da4fd43"
+    },
+    {
+      "variant": "baseline",
+      "path": "ml-dsa/src/verifying.rs",
+      "sha256": "966ac3d6f20db9c200755302fce29826211eed2a03a99a7c214fc12cad678eca"
+    },
+    {
+      "variant": "candidate",
+      "path": "ml-dsa/src/algebra.rs",
+      "sha256": "ac0bb61438a6f714a529576e6ceab84fd13d1da5c82293d95e28345b8056a0f0"
+    },
+    {
+      "variant": "candidate",
+      "path": "ml-dsa/src/crypto.rs",
+      "sha256": "be4847a6f690f864e98267a50cb28eb08f8a69f9ff1604fff17326fb270abc23"
+    },
+    {
+      "variant": "candidate",
+      "path": "ml-dsa/src/encode.rs",
+      "sha256": "ace1529c51c118f481aa595a5da7950acf5d8a857847ffe630fc0aefb7f4635b"
+    },
+    {
+      "variant": "candidate",
+      "path": "ml-dsa/src/hint.rs",
+      "sha256": "256bbc438889474f61821e4526e3690768058b7893b0cb467c401b251723fef3"
+    },
+    {
+      "variant": "candidate",
+      "path": "ml-dsa/src/lib.rs",
+      "sha256": "9378f245171c1712843adc0db3c5ead52b617bd45fad5714c4b35a043bb377cf"
+    },
+    {
+      "variant": "candidate",
+      "path": "ml-dsa/src/ntt.rs",
+      "sha256": "6461fa2933c816906a9baae09df8b6f989a2e9e058fd7607cdc7c8951100af06"
+    },
+    {
+      "variant": "candidate",
+      "path": "ml-dsa/src/param.rs",
+      "sha256": "380a16fbb93ef547bc6a51b79eb6b4af90f81523712e38c4844f4d0918181623"
+    },
+    {
+      "variant": "candidate",
+      "path": "ml-dsa/src/pkcs8.rs",
+      "sha256": "b6b723df4a96dd851dc9f96e2219e7dc2860fd68fd8faa1741fc18ee98e21e2e"
+    },
+    {
+      "variant": "candidate",
+      "path": "ml-dsa/src/sampling.rs",
+      "sha256": "b7690e0db7dfdf88b6a630337cbfeb7d6c99821d80a5643a0a923ea6fbcf374b"
+    },
+    {
+      "variant": "candidate",
+      "path": "ml-dsa/src/signing.rs",
+      "sha256": "0d57aad2e9d3183ec0a1c8243a83e5130be1e90c7c819157d4bcd35e25dc6a33"
+    },
+    {
+      "variant": "candidate",
+      "path": "ml-dsa/src/verifying.rs",
+      "sha256": "966ac3d6f20db9c200755302fce29826211eed2a03a99a7c214fc12cad678eca"
+    }
+  ],
+  "old_and_new_algorithm_sources_equal_to_exact_commits": true
+}

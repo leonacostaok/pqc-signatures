@@ -1,0 +1,2546 @@
+{
+  "schema": "rust-pr-retained-losses-v1",
+  "input_hashes": {
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/results/rustcrypto/experiments/keygen-rust193-arm64.json": "04cc8e6744b6baa702aeb884f9248b2bfb1e154daec99fc22ceda43e980eb122",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/results/rustcrypto/experiments/tenkey-comparison.json": "742c27829af382e17c344dd36f4b473aa9a5b4f43ec9727b3ef41d663ae0d19d"
+  },
+  "summary": [
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "keygen",
+      "repeated_median": 1.173791032719654,
+      "losing_forks": 0,
+      "losing_pairs": 1,
+      "pair_count": 30,
+      "fork_min": 1.170763466119346,
+      "ten_key_total_ratio": 1.1437599124862314,
+      "ten_key_losses": 1,
+      "ten_key_min": 0.9836511816108491,
+      "ten_key_ratios": [
+        1.1673424752983075,
+        1.1616074342875795,
+        1.146521327014218,
+        1.156420889318789,
+        1.1647125914613519,
+        1.1656533333333334,
+        0.9836511816108491,
+        1.1719827920316255,
+        1.1742594720931805,
+        1.174444851735381
+      ]
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "keygen",
+      "repeated_median": 1.1733412494100748,
+      "losing_forks": 0,
+      "losing_pairs": 0,
+      "pair_count": 30,
+      "fork_min": 1.17087718437401,
+      "ten_key_total_ratio": 1.1910945478330046,
+      "ten_key_losses": 0,
+      "ten_key_min": 1.0005647598866865,
+      "ten_key_ratios": [
+        1.1678783873099803,
+        1.1669582961087293,
+        1.1617850096010918,
+        1.0005647598866865,
+        1.3308356845150913,
+        1.1667396015121239,
+        1.1819609674304088,
+        1.1618421052631578,
+        1.331384815055159,
+        1.265423339064863
+      ]
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "keygen",
+      "repeated_median": 1.1774658630284827,
+      "losing_forks": 0,
+      "losing_pairs": 0,
+      "pair_count": 30,
+      "fork_min": 1.174658456206116,
+      "ten_key_total_ratio": 1.1874983634564862,
+      "ten_key_losses": 0,
+      "ten_key_min": 1.1524695188045242,
+      "ten_key_ratios": [
+        1.1759391345696624,
+        1.174077578051088,
+        1.2217787653043366,
+        1.1859166910337862,
+        1.2067774824212139,
+        1.1950819047619048,
+        1.178915563954751,
+        1.1716955931122932,
+        1.1524695188045242,
+        1.2130668523358938
+      ]
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "keygen_sign",
+      "repeated_median": 1.0376261073832276,
+      "losing_forks": 0,
+      "losing_pairs": 0,
+      "pair_count": 30,
+      "fork_min": 1.0363147227472012,
+      "ten_key_total_ratio": 1.027346017581628,
+      "ten_key_losses": 2,
+      "ten_key_min": 0.6646321726031149,
+      "ten_key_ratios": [
+        1.051040625,
+        0.6646321726031149,
+        1.061409030504681,
+        1.0587786259541985,
+        1.0528514740471857,
+        0.9668121212121212,
+        1.1142383938760465,
+        1.050950485454135,
+        1.1853637688198155,
+        1.1034626364399664
+      ]
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "keygen_sign",
+      "repeated_median": 1.0379502153183566,
+      "losing_forks": 0,
+      "losing_pairs": 2,
+      "pair_count": 30,
+      "fork_min": 1.0317529844672806,
+      "ten_key_total_ratio": 1.0547625488346801,
+      "ten_key_losses": 0,
+      "ten_key_min": 1.015797629705922,
+      "ten_key_ratios": [
+        1.0804632733922586,
+        1.0663334598373588,
+        1.0762387155407451,
+        1.125230083304001,
+        1.0397229290359062,
+        1.0755796610169492,
+        1.0289773419244397,
+        1.0428164138071478,
+        1.015797629705922,
+        1.0829694323144106
+      ]
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "keygen_sign",
+      "repeated_median": 1.0666180417893618,
+      "losing_forks": 0,
+      "losing_pairs": 0,
+      "pair_count": 30,
+      "fork_min": 1.06097260614876,
+      "ten_key_total_ratio": 1.0618156436050092,
+      "ten_key_losses": 1,
+      "ten_key_min": 0.9408839779005524,
+      "ten_key_ratios": [
+        1.0468695936268382,
+        1.0677817927497377,
+        1.1125692521960517,
+        1.0524201072060664,
+        1.0266490658460057,
+        1.1092971776425014,
+        1.0744273435116074,
+        0.9408839779005524,
+        1.2913257750479474,
+        1.0539991588035218
+      ]
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "sign",
+      "repeated_median": 1.0014019026372902,
+      "losing_forks": 2,
+      "losing_pairs": 14,
+      "pair_count": 30,
+      "fork_min": 0.9223891103260683,
+      "ten_key_total_ratio": 1.0478822350723014,
+      "ten_key_losses": 6,
+      "ten_key_min": 0.9759068508435702,
+      "ten_key_ratios": [
+        1.0137123420346539,
+        1.0026990553306343,
+        0.9891646822714653,
+        0.9806484118291348,
+        0.9832748004561004,
+        0.9994788069073783,
+        0.9759068508435702,
+        0.9871530354002989,
+        1.5381613940637113,
+        1.058210097705649
+      ]
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "sign",
+      "repeated_median": 1.000452070445791,
+      "losing_forks": 2,
+      "losing_pairs": 13,
+      "pair_count": 30,
+      "fork_min": 0.9988036355735737,
+      "ten_key_total_ratio": 1.0095602626664992,
+      "ten_key_losses": 4,
+      "ten_key_min": 0.9784823645753213,
+      "ten_key_ratios": [
+        1.0042767857142858,
+        1.002174310091408,
+        0.997770032982147,
+        0.9857965693882977,
+        1.0197153067009825,
+        1.0439158279963403,
+        1.0019908291550053,
+        0.9784823645753213,
+        0.991600331243408,
+        1.1785977317308343
+      ]
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "sign",
+      "repeated_median": 1.000018708984485,
+      "losing_forks": 2,
+      "losing_pairs": 16,
+      "pair_count": 30,
+      "fork_min": 0.9976542884827055,
+      "ten_key_total_ratio": 1.0122176656336146,
+      "ten_key_losses": 2,
+      "ten_key_min": 0.9932015028256912,
+      "ten_key_ratios": [
+        1.0066553415713793,
+        0.9936789440886802,
+        1.0190700637730643,
+        1.0055455017508672,
+        1.0424834022130383,
+        1.0017541641644805,
+        1.000526953514496,
+        1.0072161033042157,
+        0.9932015028256912,
+        1.0041950573728262
+      ]
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "verify",
+      "repeated_median": 1.0002081136133865,
+      "losing_forks": 2,
+      "losing_pairs": 14,
+      "pair_count": 30,
+      "fork_min": 0.9968509296422441,
+      "ten_key_total_ratio": 1.0014767152196853,
+      "ten_key_losses": 6,
+      "ten_key_min": 0.9715114528885361,
+      "ten_key_ratios": [
+        1.0011844999717976,
+        1.0035011435186492,
+        0.9715114528885361,
+        0.9976971311247989,
+        0.9941675503711559,
+        1.0011546391752577,
+        0.9813684210526316,
+        0.9990228323561657,
+        1.0690245614035088,
+        0.9988479894673322
+      ]
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "verify",
+      "repeated_median": 0.9999035207322203,
+      "losing_forks": 3,
+      "losing_pairs": 15,
+      "pair_count": 30,
+      "fork_min": 0.9984671375616627,
+      "ten_key_total_ratio": 0.9981056121240824,
+      "ten_key_losses": 5,
+      "ten_key_min": 0.9787567506325767,
+      "ten_key_ratios": [
+        0.9975632868552863,
+        1.003245365152163,
+        0.9992051644921777,
+        0.9787567506325767,
+        1.0113398058252427,
+        1.0016,
+        0.9968711943793911,
+        0.9843582089552239,
+        1.005660779714247,
+        1.004735280693747
+      ]
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "verify",
+      "repeated_median": 1.000058022870466,
+      "losing_forks": 2,
+      "losing_pairs": 15,
+      "pair_count": 30,
+      "fork_min": 0.9968766776514171,
+      "ten_key_total_ratio": 1.100455496266309,
+      "ten_key_losses": 2,
+      "ten_key_min": 0.9258504695913045,
+      "ten_key_ratios": [
+        1.0010944625407165,
+        1.9396411092985317,
+        1.0130445001566908,
+        1.0151968955099488,
+        1.1356669401362138,
+        1.0053778001315432,
+        1.0010467996017056,
+        0.9258504695913045,
+        0.9929929540980209,
+        1.0091385999510203
+      ]
+    }
+  ],
+  "all_repeated_losing_pairs": [
+    {
+      "baseline": {
+        "cpu_ns": 203748000,
+        "elapsed_ns": 204631708,
+        "iterations": 544,
+        "ns_per_op": 376161.22794117645
+      },
+      "candidate": {
+        "cpu_ns": 203679000,
+        "elapsed_ns": 205623042,
+        "iterations": 544,
+        "ns_per_op": 377983.5330882353
+      },
+      "fork": 10,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 1,
+      "speedup": 0.9951788768887097
+    },
+    {
+      "baseline": {
+        "cpu_ns": 201914000,
+        "elapsed_ns": 202092666,
+        "iterations": 544,
+        "ns_per_op": 371493.8713235294
+      },
+      "candidate": {
+        "cpu_ns": 202181000,
+        "elapsed_ns": 202709166,
+        "iterations": 544,
+        "ns_per_op": 372627.14338235295
+      },
+      "fork": 10,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 3,
+      "speedup": 0.9969586969737717
+    },
+    {
+      "baseline": {
+        "cpu_ns": 201685000,
+        "elapsed_ns": 201979000,
+        "iterations": 544,
+        "ns_per_op": 371284.92647058825
+      },
+      "candidate": {
+        "cpu_ns": 201706000,
+        "elapsed_ns": 202022667,
+        "iterations": 544,
+        "ns_per_op": 371365.19669117645
+      },
+      "fork": 10,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 4,
+      "speedup": 0.9997838509873747
+    },
+    {
+      "baseline": {
+        "cpu_ns": 201959000,
+        "elapsed_ns": 202393333,
+        "iterations": 352,
+        "ns_per_op": 574981.0596590909
+      },
+      "candidate": {
+        "cpu_ns": 202943000,
+        "elapsed_ns": 203281250,
+        "iterations": 352,
+        "ns_per_op": 577503.5511363636
+      },
+      "fork": 10,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 2,
+      "speedup": 0.9956320762490393
+    },
+    {
+      "baseline": {
+        "cpu_ns": 202598000,
+        "elapsed_ns": 202930459,
+        "iterations": 352,
+        "ns_per_op": 576506.9857954546
+      },
+      "candidate": {
+        "cpu_ns": 202420000,
+        "elapsed_ns": 203073541,
+        "iterations": 352,
+        "ns_per_op": 576913.46875
+      },
+      "fork": 10,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 4,
+      "speedup": 0.9992954178112254
+    },
+    {
+      "baseline": {
+        "cpu_ns": 201733000,
+        "elapsed_ns": 201994667,
+        "iterations": 352,
+        "ns_per_op": 573848.4857954546
+      },
+      "candidate": {
+        "cpu_ns": 202787000,
+        "elapsed_ns": 203409417,
+        "iterations": 352,
+        "ns_per_op": 577867.6619318182
+      },
+      "fork": 10,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 5,
+      "speedup": 0.993044815619328
+    },
+    {
+      "baseline": {
+        "cpu_ns": 204646000,
+        "elapsed_ns": 204825458,
+        "iterations": 416,
+        "ns_per_op": 492368.88942307694
+      },
+      "candidate": {
+        "cpu_ns": 204687000,
+        "elapsed_ns": 204973625,
+        "iterations": 416,
+        "ns_per_op": 492725.0600961539
+      },
+      "fork": 10,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 3,
+      "speedup": 0.9992771411443789
+    },
+    {
+      "baseline": {
+        "cpu_ns": 204362000,
+        "elapsed_ns": 204509708,
+        "iterations": 416,
+        "ns_per_op": 491609.875
+      },
+      "candidate": {
+        "cpu_ns": 205130000,
+        "elapsed_ns": 205326791,
+        "iterations": 416,
+        "ns_per_op": 493574.01682692306
+      },
+      "fork": 10,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 4,
+      "speedup": 0.9960205728827662
+    },
+    {
+      "baseline": {
+        "cpu_ns": 199990000,
+        "elapsed_ns": 200320959,
+        "iterations": 5552,
+        "ns_per_op": 36080.86437319885
+      },
+      "candidate": {
+        "cpu_ns": 199814000,
+        "elapsed_ns": 200559375,
+        "iterations": 5520,
+        "ns_per_op": 36333.220108695656
+      },
+      "fork": 10,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 0,
+      "speedup": 0.9930544076538812
+    },
+    {
+      "baseline": {
+        "cpu_ns": 199833000,
+        "elapsed_ns": 200357083,
+        "iterations": 5536,
+        "ns_per_op": 36191.66961705202
+      },
+      "candidate": {
+        "cpu_ns": 199326000,
+        "elapsed_ns": 200156416,
+        "iterations": 5520,
+        "ns_per_op": 36260.220289855075
+      },
+      "fork": 10,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 1,
+      "speedup": 0.9981094799685419
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200235000,
+        "elapsed_ns": 200500333,
+        "iterations": 5552,
+        "ns_per_op": 36113.17237031701
+      },
+      "candidate": {
+        "cpu_ns": 200115000,
+        "elapsed_ns": 200576542,
+        "iterations": 5536,
+        "ns_per_op": 36231.31177745665
+      },
+      "fork": 10,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 3,
+      "speedup": 0.9967393008603914
+    },
+    {
+      "baseline": {
+        "cpu_ns": 199886000,
+        "elapsed_ns": 200260583,
+        "iterations": 5536,
+        "ns_per_op": 36174.23825867052
+      },
+      "candidate": {
+        "cpu_ns": 199589000,
+        "elapsed_ns": 200243583,
+        "iterations": 5520,
+        "ns_per_op": 36276.01141304348
+      },
+      "fork": 10,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 4,
+      "speedup": 0.9971944778268438
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200262000,
+        "elapsed_ns": 200434708,
+        "iterations": 3888,
+        "ns_per_op": 51552.13683127572
+      },
+      "candidate": {
+        "cpu_ns": 199895000,
+        "elapsed_ns": 200286000,
+        "iterations": 3872,
+        "ns_per_op": 51726.75619834711
+      },
+      "fork": 10,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 1,
+      "speedup": 0.9966241964525707
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200084000,
+        "elapsed_ns": 200246417,
+        "iterations": 3888,
+        "ns_per_op": 51503.70807613169
+      },
+      "candidate": {
+        "cpu_ns": 199853000,
+        "elapsed_ns": 200278250,
+        "iterations": 3872,
+        "ns_per_op": 51724.75464876033
+      },
+      "fork": 10,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 2,
+      "speedup": 0.995726483883207
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200513000,
+        "elapsed_ns": 200662291,
+        "iterations": 3904,
+        "ns_per_op": 51399.15240778688
+      },
+      "candidate": {
+        "cpu_ns": 199921000,
+        "elapsed_ns": 200054750,
+        "iterations": 3888,
+        "ns_per_op": 51454.411008230454
+      },
+      "fork": 10,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 4,
+      "speedup": 0.9989260667965913
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200046000,
+        "elapsed_ns": 200173833,
+        "iterations": 3888,
+        "ns_per_op": 51485.039351851854
+      },
+      "candidate": {
+        "cpu_ns": 200063000,
+        "elapsed_ns": 200179084,
+        "iterations": 3888,
+        "ns_per_op": 51486.38991769547
+      },
+      "fork": 10,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 5,
+      "speedup": 0.9999737684882203
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200147000,
+        "elapsed_ns": 200261916,
+        "iterations": 2688,
+        "ns_per_op": 74502.20089285714
+      },
+      "candidate": {
+        "cpu_ns": 200530000,
+        "elapsed_ns": 200764500,
+        "iterations": 2688,
+        "ns_per_op": 74689.17410714286
+      },
+      "fork": 10,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 0,
+      "speedup": 0.9974966490589722
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200766000,
+        "elapsed_ns": 201072041,
+        "iterations": 2688,
+        "ns_per_op": 74803.58668154762
+      },
+      "candidate": {
+        "cpu_ns": 200485000,
+        "elapsed_ns": 201067625,
+        "iterations": 2672,
+        "ns_per_op": 75249.85965568862
+      },
+      "fork": 10,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 1,
+      "speedup": 0.9940694510769461
+    },
+    {
+      "baseline": {
+        "cpu_ns": 199938000,
+        "elapsed_ns": 200058084,
+        "iterations": 2688,
+        "ns_per_op": 74426.37053571429
+      },
+      "candidate": {
+        "cpu_ns": 200747000,
+        "elapsed_ns": 201146833,
+        "iterations": 2688,
+        "ns_per_op": 74831.41108630953
+      },
+      "fork": 10,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 2,
+      "speedup": 0.9945872923587119
+    },
+    {
+      "baseline": {
+        "cpu_ns": 201024000,
+        "elapsed_ns": 201181834,
+        "iterations": 2704,
+        "ns_per_op": 74401.56582840237
+      },
+      "candidate": {
+        "cpu_ns": 200302000,
+        "elapsed_ns": 200462834,
+        "iterations": 2688,
+        "ns_per_op": 74576.94717261905
+      },
+      "fork": 10,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 4,
+      "speedup": 0.9976483169281422
+    },
+    {
+      "baseline": {
+        "cpu_ns": 206739000,
+        "elapsed_ns": 207290167,
+        "iterations": 256,
+        "ns_per_op": 809727.21484375
+      },
+      "candidate": {
+        "cpu_ns": 176128000,
+        "elapsed_ns": 203063833,
+        "iterations": 224,
+        "ns_per_op": 906534.96875
+      },
+      "fork": 11,
+      "operation": "keygen_sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 1,
+      "speedup": 0.893211230406549
+    },
+    {
+      "baseline": {
+        "cpu_ns": 206164000,
+        "elapsed_ns": 206464292,
+        "iterations": 256,
+        "ns_per_op": 806501.140625
+      },
+      "candidate": {
+        "cpu_ns": 194797000,
+        "elapsed_ns": 205238292,
+        "iterations": 240,
+        "ns_per_op": 855159.55
+      },
+      "fork": 11,
+      "operation": "keygen_sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 2,
+      "speedup": 0.9431001976473279
+    },
+    {
+      "baseline": {
+        "cpu_ns": 202954000,
+        "elapsed_ns": 203249916,
+        "iterations": 544,
+        "ns_per_op": 373621.16911764705
+      },
+      "candidate": {
+        "cpu_ns": 203283000,
+        "elapsed_ns": 203800125,
+        "iterations": 544,
+        "ns_per_op": 374632.58272058825
+      },
+      "fork": 11,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 2,
+      "speedup": 0.9973002519012193
+    },
+    {
+      "baseline": {
+        "cpu_ns": 202656000,
+        "elapsed_ns": 203039458,
+        "iterations": 352,
+        "ns_per_op": 576816.6420454546
+      },
+      "candidate": {
+        "cpu_ns": 203110000,
+        "elapsed_ns": 203433250,
+        "iterations": 352,
+        "ns_per_op": 577935.3693181818
+      },
+      "fork": 11,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 1,
+      "speedup": 0.9980642692381901
+    },
+    {
+      "baseline": {
+        "cpu_ns": 201640000,
+        "elapsed_ns": 201889666,
+        "iterations": 352,
+        "ns_per_op": 573550.1875
+      },
+      "candidate": {
+        "cpu_ns": 202430000,
+        "elapsed_ns": 203011833,
+        "iterations": 352,
+        "ns_per_op": 576738.1619318182
+      },
+      "fork": 11,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 4,
+      "speedup": 0.9944724059508392
+    },
+    {
+      "baseline": {
+        "cpu_ns": 201018000,
+        "elapsed_ns": 201173250,
+        "iterations": 352,
+        "ns_per_op": 571514.9147727273
+      },
+      "candidate": {
+        "cpu_ns": 201336000,
+        "elapsed_ns": 201567000,
+        "iterations": 352,
+        "ns_per_op": 572633.5227272727
+      },
+      "fork": 11,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 5,
+      "speedup": 0.9980465552396971
+    },
+    {
+      "baseline": {
+        "cpu_ns": 204836000,
+        "elapsed_ns": 205009541,
+        "iterations": 416,
+        "ns_per_op": 492811.3966346154
+      },
+      "candidate": {
+        "cpu_ns": 205886000,
+        "elapsed_ns": 206457958,
+        "iterations": 416,
+        "ns_per_op": 496293.16826923075
+      },
+      "fork": 11,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 0,
+      "speedup": 0.9929844457727321
+    },
+    {
+      "baseline": {
+        "cpu_ns": 204451000,
+        "elapsed_ns": 204670584,
+        "iterations": 416,
+        "ns_per_op": 491996.5961538461
+      },
+      "candidate": {
+        "cpu_ns": 205566000,
+        "elapsed_ns": 206112000,
+        "iterations": 416,
+        "ns_per_op": 495461.53846153844
+      },
+      "fork": 11,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 1,
+      "speedup": 0.9930066371681416
+    },
+    {
+      "baseline": {
+        "cpu_ns": 205189000,
+        "elapsed_ns": 205406250,
+        "iterations": 416,
+        "ns_per_op": 493765.02403846156
+      },
+      "candidate": {
+        "cpu_ns": 205434000,
+        "elapsed_ns": 205844167,
+        "iterations": 416,
+        "ns_per_op": 494817.7091346154
+      },
+      "fork": 11,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 2,
+      "speedup": 0.9978725799891138
+    },
+    {
+      "baseline": {
+        "cpu_ns": 204843000,
+        "elapsed_ns": 205001167,
+        "iterations": 416,
+        "ns_per_op": 492791.26682692306
+      },
+      "candidate": {
+        "cpu_ns": 204891000,
+        "elapsed_ns": 205144584,
+        "iterations": 416,
+        "ns_per_op": 493136.01923076925
+      },
+      "fork": 11,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 3,
+      "speedup": 0.9993008979462016
+    },
+    {
+      "baseline": {
+        "cpu_ns": 205386000,
+        "elapsed_ns": 205675417,
+        "iterations": 416,
+        "ns_per_op": 494412.0600961539
+      },
+      "candidate": {
+        "cpu_ns": 205683000,
+        "elapsed_ns": 206204125,
+        "iterations": 416,
+        "ns_per_op": 495682.99278846156
+      },
+      "fork": 11,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 4,
+      "speedup": 0.9974359969762971
+    },
+    {
+      "baseline": {
+        "cpu_ns": 199824000,
+        "elapsed_ns": 200102125,
+        "iterations": 5536,
+        "ns_per_op": 36145.6150650289
+      },
+      "candidate": {
+        "cpu_ns": 199735000,
+        "elapsed_ns": 200260334,
+        "iterations": 5520,
+        "ns_per_op": 36279.04601449276
+      },
+      "fork": 11,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 0,
+      "speedup": 0.9963220932157214
+    },
+    {
+      "baseline": {
+        "cpu_ns": 199892000,
+        "elapsed_ns": 200091667,
+        "iterations": 5568,
+        "ns_per_op": 35936.003412356324
+      },
+      "candidate": {
+        "cpu_ns": 199941000,
+        "elapsed_ns": 200276375,
+        "iterations": 5536,
+        "ns_per_op": 36177.09085982659
+      },
+      "fork": 11,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 2,
+      "speedup": 0.9933359083956089
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200354000,
+        "elapsed_ns": 200532958,
+        "iterations": 3888,
+        "ns_per_op": 51577.40689300412
+      },
+      "candidate": {
+        "cpu_ns": 200425000,
+        "elapsed_ns": 200615958,
+        "iterations": 3888,
+        "ns_per_op": 51598.75462962963
+      },
+      "fork": 11,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 2,
+      "speedup": 0.9995862741886167
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200343000,
+        "elapsed_ns": 200582917,
+        "iterations": 3888,
+        "ns_per_op": 51590.256430041154
+      },
+      "candidate": {
+        "cpu_ns": 199784000,
+        "elapsed_ns": 200108834,
+        "iterations": 3856,
+        "ns_per_op": 51895.444502074686
+      },
+      "fork": 11,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 3,
+      "speedup": 0.9941191741402017
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200283000,
+        "elapsed_ns": 200537583,
+        "iterations": 3888,
+        "ns_per_op": 51578.59645061728
+      },
+      "candidate": {
+        "cpu_ns": 198842000,
+        "elapsed_ns": 200327000,
+        "iterations": 3808,
+        "ns_per_op": 52606.88025210084
+      },
+      "fork": 11,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 5,
+      "speedup": 0.9804534350534407
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200474000,
+        "elapsed_ns": 200769959,
+        "iterations": 2672,
+        "ns_per_op": 75138.45770958083
+      },
+      "candidate": {
+        "cpu_ns": 200445000,
+        "elapsed_ns": 200895750,
+        "iterations": 2672,
+        "ns_per_op": 75185.53517964072
+      },
+      "fork": 11,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 0,
+      "speedup": 0.9993738493721246
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200321000,
+        "elapsed_ns": 200385625,
+        "iterations": 2672,
+        "ns_per_op": 74994.62013473053
+      },
+      "candidate": {
+        "cpu_ns": 200164000,
+        "elapsed_ns": 200514667,
+        "iterations": 2672,
+        "ns_per_op": 75042.91429640718
+      },
+      "fork": 11,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 1,
+      "speedup": 0.9993564460798272
+    },
+    {
+      "baseline": {
+        "cpu_ns": 186588000,
+        "elapsed_ns": 221108000,
+        "iterations": 480,
+        "ns_per_op": 460641.6666666667
+      },
+      "candidate": {
+        "cpu_ns": 159101000,
+        "elapsed_ns": 200617500,
+        "iterations": 368,
+        "ns_per_op": 545156.25
+      },
+      "fork": 12,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 0,
+      "speedup": 0.844971816184198
+    },
+    {
+      "baseline": {
+        "cpu_ns": 202114000,
+        "elapsed_ns": 202720042,
+        "iterations": 544,
+        "ns_per_op": 372647.13602941175
+      },
+      "candidate": {
+        "cpu_ns": 201377000,
+        "elapsed_ns": 205837167,
+        "iterations": 528,
+        "ns_per_op": 389843.1193181818
+      },
+      "fork": 12,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 1,
+      "speedup": 0.9558899915462274
+    },
+    {
+      "baseline": {
+        "cpu_ns": 202590000,
+        "elapsed_ns": 203392292,
+        "iterations": 544,
+        "ns_per_op": 373882.88970588235
+      },
+      "candidate": {
+        "cpu_ns": 185788000,
+        "elapsed_ns": 204022875,
+        "iterations": 480,
+        "ns_per_op": 425047.65625
+      },
+      "fork": 12,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 2,
+      "speedup": 0.8796258118547909
+    },
+    {
+      "baseline": {
+        "cpu_ns": 202121000,
+        "elapsed_ns": 202535583,
+        "iterations": 544,
+        "ns_per_op": 372308.0569852941
+      },
+      "candidate": {
+        "cpu_ns": 189949000,
+        "elapsed_ns": 201046500,
+        "iterations": 480,
+        "ns_per_op": 418846.875
+      },
+      "fork": 12,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 3,
+      "speedup": 0.8888882291059091
+    },
+    {
+      "baseline": {
+        "cpu_ns": 202575000,
+        "elapsed_ns": 203202750,
+        "iterations": 544,
+        "ns_per_op": 373534.4669117647
+      },
+      "candidate": {
+        "cpu_ns": 203115000,
+        "elapsed_ns": 204122709,
+        "iterations": 544,
+        "ns_per_op": 375225.5680147059
+      },
+      "fork": 12,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 5,
+      "speedup": 0.9954931080206268
+    },
+    {
+      "baseline": {
+        "cpu_ns": 204205000,
+        "elapsed_ns": 205152583,
+        "iterations": 352,
+        "ns_per_op": 582819.8380681818
+      },
+      "candidate": {
+        "cpu_ns": 204611000,
+        "elapsed_ns": 205409583,
+        "iterations": 352,
+        "ns_per_op": 583549.9517045454
+      },
+      "fork": 12,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 0,
+      "speedup": 0.9987488412359028
+    },
+    {
+      "baseline": {
+        "cpu_ns": 204954000,
+        "elapsed_ns": 205252333,
+        "iterations": 416,
+        "ns_per_op": 493395.03125
+      },
+      "candidate": {
+        "cpu_ns": 205563000,
+        "elapsed_ns": 206038459,
+        "iterations": 416,
+        "ns_per_op": 495284.75721153844
+      },
+      "fork": 12,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 0,
+      "speedup": 0.9961845666881056
+    },
+    {
+      "baseline": {
+        "cpu_ns": 205129000,
+        "elapsed_ns": 205387834,
+        "iterations": 416,
+        "ns_per_op": 493720.7548076923
+      },
+      "candidate": {
+        "cpu_ns": 205491000,
+        "elapsed_ns": 205760417,
+        "iterations": 416,
+        "ns_per_op": 494616.38701923075
+      },
+      "fork": 12,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 2,
+      "speedup": 0.9981892387008527
+    },
+    {
+      "baseline": {
+        "cpu_ns": 205249000,
+        "elapsed_ns": 205583833,
+        "iterations": 416,
+        "ns_per_op": 494191.90625
+      },
+      "candidate": {
+        "cpu_ns": 206113000,
+        "elapsed_ns": 207016125,
+        "iterations": 416,
+        "ns_per_op": 497634.9158653846
+      },
+      "fork": 12,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 4,
+      "speedup": 0.9930812539361366
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200027000,
+        "elapsed_ns": 200295292,
+        "iterations": 5568,
+        "ns_per_op": 35972.573994252874
+      },
+      "candidate": {
+        "cpu_ns": 199812000,
+        "elapsed_ns": 200186542,
+        "iterations": 5552,
+        "ns_per_op": 36056.6538184438
+      },
+      "fork": 12,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 1,
+      "speedup": 0.9976681190491415
+    },
+    {
+      "baseline": {
+        "cpu_ns": 199781000,
+        "elapsed_ns": 200185958,
+        "iterations": 5552,
+        "ns_per_op": 36056.54863112392
+      },
+      "candidate": {
+        "cpu_ns": 199560000,
+        "elapsed_ns": 200211500,
+        "iterations": 5536,
+        "ns_per_op": 36165.37210982659
+      },
+      "fork": 12,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 2,
+      "speedup": 0.9969909481818079
+    },
+    {
+      "baseline": {
+        "cpu_ns": 199651000,
+        "elapsed_ns": 200030000,
+        "iterations": 5536,
+        "ns_per_op": 36132.58670520231
+      },
+      "candidate": {
+        "cpu_ns": 192630000,
+        "elapsed_ns": 200080792,
+        "iterations": 5216,
+        "ns_per_op": 38359.04754601227
+      },
+      "fork": 12,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 3,
+      "speedup": 0.9419573481813049
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200028000,
+        "elapsed_ns": 200289333,
+        "iterations": 5568,
+        "ns_per_op": 35971.503771551725
+      },
+      "candidate": {
+        "cpu_ns": 200005000,
+        "elapsed_ns": 200372833,
+        "iterations": 5552,
+        "ns_per_op": 36090.20767291066
+      },
+      "fork": 12,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 4,
+      "speedup": 0.9967109111026802
+    },
+    {
+      "baseline": {
+        "cpu_ns": 199945000,
+        "elapsed_ns": 200135583,
+        "iterations": 5568,
+        "ns_per_op": 35943.890625
+      },
+      "candidate": {
+        "cpu_ns": 199710000,
+        "elapsed_ns": 200045541,
+        "iterations": 5536,
+        "ns_per_op": 36135.393966763004
+      },
+      "fork": 12,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 5,
+      "speedup": 0.9947003942467281
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200181000,
+        "elapsed_ns": 200330916,
+        "iterations": 3888,
+        "ns_per_op": 51525.44135802469
+      },
+      "candidate": {
+        "cpu_ns": 200165000,
+        "elapsed_ns": 200386208,
+        "iterations": 3888,
+        "ns_per_op": 51539.66255144033
+      },
+      "fork": 12,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 0,
+      "speedup": 0.9997240728264093
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200374000,
+        "elapsed_ns": 200454375,
+        "iterations": 3904,
+        "ns_per_op": 51345.895235655735
+      },
+      "candidate": {
+        "cpu_ns": 199974000,
+        "elapsed_ns": 200191334,
+        "iterations": 3888,
+        "ns_per_op": 51489.54063786008
+      },
+      "fork": 12,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 2,
+      "speedup": 0.9972102022969161
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200176000,
+        "elapsed_ns": 200373292,
+        "iterations": 3888,
+        "ns_per_op": 51536.34053497943
+      },
+      "candidate": {
+        "cpu_ns": 200000000,
+        "elapsed_ns": 200533291,
+        "iterations": 3872,
+        "ns_per_op": 51790.62267561984
+      },
+      "fork": 12,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 3,
+      "speedup": 0.9950901895458362
+    },
+    {
+      "baseline": {
+        "cpu_ns": 199920000,
+        "elapsed_ns": 200047208,
+        "iterations": 3888,
+        "ns_per_op": 51452.47119341564
+      },
+      "candidate": {
+        "cpu_ns": 199301000,
+        "elapsed_ns": 200004292,
+        "iterations": 3856,
+        "ns_per_op": 51868.33298755187
+      },
+      "fork": 12,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 4,
+      "speedup": 0.9919823566676793
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200228000,
+        "elapsed_ns": 200376500,
+        "iterations": 2688,
+        "ns_per_op": 74544.82886904762
+      },
+      "candidate": {
+        "cpu_ns": 200138000,
+        "elapsed_ns": 200391791,
+        "iterations": 2688,
+        "ns_per_op": 74550.51748511905
+      },
+      "fork": 12,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 2,
+      "speedup": 0.9999236944790817
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200156000,
+        "elapsed_ns": 200176208,
+        "iterations": 2688,
+        "ns_per_op": 74470.31547619047
+      },
+      "candidate": {
+        "cpu_ns": 200221000,
+        "elapsed_ns": 200508292,
+        "iterations": 2688,
+        "ns_per_op": 74593.85863095238
+      },
+      "fork": 12,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 3,
+      "speedup": 0.9983437891935162
+    },
+    {
+      "baseline": {
+        "cpu_ns": 197130000,
+        "elapsed_ns": 200326583,
+        "iterations": 1536,
+        "ns_per_op": 130420.95247395833
+      },
+      "candidate": {
+        "cpu_ns": 159953000,
+        "elapsed_ns": 200914875,
+        "iterations": 1392,
+        "ns_per_op": 144335.39870689655
+      },
+      "fork": 13,
+      "operation": "keygen",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 5,
+      "speedup": 0.9035964402523705
+    },
+    {
+      "baseline": {
+        "cpu_ns": 201295000,
+        "elapsed_ns": 201606459,
+        "iterations": 544,
+        "ns_per_op": 370600.10845588235
+      },
+      "candidate": {
+        "cpu_ns": 203139000,
+        "elapsed_ns": 203512834,
+        "iterations": 544,
+        "ns_per_op": 374104.4742647059
+      },
+      "fork": 13,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 0,
+      "speedup": 0.9906326546462421
+    },
+    {
+      "baseline": {
+        "cpu_ns": 201505000,
+        "elapsed_ns": 201674250,
+        "iterations": 544,
+        "ns_per_op": 370724.7242647059
+      },
+      "candidate": {
+        "cpu_ns": 201434000,
+        "elapsed_ns": 201799334,
+        "iterations": 544,
+        "ns_per_op": 370954.6580882353
+      },
+      "fork": 13,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 2,
+      "speedup": 0.9993801565271767
+    },
+    {
+      "baseline": {
+        "cpu_ns": 201116000,
+        "elapsed_ns": 201320917,
+        "iterations": 544,
+        "ns_per_op": 370075.2150735294
+      },
+      "candidate": {
+        "cpu_ns": 201678000,
+        "elapsed_ns": 201822750,
+        "iterations": 544,
+        "ns_per_op": 370997.70220588235
+      },
+      "fork": 13,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 3,
+      "speedup": 0.9975134963724357
+    },
+    {
+      "baseline": {
+        "cpu_ns": 202038000,
+        "elapsed_ns": 202741417,
+        "iterations": 544,
+        "ns_per_op": 372686.42830882355
+      },
+      "candidate": {
+        "cpu_ns": 203787000,
+        "elapsed_ns": 204226833,
+        "iterations": 544,
+        "ns_per_op": 375416.9724264706
+      },
+      "fork": 13,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 4,
+      "speedup": 0.9927266364650525
+    },
+    {
+      "baseline": {
+        "cpu_ns": 202194000,
+        "elapsed_ns": 202667917,
+        "iterations": 352,
+        "ns_per_op": 575761.1278409091
+      },
+      "candidate": {
+        "cpu_ns": 202609000,
+        "elapsed_ns": 203118958,
+        "iterations": 352,
+        "ns_per_op": 577042.4943181818
+      },
+      "fork": 13,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 1,
+      "speedup": 0.9977794244100051
+    },
+    {
+      "baseline": {
+        "cpu_ns": 202400000,
+        "elapsed_ns": 202790167,
+        "iterations": 352,
+        "ns_per_op": 576108.4289772727
+      },
+      "candidate": {
+        "cpu_ns": 202201000,
+        "elapsed_ns": 202825084,
+        "iterations": 352,
+        "ns_per_op": 576207.625
+      },
+      "fork": 13,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 2,
+      "speedup": 0.9998278467371422
+    },
+    {
+      "baseline": {
+        "cpu_ns": 202891000,
+        "elapsed_ns": 203569750,
+        "iterations": 352,
+        "ns_per_op": 578323.1534090909
+      },
+      "candidate": {
+        "cpu_ns": 204444000,
+        "elapsed_ns": 205759208,
+        "iterations": 352,
+        "ns_per_op": 584543.2045454546
+      },
+      "fork": 13,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 3,
+      "speedup": 0.9893591250603958
+    },
+    {
+      "baseline": {
+        "cpu_ns": 202022000,
+        "elapsed_ns": 202607792,
+        "iterations": 352,
+        "ns_per_op": 575590.3181818182
+      },
+      "candidate": {
+        "cpu_ns": 171636000,
+        "elapsed_ns": 206812292,
+        "iterations": 272,
+        "ns_per_op": 760339.3088235294
+      },
+      "fork": 13,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 5,
+      "speedup": 0.7570177044672691
+    },
+    {
+      "baseline": {
+        "cpu_ns": 204725000,
+        "elapsed_ns": 204923791,
+        "iterations": 416,
+        "ns_per_op": 492605.26682692306
+      },
+      "candidate": {
+        "cpu_ns": 205308000,
+        "elapsed_ns": 205701708,
+        "iterations": 416,
+        "ns_per_op": 494475.2596153846
+      },
+      "fork": 13,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 0,
+      "speedup": 0.9962182278039227
+    },
+    {
+      "baseline": {
+        "cpu_ns": 204428000,
+        "elapsed_ns": 204542500,
+        "iterations": 416,
+        "ns_per_op": 491688.70192307694
+      },
+      "candidate": {
+        "cpu_ns": 205306000,
+        "elapsed_ns": 205762875,
+        "iterations": 416,
+        "ns_per_op": 494622.29567307694
+      },
+      "fork": 13,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 1,
+      "speedup": 0.9940690224123278
+    },
+    {
+      "baseline": {
+        "cpu_ns": 204864000,
+        "elapsed_ns": 205084125,
+        "iterations": 416,
+        "ns_per_op": 492990.6850961539
+      },
+      "candidate": {
+        "cpu_ns": 206594000,
+        "elapsed_ns": 206948625,
+        "iterations": 416,
+        "ns_per_op": 497472.65625
+      },
+      "fork": 13,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 3,
+      "speedup": 0.9909905175741082
+    },
+    {
+      "baseline": {
+        "cpu_ns": 204763000,
+        "elapsed_ns": 204885042,
+        "iterations": 416,
+        "ns_per_op": 492512.1201923077
+      },
+      "candidate": {
+        "cpu_ns": 204805000,
+        "elapsed_ns": 205038708,
+        "iterations": 416,
+        "ns_per_op": 492881.5096153846
+      },
+      "fork": 13,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 5,
+      "speedup": 0.9992505512666418
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200372000,
+        "elapsed_ns": 200541916,
+        "iterations": 5584,
+        "ns_per_op": 35913.66690544412
+      },
+      "candidate": {
+        "cpu_ns": 200237000,
+        "elapsed_ns": 200481333,
+        "iterations": 5568,
+        "ns_per_op": 36005.98653017241
+      },
+      "fork": 13,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 0,
+      "speedup": 0.9974359923550233
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200298000,
+        "elapsed_ns": 200449292,
+        "iterations": 5584,
+        "ns_per_op": 35897.079512893986
+      },
+      "candidate": {
+        "cpu_ns": 200017000,
+        "elapsed_ns": 200403500,
+        "iterations": 5568,
+        "ns_per_op": 35992.00790229885
+      },
+      "fork": 13,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 5,
+      "speedup": 0.9973625147654294
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200189000,
+        "elapsed_ns": 200757833,
+        "iterations": 3872,
+        "ns_per_op": 51848.6138946281
+      },
+      "candidate": {
+        "cpu_ns": 200041000,
+        "elapsed_ns": 200873042,
+        "iterations": 3840,
+        "ns_per_op": 52310.68802083333
+      },
+      "fork": 13,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 4,
+      "speedup": 0.9911667358299473
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200567000,
+        "elapsed_ns": 200847125,
+        "iterations": 2688,
+        "ns_per_op": 74719.91257440476
+      },
+      "candidate": {
+        "cpu_ns": 199859000,
+        "elapsed_ns": 200599167,
+        "iterations": 2672,
+        "ns_per_op": 75074.53854790419
+      },
+      "fork": 13,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 0,
+      "speedup": 0.9952763482752126
+    },
+    {
+      "baseline": {
+        "cpu_ns": 199303000,
+        "elapsed_ns": 200567250,
+        "iterations": 2656,
+        "ns_per_op": 75514.77786144578
+      },
+      "candidate": {
+        "cpu_ns": 195654000,
+        "elapsed_ns": 200319875,
+        "iterations": 2544,
+        "ns_per_op": 78742.08922955974
+      },
+      "fork": 13,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 3,
+      "speedup": 0.9590141511396114
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200772000,
+        "elapsed_ns": 201131875,
+        "iterations": 2688,
+        "ns_per_op": 74825.84635416667
+      },
+      "candidate": {
+        "cpu_ns": 199694000,
+        "elapsed_ns": 200239625,
+        "iterations": 2672,
+        "ns_per_op": 74939.97941616767
+      },
+      "fork": 13,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 4,
+      "speedup": 0.9984770070276217
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200294000,
+        "elapsed_ns": 200576208,
+        "iterations": 2688,
+        "ns_per_op": 74619.125
+      },
+      "candidate": {
+        "cpu_ns": 200157000,
+        "elapsed_ns": 200554125,
+        "iterations": 2672,
+        "ns_per_op": 75057.68151197604
+      },
+      "fork": 13,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 5,
+      "speedup": 0.9941570735580733
+    },
+    {
+      "baseline": {
+        "cpu_ns": 202135000,
+        "elapsed_ns": 202650917,
+        "iterations": 544,
+        "ns_per_op": 372520.0680147059
+      },
+      "candidate": {
+        "cpu_ns": 202409000,
+        "elapsed_ns": 202819917,
+        "iterations": 544,
+        "ns_per_op": 372830.72977941175
+      },
+      "fork": 14,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 3,
+      "speedup": 0.9991667485003458
+    },
+    {
+      "baseline": {
+        "cpu_ns": 201224000,
+        "elapsed_ns": 201442750,
+        "iterations": 352,
+        "ns_per_op": 572280.5397727273
+      },
+      "candidate": {
+        "cpu_ns": 201501000,
+        "elapsed_ns": 201668542,
+        "iterations": 352,
+        "ns_per_op": 572921.9943181818
+      },
+      "fork": 14,
+      "operation": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 3,
+      "speedup": 0.9988803806594686
+    },
+    {
+      "baseline": {
+        "cpu_ns": 201254000,
+        "elapsed_ns": 201382125,
+        "iterations": 352,
+        "ns_per_op": 572108.3096590909
+      },
+      "candidate": {
+        "cpu_ns": 201876000,
+        "elapsed_ns": 202081708,
+        "iterations": 352,
+        "ns_per_op": 574095.7613636364
+      },
+      "fork": 14,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 4,
+      "speedup": 0.9965381181358582
+    },
+    {
+      "baseline": {
+        "cpu_ns": 204512000,
+        "elapsed_ns": 204605583,
+        "iterations": 416,
+        "ns_per_op": 491840.34375
+      },
+      "candidate": {
+        "cpu_ns": 204693000,
+        "elapsed_ns": 204946833,
+        "iterations": 416,
+        "ns_per_op": 492660.65625
+      },
+      "fork": 14,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 0,
+      "speedup": 0.9983349340167652
+    },
+    {
+      "baseline": {
+        "cpu_ns": 205019000,
+        "elapsed_ns": 205447958,
+        "iterations": 416,
+        "ns_per_op": 493865.2836538461
+      },
+      "candidate": {
+        "cpu_ns": 198959000,
+        "elapsed_ns": 200096208,
+        "iterations": 400,
+        "ns_per_op": 500240.52
+      },
+      "fork": 14,
+      "operation": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 4,
+      "speedup": 0.987255657846042
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200338000,
+        "elapsed_ns": 200479958,
+        "iterations": 5584,
+        "ns_per_op": 35902.571275071634
+      },
+      "candidate": {
+        "cpu_ns": 199984000,
+        "elapsed_ns": 200255709,
+        "iterations": 5568,
+        "ns_per_op": 35965.464978448275
+      },
+      "fork": 14,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-44",
+      "round": 0,
+      "speedup": 0.9982512751214442
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200540000,
+        "elapsed_ns": 200633125,
+        "iterations": 3904,
+        "ns_per_op": 51391.68160860656
+      },
+      "candidate": {
+        "cpu_ns": 199924000,
+        "elapsed_ns": 200135333,
+        "iterations": 3888,
+        "ns_per_op": 51475.137088477364
+      },
+      "fork": 14,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 0,
+      "speedup": 0.9983787225330287
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200595000,
+        "elapsed_ns": 200619000,
+        "iterations": 3904,
+        "ns_per_op": 51388.063524590165
+      },
+      "candidate": {
+        "cpu_ns": 200121000,
+        "elapsed_ns": 200349125,
+        "iterations": 3888,
+        "ns_per_op": 51530.124742798354
+      },
+      "fork": 14,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 3,
+      "speedup": 0.9972431423576548
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200597000,
+        "elapsed_ns": 200670334,
+        "iterations": 3904,
+        "ns_per_op": 51401.21260245902
+      },
+      "candidate": {
+        "cpu_ns": 200122000,
+        "elapsed_ns": 200438875,
+        "iterations": 3888,
+        "ns_per_op": 51553.20859053498
+      },
+      "fork": 14,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-65",
+      "round": 5,
+      "speedup": 0.9970516677384098
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200215000,
+        "elapsed_ns": 200492542,
+        "iterations": 2688,
+        "ns_per_op": 74587.99925595238
+      },
+      "candidate": {
+        "cpu_ns": 200513000,
+        "elapsed_ns": 200856250,
+        "iterations": 2688,
+        "ns_per_op": 74723.30729166667
+      },
+      "fork": 14,
+      "operation": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 0,
+      "speedup": 0.9981892124342657
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200010000,
+        "elapsed_ns": 200102417,
+        "iterations": 2688,
+        "ns_per_op": 74442.86346726191
+      },
+      "candidate": {
+        "cpu_ns": 199988000,
+        "elapsed_ns": 200221542,
+        "iterations": 2688,
+        "ns_per_op": 74487.18080357143
+      },
+      "fork": 14,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 3,
+      "speedup": 0.9994050340497327
+    },
+    {
+      "baseline": {
+        "cpu_ns": 200473000,
+        "elapsed_ns": 200718250,
+        "iterations": 2688,
+        "ns_per_op": 74671.96800595238
+      },
+      "candidate": {
+        "cpu_ns": 200449000,
+        "elapsed_ns": 200815875,
+        "iterations": 2688,
+        "ns_per_op": 74708.28683035714
+      },
+      "fork": 14,
+      "operation": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "parameter": "ML-DSA-87",
+      "round": 5,
+      "speedup": 0.9995138581548894
+    }
+  ],
+  "all_ten_key_losing_observations": [
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "keygen",
+      "index": 6,
+      "ratio": 0.9836511816108491
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "sign",
+      "index": 2,
+      "ratio": 0.9891646822714653
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "sign",
+      "index": 3,
+      "ratio": 0.9806484118291348
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "sign",
+      "index": 4,
+      "ratio": 0.9832748004561004
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "sign",
+      "index": 5,
+      "ratio": 0.9994788069073783
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "sign",
+      "index": 6,
+      "ratio": 0.9759068508435702
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "sign",
+      "index": 7,
+      "ratio": 0.9871530354002989
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "verify",
+      "index": 2,
+      "ratio": 0.9715114528885361
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "verify",
+      "index": 3,
+      "ratio": 0.9976971311247989
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "verify",
+      "index": 4,
+      "ratio": 0.9941675503711559
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "verify",
+      "index": 6,
+      "ratio": 0.9813684210526316
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "verify",
+      "index": 7,
+      "ratio": 0.9990228323561657
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "verify",
+      "index": 9,
+      "ratio": 0.9988479894673322
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "keygen_sign",
+      "index": 1,
+      "ratio": 0.6646321726031149
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "keygen_sign",
+      "index": 5,
+      "ratio": 0.9668121212121212
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "sign",
+      "index": 2,
+      "ratio": 0.997770032982147
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "sign",
+      "index": 3,
+      "ratio": 0.9857965693882977
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "sign",
+      "index": 7,
+      "ratio": 0.9784823645753213
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "sign",
+      "index": 8,
+      "ratio": 0.991600331243408
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "verify",
+      "index": 0,
+      "ratio": 0.9975632868552863
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "verify",
+      "index": 2,
+      "ratio": 0.9992051644921777
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "verify",
+      "index": 3,
+      "ratio": 0.9787567506325767
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "verify",
+      "index": 6,
+      "ratio": 0.9968711943793911
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "verify",
+      "index": 7,
+      "ratio": 0.9843582089552239
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "sign",
+      "index": 1,
+      "ratio": 0.9936789440886802
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "sign",
+      "index": 8,
+      "ratio": 0.9932015028256912
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "verify",
+      "index": 7,
+      "ratio": 0.9258504695913045
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "verify",
+      "index": 8,
+      "ratio": 0.9929929540980209
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "keygen_sign",
+      "index": 7,
+      "ratio": 0.9408839779005524
+    }
+  ],
+  "exclusions": "none; ratios below one favor original; existing-key controls do not establish changes in unchanged operation paths"
+}

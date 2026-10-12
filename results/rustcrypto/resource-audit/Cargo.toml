@@ -1,0 +1,15 @@
+[package]
+name="mldsa-resource-audit"
+version="0.0.0"
+edition="2024"
+[workspace]
+exclude=["baseline","candidate"]
+[features]
+allocation=["baseline/alloc","candidate/alloc"]
+zeroization=["baseline/zeroize","candidate/zeroize"]
+library-default=["baseline/default","candidate/default"]
+[dependencies]
+baseline={package="ml-dsa-baseline",path="baseline/ml-dsa",default-features=false}
+candidate={package="ml-dsa-candidate",path="candidate/ml-dsa",default-features=false}
+serde_json="=1.0.150"
+sha2="=0.10.9"
