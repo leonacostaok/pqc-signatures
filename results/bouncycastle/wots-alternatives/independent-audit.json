@@ -1,0 +1,12 @@
+{
+  "audit": "passed",
+  "processes": 288,
+  "rows": {
+    "bench": 1440,
+    "allocation": 1440
+  },
+  "cells": 72,
+  "checks_per_variant": 234,
+  "variants": 6,
+  "no_overlapping_recorded_processes": true
+}
