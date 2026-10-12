@@ -15,7 +15,7 @@ Performance experiments for post-quantum signatures in noble (TypeScript/JavaScr
 
 Compare each patch with its own baseline. The reports identify hardware, versions, API boundaries and measurement limitations; they do not establish a universally fastest library. Lower allocation does not necessarily mean lower peak memory or faster execution.
 
-## Testing and AI assistance
+## AI-assisted testing disclosure
 
 This is supporting research and testing work developed with AI assistance, including test harnesses, experiments, analysis and documentation. Source revisions, scripts, raw outputs and checks are retained for independent review and reproduction. AI-assisted results are not an independent cryptographic security audit or certification.
 
