@@ -1,0 +1,5 @@
+{
+  "authorization": "Root exclusive grant 2026-10-12T12:45:57.316139+00:00; plan f8ce41ceb38e7fd497a25da030e247c87761b4749645b9b54799b4ca145ffefe; 384 selected followup processes once; retain all outputs and interruptions",
+  "started_at": "2026-10-12T12:46:27.046305+00:00",
+  "plan_sha256": "f8ce41ceb38e7fd497a25da030e247c87761b4749645b9b54799b4ca145ffefe"
+}

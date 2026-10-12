@@ -1,0 +1,3222 @@
+{
+  "cells": [
+    {
+      "mode": "bench",
+      "parameter": "sha2_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            2693729.1,
+            2774166.5
+          ],
+          "candidate_process_means": [
+            2800654.3,
+            2695762.4
+          ],
+          "paired_change_percent": [
+            3.969411771955822,
+            -2.8262218579886977
+          ],
+          "aggregate_change_percent": 0.5216101785118221
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            2697900,
+            2777800
+          ],
+          "candidate_process_means": [
+            2772700,
+            2700600
+          ],
+          "paired_change_percent": [
+            2.7725267800882136,
+            -2.779177766577867
+          ],
+          "aggregate_change_percent": -0.04383001260113151
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            2771366.7,
+            2752125
+          ],
+          "candidate_process_means": [
+            2691766.7,
+            2677945.8
+          ],
+          "paired_change_percent": [
+            -2.872229070227339,
+            -2.6953426897397548
+          ],
+          "aggregate_change_percent": -2.784093981710889
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            2775000,
+            2743200
+          ],
+          "candidate_process_means": [
+            2698200,
+            2681500
+          ],
+          "paired_change_percent": [
+            -2.7675675675675637,
+            -2.2491980169145553
+          ],
+          "aggregate_change_percent": -2.5098764089739434
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            2758858.2,
+            2817766.5
+          ],
+          "candidate_process_means": [
+            2700337.6,
+            2738462.4
+          ],
+          "paired_change_percent": [
+            -2.1211891209196643,
+            -2.8144312170650054
+          ],
+          "aggregate_change_percent": -2.471471677123982
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            2760600,
+            2817500
+          ],
+          "candidate_process_means": [
+            2702600,
+            2733800
+          ],
+          "paired_change_percent": [
+            -2.100992537854085,
+            -2.970718722271515
+          ],
+          "aggregate_change_percent": -2.540291497104752
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            2789041.8,
+            2647958.2
+          ],
+          "candidate_process_means": [
+            2721283.5,
+            2739425.1
+          ],
+          "paired_change_percent": [
+            -2.4294472746876683,
+            3.454242593406498
+          ],
+          "aggregate_change_percent": 0.43606032738641165
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            2793100,
+            2652200
+          ],
+          "candidate_process_means": [
+            2723700,
+            2744500
+          ],
+          "paired_change_percent": [
+            -2.4846944255486725,
+            3.480129703642265
+          ],
+          "aggregate_change_percent": 0.42054615907296533
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            69068341.6,
+            69765066.7
+          ],
+          "candidate_process_means": [
+            69299712.4,
+            69505066.6
+          ],
+          "paired_change_percent": [
+            0.33498820825894615,
+            -0.372679497488404
+          ],
+          "aggregate_change_percent": -0.02062133340280381
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            68840700,
+            69391000
+          ],
+          "candidate_process_means": [
+            68969600,
+            69168500
+          ],
+          "paired_change_percent": [
+            0.1872438833422585,
+            -0.3206467697540072
+          ],
+          "aggregate_change_percent": -0.06771239882024105
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            69521475,
+            69695991.7
+          ],
+          "candidate_process_means": [
+            69584783.5,
+            69209737.4
+          ],
+          "paired_change_percent": [
+            0.09106322902383557,
+            -0.697679002966245
+          ],
+          "aggregate_change_percent": -0.3038022527097062
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            69227900,
+            69288400
+          ],
+          "candidate_process_means": [
+            69180200,
+            68939500
+          ],
+          "paired_change_percent": [
+            -0.06890285564057352,
+            -0.503547491354972
+          ],
+          "aggregate_change_percent": -0.28632009373625866
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            81868654.3,
+            68901320.9
+          ],
+          "candidate_process_means": [
+            69493316.6,
+            69010620.8
+          ],
+          "paired_change_percent": [
+            -15.116087843158798,
+            0.15863251759515862
+          ],
+          "aggregate_change_percent": -8.135597146400553
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            71350900,
+            68784700
+          ],
+          "candidate_process_means": [
+            69040900,
+            68795100
+          ],
+          "paired_change_percent": [
+            -3.2375204797697066,
+            0.015119641431882158
+          ],
+          "aggregate_change_percent": -1.6409820202717973
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            72284391.5,
+            68824545.9
+          ],
+          "candidate_process_means": [
+            69352696.1,
+            69899487.5
+          ],
+          "paired_change_percent": [
+            -4.055779317171126,
+            1.561857889424867
+          ],
+          "aggregate_change_percent": -1.3158300489051866
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            69883400,
+            68686400
+          ],
+          "candidate_process_means": [
+            69063700,
+            69458800
+          ],
+          "paired_change_percent": [
+            -1.1729538059109923,
+            1.1245312026834986
+          ],
+          "aggregate_change_percent": -0.0341344217859918
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            3947241.6,
+            3991899.9
+          ],
+          "candidate_process_means": [
+            4485216.9,
+            4421316.8
+          ],
+          "paired_change_percent": [
+            13.6291454771859,
+            10.75720611130555
+          ],
+          "aggregate_change_percent": 12.18509835099928
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            3951600,
+            3996800
+          ],
+          "candidate_process_means": [
+            4490300,
+            4398600
+          ],
+          "paired_change_percent": [
+            13.6324526773965,
+            10.053042433947157
+          ],
+          "aggregate_change_percent": 11.832570076996628
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            4094741.7,
+            3970345.6
+          ],
+          "candidate_process_means": [
+            4459891.5,
+            4111120.6
+          ],
+          "paired_change_percent": [
+            8.917529523290813,
+            3.545661113229026
+          ],
+          "aggregate_change_percent": 6.273023231874975
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            4095000,
+            3976100
+          ],
+          "candidate_process_means": [
+            4464000,
+            4117200
+          ],
+          "paired_change_percent": [
+            9.010989010989,
+            3.548703503433015
+          ],
+          "aggregate_change_percent": 6.320080286454144
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            4127783.5,
+            3960525
+          ],
+          "candidate_process_means": [
+            4283400.1,
+            3948162.7
+          ],
+          "paired_change_percent": [
+            3.769979699758963,
+            -0.31213791100926924
+          ],
+          "aggregate_change_percent": 1.7711280424083764
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            4133200,
+            3964600
+          ],
+          "candidate_process_means": [
+            4290000,
+            3952600
+          ],
+          "paired_change_percent": [
+            3.7936707635730205,
+            -0.30267870655299456
+          ],
+          "aggregate_change_percent": 1.7881399886388927
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            4431629.1,
+            4167141.4
+          ],
+          "candidate_process_means": [
+            4005204,
+            4071520.8
+          ],
+          "paired_change_percent": [
+            -9.62231022447252,
+            -2.2946329586992165
+          ],
+          "aggregate_change_percent": -6.071166802277139
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            4399600,
+            4151700
+          ],
+          "candidate_process_means": [
+            4001400,
+            4045300
+          ],
+          "paired_change_percent": [
+            -9.050822802072911,
+            -2.562805597706963
+          ],
+          "aggregate_change_percent": -5.900857179610119
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            6694504.3,
+            6684254
+          ],
+          "candidate_process_means": [
+            6764850,
+            7191604.2
+          ],
+          "paired_change_percent": [
+            1.0507977416640113,
+            7.590229216304478
+          ],
+          "aggregate_change_percent": 4.3180083461108465
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            6691900,
+            6689500
+          ],
+          "candidate_process_means": [
+            6718200,
+            7128800
+          ],
+          "paired_change_percent": [
+            0.3930124478847663,
+            6.567007997608187
+          ],
+          "aggregate_change_percent": 3.4794565591044213
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            6847892,
+            6635362.6
+          ],
+          "candidate_process_means": [
+            7146779,
+            7192895.9
+          ],
+          "paired_change_percent": [
+            4.364657036063058,
+            8.402454147720583
+          ],
+          "aggregate_change_percent": 6.3517327633938025
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            6816800,
+            6636200
+          ],
+          "candidate_process_means": [
+            7146000,
+            7106200
+          ],
+          "paired_change_percent": [
+            4.829245393733128,
+            7.082366414514341
+          ],
+          "aggregate_change_percent": 5.940682375678286
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            6686816.7,
+            6791833.5
+          ],
+          "candidate_process_means": [
+            7218995.7,
+            7089495.6
+          ],
+          "paired_change_percent": [
+            7.958630001028744,
+            4.382647189451849
+          ],
+          "aggregate_change_percent": 6.1567077391770475
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            6673600,
+            6768700
+          ],
+          "candidate_process_means": [
+            7150800,
+            7046300
+          ],
+          "paired_change_percent": [
+            7.150563414049382,
+            4.1012306646771135
+          ],
+          "aggregate_change_percent": 5.615110509362231
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            6693420.8,
+            6656358.3
+          ],
+          "candidate_process_means": [
+            7414170.8,
+            7214483.2
+          ],
+          "paired_change_percent": [
+            10.768036577051898,
+            8.384838598607303
+          ],
+          "aggregate_change_percent": 9.579745780212946
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            6699000,
+            6660900
+          ],
+          "candidate_process_means": [
+            7196500,
+            7085600
+          ],
+          "paired_change_percent": [
+            7.42648156441259,
+            6.376015253194023
+          ],
+          "aggregate_change_percent": 6.902746278040994
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            142708016.6,
+            140297675
+          ],
+          "candidate_process_means": [
+            140232808.3,
+            139683916.5
+          ],
+          "paired_change_percent": [
+            -1.734456380917837,
+            -0.43746876061916407
+          ],
+          "aggregate_change_percent": -1.0914857515890386
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            142367700,
+            140037700
+          ],
+          "candidate_process_means": [
+            139958800,
+            139415700
+          ],
+          "paired_change_percent": [
+            -1.6920270538893334,
+            -0.44416610669840706
+          ],
+          "aggregate_change_percent": -1.073244350143443
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            140521929,
+            137322950
+          ],
+          "candidate_process_means": [
+            140807883.5,
+            144694666.8
+          ],
+          "paired_change_percent": [
+            0.20349457343415978,
+            5.368160820897017
+          ],
+          "aggregate_change_percent": 2.7560958933491753
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            140084000,
+            136959600
+          ],
+          "candidate_process_means": [
+            140191500,
+            142951200
+          ],
+          "paired_change_percent": [
+            0.07673967048342778,
+            4.374720720562841
+          ],
+          "aggregate_change_percent": 2.2014946383890566
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            142543358.3,
+            142293500.1
+          ],
+          "candidate_process_means": [
+            140351466.6,
+            139033333.2
+          ],
+          "paired_change_percent": [
+            -1.5377017394152537,
+            -2.2911565867090533
+          ],
+          "aggregate_change_percent": -1.914098698681621
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            141979000,
+            141818100
+          ],
+          "candidate_process_means": [
+            140055200,
+            138764400
+          ],
+          "paired_change_percent": [
+            -1.354989118109018,
+            -2.1532512422603345
+          ],
+          "aggregate_change_percent": -1.7538938910933166
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            141472054.2,
+            141547871
+          ],
+          "candidate_process_means": [
+            139045237.7,
+            142588283.4
+          ],
+          "paired_change_percent": [
+            -1.7154034510371896,
+            0.7350251138712016
+          ],
+          "aggregate_change_percent": -0.4898609520231578
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            140339400,
+            140840700
+          ],
+          "candidate_process_means": [
+            138640100,
+            142501100
+          ],
+          "paired_change_percent": [
+            -1.2108502672806054,
+            1.1789205819056514
+          ],
+          "aggregate_change_percent": -0.013834549457802936
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            4197187.6,
+            4080733.4
+          ],
+          "candidate_process_means": [
+            4221237.4,
+            4153862.6
+          ],
+          "paired_change_percent": [
+            0.5729979760733306,
+            1.7920602213317816
+          ],
+          "aggregate_change_percent": 1.1739541848732271
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            4203400,
+            4085700
+          ],
+          "candidate_process_means": [
+            4226400,
+            4156900
+          ],
+          "paired_change_percent": [
+            0.5471760955417126,
+            1.7426634358861381
+          ],
+          "aggregate_change_percent": 1.1364321820221734
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            4110716.7,
+            4102624.9
+          ],
+          "candidate_process_means": [
+            4228020.8,
+            4535795.6
+          ],
+          "paired_change_percent": [
+            2.8536167427932746,
+            10.558379343917101
+          ],
+          "aggregate_change_percent": 6.702202669860946
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            4117300,
+            4106800
+          ],
+          "candidate_process_means": [
+            4230300,
+            4541800
+          ],
+          "paired_change_percent": [
+            2.7445170378646244,
+            10.592188565306326
+          ],
+          "aggregate_change_percent": 6.663343101372798
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            4399837.7,
+            4062374.9
+          ],
+          "candidate_process_means": [
+            4186770.7,
+            4118504.4
+          ],
+          "paired_change_percent": [
+            -4.842610444471617,
+            1.381691778373284
+          ],
+          "aggregate_change_percent": -1.8545681539601122
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            4403800,
+            4063600
+          ],
+          "candidate_process_means": [
+            4190000,
+            4107400
+          ],
+          "paired_change_percent": [
+            -4.854898042599576,
+            1.0778619942907852
+          ],
+          "aggregate_change_percent": -2.007700120462008
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            4240274.9,
+            4072854.2
+          ],
+          "candidate_process_means": [
+            4835654.3,
+            4795087.5
+          ],
+          "paired_change_percent": [
+            14.041056630550042,
+            17.732854272072874
+          ],
+          "aggregate_change_percent": 15.849780319182095
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            4240800,
+            4078200
+          ],
+          "candidate_process_means": [
+            4825300,
+            4802600
+          ],
+          "paired_change_percent": [
+            13.782776834559506,
+            17.762738463047434
+          ],
+          "aggregate_change_percent": 15.733862243058061
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            2400054.1,
+            2357799.9
+          ],
+          "candidate_process_means": [
+            2442979.1,
+            2348762.4
+          ],
+          "paired_change_percent": [
+            1.7885013508653902,
+            -0.38330224714998584
+          ],
+          "aggregate_change_percent": 0.7122433769510383
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            2390700,
+            2361500
+          ],
+          "candidate_process_means": [
+            2413700,
+            2352800
+          ],
+          "paired_change_percent": [
+            0.9620613209520235,
+            -0.36840990895616876
+          ],
+          "aggregate_change_percent": 0.3009132612263876
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            2352666.6,
+            2412900
+          ],
+          "candidate_process_means": [
+            2459529.4,
+            2350987.4
+          ],
+          "paired_change_percent": [
+            4.54219905191835,
+            -2.56589995441171
+          ],
+          "aggregate_change_percent": 0.9432288702040159
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            2357900,
+            2398200
+          ],
+          "candidate_process_means": [
+            2423400,
+            2354000
+          ],
+          "paired_change_percent": [
+            2.7778955850545017,
+            -1.8430489533816985
+          ],
+          "aggregate_change_percent": 0.4478459241815669
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            2350345.7,
+            2346162.5
+          ],
+          "candidate_process_means": [
+            2333879.2,
+            2335950.1
+          ],
+          "paired_change_percent": [
+            -0.7005990650651994,
+            -0.43528101740607505
+          ],
+          "aggregate_change_percent": -0.568058201197208
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            2354800,
+            2350900
+          ],
+          "candidate_process_means": [
+            2338200,
+            2340100
+          ],
+          "paired_change_percent": [
+            -0.7049430949549906,
+            -0.4593985282232316
+          ],
+          "aggregate_change_percent": -0.5822725630618142
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            2376791.8,
+            2425175
+          ],
+          "candidate_process_means": [
+            2419921,
+            2480458.3
+          ],
+          "paired_change_percent": [
+            1.8145973071768573,
+            2.2795592070675275
+          ],
+          "aggregate_change_percent": 2.0494206665485404
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            2383400,
+            2409000
+          ],
+          "candidate_process_means": [
+            2421600,
+            2463400
+          ],
+          "paired_change_percent": [
+            1.6027523705630653,
+            2.2581984225819918
+          ],
+          "aggregate_change_percent": 1.9322260245388634
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            59806287.5,
+            58826983.2
+          ],
+          "candidate_process_means": [
+            59630541.7,
+            58892312.5
+          ],
+          "paired_change_percent": [
+            -0.2938584007576073,
+            0.11105328957272675
+          ],
+          "aggregate_change_percent": -0.09307380581221603
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            59296700,
+            58688400
+          ],
+          "candidate_process_means": [
+            59244600,
+            58698500
+          ],
+          "paired_change_percent": [
+            -0.08786323690862519,
+            0.01720953374091394
+          ],
+          "aggregate_change_percent": -0.035597715304724886
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            59355320.8,
+            59061821
+          ],
+          "candidate_process_means": [
+            58923862.6,
+            58606629.3
+          ],
+          "paired_change_percent": [
+            -0.7269073676710591,
+            -0.7707038020382084
+          ],
+          "aggregate_change_percent": -0.7487513095844611
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            59203000,
+            58869900
+          ],
+          "candidate_process_means": [
+            58709900,
+            58501000
+          ],
+          "paired_change_percent": [
+            -0.8328969815718845,
+            -0.6266360228232126
+          ],
+          "aggregate_change_percent": -0.7300574475599397
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            59552404.3,
+            58710150
+          ],
+          "candidate_process_means": [
+            58475608.4,
+            58739166.6
+          ],
+          "paired_change_percent": [
+            -1.80814849149592,
+            0.04942348128902374
+          ],
+          "aggregate_change_percent": -0.8859772277047817
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            59089700,
+            58577400
+          ],
+          "candidate_process_means": [
+            58359200,
+            58592400
+          ],
+          "paired_change_percent": [
+            -1.2362560649317955,
+            0.0256071454178608
+          ],
+          "aggregate_change_percent": -0.6080714150344502
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            60695408.3,
+            58625862.5
+          ],
+          "candidate_process_means": [
+            58802066.5,
+            58847162.3
+          ],
+          "paired_change_percent": [
+            -3.119415212830845,
+            0.37747811386144026
+          ],
+          "aggregate_change_percent": -1.4012941605378915
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            59650700,
+            58543100
+          ],
+          "candidate_process_means": [
+            58748400,
+            58793300
+          ],
+          "paired_change_percent": [
+            -1.5126394157989775,
+            0.4273774364528027
+          ],
+          "aggregate_change_percent": -0.5517209870568474
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            3352258.3,
+            3376241.6
+          ],
+          "candidate_process_means": [
+            3385587.3,
+            3357041.6
+          ],
+          "paired_change_percent": [
+            0.9942252958252018,
+            -0.5686796821649298
+          ],
+          "aggregate_change_percent": 0.2099873702903654
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            3356500,
+            3380200
+          ],
+          "candidate_process_means": [
+            3390300,
+            3361100
+          ],
+          "paired_change_percent": [
+            1.0070013406822564,
+            -0.5650553221702825
+          ],
+          "aggregate_change_percent": 0.218207727819264
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            3395391.7,
+            3379629.1
+          ],
+          "candidate_process_means": [
+            3369366.7,
+            3364658.3
+          ],
+          "paired_change_percent": [
+            -0.7664800500042479,
+            -0.44297168585748503
+          ],
+          "aggregate_change_percent": -0.6051022013098595
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            3396100,
+            3384600
+          ],
+          "candidate_process_means": [
+            3374100,
+            3365300
+          ],
+          "paired_change_percent": [
+            -0.6478018904036986,
+            -0.5702298646812043
+          ],
+          "aggregate_change_percent": -0.6090816582358771
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            3403454.3,
+            3386595.8
+          ],
+          "candidate_process_means": [
+            3423341.5,
+            3384950
+          ],
+          "paired_change_percent": [
+            0.5843239910699127,
+            -0.048597473604605756
+          ],
+          "aggregate_change_percent": 0.2686489750642673
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            3400900,
+            3388500
+          ],
+          "candidate_process_means": [
+            3418800,
+            3387400
+          ],
+          "paired_change_percent": [
+            0.5263312652533214,
+            -0.03246274162609364
+          ],
+          "aggregate_change_percent": 0.2474445459097918
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            3360083.4,
+            3351162.5
+          ],
+          "candidate_process_means": [
+            3438691.7,
+            3477641.8
+          ],
+          "paired_change_percent": [
+            2.3394746689918478,
+            3.774191791654391
+          ],
+          "aggregate_change_percent": 3.055879683979379
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            3365100,
+            3354900
+          ],
+          "candidate_process_means": [
+            3443200,
+            3472700
+          ],
+          "paired_change_percent": [
+            2.3208819945915504,
+            3.5112820054248983
+          ],
+          "aggregate_change_percent": 2.9151785714285783
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            6254599.8,
+            6221037.4
+          ],
+          "candidate_process_means": [
+            6184249.9,
+            6202883.2
+          ],
+          "paired_change_percent": [
+            -1.1247706048274964,
+            -0.2918194962145737
+          ],
+          "aggregate_change_percent": -0.709415467772645
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            6252000,
+            6220300
+          ],
+          "candidate_process_means": [
+            6182900,
+            6207400
+          ],
+          "paired_change_percent": [
+            -1.1052463211772223,
+            -0.20738549587639987
+          ],
+          "aggregate_change_percent": -0.6574569245447859
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            6428441.7,
+            6374966.6
+          ],
+          "candidate_process_means": [
+            6162891.7,
+            6175583.4
+          ],
+          "paired_change_percent": [
+            -4.130861138555552,
+            -3.1275959939931153
+          ],
+          "aggregate_change_percent": -3.6313236999557352
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            6327200,
+            6322200
+          ],
+          "candidate_process_means": [
+            6167700,
+            6180100
+          ],
+          "paired_change_percent": [
+            -2.520862308762173,
+            -2.2476353168200958
+          ],
+          "aggregate_change_percent": -2.3843028127816357
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            6203366.7,
+            6238975.1
+          ],
+          "candidate_process_means": [
+            6173229.1,
+            6162562.5
+          ],
+          "paired_change_percent": [
+            -0.4858265109492943,
+            -1.2247620606788412
+          ],
+          "aggregate_change_percent": -0.8563516556023276
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            6202400,
+            6234900
+          ],
+          "candidate_process_means": [
+            6159500,
+            6165500
+          ],
+          "paired_change_percent": [
+            -0.6916677415194084,
+            -1.1130892235641343
+          ],
+          "aggregate_change_percent": -0.9029290923271094
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            6216995.7,
+            6177141.5
+          ],
+          "candidate_process_means": [
+            6321000,
+            6319925
+          ],
+          "paired_change_percent": [
+            1.6729028781538258,
+            2.3114817751867855
+          ],
+          "aggregate_change_percent": 1.9911656295042546
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            6215900,
+            6181600
+          ],
+          "candidate_process_means": [
+            6325100,
+            6324100
+          ],
+          "paired_change_percent": [
+            1.7567850190640222,
+            2.305228419826588
+          ],
+          "aggregate_change_percent": 2.0302480338777906
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            122787645.9,
+            122961208.2
+          ],
+          "candidate_process_means": [
+            121612925,
+            122002433.3
+          ],
+          "paired_change_percent": [
+            -0.9567093589828324,
+            -0.7797377026749208
+          ],
+          "aggregate_change_percent": -0.8681610369307591
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            121745400,
+            122045300
+          ],
+          "candidate_process_means": [
+            121301800,
+            121610700
+          ],
+          "paired_change_percent": [
+            -0.36436694938781766,
+            -0.3560972851883726
+          ],
+          "aggregate_change_percent": -0.36022703080962337
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            121620500.1,
+            121635291.8
+          ],
+          "candidate_process_means": [
+            121457954.1,
+            121396170.7
+          ],
+          "paired_change_percent": [
+            -0.1336501657749678,
+            -0.1965885858137062
+          ],
+          "aggregate_change_percent": -0.1651212893484133
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            121332400,
+            121379600
+          ],
+          "candidate_process_means": [
+            121083800,
+            121066300
+          ],
+          "paired_change_percent": [
+            -0.20489168598000207,
+            -0.258115861314423
+          ],
+          "aggregate_change_percent": -0.23150894887767892
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            121787166.4,
+            121420341.8
+          ],
+          "candidate_process_means": [
+            121509496.2,
+            121695608.4
+          ],
+          "paired_change_percent": [
+            -0.22799627268444977,
+            0.2267055057820766
+          ],
+          "aggregate_change_percent": -0.00098829185732896
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            121474000,
+            121177900
+          ],
+          "candidate_process_means": [
+            121029700,
+            121431900
+          ],
+          "paired_change_percent": [
+            -0.3657572813935528,
+            0.20960917791115197
+          ],
+          "aggregate_change_percent": -0.0784251019670612
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            121586729.2,
+            121694970.8
+          ],
+          "candidate_process_means": [
+            122231154.1,
+            122130804.3
+          ],
+          "paired_change_percent": [
+            0.5300125303477454,
+            0.35813599948699704
+          ],
+          "aggregate_change_percent": 0.4440360290149048
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            121296000,
+            121365300
+          ],
+          "candidate_process_means": [
+            122120000,
+            122051400
+          ],
+          "paired_change_percent": [
+            0.6793299037066269,
+            0.5653180933924196
+          ],
+          "aggregate_change_percent": 0.6223077186185089
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            3488704.2,
+            3478587.6
+          ],
+          "candidate_process_means": [
+            3509516.7,
+            3466279.3
+          ],
+          "paired_change_percent": [
+            0.5965682043206799,
+            -0.353830387942522
+          ],
+          "aggregate_change_percent": 0.12205890386274287
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            3492700,
+            3483600
+          ],
+          "candidate_process_means": [
+            3512800,
+            3471000
+          ],
+          "paired_change_percent": [
+            0.5754860136856887,
+            -0.3616947984843244
+          ],
+          "aggregate_change_percent": 0.10750684460243409
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            3494103.9,
+            3509100.2
+          ],
+          "candidate_process_means": [
+            3475962.6,
+            3465116.6
+          ],
+          "paired_change_percent": [
+            -0.519197497246715,
+            -1.2534153342215748
+          ],
+          "aggregate_change_percent": -0.8870925238348981
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            3497500,
+            3513000
+          ],
+          "candidate_process_means": [
+            3480200,
+            3468800
+          ],
+          "paired_change_percent": [
+            -0.49463902787705294,
+            -1.2581838884144658
+          ],
+          "aggregate_change_percent": -0.8772555452535524
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            3620608.1,
+            3537295.8
+          ],
+          "candidate_process_means": [
+            3474645.9,
+            3500749.9
+          ],
+          "paired_change_percent": [
+            -4.031427759331374,
+            -1.0331592851239635
+          ],
+          "aggregate_change_percent": -2.549742250660847
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            3533300,
+            3535100
+          ],
+          "candidate_process_means": [
+            3478800,
+            3501300
+          ],
+          "paired_change_percent": [
+            -1.5424673817677537,
+            -0.9561257107295384
+          ],
+          "aggregate_change_percent": -1.2492218889706308
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "wall_ns": {
+          "reference_process_means": [
+            3558699.9,
+            3471187.4
+          ],
+          "candidate_process_means": [
+            3561016.5,
+            3594558.3
+          ],
+          "paired_change_percent": [
+            0.0650968068423019,
+            3.5541411564238734
+          ],
+          "aggregate_change_percent": 1.7879020620999109
+        },
+        "thread_cpu_ns": {
+          "reference_process_means": [
+            3550000,
+            3475600
+          ],
+          "candidate_process_means": [
+            3564400,
+            3590400
+          ],
+          "paired_change_percent": [
+            0.4056338028169071,
+            3.3030268155138653
+          ],
+          "aggregate_change_percent": 1.8389888408107513
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            303976,
+            303976
+          ],
+          "candidate_process_means": [
+            278376,
+            278376
+          ],
+          "paired_change_percent": [
+            -8.42171750401347,
+            -8.42171750401347
+          ],
+          "aggregate_change_percent": -8.42171750401347
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            303976,
+            303976
+          ],
+          "candidate_process_means": [
+            303976,
+            303976
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            303976,
+            303976
+          ],
+          "candidate_process_means": [
+            278888,
+            278888
+          ],
+          "paired_change_percent": [
+            -8.25328315393321,
+            -8.25328315393321
+          ],
+          "aggregate_change_percent": -8.25328315393321
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            303976,
+            303976
+          ],
+          "candidate_process_means": [
+            75496,
+            75496
+          ],
+          "paired_change_percent": [
+            -75.16382872332026,
+            -75.16382872332026
+          ],
+          "aggregate_change_percent": -75.16382872332026
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            8178611.2,
+            8178611.2
+          ],
+          "candidate_process_means": [
+            7685811.2,
+            7685811.2
+          ],
+          "paired_change_percent": [
+            -6.025472882241911,
+            -6.025472882241911
+          ],
+          "aggregate_change_percent": -6.025472882241911
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            8178611.2,
+            8178611.2
+          ],
+          "candidate_process_means": [
+            8178611.2,
+            8178611.2
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            8178611.2,
+            8178611.2
+          ],
+          "candidate_process_means": [
+            7697075.2,
+            7697075.2
+          ],
+          "paired_change_percent": [
+            -5.887747787790665,
+            -5.887747787790665
+          ],
+          "aggregate_change_percent": -5.887747787790665
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            8178611.2,
+            8178611.2
+          ],
+          "candidate_process_means": [
+            3205555.2,
+            3205555.2
+          ],
+          "paired_change_percent": [
+            -60.80562920022412,
+            -60.80562920022412
+          ],
+          "aggregate_change_percent": -60.80562920022412
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            475952,
+            475952
+          ],
+          "candidate_process_means": [
+            475952,
+            475952
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            475952,
+            475952
+          ],
+          "candidate_process_means": [
+            475952,
+            475952
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            475952,
+            475952
+          ],
+          "candidate_process_means": [
+            475952,
+            475952
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            475952,
+            475952
+          ],
+          "candidate_process_means": [
+            170716,
+            170716
+          ],
+          "paired_change_percent": [
+            -64.13167714391368,
+            -64.13167714391368
+          ],
+          "aggregate_change_percent": -64.13167714391368
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            937944,
+            937944
+          ],
+          "candidate_process_means": [
+            870360,
+            870360
+          ],
+          "paired_change_percent": [
+            -7.205547452726391,
+            -7.205547452726391
+          ],
+          "aggregate_change_percent": -7.205547452726391
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            937944,
+            937944
+          ],
+          "candidate_process_means": [
+            937944,
+            937944
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            937944,
+            937944
+          ],
+          "candidate_process_means": [
+            871384,
+            871384
+          ],
+          "paired_change_percent": [
+            -7.096372491321445,
+            -7.096372491321445
+          ],
+          "aggregate_change_percent": -7.096372491321445
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            937944,
+            937944
+          ],
+          "candidate_process_means": [
+            217560,
+            217560
+          ],
+          "paired_change_percent": [
+            -76.804585348379,
+            -76.804585348379
+          ],
+          "aggregate_change_percent": -76.804585348379
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            19531123.2,
+            19531123.2
+          ],
+          "candidate_process_means": [
+            18454003.2,
+            18454003.2
+          ],
+          "paired_change_percent": [
+            -5.514890203549583,
+            -5.514890203549583
+          ],
+          "aggregate_change_percent": -5.514890203549583
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            19531123.2,
+            19531123.2
+          ],
+          "candidate_process_means": [
+            19531123.2,
+            19531123.2
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            19526787.2,
+            19531123.2
+          ],
+          "candidate_process_means": [
+            18471411.2,
+            18471411.2
+          ],
+          "paired_change_percent": [
+            -5.40476008260079,
+            -5.425760664906354
+          ],
+          "aggregate_change_percent": -5.415261539439653
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            19531123.2,
+            19531123.2
+          ],
+          "candidate_process_means": [
+            7353451.2,
+            7353451.2
+          ],
+          "paired_change_percent": [
+            -62.350085426730594,
+            -62.350085426730594
+          ],
+          "aggregate_change_percent": -62.350085426730594
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            580288,
+            580288
+          ],
+          "candidate_process_means": [
+            580288,
+            580288
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            580288,
+            580288
+          ],
+          "candidate_process_means": [
+            580288,
+            580288
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            580288,
+            580288
+          ],
+          "candidate_process_means": [
+            580288,
+            580288
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            580288,
+            580288
+          ],
+          "candidate_process_means": [
+            214936,
+            214936
+          ],
+          "paired_change_percent": [
+            -62.96046101246277,
+            -62.96046101246277
+          ],
+          "aggregate_change_percent": -62.96046101246277
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            302744,
+            302744
+          ],
+          "candidate_process_means": [
+            277144,
+            277144
+          ],
+          "paired_change_percent": [
+            -8.455989218613746,
+            -8.455989218613746
+          ],
+          "aggregate_change_percent": -8.455989218613746
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            302744,
+            302744
+          ],
+          "candidate_process_means": [
+            302744,
+            302744
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            302744,
+            302744
+          ],
+          "candidate_process_means": [
+            277656,
+            277656
+          ],
+          "paired_change_percent": [
+            -8.286869434241472,
+            -8.286869434241472
+          ],
+          "aggregate_change_percent": -8.286869434241472
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_192f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            302744,
+            302744
+          ],
+          "candidate_process_means": [
+            74264,
+            74264
+          ],
+          "paired_change_percent": [
+            -75.46970377612769,
+            -75.46970377612769
+          ],
+          "aggregate_change_percent": -75.46970377612769
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            8173376,
+            8173376
+          ],
+          "candidate_process_means": [
+            7680576,
+            7680576
+          ],
+          "paired_change_percent": [
+            -6.029332310173907,
+            -6.029332310173907
+          ],
+          "aggregate_change_percent": -6.029332310173907
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            8173376,
+            8173376
+          ],
+          "candidate_process_means": [
+            8173376,
+            8173376
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            8173376,
+            8173376
+          ],
+          "candidate_process_means": [
+            7691840,
+            7691840
+          ],
+          "paired_change_percent": [
+            -5.891519000227074,
+            -5.891519000227074
+          ],
+          "aggregate_change_percent": -5.891519000227074
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_192f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            8173376,
+            8173376
+          ],
+          "candidate_process_means": [
+            3200288,
+            3200288
+          ],
+          "paired_change_percent": [
+            -60.84496785661151,
+            -60.84496785661151
+          ],
+          "aggregate_change_percent": -60.84496785661151
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            469252,
+            469252
+          ],
+          "candidate_process_means": [
+            469253.6,
+            469256.8
+          ],
+          "paired_change_percent": [
+            0.0003409681791355368,
+            0.0010229045374288148
+          ],
+          "aggregate_change_percent": 0.0006819363582710736
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            469268,
+            469260
+          ],
+          "candidate_process_means": [
+            469304.8,
+            469266.4
+          ],
+          "paired_change_percent": [
+            0.007842000733049304,
+            0.001363849465119138
+          ],
+          "aggregate_change_percent": 0.00460295270892086
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            469248.8,
+            469234.4
+          ],
+          "candidate_process_means": [
+            469247.2,
+            469245.6
+          ],
+          "paired_change_percent": [
+            -0.00034097050434223064,
+            0.0023868667770265972
+          ],
+          "aggregate_change_percent": 0.0010229272085160446
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_192f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            469234.4,
+            469245.6
+          ],
+          "candidate_process_means": [
+            168577.6,
+            168579.2
+          ],
+          "paired_change_percent": [
+            -64.07390421503624,
+            -64.07442072978414
+          ],
+          "aggregate_change_percent": -64.07416247549229
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            936712,
+            936712
+          ],
+          "candidate_process_means": [
+            869128,
+            869128
+          ],
+          "paired_change_percent": [
+            -7.215024468566645,
+            -7.215024468566645
+          ],
+          "aggregate_change_percent": -7.215024468566645
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            936712,
+            936712
+          ],
+          "candidate_process_means": [
+            936712,
+            936712
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            936712,
+            936712
+          ],
+          "candidate_process_means": [
+            870152,
+            870152
+          ],
+          "paired_change_percent": [
+            -7.105705916012606,
+            -7.105705916012606
+          ],
+          "aggregate_change_percent": -7.105705916012606
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_256f",
+      "operation": "keygen.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            936712,
+            936712
+          ],
+          "candidate_process_means": [
+            216328,
+            216328
+          ],
+          "paired_change_percent": [
+            -76.9056017217672,
+            -76.9056017217672
+          ],
+          "aggregate_change_percent": -76.9056017217672
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            19523671.2,
+            19523671.2
+          ],
+          "candidate_process_means": [
+            18446551.2,
+            18446551.2
+          ],
+          "paired_change_percent": [
+            -5.516995184799056,
+            -5.516995184799056
+          ],
+          "aggregate_change_percent": -5.516995184799056
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            19523671.2,
+            19523671.2
+          ],
+          "candidate_process_means": [
+            19523671.2,
+            19523671.2
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            19523671.2,
+            19523671.2
+          ],
+          "candidate_process_means": [
+            18459839.2,
+            18459879.2
+          ],
+          "paired_change_percent": [
+            -5.448934214790501,
+            -5.4487293352901816
+          ],
+          "aggregate_change_percent": -5.448831775040341
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_256f",
+      "operation": "sign.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            19523671.2,
+            19523671.2
+          ],
+          "candidate_process_means": [
+            7346916,
+            7346916
+          ],
+          "paired_change_percent": [
+            -62.36918802443261,
+            -62.36918802443261
+          ],
+          "aggregate_change_percent": -62.36918802443261
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "object_hoist"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            576250.4,
+            576250.4
+          ],
+          "candidate_process_means": [
+            576250.4,
+            576250.4
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "field_rewrite"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            576250.4,
+            576250.4
+          ],
+          "candidate_process_means": [
+            576250.4,
+            576250.4
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "two_addresses"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            576250.4,
+            576250.4
+          ],
+          "candidate_process_means": [
+            576250.4,
+            576250.4
+          ],
+          "paired_change_percent": [
+            0.0,
+            0.0
+          ],
+          "aggregate_change_percent": 0.0
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_256f",
+      "operation": "verify.total",
+      "comparison": [
+        "baseline",
+        "buffer"
+      ],
+      "metrics": {
+        "allocated_bytes": {
+          "reference_process_means": [
+            576250.4,
+            576250.4
+          ],
+          "candidate_process_means": [
+            213000.8,
+            213000.8
+          ],
+          "paired_change_percent": [
+            -63.03676318489324,
+            -63.03676318489324
+          ],
+          "aggregate_change_percent": -63.03676318489324
+        }
+      }
+    }
+  ],
+  "execution_sha256": "b4a98b2a461d4e55f6a49a9e823b2265d0ebee198490276129e8cf3d3c084cd6",
+  "limits": "Two independent balanced pairs; preserve all losses and verification controls. No confidence intervals,peak memory,all-parameter or steady-state claim."
+}
