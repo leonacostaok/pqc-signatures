@@ -1,0 +1,31 @@
+{
+  "audited_commit": "80c832da",
+  "host": "macOS arm64; original harnesses are Linux/x86-oriented",
+  "upstreams": {
+    "liboqs": {
+      "tag": "0.16.0",
+      "commit": "5a1a854b0dc9f2141bdc771c555ee60c37950183",
+      "status": ""
+    },
+    "openssl": {
+      "tag": "openssl-3.5.9",
+      "commit": "45e844fa2a14ec92d146bd8f5778ac130b6625fb",
+      "status": ""
+    }
+  },
+  "files": {
+    "libs/liboqs/patches/slh-fasthash.patch": "b5f8180804232824360c125bdad234b6b138f8bec6c10092ad527ac4aa0791da",
+    "libs/liboqs/src/stages_mldsa.c": "fdcecfcdb12f3878e9aba4b058ed3a2563a936876835f5fd18ed95d157c1b43b",
+    "libs/liboqs/src/stages_slh.c": "df12c0d227f521372029f7f52fefbb7cbc1f992dc9216f65f55e8a94546d670c",
+    "libs/openssl/src/pqc_stages.c": "c7bc961864fd31d1565bc56717a7572cea2a38958a2a5f0ea8c83be2af563977",
+    "libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/slh_dsa.c": "f08b543afdb5dac95ebdfa6804b7c88060a6d22057efde6793ecd734c1155be7",
+    "libs/liboqs/deps/liboqs/src/sig/ml_dsa/mldsa-native_ml-dsa-44_ref/mldsa/src/sign.c": "a18fd65dea26403448ed08dabe5db5117ad1cd7559637fc1e3aa3302aaaf8c25",
+    "libs/openssl/deps/openssl/crypto/ml_dsa/ml_dsa_sign.c": "54b9398fc84f6939ea197fb5c0ae302dbacc5df8504f68ef927790dc1dd444d9",
+    "libs/openssl/deps/openssl/crypto/ml_dsa/ml_dsa_encoders.c": "3c062d6a6270dce90ad8ae02424944f7d7bfe8e13131cd7e6a317515628d944e"
+  },
+  "notes": [
+    "Official GitHub clones were read only. liboqs patch git apply --check succeeded.",
+    "No full benchmark or successful fresh provider validation suite was run. An ARM OpenSSL archive and compatibility driver were built before the instruction to stop further builds; their timings are not compared.",
+    "Validation and speedup values below are derived from committed artifacts, not new runs."
+  ]
+}

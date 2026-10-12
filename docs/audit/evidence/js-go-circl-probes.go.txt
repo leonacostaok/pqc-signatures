@@ -1,0 +1,18 @@
+package main
+import("testing";"encoding/json";"os";"compress/gzip";"fmt";"time")
+func TestAuditSLHCacheAfterMalformedKey(t *testing.T){
+ f,e:=os.Open("../../../../common/validation/validation.json.gz");if e!=nil{t.Fatal(e)};defer f.Close();g,e:=gzip.NewReader(f);if e!=nil{t.Fatal(e)};var suite struct{Cases []vcase};if e=json.NewDecoder(g).Decode(&suite);e!=nil{t.Fatal(e)}
+ for _,best:=range []bool{false,true}{
+ var cs vcase;for _,c:=range suite.Cases{if c.Kind=="sigver"&&c.Param=="SLH-DSA-SHA2-128f"&&c.Expect!=nil&&*c.Expect{cs=c;break}}
+ impl:=newStageImpl(algByName(cs.Param));pk,msg,ctx,sig:=hx(cs.PkHex),hx(cs.MsgHex),hx(cs.CtxHex),hx(cs.SigHex)
+ call:=func(key []byte)(r bool){defer func(){if p:=recover();p!=nil{fmt.Printf("panic best=%v %v\n",best,p)}}();return impl.verifyPipeline(best,key,msg,ctx,sig)}
+ first:=call(pk);bad:=call(pk[:len(pk)-1]);again:=call(pk);fmt.Printf("best=%v initial-valid=%v malformed=%v original-valid-after-malformed=%v\n",best,first,bad,again);if !first||bad||!again{t.Errorf("state poisoned: best=%v before=%v malformed=%v after=%v",best,first,bad,again)}
+ }
+}
+func TestAuditMLCacheAliasesPrepareInput(t *testing.T){
+ f,e:=os.Open("../../../../common/validation/validation.json.gz");if e!=nil{t.Fatal(e)};defer f.Close();g,e:=gzip.NewReader(f);if e!=nil{t.Fatal(e)};var suite struct{Cases []vcase};if e=json.NewDecoder(g).Decode(&suite);e!=nil{t.Fatal(e)}
+ for _,param:=range []string{"ML-DSA-44","ML-DSA-65","ML-DSA-87"}{var cs vcase;for _,c:=range suite.Cases{if c.Kind=="sigver"&&c.Param==param&&c.Expect!=nil&&*c.Expect{cs=c;break}}; impl:=newStageImpl(algByName(param));pk,msg,ctx,sig:=hx(cs.PkHex),hx(cs.MsgHex),hx(cs.CtxHex),hx(cs.SigHex);if !impl.prepare(pk,msg,ctx,sig){t.Fatal("prepare rejected")};pk[0]^=1;cached:=impl.verifyPipeline(true,pk,msg,ctx,sig);fresh:=impl.verifyPipeline(false,pk,msg,ctx,sig);fmt.Printf("%s mutated-pk cached=%v fresh=%v\n",param,cached,fresh);if cached!=fresh{t.Errorf("cache accepted mutated key for %s",param)}}
+}
+func TestAuditTimingAccounting(t *testing.T){
+ s:=measure(func(){},func(){t0:=time.Now();for time.Since(t0)<time.Millisecond{}},1,5*time.Millisecond);fmt.Printf("empty op + 1ms untimed checker: reported ops/sec=%.0f CPU utilization=%.1f iterations=%d\n",s.opsPerSec,s.cpuUtil,s.iterations)
+}

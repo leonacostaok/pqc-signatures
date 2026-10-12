@@ -1,0 +1,32 @@
+import java.nio.file.*; import java.util.*; import java.util.zip.*;
+public class AuditCheck {
+ public static void main(String[] args) throws Exception {
+  Bench.vectors=Json.obj(Json.parse(Files.readString(Paths.get("common/vectors.json"))));
+  Bench.reference=Json.obj(Json.parse(Files.readString(Paths.get("common/reference.json"))));
+  Bench.message=Alg.unhex((String)Bench.vectors.get("message_hex"));
+  List<Object> entries=new ArrayList<>();
+  for(String n: new String[]{"Falcon-512","Falcon-1024"}) {
+   Alg a=Alg.get(n); Variants.Inputs in=Bench.baseline(a);
+   Map<String,Object> e=new LinkedHashMap<>(); e.put("param",n);e.put("pk_hex",Alg.hex(in.pk));e.put("sig_hex",Alg.hex(in.sig));
+   entries.add(e);System.out.println(n+" length="+in.sig.length+" header="+(in.sig[0]&255)+" BCverify="+Bench.baselineVerify(a,in.pk,in.msg,in.sig));
+  }
+  Map<String,Object> art=new LinkedHashMap<>();art.put("lib","bouncycastle");art.put("entries",entries);
+  Files.writeString(Paths.get("libs/bouncycastle/build/audit-falcon.json"),Json.write(art));
+  Map<String,Object> suite;try(GZIPInputStream g=new GZIPInputStream(Files.newInputStream(Paths.get("common/validation/validation.json.gz")))){suite=Json.obj(Json.parse(new String(g.readAllBytes())));}
+  int tested=0,bad=0;Map<String,Integer> counts=new TreeMap<>();
+  for(Object x:Json.arr(suite.get("cases"))) {
+   Map<String,Object> c=Json.obj(x); if(!"sigver".equals(c.get("kind")))continue;
+   Alg alg=Alg.ALL.get((String)c.get("param"));if(alg==null||!alg.byteMatch())continue;
+   byte[] pk=Alg.unhex((String)c.get("pk_hex")), msg=Alg.unhex((String)c.get("msg_hex")),ctx=Alg.unhex((String)c.get("ctx_hex")),sig=Alg.unhex((String)c.get("sig_hex"));
+   boolean want=Boolean.TRUE.equals(c.get("expect")); boolean ml=alg.family==Alg.Family.MLDSA;
+   for(String st:ml?Stages.ML_STAGES:Stages.SLH_STAGES)for(Stages.SVariant v:Stages.variants(st)) {
+    if(!v.composable||v.jvmFlags!=null)continue;
+    Map<String,String> comp=Stages.v0Composition(ml);comp.put(st,v.id);boolean got=false;String err=null;
+    try{got=Stages.pipelineVerify(alg,pk,msg,ctx,sig,comp);}catch(Exception e){err=e.toString();}
+    tested++;counts.merge(v.id,1,Integer::sum);if(got!=want){bad++;System.out.println("FAIL "+c.get("id")+" "+v.id+" got="+got+" err="+err);}
+   }
+  }
+  System.out.println("stage pipeline one-at-a-time validation tested="+tested+" failed="+bad+" counts="+counts);
+  Stages.POOL.shutdownNow();CaseOps.POOL.shutdownNow();
+ }
+}

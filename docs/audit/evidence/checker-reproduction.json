@@ -1,0 +1,91 @@
+{
+  "empty_results": {
+    "exit": 0,
+    "last_line": "**Problems found: 0**"
+  },
+  "bad_memory_and_malformed_validation": {
+    "exit": 0,
+    "last_line": "**Problems found: 0**"
+  },
+  "committed_snapshot": {
+    "exit": 1,
+    "last_line": "**Problems found: 2**",
+    "byte_match_libraries": [],
+    "stage_pairs": 93,
+    "stage_disagreements": [],
+    "validation_rows": 35763,
+    "crossverify_failures": {
+      "noble<-bouncycastle": [
+        "Falcon-512",
+        "Falcon-1024"
+      ]
+    }
+  },
+  "all_steps_fail": {
+    "exit": 0,
+    "log": [
+      "== build failing  20:27:56",
+      "!! failing build failed (exit 23)",
+      "== bench failing  20:27:56",
+      "!! failing bench failed (exit 23)",
+      "== stages failing  20:27:56",
+      "!! failing stages failed (exit 23)",
+      "== memory failing  20:27:56",
+      "!! failing memory failed (exit 23)",
+      "== validate failing  20:27:56",
+      "!! failing validate failed (exit 23)",
+      "# Signature match report",
+      "",
+      "Every library derives keys from the same seeds in `common/vectors.json` and signs the same message deterministically. `match` = public key, secret key and signature are byte-identical to `common/reference.json`. Falcon is not byte-matchable across libraries (no standard seed format, randomized salt), so it is checked by self-verify and cross-verification only.",
+      "",
+      "| param |  |",
+      "|---||",
+      "| ML-DSA-44 |  |",
+      "| ML-DSA-65 |  |",
+      "| ML-DSA-87 |  |",
+      "| SLH-DSA-SHA2-128s |  |",
+      "| SLH-DSA-SHA2-128f |  |",
+      "| SLH-DSA-SHA2-192s |  |",
+      "| SLH-DSA-SHA2-192f |  |",
+      "| SLH-DSA-SHA2-256s |  |",
+      "| SLH-DSA-SHA2-256f |  |",
+      "| SLH-DSA-SHAKE-128s |  |",
+      "| SLH-DSA-SHAKE-128f |  |",
+      "| SLH-DSA-SHAKE-192s |  |",
+      "| SLH-DSA-SHAKE-192f |  |",
+      "| SLH-DSA-SHAKE-256s |  |",
+      "| SLH-DSA-SHAKE-256f |  |",
+      "| Falcon-512 |  |",
+      "| Falcon-1024 |  |",
+      "",
+      "## Cross-verification (rows verify signatures produced by columns)",
+      "",
+      "| verifier \\ signer | noble | liboqs | openssl | circl | rustcrypto | bouncycastle |",
+      "|---|---|---|---|---|---|---|",
+      "",
+      "## Benchmark variants matching the reference",
+      "",
+      "| lib | rows | matching |",
+      "|---|---|---|",
+      "",
+      "## Validation suite (NIST ACVP FIPS 204/205 + negative tests), every case through every variant",
+      "",
+      "| lib | cases run | variants | failures |",
+      "|---|---|---|---|",
+      "",
+      "## Verify stages: canonical intermediate outputs agree across libraries",
+      "",
+      "0 (param, stage) pairs compared, 0 disagreements.",
+      "",
+      "| lib | stage rows | alternatives not matching v0 |",
+      "|---|---|---|",
+      "",
+      "**Problems found: 0**",
+      "",
+      "mock report ran",
+      "mock report ran",
+      "== ALL DONE 20:27:56"
+    ],
+    "stderr": ""
+  }
+}

@@ -1,0 +1,15 @@
+Audit commit: 80c832da6ce81ca8def12b319da9f4c19d589111
+Runtime: Node 22.23.2; Go 1.27.0 darwin/arm64
+Noble official package tarballs; lockfile integrity verification:
+post-quantum 0.7.1: SHA512 PASS; https://registry.npmjs.org/@noble/post-quantum/-/post-quantum-0.7.1.tgz
+hashes 2.4.0: SHA512 PASS; https://registry.npmjs.org/@noble/hashes/-/hashes-2.4.0.tgz
+curves 2.4.0: SHA512 PASS; https://registry.npmjs.org/@noble/curves/-/curves-2.4.0.tgz
+ciphers 2.4.0: SHA512 PASS; https://registry.npmjs.org/@noble/ciphers/-/ciphers-2.4.0.tgz
+All three noble patches apply with --fuzz=0 to the verified npm 0.7.1 JavaScript.
+CIRCL source: https://proxy.golang.org/github.com/cloudflare/circl/@v/v1.6.5.zip
+CIRCL zip SHA256: aa6391f45b543ee70c2d57e137c426e318fb98be81f61aa07ab5663fcf667708
+CIRCL: 62 non-stage source files compared; zero differences after documented package/import substitutions.
+New stage additions: mldsa44i/stages.go, mldsa65i/stages.go, mldsa87i/stages.go, slhdsa/stages.go.
+Tests compiled from copies of cmd/pqcbench under libs/circl/build/audit-harness; source files not edited.
+Go proxy redirect failed for native go download; used the independently fetched official zip through a build-only modfile replace.
+No full performance benchmarks or original result rewrites performed.

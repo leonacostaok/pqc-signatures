@@ -1,0 +1,19 @@
+{
+  "native": {
+    "destroyed": true,
+    "nonzeroBytesAfterDestroy": 32
+  },
+  "fast": {
+    "destroyed": true,
+    "nonzeroBytesAfterDestroy": 32
+  },
+  "official": {
+    "destroyed": true,
+    "nonzeroBytesAfterDestroy": 0
+  },
+  "eightMiBTypedArray": {
+    "heapUsedDelta": 3488,
+    "arrayBuffersDelta": 8388608,
+    "externalDelta": 8387756
+  }
+}
