@@ -1,0 +1,3 @@
+# Keep raw experiment evidence available without obscuring source review.
+results/noble/experiments/rowdot-*.json linguist-generated=true
+results/noble/experiments/rowdot-upstream-*.txt linguist-generated=true

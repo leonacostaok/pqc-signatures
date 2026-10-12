@@ -1,0 +1,55 @@
+{
+  "schema": "noble-robustness-raw-archives-v1",
+  "tree_hash": "sha256 of sorted-key JSON mapping relative file names to sha256/byte-size objects",
+  "tar_metadata": "sorted files; uid/gid/mtime zero, empty owner names, mode0644; gzip filename empty and mtime zero",
+  "archives": [
+    {
+      "report": "fresh-0.7.0-node24.json",
+      "report_sha256": "ad5bdbddd627ebdd60c4f8e56f22aafd7f625c572b4773c74728495b24890821",
+      "archive": "fresh-0.7.0-node24.json.raw.tar.gz",
+      "archive_sha256": "d5d4b7f44f7d3329a5833761a0e565590e969629501c74bd1f80a650bc298e04",
+      "raw_directory": "fresh-0.7.0-node24.json.raw",
+      "raw_files": 1206,
+      "raw_bytes": 8304249,
+      "content_tree_sha256": "f02c28bc1e66c4fc1fb62e275af949034ee18326382872ecb13b52ab9c8a2944",
+      "verified_every_file": true,
+      "original_directory_retained": true
+    },
+    {
+      "report": "fresh-0.7.1-node22.json",
+      "report_sha256": "d3dd4012880de7a761a6305f1bb56a65ede9dfdd0e79f4aeb2f6c351665dee6c",
+      "archive": "fresh-0.7.1-node22.json.raw.tar.gz",
+      "archive_sha256": "9793fc148d62d937d2f0a5b42fd6bb992b24312331a70a8fe0685540ed8c7a19",
+      "raw_directory": "fresh-0.7.1-node22.json.raw",
+      "raw_files": 1206,
+      "raw_bytes": 8305499,
+      "content_tree_sha256": "80510422a1c6019547e5fb418b5ef29fa54f3bae6ddc19f7d3702ccf3cd0f526",
+      "verified_every_file": true,
+      "original_directory_retained": true
+    },
+    {
+      "report": "fresh-0.7.0-node22.json",
+      "report_sha256": "f1bb8ed583e5ad8499f211948fc8bb0ba0c85671e610fe5e2d05a9f8d449c741",
+      "archive": "fresh-0.7.0-node22.json.raw.tar.gz",
+      "archive_sha256": "7151f1709ed9329ff3761cdd44d7eed1085078fb57644bc55cbfceac298993fa",
+      "raw_directory": "fresh-0.7.0-node22.json.raw",
+      "raw_files": 1206,
+      "raw_bytes": 8305712,
+      "content_tree_sha256": "0d3f34742f2561d2669c227e9cf2d119354619d47eb06405e33bdb14d1e38fab",
+      "verified_every_file": true,
+      "original_directory_retained": true
+    },
+    {
+      "report": "fresh-0.7.1-node24.json",
+      "report_sha256": "871f759e43b3781d50b280eef0f837733bcaaadf1ac6088288f1a61e96e08c9e",
+      "archive": "fresh-0.7.1-node24.json.raw.tar.gz",
+      "archive_sha256": "969a242e8cbf0327f22b6b893281730ee60e9e534f7b0cba4b93c822a996d895",
+      "raw_directory": "fresh-0.7.1-node24.json.raw",
+      "raw_files": 1206,
+      "raw_bytes": 8304216,
+      "content_tree_sha256": "920a794df07664996a8427970daf26f0e679900d422c0498cd876818f3b0fd20",
+      "verified_every_file": true,
+      "original_directory_retained": true
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+
+> @noble/post-quantum@0.7.1 test
+> node --no-warnings test/index.ts
+
+235 tests started (JSBT_QUIET=0, JSBT_WORKERS=8, JSBT_FILTER='')
+
+✓ AVCP → ML-KEM → keyGen
+✓ AVCP → ML-KEM → encapDecap
+✓ AVCP → ML-DSA → keyGen
+✓ AVCP → ML-DSA → sigVer
+✓ AVCP → SLH-DSA → sigGen → vector 2 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 6 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 1 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 8 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 3 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 10 of 72
+✓ AVCP → SLH-DSA → sigVer
+✓ AVCP → SLH-DSA → sigGen → vector 4 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 13 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 14 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 7 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 5 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 15 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 9 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 16 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 20 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 17 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 11 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 19 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 18 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 12 of 72
+✓ AVCP → ML-DSA → sigGen
+✓ AVCP → SLH-DSA → sigGen → vector 21 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 28 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 22 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 30 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 23 of 72
+✓ AVCP → SLH-DSA → keyGen
+✓ AVCP → SLH-DSA → sigGen → vector 24 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 31 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 32 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 33 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 37 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 38 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 39 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 40 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 41 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 42 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 43 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 44 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 45 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 46 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 47 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 48 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 49 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 50 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 25 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 51 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 26 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 52 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 53 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 55 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 54 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 58 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 56 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 34 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 57 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 59 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 60 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 29 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 27 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 36 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 35 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 67 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 61 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 68 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 69 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 62 of 72
+✓ Basic → utils validator constructors
+✓ Basic → getMask wide 32-bit edges
+✓ Basic → Immutability → ML-KEM
+✓ Basic → Immutability → ML-KEM wipes generated randomness when encapsulation throws
+✓ Basic → Immutability → ML-DSA
+✓ Basic → Immutability → ML-DSA internal externalMu
+✓ Basic → Immutability → SLH-DSA
+✓ Basic → ML-KEM rejects public keys with coeffs above q - 1
+✓ Basic → ML-KEM modulus check boundary: q-1 valid, q invalid
+✓ Basic → ML-KEM decapsulate validates secretKey hash, ignores z corruption
+✓ Basic → ML-KEM prepared public key matches one-shot API
+✓ Basic → ML-KEM implicit rejection returns J(z || cipherText)
+✓ Basic → ML-DSA externalMu requires 64-byte mu
+✓ Basic → ML-DSA prepares and cleans entropy before secret expansion
+✓ Basic → ML-DSA verify returns false on malformed hint encoding
+✓ Basic → SLH-DSA verify returns false on wrong-length signature
+✓ Basic → Hash compatibility
+✓ Basic → sign/ver opts → ml_dsa65
+✓ Basic → sign/ver opts → slh_dsa_sha2_128f
+✓ Basic → sign/ver opts → ml_dsa65_sha3_384
+✓ Basic → sign/ver opts → slh_dsa_sha2_128f_sha3_384
+✓ Basic → sign/ver opts → pre-hash XOFs must produce the length their OID denotes
+✓ Basic → sign/ver opts → externalMu is internal-only, and says so instead of being ignored
+✓ Basic → sign/ver opts → the internal surface rejects keys it does not read
+✓ Basic → sign/ver opts → copies enumerable own option properties
+✓ Basic → sign/ver opts → ignores Object.prototype pollution in signing options and internals
+✓ Basic → sign/ver opts → the SLH-DSA internal surface rejects keys it does not read
+✓ Basic → sign/ver opts → the accepted-key lists cannot be widened at runtime
+✓ Falcon → Roots → Exact
+✓ Falcon → Roots → Generated
+✓ Falcon → Exact constants
+✓ Falcon → FFT
+✓ Falcon → LDL preserves Gram matrix inputs
+✓ Falcon → vectors/falcon/round3/falcon512-KAT.rsp [0-9]
+✓ Falcon → vectors/falcon/round3/falcon512-KAT.rsp [10-19]
+✓ Falcon → vectors/falcon/round3/falcon512-KAT.rsp [20-29]
+✓ AVCP → SLH-DSA → sigGen → vector 65 of 72
+✓ Falcon → vectors/falcon/round3/falcon512-KAT.rsp [30-39]
+✓ AVCP → SLH-DSA → sigGen → vector 64 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 63 of 72
+✓ AVCP → SLH-DSA → sigGen → vector 70 of 72
+✓ Falcon → vectors/falcon/round3/falcon512-KAT.rsp [40-49]
+✓ Falcon → vectors/falcon/round3/falcon512-KAT.rsp [50-59]
+✓ Falcon → vectors/falcon/round3/falcon512-KAT.rsp [60-69]
+✓ Falcon → vectors/falcon/round3/falcon512-KAT.rsp [70-79]
+✓ Falcon → vectors/falcon/round3/falcon512-KAT.rsp [80-89]
+✓ AVCP → SLH-DSA → sigGen → vector 66 of 72
+✓ Falcon → vectors/falcon/round3/falcon512-KAT.rsp [90-99]
+✓ Falcon → vectors/falcon/round3/falcon1024-KAT.rsp [10-19]
+✓ Falcon → vectors/falcon/round3/falcon1024-KAT.rsp [20-29]
+✓ Falcon → vectors/falcon/round3/falcon1024-KAT.rsp [0-9]
+✓ Falcon → vectors/falcon/round3/falcon1024-KAT.rsp [30-39]
+✓ Falcon → vectors/falcon/round3/falcon1024-KAT.rsp [50-59]
+✓ Falcon → vectors/falcon/pqclean/nistkat_out_falcon-512_clean
+✓ Falcon → vectors/falcon/round3/falcon1024-KAT.rsp [40-49]
+✓ Falcon → vectors/falcon/pqclean/nistkat_out_falcon-padded-512_clean
+✓ Falcon → vectors/falcon/pqclean/nistkat_out_falcon-1024_clean
+✓ Falcon → falcon1024/detached
+✓ Falcon → vectors/falcon/pqclean/nistkat_out_falcon-padded-1024_clean
+✓ Falcon → attached/open rejects uniformly
+✓ Falcon → detached/validation
+✓ Falcon → attached/open snapshots inputs and owns its output
+✓ AVCP → SLH-DSA → sigGen → vector 72 of 72
+✓ Falcon → detached/maxS2Len
+✓ Falcon → padded/detached-lengths
+✓ Falcon → attached/validation
+✓ Falcon → compressed signatures reject over-limit unary values immediately
+✓ Falcon → detached rejects oversized inputs before parsing
+✓ Falcon → padded/validation
+✓ Falcon → padded/malleability
+✓ Falcon → publicKey/validation
+✓ Falcon → privateKey/validation
+✓ AVCP → SLH-DSA → sigGen → vector 71 of 72
+✓ Falcon → keyCoder/encode/validation
+☆ Falcon → secret/cleanup (skip)
+✓ Falcon → sign/validation
+✓ Falcon → vectors/falcon/round3/falcon1024-KAT.rsp [70-79]
+✓ Falcon → verify/validation
+✓ Falcon → falcon-sign interop
+✓ Hybrids → QSF-KEM(ML-KEM-768,P-256)-XOF(SHAKE256)-KDF(SHA3-256) → Vectors
+✓ Hybrids → QSF-KEM(ML-KEM-768,P-256)-XOF(SHAKE256)-KDF(SHA3-256) → random
+✓ Hybrids → QSF-KEM(ML-KEM-768,P-256)-XOF(SHAKE256)-KDF(SHA3-256) → immutability
+✓ Falcon → ignores Object.prototype pollution in signing and mode options
+✓ Hybrids → QSF-KEM(ML-KEM-1024,P-384)-XOF(SHAKE256)-KDF(SHA3-256) → random
+✓ Hybrids → QSF-KEM(ML-KEM-1024,P-384)-XOF(SHAKE256)-KDF(SHA3-256) → Vectors
+✓ Falcon → keygen/validation
+✓ Hybrids → QSF-KEM(ML-KEM-1024,P-384)-XOF(SHAKE256)-KDF(SHA3-256) → immutability
+✓ Hybrids → KitchenSink-KEM(ML-KEM-768,X25519)-XOF(SHAKE256)-KDF(HKDF-SHA-256) → random
+✓ Hybrids → KitchenSink-KEM(ML-KEM-768,X25519)-XOF(SHAKE256)-KDF(HKDF-SHA-256) → immutability
+✓ Hybrids → KitchenSink-KEM(ML-KEM-768,X25519)-XOF(SHAKE256)-KDF(HKDF-SHA-256) → Vectors
+✓ Hybrids → MLKEM1024-P384 → immutability
+✓ Falcon → vectors/falcon/round3/falcon1024-KAT.rsp [60-69]
+✓ Hybrids → MLKEM1024-P384 → random
+✓ Hybrids → MLKEM768-P256 → immutability
+✓ Hybrids → MLKEM768-P256 → random
+✓ Hybrids → MLKEM768-X25519 → random
+✓ Falcon → vectors/falcon/round3/falcon1024-KAT.rsp [90-99]
+✓ Hybrids → MLKEM768-X25519 → immutability
+✓ Hybrids → XWing → random
+✓ Hybrids → XWing → immutability
+✓ Hybrids → MLKEM768-P256 → Vectors
+✓ Hybrids → MLKEM768-X25519 → Vectors
+✓ Hybrids → combineKeys/identityExpand/seed-immutability
+✓ Hybrids → XWing → Vectors
+✓ Hybrids → combine constructors reject empty and zero-length configurations
+✓ Hybrids → combineKeys/getPublicKey-detached-root-cleanup
+✓ Hybrids → combineKEMS/decapsulate-cleanup-on-child-decapsulate-throw
+✓ Hybrids → combineSigners/keygen-cleanup-on-child-keygen-throw
+✓ Hybrids → combineSigners/keygen-cleanup-on-bad-expand-output
+✓ Hybrids → combineSigners/keygen-cleanup-on-aliased-bad-expand-output
+✓ Hybrids → combineKEMS/combiner-alias
+✓ Hybrids → combineKEMS/decapsulate-secret-cleanup
+✓ Hybrids → combineKEMS/rejects-and-wipes-wrong-length-combiner-output
+✓ Hybrids → combine constructors preserve unary compositions
+✓ Hybrids → combineKEMS/validates-child-ciphertext-before-combining
+✓ Hybrids → combineKEMS/encapsulate-secret-cleanup-on-child-throw
+✓ Hybrids → combineKEMS/preserves-public-input-aliases-on-combiner-rejection
+✓ Hybrids → combineKEMS/encapsulate-secret-cleanup-on-combiner-throw
+✓ Hybrids → _ecdhKem/x25519/allowZeroKey
+✓ Hybrids → hybrid signer wrappers/opts
+✓ Hybrids → _ecdhKem/encapsulate-secret-cleanup-on-throw
+✓ Hybrids → combineSigners/sign-secret-cleanup
+✓ Hybrids → ecSigner/ed25519/allowZeroKey
+✓ Hybrids → _ecdhKem/x25519/rand-immutability
+✓ Hybrids → combineSigners
+✓ Hybrids → QSF/kdf-length
+✓ Hybrids → methods work when destructured (no this-dependence)
+✓ Hybrids → keygen secretKey is detached from caller seed
+✓ Hybrids → combineSigners/verify returns false on wrong-length signature
+✓ Wycheproof → ML-KEM → ML-KEM-512 → decaps (expanded key)
+✓ Hybrids → MLKEM1024-P384 → Vectors
+✓ Falcon → vectors/falcon/round3/falcon1024-KAT.rsp [80-89]
+✓ Wycheproof → ML-KEM → ML-KEM-512 → keygen
+✓ Wycheproof → ML-KEM → ML-KEM-768 → decaps (expanded key)
+✓ Wycheproof → ML-KEM → ML-KEM-768 → keygen
+✓ Falcon → secretKey/validation
+✓ Wycheproof → ML-KEM → ML-KEM-512 → encaps
+✓ Wycheproof → ML-KEM → ML-KEM-1024 → decaps (expanded key)
+✓ Wycheproof → ML-KEM → ML-KEM-768 → encaps
+✓ Wycheproof → ML-KEM → ML-KEM-512 → decaps
+✓ Wycheproof → ML-KEM → ML-KEM-1024 → keygen
+✓ Wycheproof → ML-KEM → ML-KEM-768 → decaps
+✓ Wycheproof → ML-KEM → ML-KEM-1024 → encaps
+✓ Falcon → api/shape
+✓ Wycheproof → ML-KEM → ML-KEM-1024 → decaps
+✓ Wycheproof → ML-DSA → ML-DSA-44 → verify
+✓ Wycheproof → ML-DSA → ML-DSA-65 → verify
+✓ WebCrypto → lengths match the synchronous implementations
+✓ WebCrypto → rejects and wipes malformed provider encapsulation outputs
+✓ WebCrypto → rejects and wipes malformed provider decapsulation outputs
+✓ WebCrypto → support probe rejects truncated secrets, cleans up, and memoizes failure
+✓ WebCrypto → support probe cleans accepted secrets after decapsulation rejection
+☆ WebCrypto → ML-KEM-512 (skip)
+☆ WebCrypto → ML-KEM-768 (skip)
+☆ WebCrypto → ML-KEM-1024 (skip)
+☆ WebCrypto → MLKEM768-X25519 (skip)
+✓ Wycheproof → ML-DSA → ML-DSA-87 → verify
+✓ Wycheproof → ML-DSA → ML-DSA-44 → sign (from seed)
+✓ Wycheproof → ML-DSA → ML-DSA-44 → sign (expanded key)
+✓ Wycheproof → ML-DSA → ML-DSA-65 → sign (from seed)
+✓ Wycheproof → ML-DSA → ML-DSA-87 → sign (from seed)
+✓ Wycheproof → ML-DSA → ML-DSA-65 → sign (expanded key)
+✓ Wycheproof → ML-DSA → ML-DSA-87 → sign (expanded key)
+
+235 tests passed in 1 min 24 sec

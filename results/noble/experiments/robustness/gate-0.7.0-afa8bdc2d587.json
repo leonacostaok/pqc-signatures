@@ -1,0 +1,255 @@
+{
+  "provenance": {
+    "version": "0.7.0",
+    "snapshot": "c07d4385a773caa3",
+    "inputs": {
+      "common/validation/validation.json.gz": "8e6269ebc60979b76ef25030fc1871883aba8395f9ded57ec19ab0ad8b2a5685",
+      "libs/noble/experiments/robustness/arithmetic.mjs": "487b70cd09245bed36f790a494362e85d5d265612490f4547f16de5761c2a6f4",
+      "libs/noble/experiments/robustness/common.mjs": "3eed48009ee004860ac4bad7ce767115a70ec4780256e8df9300a41ad87a9deb",
+      "libs/noble/experiments/robustness/correctness.mjs": "e29d99c1d85b7a4346f247d3a44bbed4f04f540835876a734a9a27e7366eff96",
+      "libs/noble/experiments/robustness/fixture.mjs": "c27827d5c84a400cd5916bf0d3f2c59fc18bac51f2693584b69fdb06b7abd398",
+      "libs/noble/experiments/robustness/fresh-input-test.mjs": "e58d7e2dc6c383b3716f6bf57c275729889767d31946f6289d3b1f5fada68328",
+      "libs/noble/experiments/robustness/run.py": "7ec3b1a7c19c0307b981b8f0822975b89a58bffe78e6c1e760aec0a1d829024d",
+      "libs/noble/experiments/robustness/versions/0.7.0/package-lock.json": "bd945bb85f602f7c4e99bc834453b1d52ce1e8c94e4ec6615fd2ebdc475a3cc9",
+      "libs/noble/experiments/robustness/versions/0.7.0/package.json": "e979ee87c415d311777138652d5db671ab85efb6e970cdd0eb5f1a9e2bbd23c7",
+      "libs/noble/experiments/robustness/versions/0.7.1/package-lock.json": "eef643b9778e1aab2e7e5a21972e09addd78d80e8267a0aa5f9ad7c84d31755d",
+      "libs/noble/experiments/robustness/versions/0.7.1/package.json": "e748522789995d7ba561b822c4b81ece4511fd3add70506645501f64aa799e6f",
+      "libs/noble/experiments/robustness/worker-test.mjs": "df794c9f9dc2fae3eb9110f6c9b33abe9091697cf1b6ea3c8741d3d95d2035c3",
+      "libs/noble/experiments/robustness/worker.mjs": "7997ae840be07f948f8732cac789738cec3f32ede1581bc557064bd641a5d0fa",
+      "libs/noble/patches/ml-dsa-rowdot-js.patch": "c2dde2611552f7732a88455168d34187554f61ff449dd7f1de8df381e5df6014",
+      "libs/noble/patches/ml-dsa-rowdot.patch": "7544180da3ca6d08b83ad82c2370828f1eba570dfe0ef78f5a4fafd94a33f0c3"
+    },
+    "sources": {
+      "baseline": {
+        "sha256": "e99d2cda782aee95f56c457bd1be7357ad619263075e262231aabf5d7f26c7b9",
+        "files": 193
+      },
+      "candidate": {
+        "sha256": "b6a321a9cf88a3753df5d68e1bc45dc3dac380c9d5717635ead87f8221a836ad",
+        "files": 194
+      }
+    },
+    "source_js": {
+      "baseline": "73e2264abb589f48da33d997aae9ec559863be01ac2eeb4ef9ef44fd2f372987",
+      "candidate": "86f8587039cb60185081c7852bd23fec593902bebaa8f6a64ec960221506dbae"
+    },
+    "node_path": "/Users/dandelionlabs/.nvm/versions/node/v24.3.0/bin/node",
+    "node_sha256": "afa8bdc2d587911bd6ec58d568e15611571f06e3902716354541775556074abf",
+    "runtime": {
+      "node": "v24.3.0",
+      "v8": "13.6.233.10-node.18",
+      "arch": "arm64",
+      "platform": "darwin"
+    },
+    "NODE_OPTIONS": "",
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "dependencies": {
+      "node_modules/@noble/ciphers": {
+        "version": "2.3.0",
+        "resolved": "https://registry.npmjs.org/@noble/ciphers/-/ciphers-2.3.0.tgz",
+        "integrity": "sha512-Clu/xdfgVTf9o7ngLOURaxePwR0j8sjclKEtVij10/jGulwFsPWCvvRgG/XjUVf8Nei+jLG6uwyXzUTGY1DQrw=="
+      },
+      "node_modules/@noble/curves": {
+        "version": "2.3.0",
+        "resolved": "https://registry.npmjs.org/@noble/curves/-/curves-2.3.0.tgz",
+        "integrity": "sha512-v7cY+4oWYPQszRj6ZFGzTVL7uP2TaLo1xMhWHzYC5wj0ZhOXQ5x+sBre8rF3hi8cAoi0bh1qXoovoOkdFtvqEg=="
+      },
+      "node_modules/@noble/hashes": {
+        "version": "2.3.0",
+        "resolved": "https://registry.npmjs.org/@noble/hashes/-/hashes-2.3.0.tgz",
+        "integrity": "sha512-oN+QwyX7VSHotibwubG3kpzbwKrfnyR6OOO+3Nk/53ADL7FmgHHz4TgrbaYKvvOw09u6QTx0oiH1cNCIOuN0CQ=="
+      },
+      "node_modules/@noble/post-quantum": {
+        "version": "0.7.0",
+        "resolved": "https://registry.npmjs.org/@noble/post-quantum/-/post-quantum-0.7.0.tgz",
+        "integrity": "sha512-IH2tpuGV4vBMdpCCua2BN7EuUICtmGp6DlBMNBYAYcL6QQ7eHt85GjLyD7ZT6Qx/xgIPIMqsSLDGvYqOm8Vqag=="
+      }
+    }
+  },
+  "checks": {
+    "fresh_inputs": {
+      "calls": 16,
+      "arrays": 28,
+      "options": 8,
+      "fresh_identity_and_mutation_isolation": true
+    },
+    "worker_protocol": {
+      "checked": 8,
+      "first_operation_exactly_once": true,
+      "complete_warm_cycles": true,
+      "fresh_identities": true,
+      "fake_api_only": true
+    },
+    "arithmetic": {
+      "dotCases": 204,
+      "oracle": "BigInt",
+      "max_sum": "491619606331392"
+    },
+    "correctness": {
+      "checked": 219,
+      "differentialCases": 72,
+      "allocation_metric": "Int32Array constructor calls and requested byteLength; not heap or peak memory",
+      "measurements": [
+        {
+          "level": 44,
+          "op": "verify",
+          "before": {
+            "allocations": 57,
+            "allocatedBytes": 58368
+          },
+          "after": {
+            "allocations": 41,
+            "allocatedBytes": 41984
+          }
+        },
+        {
+          "level": 44,
+          "op": "keygen",
+          "before": {
+            "allocations": 53,
+            "allocatedBytes": 54272
+          },
+          "after": {
+            "allocations": 37,
+            "allocatedBytes": 37888
+          }
+        },
+        {
+          "level": 44,
+          "op": "getPublicKey",
+          "before": {
+            "allocations": 57,
+            "allocatedBytes": 58368
+          },
+          "after": {
+            "allocations": 41,
+            "allocatedBytes": 41984
+          }
+        },
+        {
+          "level": 44,
+          "op": "sign",
+          "before": {
+            "allocations": 118,
+            "allocatedBytes": 120832
+          },
+          "after": {
+            "allocations": 86,
+            "allocatedBytes": 88064
+          }
+        },
+        {
+          "level": 65,
+          "op": "verify",
+          "before": {
+            "allocations": 95,
+            "allocatedBytes": 97280
+          },
+          "after": {
+            "allocations": 65,
+            "allocatedBytes": 66560
+          }
+        },
+        {
+          "level": 65,
+          "op": "keygen",
+          "before": {
+            "allocations": 89,
+            "allocatedBytes": 91136
+          },
+          "after": {
+            "allocations": 59,
+            "allocatedBytes": 60416
+          }
+        },
+        {
+          "level": 65,
+          "op": "getPublicKey",
+          "before": {
+            "allocations": 95,
+            "allocatedBytes": 97280
+          },
+          "after": {
+            "allocations": 65,
+            "allocatedBytes": 66560
+          }
+        },
+        {
+          "level": 65,
+          "op": "sign",
+          "before": {
+            "allocations": 379,
+            "allocatedBytes": 388096
+          },
+          "after": {
+            "allocations": 229,
+            "allocatedBytes": 234496
+          }
+        },
+        {
+          "level": 87,
+          "op": "verify",
+          "before": {
+            "allocations": 159,
+            "allocatedBytes": 162816
+          },
+          "after": {
+            "allocations": 103,
+            "allocatedBytes": 105472
+          }
+        },
+        {
+          "level": 87,
+          "op": "keygen",
+          "before": {
+            "allocations": 151,
+            "allocatedBytes": 154624
+          },
+          "after": {
+            "allocations": 95,
+            "allocatedBytes": 97280
+          }
+        },
+        {
+          "level": 87,
+          "op": "getPublicKey",
+          "before": {
+            "allocations": 159,
+            "allocatedBytes": 162816
+          },
+          "after": {
+            "allocations": 103,
+            "allocatedBytes": 105472
+          }
+        },
+        {
+          "level": 87,
+          "op": "sign",
+          "before": {
+            "allocations": 607,
+            "allocatedBytes": 621568
+          },
+          "after": {
+            "allocations": 327,
+            "allocatedBytes": 334848
+          }
+        }
+      ]
+    },
+    "fresh_corpus": {
+      "baseline": {
+        "checked": 288,
+        "corpus_cases": 72,
+        "process_total_ns": 1920932500
+      },
+      "candidate": {
+        "checked": 288,
+        "corpus_cases": 72,
+        "process_total_ns": 1648022333
+      }
+    }
+  },
+  "fixture_sha256": "f415c328b0c4b1f9fdf8aad37c8831df06ccd6a1673b166604b92abb511b4dcc",
+  "checked_at": "2026-10-11T23:13:37Z"
+}

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Harness entry point for the noble (@noble/post-quantum, pure JS) library. See common/CONTRACT.md.
 #   run.sh build
+#   run.sh rowdot --out <new.json> [--forks 5] [--start 10]
 #   run.sh vectors <out.json>
 #   run.sh crossverify <artifacts.json> <out.json>
 #   run.sh bench --out <file.jsonl> [--budget-ms N] [--params a,b] [--ops keygen,sign,verify] [--variants id,id]
@@ -44,11 +45,12 @@ build() {
 cmd="${1:-}"; shift || true
 case "$cmd" in
   build) build ;;
+  rowdot) "$NODE" "$HERE/experiments/rowdot.mjs" "$@" ;;
   vectors) "$NODE" "$HERE/src/vectors.mjs" "$@" ;;
   crossverify) "$NODE" "$HERE/src/crossverify.mjs" "$@" ;;
   bench) "$NODE" "$HERE/src/bench.mjs" "$@" ;;
   stages) "$NODE" "$HERE/src/stages.mjs" "$@" ;;
   validate) "$NODE" "$HERE/src/validate.mjs" "$@" ;;
   memory) "$NODE" "$HERE/src/memory.mjs" "$@" ;;
-  *) echo "usage: $0 {build|vectors <out.json>|crossverify <in.json> <out.json>|bench|stages|memory --out <file.jsonl> [opts]|validate <suite.json.gz> <out.json>}" >&2; exit 2 ;;
+  *) echo "usage: $0 {build|rowdot --out <new.json> [--forks 5]|vectors <out.json>|crossverify <in.json> <out.json>|bench|stages|memory --out <file.jsonl> [opts]|validate <suite.json.gz> <out.json>}" >&2; exit 2 ;;
 esac

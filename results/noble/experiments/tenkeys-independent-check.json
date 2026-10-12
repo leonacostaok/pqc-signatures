@@ -1,0 +1,352 @@
+{
+  "schema": "fresh-ten-key-independent-check-v1",
+  "provider": "noble",
+  "candidate_report_sha256": "d7e36ae6031d977409ca1d75bd39a6db75d400fae711900b8851bf1dc7765ef6",
+  "baseline_report_sha256": "3873084f70797a3f8e83e72aa592400b7fd4c37f5cdef930ae4eec82306642e6",
+  "candidate_finished_at": "2026-10-12T02:01:50Z",
+  "baseline_started_at": "2026-10-12T02:04:27Z",
+  "local_candidate_finished_before_baseline": true,
+  "global_order_proof": "recorded separately by the six-provider coordinator",
+  "exact_key_signature_matches": 30,
+  "per_key_operation_pairs": 90,
+  "raw_parameter_outputs_checked": 6,
+  "source_binary_and_corpus_bindings_checked": true,
+  "smoke_and_measurement_seeds_disjoint": true,
+  "summaries": [
+    {
+      "param": "44",
+      "op": "keygen",
+      "keys": 10,
+      "total_wall_speedup": 1.2442747649974506,
+      "totals": {
+        "candidate": {
+          "wall_ns": 13136666,
+          "cpu_ns": 13182000
+        },
+        "baseline": {
+          "wall_ns": 16345622,
+          "cpu_ns": 16486000
+        }
+      },
+      "per_key_speedups": [
+        1.2024766118141654,
+        1.1538866566933474,
+        1.1877647087808825,
+        1.2134722244475522,
+        1.6400289551385847,
+        1.408678585013313,
+        1.2128241980541374,
+        1.1494247779157514,
+        1.1295628703595224,
+        1.1468386162246205
+      ],
+      "median_per_key_speedup": 1.195120660297524,
+      "minimum_per_key_speedup": 1.1295628703595224,
+      "maximum_per_key_speedup": 1.6400289551385847,
+      "slower_keys": 0
+    },
+    {
+      "param": "44",
+      "op": "sign",
+      "keys": 10,
+      "total_wall_speedup": 1.16892411876353,
+      "totals": {
+        "candidate": {
+          "wall_ns": 77539999,
+          "cpu_ns": 77921000
+        },
+        "baseline": {
+          "wall_ns": 90638375,
+          "cpu_ns": 87477000
+        }
+      },
+      "per_key_speedups": [
+        1.1232242531988108,
+        1.1103568949745979,
+        1.1021326255829813,
+        1.0772903905683988,
+        1.2510100486895266,
+        1.055841816749494,
+        1.3492840630366754,
+        1.0883965490229581,
+        1.0514281063933677,
+        1.0499946091879042
+      ],
+      "median_per_key_speedup": 1.0952645873029696,
+      "minimum_per_key_speedup": 1.0499946091879042,
+      "maximum_per_key_speedup": 1.3492840630366754,
+      "slower_keys": 0
+    },
+    {
+      "param": "44",
+      "op": "verify",
+      "keys": 10,
+      "total_wall_speedup": 1.1478315416016223,
+      "totals": {
+        "candidate": {
+          "wall_ns": 17641127,
+          "cpu_ns": 17632000
+        },
+        "baseline": {
+          "wall_ns": 20249042,
+          "cpu_ns": 19894000
+        }
+      },
+      "per_key_speedups": [
+        1.096629372081439,
+        1.1085222439944844,
+        1.2293434194371322,
+        1.3915679052803716,
+        1.122383050794298,
+        1.10349697501929,
+        1.1203021131968292,
+        1.1054368945198358,
+        1.0909635766319097,
+        1.097613880343826
+      ],
+      "median_per_key_speedup": 1.10697956925716,
+      "minimum_per_key_speedup": 1.0909635766319097,
+      "maximum_per_key_speedup": 1.3915679052803716,
+      "slower_keys": 0
+    },
+    {
+      "param": "65",
+      "op": "keygen",
+      "keys": 10,
+      "total_wall_speedup": 1.1869220135100371,
+      "totals": {
+        "candidate": {
+          "wall_ns": 20462416,
+          "cpu_ns": 24111000
+        },
+        "baseline": {
+          "wall_ns": 24287292,
+          "cpu_ns": 28327000
+        }
+      },
+      "per_key_speedups": [
+        1.2385958100752716,
+        1.1738909314478942,
+        1.1391957787186608,
+        1.2432888170410863,
+        1.1780088575489402,
+        1.1502548993049437,
+        1.1836552435791903,
+        1.1776312914018674,
+        1.1863193094361268,
+        1.1995319188370135
+      ],
+      "median_per_key_speedup": 1.1808320505640653,
+      "minimum_per_key_speedup": 1.1391957787186608,
+      "maximum_per_key_speedup": 1.2432888170410863,
+      "slower_keys": 0
+    },
+    {
+      "param": "65",
+      "op": "sign",
+      "keys": 10,
+      "total_wall_speedup": 1.1453157298775263,
+      "totals": {
+        "candidate": {
+          "wall_ns": 203131251,
+          "cpu_ns": 204321000
+        },
+        "baseline": {
+          "wall_ns": 232649417,
+          "cpu_ns": 234090000
+        }
+      },
+      "per_key_speedups": [
+        1.1285391634677966,
+        1.0732297596861058,
+        1.161258597814198,
+        1.0614217371532515,
+        1.097303017216871,
+        1.11950569537853,
+        1.1623473753764522,
+        1.1831143228167915,
+        1.1428404658341518,
+        1.1251950764780194
+      ],
+      "median_per_key_speedup": 1.126867119972908,
+      "minimum_per_key_speedup": 1.0614217371532515,
+      "maximum_per_key_speedup": 1.1831143228167915,
+      "slower_keys": 0
+    },
+    {
+      "param": "65",
+      "op": "verify",
+      "keys": 10,
+      "total_wall_speedup": 1.1438452395052585,
+      "totals": {
+        "candidate": {
+          "wall_ns": 26266083,
+          "cpu_ns": 26269000
+        },
+        "baseline": {
+          "wall_ns": 30044334,
+          "cpu_ns": 30224000
+        }
+      },
+      "per_key_speedups": [
+        1.1442868247182278,
+        1.1387413412372196,
+        1.1443413599799666,
+        1.1669554116896144,
+        1.1547939822504865,
+        1.1355317699672471,
+        1.1253494318625485,
+        1.1425630230866755,
+        1.1559479312847811,
+        1.1286433444621862
+      ],
+      "median_per_key_speedup": 1.1434249239024517,
+      "minimum_per_key_speedup": 1.1253494318625485,
+      "maximum_per_key_speedup": 1.1669554116896144,
+      "slower_keys": 0
+    },
+    {
+      "param": "87",
+      "op": "keygen",
+      "keys": 10,
+      "total_wall_speedup": 1.2260790787705054,
+      "totals": {
+        "candidate": {
+          "wall_ns": 31080377,
+          "cpu_ns": 31297000
+        },
+        "baseline": {
+          "wall_ns": 38107000,
+          "cpu_ns": 38582000
+        }
+      },
+      "per_key_speedups": [
+        1.2445679825431462,
+        1.2240689400467808,
+        1.237930299183761,
+        1.2326740540096857,
+        1.2418709374577337,
+        1.3100243690884308,
+        1.2877965442350876,
+        1.1770932127290339,
+        1.0886621130649614,
+        1.2359386568436832
+      ],
+      "median_per_key_speedup": 1.2369344780137221,
+      "minimum_per_key_speedup": 1.0886621130649614,
+      "maximum_per_key_speedup": 1.3100243690884308,
+      "slower_keys": 0
+    },
+    {
+      "param": "87",
+      "op": "sign",
+      "keys": 10,
+      "total_wall_speedup": 1.202429319001892,
+      "totals": {
+        "candidate": {
+          "wall_ns": 187206291,
+          "cpu_ns": 189480000
+        },
+        "baseline": {
+          "wall_ns": 225102333,
+          "cpu_ns": 227099000
+        }
+      },
+      "per_key_speedups": [
+        1.141776831398577,
+        1.2117294085752273,
+        1.1138224835767103,
+        1.211385327241203,
+        1.1906145051026047,
+        1.2249042289442917,
+        1.2374798353338514,
+        1.1972514041833073,
+        1.202115285649278,
+        1.0963649533089728
+      ],
+      "median_per_key_speedup": 1.1996833449162927,
+      "minimum_per_key_speedup": 1.0963649533089728,
+      "maximum_per_key_speedup": 1.2374798353338514,
+      "slower_keys": 0
+    },
+    {
+      "param": "87",
+      "op": "verify",
+      "keys": 10,
+      "total_wall_speedup": 1.1866426445998979,
+      "totals": {
+        "candidate": {
+          "wall_ns": 38823748,
+          "cpu_ns": 38794000
+        },
+        "baseline": {
+          "wall_ns": 46069915,
+          "cpu_ns": 46262000
+        }
+      },
+      "per_key_speedups": [
+        1.1807299631778565,
+        1.1740229115174798,
+        1.1884088193608244,
+        1.1917653512310025,
+        1.2040105259756584,
+        1.2186865864700556,
+        1.2391714474553865,
+        1.1406882077646077,
+        1.182544201264737,
+        1.1512282307665738
+      ],
+      "median_per_key_speedup": 1.1854765103127807,
+      "minimum_per_key_speedup": 1.1406882077646077,
+      "maximum_per_key_speedup": 1.2391714474553865,
+      "slower_keys": 0
+    }
+  ],
+  "cpu_ratios": [
+    {
+      "param": "44",
+      "op": "keygen",
+      "total_cpu_speedup": 1.250644818692156
+    },
+    {
+      "param": "44",
+      "op": "sign",
+      "total_cpu_speedup": 1.1226370298122457
+    },
+    {
+      "param": "44",
+      "op": "verify",
+      "total_cpu_speedup": 1.1282894736842106
+    },
+    {
+      "param": "65",
+      "op": "keygen",
+      "total_cpu_speedup": 1.1748579486541413
+    },
+    {
+      "param": "65",
+      "op": "sign",
+      "total_cpu_speedup": 1.1456972117403497
+    },
+    {
+      "param": "65",
+      "op": "verify",
+      "total_cpu_speedup": 1.1505576915756215
+    },
+    {
+      "param": "87",
+      "op": "keygen",
+      "total_cpu_speedup": 1.2327699140492698
+    },
+    {
+      "param": "87",
+      "op": "sign",
+      "total_cpu_speedup": 1.1985381042854126
+    },
+    {
+      "param": "87",
+      "op": "verify",
+      "total_cpu_speedup": 1.192503995463216
+    }
+  ]
+}

@@ -136,3 +136,7 @@ state, the hash layer and the runtime are isolated; the bun variants run `bun sr
 Note on durations: noble's SLH-DSA "s" signing is slow in pure JS (≈2–8 s per op for SHA2-128s..256s,
 ≈7–21 s for SHAKE-128s..256s). The full bench therefore takes roughly 30–40 minutes, most of it in
 `sign` on the six "s" sets.
+
+## Row-wise ML-DSA accumulation experiment
+
+The separate [`rowdot` experiment](rowdot.md) evaluates a small upstream-compatible ML-DSA patch against the untouched noble package. Run `libs/noble/run.sh rowdot --out <new.json>` after `npm ci`; correctness checks precede paired fresh-process timings. Its results are separate from the six standard benchmark variants.
