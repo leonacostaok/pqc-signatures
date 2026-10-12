@@ -1,0 +1,49 @@
+{
+  "kind": "resource-path smoke; exploratory diagnostics only, not performance evidence",
+  "records": [
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "candidate",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/candidate/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-128f.json",
+        "-param",
+        "SLH-DSA-SHA2-128f",
+        "-mode",
+        "resource",
+        "-settings",
+        "default",
+        "-op",
+        "verify"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/resource-smoke/default.json",
+      "sha256": "e0d78d9fadb66754db75e84e0088f0f1d353a8c2354b67bfdbe98deb615e4f10",
+      "exit_code": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "candidate",
+      "settings": "constrained",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/candidate/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-128f.json",
+        "-param",
+        "SLH-DSA-SHA2-128f",
+        "-mode",
+        "resource",
+        "-settings",
+        "constrained",
+        "-op",
+        "verify"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/resource-smoke/constrained.json",
+      "sha256": "4a85fa2fec46a1050a10cec41a4575e435edf8ea355960d8e2fa178738a34f84",
+      "exit_code": 0
+    }
+  ],
+  "manifest_sha256": "3ab524da771b3fd959ef2e02e8ce0e2e170d3ea0132f44225b89c1a911c0e875",
+  "passed": true
+}

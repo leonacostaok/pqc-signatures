@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-10-12T06:54:53.981631+00:00",
+  "hardware": {
+    "machdep.cpu.brand_string": "Apple M1 Pro",
+    "hw.memsize": "17179869184",
+    "hw.logicalcpu": "8"
+  },
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.2\nBuildVersion:\t\t25C56\n",
+  "stack_configuration_only": [
+    "Go runtime StackInuse recorded during resource workloads; no consumed-stack counter"
+  ],
+  "manifest_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/manifest.json",
+  "manifest_sha256": "3ab524da771b3fd959ef2e02e8ce0e2e170d3ea0132f44225b89c1a911c0e875",
+  "resource_smoke_kind": "correctness-only instrumentation gate; not performance evidence"
+}
