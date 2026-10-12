@@ -1,0 +1,728 @@
+{
+  "passed": true,
+  "started_at": "2026-10-12T07:42:19.866361+00:00",
+  "finished_at": "2026-10-12T07:44:03.985158+00:00",
+  "manifest_sha256": "8fe65e0eccc15a49de74b09a1e493d2ecf1d95ffb0a74b272bc73d308ab9e5e3",
+  "runs": [
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "fork": 0,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-000.stdout.jsonl",
+      "sha256": "decd0b8d5061b0465f5ce0a91a9102247e69f2a704447dc63fcf89723e38b820",
+      "rows": 112
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "fork": 0,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-001.stdout.jsonl",
+      "sha256": "ff42776cac1cf846399561e1b78396fda292c309eaef6b85aafd8141acbb90d1",
+      "rows": 112
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "fork": 1,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-002.stdout.jsonl",
+      "sha256": "37f660773d144ef773fce130b7617213b3d06a4d939ea94bf4d9d0cddbfb90d3",
+      "rows": 112
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "fork": 1,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-003.stdout.jsonl",
+      "sha256": "0d6fb72b9264ea6aea8a96dd7c8f02327ba230934834d2e6f316c0c603e6eeaa",
+      "rows": 108
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "fork": 0,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-004.stdout.jsonl",
+      "sha256": "86674c785b15b4c6ee83090f4211533729997775f621dd6af93ced07b3a7dce1",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "fork": 0,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-005.stdout.jsonl",
+      "sha256": "f15afc2a94eb5794dfd195a44530937d6a169c268e7bfa7aedfb39fe485011d4",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "fork": 1,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-006.stdout.jsonl",
+      "sha256": "d710dac9d28348f7983f82bb4e8b1dd72175b702a3cca114b2b45491dfd6d8d6",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "fork": 1,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-007.stdout.jsonl",
+      "sha256": "89e4ce651720622939863bc1388ee043ba8923bb77b9b61031dd189c4cfbbd9d",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "fork": 0,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-008.stdout.jsonl",
+      "sha256": "fca7ad04108db4f90fa1ebfddc60ffd95e798e37822fb9cc2b109adc21a07984",
+      "rows": 80
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "fork": 0,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-009.stdout.jsonl",
+      "sha256": "bea5020eb40f5eca6ab0eb9ad718e5e45fede2a712568bc73bb3142fe330c9c4",
+      "rows": 80
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "fork": 1,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-010.stdout.jsonl",
+      "sha256": "4c1ae3dfde38525cca776ed0ee16db719b3ee8325440f10f97473eccc84faedc",
+      "rows": 80
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "fork": 1,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-011.stdout.jsonl",
+      "sha256": "ecb40b07f5f424cd0a606896956a6081040dd4b5626d144ee8a753c882fd994b",
+      "rows": 80
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "fork": 0,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-012.stdout.jsonl",
+      "sha256": "b15a712c630a5c35b85efa8b06dc8c04e9d37a97482f37f7eccf4361391d8b48",
+      "rows": 128
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "fork": 0,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-013.stdout.jsonl",
+      "sha256": "6afc08c274e00e116bb60d78a35fe09fb1190e696f6d4b128b8404154b1c5988",
+      "rows": 128
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "fork": 1,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-014.stdout.jsonl",
+      "sha256": "bc5b999f647cd34bd20b24a7267de75bccb6ff441cc9f91069ac32a4dae75172",
+      "rows": 128
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "fork": 1,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-015.stdout.jsonl",
+      "sha256": "1d8d662e18ccebdc9e21a46664cc518f8f9b53513256cba58f408520e4f1aae7",
+      "rows": 128
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "fork": 0,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-016.stdout.jsonl",
+      "sha256": "3a5559d2be042a1a948f895856541d15f760fa79b784749042ad2e14d3e0546c",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "fork": 0,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-017.stdout.jsonl",
+      "sha256": "1accfb170bd4ccc17e21bf4a94fe40741e80778b23a30b0f3363a67f70805a27",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "fork": 1,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-018.stdout.jsonl",
+      "sha256": "5cb86bab3ca23681c192dad0ad6151d17ab88498d8124b34e713cf2b7795eed9",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "fork": 1,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-019.stdout.jsonl",
+      "sha256": "907be525a797f8ee2774b7675a5b3242f2fb6201e3b3f7b1b31aacf5ad344088",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "fork": 0,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-020.stdout.jsonl",
+      "sha256": "f12eee3637c6ef0fb1570c62c369959e0b209e85f901a8f5a25ade0a39d3923e",
+      "rows": 96
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "fork": 0,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-021.stdout.jsonl",
+      "sha256": "dda588fce64686d57d46e3fac1c20b32a1592571ab18f319be4536441cec3b92",
+      "rows": 96
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "fork": 1,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-022.stdout.jsonl",
+      "sha256": "c26965433a64bef88434d567bc36cc69eff2f8a69c16c208ac79e6e675c9295c",
+      "rows": 96
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "fork": 1,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-023.stdout.jsonl",
+      "sha256": "a67e6bfb75a7c6a026f5021ea4fa203744aa1e7f70a6f7107c81b5ad6fbbc028",
+      "rows": 96
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "fork": 0,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-024.stdout.jsonl",
+      "sha256": "29677d8f717f0ba755eb4d002207b32be093f0b4df2c8f63d336222dc694d8c6",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "fork": 0,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-025.stdout.jsonl",
+      "sha256": "815061dfa90d551b7beb75daccbeeae3df498b26b0a8c0a94cdf5fb2e76879fb",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "fork": 1,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-026.stdout.jsonl",
+      "sha256": "805e91f7b8fed58b716365c1ff606d409a4c5d53bae0807bdac114ebd1b1258a",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "fork": 1,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-027.stdout.jsonl",
+      "sha256": "4b0f6d20ac9b28758485ee16ed0cd2ee6826b63ebe4afb88d1aa4eb5f05c630b",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "fork": 0,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-028.stdout.jsonl",
+      "sha256": "296f521d8eb16b0b4f19d6742423af1bd0c29dc5c0519f5a53658d2e1c218af8",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "fork": 0,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-029.stdout.jsonl",
+      "sha256": "eb679df99c576d07e851d71d1c15c41ecd8b5583f7a9b4fa450f049cfa07d12a",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "fork": 1,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-030.stdout.jsonl",
+      "sha256": "20dba7f473ec6cfa7fc1f9d96c6c8dd43c0723e81c2592f4dd0a3e3e8c7ee7b1",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "fork": 1,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-031.stdout.jsonl",
+      "sha256": "2d18a0d9393116ffe87cd876f413e1af4fc84250be85e789474ea656c8c36c13",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "fork": 0,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-032.stdout.jsonl",
+      "sha256": "a5461036f395e5ead57e874a91f7d3c4a31d9031c90cff68194483ab915c4764",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "fork": 0,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-033.stdout.jsonl",
+      "sha256": "26d9dacf2f0dee4bb7e8d15bfa30017db0c191a1785d47fb7d83f58930aefcc8",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "fork": 1,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-034.stdout.jsonl",
+      "sha256": "ef8df89cd87190822ad638c53cbaabea1d6de00985421d93193e9023330ed575",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "fork": 1,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-035.stdout.jsonl",
+      "sha256": "5ba61d3a982692badfa14dc22b2c3bfe29739cb3e843742b5efe178f49df8575",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "fork": 0,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-036.stdout.jsonl",
+      "sha256": "247adc2242d908997b12bb90d6bd7cb580bc083560bad5907998e402a4f4966b",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "fork": 0,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-037.stdout.jsonl",
+      "sha256": "ca10fd91a2b94a9a0c6bebedd9bb14a6d1dfc84af09703b8f4e95c92ccc92c8e",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "fork": 1,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-038.stdout.jsonl",
+      "sha256": "bcfb2c8cfa866e079a2010baf74e47a33b7e6d46df9eecb852264ba0d57834b0",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "fork": 1,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-039.stdout.jsonl",
+      "sha256": "fd2e9805b20cc14b92728b5cf8243576307a9af064d2e8cc92c03642b4d4c872",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "fork": 0,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-040.stdout.jsonl",
+      "sha256": "d62fb56093d0471f2816ea47758b752e0536144f9022f33aca27834489d608da",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "fork": 0,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-041.stdout.jsonl",
+      "sha256": "849141a1aceeaa4dd582f23827363ea25cbc4f937cb51e40b6bd5e5584487f1d",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "fork": 1,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-042.stdout.jsonl",
+      "sha256": "d3487707cd7ea833c50bc48c596d5afdc06079e6cf49e0c434771edafd352f16",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "fork": 1,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-043.stdout.jsonl",
+      "sha256": "76a7cdfdb9979e5e26fae3dfd8abc132d35de881dc4b7642dfa5406a20469d1d",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "fork": 0,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-044.stdout.jsonl",
+      "sha256": "0adaa57bba2b99ca2c851ee6b18850304bb3922c23169f5010320ca87e3b6571",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "fork": 0,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-045.stdout.jsonl",
+      "sha256": "1e6e209e9158394f2c99c4847c16d8ea0689cb1fc50f6231807e9af6d48f684e",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "fork": 1,
+        "variant": "candidate",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-046.stdout.jsonl",
+      "sha256": "51530b35a93e163a51f1b5844065ca4af7856158badcd96ed3f556628eedd47c",
+      "rows": 8
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "fork": 1,
+        "variant": "baseline",
+        "rounds": 2,
+        "budget_ms": 100,
+        "warmup_cycles": 40
+      },
+      "raw": "run-047.stdout.jsonl",
+      "sha256": "8ce1c73d57403d3b622d0b4e3ec50c4e0db0997b9413118862858246c69d2e40",
+      "rows": 8
+    }
+  ]
+}

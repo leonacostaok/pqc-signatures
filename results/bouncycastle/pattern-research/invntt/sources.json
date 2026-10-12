@@ -1,0 +1,13 @@
+{
+  "upstream_commit": "c314b9cdffa3958a0eff5344f8fdcdb0181ed830",
+  "files": {
+    "Ntt.java": "18685734a0673c1d774fd5bd7ca211daa24f6620a99e67a297fa193583a3c243",
+    "Reduce.java": "b22659b97fe0325dc6c70c11b16a519523b2b7266bb08f7fe18ddafcd2ed8db8",
+    "MLDSAEngine.java": "b8ab5f28a0bcabc3d88d5d747c13c74f231d5b07de7366ed48967ffff01037f5",
+    "Poly.java": "e4efdbea85f3c0afa71cc8baa64e09f465d1d84790375b8e3651940b522d6b7b",
+    "PolyVecMatrix.java": "3f089b361aad0858221a8a0142aa358af42351b7b5933d72122611d1d7cb9dd6"
+  },
+  "original_oracle_sha256": "d7d660479556398ae6ebced79793d935f5b65127a16aea9f47b9df23c05e937e",
+  "changes_to_oracle": "Repository-relative paths; reject disabled assertions; verify snapshot hashes and source constants; label algebraic-only scalar witness. Arithmetic checks unchanged.",
+  "oracle_sha256": "99857806838e3e64c868587561de81c4df10e594d504b113aaa09e087d0805d0"
+}

@@ -1,0 +1,361 @@
+{
+  "schema": "bc-address-screen-summary-v1",
+  "cells": [
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "metrics": {
+        "wall_ns": {
+          "baseline_process_means": [
+            1908905.0892857143,
+            1904581.0462962964
+          ],
+          "candidate_process_means": [
+            1836194.9375,
+            1817840.419642857
+          ],
+          "change_percent": [
+            -3.808997743985343,
+            -4.5543153347093135
+          ],
+          "aggregate_change_percent": -4.181233988276145
+        },
+        "thread_cpu_ns": {
+          "baseline_process_means": [
+            1912062.5,
+            1905250
+          ],
+          "candidate_process_means": [
+            1840803.5714285714,
+            1821776.7857142857
+          ],
+          "change_percent": [
+            -3.726809587627422,
+            -4.381221062102836
+          ],
+          "aggregate_change_percent": -4.0534313828679895
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "metrics": {
+        "wall_ns": {
+          "baseline_process_means": [
+            42639260.5,
+            43081500
+          ],
+          "candidate_process_means": [
+            43246822.75,
+            42882260.5
+          ],
+          "change_percent": [
+            1.4248892754601172,
+            -0.46247113029954656
+          ],
+          "aggregate_change_percent": 0.4763405592977721
+        },
+        "thread_cpu_ns": {
+          "baseline_process_means": [
+            42452875,
+            42899000
+          ],
+          "candidate_process_means": [
+            43243500,
+            42880500
+          ],
+          "change_percent": [
+            1.862359145287562,
+            -0.043124548357775794
+          ],
+          "aggregate_change_percent": 0.9046374200918361
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "metrics": {
+        "wall_ns": {
+          "baseline_process_means": [
+            2604381.3125,
+            2584618.2875
+          ],
+          "candidate_process_means": [
+            2648763.6125,
+            2596490.6
+          ],
+          "change_percent": [
+            1.70413985797635,
+            0.45934490819856677
+          ],
+          "aggregate_change_percent": 1.0841128702341996
+        },
+        "thread_cpu_ns": {
+          "baseline_process_means": [
+            2584912.5,
+            2565600
+          ],
+          "candidate_process_means": [
+            2651162.5,
+            2569800
+          ],
+          "change_percent": [
+            2.5629494228528005,
+            0.16370439663235814
+          ],
+          "aggregate_change_percent": 1.3678250465366304
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "metrics": {
+        "wall_ns": {
+          "baseline_process_means": [
+            1599474.953125,
+            1639985.015625
+          ],
+          "candidate_process_means": [
+            1597241.203125,
+            1584699.1640625
+          ],
+          "change_percent": [
+            -0.1396552034550913,
+            -3.3711193111987336
+          ],
+          "aggregate_change_percent": -1.7755922936962487
+        },
+        "thread_cpu_ns": {
+          "baseline_process_means": [
+            1602031.25,
+            1623226.5625
+          ],
+          "candidate_process_means": [
+            1587421.875,
+            1587578.125
+          ],
+          "change_percent": [
+            -0.9119282161318631,
+            -2.1961467563157866
+          ],
+          "aggregate_change_percent": -1.558257212965053
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "metrics": {
+        "wall_ns": {
+          "baseline_process_means": [
+            36244250,
+            36107041.5
+          ],
+          "candidate_process_means": [
+            35961119.75,
+            36026333.25
+          ],
+          "change_percent": [
+            -0.7811728756975223,
+            -0.2235249598059652
+          ],
+          "aggregate_change_percent": -0.5028776853278405
+        },
+        "thread_cpu_ns": {
+          "baseline_process_means": [
+            35989500,
+            35929250
+          ],
+          "candidate_process_means": [
+            35960375,
+            36013750
+          ],
+          "change_percent": [
+            -0.0809263813056571,
+            0.23518442494625535
+          ],
+          "aggregate_change_percent": 0.07699661075866171
+        }
+      }
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "metrics": {
+        "wall_ns": {
+          "baseline_process_means": [
+            2217434.5208333335,
+            2231830.7395833335
+          ],
+          "candidate_process_means": [
+            2211457.4479166665,
+            2207859.8020833335
+          ],
+          "change_percent": [
+            -0.26954901533781106,
+            -1.074048182725329
+          ],
+          "aggregate_change_percent": -0.6731001337030307
+        },
+        "thread_cpu_ns": {
+          "baseline_process_means": [
+            2200666.6666666665,
+            2214656.25
+          ],
+          "candidate_process_means": [
+            2196812.5,
+            2192833.3333333335
+          ],
+          "change_percent": [
+            -0.1751363223265634,
+            -0.9853861820165788
+          ],
+          "aggregate_change_percent": -0.5815448568078252
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_process_means": [
+            171288,
+            171288
+          ],
+          "candidate_process_means": [
+            154392,
+            154392
+          ],
+          "change_percent": [
+            -9.864088552613149,
+            -9.864088552613149
+          ],
+          "aggregate_change_percent": -9.864088552613149
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_process_means": [
+            4098684,
+            4098713
+          ],
+          "candidate_process_means": [
+            3772732,
+            3772732
+          ],
+          "change_percent": [
+            -7.952601371562185,
+            -7.953252642963782
+          ],
+          "aggregate_change_percent": -7.9529270084149895
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_process_means": [
+            273126,
+            273126
+          ],
+          "candidate_process_means": [
+            274128,
+            273126
+          ],
+          "change_percent": [
+            0.3668636453505014,
+            0.0
+          ],
+          "aggregate_change_percent": 0.1834318226752396
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_process_means": [
+            170792,
+            170792
+          ],
+          "candidate_process_means": [
+            153896,
+            153896
+          ],
+          "change_percent": [
+            -9.892735022717691,
+            -9.892735022717691
+          ],
+          "aggregate_change_percent": -9.892735022717691
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_process_means": [
+            4087038,
+            4087038
+          ],
+          "candidate_process_means": [
+            3760382,
+            3760382
+          ],
+          "change_percent": [
+            -7.992487468920039,
+            -7.992487468920039
+          ],
+          "aggregate_change_percent": -7.992487468920039
+        }
+      }
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_process_means": [
+            270654,
+            270654
+          ],
+          "candidate_process_means": [
+            270654,
+            269163
+          ],
+          "change_percent": [
+            0.0,
+            -0.5508878494313807
+          ],
+          "aggregate_change_percent": -0.27544392471569035
+        }
+      }
+    }
+  ],
+  "execution_sha256": "24344e8f1cc5d107076319b4083335d2466b8fe0adef9319bc1bca53e2bc33d8",
+  "limits": "Preliminary two-pair screen; no confidence interval, peak-memory claim, or upstream readiness. Keep both pairs and unchanged verification control."
+}

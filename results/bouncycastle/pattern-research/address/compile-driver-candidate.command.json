@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/javac",
+    "--release",
+    "8",
+    "-cp",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/libs/bouncycastle/build/pattern-research/candidate-classes",
+    "-d",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/libs/bouncycastle/build/pattern-research/candidate-driver",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/libs/bouncycastle/experiments/slh-deep/SlhDeepProbe.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/libs/bouncycastle/experiments/pattern-research/AddressTrace.java"
+  ],
+  "started_at": "2026-10-12T07:41:34.714347+00:00"
+}

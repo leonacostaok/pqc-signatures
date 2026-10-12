@@ -1,0 +1,76 @@
+--- a/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/WotsPlus.java
++++ b/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/WotsPlus.java
+@@ -18,22 +18,20 @@
+     {
+         ADRS wotspkADRS = new ADRS(paramAdrs); // copy address to create OTS public key address
+ 
++        ADRS prfAdrs = new ADRS(paramAdrs);
++        prfAdrs.setTypeAndClear(ADRS.WOTS_PRF);
++        prfAdrs.setKeyPairAddress(paramAdrs.getKeyPairAddress());
++        ADRS hashAdrs = new ADRS(paramAdrs);
++        hashAdrs.setTypeAndClear(ADRS.WOTS_HASH);
++        hashAdrs.setKeyPairAddress(paramAdrs.getKeyPairAddress());
+         byte[][] tmp = new byte[engine.WOTS_LEN][];
+         for (int i = 0; i < engine.WOTS_LEN; i++)
+         {
+-            ADRS adrs = new ADRS(paramAdrs);
+-            adrs.setTypeAndClear(ADRS.WOTS_PRF);
+-            adrs.setKeyPairAddress(paramAdrs.getKeyPairAddress());
+-            adrs.setChainAddress(i);
+-            adrs.setHashAddress(0);
+-
+-            byte[] sk = engine.PRF(pkSeed, skSeed, adrs);
+-
+-            adrs.setTypeAndClear(ADRS.WOTS_HASH);
+-            adrs.setKeyPairAddress(paramAdrs.getKeyPairAddress());
+-            adrs.setChainAddress(i);
+-            adrs.setHashAddress(0);
+-            tmp[i] = chain(sk, 0, w - 1, pkSeed, adrs);
++            prfAdrs.setChainAddress(i);
++            byte[] sk = engine.PRF(pkSeed, skSeed, prfAdrs);
++            hashAdrs.setChainAddress(i);
++            hashAdrs.setHashAddress(0);
++            tmp[i] = chain(sk, 0, w - 1, pkSeed, hashAdrs);
+         }
+ 
+         wotspkADRS.setTypeAndClear(ADRS.WOTS_PK);
+@@ -67,8 +65,6 @@
+     // #Output: WOTS+ signature sig
+     public byte[] sign(byte[] M, byte[] skSeed, byte[] pkSeed, ADRS paramAdrs)
+     {
+-        ADRS adrs = new ADRS(paramAdrs);
+-
+         int[] msg = new int[engine.WOTS_LEN];
+ 
+         // convert message to base w
+@@ -90,19 +86,20 @@
+         byte[] csum_bytes = Pack.intToBigEndian(csum);
+         base_w(csum_bytes, 4 - len_2_bytes, w, msg, engine.WOTS_LEN1, engine.WOTS_LEN2);
+ 
++        ADRS prfAdrs = new ADRS(paramAdrs);
++        prfAdrs.setTypeAndClear(ADRS.WOTS_PRF);
++        prfAdrs.setKeyPairAddress(paramAdrs.getKeyPairAddress());
++        ADRS hashAdrs = new ADRS(paramAdrs);
++        hashAdrs.setTypeAndClear(ADRS.WOTS_HASH);
++        hashAdrs.setKeyPairAddress(paramAdrs.getKeyPairAddress());
+         byte[][] sig = new byte[engine.WOTS_LEN][];
+         for (int i = 0; i < engine.WOTS_LEN; i++)
+         {
+-            adrs.setTypeAndClear(ADRS.WOTS_PRF);
+-            adrs.setKeyPairAddress(paramAdrs.getKeyPairAddress());
+-            adrs.setChainAddress(i);
+-            adrs.setHashAddress(0);
+-            byte[] sk = engine.PRF(pkSeed, skSeed, adrs);
+-            adrs.setTypeAndClear(ADRS.WOTS_HASH);
+-            adrs.setKeyPairAddress(paramAdrs.getKeyPairAddress());
+-            adrs.setChainAddress(i);
+-            adrs.setHashAddress(0);
+-            sig[i] = chain(sk, 0, msg[i], pkSeed, adrs);
++            prfAdrs.setChainAddress(i);
++            byte[] sk = engine.PRF(pkSeed, skSeed, prfAdrs);
++            hashAdrs.setChainAddress(i);
++            hashAdrs.setHashAddress(0);
++            sig[i] = chain(sk, 0, msg[i], pkSeed, hashAdrs);
+         }
+         return Arrays.concatenate(sig);
+     }

@@ -1,0 +1,17 @@
+{
+  "audit": "passed",
+  "processes": 48,
+  "rows": {
+    "bench": 1724,
+    "allocation": 192
+  },
+  "changed_classes": [
+    "org/bouncycastle/crypto/signers/slhdsa/WotsPlus.class"
+  ],
+  "trace_cases": 24,
+  "check_rows_per_variant": 72,
+  "start": "2026-10-12 07:42:19.866389+00:00",
+  "end": "2026-10-12 07:44:03.900493+00:00",
+  "no_overlapping_measured_processes": true,
+  "summary_cells": 12
+}

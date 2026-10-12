@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "local_links_checked": 19,
+  "markdown_files": 4,
+  "assertion_guards_reject_optimized_python": true
+}

@@ -1,0 +1,486 @@
+{
+  "jobs": [
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "fork": 0,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "fork": 0,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "fork": 1,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "fork": 1,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "fork": 0,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "fork": 0,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "fork": 1,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "fork": 1,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "fork": 0,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "fork": 0,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "fork": 1,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "fork": 1,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "fork": 0,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "fork": 0,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "fork": 1,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "fork": 1,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "fork": 0,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "fork": 0,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "fork": 1,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "fork": 1,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "fork": 0,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "fork": 0,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "fork": 1,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "bench",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "fork": 1,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "fork": 0,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "fork": 0,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "fork": 1,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "fork": 1,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "fork": 0,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "fork": 0,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "fork": 1,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "fork": 1,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "fork": 0,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "fork": 0,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "fork": 1,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "fork": 1,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "fork": 0,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "fork": 0,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "fork": 1,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "fork": 1,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "fork": 0,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "fork": 0,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "fork": 1,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "fork": 1,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "fork": 0,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "fork": 0,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "fork": 1,
+      "variant": "candidate",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    },
+    {
+      "mode": "allocation",
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "fork": 1,
+      "variant": "baseline",
+      "rounds": 2,
+      "budget_ms": 100,
+      "warmup_cycles": 40
+    }
+  ],
+  "created_at": "2026-10-12T07:42:19.865162+00:00",
+  "limits": "Two balanced process pairs; 80 disjoint-key warmup calls, four measured keys cycled per process, two rounds. Exploratory screen; wall/CPU and allocation separate; imports excluded by inherited harness."
+}
