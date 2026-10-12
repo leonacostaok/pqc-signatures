@@ -1,0 +1,10 @@
+{
+  "schema": "bc-matrix-window-v1",
+  "grant": "Root granted 2026-10-12T08:14:25.220554+00:00 under plan 0fab6a08e2da64857a75e8cabb60e1d9a5e3b3da82a4a26922eec3864bb17cd3; NTT released with no JVM remaining, WOTS quiet, root finished; OS contention remains a limitation.",
+  "collection_started_at": "2026-10-12T08:14:42.354585+00:00",
+  "collection_completed_at": "2026-10-12T11:47:40.731281+00:00",
+  "release_recorded_at": "2026-10-12T12:35:46.011815+00:00",
+  "collector_exit_code": 0,
+  "remaining_benchmark_processes": 0,
+  "collection_status": "complete"
+}

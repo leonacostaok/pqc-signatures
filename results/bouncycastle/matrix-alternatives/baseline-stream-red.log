@@ -1,0 +1,5 @@
+Exception in thread "main" java.lang.AssertionError: streamed helper missing
+	at org.bouncycastle.crypto.signers.mldsa.MatrixCheck.main(MatrixCheck.java:108)
+Caused by: java.lang.NoSuchMethodException: org.bouncycastle.crypto.signers.mldsa.PolyVecMatrix.expandAndMultiply(org.bouncycastle.crypto.signers.mldsa.MLDSAEngine,org.bouncycastle.crypto.signers.mldsa.PolyVec,org.bouncycastle.crypto.signers.mldsa.PolyVec,[B)
+	at java.base/java.lang.Class.getDeclaredMethod(Class.java:2422)
+	at org.bouncycastle.crypto.signers.mldsa.MatrixCheck.main(MatrixCheck.java:107)

@@ -1,0 +1,85 @@
+{
+  "collection_started_at": "2026-10-12T08:14:42.354585+00:00",
+  "collection_completed_at": "2026-10-12T11:47:40.731281+00:00",
+  "long_process_threshold_seconds": 10,
+  "long_processes": [
+    {
+      "index": 224,
+      "mode": "allocation",
+      "parameter": "ml_dsa_87",
+      "operation": "sign",
+      "variant": "baseline",
+      "round": 2,
+      "started_at": "2026-10-12T08:17:13.684382+00:00",
+      "completed_at": "2026-10-12T08:31:00.872817+00:00",
+      "process_wall_seconds": 827.188435
+    },
+    {
+      "index": 229,
+      "mode": "allocation",
+      "parameter": "ml_dsa_87",
+      "operation": "sign",
+      "variant": "lazy",
+      "round": 3,
+      "started_at": "2026-10-12T08:31:09.403928+00:00",
+      "completed_at": "2026-10-12T08:33:55.911809+00:00",
+      "process_wall_seconds": 166.507881
+    },
+    {
+      "index": 239,
+      "mode": "allocation",
+      "parameter": "ml_dsa_65",
+      "operation": "verify",
+      "variant": "stream",
+      "round": 3,
+      "started_at": "2026-10-12T08:34:11.605944+00:00",
+      "completed_at": "2026-10-12T08:35:12.786299+00:00",
+      "process_wall_seconds": 61.180355
+    },
+    {
+      "index": 247,
+      "mode": "allocation",
+      "parameter": "ml_dsa_44",
+      "operation": "sign",
+      "variant": "lazy",
+      "round": 3,
+      "started_at": "2026-10-12T08:35:20.795685+00:00",
+      "completed_at": "2026-10-12T09:43:11.401000+00:00",
+      "process_wall_seconds": 4070.605315
+    },
+    {
+      "index": 264,
+      "mode": "allocation",
+      "parameter": "ml_dsa_87",
+      "operation": "keygen",
+      "variant": "baseline",
+      "round": 2,
+      "started_at": "2026-10-12T09:43:24.507439+00:00",
+      "completed_at": "2026-10-12T10:18:08.188524+00:00",
+      "process_wall_seconds": 2083.681085
+    },
+    {
+      "index": 276,
+      "mode": "allocation",
+      "parameter": "ml_dsa_44",
+      "operation": "keygen",
+      "variant": "combined",
+      "round": 3,
+      "started_at": "2026-10-12T10:18:17.588676+00:00",
+      "completed_at": "2026-10-12T11:19:08.194217+00:00",
+      "process_wall_seconds": 3650.605541
+    },
+    {
+      "index": 284,
+      "mode": "allocation",
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "variant": "stream",
+      "round": 3,
+      "started_at": "2026-10-12T11:19:16.482380+00:00",
+      "completed_at": "2026-10-12T11:47:34.447725+00:00",
+      "process_wall_seconds": 1697.965345
+    }
+  ],
+  "cause": "unestablished; no observations discarded or rerun"
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "label": "lazy",
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java",
+      "-cp",
+      "libs/bouncycastle/experiments/matrix-alternatives/build/baseline-red:/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ml-deep/libs/bouncycastle/build/ml-deep/prepared-v6/baseline",
+      "org.bouncycastle.crypto.signers.mldsa.MatrixCheck",
+      "true",
+      "false"
+    ],
+    "exit_code": 1,
+    "expected_failure": "row reduction count",
+    "log": "results/bouncycastle/matrix-alternatives/baseline-lazy-red.log"
+  },
+  {
+    "label": "stream",
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java",
+      "-cp",
+      "libs/bouncycastle/experiments/matrix-alternatives/build/baseline-red:/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ml-deep/libs/bouncycastle/build/ml-deep/prepared-v6/baseline",
+      "org.bouncycastle.crypto.signers.mldsa.MatrixCheck",
+      "false",
+      "true"
+    ],
+    "exit_code": 1,
+    "expected_failure": "streamed helper missing",
+    "log": "results/bouncycastle/matrix-alternatives/baseline-stream-red.log"
+  }
+]
