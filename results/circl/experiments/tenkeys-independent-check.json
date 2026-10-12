@@ -1,0 +1,796 @@
+{
+  "schema": "fresh-ten-key-independent-check-v1",
+  "provider": "circl",
+  "candidate_report_sha256": "11a9194b7cb1bf8a82967c3095cd423650cf7da02e6912b03b0b899835724e98",
+  "baseline_report_sha256": "0f2fc6121e94301d2b7ff3d627f82f4bea0eb7c7123646891b31e44477c24140",
+  "candidate_finished_at": "2026-10-12T02:02:04Z",
+  "baseline_started_at": "2026-10-12T02:04:34Z",
+  "local_candidate_finished_before_baseline": true,
+  "global_order_proof": "recorded separately by the six-provider coordinator",
+  "exact_key_signature_matches": 70,
+  "per_key_operation_pairs": 210,
+  "raw_parameter_outputs_checked": 14,
+  "source_binary_and_corpus_bindings_checked": true,
+  "smoke_and_measurement_seeds_disjoint": true,
+  "summaries": [
+    {
+      "param": "SLH-DSA-SHA2-128f",
+      "op": "keygen",
+      "keys": 10,
+      "total_wall_speedup": 1.3439765999876785,
+      "totals": {
+        "candidate": {
+          "wall_ns": 3295041,
+          "cpu_ns": 3312000
+        },
+        "baseline": {
+          "wall_ns": 4428458,
+          "cpu_ns": 4438000
+        }
+      },
+      "per_key_speedups": [
+        1.305402754186404,
+        1.3474608629247804,
+        1.350737811900192,
+        1.3536405974376347,
+        1.3317357556038694,
+        1.3910539769843393,
+        1.3528350816387982,
+        1.361803561877947,
+        1.3235294117647058,
+        1.3248258581502061
+      ],
+      "median_per_key_speedup": 1.3490993374124862,
+      "minimum_per_key_speedup": 1.305402754186404,
+      "maximum_per_key_speedup": 1.3910539769843393,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-128f",
+      "op": "sign",
+      "keys": 10,
+      "total_wall_speedup": 1.3177984427039844,
+      "totals": {
+        "candidate": {
+          "wall_ns": 76859376,
+          "cpu_ns": 76878000
+        },
+        "baseline": {
+          "wall_ns": 101285166,
+          "cpu_ns": 101266000
+        }
+      },
+      "per_key_speedups": [
+        1.3282813933066642,
+        1.3272959096549448,
+        1.30323653403432,
+        1.3093382364905544,
+        1.3064658138409901,
+        1.2964498574760301,
+        1.3383120368254382,
+        1.3223630791948038,
+        1.3196417543291794,
+        1.3266719389342954
+      ],
+      "median_per_key_speedup": 1.3210024167619916,
+      "minimum_per_key_speedup": 1.2964498574760301,
+      "maximum_per_key_speedup": 1.3383120368254382,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-128f",
+      "op": "verify",
+      "keys": 10,
+      "total_wall_speedup": 1.3456691068228437,
+      "totals": {
+        "candidate": {
+          "wall_ns": 4600252,
+          "cpu_ns": 4604000
+        },
+        "baseline": {
+          "wall_ns": 6190417,
+          "cpu_ns": 6186000
+        }
+      },
+      "per_key_speedups": [
+        1.3689978494623656,
+        1.3200632411067195,
+        1.366066329705173,
+        1.3235250262037268,
+        1.327746390592544,
+        1.327950272032892,
+        1.3676019309453735,
+        1.3427545280886728,
+        1.3607094672132027,
+        1.3499252085014797
+      ],
+      "median_per_key_speedup": 1.3463398682950762,
+      "minimum_per_key_speedup": 1.3200632411067195,
+      "maximum_per_key_speedup": 1.3689978494623656,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-128s",
+      "op": "keygen",
+      "keys": 10,
+      "total_wall_speedup": 1.3410783337888754,
+      "totals": {
+        "candidate": {
+          "wall_ns": 209376876,
+          "cpu_ns": 208960000
+        },
+        "baseline": {
+          "wall_ns": 280790792,
+          "cpu_ns": 280077000
+        }
+      },
+      "per_key_speedups": [
+        1.3487083781265679,
+        1.3407743514317985,
+        1.3333340087210892,
+        1.357000980221181,
+        1.3291916244675208,
+        1.3441559522791287,
+        1.3299900534270193,
+        1.3507086686842418,
+        1.3233314574860493,
+        1.3538658702120114
+      ],
+      "median_per_key_speedup": 1.3424651518554636,
+      "minimum_per_key_speedup": 1.3233314574860493,
+      "maximum_per_key_speedup": 1.357000980221181,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-128s",
+      "op": "sign",
+      "keys": 10,
+      "total_wall_speedup": 1.312842406919269,
+      "totals": {
+        "candidate": {
+          "wall_ns": 1624563038,
+          "cpu_ns": 1604307000
+        },
+        "baseline": {
+          "wall_ns": 2132795249,
+          "cpu_ns": 2129166000
+        }
+      },
+      "per_key_speedups": [
+        1.3117691956959803,
+        1.33129303237064,
+        1.335064213359624,
+        1.3353803165951914,
+        1.33553398754073,
+        1.3270124299671544,
+        1.3329205250692437,
+        1.3326998320004164,
+        1.1766654868983712,
+        1.328162511114488
+      ],
+      "median_per_key_speedup": 1.3319964321855282,
+      "minimum_per_key_speedup": 1.1766654868983712,
+      "maximum_per_key_speedup": 1.33553398754073,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-128s",
+      "op": "verify",
+      "keys": 10,
+      "total_wall_speedup": 1.29733824421967,
+      "totals": {
+        "candidate": {
+          "wall_ns": 1733292,
+          "cpu_ns": 1741000
+        },
+        "baseline": {
+          "wall_ns": 2248666,
+          "cpu_ns": 2244000
+        }
+      },
+      "per_key_speedups": [
+        1.3340089596571958,
+        1.2858842072574077,
+        1.325067628494139,
+        1.2774095238095238,
+        1.1273348051277459,
+        1.3963765229735388,
+        1.2831920903954803,
+        1.4444757609921082,
+        1.3203603053435113,
+        1.2037410242972073
+      ],
+      "median_per_key_speedup": 1.3031222563004596,
+      "minimum_per_key_speedup": 1.1273348051277459,
+      "maximum_per_key_speedup": 1.4444757609921082,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-192f",
+      "op": "keygen",
+      "keys": 10,
+      "total_wall_speedup": 1.3096571648356563,
+      "totals": {
+        "candidate": {
+          "wall_ns": 4963289,
+          "cpu_ns": 4954000
+        },
+        "baseline": {
+          "wall_ns": 6500207,
+          "cpu_ns": 6515000
+        }
+      },
+      "per_key_speedups": [
+        1.1094584293193717,
+        1.321600628435478,
+        1.3319317511944366,
+        1.3519958333333333,
+        1.3337052032282697,
+        1.3471002597402597,
+        1.334222528714748,
+        1.3422110780727403,
+        1.3406338572532852,
+        1.3302520186752926
+      ],
+      "median_per_key_speedup": 1.333963865971509,
+      "minimum_per_key_speedup": 1.1094584293193717,
+      "maximum_per_key_speedup": 1.3519958333333333,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-192f",
+      "op": "sign",
+      "keys": 10,
+      "total_wall_speedup": 1.3586564849638123,
+      "totals": {
+        "candidate": {
+          "wall_ns": 137011790,
+          "cpu_ns": 136946000
+        },
+        "baseline": {
+          "wall_ns": 186151957,
+          "cpu_ns": 185901000
+        }
+      },
+      "per_key_speedups": [
+        1.351476574042801,
+        1.354216562324277,
+        1.335608595301569,
+        1.3706403811123766,
+        1.3521854633728567,
+        1.3653693563210032,
+        1.3715385958623985,
+        1.361888700052493,
+        1.3712485284799956,
+        1.3531944166827625
+      ],
+      "median_per_key_speedup": 1.358052631188385,
+      "minimum_per_key_speedup": 1.335608595301569,
+      "maximum_per_key_speedup": 1.3715385958623985,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-192f",
+      "op": "verify",
+      "keys": 10,
+      "total_wall_speedup": 1.3935542986606884,
+      "totals": {
+        "candidate": {
+          "wall_ns": 7228042,
+          "cpu_ns": 7236000
+        },
+        "baseline": {
+          "wall_ns": 10072669,
+          "cpu_ns": 10083000
+        }
+      },
+      "per_key_speedups": [
+        1.3866182587240041,
+        1.3754034312892816,
+        1.3916184828407274,
+        1.3465306306115534,
+        1.3940503489948612,
+        1.4838433179600259,
+        1.401755326425941,
+        1.3854075754931052,
+        1.3861124197653476,
+        1.3830859142607175
+      ],
+      "median_per_key_speedup": 1.386365339244676,
+      "minimum_per_key_speedup": 1.3465306306115534,
+      "maximum_per_key_speedup": 1.4838433179600259,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-192s",
+      "op": "keygen",
+      "keys": 10,
+      "total_wall_speedup": 1.3443304779282483,
+      "totals": {
+        "candidate": {
+          "wall_ns": 311002458,
+          "cpu_ns": 310599000
+        },
+        "baseline": {
+          "wall_ns": 418090083,
+          "cpu_ns": 417392000
+        }
+      },
+      "per_key_speedups": [
+        1.354450166616177,
+        1.329260073493659,
+        1.3473887074195054,
+        1.350470113196849,
+        1.3548003232147008,
+        1.3392930398391565,
+        1.3481581675630143,
+        1.3415361747234944,
+        1.3441925560871169,
+        1.334115797670572
+      ],
+      "median_per_key_speedup": 1.345790631753311,
+      "minimum_per_key_speedup": 1.329260073493659,
+      "maximum_per_key_speedup": 1.3548003232147008,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-192s",
+      "op": "sign",
+      "keys": 10,
+      "total_wall_speedup": 1.3751211679978876,
+      "totals": {
+        "candidate": {
+          "wall_ns": 3182741167,
+          "cpu_ns": 3179223000
+        },
+        "baseline": {
+          "wall_ns": 4376654751,
+          "cpu_ns": 4351518000
+        }
+      },
+      "per_key_speedups": [
+        1.375187455144336,
+        1.3798447624490624,
+        1.3481049299204293,
+        1.3850379028003479,
+        1.3488144963282087,
+        1.3698953377017205,
+        1.436846074514804,
+        1.3671989647017384,
+        1.3701999464402226,
+        1.3714837267444746
+      ],
+      "median_per_key_speedup": 1.3708418365923487,
+      "minimum_per_key_speedup": 1.3481049299204293,
+      "maximum_per_key_speedup": 1.436846074514804,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-192s",
+      "op": "verify",
+      "keys": 10,
+      "total_wall_speedup": 1.4116689390807784,
+      "totals": {
+        "candidate": {
+          "wall_ns": 2789251,
+          "cpu_ns": 2801000
+        },
+        "baseline": {
+          "wall_ns": 3937499,
+          "cpu_ns": 3948000
+        }
+      },
+      "per_key_speedups": [
+        1.4439834024896265,
+        1.4212737171723784,
+        1.4431415184696228,
+        1.2560614967488064,
+        1.4190032499585647,
+        1.5186624430147198,
+        1.4041034790365745,
+        1.4282461881984654,
+        1.410993414118157,
+        1.4094416704493873
+      ],
+      "median_per_key_speedup": 1.4201384835654716,
+      "minimum_per_key_speedup": 1.2560614967488064,
+      "maximum_per_key_speedup": 1.5186624430147198,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-256f",
+      "op": "keygen",
+      "keys": 10,
+      "total_wall_speedup": 1.355578462072951,
+      "totals": {
+        "candidate": {
+          "wall_ns": 12826044,
+          "cpu_ns": 12819000
+        },
+        "baseline": {
+          "wall_ns": 17386709,
+          "cpu_ns": 17325000
+        }
+      },
+      "per_key_speedups": [
+        1.3299311663751012,
+        1.3441233140655107,
+        1.3531122018802269,
+        1.4422196210175955,
+        1.303434018873392,
+        1.3738230322558138,
+        1.4481301194022524,
+        1.3244066241188004,
+        1.3781528117911497,
+        1.2622034937901874
+      ],
+      "median_per_key_speedup": 1.3486177579728689,
+      "minimum_per_key_speedup": 1.2622034937901874,
+      "maximum_per_key_speedup": 1.4481301194022524,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-256f",
+      "op": "sign",
+      "keys": 10,
+      "total_wall_speedup": 1.3780388382958713,
+      "totals": {
+        "candidate": {
+          "wall_ns": 280618543,
+          "cpu_ns": 280388000
+        },
+        "baseline": {
+          "wall_ns": 386703251,
+          "cpu_ns": 385998000
+        }
+      },
+      "per_key_speedups": [
+        1.378029803611961,
+        1.3718104461261909,
+        1.3742703275363526,
+        1.3974213889096825,
+        1.4023223154389088,
+        1.3746878107820035,
+        1.4092230484739035,
+        1.3617531080226088,
+        1.3543518692397651,
+        1.3565302279704807
+      ],
+      "median_per_key_speedup": 1.374479069159178,
+      "minimum_per_key_speedup": 1.3543518692397651,
+      "maximum_per_key_speedup": 1.4092230484739035,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-256f",
+      "op": "verify",
+      "keys": 10,
+      "total_wall_speedup": 1.3890689964136156,
+      "totals": {
+        "candidate": {
+          "wall_ns": 7484418,
+          "cpu_ns": 7478000
+        },
+        "baseline": {
+          "wall_ns": 10396373,
+          "cpu_ns": 10385000
+        }
+      },
+      "per_key_speedups": [
+        1.39724105909077,
+        1.5508818828531055,
+        1.267331216600348,
+        1.4093708280149546,
+        1.3931575911789653,
+        1.3944156346908039,
+        1.4133189335133312,
+        1.3922948896714915,
+        1.3066043533930858,
+        1.3802722545663424
+      ],
+      "median_per_key_speedup": 1.3937866129348846,
+      "minimum_per_key_speedup": 1.267331216600348,
+      "maximum_per_key_speedup": 1.5508818828531055,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-256s",
+      "op": "keygen",
+      "keys": 10,
+      "total_wall_speedup": 1.385749124516793,
+      "totals": {
+        "candidate": {
+          "wall_ns": 204276334,
+          "cpu_ns": 204071000
+        },
+        "baseline": {
+          "wall_ns": 283075751,
+          "cpu_ns": 282565000
+        }
+      },
+      "per_key_speedups": [
+        1.3980544573154632,
+        1.3726402273168836,
+        1.385040200423034,
+        1.3879256204190054,
+        1.3931595970569355,
+        1.400153206234909,
+        1.377201864654222,
+        1.3745264630162384,
+        1.3950347837948438,
+        1.374507024391537
+      ],
+      "median_per_key_speedup": 1.3864829104210197,
+      "minimum_per_key_speedup": 1.3726402273168836,
+      "maximum_per_key_speedup": 1.400153206234909,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-256s",
+      "op": "sign",
+      "keys": 10,
+      "total_wall_speedup": 1.3896593923923142,
+      "totals": {
+        "candidate": {
+          "wall_ns": 2951030709,
+          "cpu_ns": 2927126000
+        },
+        "baseline": {
+          "wall_ns": 4100927542,
+          "cpu_ns": 4094787000
+        }
+      },
+      "per_key_speedups": [
+        1.405007642317005,
+        1.3976270781531248,
+        1.3909083242681575,
+        1.4009614206252363,
+        1.3965680915769312,
+        1.406755375528499,
+        1.4080949397836267,
+        1.4036269914162607,
+        1.3988202560199297,
+        1.2961036088015545
+      ],
+      "median_per_key_speedup": 1.399890838322583,
+      "minimum_per_key_speedup": 1.2961036088015545,
+      "maximum_per_key_speedup": 1.4080949397836267,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHA2-256s",
+      "op": "verify",
+      "keys": 10,
+      "total_wall_speedup": 1.428818879149004,
+      "totals": {
+        "candidate": {
+          "wall_ns": 3909583,
+          "cpu_ns": 3908000
+        },
+        "baseline": {
+          "wall_ns": 5586086,
+          "cpu_ns": 5577000
+        }
+      },
+      "per_key_speedups": [
+        1.441506729921406,
+        1.403989489637051,
+        1.3977866584691054,
+        1.446927374301676,
+        1.426209657554315,
+        1.4435325272621327,
+        1.3805690651978593,
+        1.4297198197293828,
+        1.4749010712035286,
+        1.4464388501278984
+      ],
+      "median_per_key_speedup": 1.4356132748253945,
+      "minimum_per_key_speedup": 1.3805690651978593,
+      "maximum_per_key_speedup": 1.4749010712035286,
+      "slower_keys": 0
+    },
+    {
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "keygen",
+      "keys": 10,
+      "total_wall_speedup": 1.0057216326702396,
+      "totals": {
+        "candidate": {
+          "wall_ns": 23332501,
+          "cpu_ns": 23342000
+        },
+        "baseline": {
+          "wall_ns": 23466001,
+          "cpu_ns": 23429000
+        }
+      },
+      "per_key_speedups": [
+        0.9970401173854271,
+        0.9988208179235676,
+        1.0011639176919358,
+        0.9943057659351223,
+        1.0051546391752577,
+        0.9975569429600966,
+        1.07120016770062,
+        1.0014690455717972,
+        0.9954761421319797,
+        0.9952580134396216
+      ],
+      "median_per_key_speedup": 0.9981888804418321,
+      "minimum_per_key_speedup": 0.9943057659351223,
+      "maximum_per_key_speedup": 1.07120016770062,
+      "slower_keys": 6
+    },
+    {
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "keys": 10,
+      "total_wall_speedup": 1.0044733991728758,
+      "totals": {
+        "candidate": {
+          "wall_ns": 546834500,
+          "cpu_ns": 546336000
+        },
+        "baseline": {
+          "wall_ns": 549280709,
+          "cpu_ns": 548255000
+        }
+      },
+      "per_key_speedups": [
+        1.0028317085256169,
+        1.007180217483349,
+        1.0028419004696207,
+        1.002542085347931,
+        1.0049333114371304,
+        0.9990103448895167,
+        1.0096051672374378,
+        1.0018828213751718,
+        1.0118442370243357,
+        1.002113386255855
+      ],
+      "median_per_key_speedup": 1.0028368044976188,
+      "minimum_per_key_speedup": 0.9990103448895167,
+      "maximum_per_key_speedup": 1.0118442370243357,
+      "slower_keys": 1
+    },
+    {
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "verify",
+      "keys": 10,
+      "total_wall_speedup": 0.9994109409923254,
+      "totals": {
+        "candidate": {
+          "wall_ns": 33034042,
+          "cpu_ns": 33033000
+        },
+        "baseline": {
+          "wall_ns": 33014583,
+          "cpu_ns": 32980000
+        }
+      },
+      "per_key_speedups": [
+        0.993669272253387,
+        0.97681713633076,
+        1.0002770719903207,
+        1.0170115080857465,
+        1.001314614717249,
+        1.0017997977027382,
+        1.0089202302763816,
+        1.0057730005960361,
+        1.0001401093648425,
+        0.9897696243598194
+      ],
+      "median_per_key_speedup": 1.0007958433537847,
+      "minimum_per_key_speedup": 0.97681713633076,
+      "maximum_per_key_speedup": 1.0170115080857465,
+      "slower_keys": 3
+    }
+  ],
+  "cpu_ratios": [
+    {
+      "param": "SLH-DSA-SHA2-128f",
+      "op": "keygen",
+      "total_cpu_speedup": 1.339975845410628
+    },
+    {
+      "param": "SLH-DSA-SHA2-128f",
+      "op": "sign",
+      "total_cpu_speedup": 1.3172298967194775
+    },
+    {
+      "param": "SLH-DSA-SHA2-128f",
+      "op": "verify",
+      "total_cpu_speedup": 1.343614248479583
+    },
+    {
+      "param": "SLH-DSA-SHA2-128s",
+      "op": "keygen",
+      "total_cpu_speedup": 1.3403378637059724
+    },
+    {
+      "param": "SLH-DSA-SHA2-128s",
+      "op": "sign",
+      "total_cpu_speedup": 1.327156211373509
+    },
+    {
+      "param": "SLH-DSA-SHA2-128s",
+      "op": "verify",
+      "total_cpu_speedup": 1.288914417001723
+    },
+    {
+      "param": "SLH-DSA-SHA2-192f",
+      "op": "keygen",
+      "total_cpu_speedup": 1.31509890997174
+    },
+    {
+      "param": "SLH-DSA-SHA2-192f",
+      "op": "sign",
+      "total_cpu_speedup": 1.357476669636207
+    },
+    {
+      "param": "SLH-DSA-SHA2-192f",
+      "op": "verify",
+      "total_cpu_speedup": 1.3934494195688225
+    },
+    {
+      "param": "SLH-DSA-SHA2-192s",
+      "op": "keygen",
+      "total_cpu_speedup": 1.3438291816779835
+    },
+    {
+      "param": "SLH-DSA-SHA2-192s",
+      "op": "sign",
+      "total_cpu_speedup": 1.3687363233091858
+    },
+    {
+      "param": "SLH-DSA-SHA2-192s",
+      "op": "verify",
+      "total_cpu_speedup": 1.4094966083541591
+    },
+    {
+      "param": "SLH-DSA-SHA2-256f",
+      "op": "keygen",
+      "total_cpu_speedup": 1.351509478118418
+    },
+    {
+      "param": "SLH-DSA-SHA2-256f",
+      "op": "sign",
+      "total_cpu_speedup": 1.3766566329514816
+    },
+    {
+      "param": "SLH-DSA-SHA2-256f",
+      "op": "verify",
+      "total_cpu_speedup": 1.3887403048943567
+    },
+    {
+      "param": "SLH-DSA-SHA2-256s",
+      "op": "keygen",
+      "total_cpu_speedup": 1.3846406397773323
+    },
+    {
+      "param": "SLH-DSA-SHA2-256s",
+      "op": "sign",
+      "total_cpu_speedup": 1.398910398800735
+    },
+    {
+      "param": "SLH-DSA-SHA2-256s",
+      "op": "verify",
+      "total_cpu_speedup": 1.4270726714431934
+    },
+    {
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "keygen",
+      "total_cpu_speedup": 1.003727187044812
+    },
+    {
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "total_cpu_speedup": 1.0035124904820476
+    },
+    {
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "verify",
+      "total_cpu_speedup": 0.9983955438500893
+    }
+  ]
+}
