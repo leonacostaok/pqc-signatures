@@ -1,0 +1,48 @@
+{
+  "complete": true,
+  "identity": {
+    "original_seal_sha256": "cd6d94cd1c41d13776e4f69259bf24d7ec14fb7c9866a221ebe352ad882a0b1c",
+    "original_build_hashes": {
+      "baseline/corpus": "31874070c7f44c422d9adda09540f09bdc4e736e9a7db0792d66cc74d13db804",
+      "baseline/lib/liboqs.a": "3959b768646d4e427f151ec99881d802f9b944618f817d4ca529d05f0e7aa521",
+      "baseline/CMakeCache.txt": "a270de939c788426da49441bebbe019699f54373ac558ed7e68bdcdfe4e9cf42",
+      "baseline/src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/flags.make": "691b7c2207c44dbefcc83a7f7c0d9e1ea48db2651fe48d971b1820e4ee09b699",
+      "candidate/corpus": "0235d559a267713392374345341fc4d5c48f06bb4d57057a0d9ee9d2c00ddc03",
+      "candidate/lib/liboqs.a": "c86a787170a16f9d39d7dcca2d66213f8b8a3283616bb5c34d6baaea1f071cdd",
+      "candidate/CMakeCache.txt": "ba1085bf8b4fae5fed8323d699e5bc2f70e8040b708c8d1189fe2f1938b387f8",
+      "candidate/src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/flags.make": "6a00a8e298c8d372f5eae9d58db36e07e8e8b0e8073e30778a0b0ec7d5ea938f"
+    },
+    "original_sealed_files_verified": 303,
+    "libcrypto_path": "/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib/libcrypto.3.dylib",
+    "libcrypto_sha256": "a7e687f76c5b69423480050f6bfa91dc2c2f616866476cca485ebc2b68ed0b15",
+    "libcrypto_version": "OpenSSL 3.6.4 25 Aug 2026",
+    "baseline_commit": "fd44469daeffe6b28f031f54f9bb66cbae69a572",
+    "candidate_commit": "b14f1b616f938698ebc0bf8b75b3736c30e1502c",
+    "sources": {
+      "driver.c": "63944156b9c3aa0e66572e6743265b208f5fda0f017d10c3b6944cec4b02eae2",
+      "run.py": "a2e988f670fab51d0bd1fc09724a84726a64299097a3c8df6adf342c51ebc389",
+      "check_runner.py": "180c9c6f70a0ca8f723b3de6f1b9bd59cfcd61e285b392334e8b96901ce04267"
+    },
+    "drivers": {
+      "baseline": "e1774426a3189480322d5dbb607a3d66734d3363cfcb39b49cb8454ca764821e",
+      "candidate": "9d4dddf3c3a35aaaaebf392a271522f0d0c3fc45d9b34b29f38c2fea9211e1be"
+    },
+    "input_sha256": "44bd94139e88927aee8bf5bef3f7491cc6f34868c64faae2f1bb95bd04786022",
+    "environment": {
+      "DYLD_LIBRARY_PATH": null,
+      "DYLD_INSERT_LIBRARIES": null,
+      "OPENSSL_CONF": null,
+      "OPENSSL_MODULES": null,
+      "OPENSSL_armcap": null,
+      "OPENSSL_ia32cap": null
+    }
+  },
+  "smoke_sha256": "d87d812661c060931fc41ffb86d4c427442efd7b81988121322819a78a7be17f",
+  "platform": "macOS-26.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.2.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "cpu": "Apple M1 Pro",
+  "scope": "6 SHA2 parameter sets, 10 measured new keys each, 1 disjoint warmup per parameter; public OQS API with fixed test RNG input; object/buffer creation outside timers; native operations inside",
+  "ordering": "Final candidate batch before any final baseline batch; cross-provider scheduling is controlled externally.",
+  "review_change": "Strengthened candidate evidence binding and added phase timestamps plus requested total-time summaries; driver and smoke inputs/results unchanged."
+}

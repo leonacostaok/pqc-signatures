@@ -1,0 +1,296 @@
+{
+  "complete": true,
+  "purpose": "correctness smoke, not final timing",
+  "per_variant_keys": 6,
+  "both_variants_byte_equal": true,
+  "results": {
+    "candidate": {
+      "rows": [
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_128F",
+          "key": 0,
+          "message_bytes": 0,
+          "context_bytes": 0,
+          "valid": true,
+          "tamper_rejected": true,
+          "rng_keygen_bytes": 48,
+          "rng_sign_bytes": 16,
+          "keygen_wall_ns": 399000,
+          "keygen_cpu_ns": 399000,
+          "sign_wall_ns": 7938000,
+          "sign_cpu_ns": 7935000,
+          "verify_wall_ns": 413000,
+          "verify_cpu_ns": 414000
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_128S",
+          "key": 0,
+          "message_bytes": 0,
+          "context_bytes": 0,
+          "valid": true,
+          "tamper_rejected": true,
+          "rng_keygen_bytes": 48,
+          "rng_sign_bytes": 16,
+          "keygen_wall_ns": 13644000,
+          "keygen_cpu_ns": 13583000,
+          "sign_wall_ns": 108043000,
+          "sign_cpu_ns": 106889000,
+          "verify_wall_ns": 112000,
+          "verify_cpu_ns": 111000
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_192F",
+          "key": 0,
+          "message_bytes": 0,
+          "context_bytes": 0,
+          "valid": true,
+          "tamper_rejected": true,
+          "rng_keygen_bytes": 72,
+          "rng_sign_bytes": 24,
+          "keygen_wall_ns": 317000,
+          "keygen_cpu_ns": 318000,
+          "sign_wall_ns": 9368000,
+          "sign_cpu_ns": 9325000,
+          "verify_wall_ns": 490000,
+          "verify_cpu_ns": 492000
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_192S",
+          "key": 0,
+          "message_bytes": 0,
+          "context_bytes": 0,
+          "valid": true,
+          "tamper_rejected": true,
+          "rng_keygen_bytes": 72,
+          "rng_sign_bytes": 24,
+          "keygen_wall_ns": 20309000,
+          "keygen_cpu_ns": 20220000,
+          "sign_wall_ns": 219461000,
+          "sign_cpu_ns": 218703000,
+          "verify_wall_ns": 187000,
+          "verify_cpu_ns": 186000
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_256F",
+          "key": 0,
+          "message_bytes": 0,
+          "context_bytes": 0,
+          "valid": true,
+          "tamper_rejected": true,
+          "rng_keygen_bytes": 96,
+          "rng_sign_bytes": 32,
+          "keygen_wall_ns": 844000,
+          "keygen_cpu_ns": 840000,
+          "sign_wall_ns": 19138000,
+          "sign_cpu_ns": 19057000,
+          "verify_wall_ns": 501000,
+          "verify_cpu_ns": 503000
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_256S",
+          "key": 0,
+          "message_bytes": 0,
+          "context_bytes": 0,
+          "valid": true,
+          "tamper_rejected": true,
+          "rng_keygen_bytes": 96,
+          "rng_sign_bytes": 32,
+          "keygen_wall_ns": 13458000,
+          "keygen_cpu_ns": 13442000,
+          "sign_wall_ns": 205794000,
+          "sign_cpu_ns": 205411000,
+          "verify_wall_ns": 265000,
+          "verify_cpu_ns": 266000
+        }
+      ],
+      "output_hashes": [
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_128F",
+          "key": 0,
+          "pk_sha256": "aebe30d859645fa2fc81ddb67d127b608b25f6c04f88837b0f1a0fbdb8bf0d79",
+          "sk_sha256": "6b0b6dfe2b6b2d2ee63cea63ec990dbabae1e22e95d4f79e0325534aab202e75",
+          "signature_sha256": "068ab929e95c8246151daedae1dafe46737f5837b8f741b1d6c5e85801ae63b4"
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_128S",
+          "key": 0,
+          "pk_sha256": "a5a423331b23e38ed0329a8e90767508eca46a7f6f08183cd56f3907f9abdbef",
+          "sk_sha256": "db287d6a15f0aba864fc92f6d32e7c7e3c6b3f135f812ef6d203f03cb35f6d15",
+          "signature_sha256": "716db9a6db5bff3f7c4f5ea5e48e5fd8d8ea01d015414975677cdb59cdcbeadd"
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_192F",
+          "key": 0,
+          "pk_sha256": "e2e8209acd719497028b93ded2990dde99cae88614b4cd90c81c7c344a0335db",
+          "sk_sha256": "4709c75f2a8fcb936ecd870b26f09fa2d01a14e8d5fb1faa75e2d1a5088901de",
+          "signature_sha256": "cd771061d27ffd5bd04a8e0c8be34a25f97e221ede7085c5b4fa26d515e87d93"
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_192S",
+          "key": 0,
+          "pk_sha256": "77d383fa87a727254186fa51c1afcf7028326acbd11d262508d2a62b478c6371",
+          "sk_sha256": "0ed5f1328910f78c93be8845d4a1cb78b284777d633177364d46473c9818d102",
+          "signature_sha256": "0c4aa322bc5113035d7f79c8d6c37305ad07c7e760f585a0cf6cfed6efab2015"
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_256F",
+          "key": 0,
+          "pk_sha256": "202130a7b90ca838411e968f40950718a04947c15e551e100358748eadf3242d",
+          "sk_sha256": "99e4be86d760ec862c8e51e3b7a694d4b377d02b6f32d713019283a3efbc25d6",
+          "signature_sha256": "95c16a5c2844fe57e888a2bdd7fc887d5f3c6587ae4e9b76c008b79a73937c50"
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_256S",
+          "key": 0,
+          "pk_sha256": "98da3ac5d9a9959e8f9a20d128087a4b1b581399f56284b964de2b2e82de3914",
+          "sk_sha256": "8e386b3a77158a1ce35a1843723bf525e70dfdaea8c823ea81f489a944c4d6b7",
+          "signature_sha256": "d78b5877b74a6c6182cc91db56533389eef18608707c5ba7aad8d5e4a16fe2e3"
+        }
+      ]
+    },
+    "baseline": {
+      "rows": [
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_128F",
+          "key": 0,
+          "message_bytes": 0,
+          "context_bytes": 0,
+          "valid": true,
+          "tamper_rejected": true,
+          "rng_keygen_bytes": 48,
+          "rng_sign_bytes": 16,
+          "keygen_wall_ns": 1139000,
+          "keygen_cpu_ns": 1140000,
+          "sign_wall_ns": 26904000,
+          "sign_cpu_ns": 26853000,
+          "verify_wall_ns": 1540000,
+          "verify_cpu_ns": 1540000
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_128S",
+          "key": 0,
+          "message_bytes": 0,
+          "context_bytes": 0,
+          "valid": true,
+          "tamper_rejected": true,
+          "rng_keygen_bytes": 48,
+          "rng_sign_bytes": 16,
+          "keygen_wall_ns": 73638000,
+          "keygen_cpu_ns": 73383000,
+          "sign_wall_ns": 559703000,
+          "sign_cpu_ns": 558426000,
+          "verify_wall_ns": 571000,
+          "verify_cpu_ns": 571000
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_192F",
+          "key": 0,
+          "message_bytes": 0,
+          "context_bytes": 0,
+          "valid": true,
+          "tamper_rejected": true,
+          "rng_keygen_bytes": 72,
+          "rng_sign_bytes": 24,
+          "keygen_wall_ns": 1693000,
+          "keygen_cpu_ns": 1693000,
+          "sign_wall_ns": 43684000,
+          "sign_cpu_ns": 43676000,
+          "verify_wall_ns": 2442000,
+          "verify_cpu_ns": 2424000
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_192S",
+          "key": 0,
+          "message_bytes": 0,
+          "context_bytes": 0,
+          "valid": true,
+          "tamper_rejected": true,
+          "rng_keygen_bytes": 72,
+          "rng_sign_bytes": 24,
+          "keygen_wall_ns": 106610000,
+          "keygen_cpu_ns": 106460000,
+          "sign_wall_ns": 990339000,
+          "sign_cpu_ns": 987172000,
+          "verify_wall_ns": 807000,
+          "verify_cpu_ns": 807000
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_256F",
+          "key": 0,
+          "message_bytes": 0,
+          "context_bytes": 0,
+          "valid": true,
+          "tamper_rejected": true,
+          "rng_keygen_bytes": 96,
+          "rng_sign_bytes": 32,
+          "keygen_wall_ns": 4374000,
+          "keygen_cpu_ns": 4375000,
+          "sign_wall_ns": 90167000,
+          "sign_cpu_ns": 90061000,
+          "verify_wall_ns": 2377000,
+          "verify_cpu_ns": 2377000
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_256S",
+          "key": 0,
+          "message_bytes": 0,
+          "context_bytes": 0,
+          "valid": true,
+          "tamper_rejected": true,
+          "rng_keygen_bytes": 96,
+          "rng_sign_bytes": 32,
+          "keygen_wall_ns": 70325000,
+          "keygen_cpu_ns": 70137000,
+          "sign_wall_ns": 873046000,
+          "sign_cpu_ns": 871722000,
+          "verify_wall_ns": 1177000,
+          "verify_cpu_ns": 1177000
+        }
+      ],
+      "output_hashes": [
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_128F",
+          "key": 0,
+          "pk_sha256": "aebe30d859645fa2fc81ddb67d127b608b25f6c04f88837b0f1a0fbdb8bf0d79",
+          "sk_sha256": "6b0b6dfe2b6b2d2ee63cea63ec990dbabae1e22e95d4f79e0325534aab202e75",
+          "signature_sha256": "068ab929e95c8246151daedae1dafe46737f5837b8f741b1d6c5e85801ae63b4"
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_128S",
+          "key": 0,
+          "pk_sha256": "a5a423331b23e38ed0329a8e90767508eca46a7f6f08183cd56f3907f9abdbef",
+          "sk_sha256": "db287d6a15f0aba864fc92f6d32e7c7e3c6b3f135f812ef6d203f03cb35f6d15",
+          "signature_sha256": "716db9a6db5bff3f7c4f5ea5e48e5fd8d8ea01d015414975677cdb59cdcbeadd"
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_192F",
+          "key": 0,
+          "pk_sha256": "e2e8209acd719497028b93ded2990dde99cae88614b4cd90c81c7c344a0335db",
+          "sk_sha256": "4709c75f2a8fcb936ecd870b26f09fa2d01a14e8d5fb1faa75e2d1a5088901de",
+          "signature_sha256": "cd771061d27ffd5bd04a8e0c8be34a25f97e221ede7085c5b4fa26d515e87d93"
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_192S",
+          "key": 0,
+          "pk_sha256": "77d383fa87a727254186fa51c1afcf7028326acbd11d262508d2a62b478c6371",
+          "sk_sha256": "0ed5f1328910f78c93be8845d4a1cb78b284777d633177364d46473c9818d102",
+          "signature_sha256": "0c4aa322bc5113035d7f79c8d6c37305ad07c7e760f585a0cf6cfed6efab2015"
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_256F",
+          "key": 0,
+          "pk_sha256": "202130a7b90ca838411e968f40950718a04947c15e551e100358748eadf3242d",
+          "sk_sha256": "99e4be86d760ec862c8e51e3b7a694d4b377d02b6f32d713019283a3efbc25d6",
+          "signature_sha256": "95c16a5c2844fe57e888a2bdd7fc887d5f3c6587ae4e9b76c008b79a73937c50"
+        },
+        {
+          "parameter": "SLH_DSA_PURE_SHA2_256S",
+          "key": 0,
+          "pk_sha256": "98da3ac5d9a9959e8f9a20d128087a4b1b581399f56284b964de2b2e82de3914",
+          "sk_sha256": "8e386b3a77158a1ce35a1843723bf525e70dfdaea8c823ea81f489a944c4d6b7",
+          "signature_sha256": "d78b5877b74a6c6182cc91db56533389eef18608707c5ba7aad8d5e4a16fe2e3"
+        }
+      ]
+    }
+  }
+}

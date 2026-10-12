@@ -1,0 +1,93 @@
+.
+======================================================================
+FAIL: test_empty_duplicate_wrong_identity_and_failed_verdict (__main__.Acceptance) (rows=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/ten-new-keys/check_runner.py", line 29, in test_empty_duplicate_wrong_identity_and_failed_verdict
+    run.check_records(rows, self.expected, {'P': 16})
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_empty_duplicate_wrong_identity_and_failed_verdict (__main__.Acceptance) (rows=[{'parameter': 'P', 'key': 0, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}, {'parameter': 'P', 'key': 0, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/ten-new-keys/check_runner.py", line 29, in test_empty_duplicate_wrong_identity_and_failed_verdict
+    run.check_records(rows, self.expected, {'P': 16})
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_empty_duplicate_wrong_identity_and_failed_verdict (__main__.Acceptance) (rows=[{'parameter': 'P', 'key': 0, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/ten-new-keys/check_runner.py", line 29, in test_empty_duplicate_wrong_identity_and_failed_verdict
+    run.check_records(rows, self.expected, {'P': 16})
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_empty_duplicate_wrong_identity_and_failed_verdict (__main__.Acceptance) (rows=[{'parameter': 'OTHER', 'key': 0, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}, {'parameter': 'P', 'key': 1, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/ten-new-keys/check_runner.py", line 29, in test_empty_duplicate_wrong_identity_and_failed_verdict
+    run.check_records(rows, self.expected, {'P': 16})
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_empty_duplicate_wrong_identity_and_failed_verdict (__main__.Acceptance) (rows=[{'parameter': 'P', 'key': 0, 'valid': False, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}, {'parameter': 'P', 'key': 1, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/ten-new-keys/check_runner.py", line 29, in test_empty_duplicate_wrong_identity_and_failed_verdict
+    run.check_records(rows, self.expected, {'P': 16})
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_empty_duplicate_wrong_identity_and_failed_verdict (__main__.Acceptance) (rows=[{'parameter': 'P', 'key': 0, 'valid': True, 'tamper_rejected': False, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}, {'parameter': 'P', 'key': 1, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/ten-new-keys/check_runner.py", line 29, in test_empty_duplicate_wrong_identity_and_failed_verdict
+    run.check_records(rows, self.expected, {'P': 16})
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_empty_duplicate_wrong_identity_and_failed_verdict (__main__.Acceptance) (rows=[{'parameter': 'P', 'key': 0, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 15, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}, {'parameter': 'P', 'key': 1, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/ten-new-keys/check_runner.py", line 29, in test_empty_duplicate_wrong_identity_and_failed_verdict
+    run.check_records(rows, self.expected, {'P': 16})
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_empty_duplicate_wrong_identity_and_failed_verdict (__main__.Acceptance) (rows=[{'parameter': 'P', 'key': 0, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 47, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}, {'parameter': 'P', 'key': 1, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/ten-new-keys/check_runner.py", line 29, in test_empty_duplicate_wrong_identity_and_failed_verdict
+    run.check_records(rows, self.expected, {'P': 16})
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_empty_duplicate_wrong_identity_and_failed_verdict (__main__.Acceptance) (rows=[{'parameter': 'P', 'key': 0, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 0, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}, {'parameter': 'P', 'key': 1, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/ten-new-keys/check_runner.py", line 29, in test_empty_duplicate_wrong_identity_and_failed_verdict
+    run.check_records(rows, self.expected, {'P': 16})
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_empty_duplicate_wrong_identity_and_failed_verdict (__main__.Acceptance) (rows=[{'parameter': 'P', 'key': 0, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': nan, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}, {'parameter': 'P', 'key': 1, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/ten-new-keys/check_runner.py", line 29, in test_empty_duplicate_wrong_identity_and_failed_verdict
+    run.check_records(rows, self.expected, {'P': 16})
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_empty_duplicate_wrong_identity_and_failed_verdict (__main__.Acceptance) (rows=[{'parameter': 'P', 'key': 0, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': -1}, {'parameter': 'P', 'key': 1, 'valid': True, 'tamper_rejected': True, 'rng_keygen_bytes': 48, 'rng_sign_bytes': 16, 'keygen_wall_ns': 10, 'keygen_cpu_ns': 10, 'sign_wall_ns': 20, 'sign_cpu_ns': 20, 'verify_wall_ns': 30, 'verify_cpu_ns': 30}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/ten-new-keys/check_runner.py", line 29, in test_empty_duplicate_wrong_identity_and_failed_verdict
+    run.check_records(rows, self.expected, {'P': 16})
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=11)

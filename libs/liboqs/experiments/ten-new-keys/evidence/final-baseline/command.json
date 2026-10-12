@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/ten-new-keys/baseline/driver",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/ten-new-keys/evidence/inputs.bin",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/ten-new-keys/evidence/final-baseline/outputs.bin",
+    "10"
+  ],
+  "started_utc": "2026-10-12T02:03:55.861116+00:00"
+}
