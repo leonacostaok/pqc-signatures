@@ -1,0 +1,209 @@
+{
+  "passed": true,
+  "checked": [
+    {
+      "source": "README.md",
+      "target": "docs/performance-summary.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/audit/complete-performance-comparison.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/audit/completed-resource-measurements.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/audit/published-resource-regressions.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/provider-improvements.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/bouncycastle/pattern-research.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/bouncycastle/alternative-comparison.md"
+    },
+    {
+      "source": "README.md",
+      "target": "results/"
+    },
+    {
+      "source": "README.md",
+      "target": "common/CONTRACT.md"
+    },
+    {
+      "source": "README.md",
+      "target": "RESULTS.md"
+    },
+    {
+      "source": "docs/bouncycastle/alternative-comparison.md",
+      "target": "alternative-measurements.md"
+    },
+    {
+      "source": "docs/bouncycastle/alternative-comparison.md",
+      "target": "ntt-alternatives.md"
+    },
+    {
+      "source": "docs/bouncycastle/alternative-comparison.md",
+      "target": "matrix-alternatives.md"
+    },
+    {
+      "source": "docs/bouncycastle/alternative-comparison.md",
+      "target": "wots-alternatives.md"
+    },
+    {
+      "source": "docs/bouncycastle/alternative-comparison.md",
+      "target": "alternative-review.md"
+    },
+    {
+      "source": "docs/bouncycastle/alternative-comparison.md",
+      "target": "../../results/bouncycastle/alternative-comparison/native/"
+    },
+    {
+      "source": "docs/bouncycastle/alternative-comparison.md",
+      "target": "../../results/bouncycastle/alternative-comparison/"
+    },
+    {
+      "source": "docs/bouncycastle/alternative-comparison.md",
+      "target": "../../libs/bouncycastle/experiments/alternative-comparison/"
+    },
+    {
+      "source": "docs/bouncycastle/alternative-review.md",
+      "target": "pattern-research/invntt.md"
+    },
+    {
+      "source": "docs/bouncycastle/alternative-review.md",
+      "target": "ntt-alternatives.md"
+    },
+    {
+      "source": "docs/bouncycastle/alternative-measurements.md",
+      "target": "alternative-comparison.md"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/prepared-v1/manifest.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/preparation-audit-v2.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../libs/bouncycastle/experiments/ntt-alternatives/arithmetic_oracle.py"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/alternative-comparison/native/"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/screen-plan-v2/protocol.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/screen-audit.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/portable-audit.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/exclusive-window.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/confirmation-plan-v1/protocol.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/confirmation-prepared-v1/manifest.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/confirmation-supplement-audit.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/confirmation-preparation-audit.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/confirmation-exclusive-window.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/confirmation-audit.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/confirmation-portable-audit.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/confirmation-supplement-portable-audit.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/confirmation-selection-recomputed.json"
+    },
+    {
+      "source": "docs/bouncycastle/ntt-alternatives.md",
+      "target": "../../results/bouncycastle/ntt-alternatives/confirmation-largest-wall-cpu-gaps.json"
+    },
+    {
+      "source": "docs/bouncycastle/wots-alternatives.md",
+      "target": "../../libs/bouncycastle/experiments/wots-alternatives/README.md"
+    },
+    {
+      "source": "docs/bouncycastle/wots-alternatives.md",
+      "target": "../../results/bouncycastle/wots-alternatives/table.md"
+    },
+    {
+      "source": "docs/bouncycastle/wots-alternatives.md",
+      "target": "../../results/bouncycastle/wots-alternatives/summary.json"
+    },
+    {
+      "source": "docs/bouncycastle/wots-alternatives.md",
+      "target": "../../results/bouncycastle/wots-alternatives/selection.json"
+    },
+    {
+      "source": "docs/bouncycastle/wots-alternatives.md",
+      "target": "../../results/bouncycastle/wots-alternatives/confirmation/table.md"
+    },
+    {
+      "source": "docs/bouncycastle/wots-alternatives.md",
+      "target": "../../results/bouncycastle/wots-alternatives/confirmation/summary.json"
+    },
+    {
+      "source": "docs/bouncycastle/wots-alternatives.md",
+      "target": "../../results/bouncycastle/wots-alternatives/independent-audit.json"
+    },
+    {
+      "source": "docs/bouncycastle/wots-alternatives.md",
+      "target": "../../results/bouncycastle/wots-alternatives/portable-audit.json"
+    },
+    {
+      "source": "docs/bouncycastle/wots-alternatives.md",
+      "target": "../../results/bouncycastle/wots-alternatives/confirmation/independent-audit.json"
+    },
+    {
+      "source": "docs/bouncycastle/wots-alternatives.md",
+      "target": "../../results/bouncycastle/wots-alternatives/gates.json"
+    },
+    {
+      "source": "docs/bouncycastle/wots-alternatives.md",
+      "target": "../../results/bouncycastle/wots-alternatives/manifest.json"
+    },
+    {
+      "source": "docs/bouncycastle/wots-alternatives.md",
+      "target": "../../results/bouncycastle/wots-alternatives/confirmation/durations.json"
+    }
+  ]
+}

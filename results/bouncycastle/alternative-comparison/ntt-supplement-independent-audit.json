@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "manifest_sha256": "6b0e78983a109d51e39f83453dc5820076b41de0355c8a83065f430b8613dfa7",
+  "direct_production_table_and_helper": true,
+  "local_supplement_class_checks": "passed"
+}

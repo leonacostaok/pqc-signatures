@@ -1,0 +1,3443 @@
+{
+  "source_sha256": {
+    "results/bouncycastle/alternative-comparison/ntt-independent-audit.json": "20c0d9a5a854381980e967477096663110f23bb2fa7c3bb75a566bd74986971b",
+    "results/bouncycastle/alternative-comparison/ntt-confirmation-independent-audit.json": "ef8bafd17cf64a2f861f8b047ed992dc5682f7b4dc4cd5b82b41b8fd44a7469a",
+    "results/bouncycastle/alternative-comparison/matrix-independent-audit.json": "320ee8795afa593cb057cc736e948de4bfe8238ac0ecfde33090180f1bc97343",
+    "results/bouncycastle/wots-alternatives/summary.json": "6523cac79f035c7da62f9171c650bc7344770bd69d0a8f75073277e3cb2f0c3d",
+    "results/bouncycastle/wots-alternatives/confirmation/summary.json": "564e936ecdcdf386a60ce80c15f9b7c26270dcd90650e0bcd2e29b00a9a8317b"
+  },
+  "comparisons": [
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "fused",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 74577.38671875,
+        "candidate": 74604.357421875,
+        "percent_change": 0.03616472004672744
+      },
+      "thread_cpu_ns": {
+        "baseline": 76335.9375,
+        "candidate": 76392.578125,
+        "percent_change": 0.07419916078190703
+      },
+      "allocated_bytes": {
+        "baseline": 70994.21875,
+        "candidate": 70890.578125,
+        "percent_change": -0.1459845982177299
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 74577.38671875,
+        "candidate": 75194.02734375,
+        "percent_change": 0.8268466516874629
+      },
+      "thread_cpu_ns": {
+        "baseline": 76335.9375,
+        "candidate": 76976.5625,
+        "percent_change": 0.8392180943608718
+      },
+      "allocated_bytes": {
+        "baseline": 70994.21875,
+        "candidate": 71290.0,
+        "percent_change": 0.4166272341717958
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 74577.38671875,
+        "candidate": 73508.61328125,
+        "percent_change": -1.4331065816647781
+      },
+      "thread_cpu_ns": {
+        "baseline": 76335.9375,
+        "candidate": 75337.890625,
+        "percent_change": -1.3074403848121974
+      },
+      "allocated_bytes": {
+        "baseline": 70994.21875,
+        "candidate": 71294.265625,
+        "percent_change": 0.4226356459482883
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "fused",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 324938.70703125,
+        "candidate": 316096.52734375,
+        "percent_change": -2.7211838713476655
+      },
+      "thread_cpu_ns": {
+        "baseline": 327169.921875,
+        "candidate": 318244.140625,
+        "percent_change": -2.7281790449582455
+      },
+      "allocated_bytes": {
+        "baseline": 90714.5625,
+        "candidate": 90714.5625,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 324938.70703125,
+        "candidate": 305359.615234375,
+        "percent_change": -6.0254723039173115
+      },
+      "thread_cpu_ns": {
+        "baseline": 327169.921875,
+        "candidate": 307523.4375,
+        "percent_change": -6.004978777513115
+      },
+      "allocated_bytes": {
+        "baseline": 90714.5625,
+        "candidate": 90898.59375,
+        "percent_change": 0.20286847549972897
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 324938.70703125,
+        "candidate": 301143.689453125,
+        "percent_change": -7.322924928065455
+      },
+      "thread_cpu_ns": {
+        "baseline": 327169.921875,
+        "candidate": 303093.75,
+        "percent_change": -7.358919712735279
+      },
+      "allocated_bytes": {
+        "baseline": 90714.5625,
+        "candidate": 90810.5625,
+        "percent_change": 0.10582644875787306
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "fused",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 111806.955078125,
+        "candidate": 105189.85546875,
+        "percent_change": -5.918325568164617
+      },
+      "thread_cpu_ns": {
+        "baseline": 107025.390625,
+        "candidate": 104039.0625,
+        "percent_change": -2.7902987389820666
+      },
+      "allocated_bytes": {
+        "baseline": 59859.828125,
+        "candidate": 59735.796875,
+        "percent_change": -0.2072028167889095
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 111806.955078125,
+        "candidate": 102301.384765625,
+        "percent_change": -8.501770132151432
+      },
+      "thread_cpu_ns": {
+        "baseline": 107025.390625,
+        "candidate": 100998.046875,
+        "percent_change": -5.631695165793749
+      },
+      "allocated_bytes": {
+        "baseline": 59859.828125,
+        "candidate": 59760.78125,
+        "percent_change": -0.16546468324828423
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 111806.955078125,
+        "candidate": 106547.126953125,
+        "percent_change": -4.704383659607492
+      },
+      "thread_cpu_ns": {
+        "baseline": 107025.390625,
+        "candidate": 101791.015625,
+        "percent_change": -4.890778692264175
+      },
+      "allocated_bytes": {
+        "baseline": 59859.828125,
+        "candidate": 59865.3125,
+        "percent_change": 0.009162029313802833
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "fused",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 143913.103515625,
+        "candidate": 144410.89453125,
+        "percent_change": 0.34589693604303307
+      },
+      "thread_cpu_ns": {
+        "baseline": 140183.59375,
+        "candidate": 140515.625,
+        "percent_change": 0.2368545712932324
+      },
+      "allocated_bytes": {
+        "baseline": 114080.5625,
+        "candidate": 113828.5625,
+        "percent_change": -0.22089652652265146
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 143913.103515625,
+        "candidate": 143338.943359375,
+        "percent_change": -0.39896308412782355
+      },
+      "thread_cpu_ns": {
+        "baseline": 140183.59375,
+        "candidate": 139617.1875,
+        "percent_change": -0.40404603338256573
+      },
+      "allocated_bytes": {
+        "baseline": 114080.5625,
+        "candidate": 113900.0,
+        "percent_change": -0.15827630583430397
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 143913.103515625,
+        "candidate": 136596.244140625,
+        "percent_change": -5.0842204054098445
+      },
+      "thread_cpu_ns": {
+        "baseline": 140183.59375,
+        "candidate": 137123.046875,
+        "percent_change": -2.1832418424499123
+      },
+      "allocated_bytes": {
+        "baseline": 114080.5625,
+        "candidate": 113900.5625,
+        "percent_change": -0.1577832332304685
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "fused",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 545059.986328125,
+        "candidate": 529721.609375,
+        "percent_change": -2.8140713568893916
+      },
+      "thread_cpu_ns": {
+        "baseline": 544537.109375,
+        "candidate": 532089.84375,
+        "percent_change": -2.285843409145527
+      },
+      "allocated_bytes": {
+        "baseline": 142278.6875,
+        "candidate": 142098.6875,
+        "percent_change": -0.12651227191001757
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 545059.986328125,
+        "candidate": 515882.4140625,
+        "percent_change": -5.35309378737997
+      },
+      "thread_cpu_ns": {
+        "baseline": 544537.109375,
+        "candidate": 516728.515625,
+        "percent_change": -5.106831705541193
+      },
+      "allocated_bytes": {
+        "baseline": 142278.6875,
+        "candidate": 142098.6875,
+        "percent_change": -0.12651227191001757
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 545059.986328125,
+        "candidate": 509883.93359375,
+        "percent_change": -6.453611275218263
+      },
+      "thread_cpu_ns": {
+        "baseline": 544537.109375,
+        "candidate": 509326.171875,
+        "percent_change": -6.466214495539857
+      },
+      "allocated_bytes": {
+        "baseline": 142278.6875,
+        "candidate": 142638.6875,
+        "percent_change": 0.25302454382003514
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "fused",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 142011.28125,
+        "candidate": 143087.318359375,
+        "percent_change": 0.7577124154529047
+      },
+      "thread_cpu_ns": {
+        "baseline": 141238.28125,
+        "candidate": 142589.84375,
+        "percent_change": 0.9569377990430672
+      },
+      "allocated_bytes": {
+        "baseline": 96707.71875,
+        "candidate": 96818.9375,
+        "percent_change": 0.11500503934698258
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 142011.28125,
+        "candidate": 141945.095703125,
+        "percent_change": -0.04660583743236746
+      },
+      "thread_cpu_ns": {
+        "baseline": 141238.28125,
+        "candidate": 139449.21875,
+        "percent_change": -1.2666980114500626
+      },
+      "allocated_bytes": {
+        "baseline": 96707.71875,
+        "candidate": 96706.703125,
+        "percent_change": -0.0010502005559964722
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 142011.28125,
+        "candidate": 141048.0,
+        "percent_change": -0.6783131885869098
+      },
+      "thread_cpu_ns": {
+        "baseline": 141238.28125,
+        "candidate": 138591.796875,
+        "percent_change": -1.873772713444144
+      },
+      "allocated_bytes": {
+        "baseline": 96707.71875,
+        "candidate": 97248.328125,
+        "percent_change": 0.5590136774888954
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "fused",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 200970.56640625,
+        "candidate": 204384.7734375,
+        "percent_change": 1.6988592371026012
+      },
+      "thread_cpu_ns": {
+        "baseline": 200849.609375,
+        "candidate": 204259.765625,
+        "percent_change": 1.697865512714536
+      },
+      "allocated_bytes": {
+        "baseline": 178865.6875,
+        "candidate": 178973.125,
+        "percent_change": 0.06006602020860452
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 200970.56640625,
+        "candidate": 199931.48828125,
+        "percent_change": -0.5170300027415808
+      },
+      "thread_cpu_ns": {
+        "baseline": 200849.609375,
+        "candidate": 199490.234375,
+        "percent_change": -0.6768123693295047
+      },
+      "allocated_bytes": {
+        "baseline": 178865.6875,
+        "candidate": 178973.125,
+        "percent_change": 0.06006602020860452
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 200970.56640625,
+        "candidate": 199170.85546875,
+        "percent_change": -0.8955097105423859
+      },
+      "thread_cpu_ns": {
+        "baseline": 200849.609375,
+        "candidate": 199175.78125,
+        "percent_change": -0.8333738513152111
+      },
+      "allocated_bytes": {
+        "baseline": 178865.6875,
+        "candidate": 178864.796875,
+        "percent_change": -0.0004979294868978634
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "fused",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 618464.1953125,
+        "candidate": 601589.85546875,
+        "percent_change": -2.7284263133815934
+      },
+      "thread_cpu_ns": {
+        "baseline": 619353.515625,
+        "candidate": 603832.03125,
+        "percent_change": -2.50607835160781
+      },
+      "allocated_bytes": {
+        "baseline": 210416.6875,
+        "candidate": 210833.96875,
+        "percent_change": 0.19831186155327973
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 618464.1953125,
+        "candidate": 587621.66015625,
+        "percent_change": -4.986955654023884
+      },
+      "thread_cpu_ns": {
+        "baseline": 619353.515625,
+        "candidate": 589437.5,
+        "percent_change": -4.830200341207602
+      },
+      "allocated_bytes": {
+        "baseline": 210416.6875,
+        "candidate": 210416.6875,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 618464.1953125,
+        "candidate": 584392.587890625,
+        "percent_change": -5.509067085873765
+      },
+      "thread_cpu_ns": {
+        "baseline": 619353.515625,
+        "candidate": 583873.046875,
+        "percent_change": -5.7286295879334865
+      },
+      "allocated_bytes": {
+        "baseline": 210416.6875,
+        "candidate": 210752.6875,
+        "percent_change": 0.1596831525066289
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "fused",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 222125.5,
+        "candidate": 220150.53515625,
+        "percent_change": -0.8891211696765988
+      },
+      "thread_cpu_ns": {
+        "baseline": 221125.0,
+        "candidate": 219929.6875,
+        "percent_change": -0.5405596382136779
+      },
+      "allocated_bytes": {
+        "baseline": 159096.203125,
+        "candidate": 158819.375,
+        "percent_change": -0.17400045982398638
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 222125.5,
+        "candidate": 217764.205078125,
+        "percent_change": -1.963437300928983
+      },
+      "thread_cpu_ns": {
+        "baseline": 221125.0,
+        "candidate": 218167.96875,
+        "percent_change": -1.3372668174109648
+      },
+      "allocated_bytes": {
+        "baseline": 159096.203125,
+        "candidate": 158413.375,
+        "percent_change": -0.42919196787085667
+      }
+    },
+    {
+      "campaign": "NTT Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 222125.5,
+        "candidate": 217008.673828125,
+        "percent_change": -2.3035744081048803
+      },
+      "thread_cpu_ns": {
+        "baseline": 221125.0,
+        "candidate": 216152.34375,
+        "percent_change": -2.248798756359527
+      },
+      "allocated_bytes": {
+        "baseline": 159096.203125,
+        "candidate": 158754.734375,
+        "percent_change": -0.21463035779157869
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 85672.107421875,
+        "candidate": 83940.236328125,
+        "percent_change": -2.021511021342981
+      },
+      "thread_cpu_ns": {
+        "baseline": 86677.734375,
+        "candidate": 85556.640625,
+        "percent_change": -1.2934045381824744
+      },
+      "allocated_bytes": {
+        "baseline": 70727.78125,
+        "candidate": 70973.453125,
+        "percent_change": 0.3473484826727935
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 85672.107421875,
+        "candidate": 103271.416015625,
+        "percent_change": 20.542635314298696
+      },
+      "thread_cpu_ns": {
+        "baseline": 86677.734375,
+        "candidate": 89056.640625,
+        "percent_change": 2.7445413371189
+      },
+      "allocated_bytes": {
+        "baseline": 70727.78125,
+        "candidate": 70872.015625,
+        "percent_change": 0.20392888402673837
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 357652.193359375,
+        "candidate": 335272.375,
+        "percent_change": -6.2574251674971215
+      },
+      "thread_cpu_ns": {
+        "baseline": 351001.953125,
+        "candidate": 332267.578125,
+        "percent_change": -5.337399075192106
+      },
+      "allocated_bytes": {
+        "baseline": 91125.375,
+        "candidate": 91125.375,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 357652.193359375,
+        "candidate": 329284.658203125,
+        "percent_change": -7.931598263049322
+      },
+      "thread_cpu_ns": {
+        "baseline": 351001.953125,
+        "candidate": 326599.609375,
+        "percent_change": -6.952196001402234
+      },
+      "allocated_bytes": {
+        "baseline": 91125.375,
+        "candidate": 91317.375,
+        "percent_change": 0.21069872140444534
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 112428.673828125,
+        "candidate": 111703.9453125,
+        "percent_change": -0.6446118156058
+      },
+      "thread_cpu_ns": {
+        "baseline": 112246.09375,
+        "candidate": 112185.546875,
+        "percent_change": -0.053941186706107924
+      },
+      "allocated_bytes": {
+        "baseline": 60096.90625,
+        "candidate": 60001.53125,
+        "percent_change": -0.15870201305079323
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 112428.673828125,
+        "candidate": 110832.138671875,
+        "percent_change": -1.4200426829642177
+      },
+      "thread_cpu_ns": {
+        "baseline": 112246.09375,
+        "candidate": 112429.6875,
+        "percent_change": 0.16356359839917456
+      },
+      "allocated_bytes": {
+        "baseline": 60096.90625,
+        "candidate": 60003.875,
+        "percent_change": -0.1548020618781898
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 160315.421875,
+        "candidate": 157663.064453125,
+        "percent_change": -1.6544618046435255
+      },
+      "thread_cpu_ns": {
+        "baseline": 156650.390625,
+        "candidate": 152980.46875,
+        "percent_change": -2.3427467115516465
+      },
+      "allocated_bytes": {
+        "baseline": 114476.0,
+        "candidate": 114116.0,
+        "percent_change": -0.3144763967993236
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 160315.421875,
+        "candidate": 166596.4921875,
+        "percent_change": 3.9179451602587845
+      },
+      "thread_cpu_ns": {
+        "baseline": 156650.390625,
+        "candidate": 155201.171875,
+        "percent_change": -0.9251293560251894
+      },
+      "allocated_bytes": {
+        "baseline": 114476.0,
+        "candidate": 114476.0,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 567366.943359375,
+        "candidate": 531443.115234375,
+        "percent_change": -6.3316745089686215
+      },
+      "thread_cpu_ns": {
+        "baseline": 557710.9375,
+        "candidate": 525777.34375,
+        "percent_change": -5.725832434476863
+      },
+      "allocated_bytes": {
+        "baseline": 141172.25,
+        "candidate": 140927.328125,
+        "percent_change": -0.1734915147984073
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 567366.943359375,
+        "candidate": 637992.82421875,
+        "percent_change": 12.44800771105905
+      },
+      "thread_cpu_ns": {
+        "baseline": 557710.9375,
+        "candidate": 525515.625,
+        "percent_change": -5.772759746172273
+      },
+      "allocated_bytes": {
+        "baseline": 141172.25,
+        "candidate": 140992.25,
+        "percent_change": -0.12750381183270765
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 155278.1328125,
+        "candidate": 157498.630859375,
+        "percent_change": 1.4300133616085287
+      },
+      "thread_cpu_ns": {
+        "baseline": 155541.015625,
+        "candidate": 154716.796875,
+        "percent_change": -0.529904441402862
+      },
+      "allocated_bytes": {
+        "baseline": 97366.71875,
+        "candidate": 96999.375,
+        "percent_change": -0.3772785554612357
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 155278.1328125,
+        "candidate": 155953.619140625,
+        "percent_change": 0.43501703420187887
+      },
+      "thread_cpu_ns": {
+        "baseline": 155541.015625,
+        "candidate": 152062.5,
+        "percent_change": -2.2363976543566477
+      },
+      "allocated_bytes": {
+        "baseline": 97366.71875,
+        "candidate": 96999.375,
+        "percent_change": -0.3772785554612357
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 230600.58203125,
+        "candidate": 227787.58984375,
+        "percent_change": -1.2198547647719327
+      },
+      "thread_cpu_ns": {
+        "baseline": 226318.359375,
+        "candidate": 222330.078125,
+        "percent_change": -1.762243797195251
+      },
+      "allocated_bytes": {
+        "baseline": 179752.0,
+        "candidate": 179752.0,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 230600.58203125,
+        "candidate": 231788.720703125,
+        "percent_change": 0.5152366318459611
+      },
+      "thread_cpu_ns": {
+        "baseline": 226318.359375,
+        "candidate": 223812.5,
+        "percent_change": -1.1072276159654781
+      },
+      "allocated_bytes": {
+        "baseline": 179752.0,
+        "candidate": 179080.0,
+        "percent_change": -0.37384841336952634
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 706350.685546875,
+        "candidate": 690919.345703125,
+        "percent_change": -2.1846570208681304
+      },
+      "thread_cpu_ns": {
+        "baseline": 704828.125,
+        "candidate": 680876.953125,
+        "percent_change": -3.3981577955618625
+      },
+      "allocated_bytes": {
+        "baseline": 213729.25,
+        "candidate": 213057.25,
+        "percent_change": -0.31441648721455273
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 706350.685546875,
+        "candidate": 668041.01171875,
+        "percent_change": -5.423605386390284
+      },
+      "thread_cpu_ns": {
+        "baseline": 704828.125,
+        "candidate": 665712.890625,
+        "percent_change": -5.549613159236511
+      },
+      "allocated_bytes": {
+        "baseline": 213729.25,
+        "candidate": 214065.25,
+        "percent_change": 0.15720824360727637
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "companion",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 250063.6328125,
+        "candidate": 240506.740234375,
+        "percent_change": -3.821784267723105
+      },
+      "thread_cpu_ns": {
+        "baseline": 243158.203125,
+        "candidate": 238894.53125,
+        "percent_change": -1.7534559065680244
+      },
+      "allocated_bytes": {
+        "baseline": 159106.28125,
+        "candidate": 159101.921875,
+        "percent_change": -0.002739913827254359
+      }
+    },
+    {
+      "campaign": "NTT Java 17 held-out confirmation",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "both",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 250063.6328125,
+        "candidate": 242405.521484375,
+        "percent_change": -3.0624650381957497
+      },
+      "thread_cpu_ns": {
+        "baseline": 243158.203125,
+        "candidate": 238582.03125,
+        "percent_change": -1.8819730595918016
+      },
+      "allocated_bytes": {
+        "baseline": 159106.28125,
+        "candidate": 159104.875,
+        "percent_change": -0.0008838431700852745
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "lazy",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 80050.29296875,
+        "candidate": 82611.72265625,
+        "percent_change": 3.1997755317396903
+      },
+      "thread_cpu_ns": {
+        "baseline": 81927.734375,
+        "candidate": 84509.765625,
+        "percent_change": 3.151596061696904
+      },
+      "allocated_bytes": {
+        "baseline": 70470.4375,
+        "candidate": 70670.828125,
+        "percent_change": 0.2843612614154667
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "stream",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 80050.29296875,
+        "candidate": 78544.185546875,
+        "percent_change": -1.8814514800875926
+      },
+      "thread_cpu_ns": {
+        "baseline": 81927.734375,
+        "candidate": 80455.078125,
+        "percent_change": -1.797506377094904
+      },
+      "allocated_bytes": {
+        "baseline": 70470.4375,
+        "candidate": 57675.671875,
+        "percent_change": -18.15621710167473
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "combined",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 80050.29296875,
+        "candidate": 81140.111328125,
+        "percent_change": 1.3614170778868173
+      },
+      "thread_cpu_ns": {
+        "baseline": 81927.734375,
+        "candidate": 82892.578125,
+        "percent_change": 1.1776765918897647
+      },
+      "allocated_bytes": {
+        "baseline": 70470.4375,
+        "candidate": 57549.90625,
+        "percent_change": -18.334682894511623
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "lazy",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 330387.52734375,
+        "candidate": 342247.23828125,
+        "percent_change": 3.5896363984590174
+      },
+      "thread_cpu_ns": {
+        "baseline": 331785.15625,
+        "candidate": 343970.703125,
+        "percent_change": 3.6727221352296446
+      },
+      "allocated_bytes": {
+        "baseline": 90714.5625,
+        "candidate": 90810.5625,
+        "percent_change": 0.10582644875787306
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "stream",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 330387.52734375,
+        "candidate": 329581.94140625,
+        "percent_change": -0.24383061430216513
+      },
+      "thread_cpu_ns": {
+        "baseline": 331785.15625,
+        "candidate": 331763.671875,
+        "percent_change": -0.006475387640247909
+      },
+      "allocated_bytes": {
+        "baseline": 90714.5625,
+        "candidate": 90810.5625,
+        "percent_change": 0.10582644875787306
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "combined",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 330387.52734375,
+        "candidate": 339931.55078125,
+        "percent_change": 2.888735998671632
+      },
+      "thread_cpu_ns": {
+        "baseline": 331785.15625,
+        "candidate": 342101.5625,
+        "percent_change": 3.10936341052781
+      },
+      "allocated_bytes": {
+        "baseline": 90714.5625,
+        "candidate": 90714.5625,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "lazy",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 106746.921875,
+        "candidate": 106630.9375,
+        "percent_change": -0.10865360139922231
+      },
+      "thread_cpu_ns": {
+        "baseline": 108544.921875,
+        "candidate": 108765.625,
+        "percent_change": 0.20332883490778997
+      },
+      "allocated_bytes": {
+        "baseline": 60157.375,
+        "candidate": 59836.46875,
+        "percent_change": -0.5334445693483181
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "stream",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 106746.921875,
+        "candidate": 103305.75,
+        "percent_change": -3.2236731650488126
+      },
+      "thread_cpu_ns": {
+        "baseline": 108544.921875,
+        "candidate": 105482.421875,
+        "percent_change": -2.8214125056230333
+      },
+      "allocated_bytes": {
+        "baseline": 60157.375,
+        "candidate": 46902.46875,
+        "percent_change": -22.033717810991583
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_44",
+      "reference": "baseline",
+      "variant": "combined",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 106746.921875,
+        "candidate": 106970.126953125,
+        "percent_change": 0.20909743738219966
+      },
+      "thread_cpu_ns": {
+        "baseline": 108544.921875,
+        "candidate": 109021.484375,
+        "percent_change": 0.43904633378317737
+      },
+      "allocated_bytes": {
+        "baseline": 60157.375,
+        "candidate": 46690.359375,
+        "percent_change": -22.38630861968296
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "lazy",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 146726.248046875,
+        "candidate": 152981.5078125,
+        "percent_change": 4.263217964672972
+      },
+      "thread_cpu_ns": {
+        "baseline": 148718.75,
+        "candidate": 154208.984375,
+        "percent_change": 3.691689430552647
+      },
+      "allocated_bytes": {
+        "baseline": 113720.0,
+        "candidate": 113720.0,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "stream",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 146726.248046875,
+        "candidate": 143127.365234375,
+        "percent_change": -2.4527873236084186
+      },
+      "thread_cpu_ns": {
+        "baseline": 148718.75,
+        "candidate": 145095.703125,
+        "percent_change": -2.436173565875188
+      },
+      "allocated_bytes": {
+        "baseline": 113720.0,
+        "candidate": 86944.5625,
+        "percent_change": -23.545055838902574
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "combined",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 146726.248046875,
+        "candidate": 148957.142578125,
+        "percent_change": 1.520446791863228
+      },
+      "thread_cpu_ns": {
+        "baseline": 148718.75,
+        "candidate": 150837.890625,
+        "percent_change": 1.424931708342081
+      },
+      "allocated_bytes": {
+        "baseline": 113720.0,
+        "candidate": 86764.421875,
+        "percent_change": -23.703463001231096
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "lazy",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 545043.63671875,
+        "candidate": 569149.103515625,
+        "percent_change": 4.422667319261597
+      },
+      "thread_cpu_ns": {
+        "baseline": 547363.28125,
+        "candidate": 571355.46875,
+        "percent_change": 4.383229259589649
+      },
+      "allocated_bytes": {
+        "baseline": 142098.6875,
+        "candidate": 142278.6875,
+        "percent_change": 0.12667252820333097
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "stream",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 545043.63671875,
+        "candidate": 547190.6640625,
+        "percent_change": 0.39391843131597604
+      },
+      "thread_cpu_ns": {
+        "baseline": 547363.28125,
+        "candidate": 549384.765625,
+        "percent_change": 0.3693131132917138
+      },
+      "allocated_bytes": {
+        "baseline": 142098.6875,
+        "candidate": 142278.6875,
+        "percent_change": 0.12667252820333097
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "combined",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 545043.63671875,
+        "candidate": 574422.44140625,
+        "percent_change": 5.390174787539048
+      },
+      "thread_cpu_ns": {
+        "baseline": 547363.28125,
+        "candidate": 575929.6875,
+        "percent_change": 5.218911685994643
+      },
+      "allocated_bytes": {
+        "baseline": 142098.6875,
+        "candidate": 142098.6875,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "lazy",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 149151.681640625,
+        "candidate": 150210.37109375,
+        "percent_change": 0.7098072522413013
+      },
+      "thread_cpu_ns": {
+        "baseline": 151240.234375,
+        "candidate": 152294.921875,
+        "percent_change": 0.6973590753535319
+      },
+      "allocated_bytes": {
+        "baseline": 97274.125,
+        "candidate": 96685.375,
+        "percent_change": -0.6052483124366348
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "stream",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 149151.681640625,
+        "candidate": 142860.876953125,
+        "percent_change": -4.217722937014845
+      },
+      "thread_cpu_ns": {
+        "baseline": 151240.234375,
+        "candidate": 144906.25,
+        "percent_change": -4.1880286692064335
+      },
+      "allocated_bytes": {
+        "baseline": 97274.125,
+        "candidate": 69659.375,
+        "percent_change": -28.388587406980015
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_65",
+      "reference": "baseline",
+      "variant": "combined",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 149151.681640625,
+        "candidate": 146180.568359375,
+        "percent_change": -1.9920078999905444
+      },
+      "thread_cpu_ns": {
+        "baseline": 151240.234375,
+        "candidate": 148201.171875,
+        "percent_change": -2.009427261574226
+      },
+      "allocated_bytes": {
+        "baseline": 97274.125,
+        "candidate": 69488.71875,
+        "percent_change": -28.564025890749466
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "lazy",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 206156.6640625,
+        "candidate": 209307.13671875,
+        "percent_change": 1.5281934593658786
+      },
+      "thread_cpu_ns": {
+        "baseline": 208099.609375,
+        "candidate": 211306.640625,
+        "percent_change": 1.5411039259669357
+      },
+      "allocated_bytes": {
+        "baseline": 178636.0,
+        "candidate": 179200.0,
+        "percent_change": 0.31572583353858263
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "stream",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 206156.6640625,
+        "candidate": 203094.705078125,
+        "percent_change": -1.4852583098874272
+      },
+      "thread_cpu_ns": {
+        "baseline": 208099.609375,
+        "candidate": 205099.609375,
+        "percent_change": -1.4416173144246147
+      },
+      "allocated_bytes": {
+        "baseline": 178636.0,
+        "candidate": 125825.125,
+        "percent_change": -29.563399874605345
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "combined",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 206156.6640625,
+        "candidate": 212834.486328125,
+        "percent_change": 3.239197867307597
+      },
+      "thread_cpu_ns": {
+        "baseline": 208099.609375,
+        "candidate": 214576.171875,
+        "percent_change": 3.1122415459843955
+      },
+      "allocated_bytes": {
+        "baseline": 178636.0,
+        "candidate": 125824.0,
+        "percent_change": -29.564029646879685
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "lazy",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 635506.263671875,
+        "candidate": 661213.9609375,
+        "percent_change": 4.045231138571181
+      },
+      "thread_cpu_ns": {
+        "baseline": 636998.046875,
+        "candidate": 663275.390625,
+        "percent_change": 4.125184351649436
+      },
+      "allocated_bytes": {
+        "baseline": 210752.6875,
+        "candidate": 210752.6875,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "stream",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 635506.263671875,
+        "candidate": 620170.060546875,
+        "percent_change": -2.413226116197398
+      },
+      "thread_cpu_ns": {
+        "baseline": 636998.046875,
+        "candidate": 622515.625,
+        "percent_change": -2.273542587147359
+      },
+      "allocated_bytes": {
+        "baseline": 210752.6875,
+        "candidate": 210416.6875,
+        "percent_change": -0.15942857193694815
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "combined",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 635506.263671875,
+        "candidate": 680252.583984375,
+        "percent_change": 7.041051028193079
+      },
+      "thread_cpu_ns": {
+        "baseline": 636998.046875,
+        "candidate": 657312.5,
+        "percent_change": 3.1890919014052166
+      },
+      "allocated_bytes": {
+        "baseline": 210752.6875,
+        "candidate": 210416.6875,
+        "percent_change": -0.15942857193694815
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "lazy",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 231570.41015625,
+        "candidate": 245395.927734375,
+        "percent_change": 5.970329960894549
+      },
+      "thread_cpu_ns": {
+        "baseline": 226873.046875,
+        "candidate": 235951.171875,
+        "percent_change": 4.0014118578844515
+      },
+      "allocated_bytes": {
+        "baseline": 158410.5625,
+        "candidate": 158341.375,
+        "percent_change": -0.04367606484574349
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "stream",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 231570.41015625,
+        "candidate": 223581.93359375,
+        "percent_change": -3.4496965985895356
+      },
+      "thread_cpu_ns": {
+        "baseline": 226873.046875,
+        "candidate": 225751.953125,
+        "percent_change": -0.49415025955802383
+      },
+      "allocated_bytes": {
+        "baseline": 158410.5625,
+        "candidate": 106057.375,
+        "percent_change": -33.049050943178116
+      }
+    },
+    {
+      "campaign": "Matrix Java 25 screen",
+      "parameter": "ml_dsa_87",
+      "reference": "baseline",
+      "variant": "combined",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 231570.41015625,
+        "candidate": 229499.0546875,
+        "percent_change": -0.8944819277006855
+      },
+      "thread_cpu_ns": {
+        "baseline": 226873.046875,
+        "candidate": 231708.984375,
+        "percent_change": 2.131561049940167
+      },
+      "allocated_bytes": {
+        "baseline": 158410.5625,
+        "candidate": 105344.40625,
+        "percent_change": -33.499127465064085
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 1917251.9,
+        "candidate": 1942745.9,
+        "percent_change": 1.3297157248872704
+      },
+      "thread_cpu_ns": {
+        "baseline": 1917100,
+        "candidate": 1945650,
+        "percent_change": 1.4892285222471546
+      },
+      "allocated_bytes": {
+        "baseline": 171288,
+        "candidate": 153880,
+        "percent_change": -10.163000326934757
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 1906079.1,
+        "candidate": 2022610.5,
+        "percent_change": 6.113670728565257
+      },
+      "thread_cpu_ns": {
+        "baseline": 1910700,
+        "candidate": 2022200,
+        "percent_change": 5.835557649029144
+      },
+      "allocated_bytes": {
+        "baseline": 171288,
+        "candidate": 171288,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 1903922.95,
+        "candidate": 1804327.05,
+        "percent_change": -5.231088789596239
+      },
+      "thread_cpu_ns": {
+        "baseline": 1908250,
+        "candidate": 1806900,
+        "percent_change": -5.311148958469802
+      },
+      "allocated_bytes": {
+        "baseline": 171288,
+        "candidate": 154392,
+        "percent_change": -9.864088552613149
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 1942697.85,
+        "candidate": 1997945.9500000002,
+        "percent_change": 2.8438853731165725
+      },
+      "thread_cpu_ns": {
+        "baseline": 1941800,
+        "candidate": 1997950,
+        "percent_change": 2.891646925533009
+      },
+      "allocated_bytes": {
+        "baseline": 171288,
+        "candidate": 45882,
+        "percent_change": -73.21353509878101
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "buffer",
+      "variant": "buffer_peeled",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 1984443.7999999998,
+        "candidate": 1970787.4,
+        "percent_change": -0.6881726758903417
+      },
+      "thread_cpu_ns": {
+        "baseline": 1985050,
+        "candidate": 1970500,
+        "percent_change": -0.732979018160751
+      },
+      "allocated_bytes": {
+        "baseline": 45848,
+        "candidate": 45848,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "buffer_peeled",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 1922297.9,
+        "candidate": 2013783.15,
+        "percent_change": 4.759160898006498
+      },
+      "thread_cpu_ns": {
+        "baseline": 1923750,
+        "candidate": 2017700,
+        "percent_change": 4.88369070825212
+      },
+      "allocated_bytes": {
+        "baseline": 171288,
+        "candidate": 45848,
+        "percent_change": -73.23338470879455
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 43452772.95,
+        "candidate": 43163618.7,
+        "percent_change": -0.6654448735244678
+      },
+      "thread_cpu_ns": {
+        "baseline": 43280050,
+        "candidate": 43119250,
+        "percent_change": -0.37153376671237304
+      },
+      "allocated_bytes": {
+        "baseline": 4103200.0,
+        "candidate": 3765561.6,
+        "percent_change": -8.228660557613566
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 43580706.3,
+        "candidate": 41912372.85,
+        "percent_change": -3.828146883429462
+      },
+      "thread_cpu_ns": {
+        "baseline": 43334200,
+        "candidate": 41795750,
+        "percent_change": -3.5501982268046905
+      },
+      "allocated_bytes": {
+        "baseline": 4103516.8,
+        "candidate": 4100665.6,
+        "percent_change": -0.06948186492131692
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 43451220.8,
+        "candidate": 42391483.25,
+        "percent_change": -2.438913177785784
+      },
+      "thread_cpu_ns": {
+        "baseline": 43318350,
+        "candidate": 42342150,
+        "percent_change": -2.2535484384793025
+      },
+      "allocated_bytes": {
+        "baseline": 4102566.4000000004,
+        "candidate": 3776825.6,
+        "percent_change": -7.93992755364058
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 42998552.1,
+        "candidate": 43322427.0,
+        "percent_change": 0.7532228044488054
+      },
+      "thread_cpu_ns": {
+        "baseline": 42892950,
+        "candidate": 43280100,
+        "percent_change": 0.9025958811412993
+      },
+      "allocated_bytes": {
+        "baseline": 4102566.4000000004,
+        "candidate": 1370400.0,
+        "percent_change": -66.59651870594952
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "buffer",
+      "variant": "buffer_peeled",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 44117454.2,
+        "candidate": 40484862.35,
+        "percent_change": -8.233910854266835
+      },
+      "thread_cpu_ns": {
+        "baseline": 43624350,
+        "candidate": 40455150,
+        "percent_change": -7.2647500765054325
+      },
+      "allocated_bytes": {
+        "baseline": 1372300.8,
+        "candidate": 1369766.4,
+        "percent_change": -0.1846825419033582
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "buffer_peeled",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 43125512.4,
+        "candidate": 44115135.4,
+        "percent_change": 2.294750705385251
+      },
+      "thread_cpu_ns": {
+        "baseline": 42999800,
+        "candidate": 40777000,
+        "percent_change": -5.169326368959859
+      },
+      "allocated_bytes": {
+        "baseline": 4103200.0,
+        "candidate": 1373568,
+        "percent_change": -66.52446870735037
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 2825445.9,
+        "candidate": 2808314.6,
+        "percent_change": -0.6063219968218014
+      },
+      "thread_cpu_ns": {
+        "baseline": 2828400,
+        "candidate": 2800150,
+        "percent_change": -0.9987979069438602
+      },
+      "allocated_bytes": {
+        "baseline": 272819.2,
+        "candidate": 272819.2,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 2788052.0,
+        "candidate": 2771654.15,
+        "percent_change": -0.5881472081582406
+      },
+      "thread_cpu_ns": {
+        "baseline": 2791800,
+        "candidate": 2774000,
+        "percent_change": -0.6375814886453224
+      },
+      "allocated_bytes": {
+        "baseline": 272819.2,
+        "candidate": 272819.2,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 2785802.15,
+        "candidate": 2813210.3499999996,
+        "percent_change": 0.9838530708291549
+      },
+      "thread_cpu_ns": {
+        "baseline": 2787950,
+        "candidate": 2816050,
+        "percent_change": 1.007909037106125
+      },
+      "allocated_bytes": {
+        "baseline": 272819.2,
+        "candidate": 272819.2,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 2778868.7,
+        "candidate": 2864202.1,
+        "percent_change": 3.0707963999882404
+      },
+      "thread_cpu_ns": {
+        "baseline": 2783050,
+        "candidate": 2865850,
+        "percent_change": 2.975153159303634
+      },
+      "allocated_bytes": {
+        "baseline": 272819.2,
+        "candidate": 106169.6,
+        "percent_change": -61.08426386412687
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "buffer",
+      "variant": "buffer_peeled",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 2988895.85,
+        "candidate": 2563323.05,
+        "percent_change": -14.238462005961171
+      },
+      "thread_cpu_ns": {
+        "baseline": 2986050,
+        "candidate": 2566800,
+        "percent_change": -14.040287336112922
+      },
+      "allocated_bytes": {
+        "baseline": 106203.6,
+        "candidate": 106169.6,
+        "percent_change": -0.032013980693690325
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "sha2_128f",
+      "reference": "baseline",
+      "variant": "buffer_peeled",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 2814677.2,
+        "candidate": 2765787.6,
+        "percent_change": -1.7369522871041876
+      },
+      "thread_cpu_ns": {
+        "baseline": 2816400,
+        "candidate": 2768400,
+        "percent_change": -1.7043033659991491
+      },
+      "allocated_bytes": {
+        "baseline": 272819.2,
+        "candidate": 106203.6,
+        "percent_change": -61.071801398142064
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 1620302.1,
+        "candidate": 1621818.85,
+        "percent_change": 0.0936090868486783
+      },
+      "thread_cpu_ns": {
+        "baseline": 1623950,
+        "candidate": 1624900,
+        "percent_change": 0.0584993380338128
+      },
+      "allocated_bytes": {
+        "baseline": 170792,
+        "candidate": 153384,
+        "percent_change": -10.192514871890957
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 1628593.5,
+        "candidate": 1628256.2999999998,
+        "percent_change": -0.02070498255090092
+      },
+      "thread_cpu_ns": {
+        "baseline": 1632350,
+        "candidate": 1632550,
+        "percent_change": 0.012252274328417023
+      },
+      "allocated_bytes": {
+        "baseline": 170792,
+        "candidate": 170792,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 1619072.85,
+        "candidate": 1595854.25,
+        "percent_change": -1.4340676517427875
+      },
+      "thread_cpu_ns": {
+        "baseline": 1623350,
+        "candidate": 1600350,
+        "percent_change": -1.4168232359010657
+      },
+      "allocated_bytes": {
+        "baseline": 170792,
+        "candidate": 153896,
+        "percent_change": -9.892735022717691
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 1622945.85,
+        "candidate": 1634610.5499999998,
+        "percent_change": 0.7187362412615084
+      },
+      "thread_cpu_ns": {
+        "baseline": 1627450,
+        "candidate": 1638200,
+        "percent_change": 0.6605425665919151
+      },
+      "allocated_bytes": {
+        "baseline": 170792,
+        "candidate": 45352,
+        "percent_change": -73.44606304744953
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "buffer",
+      "variant": "buffer_peeled",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 1652825.0,
+        "candidate": 1579400.15,
+        "percent_change": -4.442385007487182
+      },
+      "thread_cpu_ns": {
+        "baseline": 1654450,
+        "candidate": 1582850,
+        "percent_change": -4.327722203753515
+      },
+      "allocated_bytes": {
+        "baseline": 45352,
+        "candidate": 45352,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "buffer_peeled",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 1611445.7999999998,
+        "candidate": 1579648.0499999998,
+        "percent_change": -1.9732435307473595
+      },
+      "thread_cpu_ns": {
+        "baseline": 1615500,
+        "candidate": 1582300,
+        "percent_change": -2.0550913030021656
+      },
+      "allocated_bytes": {
+        "baseline": 170792,
+        "candidate": 45352,
+        "percent_change": -73.44606304744953
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 36231743.9,
+        "candidate": 36124547.9,
+        "percent_change": -0.29586210450113226
+      },
+      "thread_cpu_ns": {
+        "baseline": 36093700,
+        "candidate": 36105750,
+        "percent_change": 0.03338532763335067
+      },
+      "allocated_bytes": {
+        "baseline": 4096804,
+        "candidate": 3761600,
+        "percent_change": -8.182085352386881
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 36115423.0,
+        "candidate": 36012956.2,
+        "percent_change": -0.28372033743034875
+      },
+      "thread_cpu_ns": {
+        "baseline": 36059650,
+        "candidate": 35939300,
+        "percent_change": -0.33375254612842964
+      },
+      "allocated_bytes": {
+        "baseline": 4096804,
+        "candidate": 4096704,
+        "percent_change": -0.002440927122704384
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 36017935.4,
+        "candidate": 36192450.0,
+        "percent_change": 0.48452138653123367
+      },
+      "thread_cpu_ns": {
+        "baseline": 35960350,
+        "candidate": 36169900,
+        "percent_change": 0.5827251403281775
+      },
+      "allocated_bytes": {
+        "baseline": 4096804,
+        "candidate": 3770400,
+        "percent_change": -7.967283765588984
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 36355979.3,
+        "candidate": 35927858.25,
+        "percent_change": -1.177580849816351
+      },
+      "thread_cpu_ns": {
+        "baseline": 36278100,
+        "candidate": 35919550,
+        "percent_change": -0.9883373164526255
+      },
+      "allocated_bytes": {
+        "baseline": 4096803.2,
+        "candidate": 1365988.0,
+        "percent_change": -66.65722190414223
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "buffer",
+      "variant": "buffer_peeled",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 36084016.65,
+        "candidate": 35783464.5,
+        "percent_change": -0.8329232106149109
+      },
+      "thread_cpu_ns": {
+        "baseline": 36060700,
+        "candidate": 35777600,
+        "percent_change": -0.7850651817629672
+      },
+      "allocated_bytes": {
+        "baseline": 1365920.7999999998,
+        "candidate": 1365922.4,
+        "percent_change": 0.0001171370990205034
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "buffer_peeled",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 36058637.45,
+        "candidate": 35871360.4,
+        "percent_change": -0.5193680716851556
+      },
+      "thread_cpu_ns": {
+        "baseline": 35997600,
+        "candidate": 35865100,
+        "percent_change": -0.36808009422850674
+      },
+      "allocated_bytes": {
+        "baseline": 4096736,
+        "candidate": 1365988.8,
+        "percent_change": -66.65665544472478
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 2336031.25,
+        "candidate": 2343072.9,
+        "percent_change": 0.3014364640884004
+      },
+      "thread_cpu_ns": {
+        "baseline": 2340550,
+        "candidate": 2347700,
+        "percent_change": 0.3054837538185362
+      },
+      "allocated_bytes": {
+        "baseline": 271353.6,
+        "candidate": 271353.6,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 2327745.7,
+        "candidate": 2351308.25,
+        "percent_change": 1.0122476007581094
+      },
+      "thread_cpu_ns": {
+        "baseline": 2332250,
+        "candidate": 2354100,
+        "percent_change": 0.9368635437881911
+      },
+      "allocated_bytes": {
+        "baseline": 271300.8,
+        "candidate": 271353.6,
+        "percent_change": 0.019461792961905644
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 2329383.4,
+        "candidate": 2333552.0999999996,
+        "percent_change": 0.17896152260721276
+      },
+      "thread_cpu_ns": {
+        "baseline": 2334000,
+        "candidate": 2337400,
+        "percent_change": 0.14567266495286724
+      },
+      "allocated_bytes": {
+        "baseline": 271353.6,
+        "candidate": 271353.6,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 2323504.0,
+        "candidate": 2343150.0,
+        "percent_change": 0.8455332979844243
+      },
+      "thread_cpu_ns": {
+        "baseline": 2327100,
+        "candidate": 2347400,
+        "percent_change": 0.8723303682695249
+      },
+      "allocated_bytes": {
+        "baseline": 271300.8,
+        "candidate": 105356.8,
+        "percent_change": -61.16605627406923
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "buffer",
+      "variant": "buffer_peeled",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 2336847.95,
+        "candidate": 2300098.0,
+        "percent_change": -1.5726290621518646
+      },
+      "thread_cpu_ns": {
+        "baseline": 2341250,
+        "candidate": 2302450,
+        "percent_change": -1.657234383342232
+      },
+      "allocated_bytes": {
+        "baseline": 105356.8,
+        "candidate": 105356.8,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 screen",
+      "parameter": "shake_128f",
+      "reference": "baseline",
+      "variant": "buffer_peeled",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 2330056.2,
+        "candidate": 2289710.3499999996,
+        "percent_change": -1.7315397800276466
+      },
+      "thread_cpu_ns": {
+        "baseline": 2332750,
+        "candidate": 2291600,
+        "percent_change": -1.7640124316793515
+      },
+      "allocated_bytes": {
+        "baseline": 271300.8,
+        "candidate": 105424.8,
+        "percent_change": -61.14099184373949
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_192f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 2733947.8,
+        "candidate": 2748208.3499999996,
+        "percent_change": 0.5216101785118221
+      },
+      "thread_cpu_ns": {
+        "baseline": 2737850,
+        "candidate": 2736650,
+        "percent_change": -0.04383001260113151
+      },
+      "allocated_bytes": {
+        "baseline": 303976,
+        "candidate": 278376,
+        "percent_change": -8.42171750401347
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_192f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 2761745.85,
+        "candidate": 2684856.25,
+        "percent_change": -2.784093981710889
+      },
+      "thread_cpu_ns": {
+        "baseline": 2759100,
+        "candidate": 2689850,
+        "percent_change": -2.5098764089739434
+      },
+      "allocated_bytes": {
+        "baseline": 303976,
+        "candidate": 303976,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_192f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 2788312.35,
+        "candidate": 2719400.0,
+        "percent_change": -2.471471677123982
+      },
+      "thread_cpu_ns": {
+        "baseline": 2789050,
+        "candidate": 2718200,
+        "percent_change": -2.540291497104752
+      },
+      "allocated_bytes": {
+        "baseline": 303976,
+        "candidate": 278888,
+        "percent_change": -8.25328315393321
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_192f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 2718500.0,
+        "candidate": 2730354.3,
+        "percent_change": 0.43606032738641165
+      },
+      "thread_cpu_ns": {
+        "baseline": 2722650,
+        "candidate": 2734100,
+        "percent_change": 0.42054615907296533
+      },
+      "allocated_bytes": {
+        "baseline": 303976,
+        "candidate": 75496,
+        "percent_change": -75.16382872332026
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_192f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 69416704.15,
+        "candidate": 69402389.5,
+        "percent_change": -0.02062133340280381
+      },
+      "thread_cpu_ns": {
+        "baseline": 69115850,
+        "candidate": 69069050,
+        "percent_change": -0.06771239882024105
+      },
+      "allocated_bytes": {
+        "baseline": 8178611.2,
+        "candidate": 7685811.2,
+        "percent_change": -6.025472882241911
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_192f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 69608733.35,
+        "candidate": 69397260.45,
+        "percent_change": -0.3038022527097062
+      },
+      "thread_cpu_ns": {
+        "baseline": 69258150,
+        "candidate": 69059850,
+        "percent_change": -0.28632009373625866
+      },
+      "allocated_bytes": {
+        "baseline": 8178611.2,
+        "candidate": 8178611.2,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_192f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 75384987.6,
+        "candidate": 69251968.69999999,
+        "percent_change": -8.135597146400553
+      },
+      "thread_cpu_ns": {
+        "baseline": 70067800,
+        "candidate": 68918000,
+        "percent_change": -1.6409820202717973
+      },
+      "allocated_bytes": {
+        "baseline": 8178611.2,
+        "candidate": 7697075.2,
+        "percent_change": -5.887747787790665
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_192f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 70554468.7,
+        "candidate": 69626091.8,
+        "percent_change": -1.3158300489051866
+      },
+      "thread_cpu_ns": {
+        "baseline": 69284900,
+        "candidate": 69261250,
+        "percent_change": -0.0341344217859918
+      },
+      "allocated_bytes": {
+        "baseline": 8178611.2,
+        "candidate": 3205555.2,
+        "percent_change": -60.80562920022412
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_192f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 3969570.75,
+        "candidate": 4453266.85,
+        "percent_change": 12.18509835099928
+      },
+      "thread_cpu_ns": {
+        "baseline": 3974200,
+        "candidate": 4444450,
+        "percent_change": 11.832570076996628
+      },
+      "allocated_bytes": {
+        "baseline": 475952,
+        "candidate": 475952,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_192f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 4032543.6500000004,
+        "candidate": 4285506.05,
+        "percent_change": 6.273023231874975
+      },
+      "thread_cpu_ns": {
+        "baseline": 4035550,
+        "candidate": 4290600,
+        "percent_change": 6.320080286454144
+      },
+      "allocated_bytes": {
+        "baseline": 475952,
+        "candidate": 475952,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_192f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 4044154.25,
+        "candidate": 4115781.4,
+        "percent_change": 1.7711280424083764
+      },
+      "thread_cpu_ns": {
+        "baseline": 4048900,
+        "candidate": 4121300,
+        "percent_change": 1.7881399886388927
+      },
+      "allocated_bytes": {
+        "baseline": 475952,
+        "candidate": 475952,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_192f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 4299385.25,
+        "candidate": 4038362.4,
+        "percent_change": -6.071166802277139
+      },
+      "thread_cpu_ns": {
+        "baseline": 4275650,
+        "candidate": 4023350,
+        "percent_change": -5.900857179610119
+      },
+      "allocated_bytes": {
+        "baseline": 475952,
+        "candidate": 170716,
+        "percent_change": -64.13167714391368
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_256f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 6689379.15,
+        "candidate": 6978227.1,
+        "percent_change": 4.3180083461108465
+      },
+      "thread_cpu_ns": {
+        "baseline": 6690700,
+        "candidate": 6923500,
+        "percent_change": 3.4794565591044213
+      },
+      "allocated_bytes": {
+        "baseline": 937944,
+        "candidate": 870360,
+        "percent_change": -7.205547452726391
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_256f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 6741627.3,
+        "candidate": 7169837.45,
+        "percent_change": 6.3517327633938025
+      },
+      "thread_cpu_ns": {
+        "baseline": 6726500,
+        "candidate": 7126100,
+        "percent_change": 5.940682375678286
+      },
+      "allocated_bytes": {
+        "baseline": 937944,
+        "candidate": 937944,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_256f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 6739325.1,
+        "candidate": 7154245.65,
+        "percent_change": 6.1567077391770475
+      },
+      "thread_cpu_ns": {
+        "baseline": 6721150,
+        "candidate": 7098550,
+        "percent_change": 5.615110509362231
+      },
+      "allocated_bytes": {
+        "baseline": 937944,
+        "candidate": 871384,
+        "percent_change": -7.096372491321445
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_256f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 6674889.55,
+        "candidate": 7314327.0,
+        "percent_change": 9.579745780212946
+      },
+      "thread_cpu_ns": {
+        "baseline": 6679950,
+        "candidate": 7141050,
+        "percent_change": 6.902746278040994
+      },
+      "allocated_bytes": {
+        "baseline": 937944,
+        "candidate": 217560,
+        "percent_change": -76.804585348379
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_256f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 141502845.8,
+        "candidate": 139958362.4,
+        "percent_change": -1.0914857515890386
+      },
+      "thread_cpu_ns": {
+        "baseline": 141202700,
+        "candidate": 139687250,
+        "percent_change": -1.073244350143443
+      },
+      "allocated_bytes": {
+        "baseline": 19531123.2,
+        "candidate": 18454003.2,
+        "percent_change": -5.514890203549583
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_256f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 138922439.5,
+        "candidate": 142751275.15,
+        "percent_change": 2.7560958933491753
+      },
+      "thread_cpu_ns": {
+        "baseline": 138521800,
+        "candidate": 141571350,
+        "percent_change": 2.2014946383890566
+      },
+      "allocated_bytes": {
+        "baseline": 19531123.2,
+        "candidate": 19531123.2,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_256f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 142418429.2,
+        "candidate": 139692399.89999998,
+        "percent_change": -1.914098698681621
+      },
+      "thread_cpu_ns": {
+        "baseline": 141898550,
+        "candidate": 139409800,
+        "percent_change": -1.7538938910933166
+      },
+      "allocated_bytes": {
+        "baseline": 19528955.2,
+        "candidate": 18471411.2,
+        "percent_change": -5.415261539439653
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_256f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 141509962.6,
+        "candidate": 140816760.55,
+        "percent_change": -0.4898609520231578
+      },
+      "thread_cpu_ns": {
+        "baseline": 140590050,
+        "candidate": 140570600,
+        "percent_change": -0.013834549457802936
+      },
+      "allocated_bytes": {
+        "baseline": 19531123.2,
+        "candidate": 7353451.2,
+        "percent_change": -62.350085426730594
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_256f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 4138960.5,
+        "candidate": 4187550.0,
+        "percent_change": 1.1739541848732271
+      },
+      "thread_cpu_ns": {
+        "baseline": 4144550,
+        "candidate": 4191650,
+        "percent_change": 1.1364321820221734
+      },
+      "allocated_bytes": {
+        "baseline": 580288,
+        "candidate": 580288,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_256f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 4106670.8,
+        "candidate": 4381908.199999999,
+        "percent_change": 6.702202669860946
+      },
+      "thread_cpu_ns": {
+        "baseline": 4112050,
+        "candidate": 4386050,
+        "percent_change": 6.663343101372798
+      },
+      "allocated_bytes": {
+        "baseline": 580288,
+        "candidate": 580288,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_256f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 4231106.3,
+        "candidate": 4152637.55,
+        "percent_change": -1.8545681539601122
+      },
+      "thread_cpu_ns": {
+        "baseline": 4233700,
+        "candidate": 4148700,
+        "percent_change": -2.007700120462008
+      },
+      "allocated_bytes": {
+        "baseline": 580288,
+        "candidate": 580288,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "sha2_256f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 4156564.5500000003,
+        "candidate": 4815370.9,
+        "percent_change": 15.849780319182095
+      },
+      "thread_cpu_ns": {
+        "baseline": 4159500,
+        "candidate": 4813950,
+        "percent_change": 15.733862243058061
+      },
+      "allocated_bytes": {
+        "baseline": 580288,
+        "candidate": 214936,
+        "percent_change": -62.96046101246277
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_192f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 2378927.0,
+        "candidate": 2395870.75,
+        "percent_change": 0.7122433769510383
+      },
+      "thread_cpu_ns": {
+        "baseline": 2376100,
+        "candidate": 2383250,
+        "percent_change": 0.3009132612263876
+      },
+      "allocated_bytes": {
+        "baseline": 302744,
+        "candidate": 277144,
+        "percent_change": -8.455989218613746
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_192f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 2382783.3,
+        "candidate": 2405258.4,
+        "percent_change": 0.9432288702040159
+      },
+      "thread_cpu_ns": {
+        "baseline": 2378050,
+        "candidate": 2388700,
+        "percent_change": 0.4478459241815669
+      },
+      "allocated_bytes": {
+        "baseline": 302744,
+        "candidate": 302744,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_192f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 2348254.1,
+        "candidate": 2334914.6500000004,
+        "percent_change": -0.568058201197208
+      },
+      "thread_cpu_ns": {
+        "baseline": 2352850,
+        "candidate": 2339150,
+        "percent_change": -0.5822725630618142
+      },
+      "allocated_bytes": {
+        "baseline": 302744,
+        "candidate": 277656,
+        "percent_change": -8.286869434241472
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_192f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 2400983.4,
+        "candidate": 2450189.65,
+        "percent_change": 2.0494206665485404
+      },
+      "thread_cpu_ns": {
+        "baseline": 2396200,
+        "candidate": 2442500,
+        "percent_change": 1.9322260245388634
+      },
+      "allocated_bytes": {
+        "baseline": 302744,
+        "candidate": 74264,
+        "percent_change": -75.46970377612769
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_192f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 59316635.35,
+        "candidate": 59261427.1,
+        "percent_change": -0.09307380581221603
+      },
+      "thread_cpu_ns": {
+        "baseline": 58992550,
+        "candidate": 58971550,
+        "percent_change": -0.035597715304724886
+      },
+      "allocated_bytes": {
+        "baseline": 8173376,
+        "candidate": 7680576,
+        "percent_change": -6.029332310173907
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_192f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 59208570.9,
+        "candidate": 58765245.95,
+        "percent_change": -0.7487513095844611
+      },
+      "thread_cpu_ns": {
+        "baseline": 59036450,
+        "candidate": 58605450,
+        "percent_change": -0.7300574475599397
+      },
+      "allocated_bytes": {
+        "baseline": 8173376,
+        "candidate": 8173376,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_192f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 59131277.15,
+        "candidate": 58607387.5,
+        "percent_change": -0.8859772277047817
+      },
+      "thread_cpu_ns": {
+        "baseline": 58833550,
+        "candidate": 58475800,
+        "percent_change": -0.6080714150344502
+      },
+      "allocated_bytes": {
+        "baseline": 8173376,
+        "candidate": 7691840,
+        "percent_change": -5.891519000227074
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_192f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 59660635.4,
+        "candidate": 58824614.4,
+        "percent_change": -1.4012941605378915
+      },
+      "thread_cpu_ns": {
+        "baseline": 59096900,
+        "candidate": 58770850,
+        "percent_change": -0.5517209870568474
+      },
+      "allocated_bytes": {
+        "baseline": 8173376,
+        "candidate": 3200288,
+        "percent_change": -60.84496785661151
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_192f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 3364249.95,
+        "candidate": 3371314.45,
+        "percent_change": 0.2099873702903654
+      },
+      "thread_cpu_ns": {
+        "baseline": 3368350,
+        "candidate": 3375700,
+        "percent_change": 0.218207727819264
+      },
+      "allocated_bytes": {
+        "baseline": 469252,
+        "candidate": 469255.19999999995,
+        "percent_change": 0.0006819363582710736
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_192f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 3387510.4000000004,
+        "candidate": 3367012.5,
+        "percent_change": -0.6051022013098595
+      },
+      "thread_cpu_ns": {
+        "baseline": 3390350,
+        "candidate": 3369700,
+        "percent_change": -0.6090816582358771
+      },
+      "allocated_bytes": {
+        "baseline": 469264,
+        "candidate": 469285.6,
+        "percent_change": 0.00460295270892086
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_192f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 3395025.05,
+        "candidate": 3404145.75,
+        "percent_change": 0.2686489750642673
+      },
+      "thread_cpu_ns": {
+        "baseline": 3394700,
+        "candidate": 3403100,
+        "percent_change": 0.2474445459097918
+      },
+      "allocated_bytes": {
+        "baseline": 469241.6,
+        "candidate": 469246.4,
+        "percent_change": 0.0010229272085160446
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_192f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 3355622.95,
+        "candidate": 3458166.75,
+        "percent_change": 3.055879683979379
+      },
+      "thread_cpu_ns": {
+        "baseline": 3360000,
+        "candidate": 3457950,
+        "percent_change": 2.9151785714285783
+      },
+      "allocated_bytes": {
+        "baseline": 469240.0,
+        "candidate": 168578.40000000002,
+        "percent_change": -64.07416247549229
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_256f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 6237818.6,
+        "candidate": 6193566.550000001,
+        "percent_change": -0.709415467772645
+      },
+      "thread_cpu_ns": {
+        "baseline": 6236150,
+        "candidate": 6195150,
+        "percent_change": -0.6574569245447859
+      },
+      "allocated_bytes": {
+        "baseline": 936712,
+        "candidate": 869128,
+        "percent_change": -7.215024468566645
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_256f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 6401704.15,
+        "candidate": 6169237.550000001,
+        "percent_change": -3.6313236999557352
+      },
+      "thread_cpu_ns": {
+        "baseline": 6324700,
+        "candidate": 6173900,
+        "percent_change": -2.3843028127816357
+      },
+      "allocated_bytes": {
+        "baseline": 936712,
+        "candidate": 936712,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_256f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 6221170.9,
+        "candidate": 6167895.8,
+        "percent_change": -0.8563516556023276
+      },
+      "thread_cpu_ns": {
+        "baseline": 6218650,
+        "candidate": 6162500,
+        "percent_change": -0.9029290923271094
+      },
+      "allocated_bytes": {
+        "baseline": 936712,
+        "candidate": 870152,
+        "percent_change": -7.105705916012606
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_256f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "keygen",
+      "wall_ns": {
+        "baseline": 6197068.6,
+        "candidate": 6320462.5,
+        "percent_change": 1.9911656295042546
+      },
+      "thread_cpu_ns": {
+        "baseline": 6198750,
+        "candidate": 6324600,
+        "percent_change": 2.0302480338777906
+      },
+      "allocated_bytes": {
+        "baseline": 936712,
+        "candidate": 216328,
+        "percent_change": -76.9056017217672
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_256f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 122874427.05000001,
+        "candidate": 121807679.15,
+        "percent_change": -0.8681610369307591
+      },
+      "thread_cpu_ns": {
+        "baseline": 121895350,
+        "candidate": 121456250,
+        "percent_change": -0.36022703080962337
+      },
+      "allocated_bytes": {
+        "baseline": 19523671.2,
+        "candidate": 18446551.2,
+        "percent_change": -5.516995184799056
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_256f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 121627895.94999999,
+        "candidate": 121427062.4,
+        "percent_change": -0.1651212893484133
+      },
+      "thread_cpu_ns": {
+        "baseline": 121356000,
+        "candidate": 121075050,
+        "percent_change": -0.23150894887767892
+      },
+      "allocated_bytes": {
+        "baseline": 19523671.2,
+        "candidate": 19523671.2,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_256f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 121603754.1,
+        "candidate": 121602552.30000001,
+        "percent_change": -0.00098829185732896
+      },
+      "thread_cpu_ns": {
+        "baseline": 121325950,
+        "candidate": 121230800,
+        "percent_change": -0.0784251019670612
+      },
+      "allocated_bytes": {
+        "baseline": 19523671.2,
+        "candidate": 18459859.2,
+        "percent_change": -5.448831775040341
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_256f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "sign",
+      "wall_ns": {
+        "baseline": 121640850.0,
+        "candidate": 122180979.19999999,
+        "percent_change": 0.4440360290149048
+      },
+      "thread_cpu_ns": {
+        "baseline": 121330650,
+        "candidate": 122085700,
+        "percent_change": 0.6223077186185089
+      },
+      "allocated_bytes": {
+        "baseline": 19523671.2,
+        "candidate": 7346916,
+        "percent_change": -62.36918802443261
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_256f",
+      "reference": "baseline",
+      "variant": "object_hoist",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 3483645.9000000004,
+        "candidate": 3487898.0,
+        "percent_change": 0.12205890386274287
+      },
+      "thread_cpu_ns": {
+        "baseline": 3488150,
+        "candidate": 3491900,
+        "percent_change": 0.10750684460243409
+      },
+      "allocated_bytes": {
+        "baseline": 576250.4,
+        "candidate": 576250.4,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_256f",
+      "reference": "baseline",
+      "variant": "field_rewrite",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 3501602.05,
+        "candidate": 3470539.6,
+        "percent_change": -0.8870925238348981
+      },
+      "thread_cpu_ns": {
+        "baseline": 3505250,
+        "candidate": 3474500,
+        "percent_change": -0.8772555452535524
+      },
+      "allocated_bytes": {
+        "baseline": 576250.4,
+        "candidate": 576250.4,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_256f",
+      "reference": "baseline",
+      "variant": "two_addresses",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 3578951.95,
+        "candidate": 3487697.9,
+        "percent_change": -2.549742250660847
+      },
+      "thread_cpu_ns": {
+        "baseline": 3534200,
+        "candidate": 3490050,
+        "percent_change": -1.2492218889706308
+      },
+      "allocated_bytes": {
+        "baseline": 576250.4,
+        "candidate": 576250.4,
+        "percent_change": 0.0
+      }
+    },
+    {
+      "campaign": "WOTS Java 25 selected higher-size followup",
+      "parameter": "shake_256f",
+      "reference": "baseline",
+      "variant": "buffer",
+      "operation": "verify",
+      "wall_ns": {
+        "baseline": 3514943.65,
+        "candidate": 3577787.4,
+        "percent_change": 1.7879020620999109
+      },
+      "thread_cpu_ns": {
+        "baseline": 3512800,
+        "candidate": 3577400,
+        "percent_change": 1.8389888408107513
+      },
+      "allocated_bytes": {
+        "baseline": 576250.4,
+        "candidate": 213000.8,
+        "percent_change": -63.03676318489324
+      }
+    }
+  ]
+}

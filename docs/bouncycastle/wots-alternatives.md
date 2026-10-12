@@ -1,6 +1,6 @@
 # Bouncy Castle WOTS alternatives
 
-The object-only address hoist reduced per-operation allocated bytes across all six fast SLH-DSA configurations: 7.21–10.19% in key generation and 5.52–8.23% in signing. It remains the narrowest allocation candidate for further review. This study establishes no broad latency improvement; larger changes retained substantial losses, and unchanged verification controls shifted materially.
+The object-only address hoist reduced per-operation allocated bytes across all six fast SLH-DSA configurations: 7.21–10.19% in key generation and 5.51–8.23% in signing. It remains the narrowest allocation candidate for further review. This study establishes no broad latency improvement; larger changes retained substantial losses, and unchanged verification controls shifted materially.
 
 Six isolated implementations start from Bouncy Castle `c314b9cdffa3958a0eff5344f8fdcdb0181ed830`: stock, object-only address reuse, a same-allocation field/type rewrite, the previous two-address comparator, the old chain buffer, and its peeled-loop alternative. No persistent cache crosses keys or calls. [Source changes and reproduction](../../libs/bouncycastle/experiments/wots-alternatives/README.md) describe exact overwrite, domain-separation, ownership and chain-range requirements.
 
