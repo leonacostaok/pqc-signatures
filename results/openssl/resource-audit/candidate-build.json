@@ -1,0 +1,20 @@
+{
+  "command": [
+    "cc",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-DCACHED_SHA512",
+    "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/candidate/include",
+    "-I/Users/dandelionlabs/development/personal/openssl/worktrees/signoff-20261012/include",
+    "-I/Users/dandelionlabs/development/personal/openssl/worktrees/signoff-20261012",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-memory/libs/openssl/experiments/resource-audit/ctx-lifecycle.c",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/candidate/libcrypto.a",
+    "-lpthread",
+    "-o",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-memory/libs/openssl/build/resource-audit/candidate"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

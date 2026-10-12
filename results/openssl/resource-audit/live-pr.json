@@ -1,0 +1,49 @@
+{
+  "baseRefOid": "122db7eb076bf0625df87b91bcc2dccfaccc4900",
+  "files": [
+    {
+      "path": "crypto/slh_dsa/slh_dsa_hash_ctx.c",
+      "additions": 3,
+      "deletions": 0,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "crypto/slh_dsa/slh_dsa_local.h",
+      "additions": 1,
+      "deletions": 0,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "crypto/slh_dsa/slh_hash.c",
+      "additions": 18,
+      "deletions": 8,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "test/build.info",
+      "additions": 5,
+      "deletions": 0,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "test/recipes/30-test_slh_dsa.t",
+      "additions": 2,
+      "deletions": 1,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "test/slh_dsa_internal_test.c",
+      "additions": 79,
+      "deletions": 0,
+      "changeType": "ADDED"
+    }
+  ],
+  "headRefOid": "857cb293518745277fcf2594e8042fcc6eda549c",
+  "headRepositoryOwner": {
+    "id": "MDQ6VXNlcjcyOTM3OTE=",
+    "name": "Leon Acosta",
+    "login": "leonacostaok"
+  },
+  "title": "SLH-DSA SHA2-192/256: 1.07–1.20× sign/verify speedup",
+  "url": "https://github.com/openssl/openssl/pull/33196"
+}

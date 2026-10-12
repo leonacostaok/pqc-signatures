@@ -1,0 +1,1301 @@
+{
+  "complete": true,
+  "no_new_measurements": true,
+  "balanced": {
+    "source": "libs/liboqs/experiments/sha2-openssl/evidence/final-paired/summary.json",
+    "sha256": "cf979363b0f1c0b5d8f4dbe642c8cefc18d5b4563d1387f25c81e8420f977501",
+    "raw_sha256": {
+      "libs/liboqs/experiments/sha2-openssl/evidence/final-paired/01-baseline.jsonl": "92f7b165fc2642ca51c159ee9ef9a999b06fab45e4118a67f23dfb2ba6c14807",
+      "libs/liboqs/experiments/sha2-openssl/evidence/final-paired/01-candidate.jsonl": "d122bfc02f1d6cb937b4452c073e937254599ef409b772cfbf08454fc78ba753",
+      "libs/liboqs/experiments/sha2-openssl/evidence/final-paired/02-baseline.jsonl": "28acb57ef2aece6b18183990793593c498ceab4aa1e9e87a1bf53667adace595",
+      "libs/liboqs/experiments/sha2-openssl/evidence/final-paired/02-candidate.jsonl": "ed00c8f3521c2d61b114eed982ef3e490016ff69623b3702e4afb7dc768c2a8f",
+      "libs/liboqs/experiments/sha2-openssl/evidence/final-paired/03-baseline.jsonl": "6b58c48751590ce211347681b06f8544844ac3dacc9aba4c0705cee1f34c46f2",
+      "libs/liboqs/experiments/sha2-openssl/evidence/final-paired/03-candidate.jsonl": "aa26ad9255121b495b422bf9d62aaa867ad87166dab31ac34c7c4091c792355e",
+      "libs/liboqs/experiments/sha2-openssl/evidence/final-paired/04-baseline.jsonl": "8d92c69692a7c0a79fe44a79ec360aa50d8c925b52c3cc92b3ed5b5695fa3c13",
+      "libs/liboqs/experiments/sha2-openssl/evidence/final-paired/04-candidate.jsonl": "559f1b8a1744e454b62aea1c870957de814d06a1518f6877f23c9a9d5d81e5c7",
+      "libs/liboqs/experiments/sha2-openssl/evidence/final-paired/05-baseline.jsonl": "637ad5ac8b35dc322cb3687d244a0f584484a63a59b0d3f2bf5ff57a27a5cb8c",
+      "libs/liboqs/experiments/sha2-openssl/evidence/final-paired/05-candidate.jsonl": "c55b31c172c783e9c3c3fb74abb9514fab8a7258d7bd58a15904fc09141dd144",
+      "libs/liboqs/experiments/sha2-openssl/evidence/final-paired/06-baseline.jsonl": "e5d5e02d345ae3d12c2933ea3f1f957cfd057f6f58c8308e8532461d40af0f93",
+      "libs/liboqs/experiments/sha2-openssl/evidence/final-paired/06-candidate.jsonl": "1665415aab04ad2c82de154fcd0dae0d8148b8fbf79b2330cb51fcc60c8e21a2"
+    },
+    "individual_case_pairs": {
+      "pairs": 288,
+      "losses": 0,
+      "minimum": 4.139880680607555,
+      "maximum": 5.3482784511423365,
+      "median": 4.721433987206346
+    },
+    "parameter_operation_round_pairs": {
+      "pairs": 72,
+      "losses": 0,
+      "minimum": 4.2580357947611125,
+      "maximum": 5.322562172774868,
+      "median": 4.722547238375132
+    },
+    "cells": [
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128F",
+        "operation": "sign",
+        "paired_speedups": [
+          5.277739546467426,
+          5.283682462428885,
+          5.270172391190351,
+          5.274543603887574,
+          5.274382933998982,
+          5.280226193020235
+        ],
+        "median_speedup": 5.2761415751775,
+        "geometric_mean_speedup": 5.27678937487437,
+        "paired_bootstrap_95pct": [
+          5.27342220219358,
+          5.280177076998709
+        ],
+        "baseline_median_ns": 26776083.333333332,
+        "candidate_median_ns": 5075208.333333334
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128F",
+        "operation": "verify",
+        "paired_speedups": [
+          5.276328973379911,
+          5.322562172774868,
+          5.2919438485975725,
+          5.261678693505507,
+          5.304664484451719,
+          5.283492822966508
+        ],
+        "median_speedup": 5.28771833578204,
+        "geometric_mean_speedup": 5.290075460110038,
+        "paired_bootstrap_95pct": [
+          5.275018412637437,
+          5.305885235849067
+        ],
+        "baseline_median_ns": 1622116.6666666665,
+        "candidate_median_ns": 306720.8333333333
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128S",
+        "operation": "sign",
+        "paired_speedups": [
+          5.27230033699489,
+          5.274055971694503,
+          5.26502107883713,
+          5.25427258253006,
+          5.271586546364953,
+          5.249686797547031
+        ],
+        "median_speedup": 5.268303812601042,
+        "geometric_mean_speedup": 5.264478876739929,
+        "paired_bootstrap_95pct": [
+          5.256768350618944,
+          5.271552483053714
+        ],
+        "baseline_median_ns": 558311791.6666667,
+        "candidate_median_ns": 106129958.33333333
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128S",
+        "operation": "verify",
+        "paired_speedups": [
+          5.170060157334567,
+          5.171386567626122,
+          5.175040518638574,
+          5.171022112262254,
+          5.24642166344294,
+          5.1713383643924224
+        ],
+        "median_speedup": 5.171362466009272,
+        "geometric_mean_speedup": 5.184137151842496,
+        "paired_bootstrap_95pct": [
+          5.170822915468036,
+          5.20915949932774
+        ],
+        "baseline_median_ns": 558700.0,
+        "candidate_median_ns": 107879.16666666666
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192F",
+        "operation": "sign",
+        "paired_speedups": [
+          4.676126342793009,
+          4.699207286522082,
+          4.7043930098198805,
+          4.7406074745390105,
+          4.774665914807157,
+          4.7084977401535255
+        ],
+        "median_speedup": 4.7064453749867035,
+        "geometric_mean_speedup": 4.717142158927538,
+        "paired_bootstrap_95pct": [
+          4.6940889037436095,
+          4.74458823053124
+        ],
+        "baseline_median_ns": 43801583.333333336,
+        "candidate_median_ns": 9312125.0
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192F",
+        "operation": "verify",
+        "paired_speedups": [
+          4.832841140529531,
+          4.847279160358582,
+          4.872791097932962,
+          4.892168858978281,
+          4.849900023723184,
+          4.8221218121202885
+        ],
+        "median_speedup": 4.848589592040883,
+        "geometric_mean_speedup": 4.852793274861603,
+        "paired_bootstrap_95pct": [
+          4.834721056438603,
+          4.871950897514868
+        ],
+        "baseline_median_ns": 2378779.1666666665,
+        "candidate_median_ns": 490675.0
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192S",
+        "operation": "sign",
+        "paired_speedups": [
+          4.51987484829779,
+          4.499382180888162,
+          4.502864838309873,
+          4.51745919486825,
+          4.508988184213755,
+          4.463386862282602
+        ],
+        "median_speedup": 4.505926511261814,
+        "geometric_mean_speedup": 4.501953571865948,
+        "paired_bootstrap_95pct": [
+          4.485322066816609,
+          4.514415732295396
+        ],
+        "baseline_median_ns": 986505041.6666667,
+        "candidate_median_ns": 218819791.6666667
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192S",
+        "operation": "verify",
+        "paired_speedups": [
+          4.379739363392816,
+          4.419528435262462,
+          4.429526842584167,
+          4.428884625924912,
+          4.401841049945315,
+          4.325872873769024
+        ],
+        "median_speedup": 4.410684742603888,
+        "geometric_mean_speedup": 4.39741380429596,
+        "paired_bootstrap_95pct": [
+          4.365370508793076,
+          4.423020473762561
+        ],
+        "baseline_median_ns": 806445.8333333333,
+        "candidate_median_ns": 183016.6666666667
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256F",
+        "operation": "sign",
+        "paired_speedups": [
+          4.641445038315409,
+          4.689302112228075,
+          4.497948452541145,
+          4.695703995439706,
+          4.701061815289102,
+          4.6662982142242715
+        ],
+        "median_speedup": 4.677800163226173,
+        "geometric_mean_speedup": 4.6480862404272765,
+        "paired_bootstrap_95pct": [
+          4.585826222322372,
+          4.691331624566068
+        ],
+        "baseline_median_ns": 90470833.33333333,
+        "candidate_median_ns": 19336166.666666664
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256F",
+        "operation": "verify",
+        "paired_speedups": [
+          4.6945856426065,
+          4.7533123028391175,
+          4.661033230759211,
+          4.7541958504030655,
+          4.736596736596737,
+          4.7407877389584705
+        ],
+        "median_speedup": 4.738692237777604,
+        "geometric_mean_speedup": 4.723293876933902,
+        "paired_bootstrap_95pct": [
+          4.694446969537636,
+          4.748028055270628
+        ],
+        "baseline_median_ns": 2386733.333333333,
+        "candidate_median_ns": 505066.6666666666
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256S",
+        "operation": "sign",
+        "paired_speedups": [
+          4.274364847389054,
+          4.2581652623337725,
+          4.2709009124937225,
+          4.2580357947611125,
+          4.272475191026865,
+          4.266401430258032
+        ],
+        "median_speedup": 4.268651171375877,
+        "geometric_mean_speedup": 4.266718870581455,
+        "paired_bootstrap_95pct": [
+          4.261614311175493,
+          4.271829544226018
+        ],
+        "baseline_median_ns": 875373041.6666666,
+        "candidate_median_ns": 205271291.6666667
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256S",
+        "operation": "verify",
+        "paired_speedups": [
+          4.45905607099637,
+          4.414093110788882,
+          4.427151604664759,
+          4.454328339691697,
+          4.491264740749984,
+          4.468625621890547
+        ],
+        "median_speedup": 4.456692205344034,
+        "geometric_mean_speedup": 4.452346394174799,
+        "paired_bootstrap_95pct": [
+          4.431854628412952,
+          4.472171013148559
+        ],
+        "baseline_median_ns": 1197554.1666666667,
+        "candidate_median_ns": 268616.6666666666
+      }
+    ],
+    "cpu": "Not recorded in this first balanced experiment."
+  },
+  "candidate_first_ten_keys": {
+    "source": "libs/liboqs/experiments/ten-new-keys/evidence/summary.json",
+    "sha256": "d0b5066417e2d570c81c213315ac381939345c90fcc68fad36fc1f53578ec871",
+    "cells": [
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128F",
+        "operation": "keygen",
+        "wall_total_ratio": 5.438654666035054,
+        "cpu_total_ratio": 5.405290505432215,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.338028169014085,
+          "maximum": 5.781990521327014,
+          "median": 5.398104265402844
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.313084112149533,
+          "maximum": 5.592417061611374,
+          "median": 5.388625592417061
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128F",
+        "operation": "sign",
+        "wall_total_ratio": 5.287432576085672,
+        "cpu_total_ratio": 5.281071498916683,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.1922558273935655,
+          "maximum": 5.354001584786054,
+          "median": 5.292258886727369
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.197449768160742,
+          "maximum": 5.3415213946117275,
+          "median": 5.286211772186242
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128F",
+        "operation": "verify",
+        "wall_total_ratio": 5.301551389786684,
+        "cpu_total_ratio": 5.283500161446561,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 4.8765432098765435,
+          "maximum": 5.480392156862745,
+          "median": 5.311634557495484
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 4.934375,
+          "maximum": 5.431372549019608,
+          "median": 5.3044929492949295
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128S",
+        "operation": "keygen",
+        "wall_total_ratio": 5.40890208152262,
+        "cpu_total_ratio": 5.406711845388375,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.328759166485152,
+          "maximum": 5.458496853017401,
+          "median": 5.4276460439804435
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.3602634467618,
+          "maximum": 5.434650455927052,
+          "median": 5.419443023951299
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128S",
+        "operation": "sign",
+        "wall_total_ratio": 5.246766498931035,
+        "cpu_total_ratio": 5.254250438664057,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.02426231272023,
+          "maximum": 5.406303596030027,
+          "median": 5.256015754837914
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.182218636397359,
+          "maximum": 5.306902125899889,
+          "median": 5.257669311595578
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128S",
+        "operation": "verify",
+        "wall_total_ratio": 5.186873290793072,
+        "cpu_total_ratio": 5.151542649727768,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.036036036036036,
+          "maximum": 5.8,
+          "median": 5.121495327102804
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.019417475728155,
+          "maximum": 5.5675675675675675,
+          "median": 5.083333333333334
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192F",
+        "operation": "keygen",
+        "wall_total_ratio": 5.258533501896334,
+        "cpu_total_ratio": 5.266476552598226,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 4.970149253731344,
+          "maximum": 5.386792452830188,
+          "median": 5.277070063694268
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.157894736842105,
+          "maximum": 5.355345911949685,
+          "median": 5.272292993630574
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192F",
+        "operation": "sign",
+        "wall_total_ratio": 4.713468309859155,
+        "cpu_total_ratio": 4.721370837374717,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 4.645691850594227,
+          "maximum": 4.769597228237332,
+          "median": 4.721917978162756
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 4.6802400342906125,
+          "maximum": 4.7624417217825,
+          "median": 4.723170115302693
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192F",
+        "operation": "verify",
+        "wall_total_ratio": 4.770124148978774,
+        "cpu_total_ratio": 4.81946974296701,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 4.055091819699499,
+          "maximum": 5.0182926829268295,
+          "median": 4.8451293919629705
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 4.46875,
+          "maximum": 4.989837398373984,
+          "median": 4.839648033126293
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192S",
+        "operation": "keygen",
+        "wall_total_ratio": 5.271691896397797,
+        "cpu_total_ratio": 5.280645704549057,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.128858802630948,
+          "maximum": 5.330027410914528,
+          "median": 5.294787254762978
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.222390910426563,
+          "maximum": 5.318410688469016,
+          "median": 5.2928705858632
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192S",
+        "operation": "sign",
+        "wall_total_ratio": 4.531527782043097,
+        "cpu_total_ratio": 4.530558889217276,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 4.494283881592415,
+          "maximum": 4.5598718296456004,
+          "median": 4.53318416161331
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 4.503324817534928,
+          "maximum": 4.552081219210686,
+          "median": 4.528828776536535
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192S",
+        "operation": "verify",
+        "wall_total_ratio": 4.252061855670103,
+        "cpu_total_ratio": 4.272680145152929,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 3.3140495867768593,
+          "maximum": 4.472527472527473,
+          "median": 4.384703067830003
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 3.506550218340611,
+          "maximum": 4.4512820512820515,
+          "median": 4.370554765291608
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256F",
+        "operation": "keygen",
+        "wall_total_ratio": 5.331274498158926,
+        "cpu_total_ratio": 5.300511356879534,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.135831381733021,
+          "maximum": 5.501201923076923,
+          "median": 5.314832734695699
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.126463700234192,
+          "maximum": 5.419664268585132,
+          "median": 5.29942735387994
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256F",
+        "operation": "sign",
+        "wall_total_ratio": 4.713173040830796,
+        "cpu_total_ratio": 4.714650481372959,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 4.676115458361403,
+          "maximum": 4.743220605172233,
+          "median": 4.716998532717566
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 4.695788320025051,
+          "maximum": 4.73043250327654,
+          "median": 4.718429755326185
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256F",
+        "operation": "verify",
+        "wall_total_ratio": 4.702887241513851,
+        "cpu_total_ratio": 4.688035853468433,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 4.327868852459017,
+          "maximum": 4.813861386138614,
+          "median": 4.7490358315881025
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 4.312159709618875,
+          "maximum": 4.76078431372549,
+          "median": 4.740888298657223
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256S",
+        "operation": "keygen",
+        "wall_total_ratio": 5.367852566967612,
+        "cpu_total_ratio": 5.305306860014486,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.224400386129056,
+          "maximum": 6.397734048896839,
+          "median": 5.254501124494823
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 5.222609857482185,
+          "maximum": 5.781929601674015,
+          "median": 5.256945989045763
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256S",
+        "operation": "sign",
+        "wall_total_ratio": 4.187061247779059,
+        "cpu_total_ratio": 4.244464612533809,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 3.7009656094167007,
+          "maximum": 4.286356147238424,
+          "median": 4.257286597727685
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 4.1680893475378875,
+          "maximum": 4.276340771188099,
+          "median": 4.253214322920657
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256S",
+        "operation": "verify",
+        "wall_total_ratio": 4.34209578682031,
+        "cpu_total_ratio": 4.369108049311095,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 3.4606413994169096,
+          "maximum": 4.537593984962406,
+          "median": 4.46494865176561
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 3.6635802469135803,
+          "maximum": 4.512915129151292,
+          "median": 4.46674721291669
+        }
+      }
+    ],
+    "limitation": "One candidate-first then baseline sensitivity batch; order and elapsed-time confounding remain. No independent-fork confidence interval."
+  },
+  "full_patch_ablation": {
+    "source": "libs/liboqs/experiments/sha2-ablation/evidence/final/summary.json",
+    "sha256": "6b75e166ae8b4e1b62b929ca6183fa73957aa35992f3995c02b22e404ec7d408",
+    "cells": [
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128F",
+        "operation": "keygen",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 5.326958955223881,
+            "maximum": 5.507335541883577,
+            "median": 5.447427887199227
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.659836065573771,
+            "maximum": 6.246445497630332,
+            "median": 5.418054615211013
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 5.351921274601687,
+            "maximum": 5.46125116713352,
+            "median": 5.421196916476358
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 5.048672566371682,
+            "maximum": 6.0424528301886795,
+            "median": 5.39952383081463
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128F",
+        "operation": "sign",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 5.035974819477874,
+            "maximum": 5.537706591292741,
+            "median": 5.294761591925772
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 3.687883331061742,
+            "maximum": 6.407516147974163,
+            "median": 5.299149504959859
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 5.200250264703051,
+            "maximum": 5.364067356493686,
+            "median": 5.286658739476789
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.540563332771125,
+            "maximum": 5.58135426889107,
+            "median": 5.2940938136366835
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128F",
+        "operation": "verify",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 5.132862644415918,
+            "maximum": 5.365327133842578,
+            "median": 5.278888731995679
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.125333333333334,
+            "maximum": 5.625407166123779,
+            "median": 5.283783783783784
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 5.166612641815235,
+            "maximum": 5.314427860696518,
+            "median": 5.26383327600612
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.407407407407407,
+            "maximum": 5.50814332247557,
+            "median": 5.275161889746045
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128S",
+        "operation": "keygen",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 5.364249072454648,
+            "maximum": 5.522297540977574,
+            "median": 5.420325852662206
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.725948639325412,
+            "maximum": 6.945656950344222,
+            "median": 5.396342966705881
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 5.370313036239768,
+            "maximum": 5.458954123026995,
+            "median": 5.390046768282561
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 5.175154755205402,
+            "maximum": 5.563323276179263,
+            "median": 5.397165069745075
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128S",
+        "operation": "sign",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.861757165762104,
+            "maximum": 5.4049145490104955,
+            "median": 5.256624460984243
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 3.1578306560660723,
+            "maximum": 5.722798534386626,
+            "median": 5.266560779677176
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 5.206002103588737,
+            "maximum": 5.3177463731630095,
+            "median": 5.2538982791281
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.936394015006568,
+            "maximum": 5.362650477864131,
+            "median": 5.259312631979146
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_128S",
+        "operation": "verify",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.790239726027397,
+            "maximum": 6.098389982110913,
+            "median": 5.176848213301994
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 2.9318181818181817,
+            "maximum": 15.35593220338983,
+            "median": 5.114214046822742
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.8753269398430685,
+            "maximum": 5.471799462846912,
+            "median": 5.158951319381256
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 3.469798657718121,
+            "maximum": 9.423728813559322,
+            "median": 5.102204487989886
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192F",
+        "operation": "keygen",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.813116656993616,
+            "maximum": 54.67981749865808,
+            "median": 5.291583257506824
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 2.3691654879773694,
+            "maximum": 602.0415335463259,
+            "median": 5.288679514051403
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 5.049954310082242,
+            "maximum": 5.353221199619169,
+            "median": 5.265840562889801
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.607242339832869,
+            "maximum": 6.398089171974522,
+            "median": 5.276899811721348
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192F",
+        "operation": "sign",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.131681180091585,
+            "maximum": 11.270804789950358,
+            "median": 4.749130040248714
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 2.1909756097560975,
+            "maximum": 87.40848720440557,
+            "median": 4.730721059044383
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.520003243495272,
+            "maximum": 4.782353512358799,
+            "median": 4.722063249482968
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 3.4605893909626717,
+            "maximum": 5.209803072927937,
+            "median": 4.732538962010574
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192F",
+        "operation": "verify",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.584012417539775,
+            "maximum": 4.9416752843846945,
+            "median": 4.8720200780784815
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 3.877450980392157,
+            "maximum": 5.177551020408163,
+            "median": 4.862888140665918
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.714371497197758,
+            "maximum": 4.904191616766467,
+            "median": 4.857798035881019
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.397058823529412,
+            "maximum": 5.053061224489796,
+            "median": 4.859181327469012
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192S",
+        "operation": "keygen",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.669766573133757,
+            "maximum": 5.378544121938072,
+            "median": 5.1916608519304095
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 3.3551154086088584,
+            "maximum": 5.632874260428578,
+            "median": 5.27267076779491
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 5.118575409631978,
+            "maximum": 5.32008740331875,
+            "median": 5.237043247727506
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.549895740244266,
+            "maximum": 5.446528054118583,
+            "median": 5.268339965046197
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192S",
+        "operation": "sign",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.273388390439246,
+            "maximum": 4.65750401836969,
+            "median": 4.515364889929495
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 3.2280991949136113,
+            "maximum": 5.4964610810120575,
+            "median": 4.519028612625827
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.484922269747879,
+            "maximum": 4.56593593938588,
+            "median": 4.528208544346343
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.389453378492502,
+            "maximum": 4.669423341988011,
+            "median": 4.525857737062186
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_192S",
+        "operation": "verify",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 3.781630740393627,
+            "maximum": 4.531672983216026,
+            "median": 4.3448356942134545
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 1.8484848484848484,
+            "maximum": 5.027932960893855,
+            "median": 4.380694108151735
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.1204081632653065,
+            "maximum": 4.508904479222882,
+            "median": 4.34316842964272
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 3.176,
+            "maximum": 4.883333333333334,
+            "median": 4.373924627632254
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256F",
+        "operation": "keygen",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.822628296312507,
+            "maximum": 5.471930243669374,
+            "median": 5.242558385239025
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 3.653658536585366,
+            "maximum": 7.302045728038508,
+            "median": 5.272597791078689
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 5.185425005886509,
+            "maximum": 5.315638450502152,
+            "median": 5.255924646308215
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.968253968253968,
+            "maximum": 5.719951923076923,
+            "median": 5.267578011237312
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256F",
+        "operation": "sign",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.645119664495836,
+            "maximum": 4.72719861195309,
+            "median": 4.6870308546035515
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.166835653055581,
+            "maximum": 5.504038521279901,
+            "median": 4.699018620082512
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.681178806779591,
+            "maximum": 4.727355670913953,
+            "median": 4.712644071419387
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.612533278722097,
+            "maximum": 4.761999894853057,
+            "median": 4.709580105098928
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256F",
+        "operation": "verify",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.677301556794157,
+            "maximum": 4.792955827982098,
+            "median": 4.7555488298379665
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.008503401360544,
+            "maximum": 5.072549019607843,
+            "median": 4.753680832704131
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.688584650983417,
+            "maximum": 4.782923016803439,
+            "median": 4.74535781510715
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.1431095406360425,
+            "maximum": 4.925143953934741,
+            "median": 4.747298311299518
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256S",
+        "operation": "keygen",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.725018487551715,
+            "maximum": 5.48538075575849,
+            "median": 5.265375846452395
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 3.034062110734075,
+            "maximum": 7.888651279404174,
+            "median": 5.2606587664247115
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 5.1748473229275875,
+            "maximum": 5.286983394146995,
+            "median": 5.258793911921838
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.8074402730375425,
+            "maximum": 5.674276335422262,
+            "median": 5.258579594982688
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256S",
+        "operation": "sign",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.216825875201021,
+            "maximum": 4.469327579286386,
+            "median": 4.268299948745972
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 3.7794201153621185,
+            "maximum": 5.606081899685001,
+            "median": 4.25338793599896
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.244663713640461,
+            "maximum": 4.30041706023396,
+            "median": 4.257155974765883
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.136966015525519,
+            "maximum": 4.506164913253469,
+            "median": 4.254048059433233
+          }
+        }
+      },
+      {
+        "parameter": "SLH_DSA_PURE_SHA2_256S",
+        "operation": "verify",
+        "wall": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.400215749730313,
+            "maximum": 4.8577118030412745,
+            "median": 4.483260553129549
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 3.857142857142857,
+            "maximum": 6.235087719298246,
+            "median": 4.492753623188406
+          }
+        },
+        "cpu": {
+          "round_totals": {
+            "pairs": 6,
+            "losses": 0,
+            "minimum": 4.422616890177601,
+            "maximum": 4.502534395365677,
+            "median": 4.467879425256262
+          },
+          "individual_keys": {
+            "pairs": 60,
+            "losses": 0,
+            "minimum": 4.013377926421405,
+            "maximum": 5.0212765957446805,
+            "median": 4.47320451810524
+          }
+        }
+      }
+    ]
+  },
+  "scope": "Final published runtime only; reduced SHA256-only/SHA512-only ablations and pre-cleanse pilots are not the published implementation. Source-bound prior independent checks remain the full corpus/binary validation record."
+}
