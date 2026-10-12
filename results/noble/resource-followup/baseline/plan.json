@@ -1,0 +1,338 @@
+[
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHAKE-128f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHAKE-128s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHAKE-192f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHAKE-192s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHAKE-256f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHAKE-256s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "Falcon-512",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "Falcon-1024",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHAKE-128f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHAKE-128s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHAKE-192f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHAKE-192s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHAKE-256f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHAKE-256s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "Falcon-512",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "Falcon-1024",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHAKE-128f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHAKE-128s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHAKE-192f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHAKE-192s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHAKE-256f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHAKE-256s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "Falcon-512",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "Falcon-1024",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  }
+]

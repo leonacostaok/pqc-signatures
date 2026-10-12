@@ -1,0 +1,17 @@
+{
+  "schema": "noble-resource-followup-portable-audit-v1",
+  "passed": true,
+  "verifier_sha256": "f27449c8d6b13e4db960739331eb3ac27a7a51158ad1d9ea8c8e094f15fa822b",
+  "source_archive_sha256": "46b0d7459a85bcb3923a982b6d7678eeebaa545be227e86cd1883f8b7aaf4d2f",
+  "source_entries_verified": 392,
+  "execution_sha256": {
+    "baseline": "8269a2a717f0709e622f0e6ed4782aed62db20c15f2e8621e32f222259ea98da",
+    "resource": "0292f007372c7c930fcdc608620635635f492a12a564b70c6b445cdad134165a"
+  },
+  "processes": 234,
+  "checked_calls": 37242,
+  "complete_declared_cells_and_balanced_orders": true,
+  "all_raw_hashes_and_output_digests_verified": true,
+  "requires_original_build_directories": false,
+  "limitation": "Verifies archived selected source files/binaries and their bindings, not a new compiler rebuild or independent cryptographic implementation."
+}

@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-10-12T06:54:53.958860+00:00",
+  "hardware": {
+    "machdep.cpu.brand_string": "Apple M1 Pro",
+    "hw.memsize": "17179869184",
+    "hw.logicalcpu": "8"
+  },
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.2\nBuildVersion:\t\t25C56\n",
+  "stack_configuration_only": [
+    "--maglev-assert-stack-size (insert stack size checks before every IR node)",
+    "type: bool  default: --maglev-assert-stack-size",
+    "--wasm-stack-switching-stack-size (default size of stacks for wasm stack-switching (in kB))",
+    "type: int  default: --wasm-stack-switching-stack-size=864",
+    "--stack-size (default size of stack region v8 is allowed to use (in kBytes))",
+    "type: int  default: --stack-size=864"
+  ],
+  "manifest_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/manifest-fd74efdfb7719cd1.json",
+  "manifest_sha256": "903cf6166594d725d2bb88f29c5c2f02c66e338900f811a11421cc53f3e21c4c",
+  "resource_smoke_kind": "correctness-only instrumentation gate; not performance evidence"
+}

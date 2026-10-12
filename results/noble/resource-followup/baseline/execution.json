@@ -1,0 +1,852 @@
+{
+  "schema": "noble-resource-followup-execution-v1",
+  "profile": "baseline",
+  "python_version": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "python_optimize": 0,
+  "started_at": "2026-10-12T07:12:25.623239+00:00",
+  "manifest_sha256": "903cf6166594d725d2bb88f29c5c2f02c66e338900f811a11421cc53f3e21c4c",
+  "runs": [
+    {
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 0,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-128f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-128f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:12:25.623585+00:00",
+      "completed_at": "2026-10-12T07:12:26.203948+00:00",
+      "exit_code": 0,
+      "raw": "000.json",
+      "sha256": "ac2f9178284a14f8951b4da0c25469e82ce5bda9ef7513cbf68d5aa292bc2af6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-128s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 1,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-128s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-128s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:12:26.205368+00:00",
+      "completed_at": "2026-10-12T07:12:35.907366+00:00",
+      "exit_code": 0,
+      "raw": "001.json",
+      "sha256": "c288642440be770f7835a1519d897419539de6d5018eb5fbc7d8761b48d4e295",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-192f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 2,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-192f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-192f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:12:35.908580+00:00",
+      "completed_at": "2026-10-12T07:12:36.852823+00:00",
+      "exit_code": 0,
+      "raw": "002.json",
+      "sha256": "81f6cbd802ece803995b5613c26062a4b349b75d734ae340f3438a689eddeb46",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-192s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 3,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-192s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-192s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:12:36.854650+00:00",
+      "completed_at": "2026-10-12T07:12:55.989613+00:00",
+      "exit_code": 0,
+      "raw": "003.json",
+      "sha256": "67aac90789e31f3aa5e06688f6cb38113a26cac16c4ae1a0663e71f17c7975f3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-256f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 4,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-256f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-256f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:12:55.991641+00:00",
+      "completed_at": "2026-10-12T07:12:57.835178+00:00",
+      "exit_code": 0,
+      "raw": "004.json",
+      "sha256": "c77bfdea9c689f9ecd6d40d4e5330180b7458146f7c89be13423a6ad1055da37",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-256s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 5,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-256s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-256s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:12:57.837250+00:00",
+      "completed_at": "2026-10-12T07:13:15.636235+00:00",
+      "exit_code": 0,
+      "raw": "005.json",
+      "sha256": "307eb1597dd837eebf919973efb8a6591b3c9e33389d2995c9debb5345e5fd48",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 0,
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 6,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-128f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-128f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:13:15.638583+00:00",
+      "completed_at": "2026-10-12T07:13:18.185151+00:00",
+      "exit_code": 0,
+      "raw": "006.json",
+      "sha256": "38551fe543e805e8a1488ccc4caaa43e584913685fa2b40cd701c40c336160bb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 0,
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 7,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-128s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-128s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:13:18.186608+00:00",
+      "completed_at": "2026-10-12T07:14:08.881998+00:00",
+      "exit_code": 0,
+      "raw": "007.json",
+      "sha256": "cba21f9a105de8347d850f4f2180fb66b6feeecddb8e126b1dd82597700388bc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 0,
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 8,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-192f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-192f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:14:08.884135+00:00",
+      "completed_at": "2026-10-12T07:14:12.902043+00:00",
+      "exit_code": 0,
+      "raw": "008.json",
+      "sha256": "7a03b1f0fe4db9138c1d10e8ecd2fe6b0c51f02e71955a50df88cbb0facf774f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 0,
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 9,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-192s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-192s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:14:12.903914+00:00",
+      "completed_at": "2026-10-12T07:15:39.386259+00:00",
+      "exit_code": 0,
+      "raw": "009.json",
+      "sha256": "0bf1b9ebf2741863aad12b9537c9dfe11418401bec06af10594b73c290f42067",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 0,
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 10,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-256f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-256f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:15:39.388793+00:00",
+      "completed_at": "2026-10-12T07:15:47.315759+00:00",
+      "exit_code": 0,
+      "raw": "010.json",
+      "sha256": "425157742dfc3575b639380c8ee14ce48995c74cd0e81a07e98286b7c3ac09d9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 0,
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 11,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-256s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-256s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:15:47.318686+00:00",
+      "completed_at": "2026-10-12T07:17:01.311839+00:00",
+      "exit_code": 0,
+      "raw": "011.json",
+      "sha256": "8e7a4e8ba2a4a16340568088254f2aa70bc89fbdb63a473eed69ef02f4fc9e12",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 0,
+      "parameter": "Falcon-512",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 12,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/Falcon-512.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"Falcon-512\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:17:01.315365+00:00",
+      "completed_at": "2026-10-12T07:17:02.044061+00:00",
+      "exit_code": 0,
+      "raw": "012.json",
+      "sha256": "d351b0b7b38a4e894b3d6c7dc989c268f989458280677a27de7047fb01502d9f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 0,
+      "parameter": "Falcon-1024",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 13,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/Falcon-1024.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"Falcon-1024\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:17:02.045385+00:00",
+      "completed_at": "2026-10-12T07:17:04.311330+00:00",
+      "exit_code": 0,
+      "raw": "013.json",
+      "sha256": "497f56095dcb5dcbf5aaa892c4acf43b0c47db98593e17b8a56e239663d9bf7a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 14,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-128f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-128f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:17:04.312389+00:00",
+      "completed_at": "2026-10-12T07:17:04.860752+00:00",
+      "exit_code": 0,
+      "raw": "014.json",
+      "sha256": "1cb8b7a8338448aab74faf59a166f4a87018a3610d10e98159f07842d7568c58",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-128s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 15,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-128s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-128s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:17:04.862208+00:00",
+      "completed_at": "2026-10-12T07:17:14.582977+00:00",
+      "exit_code": 0,
+      "raw": "015.json",
+      "sha256": "be640419875796e254b94b144563cc41e749d802b0a7af5f2700a6f569784fdb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-192f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 16,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-192f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-192f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:17:14.584800+00:00",
+      "completed_at": "2026-10-12T07:17:15.527179+00:00",
+      "exit_code": 0,
+      "raw": "016.json",
+      "sha256": "1e3028beb459791efe1d171a3ee16481c38a600de1ac58807c98ce9e02109274",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-192s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 17,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-192s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-192s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:17:15.528915+00:00",
+      "completed_at": "2026-10-12T07:17:34.653815+00:00",
+      "exit_code": 0,
+      "raw": "017.json",
+      "sha256": "3bde9203ad4e2fa1559cfb639dbd19fcdab8f4e2e60224abaaf5536ba4efca8c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-256f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 18,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-256f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-256f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:17:34.656190+00:00",
+      "completed_at": "2026-10-12T07:17:36.490661+00:00",
+      "exit_code": 0,
+      "raw": "018.json",
+      "sha256": "96fd0152dec10d2f180b58b6e5a3f98338f8e654ce4661dd696d6e505cce54d9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-256s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 19,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-256s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-256s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:17:36.492978+00:00",
+      "completed_at": "2026-10-12T07:17:54.268523+00:00",
+      "exit_code": 0,
+      "raw": "019.json",
+      "sha256": "d928bc9653d1a0e90e11c8eea7c2c9be88a46975c0c95cb7f9cd0ec8930cbfe2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 1,
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 20,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-128f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-128f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:17:54.270977+00:00",
+      "completed_at": "2026-10-12T07:17:56.814500+00:00",
+      "exit_code": 0,
+      "raw": "020.json",
+      "sha256": "3b15bae393431a177a9ec3290a6f2ede64cf56363889c5e12c4fe1fea51033ca",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 1,
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 21,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-128s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-128s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:17:56.815915+00:00",
+      "completed_at": "2026-10-12T07:18:47.558278+00:00",
+      "exit_code": 0,
+      "raw": "021.json",
+      "sha256": "57a823f546726683b690e0542ea6e24c8dbd3f820e705849469335cdc745377f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 1,
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 22,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-192f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-192f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:18:47.560850+00:00",
+      "completed_at": "2026-10-12T07:18:51.588796+00:00",
+      "exit_code": 0,
+      "raw": "022.json",
+      "sha256": "d2fd9302bb068b81ebfada1813931907358f325e0a98a7f7f0c3b78e29870bfc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 1,
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 23,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-192s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-192s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:18:51.590643+00:00",
+      "completed_at": "2026-10-12T07:20:18.082866+00:00",
+      "exit_code": 0,
+      "raw": "023.json",
+      "sha256": "9f5da5df7038cee924bb3c4ea5d75d4a7a26853b94dac6554a5f03b8ff27ed69",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 1,
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 24,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-256f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-256f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:20:18.085578+00:00",
+      "completed_at": "2026-10-12T07:20:26.005345+00:00",
+      "exit_code": 0,
+      "raw": "024.json",
+      "sha256": "c2bcceb3258aad7c85334456cf846bb7a93fa3d7ac8a9037bc2b6401d8c00330",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 1,
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 25,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-256s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-256s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:20:26.007838+00:00",
+      "completed_at": "2026-10-12T07:21:39.941451+00:00",
+      "exit_code": 0,
+      "raw": "025.json",
+      "sha256": "db826c631ffcbb9ae55209e421a44dea6907e4dba2049ef5104f31b14480043f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 1,
+      "parameter": "Falcon-512",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 26,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/Falcon-512.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"Falcon-512\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:21:39.945112+00:00",
+      "completed_at": "2026-10-12T07:21:40.671764+00:00",
+      "exit_code": 0,
+      "raw": "026.json",
+      "sha256": "6e4e85daca609228d766e32f91f197244afda0bb509a318f577d4baa280ba361",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 1,
+      "parameter": "Falcon-1024",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 27,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/Falcon-1024.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"Falcon-1024\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:21:40.673320+00:00",
+      "completed_at": "2026-10-12T07:21:42.925688+00:00",
+      "exit_code": 0,
+      "raw": "027.json",
+      "sha256": "22ce34e1631908a99b2ab08071343407cfca1b35f32b692c8e43d3342bd386c7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 28,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-128f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-128f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:21:42.927191+00:00",
+      "completed_at": "2026-10-12T07:21:43.473225+00:00",
+      "exit_code": 0,
+      "raw": "028.json",
+      "sha256": "ac698a274f2f81fa8add24fd7564b203da6f19e4b276e9e48b8a3ddc946738f7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-128s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 29,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-128s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-128s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:21:43.475107+00:00",
+      "completed_at": "2026-10-12T07:21:53.656489+00:00",
+      "exit_code": 0,
+      "raw": "029.json",
+      "sha256": "afb483619e7a84b9cd42251b8230af503000f7d6c247664687ef70d18223eafc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-192f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 30,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-192f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-192f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:21:53.658673+00:00",
+      "completed_at": "2026-10-12T07:21:54.604752+00:00",
+      "exit_code": 0,
+      "raw": "030.json",
+      "sha256": "b3f7aa4e8cbe0ddbbe3702adf6531358e3ac1e8fab9208bba75b359a35023f7a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-192s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 31,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-192s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-192s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:21:54.607028+00:00",
+      "completed_at": "2026-10-12T07:22:13.742455+00:00",
+      "exit_code": 0,
+      "raw": "031.json",
+      "sha256": "3456f7713261489995d445fc0cde401104a1b39026d0d3b26926fce654d0779d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-256f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 32,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-256f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-256f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:22:13.744914+00:00",
+      "completed_at": "2026-10-12T07:22:15.583435+00:00",
+      "exit_code": 0,
+      "raw": "032.json",
+      "sha256": "b9f10579487b0b75457f66e37ca74f6997efae7e00488ee6fd35745e0a16c28c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-256s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 33,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHA2-256s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHA2-256s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:22:15.585793+00:00",
+      "completed_at": "2026-10-12T07:22:33.402027+00:00",
+      "exit_code": 0,
+      "raw": "033.json",
+      "sha256": "cd6253a845a09b4ed245fe6fa34f77d87c58747012ee3c418a7b3d30b1db5ac5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 2,
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 34,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-128f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-128f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:22:33.404642+00:00",
+      "completed_at": "2026-10-12T07:22:35.943731+00:00",
+      "exit_code": 0,
+      "raw": "034.json",
+      "sha256": "3d021e517fe5b1705608f24a1f915a4e4492698c43f3c3cab4b1ec6da0b5c24c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 2,
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 35,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-128s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-128s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:22:35.945788+00:00",
+      "completed_at": "2026-10-12T07:23:26.975602+00:00",
+      "exit_code": 0,
+      "raw": "035.json",
+      "sha256": "b52fb579e257fecc60ee1d0d4afc646c6d3221267a622e629b841dfb539b8010",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 2,
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 36,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-192f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-192f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:23:26.978051+00:00",
+      "completed_at": "2026-10-12T07:23:30.994394+00:00",
+      "exit_code": 0,
+      "raw": "036.json",
+      "sha256": "58b200b8c4b21b015da730b05081f75e85c40707dd718d4b9c743082d3a69126",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 2,
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 37,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-192s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-192s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:23:30.996676+00:00",
+      "completed_at": "2026-10-12T07:24:57.314702+00:00",
+      "exit_code": 0,
+      "raw": "037.json",
+      "sha256": "81fce7a39136fdd6519e9bb6326451b7a121ba18c3b05afbf69c501fafa1fea1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 2,
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 38,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-256f.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-256f\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:24:57.317604+00:00",
+      "completed_at": "2026-10-12T07:25:05.259970+00:00",
+      "exit_code": 0,
+      "raw": "038.json",
+      "sha256": "229ba9af4e24ea583f76e9db3ab4a2de1173b51edea9db8a768277105cb07da4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 2,
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 39,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/SLH-DSA-SHAKE-256s.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"SLH-DSA-SHAKE-256s\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:25:05.263106+00:00",
+      "completed_at": "2026-10-12T07:26:19.210944+00:00",
+      "exit_code": 0,
+      "raw": "039.json",
+      "sha256": "13bf6aeda4d760d49151fa04a8e83097b284bdf15983ab1e947fd9278a096d0d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 2,
+      "parameter": "Falcon-512",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 40,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/Falcon-512.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"Falcon-512\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:26:19.214178+00:00",
+      "completed_at": "2026-10-12T07:26:19.936858+00:00",
+      "exit_code": 0,
+      "raw": "040.json",
+      "sha256": "48f4d6055ba36b4295669d9eb44940f2ae6b1f129a4f3ed5264582222ac5c673",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "round": 2,
+      "parameter": "Falcon-1024",
+      "variant": "baseline",
+      "mode": "latency",
+      "settings": "default",
+      "operation": null,
+      "index": 41,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/Falcon-1024.json\", \"mode\": \"latency\", \"operation\": null, \"parameter\": \"Falcon-1024\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/baseline/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "started_at": "2026-10-12T07:26:19.938533+00:00",
+      "completed_at": "2026-10-12T07:26:22.201964+00:00",
+      "exit_code": 0,
+      "raw": "041.json",
+      "sha256": "b95717b255d1ca8ae96dd7c51f67afb33fa4dfa03663c2cc39461b2ef2d0cf22",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "completed_at": "2026-10-12T07:26:22.377612+00:00",
+  "passed": true
+}

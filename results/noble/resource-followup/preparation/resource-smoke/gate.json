@@ -1,0 +1,35 @@
+{
+  "kind": "resource-path smoke; exploratory diagnostics only, not performance evidence",
+  "records": [
+    {
+      "parameter": "ML-DSA-44",
+      "variant": "candidate",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/ML-DSA-44.json\", \"mode\": \"resource\", \"operation\": \"verify\", \"parameter\": \"ML-DSA-44\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/candidate/node_modules/@noble/post-quantum\", \"settings\": \"default\"}"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/resource-smoke/default.json",
+      "sha256": "981971a61114fb5f2f4f57c96eb68a03888116d31983d51a505168f9c28e0e4a",
+      "exit_code": 0
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "variant": "candidate",
+      "settings": "constrained",
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--max-old-space-size=32",
+        "--max-semi-space-size=1",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/experiments/resource-followup/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/ML-DSA-44.json\", \"mode\": \"resource\", \"operation\": \"verify\", \"parameter\": \"ML-DSA-44\", \"root\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/candidate/node_modules/@noble/post-quantum\", \"settings\": \"constrained\"}"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/noble/build/resource-followup/snapshot-faf6d05ee8303c30/resource-smoke/constrained.json",
+      "sha256": "66f06e2288896a9ef3521894db46634fdf865e934ec3837aeab3e9ee187ff5b6",
+      "exit_code": 0
+    }
+  ],
+  "manifest_sha256": "903cf6166594d725d2bb88f29c5c2f02c66e338900f811a11421cc53f3e21c4c",
+  "passed": true
+}
