@@ -1,0 +1,12 @@
+{
+  "schema": "bc-slh-deep-packaging-check-v1",
+  "archive_sha256": "eea9e70b7ef95ffffa850ae9cbb80b96f3ade6cfdf89dc8941fce34be0d1d5c9",
+  "members_checked": 6410,
+  "uncompressed_bytes": 358570476,
+  "archive_bytes": 20071004,
+  "all_archived_bytes_match_originals": true,
+  "prepared_provenance_unchanged": true,
+  "production_commit": "70ceae9a93b17b5a1af590e3208855b4df25f728",
+  "production_files_match_sealed_candidate": true,
+  "native_test_files_match_sealed_tests": true
+}

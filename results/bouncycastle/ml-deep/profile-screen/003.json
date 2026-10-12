@@ -1,0 +1,81 @@
+{
+  "schema": "bc-ml-deep-profile-v1",
+  "parameter": "ml_dsa_44",
+  "operation": "verify",
+  "calls": 128,
+  "instrumented": true,
+  "stages": [
+    {
+      "stage": "public_setup_message_hash",
+      "wall_ns": 1154661,
+      "entries": 128
+    },
+    {
+      "stage": "signature_decode_norm",
+      "wall_ns": 1323709,
+      "entries": 128
+    },
+    {
+      "stage": "public_key_decode",
+      "wall_ns": 297925,
+      "entries": 128
+    },
+    {
+      "stage": "challenge_sample",
+      "wall_ns": 248496,
+      "entries": 128
+    },
+    {
+      "stage": "matrix_sample",
+      "wall_ns": 4026079,
+      "entries": 128
+    },
+    {
+      "stage": "z_ntt",
+      "wall_ns": 1164212,
+      "entries": 128
+    },
+    {
+      "stage": "matrix_product",
+      "wall_ns": 588001,
+      "entries": 128
+    },
+    {
+      "stage": "challenge_t1_ntt",
+      "wall_ns": 1475378,
+      "entries": 128
+    },
+    {
+      "stage": "challenge_product_subtract",
+      "wall_ns": 201956,
+      "entries": 128
+    },
+    {
+      "stage": "inverse_canonicalize",
+      "wall_ns": 1259375,
+      "entries": 128
+    },
+    {
+      "stage": "hint_encode",
+      "wall_ns": 607287,
+      "entries": 128
+    },
+    {
+      "stage": "challenge_hash_compare",
+      "wall_ns": 1104874,
+      "entries": 128
+    }
+  ],
+  "variant": "combined",
+  "fork": 0,
+  "round": 0,
+  "corpus_sha256": "2d38e3d33ba1f9eb3ff562e7fe468da85659844dad7e143b32516db9dfe6a953",
+  "warmup_corpus_sha256": "c348581600bb46137c35ce9c12df01fead9cc70958498da7be3635ca395197da",
+  "source_sha256": "b40f509d75fca36e2b141f7c4b680671f86b68a9e556a059f6947060477eb3da",
+  "class_tree_sha256": "68d003e54af86a4e4ed3af6167c6cd7be8302f65479a40f7472e3ac495f4df2f",
+  "java_version": "$ /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java -version\nopenjdk version \"25.0.4.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS, mixed mode, sharing)\n",
+  "jvm_args": [
+    "-Xmx512m",
+    "-XX:ActiveProcessorCount=2"
+  ]
+}

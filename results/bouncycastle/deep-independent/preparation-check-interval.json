@@ -1,0 +1,12 @@
+{
+  "schema": "bc-deep-review-interference-v1",
+  "date": "2026-10-12",
+  "command": "python3 libs/bouncycastle/experiments/deep-independent-review.py --result ../bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/manifest.json --upstream /Users/dandelionlabs/development/personal/bc-java --workspace ../bc-slh-deep --out results/bouncycastle/deep-independent/slh-preparation.json",
+  "reported_command_wall_seconds": 0.618861333,
+  "artifact_completion_mtime_utc": "2026-10-12T03:16:29.391477+00:00",
+  "estimated_command_start_utc": "2026-10-12T03:16:28.772616+00:00",
+  "start_is_estimate": true,
+  "timing_source": "Command tool elapsed time and output artifact filesystem modification time; no separately recorded command start timestamp.",
+  "scope": "Read/hash source and class trees, parse preparation checks, reconstruct patch; no JVM, compilation or performance job.",
+  "limitation": "This independent preparation check overlapped the exploratory SLH stage/allocation window. Retain the overlap when interpreting that screen; it cannot be retrospectively called a fully exclusive interval. Full-operation pilot timing had already completed according to the coordinator."
+}

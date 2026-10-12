@@ -1,0 +1,59 @@
+{
+  "schema": "bc-deep-preparation-review-v1",
+  "complete": true,
+  "manifest_sha256": "afe0512047ceb707a9316ebc20a34462d6683127342f6ea0a453930cfbee16bd",
+  "raw_hashes": {
+    "../bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/baseline-sha2_128f-check": {
+      ".command.json": "5f5f6a83770a074d0d626a91af3acd2552e5f35a030f90be6fbe890ca1add6a5",
+      ".status.json": "d43541cc2dce39a4a359f46223e2802fb7164234c0b556a9814478f5796648d0",
+      ".stdout.txt": "ba736318316fd2436651bfb42608d9be6cd0a88f483620e84022de8231156edf",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "../bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/baseline-sha2_128f-stages": {
+      ".command.json": "e42c4a223c71d71e95ccbfe466806095bb0910e4bc996142462f5b09a2bc67c8",
+      ".status.json": "756d65bdba84e6ac1a93a53ba7a1c9603cb1fbfc640fdd958d645d8c8f738ca9",
+      ".stdout.txt": "d6bb3256996210ff88cc9226382db289d94851b707c15d0ba2b5908a4f512c05",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "../bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/baseline-shake_128f-check": {
+      ".command.json": "f337def4063264bfed84b7d1f562c8225748d7ce02f08f8ca419fc91caa1f9c0",
+      ".status.json": "16018fad98a1ea63f627bb385a14d6e319f8d0ab2bf32378ccd5710b8e300bb4",
+      ".stdout.txt": "2ee70b0b05fc132ab670338e3aa645a360f77a6863247e52c7f3312b78311904",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "../bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/baseline-shake_128f-stages": {
+      ".command.json": "87fce393f08dd8d04a4a1b402da6f33ad40b984d898106205029e69ff796c7aa",
+      ".status.json": "a44c8d2068a60aa5f97020fcc2c62a01ece7081db9eb7eaef02a6ed463017fd6",
+      ".stdout.txt": "a17760f6e9cf5ddcf564e1d2bdbc5201ceae3b3021ee86d814af2fe39d05a8ac",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "../bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/candidate-sha2_128f-check": {
+      ".command.json": "22e1840a5149417c38c8e7bcc9de4edf37f34c19e777706787724849fc157aa3",
+      ".status.json": "5691e3cc48457c8185069e0a8a02fa7fcc197525ab96363517cc7b4ac190a1db",
+      ".stdout.txt": "9fd25d472c82fff58f2192d803794583c6ffca9fac53a0c880b96493ad74b6f5",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "../bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/candidate-sha2_128f-stages": {
+      ".command.json": "bd13f0c5d05b50680c62834526d29e0b704b705540f0ccae30ece8e4e444c8db",
+      ".status.json": "a96a74491f4e803b98dd846df00bcab3f78014805264247a300a4001d7c8b584",
+      ".stdout.txt": "199c3ec22176a7996ea7ad53b14ad0eb27245cd58afaab3491e250628cc10712",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "../bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/candidate-shake_128f-check": {
+      ".command.json": "f9ec576d54d9462c072e254b23df4c04470b2ba7a692f5a6a48190eb5ef00b18",
+      ".status.json": "dfc59e1a2192106c2ede7dcbd903c11c1886583e70ad19685d51862d6d848995",
+      ".stdout.txt": "173a0dbfa9eade33f4bc95255b0dd905430867dfd0c8bfa97d3a6ca621f6fe91",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "../bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/candidate-shake_128f-stages": {
+      ".command.json": "8fd5b2c04e7619c5d3ad4009f3eab08dce92b487d557f900b99271ed6e6e5c7f",
+      ".status.json": "ec2fb4325133e283d7bc6834a3993b123e94c11f28fcd783a7112ba64a15ede7",
+      ".stdout.txt": "0b190cf01191bd757b9b5b80001364b8320cb394ea072e7dbc4ff6acda3646a3",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "parameters": [
+    "sha2_128f",
+    "shake_128f"
+  ]
+}

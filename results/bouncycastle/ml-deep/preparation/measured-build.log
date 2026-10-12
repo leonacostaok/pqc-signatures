@@ -1,0 +1,2 @@
+$ /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java -Xmx512m -XX:ActiveProcessorCount=2 -cp /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ml-deep/libs/bouncycastle/build/ml-deep/prepared-v6/baseline org.bouncycastle.crypto.signers.mldsa.MLDeep emit /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ml-deep/libs/bouncycastle/build/ml-deep/prepared-v6/measured.bin 128 measured false
+{"fixture_cases":384}

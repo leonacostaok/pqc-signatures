@@ -1,0 +1,92 @@
+diff --git a/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/Poly.java b/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/Poly.java
+index c726b4a..5642791 100644
+--- a/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/Poly.java
++++ b/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/Poly.java
+@@ -45,11 +45,20 @@ public void setCoeffs(int[] coeffs)
+         this.coeffs = coeffs;
+     }
+ 
++    byte[] createUniformBuffer()
++    {
++        return new byte[polyUniformNBlocks * symmetric.stream128BlockBytes + 2];
++    }
++
+     public void uniformBlocks(byte[] seed, short nonce)
++    {
++        uniformBlocks(seed, nonce, createUniformBuffer());
++    }
++
++    void uniformBlocks(byte[] seed, short nonce, byte[] buf)
+     {
+         int i, ctr, off,
+             buflen = polyUniformNBlocks * symmetric.stream128BlockBytes;
+-        byte[] buf = new byte[buflen + 2];
+ 
+         symmetric.stream128init(seed, nonce);
+ 
+@@ -459,9 +468,18 @@ public void polyt0Unpack(byte[] a, int aOff)
+     }
+ 
+ 
++    byte[] createGamma1Buffer()
++    {
++        return new byte[engine.getPolyUniformGamma1NBlocks() * symmetric.stream256BlockBytes];
++    }
++
+     public void uniformGamma1(byte[] seed, short nonce)
+     {
+-        byte[] buf = new byte[engine.getPolyUniformGamma1NBlocks() * symmetric.stream256BlockBytes];
++        uniformGamma1(seed, nonce, createGamma1Buffer());
++    }
++
++    void uniformGamma1(byte[] seed, short nonce, byte[] buf)
++    {
+ 
+         symmetric.stream256init(seed, nonce);
+         symmetric.stream256squeezeBlocks(buf, 0, engine.getPolyUniformGamma1NBlocks() * symmetric.stream256BlockBytes);// todo this is final
+diff --git a/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/PolyVec.java b/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/PolyVec.java
+index 289f1bd..b5de564 100644
+--- a/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/PolyVec.java
++++ b/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/PolyVec.java
+@@ -23,11 +23,11 @@ int length()
+         return vec.length;
+     }
+ 
+-    void uniformBlocks(byte[] rho, int t)
++    void uniformBlocks(byte[] rho, int t, byte[] buf)
+     {
+         for (int i = 0; i < vec.length; ++i)
+         {
+-            vec[i].uniformBlocks(rho, (short)(t + i));
++            vec[i].uniformBlocks(rho, (short)(t + i), buf);
+         }
+     }
+ 
+@@ -42,9 +42,10 @@ public void uniformEta(byte[] seed, short nonce)
+ 
+     public void uniformGamma1(byte[] seed, short nonce)
+     {
++        byte[] buf = vec[0].createGamma1Buffer();
+         for (int i = 0; i < vec.length; ++i)
+         {
+-            vec[i].uniformGamma1(seed, (short)(vec.length * nonce + i));
++            vec[i].uniformGamma1(seed, (short)(vec.length * nonce + i), buf);
+         }
+     }
+ 
+diff --git a/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/PolyVecMatrix.java b/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/PolyVecMatrix.java
+index 5fd267e..4aab89f 100644
+--- a/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/PolyVecMatrix.java
++++ b/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/PolyVecMatrix.java
+@@ -31,9 +31,10 @@ public void pointwiseMontgomery(PolyVec t, PolyVec v)
+ 
+     public void expandMatrix(byte[] rho)
+     {
++        byte[] buf = matrix[0].getVectorIndex(0).createUniformBuffer();
+         for (int i = 0; i < matrix.length; ++i)
+         {
+-            matrix[i].uniformBlocks(rho, i << 8);
++            matrix[i].uniformBlocks(rho, i << 8, buf);
+         }
+     }
+ }

@@ -1,0 +1,1186 @@
+{
+  "schema": "bc-ml-deep-batch-v1",
+  "parameter": "ml_dsa_44",
+  "operation": "verify",
+  "started_at": "2026-10-12T03:21:12.429187Z",
+  "completed_at": "2026-10-12T03:21:12.592379Z",
+  "keydecode_included": false,
+  "cpu_scope": "calling_thread",
+  "caller_copies_included": false,
+  "key_policy": "unique key per measured call; fresh signer",
+  "driver_includes_checks": true,
+  "driver_process_cpu_ns": 41383000,
+  "driver_gc_count": 0,
+  "driver_gc_ms": 0,
+  "compilation_ms_including_warmup": 157,
+  "warmup": {
+    "iterations": 1000,
+    "wall_ns": 141310125
+  },
+  "samples": [
+    {
+      "case_id": "measured/ml_dsa_44/94",
+      "wall_ns": 93167,
+      "cpu_ns": 102000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/91",
+      "wall_ns": 92834,
+      "cpu_ns": 96000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/37",
+      "wall_ns": 85583,
+      "cpu_ns": 88000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/2",
+      "wall_ns": 86209,
+      "cpu_ns": 88000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/36",
+      "wall_ns": 85375,
+      "cpu_ns": 88000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/16",
+      "wall_ns": 91750,
+      "cpu_ns": 93000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/64",
+      "wall_ns": 109709,
+      "cpu_ns": 110000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/100",
+      "wall_ns": 101041,
+      "cpu_ns": 104000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/76",
+      "wall_ns": 101208,
+      "cpu_ns": 103000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/57",
+      "wall_ns": 94292,
+      "cpu_ns": 96000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/122",
+      "wall_ns": 91584,
+      "cpu_ns": 93000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/61",
+      "wall_ns": 96667,
+      "cpu_ns": 98000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/87",
+      "wall_ns": 90667,
+      "cpu_ns": 92000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/118",
+      "wall_ns": 94000,
+      "cpu_ns": 95000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/123",
+      "wall_ns": 89417,
+      "cpu_ns": 91000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/116",
+      "wall_ns": 102500,
+      "cpu_ns": 102000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/30",
+      "wall_ns": 95333,
+      "cpu_ns": 98000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/82",
+      "wall_ns": 91708,
+      "cpu_ns": 93000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/38",
+      "wall_ns": 94833,
+      "cpu_ns": 98000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/34",
+      "wall_ns": 110666,
+      "cpu_ns": 112000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/52",
+      "wall_ns": 92625,
+      "cpu_ns": 94000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/42",
+      "wall_ns": 91291,
+      "cpu_ns": 92000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/29",
+      "wall_ns": 102875,
+      "cpu_ns": 105000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/65",
+      "wall_ns": 104208,
+      "cpu_ns": 105000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/47",
+      "wall_ns": 126667,
+      "cpu_ns": 125000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/68",
+      "wall_ns": 97958,
+      "cpu_ns": 100000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/43",
+      "wall_ns": 101625,
+      "cpu_ns": 104000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/48",
+      "wall_ns": 96958,
+      "cpu_ns": 99000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/50",
+      "wall_ns": 95084,
+      "cpu_ns": 97000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/95",
+      "wall_ns": 105375,
+      "cpu_ns": 107000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/117",
+      "wall_ns": 92041,
+      "cpu_ns": 93000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/39",
+      "wall_ns": 89166,
+      "cpu_ns": 91000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/84",
+      "wall_ns": 91458,
+      "cpu_ns": 93000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/27",
+      "wall_ns": 93916,
+      "cpu_ns": 96000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/78",
+      "wall_ns": 91166,
+      "cpu_ns": 93000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/72",
+      "wall_ns": 92291,
+      "cpu_ns": 94000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/23",
+      "wall_ns": 98666,
+      "cpu_ns": 101000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/14",
+      "wall_ns": 89166,
+      "cpu_ns": 90000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/20",
+      "wall_ns": 90000,
+      "cpu_ns": 92000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/17",
+      "wall_ns": 97750,
+      "cpu_ns": 99000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/58",
+      "wall_ns": 91250,
+      "cpu_ns": 93000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/85",
+      "wall_ns": 88208,
+      "cpu_ns": 90000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/66",
+      "wall_ns": 89250,
+      "cpu_ns": 91000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/56",
+      "wall_ns": 89375,
+      "cpu_ns": 92000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/127",
+      "wall_ns": 89166,
+      "cpu_ns": 91000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/44",
+      "wall_ns": 89250,
+      "cpu_ns": 90000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/11",
+      "wall_ns": 98333,
+      "cpu_ns": 100000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/5",
+      "wall_ns": 95917,
+      "cpu_ns": 98000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/10",
+      "wall_ns": 88042,
+      "cpu_ns": 90000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/21",
+      "wall_ns": 87916,
+      "cpu_ns": 89000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/6",
+      "wall_ns": 85584,
+      "cpu_ns": 87000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/19",
+      "wall_ns": 85792,
+      "cpu_ns": 88000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/107",
+      "wall_ns": 95250,
+      "cpu_ns": 97000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/97",
+      "wall_ns": 85083,
+      "cpu_ns": 87000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/13",
+      "wall_ns": 85167,
+      "cpu_ns": 87000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/121",
+      "wall_ns": 85167,
+      "cpu_ns": 87000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/86",
+      "wall_ns": 86916,
+      "cpu_ns": 88000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/9",
+      "wall_ns": 86458,
+      "cpu_ns": 88000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/54",
+      "wall_ns": 84792,
+      "cpu_ns": 86000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/88",
+      "wall_ns": 95375,
+      "cpu_ns": 101000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/70",
+      "wall_ns": 119166,
+      "cpu_ns": 120000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/96",
+      "wall_ns": 97250,
+      "cpu_ns": 99000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/98",
+      "wall_ns": 101166,
+      "cpu_ns": 105000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/110",
+      "wall_ns": 88584,
+      "cpu_ns": 92000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/53",
+      "wall_ns": 102750,
+      "cpu_ns": 104000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/71",
+      "wall_ns": 117625,
+      "cpu_ns": 118000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/25",
+      "wall_ns": 91125,
+      "cpu_ns": 93000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/46",
+      "wall_ns": 94125,
+      "cpu_ns": 96000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/115",
+      "wall_ns": 84500,
+      "cpu_ns": 87000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/93",
+      "wall_ns": 90166,
+      "cpu_ns": 92000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/63",
+      "wall_ns": 87792,
+      "cpu_ns": 89000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/41",
+      "wall_ns": 98083,
+      "cpu_ns": 100000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/104",
+      "wall_ns": 105125,
+      "cpu_ns": 106000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/124",
+      "wall_ns": 97792,
+      "cpu_ns": 100000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/75",
+      "wall_ns": 88667,
+      "cpu_ns": 90000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/12",
+      "wall_ns": 91042,
+      "cpu_ns": 93000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/15",
+      "wall_ns": 92333,
+      "cpu_ns": 95000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/8",
+      "wall_ns": 88042,
+      "cpu_ns": 89000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/4",
+      "wall_ns": 95833,
+      "cpu_ns": 98000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/28",
+      "wall_ns": 90042,
+      "cpu_ns": 92000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/73",
+      "wall_ns": 95583,
+      "cpu_ns": 102000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/1",
+      "wall_ns": 93292,
+      "cpu_ns": 94000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/0",
+      "wall_ns": 87709,
+      "cpu_ns": 89000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/90",
+      "wall_ns": 89333,
+      "cpu_ns": 91000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/79",
+      "wall_ns": 88125,
+      "cpu_ns": 89000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/77",
+      "wall_ns": 104458,
+      "cpu_ns": 105000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/60",
+      "wall_ns": 100875,
+      "cpu_ns": 102000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/103",
+      "wall_ns": 93875,
+      "cpu_ns": 96000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/31",
+      "wall_ns": 89584,
+      "cpu_ns": 92000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/108",
+      "wall_ns": 92666,
+      "cpu_ns": 95000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/35",
+      "wall_ns": 107917,
+      "cpu_ns": 110000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/105",
+      "wall_ns": 88417,
+      "cpu_ns": 89000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/112",
+      "wall_ns": 89084,
+      "cpu_ns": 90000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/62",
+      "wall_ns": 86667,
+      "cpu_ns": 88000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/109",
+      "wall_ns": 100583,
+      "cpu_ns": 102000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/3",
+      "wall_ns": 89083,
+      "cpu_ns": 91000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/106",
+      "wall_ns": 97125,
+      "cpu_ns": 99000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/92",
+      "wall_ns": 89333,
+      "cpu_ns": 91000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/113",
+      "wall_ns": 95875,
+      "cpu_ns": 97000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/114",
+      "wall_ns": 97333,
+      "cpu_ns": 99000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/22",
+      "wall_ns": 87958,
+      "cpu_ns": 89000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/49",
+      "wall_ns": 84334,
+      "cpu_ns": 86000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/59",
+      "wall_ns": 95250,
+      "cpu_ns": 97000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/33",
+      "wall_ns": 85750,
+      "cpu_ns": 86000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/80",
+      "wall_ns": 88750,
+      "cpu_ns": 90000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/111",
+      "wall_ns": 85291,
+      "cpu_ns": 87000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/40",
+      "wall_ns": 88416,
+      "cpu_ns": 90000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/26",
+      "wall_ns": 85125,
+      "cpu_ns": 87000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/125",
+      "wall_ns": 95291,
+      "cpu_ns": 96000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/32",
+      "wall_ns": 85542,
+      "cpu_ns": 87000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/126",
+      "wall_ns": 85375,
+      "cpu_ns": 87000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/24",
+      "wall_ns": 87208,
+      "cpu_ns": 88000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/119",
+      "wall_ns": 96541,
+      "cpu_ns": 99000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/51",
+      "wall_ns": 86792,
+      "cpu_ns": 89000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/7",
+      "wall_ns": 85000,
+      "cpu_ns": 86000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/89",
+      "wall_ns": 95042,
+      "cpu_ns": 97000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/55",
+      "wall_ns": 86125,
+      "cpu_ns": 87000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/83",
+      "wall_ns": 98750,
+      "cpu_ns": 100000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/102",
+      "wall_ns": 86625,
+      "cpu_ns": 88000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/18",
+      "wall_ns": 87000,
+      "cpu_ns": 88000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/67",
+      "wall_ns": 85208,
+      "cpu_ns": 87000,
+      "allocated_bytes": 60000,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/74",
+      "wall_ns": 85500,
+      "cpu_ns": 87000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/99",
+      "wall_ns": 85417,
+      "cpu_ns": 87000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/101",
+      "wall_ns": 94584,
+      "cpu_ns": 96000,
+      "allocated_bytes": 60496,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/45",
+      "wall_ns": 86459,
+      "cpu_ns": 87000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/120",
+      "wall_ns": 85125,
+      "cpu_ns": 86000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/81",
+      "wall_ns": 96208,
+      "cpu_ns": 103000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case_id": "measured/ml_dsa_44/69",
+      "wall_ns": 86417,
+      "cpu_ns": 87000,
+      "allocated_bytes": 59984,
+      "output_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "checked": true,
+      "inputs_unchanged": true
+    }
+  ],
+  "variant": "baseline",
+  "fork": 1,
+  "round": 1,
+  "corpus_sha256": "2d38e3d33ba1f9eb3ff562e7fe468da85659844dad7e143b32516db9dfe6a953",
+  "warmup_corpus_sha256": "c348581600bb46137c35ce9c12df01fead9cc70958498da7be3635ca395197da",
+  "source_sha256": "5db32f364a1e61d3041d265dc51b8b037496e0a8b68531bc8cfb370431da9e5e",
+  "class_tree_sha256": "cb439213fbe53dd4482df97a10889f9d55e6c6a8a489b5772854429b14b474e2",
+  "java_version": "$ /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java -version\nopenjdk version \"25.0.4.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS, mixed mode, sharing)\n",
+  "jvm_args": [
+    "-Xmx512m",
+    "-XX:ActiveProcessorCount=2"
+  ]
+}

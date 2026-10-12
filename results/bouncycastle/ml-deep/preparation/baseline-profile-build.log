@@ -1,0 +1,7 @@
+$ /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/javac --release 8 -sourcepath /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ml-deep/libs/bouncycastle/build/ml-deep/prepared-v6/baseline-profile-src/core/src/main/java -d /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ml-deep/libs/bouncycastle/build/ml-deep/prepared-v6/baseline-profile /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ml-deep/libs/bouncycastle/build/ml-deep/prepared-v6/baseline-profile-src/core/src/main/java/org/bouncycastle/crypto/signers/MLDSASigner.java /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ml-deep/libs/bouncycastle/build/ml-deep/prepared-v6/baseline-profile-src/core/src/main/java/org/bouncycastle/crypto/signers/HashMLDSASigner.java /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ml-deep/libs/bouncycastle/build/ml-deep/prepared-v6/baseline-profile-src/core/src/main/java/org/bouncycastle/crypto/generators/MLDSAKeyPairGenerator.java
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+3 warnings
