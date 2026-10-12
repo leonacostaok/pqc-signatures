@@ -24,6 +24,6 @@ Time saved is `100 × (1 − changed/original)`; resource change is `100 × (cha
 
 ## Evidence
 
-[Complete timing table](audit/complete-performance-comparison.md) · [New memory and GC measurements](audit/completed-resource-measurements.md) · [Earlier resource percentages](audit/resource-percentages.md) · [Resource audit and limits](audit/published-resource-regressions.md) · [Individual production experiments](provider-improvements.md).
+[Actual times between libraries](library-times.md) · [Complete timing table](audit/complete-performance-comparison.md) · [New memory and GC measurements](audit/completed-resource-measurements.md) · [Earlier resource percentages](audit/resource-percentages.md) · [Resource audit and limits](audit/published-resource-regressions.md) · [Individual production experiments](provider-improvements.md).
 
 This supporting testing and analysis work is AI-assisted. Recorded sources, scripts, raw outputs and checks support independent reproduction; they do not replace cryptographic review or certify the implementations.

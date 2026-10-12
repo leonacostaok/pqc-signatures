@@ -21,3 +21,4 @@ python3 common/report-completed-resources.py "${args[@]}"
 python3 common/render-completed-resources.py
 python3 common/report-performance-tradeoffs.py
 python3 common/audit-completion-reports.py
+python3 common/report-library-times.py

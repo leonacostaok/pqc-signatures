@@ -4,6 +4,7 @@ Performance experiments for post-quantum signatures in noble (TypeScript/JavaScr
 
 ## Results
 
+- **[Actual times between libraries](docs/library-times.md)**: keygen, signing and verification for the same exact parameter set, with separate original/patched views and comparability limits.
 - **[Are the optimizations worth it?](docs/performance-summary.md)** Short verdicts with time and memory percentages.
 - [Time and memory comparison](docs/audit/complete-performance-comparison.md): every library/parameter combination, with paired changes, baseline-only timings and explicit unsupported cases.
 - [Memory and GC measurements](docs/audit/completed-resource-measurements.md): allocation, heap, process memory, GC and stack diagnostics with percentages.
