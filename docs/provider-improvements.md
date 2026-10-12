@@ -2,7 +2,7 @@
 
 These are comparisons of narrow production patches against each provider's own pinned upstream baseline. They are not a ranking of providers: versions, APIs, algorithms and operation boundaries differ. Measurements use one Apple M1 Pro host; other coordinated builds and tests were stopped, but ordinary desktop processes remained active. Ratios above 1 mean faster execution. Every report retains its controls, losing samples and limitations.
 
-| Provider and scope | Supported result | Report | Review draft |
+| Provider and scope | Supported result | Report | Pull request |
 | --- | --- | --- | --- |
 | noble ML-DSA | Signing 1.091–1.189×; verification 1.101–1.189× across two library and two Node versions | [Fresh-input/version study](https://github.com/leonacostaok/pqc-signatures/blob/9288288f2fd95fa53a9320b90e513577d94323e0/docs/noble/robustness.md) | [noble #56](https://github.com/paulmillr/noble-post-quantum/pull/56) |
 | liboqs SLH-DSA SHA2 | Signing 4.269–5.276×; verification 4.411–5.288× | [Compression backend](../libs/liboqs/experiments/sha2-openssl/README.md) | [liboqs #2625](https://github.com/open-quantum-safe/liboqs/pull/2625) |
@@ -29,7 +29,7 @@ Noble's arithmetic oracle and two-version/runtime study, liboqs's executed-case 
 
 The [original harness audit](https://github.com/leonacostaok/pqc-signatures/pull/3) documents separate remaining cache, bounds, acceptance and measurement defects. These production experiments use their own gates; their success does not repair the original harness or establish a general fastest-provider ranking.
 
-All drafts are authored from `leonacostaok`. Noble, liboqs, CIRCL, RustCrypto and OpenSSL now have upstream drafts. Bouncy Castle retains its allocation-only personal-fork draft while further alternatives are investigated. The evidence repository is public. Liboqs and OpenSSL contribution-policy disclosures and personal attestations remain unresolved; draft publication does not establish compliance or CLA completion.
+All pull requests are authored from `leonacostaok`. Noble, liboqs, CIRCL, RustCrypto and OpenSSL are open upstream and marked ready for review. Bouncy Castle retains its allocation-only personal-fork draft while further alternatives are investigated. The evidence repository is public. Liboqs and OpenSSL contribution-policy disclosures and personal attestations remain unresolved; publication does not establish compliance or CLA completion.
 
 The [independent BC follow-up check](../results/bouncycastle/independent-isolated-check.json) matches every saved process output, exit status and pair against the final summaries. Reproduce it with `python3 libs/bouncycastle/experiments/audit-isolated.py results/bouncycastle/experiments/fors-isolated-jdk25-arm64.json /path/to/new-check.json`.
 
