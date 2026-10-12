@@ -1,0 +1,8 @@
+Completed circl candidate SLH-DSA-SHA2-128f
+Completed circl candidate SLH-DSA-SHA2-128s
+Completed circl candidate SLH-DSA-SHA2-192f
+Completed circl candidate SLH-DSA-SHA2-192s
+Completed circl candidate SLH-DSA-SHA2-256f
+Completed circl candidate SLH-DSA-SHA2-256s
+Completed circl candidate SLH-DSA-SHAKE-128f
+Saved /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/circl-performance/results/circl/experiments/tenkeys-candidate.json

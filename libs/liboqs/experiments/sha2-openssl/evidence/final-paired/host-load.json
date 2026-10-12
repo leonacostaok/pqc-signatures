@@ -1,0 +1,2354 @@
+[
+  {
+    "monotonic_seconds": 0.180248291,
+    "cell": null,
+    "load_average": [
+      4.35888671875,
+      6.88720703125,
+      8.5673828125
+    ],
+    "background_cpu_percent": 175.19999999999996,
+    "processes": [
+      {
+        "pid": 41936,
+        "cpu_percent": 63.9,
+        "name": "WiFiAgent"
+      },
+      {
+        "pid": 6930,
+        "cpu_percent": 16.9,
+        "name": "Python"
+      },
+      {
+        "pid": 466,
+        "cpu_percent": 15.1,
+        "name": "airportd"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 12.0,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 20396,
+        "cpu_percent": 11.7,
+        "name": "codex"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 9.7,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 8.0,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 7.9,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 5.243034083,
+    "cell": {
+      "fork": 1,
+      "variant": "baseline"
+    },
+    "load_average": [
+      4.169921875,
+      6.8056640625,
+      8.52880859375
+    ],
+    "background_cpu_percent": 69.60000000000001,
+    "processes": [
+      {
+        "pid": 9911,
+        "cpu_percent": 12.3,
+        "name": "Google Chrome"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.2,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 10.0,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 41936,
+        "cpu_percent": 9.6,
+        "name": "WiFiAgent"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 10.302868166,
+    "cell": {
+      "fork": 1,
+      "variant": "baseline"
+    },
+    "load_average": [
+      4.236328125,
+      6.775390625,
+      8.5078125
+    ],
+    "background_cpu_percent": 136.39999999999998,
+    "processes": [
+      {
+        "pid": 41936,
+        "cpu_percent": 52.7,
+        "name": "WiFiAgent"
+      },
+      {
+        "pid": 466,
+        "cpu_percent": 40.3,
+        "name": "airportd"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 10.1,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 8.9,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.8,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.7,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 15.369576958,
+    "cell": {
+      "fork": 1,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.97705078125,
+      6.67919921875,
+      8.46337890625
+    ],
+    "background_cpu_percent": 46.50000000000001,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 10.7,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.0,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.6,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.2,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 20.431854291,
+    "cell": {
+      "fork": 1,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.8984375,
+      6.61767578125,
+      8.43115234375
+    ],
+    "background_cpu_percent": 55.6,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 12.6,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.5,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.9,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.6,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 25.491156333,
+    "cell": {
+      "fork": 1,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.826171875,
+      6.55712890625,
+      8.39892578125
+    ],
+    "background_cpu_percent": 162.60000000000002,
+    "processes": [
+      {
+        "pid": 1,
+        "cpu_percent": 46.6,
+        "name": "launchd"
+      },
+      {
+        "pid": 9911,
+        "cpu_percent": 32.4,
+        "name": "Google Chrome"
+      },
+      {
+        "pid": 35274,
+        "cpu_percent": 15.8,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 676,
+        "cpu_percent": 15.2,
+        "name": "com.apple.DriverKit-AppleBCMWLAN"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 11.7,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.7,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 9.4,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 30.589175083,
+    "cell": {
+      "fork": 1,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.6796875,
+      6.4814453125,
+      8.361328125
+    ],
+    "background_cpu_percent": 139.19999999999996,
+    "processes": [
+      {
+        "pid": 20399,
+        "cpu_percent": 92.7,
+        "name": "Codex (Renderer)"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 10.3,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.9,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.1,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.1,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 35.646596625,
+    "cell": {
+      "fork": 1,
+      "variant": "baseline"
+    },
+    "load_average": [
+      5.06640625,
+      6.72216796875,
+      8.43505859375
+    ],
+    "background_cpu_percent": 135.89999999999998,
+    "processes": [
+      {
+        "pid": 41936,
+        "cpu_percent": 65.9,
+        "name": "WiFiAgent"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 11.4,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 466,
+        "cpu_percent": 10.6,
+        "name": "airportd"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.3,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.5,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 26448,
+        "cpu_percent": 5.7,
+        "name": "Python"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 40.703728916,
+    "cell": {
+      "fork": 1,
+      "variant": "baseline"
+    },
+    "load_average": [
+      4.74072265625,
+      6.626953125,
+      8.39111328125
+    ],
+    "background_cpu_percent": 119.90000000000002,
+    "processes": [
+      {
+        "pid": 41936,
+        "cpu_percent": 53.8,
+        "name": "WiFiAgent"
+      },
+      {
+        "pid": 466,
+        "cpu_percent": 19.3,
+        "name": "airportd"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 11.9,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.3,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.1,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.3,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 45.771358166,
+    "cell": {
+      "fork": 1,
+      "variant": "candidate"
+    },
+    "load_average": [
+      4.60107421875,
+      6.56640625,
+      8.359375
+    ],
+    "background_cpu_percent": 46.899999999999984,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.4,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.9,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.4,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.3,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 50.832448416,
+    "cell": {
+      "fork": 1,
+      "variant": "candidate"
+    },
+    "load_average": [
+      4.3125,
+      6.4736328125,
+      8.31591796875
+    ],
+    "background_cpu_percent": 59.70000000000001,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 9.6,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.4,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 58808,
+        "cpu_percent": 9.0,
+        "name": "Claude Helper (Renderer)"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.7,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.1,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 55.89549675,
+    "cell": {
+      "fork": 2,
+      "variant": "candidate"
+    },
+    "load_average": [
+      4.046875,
+      6.38232421875,
+      8.27294921875
+    ],
+    "background_cpu_percent": 72.19999999999999,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 12.7,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 1,
+        "cpu_percent": 10.8,
+        "name": "launchd"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.9,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.4,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.1,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 60.96501325,
+    "cell": {
+      "fork": 2,
+      "variant": "candidate"
+    },
+    "load_average": [
+      3.802734375,
+      6.29296875,
+      8.22998046875
+    ],
+    "background_cpu_percent": 67.4,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 10.8,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.0,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 676,
+        "cpu_percent": 8.8,
+        "name": "com.apple.DriverKit-AppleBCMWLAN"
+      },
+      {
+        "pid": 20396,
+        "cpu_percent": 7.7,
+        "name": "codex"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.3,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.6,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 66.027141958,
+    "cell": {
+      "fork": 2,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.578125,
+      6.205078125,
+      8.1875
+    ],
+    "background_cpu_percent": 46.40000000000001,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.8,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.3,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.2,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.0,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 71.088784166,
+    "cell": {
+      "fork": 2,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.37158203125,
+      6.11865234375,
+      8.14501953125
+    ],
+    "background_cpu_percent": 59.000000000000014,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.6,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.4,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.5,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.1,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 76.143718291,
+    "cell": {
+      "fork": 2,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.341796875,
+      6.06640625,
+      8.11474609375
+    ],
+    "background_cpu_percent": 52.400000000000006,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.3,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.5,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.6,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 81.205460041,
+    "cell": {
+      "fork": 2,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.31396484375,
+      6.01513671875,
+      8.08447265625
+    ],
+    "background_cpu_percent": 53.3,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.5,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.8,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.4,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.0,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 86.264422958,
+    "cell": {
+      "fork": 2,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.44873046875,
+      5.998046875,
+      8.06591796875
+    ],
+    "background_cpu_percent": 70.7,
+    "processes": [
+      {
+        "pid": 20396,
+        "cpu_percent": 11.3,
+        "name": "codex"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 11.1,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 10.8,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.4,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 91.326780958,
+    "cell": {
+      "fork": 2,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.25244140625,
+      5.9150390625,
+      8.0244140625
+    ],
+    "background_cpu_percent": 78.40000000000002,
+    "processes": [
+      {
+        "pid": 676,
+        "cpu_percent": 14.6,
+        "name": "com.apple.DriverKit-AppleBCMWLAN"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 11.1,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.7,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.6,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 20399,
+        "cpu_percent": 6.2,
+        "name": "Codex (Renderer)"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.9,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 96.382759833,
+    "cell": {
+      "fork": 2,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.23193359375,
+      5.8662109375,
+      7.99462890625
+    ],
+    "background_cpu_percent": 56.00000000000003,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 10.9,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.6,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.7,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.7,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 101.43896,
+    "cell": {
+      "fork": 2,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.052734375,
+      5.78515625,
+      7.95361328125
+    ],
+    "background_cpu_percent": 61.90000000000003,
+    "processes": [
+      {
+        "pid": 443,
+        "cpu_percent": 10.7,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 9.8,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.3,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 20396,
+        "cpu_percent": 5.7,
+        "name": "codex"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.2,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 106.5006025,
+    "cell": {
+      "fork": 3,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.36865234375,
+      5.80517578125,
+      7.94775390625
+    ],
+    "background_cpu_percent": 48.50000000000002,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 10.7,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.5,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.1,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.7,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 111.559033916,
+    "cell": {
+      "fork": 3,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.3388671875,
+      5.75830078125,
+      7.91845703125
+    ],
+    "background_cpu_percent": 44.9,
+    "processes": [
+      {
+        "pid": 443,
+        "cpu_percent": 9.8,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 8.8,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.4,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 116.622927166,
+    "cell": {
+      "fork": 3,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.1513671875,
+      5.67919921875,
+      7.87744140625
+    ],
+    "background_cpu_percent": 93.99999999999999,
+    "processes": [
+      {
+        "pid": 9911,
+        "cpu_percent": 36.0,
+        "name": "Google Chrome"
+      },
+      {
+        "pid": 35274,
+        "cpu_percent": 19.2,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 9.4,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.4,
+        "name": "coreaudiod"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 121.684937333,
+    "cell": {
+      "fork": 3,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.21923828125,
+      5.65087890625,
+      7.8544921875
+    ],
+    "background_cpu_percent": 52.80000000000001,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.0,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.6,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.8,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.4,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 126.749124583,
+    "cell": {
+      "fork": 3,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.44189453125,
+      5.65625,
+      7.84326171875
+    ],
+    "background_cpu_percent": 63.7,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 10.3,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 676,
+        "cpu_percent": 10.1,
+        "name": "com.apple.DriverKit-AppleBCMWLAN"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.6,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.6,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.3,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 131.809854,
+    "cell": {
+      "fork": 3,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.486328125,
+      5.62841796875,
+      7.8203125
+    ],
+    "background_cpu_percent": 58.40000000000001,
+    "processes": [
+      {
+        "pid": 443,
+        "cpu_percent": 10.4,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 10.3,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.4,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.2,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 136.872144791,
+    "cell": {
+      "fork": 3,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.287109375,
+      5.55126953125,
+      7.7802734375
+    ],
+    "background_cpu_percent": 43.099999999999994,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 9.3,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.1,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.5,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 141.933676875,
+    "cell": {
+      "fork": 3,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.50390625,
+      5.55859375,
+      7.76953125
+    ],
+    "background_cpu_percent": 49.30000000000002,
+    "processes": [
+      {
+        "pid": 443,
+        "cpu_percent": 9.8,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 8.6,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.3,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 676,
+        "cpu_percent": 6.1,
+        "name": "com.apple.DriverKit-AppleBCMWLAN"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.8,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 146.996893833,
+    "cell": {
+      "fork": 3,
+      "variant": "candidate"
+    },
+    "load_average": [
+      3.27880859375,
+      5.44140625,
+      7.70166015625
+    ],
+    "background_cpu_percent": 51.60000000000001,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 12.5,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.9,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.7,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.5,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 152.058936041,
+    "cell": {
+      "fork": 3,
+      "variant": "candidate"
+    },
+    "load_average": [
+      3.09619140625,
+      5.3671875,
+      7.662109375
+    ],
+    "background_cpu_percent": 64.50000000000001,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 12.5,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.3,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.1,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.0,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 157.118702916,
+    "cell": {
+      "fork": 4,
+      "variant": "candidate"
+    },
+    "load_average": [
+      3.08837890625,
+      5.32763671875,
+      7.634765625
+    ],
+    "background_cpu_percent": 73.60000000000001,
+    "processes": [
+      {
+        "pid": 676,
+        "cpu_percent": 13.9,
+        "name": "com.apple.DriverKit-AppleBCMWLAN"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 10.9,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.3,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 7.4,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.0,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 74746,
+        "cpu_percent": 6.4,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 162.179564458,
+    "cell": {
+      "fork": 4,
+      "variant": "candidate"
+    },
+    "load_average": [
+      2.9208984375,
+      5.25537109375,
+      7.595703125
+    ],
+    "background_cpu_percent": 47.80000000000002,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 10.9,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.7,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.1,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.6,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 167.240347041,
+    "cell": {
+      "fork": 4,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.1669921875,
+      5.267578125,
+      7.5859375
+    ],
+    "background_cpu_percent": 117.50000000000001,
+    "processes": [
+      {
+        "pid": 41936,
+        "cpu_percent": 52.9,
+        "name": "WiFiAgent"
+      },
+      {
+        "pid": 466,
+        "cpu_percent": 20.3,
+        "name": "airportd"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 10.5,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.9,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.4,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 172.300490125,
+    "cell": {
+      "fork": 4,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.5537109375,
+      5.3125,
+      7.587890625
+    ],
+    "background_cpu_percent": 59.50000000000002,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 10.9,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.7,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 20396,
+        "cpu_percent": 8.7,
+        "name": "codex"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.2,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 5.9,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 177.366597166,
+    "cell": {
+      "fork": 4,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.42919921875,
+      5.25732421875,
+      7.5546875
+    ],
+    "background_cpu_percent": 110.59999999999998,
+    "processes": [
+      {
+        "pid": 9958,
+        "cpu_percent": 22.4,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 11.6,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 676,
+        "cpu_percent": 10.5,
+        "name": "com.apple.DriverKit-AppleBCMWLAN"
+      },
+      {
+        "pid": 9911,
+        "cpu_percent": 10.2,
+        "name": "Google Chrome"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.6,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 74746,
+        "cpu_percent": 8.6,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 9925,
+        "cpu_percent": 5.3,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 5.0,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 182.434314458,
+    "cell": {
+      "fork": 4,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.39453125,
+      5.2197265625,
+      7.52783203125
+    ],
+    "background_cpu_percent": 66.00000000000003,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.1,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.2,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 20399,
+        "cpu_percent": 7.6,
+        "name": "Codex (Renderer)"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.7,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.0,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 187.495766541,
+    "cell": {
+      "fork": 4,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.28271484375,
+      5.166015625,
+      7.4951171875
+    ],
+    "background_cpu_percent": 71.50000000000001,
+    "processes": [
+      {
+        "pid": 443,
+        "cpu_percent": 10.6,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 10.0,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 676,
+        "cpu_percent": 8.9,
+        "name": "com.apple.DriverKit-AppleBCMWLAN"
+      },
+      {
+        "pid": 64940,
+        "cpu_percent": 8.4,
+        "name": "claude"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.4,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.2,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 192.559197041,
+    "cell": {
+      "fork": 4,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.5,
+      5.1796875,
+      7.486328125
+    ],
+    "background_cpu_percent": 57.70000000000001,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.0,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.4,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.9,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.0,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 197.621308666,
+    "cell": {
+      "fork": 4,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.4599609375,
+      5.14306640625,
+      7.4599609375
+    ],
+    "background_cpu_percent": 61.30000000000002,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 14.1,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.0,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.7,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 202.680854083,
+    "cell": {
+      "fork": 4,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.5029296875,
+      5.1240234375,
+      7.439453125
+    ],
+    "background_cpu_percent": 45.5,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.3,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.0,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.3,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 207.741475333,
+    "cell": {
+      "fork": 5,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.30224609375,
+      5.05517578125,
+      7.4013671875
+    ],
+    "background_cpu_percent": 51.90000000000001,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 12.1,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 11.6,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.9,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.6,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 212.804518916,
+    "cell": {
+      "fork": 5,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.27783203125,
+      5.02099609375,
+      7.37548828125
+    ],
+    "background_cpu_percent": 50.10000000000001,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.7,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.0,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.1,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.2,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 217.867756041,
+    "cell": {
+      "fork": 5,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.41552734375,
+      5.0205078125,
+      7.361328125
+    ],
+    "background_cpu_percent": 60.50000000000001,
+    "processes": [
+      {
+        "pid": 676,
+        "cpu_percent": 15.7,
+        "name": "com.apple.DriverKit-AppleBCMWLAN"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 10.7,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.8,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.3,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.2,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 222.932798,
+    "cell": {
+      "fork": 5,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.2216796875,
+      4.95361328125,
+      7.32373046875
+    ],
+    "background_cpu_percent": 51.6,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 10.7,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.2,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.7,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.4,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 227.995790625,
+    "cell": {
+      "fork": 5,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.12353515625,
+      4.904296875,
+      7.29248046875
+    ],
+    "background_cpu_percent": 55.70000000000003,
+    "processes": [
+      {
+        "pid": 443,
+        "cpu_percent": 10.0,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 9.8,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 407,
+        "cpu_percent": 7.3,
+        "name": "dasd"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 7.2,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.1,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 233.056399416,
+    "cell": {
+      "fork": 5,
+      "variant": "baseline"
+    },
+    "load_average": [
+      2.953125,
+      4.83935546875,
+      7.25537109375
+    ],
+    "background_cpu_percent": 63.90000000000001,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 13.0,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.3,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.0,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.5,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 71824,
+        "cpu_percent": 5.8,
+        "name": "Little Snitch Agent"
+      },
+      {
+        "pid": 20396,
+        "cpu_percent": 5.2,
+        "name": "codex"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 238.11870875,
+    "cell": {
+      "fork": 5,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.03662109375,
+      4.8251953125,
+      7.23583984375
+    ],
+    "background_cpu_percent": 59.300000000000004,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.7,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.4,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 20399,
+        "cpu_percent": 7.3,
+        "name": "Codex (Renderer)"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.8,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.7,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 243.180100125,
+    "cell": {
+      "fork": 5,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.033203125,
+      4.79443359375,
+      7.2109375
+    ],
+    "background_cpu_percent": 89.79999999999998,
+    "processes": [
+      {
+        "pid": 20396,
+        "cpu_percent": 19.1,
+        "name": "codex"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 11.3,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.1,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 9.3,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.1,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 248.262394541,
+    "cell": {
+      "fork": 5,
+      "variant": "baseline"
+    },
+    "load_average": [
+      3.0302734375,
+      4.76416015625,
+      7.18603515625
+    ],
+    "background_cpu_percent": 57.80000000000001,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.7,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.6,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.0,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.1,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 253.329661583,
+    "cell": {
+      "fork": 5,
+      "variant": "candidate"
+    },
+    "load_average": [
+      2.94775390625,
+      4.71826171875,
+      7.1552734375
+    ],
+    "background_cpu_percent": 48.500000000000014,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.1,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.2,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.9,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.0,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 258.391186083,
+    "cell": {
+      "fork": 5,
+      "variant": "candidate"
+    },
+    "load_average": [
+      2.95166015625,
+      4.689453125,
+      7.130859375
+    ],
+    "background_cpu_percent": 54.39999999999999,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.7,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.8,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 35274,
+        "cpu_percent": 5.8,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 5.1,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 263.449742458,
+    "cell": {
+      "fork": 6,
+      "variant": "candidate"
+    },
+    "load_average": [
+      2.794921875,
+      4.6279296875,
+      7.0947265625
+    ],
+    "background_cpu_percent": 64.6,
+    "processes": [
+      {
+        "pid": 20399,
+        "cpu_percent": 16.7,
+        "name": "Codex (Renderer)"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 11.1,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.3,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.5,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 268.514056833,
+    "cell": {
+      "fork": 6,
+      "variant": "candidate"
+    },
+    "load_average": [
+      2.89111328125,
+      4.6171875,
+      7.076171875
+    ],
+    "background_cpu_percent": 44.300000000000004,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 9.4,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.3,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.0,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.1,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 273.577119083,
+    "cell": {
+      "fork": 6,
+      "variant": "baseline"
+    },
+    "load_average": [
+      2.8193359375,
+      4.57373046875,
+      7.04638671875
+    ],
+    "background_cpu_percent": 65.20000000000002,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.1,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.9,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.4,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 20396,
+        "cpu_percent": 7.0,
+        "name": "codex"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.3,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 278.640092,
+    "cell": {
+      "fork": 6,
+      "variant": "baseline"
+    },
+    "load_average": [
+      2.67333984375,
+      4.51416015625,
+      7.0107421875
+    ],
+    "background_cpu_percent": 51.29999999999999,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 12.8,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.6,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.8,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.2,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 283.702807708,
+    "cell": {
+      "fork": 6,
+      "variant": "baseline"
+    },
+    "load_average": [
+      2.5390625,
+      4.45556640625,
+      6.97509765625
+    ],
+    "background_cpu_percent": 49.60000000000003,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 9.7,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.0,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.7,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.4,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 288.765868833,
+    "cell": {
+      "fork": 6,
+      "variant": "baseline"
+    },
+    "load_average": [
+      2.65576171875,
+      4.44775390625,
+      6.95751953125
+    ],
+    "background_cpu_percent": 68.2,
+    "processes": [
+      {
+        "pid": 57075,
+        "cpu_percent": 18.0,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 428,
+        "cpu_percent": 11.1,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.0,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.8,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 676,
+        "cpu_percent": 5.2,
+        "name": "com.apple.DriverKit-AppleBCMWLAN"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 293.829064958,
+    "cell": {
+      "fork": 6,
+      "variant": "baseline"
+    },
+    "load_average": [
+      2.76318359375,
+      4.43994140625,
+      6.93994140625
+    ],
+    "background_cpu_percent": 50.29999999999999,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 10.4,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.0,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.5,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 5.6,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 298.89757075,
+    "cell": {
+      "fork": 6,
+      "variant": "baseline"
+    },
+    "load_average": [
+      2.70166015625,
+      4.3994140625,
+      6.91064453125
+    ],
+    "background_cpu_percent": 50.90000000000002,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.0,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 9.9,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.8,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.1,
+        "name": "Google Chrome Helper (Renderer)"
+      },
+      {
+        "pid": 20399,
+        "cpu_percent": 5.5,
+        "name": "Codex (Renderer)"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 303.956502583,
+    "cell": {
+      "fork": 6,
+      "variant": "baseline"
+    },
+    "load_average": [
+      2.56494140625,
+      4.3427734375,
+      6.8759765625
+    ],
+    "background_cpu_percent": 41.900000000000006,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.4,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 10.2,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 6.5,
+        "name": "Google Chrome Helper"
+      }
+    ]
+  },
+  {
+    "monotonic_seconds": 309.015373416,
+    "cell": {
+      "fork": 6,
+      "variant": "baseline"
+    },
+    "load_average": [
+      2.439453125,
+      4.287109375,
+      6.84130859375
+    ],
+    "background_cpu_percent": 57.90000000000001,
+    "processes": [
+      {
+        "pid": 428,
+        "cpu_percent": 11.3,
+        "name": "WindowServer"
+      },
+      {
+        "pid": 443,
+        "cpu_percent": 11.3,
+        "name": "coreaudiod"
+      },
+      {
+        "pid": 9917,
+        "cpu_percent": 7.0,
+        "name": "Google Chrome Helper"
+      },
+      {
+        "pid": 57075,
+        "cpu_percent": 6.6,
+        "name": "Google Chrome Helper (Renderer)"
+      }
+    ]
+  }
+]

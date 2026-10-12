@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/experiments/published-memory/run.py", line 5, in <module>
+    if sys.flags.optimize: raise RuntimeError('Run without Python optimization')
+RuntimeError: Run without Python optimization

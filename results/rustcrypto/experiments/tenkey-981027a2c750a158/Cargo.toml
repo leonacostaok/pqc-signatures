@@ -1,0 +1,12 @@
+[package]
+name="mldsa-keygen-experiment"
+version="0.0.0"
+edition="2024"
+[workspace]
+[dependencies]
+baseline = { package = "ml-dsa-baseline", path = "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/prepared-4b0bcedd916d66de/baseline/ml-dsa", features = ["zeroize"] }
+candidate = { package = "ml-dsa-candidate", path = "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/prepared-4b0bcedd916d66de/candidate/ml-dsa", features = ["zeroize"] }
+serde={version="=1.0.228",features=["derive"]}
+serde_json="=1.0.150"
+hex="=0.4.3"
+libc="=0.2.186"

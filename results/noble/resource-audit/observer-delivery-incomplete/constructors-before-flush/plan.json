@@ -1,0 +1,32 @@
+[
+  {
+    "round": 0,
+    "parameter": 44,
+    "variant": "baseline"
+  },
+  {
+    "round": 0,
+    "parameter": 44,
+    "variant": "candidate"
+  },
+  {
+    "round": 0,
+    "parameter": 65,
+    "variant": "baseline"
+  },
+  {
+    "round": 0,
+    "parameter": 65,
+    "variant": "candidate"
+  },
+  {
+    "round": 0,
+    "parameter": 87,
+    "variant": "baseline"
+  },
+  {
+    "round": 0,
+    "parameter": 87,
+    "variant": "candidate"
+  }
+]

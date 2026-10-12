@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+    "support",
+    "ML-DSA-65"
+  ],
+  "started_at": "2026-10-12T06:42:03.784232+00:00",
+  "finished_at": "2026-10-12T06:42:03.788045+00:00",
+  "returncode": 0,
+  "stdout": "{\"available\":true}\n",
+  "stderr": ""
+}

@@ -1,0 +1,43 @@
+{
+  "complete": true,
+  "source": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-trim",
+  "commands": [
+    {
+      "argv": [
+        "cmake",
+        "-S",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-trim",
+        "-B",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/liboqs/build/sha2-trim",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DOQS_DIST_BUILD=ON",
+        "-DOQS_MINIMAL_BUILD=SIG_slh_dsa_pure_sha2_128s;SIG_slh_dsa_pure_sha2_128f;SIG_slh_dsa_pure_sha2_192s;SIG_slh_dsa_pure_sha2_192f;SIG_slh_dsa_pure_sha2_256s;SIG_slh_dsa_pure_sha2_256f",
+        "-DOPENSSL_ROOT_DIR=/opt/homebrew/opt/openssl@3"
+      ],
+      "exit_code": 0,
+      "log": "0.log",
+      "sha256": "54544308e781b792d383fb1c38686df2051d30f16211df5b920150e50f049ad1"
+    },
+    {
+      "argv": [
+        "cmake",
+        "--build",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/liboqs/build/sha2-trim",
+        "--target",
+        "test_slh_dsa_sha2",
+        "-j2"
+      ],
+      "exit_code": 0,
+      "log": "1.log",
+      "sha256": "f7b75738240f7ad6b3d5d3a76f108ae8b85b29fb644df8be42e280ba9da7c42b"
+    },
+    {
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/liboqs/build/sha2-trim/tests/test_slh_dsa_sha2"
+      ],
+      "exit_code": 0,
+      "log": "2.log",
+      "sha256": "4f303ce527fd71b07d08efa1adbc8e485bb0eeb73eaa91568008167e023d2b7e"
+    }
+  ]
+}

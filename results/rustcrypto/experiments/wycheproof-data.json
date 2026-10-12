@@ -1,0 +1,35 @@
+{
+  "revision": "0fd0ec1cf2114f456f5c3e7c61ba807fb1311b45",
+  "files": [
+    {
+      "path": "testvectors_v1/mldsa_44_sign_seed_test.json",
+      "bytes": 328579,
+      "sha256": "eea6d28dc5550a7314a9a12438e19dc58b0857fefed51eda6bfcc7b22f50cf9f"
+    },
+    {
+      "path": "testvectors_v1/mldsa_65_sign_seed_test.json",
+      "bytes": 466699,
+      "sha256": "ed9b799fb0cbb2c0eee6b6bdee10d7b3a4b86d01f9dccaaa259f486936c9e50c"
+    },
+    {
+      "path": "testvectors_v1/mldsa_87_sign_seed_test.json",
+      "bytes": 554151,
+      "sha256": "5c82830d1b15a5fe8ddeb8602f1ca93f4ca07e49f9e6b1b477d259534908efe7"
+    },
+    {
+      "path": "testvectors_v1/mldsa_44_verify_test.json",
+      "bytes": 495763,
+      "sha256": "e6530fc2a76adcae3c62e2403fc1096d3170ff3c6c13b7ad1dc0b282afd4d6c8"
+    },
+    {
+      "path": "testvectors_v1/mldsa_65_verify_test.json",
+      "bytes": 681247,
+      "sha256": "2ebc037bfa7b64e1343dee49f2398bb01c683e4fafd5aab30153786f952359b7"
+    },
+    {
+      "path": "testvectors_v1/mldsa_87_verify_test.json",
+      "bytes": 866125,
+      "sha256": "6148cbaac729df9115a7061ea47e6a5b61104236eb8e961a11af31a0d05e4274"
+    }
+  ]
+}

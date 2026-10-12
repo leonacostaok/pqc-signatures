@@ -1,0 +1,34 @@
+--- a/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/WotsPlus.java
++++ b/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/WotsPlus.java
+@@ -22,14 +22,14 @@
+         for (int i = 0; i < engine.WOTS_LEN; i++)
+         {
+             ADRS adrs = new ADRS(paramAdrs);
+-            adrs.setTypeAndClear(ADRS.WOTS_PRF);
++            adrs.changeType(ADRS.WOTS_PRF);
+             adrs.setKeyPairAddress(paramAdrs.getKeyPairAddress());
+             adrs.setChainAddress(i);
+             adrs.setHashAddress(0);
+ 
+             byte[] sk = engine.PRF(pkSeed, skSeed, adrs);
+ 
+-            adrs.setTypeAndClear(ADRS.WOTS_HASH);
++            adrs.changeType(ADRS.WOTS_HASH);
+             adrs.setKeyPairAddress(paramAdrs.getKeyPairAddress());
+             adrs.setChainAddress(i);
+             adrs.setHashAddress(0);
+@@ -93,12 +93,12 @@
+         byte[][] sig = new byte[engine.WOTS_LEN][];
+         for (int i = 0; i < engine.WOTS_LEN; i++)
+         {
+-            adrs.setTypeAndClear(ADRS.WOTS_PRF);
++            adrs.changeType(ADRS.WOTS_PRF);
+             adrs.setKeyPairAddress(paramAdrs.getKeyPairAddress());
+             adrs.setChainAddress(i);
+             adrs.setHashAddress(0);
+             byte[] sk = engine.PRF(pkSeed, skSeed, adrs);
+-            adrs.setTypeAndClear(ADRS.WOTS_HASH);
++            adrs.changeType(ADRS.WOTS_HASH);
+             adrs.setKeyPairAddress(paramAdrs.getKeyPairAddress());
+             adrs.setChainAddress(i);
+             adrs.setHashAddress(0);

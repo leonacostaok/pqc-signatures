@@ -1,0 +1,19 @@
+{
+  "repository": "/Users/dandelionlabs/development/personal/noble-post-quantum",
+  "production_path": "src/ml-dsa.ts",
+  "source_identity": {
+    "baseline": {
+      "commit": "48e493397e69fa3e377bd454ff5261b1a7e22651",
+      "production_sha256": "7c54716e7e2e7983b2132b0d3ebd04c5c3d031efffc7c17d15db75245ead9992",
+      "measured_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/noble-robustness/libs/noble/build/robustness/snapshots/c07d4385a773caa3/0.7.1/baseline/node_modules/@noble/post-quantum/src/ml-dsa.ts",
+      "exact_match": true
+    },
+    "candidate": {
+      "commit": "39d56d145aa0127f3117f191aec0522aeb76397f",
+      "production_sha256": "6cbfbb35ba9bd571dfa554fb23007dcfad53624bc195016d354b951cb622c6e5",
+      "measured_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/noble-robustness/libs/noble/build/robustness/snapshots/c07d4385a773caa3/0.7.1/candidate/node_modules/@noble/post-quantum/src/ml-dsa.ts",
+      "exact_match": true
+    }
+  },
+  "diff": " src/ml-dsa.ts      | 35 +++++++++++++++++------------\n test/basic.test.ts | 65 ++++++++++++++++++++++++++++++++++++++++++++++++++++++\n 2 files changed, 86 insertions(+), 14 deletions(-)\n"
+}

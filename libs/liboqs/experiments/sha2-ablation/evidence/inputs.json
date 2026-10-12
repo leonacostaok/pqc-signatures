@@ -1,0 +1,600 @@
+{
+  "domain": "pqc-ten-new-keys-v1/liboqs/sha2-ablation-final-v1",
+  "cases": [
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "key": -1,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128F/warmup",
+      "message_bytes": 31,
+      "context_bytes": 3,
+      "seed_sha256": "b27bf0ea230a38adf0fd22f0ec2e002982a4f14b2ededa9d701c82ee4a791ecf",
+      "signing_entropy_sha256": "21db2715c07554be9a8c1e1c62f9b4eaef7b141afda79b1e2d2624ffa6eeb798"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "key": 0,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128F/0",
+      "message_bytes": 0,
+      "context_bytes": 0,
+      "seed_sha256": "4fa98d5873b64d7302da24ed267e0ad36648a3d259cbd18be833b30b675d1108",
+      "signing_entropy_sha256": "f6ec8b0a30cb40eeeb8d3c17f23e5585218ebad9cc2940671d5032ad4f4c99cc"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "key": 1,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128F/1",
+      "message_bytes": 32,
+      "context_bytes": 1,
+      "seed_sha256": "64191335ffa90c964aa9ac99d4d0197e1d464b1d85c5187bc8de83e3b3d3b862",
+      "signing_entropy_sha256": "d214780f1209a6b30b7a07f9c784874cee14fa21b3a33250aa24bc8c21bc53ab"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "key": 2,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128F/2",
+      "message_bytes": 256,
+      "context_bytes": 17,
+      "seed_sha256": "2a8d8f7ef53fe6013fd71a44b5e8cb947c09fcd1e2ddeb4fa3a98e03d039f71c",
+      "signing_entropy_sha256": "e4e730785cae8260af367068b14e07c4735e80283588aa253f55672ff6fc3b69"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "key": 3,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128F/3",
+      "message_bytes": 4096,
+      "context_bytes": 255,
+      "seed_sha256": "5f1f0bf5d55732cab61df2e84a51ebe0031c6f8b30830d6303fdad997276f838",
+      "signing_entropy_sha256": "a8beb2a8e581b871d7cde81bf6636625900d199c90c01552aab04b762a6beebd"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "key": 4,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128F/4",
+      "message_bytes": 64,
+      "context_bytes": 0,
+      "seed_sha256": "21a53e696cdcff0bab43e0ad277faacc4960d1c536fd49b32750e07999cc2763",
+      "signing_entropy_sha256": "3fb08e339ffb4b6438ce780b33bcd89a825443b8a5081ca0087b2b8f4508f522"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "key": 5,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128F/5",
+      "message_bytes": 1024,
+      "context_bytes": 1,
+      "seed_sha256": "c9e5b993137906f9ef8077f4e7b0c28debf4b283b121d7cf8df6363223047486",
+      "signing_entropy_sha256": "e18c52d6bd08dce2404749afec57eb4fbf15df244f00395481ee10d7d909bbf4"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "key": 6,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128F/6",
+      "message_bytes": 7,
+      "context_bytes": 17,
+      "seed_sha256": "da4e7745376aeb65bddcc03686c2431b59ed3ab74b73a64d4522ca7c33103254",
+      "signing_entropy_sha256": "dda9a7d206ae8d43f60c8c1c4d0bcc5a3af3b3256eeed9e3ac8e003d764ad3ba"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "key": 7,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128F/7",
+      "message_bytes": 513,
+      "context_bytes": 255,
+      "seed_sha256": "54e6c88cd8a8fb60cde9feb9f6a035f0131df908cd7221b78cdf92fb1929fe28",
+      "signing_entropy_sha256": "adaa52b0ac88d05534acbe9c695527f1d56def4ec58579b2ba9fe4da8ee4a1f3"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "key": 8,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128F/8",
+      "message_bytes": 2048,
+      "context_bytes": 32,
+      "seed_sha256": "e9536c00db5c5e339e4b95cd35ca985a59ce4c3804127b2b4b4e24b6704924fb",
+      "signing_entropy_sha256": "9afb65be48f311bb3c195e6f486490089817e95051152e940727dd3a37d4d1ee"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128F",
+      "key": 9,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128F/9",
+      "message_bytes": 8192,
+      "context_bytes": 128,
+      "seed_sha256": "d8c2a3133dde36a9a3b51ea4906486865e58c8edfb974d70a0152eaadc5a150b",
+      "signing_entropy_sha256": "37ba03b507b5c7242899e485dd323fb4c24a8774d05bda56908aac830db09260"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "key": -1,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128S/warmup",
+      "message_bytes": 31,
+      "context_bytes": 3,
+      "seed_sha256": "204ddb924eb2ab341e4f55500491c7b3eb0ae3503144d349b908910f3b5656e5",
+      "signing_entropy_sha256": "b97c615a689e94d48d3f916c3775adbbb8fc3d5f7db60b88e4b63243bfb739b3"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "key": 0,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128S/0",
+      "message_bytes": 0,
+      "context_bytes": 0,
+      "seed_sha256": "2f0e07f0f2edbba30b2373850a698b71b58a43c1c679bb81051a638c18061383",
+      "signing_entropy_sha256": "cec11c68a18bc2fe057d947148d95e35da4fb0687d29d5901245ab03769c0c4a"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "key": 1,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128S/1",
+      "message_bytes": 32,
+      "context_bytes": 1,
+      "seed_sha256": "4d301bc44b5c447739a50957578d9881dc5965c19690155ed504430b8606db50",
+      "signing_entropy_sha256": "17bdf95be4d16ebdac0fc076ff956c9ccbed4eec2557c25c26a89d42c8dec803"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "key": 2,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128S/2",
+      "message_bytes": 256,
+      "context_bytes": 17,
+      "seed_sha256": "97d2d30a2d0a6d75b5582f3f59cd66201b636340f9f533ab8938cdb410743bd8",
+      "signing_entropy_sha256": "2f772e20ac3c72892b8196cb06ea0cb2ec7ead834c5fcfaa971a3e5dd0b4d333"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "key": 3,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128S/3",
+      "message_bytes": 4096,
+      "context_bytes": 255,
+      "seed_sha256": "9a4c90b86a9fe0829425375c550cfa8baa1c2785d677698e763968f83bcd1e54",
+      "signing_entropy_sha256": "7a0466884d80e01a96dd38c4fc619c3e186cef97d343a61d9703e176252de2ad"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "key": 4,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128S/4",
+      "message_bytes": 64,
+      "context_bytes": 0,
+      "seed_sha256": "e36bac8e56b84930cb4c5c5ee226666ff824e847539a9a49ccf457125cf2b248",
+      "signing_entropy_sha256": "4852a22dd423c1717fdd0f817aeea77b0fe3ba3bf6c20c8a9338f706d11468c0"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "key": 5,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128S/5",
+      "message_bytes": 1024,
+      "context_bytes": 1,
+      "seed_sha256": "b3283582220a6229d0d0808009fe6befd78bc0cd14da557674436c902d4dfae8",
+      "signing_entropy_sha256": "b86ee17f374d84458bd16608a458b16e0bc83951fe57508928ed641bfbefb4e3"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "key": 6,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128S/6",
+      "message_bytes": 7,
+      "context_bytes": 17,
+      "seed_sha256": "3b1018acc74476e5fb5662c21c6e21f0983234354a828dcf8f93bd699b505ea2",
+      "signing_entropy_sha256": "dd0421b139cf3d679f2a8058191e92dd7dac63f2b60e47b2178e96e1a7f79952"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "key": 7,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128S/7",
+      "message_bytes": 513,
+      "context_bytes": 255,
+      "seed_sha256": "b53a541cfbdf3d081b3ab416bb4d1952d970661e77ddff11653cef51ff977678",
+      "signing_entropy_sha256": "3003d7b0f14401117c561e3e327b733aa63a829c4a2c0fa07ce89009b210926b"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "key": 8,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128S/8",
+      "message_bytes": 2048,
+      "context_bytes": 32,
+      "seed_sha256": "0b196b41895220f0090160852a2af5a3b2261ce3b201a959f0a5439449ee8a50",
+      "signing_entropy_sha256": "a0e047352a62a513ff4211ee7542bbe10952f1c1660c355740c9409a69707525"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_128S",
+      "key": 9,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_128S/9",
+      "message_bytes": 8192,
+      "context_bytes": 128,
+      "seed_sha256": "9b4137ec8dcd12a7c5abf1ebd3d92a8b674bbb8cf872f0986b133af8af044604",
+      "signing_entropy_sha256": "3c37592302ac20341b933210970080350cea5966dfcdfd22999cb8e276e4fd16"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "key": -1,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192F/warmup",
+      "message_bytes": 31,
+      "context_bytes": 3,
+      "seed_sha256": "0533e6ad904abe4d87ab5daebf08ddd23324b2d23d05dd30f1473791a17aaec4",
+      "signing_entropy_sha256": "c9bb65efdd00bd3be5326b572121047e70f243a17ae687deede84a8d69721292"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "key": 0,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192F/0",
+      "message_bytes": 0,
+      "context_bytes": 0,
+      "seed_sha256": "e5d4301644eb60e75fb48934633bdeaa8f3c21846a43d7662d87f3d166ddf44d",
+      "signing_entropy_sha256": "2784da957702897e36db10fc7525e3f5d14fcd4dfefae904caf77081cb4d9943"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "key": 1,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192F/1",
+      "message_bytes": 32,
+      "context_bytes": 1,
+      "seed_sha256": "89abb59cf61a4e31934cc61cd0be253f6f2a9fb0df8af0368650306b5a184d62",
+      "signing_entropy_sha256": "c161fd848fc85872d16fc047d9e32d14023a095e98d86581e80ae3cdb747eb04"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "key": 2,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192F/2",
+      "message_bytes": 256,
+      "context_bytes": 17,
+      "seed_sha256": "856630f2bdfe6c6f43a96fdecb9cc3c92c900fdde03585eeed8638b396f1142a",
+      "signing_entropy_sha256": "643a2fdd00ef4e647d1feca11c2f1201c1530ccea7eaa3250f7f43b34e83540c"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "key": 3,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192F/3",
+      "message_bytes": 4096,
+      "context_bytes": 255,
+      "seed_sha256": "dca1f8557e9cf4120f160859c92a72b62c880002d5709aa706928432d5e3b3ec",
+      "signing_entropy_sha256": "fd37a64386f987cf6c92528d397565ba79587123031e5bf61e8a6cdee5b8c644"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "key": 4,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192F/4",
+      "message_bytes": 64,
+      "context_bytes": 0,
+      "seed_sha256": "82c6c76c1e3b5e744bf367e1bcc7a40a0460519e6e43cd896a7dbeedaaf32795",
+      "signing_entropy_sha256": "364e238b48de7051f39f96c812d84d31dde087f2c25e3f4b03842195db9703f8"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "key": 5,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192F/5",
+      "message_bytes": 1024,
+      "context_bytes": 1,
+      "seed_sha256": "1b4e6f0f8d03bc6fcff978beabd0776dc13099a045cffb760c7b7103c0300d91",
+      "signing_entropy_sha256": "6c907908646a37282578d7e20a598bb506c1c217db54ddb457a96b95a019434b"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "key": 6,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192F/6",
+      "message_bytes": 7,
+      "context_bytes": 17,
+      "seed_sha256": "a230472cf7f4751b2f5dec590e4b3932137aa9e78a3ac027729819573c532b97",
+      "signing_entropy_sha256": "dbb2f52563bee3c0bce7fb5bef64a1ea99d4aa724a0e1f151ae40f3641db4e41"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "key": 7,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192F/7",
+      "message_bytes": 513,
+      "context_bytes": 255,
+      "seed_sha256": "c9a462e3c9ab9846ba6ea4b8625226ff9b35147fc29c49c07fec42a6af889b84",
+      "signing_entropy_sha256": "803bc4880e2a3237891ac2f2728d1bf164beca13b88e4a60ebfc1045302e5049"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "key": 8,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192F/8",
+      "message_bytes": 2048,
+      "context_bytes": 32,
+      "seed_sha256": "80602cd6376547e5ebdadb467a4f720f98799915857b9f6ecdc9706e9071d9f2",
+      "signing_entropy_sha256": "2ebb50a8e9ea0946493b0894c4452ac7f9baeaddb3056820ca538391bfdce9b9"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192F",
+      "key": 9,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192F/9",
+      "message_bytes": 8192,
+      "context_bytes": 128,
+      "seed_sha256": "06d14fe2aaf6bd8c5afcd8122580e1f6d615aa409383fd0da7c96b3b4a0da299",
+      "signing_entropy_sha256": "a2985accdee205319f0c2705086307a5997a40998d2239c1253b8b68d8b1264f"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "key": -1,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192S/warmup",
+      "message_bytes": 31,
+      "context_bytes": 3,
+      "seed_sha256": "b4f25db67827adee2b56a6e3c69fb632846eb72d148fd2798dff362abdc26607",
+      "signing_entropy_sha256": "85fc63d8b72c404e53e8c406b4baa219c7c94af0d09f4c98ee13cfbe5743e559"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "key": 0,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192S/0",
+      "message_bytes": 0,
+      "context_bytes": 0,
+      "seed_sha256": "7e2fbe6b59246dcceb55ac3e27eedc4911991af34f1f8ade1451f666bac6b99b",
+      "signing_entropy_sha256": "86e3f7c7801dac4e0283b1789b2cf64380a07e4f67a9aef6acf4a782bcb2455a"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "key": 1,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192S/1",
+      "message_bytes": 32,
+      "context_bytes": 1,
+      "seed_sha256": "7aa740f92eca46c0791c38192a0f2e4f43efd476989a343e5824fee8e6293427",
+      "signing_entropy_sha256": "94f400e36ca9dd6bbb905fea96052a73cbba52bc56b22d2cc7cde7a821b4380d"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "key": 2,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192S/2",
+      "message_bytes": 256,
+      "context_bytes": 17,
+      "seed_sha256": "3964b8614b03678270bab396694c6d867e785195d8a5a09c00dda2f90ff8ab8b",
+      "signing_entropy_sha256": "a5457747e59af93e54a030e8665696a66b10fa3d18fbcb7e5aefad7055ec5a3a"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "key": 3,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192S/3",
+      "message_bytes": 4096,
+      "context_bytes": 255,
+      "seed_sha256": "81cf4eee493cc0bf92cdd876b4bde420d48e00de62f85737685d94149c2cb8fa",
+      "signing_entropy_sha256": "be252d60c4fba967eeb7983de868bea93807879e120e8f424d57b9902075e527"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "key": 4,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192S/4",
+      "message_bytes": 64,
+      "context_bytes": 0,
+      "seed_sha256": "2f471a8f44d5a028116528fff8a344230a48d074c8fbb1985c2fcb8591bc1db2",
+      "signing_entropy_sha256": "443e56377f95de38833cbd3abbb10aa118ad85dca8d4402b74c02fc2144cb770"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "key": 5,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192S/5",
+      "message_bytes": 1024,
+      "context_bytes": 1,
+      "seed_sha256": "c1c20ac17eec91cdd3c2dd2ddb68e478fd0c2ebe863a11248441d078556c25a2",
+      "signing_entropy_sha256": "ea1b6a5803a71d68687e382f18f757c255c4b73296e682dcb104724539daa410"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "key": 6,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192S/6",
+      "message_bytes": 7,
+      "context_bytes": 17,
+      "seed_sha256": "d9c6b5516796b91bebe899bddf923c1886eb291ceb6537c5047fe9a7719f8446",
+      "signing_entropy_sha256": "842c443b43ece8d6e873d1536aa2367a232b5526f99c79e6e3a96b5f10d2df67"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "key": 7,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192S/7",
+      "message_bytes": 513,
+      "context_bytes": 255,
+      "seed_sha256": "465060252b21f2888cd7a37676d663ed00183d333872c22049d14fef64335add",
+      "signing_entropy_sha256": "7246fd2e6296e19359ec6f5cf8855fe527654c8811a27241a1e10b86e01df07e"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "key": 8,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192S/8",
+      "message_bytes": 2048,
+      "context_bytes": 32,
+      "seed_sha256": "9a68b0a84380a37b468343fcdd19c74a542c233f1fb3097d858a9311f0b97ef2",
+      "signing_entropy_sha256": "3dd886a64c6f4837a204f45f0f49147c5c0759584a81bd842ec742f9c30109a5"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_192S",
+      "key": 9,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_192S/9",
+      "message_bytes": 8192,
+      "context_bytes": 128,
+      "seed_sha256": "69365e17731c4a47eee9b40bc9e7a19c3a9badbc499241819ec00667aaa152c4",
+      "signing_entropy_sha256": "6385b3331591e402e3191f191eb5aac050c66edf2d58765d9ea8202e29082a53"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "key": -1,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256F/warmup",
+      "message_bytes": 31,
+      "context_bytes": 3,
+      "seed_sha256": "11375eed0761f1a87cc4be4459cffbd87738a5993205c682d2e78bba11f47d74",
+      "signing_entropy_sha256": "047deff32a841b6ef0dafba47adefbe16699443c094b6bc1be70137b30dc5f71"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "key": 0,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256F/0",
+      "message_bytes": 0,
+      "context_bytes": 0,
+      "seed_sha256": "fa8d185c93a2be33e2c3b9241eae64b25ddb8d86ee871dc20e65c45f824b516f",
+      "signing_entropy_sha256": "b7fd08f635b606256c9958f2746917a8372703e7ab2c4a7d0d42af922291746b"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "key": 1,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256F/1",
+      "message_bytes": 32,
+      "context_bytes": 1,
+      "seed_sha256": "20e237a67d0ff58278abed874a88b5ed8ce06ee452b82bf6206e492e2cdf8915",
+      "signing_entropy_sha256": "376744a75e24c07b0327988f57572953f58d5b5a8bd5415057ee4f0710745cc8"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "key": 2,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256F/2",
+      "message_bytes": 256,
+      "context_bytes": 17,
+      "seed_sha256": "a3cd3296853af5c9f272b76b04ff55234c035ed4baff502ca2ab733271b76af5",
+      "signing_entropy_sha256": "fc3f01ee2da67013537a127d89476dde34ded5149af0e3e42d8af2e4cf8c8c03"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "key": 3,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256F/3",
+      "message_bytes": 4096,
+      "context_bytes": 255,
+      "seed_sha256": "0e6f64e798a4f20d17cf8c69c54556aa49a08f49360a7c37986c9c3ee954630e",
+      "signing_entropy_sha256": "a69c433daad1d53ec15829a7f74cab5e2b21ac85eda4820f4d45fa81bb984ca4"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "key": 4,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256F/4",
+      "message_bytes": 64,
+      "context_bytes": 0,
+      "seed_sha256": "e96390bc28335364c38b79bc4aa011ea0fdf2c28e7a6e592b6b649584eec8e1f",
+      "signing_entropy_sha256": "999072c251580571eec6d22ee958ef1cc812f837d4af5b5465dbef804f8205f4"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "key": 5,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256F/5",
+      "message_bytes": 1024,
+      "context_bytes": 1,
+      "seed_sha256": "5fe35cea624506217a7b09640e2641d7b3a4305f2006263c5eac7d0ee1591261",
+      "signing_entropy_sha256": "7b84734386adeab9d4e02aaf1143cdc7fb60a4a48073750cd12d112450b470a2"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "key": 6,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256F/6",
+      "message_bytes": 7,
+      "context_bytes": 17,
+      "seed_sha256": "d78c87d47f545bc00427ebcef5758deeee5ec3d2b858a4e36a7a145148206711",
+      "signing_entropy_sha256": "aa13a67406681ac63464918a50d9ada341d3dab0a4baadc93f3041765a59d727"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "key": 7,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256F/7",
+      "message_bytes": 513,
+      "context_bytes": 255,
+      "seed_sha256": "df4004512d16a626cca12be06966ad5f422bc9651b1a80be34f63e6bd0ce96b2",
+      "signing_entropy_sha256": "5787a011d2837b6eb08b62e32d86cf50fce254d37eab942e02b87b73069a358e"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "key": 8,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256F/8",
+      "message_bytes": 2048,
+      "context_bytes": 32,
+      "seed_sha256": "6b907ac731a5455a499e1a3e20fc1de15939111d7bd4312e90b51b46d187120c",
+      "signing_entropy_sha256": "c1982dc3d4d7707942d78b3197e471944d00dc8a321c09b3d0c8234e7d14dc06"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256F",
+      "key": 9,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256F/9",
+      "message_bytes": 8192,
+      "context_bytes": 128,
+      "seed_sha256": "64842309c455c5701eeb68512223191a0d1c943108871ea6b850196b61d7152b",
+      "signing_entropy_sha256": "d43f1c2d8dc754f53d77155ea9dc6ee95b15de156423dd80e256a6523f9632ba"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "key": -1,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256S/warmup",
+      "message_bytes": 31,
+      "context_bytes": 3,
+      "seed_sha256": "5c4fb3eed5483bef300e1152bb5749f1d97d21c93f07d93e433e09f074e50a06",
+      "signing_entropy_sha256": "f2928a2693c962d7251f2c4ac35fe1d3fc65541d00f4759037e7b2204946e12b"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "key": 0,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256S/0",
+      "message_bytes": 0,
+      "context_bytes": 0,
+      "seed_sha256": "b9a28e01f327af145ea225f39a8f08e99d3cb81f00388538cca31262213ba395",
+      "signing_entropy_sha256": "de02f3e0d40f5668dd34cf3eee25ec8da00b3f82e6e7835dcf7798bf599c9f66"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "key": 1,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256S/1",
+      "message_bytes": 32,
+      "context_bytes": 1,
+      "seed_sha256": "b8113be1ef5884d95b0fec81ea2f303a333c069b170a067d8e4ee413ed66204c",
+      "signing_entropy_sha256": "436102c32beadfba281ed36bfe9a77aa2020041f48e5b8a0bd58b2f2868c4460"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "key": 2,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256S/2",
+      "message_bytes": 256,
+      "context_bytes": 17,
+      "seed_sha256": "991690e8b2010794568d0dffc5d31ea49b51c7a6afa1c25793d89517c69ecd38",
+      "signing_entropy_sha256": "c168c0fe70b10a7893910480e7d5c3d661efbd7eca582ceac40eca6b782a932e"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "key": 3,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256S/3",
+      "message_bytes": 4096,
+      "context_bytes": 255,
+      "seed_sha256": "cb4d62e676997e2664da764e9320e12d3ae3373d3475defbb8490c9600b3dff5",
+      "signing_entropy_sha256": "18c7ff352dd1f9dd864a93284e64dfce3a6889b457934095eefd63d323755bfe"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "key": 4,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256S/4",
+      "message_bytes": 64,
+      "context_bytes": 0,
+      "seed_sha256": "088e68506ca01a28231d4af5deb9ff1e445ea84ff56608e32a44043d3d27f7de",
+      "signing_entropy_sha256": "87c07b831ea0cd8db7093c5392c9861c507219fd809de734635d2f97c8968e3d"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "key": 5,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256S/5",
+      "message_bytes": 1024,
+      "context_bytes": 1,
+      "seed_sha256": "5838b66ba9524e203ef910aba40d8416499aebfbf1e7e22f8cc67c65950b7053",
+      "signing_entropy_sha256": "8024307ad31d632d58956c88790f50ae70624e7ea18ca6c5778589b6d23e747e"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "key": 6,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256S/6",
+      "message_bytes": 7,
+      "context_bytes": 17,
+      "seed_sha256": "c2839e72dec919fea5443b45489ca1f8ce4525d62761d25670bc3c498eb139b6",
+      "signing_entropy_sha256": "70db1748107e8dc48a1a0837c4d3a68819de74148bd5170837ccbae50c1794d5"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "key": 7,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256S/7",
+      "message_bytes": 513,
+      "context_bytes": 255,
+      "seed_sha256": "fa35ed147858470036c402f07441eea49086ef7cfd3d717ec43b7d9f9cc9048f",
+      "signing_entropy_sha256": "52451ba983b5b74fd9cd30a3c24f9f793426f9d9da03cd140f5d450b19b9da5d"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "key": 8,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256S/8",
+      "message_bytes": 2048,
+      "context_bytes": 32,
+      "seed_sha256": "269e88be4d8c036d3bf11d30d3c6e3ea6a532dc2f5f647ab001eead0ba1e1d4a",
+      "signing_entropy_sha256": "5aa505c99b7d93f84560d0e92290ff4b337de96db8b6a867a636a10fb8a3305a"
+    },
+    {
+      "parameter": "SLH_DSA_PURE_SHA2_256S",
+      "key": 9,
+      "label": "sha2-ablation-final-v1/SLH_DSA_PURE_SHA2_256S/9",
+      "message_bytes": 8192,
+      "context_bytes": 128,
+      "seed_sha256": "b2909885c8456fd94865c085fc907a6cb475323579bcfa6a061f9965e594220e",
+      "signing_entropy_sha256": "4cab1f2079eb0dce9cf7c78b5992a9a4d1ac8689f5f0cb4975493058bae14925"
+    }
+  ],
+  "sha256": "2aa4543decc01f5f8844a374977b69d4a4ff406d0fb03d944c3ce546005362fb"
+}

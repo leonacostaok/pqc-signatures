@@ -1,0 +1,13 @@
+Fresh process baseline: sha2_128f, ten new keys
+Fresh process baseline: sha2_128s, ten new keys
+Fresh process baseline: sha2_192f, ten new keys
+Fresh process baseline: sha2_192s, ten new keys
+Fresh process baseline: sha2_256f, ten new keys
+Fresh process baseline: sha2_256s, ten new keys
+Fresh process baseline: shake_128f, ten new keys
+Fresh process baseline: shake_128s, ten new keys
+Fresh process baseline: shake_192f, ten new keys
+Fresh process baseline: shake_192s, ten new keys
+Fresh process baseline: shake_256f, ten new keys
+Fresh process baseline: shake_256s, ten new keys
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/results/bouncycastle/experiments/tenkey-baseline.json

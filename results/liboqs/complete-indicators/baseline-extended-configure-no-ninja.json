@@ -1,0 +1,20 @@
+{
+  "command": [
+    "cmake",
+    "-S",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs",
+    "-B",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/baseline-extended",
+    "-GNinja",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DOQS_BUILD_ONLY_LIB=ON",
+    "-DOQS_USE_OPENSSL=ON",
+    "-DOQS_USE_SHA2_OPENSSL=ON",
+    "-DOQS_USE_SHA3_OPENSSL=OFF",
+    "-DOPENSSL_ROOT_DIR=/opt/homebrew/opt/openssl@3",
+    "-DOQS_MINIMAL_BUILD=SIG_ml_dsa_44;SIG_ml_dsa_65;SIG_ml_dsa_87;SIG_falcon_512;SIG_falcon_1024;SIG_slh_dsa_pure_shake_128f;SIG_slh_dsa_pure_shake_128s;SIG_slh_dsa_pure_shake_192f;SIG_slh_dsa_pure_shake_192s;SIG_slh_dsa_pure_shake_256f;SIG_slh_dsa_pure_shake_256s"
+  ],
+  "returncode": 1,
+  "stdout": "-- Configuring incomplete, errors occurred!\n",
+  "stderr": "CMake Error: CMake was unable to find a build program corresponding to \"Ninja\".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.\nCMake Error: CMAKE_C_COMPILER not set, after EnableLanguage\nCMake Error: CMAKE_ASM_COMPILER not set, after EnableLanguage\n"
+}

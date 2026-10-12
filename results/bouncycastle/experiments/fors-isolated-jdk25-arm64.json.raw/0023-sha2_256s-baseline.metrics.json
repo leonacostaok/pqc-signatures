@@ -1,0 +1,82 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java",
+    "-Xmx512m",
+    "-XX:ActiveProcessorCount=2",
+    "-cp",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/isolated-8044dffd08bf7c63/driver:/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/driver:/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/baseline",
+    "ForsIsolatedBenchmark",
+    "bench",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/fixtures.bin",
+    "baseline",
+    "sha2_256s",
+    "23",
+    "6",
+    "250",
+    "2000"
+  ],
+  "rows": [
+    {
+      "variant": "baseline",
+      "parameter": "sha2_256s",
+      "fork": 23,
+      "round": 0,
+      "iterations": 134,
+      "elapsed_ns": 253437083,
+      "cpu_ns": 253052000,
+      "class_source": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/baseline"
+    },
+    {
+      "variant": "baseline",
+      "parameter": "sha2_256s",
+      "fork": 23,
+      "round": 1,
+      "iterations": 132,
+      "elapsed_ns": 250564250,
+      "cpu_ns": 251932000,
+      "class_source": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/baseline"
+    },
+    {
+      "variant": "baseline",
+      "parameter": "sha2_256s",
+      "fork": 23,
+      "round": 2,
+      "iterations": 132,
+      "elapsed_ns": 250443750,
+      "cpu_ns": 250243000,
+      "class_source": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/baseline"
+    },
+    {
+      "variant": "baseline",
+      "parameter": "sha2_256s",
+      "fork": 23,
+      "round": 3,
+      "iterations": 132,
+      "elapsed_ns": 252009958,
+      "cpu_ns": 253659000,
+      "class_source": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/baseline"
+    },
+    {
+      "variant": "baseline",
+      "parameter": "sha2_256s",
+      "fork": 23,
+      "round": 4,
+      "iterations": 134,
+      "elapsed_ns": 252545709,
+      "cpu_ns": 252313000,
+      "class_source": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/baseline"
+    },
+    {
+      "variant": "baseline",
+      "parameter": "sha2_256s",
+      "fork": 23,
+      "round": 5,
+      "iterations": 134,
+      "elapsed_ns": 252429291,
+      "cpu_ns": 254348000,
+      "class_source": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/baseline"
+    }
+  ],
+  "median_ns": 1894311.3256445047,
+  "median_cpu_ns": 1896949.8530076887
+}

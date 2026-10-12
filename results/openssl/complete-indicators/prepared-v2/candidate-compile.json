@@ -1,0 +1,20 @@
+{
+  "command": [
+    "cc",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/candidate/include",
+    "-I/Users/dandelionlabs/development/personal/openssl/worktrees/slh-sha512-baseline/include",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/experiments/complete-indicators/driver.c",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/candidate/libcrypto.a",
+    "-lpthread",
+    "-o",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/candidate"
+  ],
+  "started_at": "2026-10-12T06:50:26.735021+00:00",
+  "finished_at": "2026-10-12T06:50:26.964903+00:00",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-ablation/sha512-only/driver",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-ablation/evidence/inputs.bin",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-ablation/evidence/final/04-sha512-only/outputs.bin",
+    "10"
+  ],
+  "started_utc": "2026-10-12T02:25:02.983734+00:00"
+}

@@ -1,0 +1,13 @@
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:36:sha2_512_compress	192	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:185:sha2_512_init	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:199:sha2_384_init	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:213:sha2_512_224_init	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:227:sha2_512_256_init	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:241:sha2_512_copy	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:250:sha2_512_update	64	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:285:sha2_512_final_pad	32	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:312:sha2_512_final_len	48	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:321:sha2_512	320	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:330:sha2_384	320	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:339:sha2_512_224	320	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:348:sha2_512_256	320	static

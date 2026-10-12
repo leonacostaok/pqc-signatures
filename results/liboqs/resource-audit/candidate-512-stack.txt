@@ -1,0 +1,13 @@
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:50:sha2_512_compress	256	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:217:sha2_512_init	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:231:sha2_384_init	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:245:sha2_512_224_init	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:259:sha2_512_256_init	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:273:sha2_512_copy	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:282:sha2_512_update	304	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:317:sha2_512_final_pad	272	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:344:sha2_512_final_len	272	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:353:sha2_512	544	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:362:sha2_384	544	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:371:sha2_512_224	544	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c:380:sha2_512_256	544	static

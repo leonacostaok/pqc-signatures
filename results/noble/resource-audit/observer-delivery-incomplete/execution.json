@@ -1,0 +1,29 @@
+{
+  "schema": "noble-resource-execution-v1",
+  "mode": "retained",
+  "started_at": "2026-10-12T06:03:49.243485+00:00",
+  "manifest_sha256": "f1a3d4f1e4f59ae3b16ac2d82dcd2e48bbdf74814e800a87212e4df8a950a263",
+  "python_version": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "python_optimize": 0,
+  "node_options": "",
+  "runs": [
+    {
+      "round": 0,
+      "parameter": 44,
+      "operation": "keygen",
+      "variant": "baseline",
+      "index": 0,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 44, \"round\": 0, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:03:49.244217+00:00",
+      "completed_at": "2026-10-12T06:03:49.873021+00:00",
+      "exit_code": 0,
+      "raw": "000.json",
+      "sha256": "2620a7c24f8875af26a9cf177255326870f068e0e19f772f406d7e2bd7e011e7"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "revision": "3c385e9f4c0b12ce5a86d2b29a17fb3b68dd4e1a",
+  "upstream": "https://github.com/bcgit/bc-test-data",
+  "files": [
+    {
+      "path": "crypto/wycheproof/mldsa_44_verify_test.json",
+      "git_blob": "b2fb655fc645dab4a8af226bbefe5a8f23a687a7",
+      "bytes": 1082402,
+      "sha256": "0ca1b5df4575263e29b31fae7569a3da41df9a3b6fee56720a992d0cd1153b68"
+    },
+    {
+      "path": "crypto/wycheproof/mldsa_65_verify_test.json",
+      "git_blob": "049f74be9785af926623e56530ab3aa9384179e8",
+      "bytes": 1664194,
+      "sha256": "49ac366d76115eab56b7116f10d06e288e6f23fe6cfb90b26bfb2d731a8d1e02"
+    },
+    {
+      "path": "crypto/wycheproof/mldsa_87_verify_test.json",
+      "git_blob": "fabfb75a1872e574fc79c0cd2b0861df35d650ac",
+      "bytes": 2590234,
+      "sha256": "e9e04216d4217265a5affba2568476d35742dbd8ffc9d4c23b3441334a08a224"
+    },
+    {
+      "path": "pqc/crypto/dilithium/acvp/keyGen_ML-DSA-44.txt",
+      "git_blob": "75ea7e410db653f85ccfc7d17eb3b353a6fa01ce",
+      "bytes": 195725,
+      "sha256": "e20c6e5a6257028105d2fe552737bbeaa48246fd6e002b1ccf3489abf0e14a47"
+    },
+    {
+      "path": "pqc/crypto/dilithium/acvp/keyGen_ML-DSA-65.txt",
+      "git_blob": "e0c150d9f79c89071393126f4786c516ea58a16b",
+      "bytes": 301325,
+      "sha256": "f9523231e165a338d65593a23df340b28647fe01bf541daf26745c2ace00c5fc"
+    },
+    {
+      "path": "pqc/crypto/dilithium/acvp/keyGen_ML-DSA-87.txt",
+      "git_blob": "2f0c7d8de4ddedf7f184a222f4f1d27df35e7253",
+      "bytes": 376525,
+      "sha256": "9c44dc74fb3cd5ccc9467f865a2d78838bf752c05a0eee9d73d726d5a7ce01d4"
+    },
+    {
+      "path": "pqc/crypto/dilithium/acvp/sigGen_ML-DSA-44.txt",
+      "git_blob": "597051efc959d5bc9a44d3da29217dec6bbf37b1",
+      "bytes": 368690,
+      "sha256": "fdbcd0a1118e51e76d212d92b5f866e66db73cea2cac706bc5c4061fc3fd4c3c"
+    },
+    {
+      "path": "pqc/crypto/dilithium/acvp/sigGen_ML-DSA-65.txt",
+      "git_blob": "a2ec4fae27266d0c12b413cb9a8714c6b2b47a98",
+      "bytes": 436830,
+      "sha256": "ba3a193d2eb611d20a3e9656802c3e3d968ba9386e603a1bcb9e11f6952d6a85"
+    },
+    {
+      "path": "pqc/crypto/dilithium/acvp/sigGen_ML-DSA-87.txt",
+      "git_blob": "294b1f5474e41020e0db3a7d3e24ca93d1d69f09",
+      "bytes": 558624,
+      "sha256": "38ebcb4bdd938a8790c1fe5c10f6154a08504db1379818cb5ce2981118c06d32"
+    },
+    {
+      "path": "pqc/crypto/dilithium/acvp/sigVer_ML-DSA-44.txt",
+      "git_blob": "d23e4e9350b1feda54eed8565d39feb7ae7de25b",
+      "bytes": 266592,
+      "sha256": "b79ef81606a637536311eafecb93107c93a8d5ce81ff4aa4b3bf6c8d15013742"
+    },
+    {
+      "path": "pqc/crypto/dilithium/acvp/sigVer_ML-DSA-65.txt",
+      "git_blob": "1afb451801a7d8c35c7e6fb2962cc62505acf3c4",
+      "bytes": 383292,
+      "sha256": "dac937f18389ceb0d92fe81d30a7eb77ec9e940532f0b0b93403c873200d32ba"
+    },
+    {
+      "path": "pqc/crypto/dilithium/acvp/sigVer_ML-DSA-87.txt",
+      "git_blob": "01b9817a005d5118d56ba815a0f208d190ef1677",
+      "bytes": 507492,
+      "sha256": "69c220888a1544aba72d49ebc4dd6e9ab373f3cd50201a327e3206fe4eb48abd"
+    },
+    {
+      "path": "pqc/crypto/mldsa/ML-DSA-keyGen.txt",
+      "git_blob": "7a7c3c32a6ea26f29a8ad9b91e1bf2992d61d90b",
+      "bytes": 884198,
+      "sha256": "577e72819c0b70adad2667655f8d9f2db13d8dbbaa6f1030824ae5d5d9d507b1"
+    },
+    {
+      "path": "pqc/crypto/mldsa/ML-DSA-sigGen.txt",
+      "git_blob": "f36cffab2b197abe41af1a7812e73cdc32210554",
+      "bytes": 890281,
+      "sha256": "eef8d194e936914654dbe28ad902cbd983b3ad7bebd1b49e217c199128fa4a47"
+    },
+    {
+      "path": "pqc/crypto/mldsa/ML-DSA-sigVer.txt",
+      "git_blob": "4a3f921481de50defdf1931e971b7926ee45a84c",
+      "bytes": 506484,
+      "sha256": "a5baa4296cddd66924fa5e915d10e8f14efcaff1dea27e0e2ce6042e33021d98"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_external_mu_rejection_vectors_44.h",
+      "git_blob": "f89326571f94cf697b1c2b5f19aeb7d5b87c9ba3",
+      "bytes": 42607,
+      "sha256": "85c7a99e56336aa47828abe409fd00aa6975bc2910ee1238b9b78ea9bf50a850"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_external_mu_rejection_vectors_65.h",
+      "git_blob": "e588fa11b519889094b398cb5a454a56dbad5200",
+      "bytes": 431575,
+      "sha256": "a7f2291238edd2f0120db82f00156e0714ea5b463c5b4ef0cdf7849ce558f435"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_external_mu_rejection_vectors_87.h",
+      "git_blob": "8172418486aa0407e18bfe3f58b99e55f2fe85ea",
+      "bytes": 559983,
+      "sha256": "f4fee471fecaaa10f03713958a4a1f8e7d5f1b232a7b6631d3b014d63d226e79"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_prehash_rejection_vectors_44.h",
+      "git_blob": "305d80480ee4fb28ffb742a294606b9f1d504b7d",
+      "bytes": 42607,
+      "sha256": "8bb299c52c2b3e432e4511fc5990d8ff4cfc9eb29d53bee6b8938df68c101e29"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_prehash_rejection_vectors_65.h",
+      "git_blob": "210ef7a7ef0d69cfa05fe3e679343a3c97279c67",
+      "bytes": 431575,
+      "sha256": "ce905bbffa5be4cd3b780f257f55724f28baea7f83a806ea38b22789957b207f"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_prehash_rejection_vectors_87.h",
+      "git_blob": "3eac0e3877c8d99f0fff8b3b46daeec1cd07578c",
+      "bytes": 559983,
+      "sha256": "3eef2862acfccf72aef17d8b231d1b6afd75ed11adbc2c8dc59e289ffc647943"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_pure_rejection_vectors_44.h",
+      "git_blob": "704cc94040aaf1460a3052d39899dd32a3eeaa18",
+      "bytes": 42607,
+      "sha256": "43159ad568d0740d2733a6c9919a1555bdc9c215e230f7232f632c0ebef5bc3b"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_pure_rejection_vectors_65.h",
+      "git_blob": "7277dfdd42939c954ace58457e436bfb30d5d769",
+      "bytes": 431575,
+      "sha256": "0d8f7febb27c48b80281c9865ccd46e039e3ce24df5f7a236dda1ef73cfc874c"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_pure_rejection_vectors_87.h",
+      "git_blob": "99685bc972e304f72bc16eb7185b3217bde6494f",
+      "bytes": 559983,
+      "sha256": "686da9e2dee6121b2dceff7d9fa4f75cebcc6119ba4d343bb52380f6b4eb6248"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_rejection_upstream_vectors_44.h",
+      "git_blob": "4a29d7240fd1634a7bff7358aa4917f1a77759eb",
+      "bytes": 8139,
+      "sha256": "5eb0b7be777cae002d5582f960b6a67661efeff06303d6b7bc5a0822f06eb644"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_rejection_upstream_vectors_65.h",
+      "git_blob": "4ebc0b2255210024a806811328fedbe939184808",
+      "bytes": 8139,
+      "sha256": "d2bb24a273b9e07787a3ba8763a64bd6ff6e781a3e8e8c29c61ce17df4bbda2a"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_rejection_upstream_vectors_87.h",
+      "git_blob": "951febc19b519b97c02553536590ea9912dff0f1",
+      "bytes": 8139,
+      "sha256": "280bb8c62d023847e8dbb16338c8a5db5159d8d98b124fc187711ff79c520914"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_rejection_vectors_44.h",
+      "git_blob": "40b906414dc3c39cb4dca7e7e5b1f81faf28a796",
+      "bytes": 293577,
+      "sha256": "688c63a7e05ed38ed82c7e4ddb4ad4b20a0586c4667a149c2d4bb53d18b960b2"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_rejection_vectors_65.h",
+      "git_blob": "90bbbdc8e7a18c9d8e002047f9fb30189beb6386",
+      "bytes": 430119,
+      "sha256": "05fb6ed9fbc652a8ab09dedb00fe39c182a18172834b9a8ac1645670711acef0"
+    },
+    {
+      "path": "pqc/crypto/mldsa/dilithium_rejection_vectors_87.h",
+      "git_blob": "9ffe6f71e5f1d94ce7ee933fbc7b52b5960fdade",
+      "bytes": 558527,
+      "sha256": "907f7c164e9a701aa9715d8f233bd7d497805a8bc4e7b9e7a9b7a2b629337f67"
+    },
+    {
+      "path": "pqc/crypto/mldsa/mldsa44.rsp",
+      "git_blob": "736fab8722caa6983e6f7705f456a0e390df7cab",
+      "bytes": 2664531,
+      "sha256": "3f6d155a56543b687430bb112230289b860580f30c4be23def780a6de0cbc426"
+    },
+    {
+      "path": "pqc/crypto/mldsa/mldsa44sha512.rsp",
+      "git_blob": "768cade863522332239b845f5b5669d21f04d424",
+      "bytes": 2729956,
+      "sha256": "6a09cd2f13a768004e409402689de0cd9dfe0a1a8427fc9c25b25886fe93f031"
+    },
+    {
+      "path": "pqc/crypto/mldsa/mldsa65.rsp",
+      "git_blob": "7839b1e5434bca06d573406961fb4538e708b19f",
+      "bytes": 3564741,
+      "sha256": "32775122c405a6f2758865ffdaa2e60ba807044c50c88acf0bf240d41fc3a35f"
+    },
+    {
+      "path": "pqc/crypto/mldsa/mldsa65sha512.rsp",
+      "git_blob": "a0a07a0fd3ccbfceb8350ba8818e51276025b659",
+      "bytes": 3630756,
+      "sha256": "7209c4e5496cfde079a2e6154fc06010727f74c9ae61751a3921dd5d198ee9b3"
+    },
+    {
+      "path": "pqc/crypto/mldsa/mldsa87.rsp",
+      "git_blob": "b9d9874f7abab084783252568f7eb3cea2b8d1dc",
+      "bytes": 4412215,
+      "sha256": "d4bbb966be1af1a0172b6ed579b5f4570812c8a294681baa3084b414093e6745"
+    },
+    {
+      "path": "pqc/crypto/mldsa/mldsa87sha512.rsp",
+      "git_blob": "382a37d2915b073e868c0838b37e612486c47698",
+      "bytes": 4476606,
+      "sha256": "7e5b7a50e257685c6c6888de4fa019e703c4bccfba87bd7fa4845904a640ce9e"
+    }
+  ]
+}

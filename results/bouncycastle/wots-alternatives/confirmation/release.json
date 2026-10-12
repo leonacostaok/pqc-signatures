@@ -1,0 +1,9 @@
+{
+  "released_at": "2026-10-12T12:56:33.986715+00:00",
+  "collector_exit_code": 0,
+  "completed_processes": 384,
+  "benchmark_process_remains": false,
+  "coordinator_notified": true,
+  "scope": "All prespecified processes completed once; no dropped samples or selective reruns.",
+  "next": "Quiet for NTT final window. Independent audit and process-duration interruption analysis deferred until release."
+}

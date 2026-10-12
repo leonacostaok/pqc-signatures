@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "trace_cases": 24,
+  "whole_operation_cases_per_variant": 72,
+  "scope": "Trace equality covers all n and nonzero ADRS bytes; real whole operations cover two fast sets and twelve keys each. Not full ACVP or upstream-suite approval."
+}

@@ -1,0 +1,87 @@
+--- a/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/MLDSAEngine.java
++++ b/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/MLDSAEngine.java
+@@ -242,7 +242,6 @@
+             rhoPrime = new byte[CrhBytes],
+             key = new byte[SeedBytes];
+ 
+-        PolyVecMatrix aMatrix = new PolyVecMatrix(this);
+ 
+         PolyVec s1 = new PolyVec(this, DilithiumL), s1hat;
+         PolyVec s2 = new PolyVec(this, DilithiumK), t1 = new PolyVec(this, DilithiumK), t0 = new PolyVec(this, DilithiumK);
+@@ -264,7 +263,6 @@
+         // System.out.println("key = ");
+         // Helper.printByteArray(key);
+ 
+-        aMatrix.expandMatrix(rho);
+         // System.out.print(aMatrix.toString("aMatrix"));
+ 
+         // System.out.println("rhoPrime = ");
+@@ -279,7 +277,7 @@
+         s1.copyTo(s1hat);
+         s1hat.polyVecNtt();
+ 
+-        aMatrix.pointwiseMontgomery(t1, s1hat);
++        PolyVecMatrix.expandAndMultiply(this, t1, s1hat, rho);
+ 
+         t1.reduce();
+         t1.invNttToMont();
+@@ -307,7 +305,6 @@
+ 
+     public byte[] deriveT1(byte[] rho, byte[] key, byte[] tr, byte[] s1Enc, byte[] s2Enc, byte[] t0Enc)
+     {
+-        PolyVecMatrix aMatrix = new PolyVecMatrix(this);
+ 
+         PolyVec s1 = new PolyVec(this, DilithiumL), s1hat;
+         PolyVec s2 = new PolyVec(this, DilithiumK), t1 = new PolyVec(this, DilithiumK), t0 = new PolyVec(this, DilithiumK);
+@@ -320,14 +317,13 @@
+         // System.out.println("key = ");
+         // Helper.printByteArray(key);
+ 
+-        aMatrix.expandMatrix(rho);
+ 
+         s1hat = new PolyVec(this, DilithiumL);
+ 
+         s1.copyTo(s1hat);
+         s1hat.polyVecNtt();
+ 
+-        aMatrix.pointwiseMontgomery(t1, s1hat);
++        PolyVecMatrix.expandAndMultiply(this, t1, s1hat, rho);
+ 
+         t1.reduce();
+         t1.invNttToMont();
+@@ -538,7 +534,6 @@
+         }
+ 
+         Poly cp = new Poly(this);
+-        PolyVecMatrix aMatrix = new PolyVecMatrix(this);
+         PolyVec t1 = new PolyVec(this, DilithiumK), w1 = new PolyVec(this, DilithiumK);
+ 
+         t1 = Packing.unpackPublicKey(t1, encT1, this);
+@@ -546,10 +541,9 @@
+         // Matrix-vector multiplication; compute Az - c2^dt1
+         cp.challenge(sig, 0, DilithiumCTilde);
+ 
+-        aMatrix.expandMatrix(rho);
+ 
+         z.polyVecNtt();
+-        aMatrix.pointwiseMontgomery(w1, z);
++        PolyVecMatrix.expandAndMultiply(this, w1, z, rho);
+ 
+         cp.polyNtt();
+ 
+--- a/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/PolyVecMatrix.java
++++ b/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/PolyVecMatrix.java
+@@ -36,4 +36,13 @@
+             matrix[i].uniformBlocks(rho, i << 8);
+         }
+     }
++    static void expandAndMultiply(MLDSAEngine engine, PolyVec t, PolyVec v, byte[] rho)
++    {
++        PolyVec row = new PolyVec(engine, engine.getDilithiumL());
++        for (int i = 0; i < engine.getDilithiumK(); ++i)
++        {
++            row.uniformBlocks(rho, i << 8);
++            t.getVectorIndex(i).pointwiseAccountMontgomery(row, v);
++        }
++    }
+ }

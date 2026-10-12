@@ -1,0 +1,2 @@
+Exception in thread "main" java.lang.AssertionError: base2B allocates more than 512 bytes per call
+	at org.bouncycastle.crypto.signers.slhdsa.ForsAllocationCheck.main(ForsAllocationCheck.java:46)

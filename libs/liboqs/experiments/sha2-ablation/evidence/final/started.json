@@ -1,0 +1,42 @@
+{
+  "started_utc": "2026-10-12T02:21:02.842924+00:00",
+  "ready_sha256": "8c123b23d7b7e5b76fffd774e2413bc82a0d0bf8d8ad766f11418648ad7b4da3",
+  "orders": [
+    [
+      "original",
+      "sha256-only",
+      "sha512-only",
+      "full"
+    ],
+    [
+      "full",
+      "sha512-only",
+      "sha256-only",
+      "original"
+    ],
+    [
+      "sha256-only",
+      "full",
+      "original",
+      "sha512-only"
+    ],
+    [
+      "sha512-only",
+      "original",
+      "full",
+      "sha256-only"
+    ],
+    [
+      "full",
+      "original",
+      "sha512-only",
+      "sha256-only"
+    ],
+    [
+      "sha256-only",
+      "sha512-only",
+      "original",
+      "full"
+    ]
+  ]
+}

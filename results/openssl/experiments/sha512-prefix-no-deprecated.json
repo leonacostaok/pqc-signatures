@@ -1,0 +1,34 @@
+{
+  "checks": [
+    {
+      "variant": "before",
+      "exit_code": 1,
+      "stderr": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/candidate/hash-ctx-before-deprecated.c:103:58: error: use of undeclared identifier 'SHA512_CTX'\n  103 |     OPENSSL_clear_free(ctx->shactx_pkseed_sha512, sizeof(SHA512_CTX));\n      |                                                          ^~~~~~~~~~\n1 error generated.\n",
+      "command": [
+        "cc",
+        "-fsyntax-only",
+        "-DOPENSSL_NO_DEPRECATED",
+        "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/candidate/include",
+        "-I/Users/dandelionlabs/development/personal/openssl/worktrees/slh-sha512-prefix/include",
+        "-I/Users/dandelionlabs/development/personal/openssl/worktrees/slh-sha512-prefix",
+        "-I/Users/dandelionlabs/development/personal/openssl/worktrees/slh-sha512-prefix/crypto/slh_dsa",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/candidate/hash-ctx-before-deprecated.c"
+      ]
+    },
+    {
+      "variant": "after",
+      "exit_code": 0,
+      "stderr": "",
+      "command": [
+        "cc",
+        "-fsyntax-only",
+        "-DOPENSSL_NO_DEPRECATED",
+        "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/openssl/build/sha512-prefix/candidate/include",
+        "-I/Users/dandelionlabs/development/personal/openssl/worktrees/slh-sha512-prefix/include",
+        "-I/Users/dandelionlabs/development/personal/openssl/worktrees/slh-sha512-prefix",
+        "-I/Users/dandelionlabs/development/personal/openssl/worktrees/slh-sha512-prefix/crypto/slh_dsa",
+        "/Users/dandelionlabs/development/personal/openssl/worktrees/slh-sha512-prefix/crypto/slh_dsa/slh_dsa_hash_ctx.c"
+      ]
+    }
+  ]
+}

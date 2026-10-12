@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/javac",
+    "-J-XX:ActiveProcessorCount=2",
+    "--release",
+    "8",
+    "-sourcepath",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/prepared-v1/baseline-src/core/src/main/java",
+    "-d",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/prepared-v1/baseline",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/prepared-v1/baseline-src/core/src/main/java/org/bouncycastle/crypto/signers/MLDSASigner.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/prepared-v1/baseline-src/core/src/main/java/org/bouncycastle/crypto/signers/HashMLDSASigner.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/prepared-v1/baseline-src/core/src/main/java/org/bouncycastle/crypto/generators/MLDSAKeyPairGenerator.java"
+  ],
+  "cwd": null,
+  "started_at": "2026-10-12T07:58:10.284189+00:00"
+}

@@ -1,0 +1,171 @@
+{
+  "provenance": {
+    "upstream": "91db3e785ba2635b4f24a023e1ad76d2780e2865",
+    "inputs": {
+      "libs/circl/experiments/sha2-prefix/run.py": "ebc3b578c8a82a0ad9c5ce6132f640870a571a7fcad37e805fe59b7ad0b136de",
+      "libs/circl/experiments/sha2-prefix/main.go": "3818cf567b194302832ba55e3cad652fd0dcccd581e3a6dc35fa8ea4a3f1604f",
+      "libs/circl/experiments/sha2-prefix/production.patch": "3144497059b7a98335ff10f51666aa6dc4b1e0215519d1027714f45520d79e57",
+      "libs/circl/experiments/sha2-prefix/tests.patch": "d8e4c95b38816644518cd28c6cb5446911e9f5a35d4e7330284f6898e5e691ef",
+      "common/validation/validation.json.gz": "8e6269ebc60979b76ef25030fc1871883aba8395f9ded57ec19ab0ad8b2a5685"
+    },
+    "binaries": {
+      "baseline": "3b9226b17b4cdd507c3fda6b867e8c3fb164ce28f827fba92df9d19792e70bc7",
+      "candidate": "17dbd5a26220a758186e415c33bd116660d4c031dfa55b4b4d70ce84f580e2b0"
+    },
+    "sources": {
+      "baseline": "9e08f7a7c6f73fc54e89f7afa302e18ff370eb66043588b09d8583964827dd78",
+      "candidate": "b65c3ea2b17a2cc440f5cfc9b527c928e6d963e7bd7d2c49cecd954b07105172"
+    },
+    "source_trees": {
+      "baseline": "d3c2490f06bb22772e8e8197ed46ec1ce13e63b4ccb787255a8b33e6939fb025",
+      "candidate": "f3168e11291da01ee0021e22947ceaa52f65cef8588592506a1a844ac148f3d2"
+    },
+    "go": "go version go1.27.0 darwin/arm64",
+    "go_env": {
+      "GOAMD64": "",
+      "GOARCH": "arm64",
+      "GOARM64": "v8.0",
+      "GOEXPERIMENT": "",
+      "GOOS": "darwin"
+    },
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "GOMAXPROCS": "1",
+    "build_flags": [
+      "-trimpath",
+      "-pgo=off",
+      "-buildvcs=false"
+    ]
+  },
+  "vectors": {
+    "baseline": {
+      "checked": 432,
+      "counts": {
+        "SLH-DSA-SHA2-128f/keygen": 10,
+        "SLH-DSA-SHA2-128f/siggen": 2,
+        "SLH-DSA-SHA2-128f/sigver": 24,
+        "SLH-DSA-SHA2-128s/keygen": 10,
+        "SLH-DSA-SHA2-128s/siggen": 2,
+        "SLH-DSA-SHA2-128s/sigver": 24,
+        "SLH-DSA-SHA2-192f/keygen": 10,
+        "SLH-DSA-SHA2-192f/siggen": 2,
+        "SLH-DSA-SHA2-192f/sigver": 24,
+        "SLH-DSA-SHA2-192s/keygen": 10,
+        "SLH-DSA-SHA2-192s/siggen": 2,
+        "SLH-DSA-SHA2-192s/sigver": 24,
+        "SLH-DSA-SHA2-256f/keygen": 10,
+        "SLH-DSA-SHA2-256f/siggen": 2,
+        "SLH-DSA-SHA2-256f/sigver": 24,
+        "SLH-DSA-SHA2-256s/keygen": 10,
+        "SLH-DSA-SHA2-256s/siggen": 2,
+        "SLH-DSA-SHA2-256s/sigver": 24,
+        "SLH-DSA-SHAKE-128f/keygen": 10,
+        "SLH-DSA-SHAKE-128f/siggen": 2,
+        "SLH-DSA-SHAKE-128f/sigver": 24,
+        "SLH-DSA-SHAKE-128s/keygen": 10,
+        "SLH-DSA-SHAKE-128s/siggen": 2,
+        "SLH-DSA-SHAKE-128s/sigver": 24,
+        "SLH-DSA-SHAKE-192f/keygen": 10,
+        "SLH-DSA-SHAKE-192f/siggen": 2,
+        "SLH-DSA-SHAKE-192f/sigver": 24,
+        "SLH-DSA-SHAKE-192s/keygen": 10,
+        "SLH-DSA-SHAKE-192s/siggen": 2,
+        "SLH-DSA-SHAKE-192s/sigver": 24,
+        "SLH-DSA-SHAKE-256f/keygen": 10,
+        "SLH-DSA-SHAKE-256f/siggen": 2,
+        "SLH-DSA-SHAKE-256f/sigver": 24,
+        "SLH-DSA-SHAKE-256s/keygen": 10,
+        "SLH-DSA-SHAKE-256s/siggen": 2,
+        "SLH-DSA-SHAKE-256s/sigver": 24
+      }
+    },
+    "candidate": {
+      "checked": 432,
+      "counts": {
+        "SLH-DSA-SHA2-128f/keygen": 10,
+        "SLH-DSA-SHA2-128f/siggen": 2,
+        "SLH-DSA-SHA2-128f/sigver": 24,
+        "SLH-DSA-SHA2-128s/keygen": 10,
+        "SLH-DSA-SHA2-128s/siggen": 2,
+        "SLH-DSA-SHA2-128s/sigver": 24,
+        "SLH-DSA-SHA2-192f/keygen": 10,
+        "SLH-DSA-SHA2-192f/siggen": 2,
+        "SLH-DSA-SHA2-192f/sigver": 24,
+        "SLH-DSA-SHA2-192s/keygen": 10,
+        "SLH-DSA-SHA2-192s/siggen": 2,
+        "SLH-DSA-SHA2-192s/sigver": 24,
+        "SLH-DSA-SHA2-256f/keygen": 10,
+        "SLH-DSA-SHA2-256f/siggen": 2,
+        "SLH-DSA-SHA2-256f/sigver": 24,
+        "SLH-DSA-SHA2-256s/keygen": 10,
+        "SLH-DSA-SHA2-256s/siggen": 2,
+        "SLH-DSA-SHA2-256s/sigver": 24,
+        "SLH-DSA-SHAKE-128f/keygen": 10,
+        "SLH-DSA-SHAKE-128f/siggen": 2,
+        "SLH-DSA-SHAKE-128f/sigver": 24,
+        "SLH-DSA-SHAKE-128s/keygen": 10,
+        "SLH-DSA-SHAKE-128s/siggen": 2,
+        "SLH-DSA-SHAKE-128s/sigver": 24,
+        "SLH-DSA-SHAKE-192f/keygen": 10,
+        "SLH-DSA-SHAKE-192f/siggen": 2,
+        "SLH-DSA-SHAKE-192f/sigver": 24,
+        "SLH-DSA-SHAKE-192s/keygen": 10,
+        "SLH-DSA-SHAKE-192s/siggen": 2,
+        "SLH-DSA-SHAKE-192s/sigver": 24,
+        "SLH-DSA-SHAKE-256f/keygen": 10,
+        "SLH-DSA-SHAKE-256f/siggen": 2,
+        "SLH-DSA-SHAKE-256f/sigver": 24,
+        "SLH-DSA-SHAKE-256s/keygen": 10,
+        "SLH-DSA-SHAKE-256s/siggen": 2,
+        "SLH-DSA-SHAKE-256s/sigver": 24
+      }
+    }
+  },
+  "varied": {
+    "baseline": {
+      "caller_inputs_preserved": true,
+      "checked": 21,
+      "negative_checks_per_case": 7
+    },
+    "candidate": {
+      "caller_inputs_preserved": true,
+      "checked": 21,
+      "negative_checks_per_case": 7
+    }
+  },
+  "focused": {
+    "baseline_expected_failures": [
+      "TestSHA2PrefixReuse",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-128f",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-128f/F",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-128f/H",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-128s",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-128s/F",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-128s/H",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-192f",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-192f/F",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-192f/H",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-192s",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-192s/F",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-192s/H",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-256f",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-256f/F",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-256f/H",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-256s",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-256s/F",
+      "TestSHA2PrefixReuse/SLH-DSA-SHA2-256s/H"
+    ],
+    "candidate_passes": [
+      "TestSHA2PrefixAllocations",
+      "TestSHA2PrefixDigests",
+      "TestSHA2PrefixReuse"
+    ]
+  },
+  "checked_at": "2026-10-11T23:04:17Z",
+  "logs": {
+    "resource-red.log": "e04077119a8f64e896bb01c5a91ff81656543466ec4382d547106215469693a0",
+    "upstream-tests.log": "cafbb74ebf71e2ac3372c0f97921abf3bacd12d67e85c652dfd0eb8923de0c35",
+    "race-tests.log": "602cafaa120263bdd4ec6b5a77ca13b033439631301b60f75976640cf4c37ec1",
+    "vet.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

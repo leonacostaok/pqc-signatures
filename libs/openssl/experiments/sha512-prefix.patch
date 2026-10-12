@@ -1,0 +1,209 @@
+diff --git a/crypto/slh_dsa/slh_dsa_hash_ctx.c b/crypto/slh_dsa/slh_dsa_hash_ctx.c
+index f13c40e81c..76e5ec797e 100644
+--- a/crypto/slh_dsa/slh_dsa_hash_ctx.c
++++ b/crypto/slh_dsa/slh_dsa_hash_ctx.c
+@@ -6,6 +6,8 @@
+  * in the file LICENSE in the source distribution or at
+  * https://www.openssl.org/source/license.html
+  */
++#include "internal/deprecated.h" /* SHA512_CTX */
++
+ #include <stddef.h>
+ #include <openssl/crypto.h>
+ #include "slh_dsa_local.h"
+@@ -100,6 +102,7 @@ void ossl_slh_dsa_hash_ctx_free(SLH_DSA_HASH_CTX *ctx)
+         return;
+     OPENSSL_clear_free(ctx->shactx, ctx->shactx_len);
+     OPENSSL_clear_free(ctx->shactx_pkseed, ctx->shactx_len);
++    OPENSSL_clear_free(ctx->shactx_pkseed_sha512, sizeof(SHA512_CTX));
+     OPENSSL_clear_free(ctx->scratch, ctx->scratch_len);
+     EVP_MAC_CTX_free(ctx->hmac_ctx);
+     OPENSSL_free(ctx);
+diff --git a/crypto/slh_dsa/slh_dsa_local.h b/crypto/slh_dsa/slh_dsa_local.h
+index df024dfbc5..187b93bd6a 100644
+--- a/crypto/slh_dsa/slh_dsa_local.h
++++ b/crypto/slh_dsa/slh_dsa_local.h
+@@ -53,6 +53,7 @@ struct slh_dsa_hash_ctx_st {
+     void *shactx; /* A low level SHAKE object */
+     void *shactx_pkseed; /* A low level SHAKE or SHA256 object with PK.seed hashed in it */
+     size_t shactx_len; /* The size of the two hash contexts above */
++    void *shactx_pkseed_sha512; /* SHA512 public-seed prefix for SHA2 categories 3 and 5 */
+     /*
+      * A working hash context used by the hash functions in place of local
+      * stack copies, so that intermediate hash states derived from secrets
+diff --git a/crypto/slh_dsa/slh_hash.c b/crypto/slh_dsa/slh_hash.c
+index d8d4a9e969..ab85b03ac7 100644
+--- a/crypto/slh_dsa/slh_hash.c
++++ b/crypto/slh_dsa/slh_hash.c
+@@ -386,9 +386,7 @@ slh_h_sha512(SLH_DSA_HASH_CTX *hctx, const uint8_t *pk_seed, const uint8_t *adrs
+     const SLH_DSA_PARAMS *prms = hctx->key->params;
+     size_t n = prms->n;
+ 
+-    SHA512_Init(sctx);
+-    SHA512_Update(sctx, pk_seed, n);
+-    SHA512_Update(sctx, zeros, 128 - n);
++    *sctx = *((SHA512_CTX *)hctx->shactx_pkseed_sha512);
+     SHA512_Update(sctx, adrs, SLH_ADRSC_SIZE);
+     SHA512_Update(sctx, m1, n);
+     SHA512_Update(sctx, m2, n);
+@@ -414,12 +412,8 @@ slh_t_sha512(SLH_DSA_HASH_CTX *hctx, const uint8_t *pk_seed, const uint8_t *adrs
+     const uint8_t *ml, size_t ml_len, uint8_t *out, size_t out_len)
+ {
+     SHA512_CTX *sctx = (SHA512_CTX *)(hctx->scratch);
+-    const SLH_DSA_PARAMS *prms = hctx->key->params;
+-    size_t n = prms->n;
+ 
+-    SHA512_Init(sctx);
+-    SHA512_Update(sctx, pk_seed, n);
+-    SHA512_Update(sctx, zeros, 128 - n);
++    *sctx = *((SHA512_CTX *)hctx->shactx_pkseed_sha512);
+     SHA512_Update(sctx, adrs, SLH_ADRSC_SIZE);
+     SHA512_Update(sctx, ml, ml_len);
+     sha512_final(sctx, out, hctx->key->params->n);
+@@ -497,6 +491,16 @@ static int slh_hash_sha256_precache(SLH_DSA_HASH_CTX *hctx, const uint8_t *pksee
+     SHA256_Update(ctx, zeros, 64 - n);
+     hctx->shactx_pkseed = (void *)ctx;
+     hctx->shactx_len = sizeof(*ctx);
++    if (n > 16) {
++        SHA512_CTX *ctx512 = OPENSSL_zalloc(sizeof(*ctx512));
++
++        if (ctx512 == NULL)
++            return 0;
++        SHA512_Init(ctx512);
++        SHA512_Update(ctx512, pkseed, n);
++        SHA512_Update(ctx512, zeros, 128 - n);
++        hctx->shactx_pkseed_sha512 = (void *)ctx512;
++    }
+     return 1;
+ }
+ 
+@@ -513,6 +517,12 @@ static int slh_hash_sha256_dup(SLH_DSA_HASH_CTX *dst, const SLH_DSA_HASH_CTX *sr
+      * serve as a SHA512_CTX for security categories 3 and 5.
+      */
+     dst->shactx_len = src->shactx_len;
++    if (src->shactx_pkseed_sha512 != NULL) {
++        dst->shactx_pkseed_sha512 = OPENSSL_memdup(src->shactx_pkseed_sha512,
++            sizeof(SHA512_CTX));
++        if (dst->shactx_pkseed_sha512 == NULL)
++            return 0;
++    }
+     if (dst->shactx_pkseed != NULL) {
+         dst->scratch = OPENSSL_malloc(sizeof(SHA512_CTX));
+         if (dst->scratch == NULL)
+diff --git a/test/build.info b/test/build.info
+index 655f8c25de..9e00d320f5 100644
+--- a/test/build.info
++++ b/test/build.info
+@@ -341,6 +341,11 @@ IF[{- !$disabled{tests} -}]
+     SOURCE[slh_dsa_test]=slh_dsa_test.c
+     INCLUDE[slh_dsa_test]=../include ../apps/include
+     DEPEND[slh_dsa_test]=../libcrypto libtestutil.a
++
++    PROGRAMS{noinst}=slh_dsa_internal_test
++    SOURCE[slh_dsa_internal_test]=slh_dsa_internal_test.c
++    INCLUDE[slh_dsa_internal_test]=.. ../include ../apps/include
++    DEPEND[slh_dsa_internal_test]=../libcrypto.a libtestutil.a
+   ENDIF
+   
+   IF[{- !$disabled{'deprecated-3.0'} -}]
+diff --git a/test/recipes/30-test_slh_dsa.t b/test/recipes/30-test_slh_dsa.t
+index 903b5f2b9a..22ab07348b 100644
+--- a/test/recipes/30-test_slh_dsa.t
++++ b/test/recipes/30-test_slh_dsa.t
+@@ -23,9 +23,10 @@ use lib srctop_dir('Configurations');
+ use lib bldtop_dir('.');
+ 
+ plan skip_all => 'SLH-DSA is not supported in this build' if disabled('slh-dsa');
+-plan tests => 2;
++plan tests => 3;
+ 
+ ok(run(test(["slh_dsa_test"])), "running slh_dsa_test");
++ok(run(test(["slh_dsa_internal_test"])), "running slh_dsa_internal_test");
+ 
+ SKIP: {
+     skip "Skipping FIPS tests", 1
+diff --git a/test/slh_dsa_internal_test.c b/test/slh_dsa_internal_test.c
+new file mode 100644
+index 0000000000..167ee4f08f
+--- /dev/null
++++ b/test/slh_dsa_internal_test.c
+@@ -0,0 +1,79 @@
++/*
++ * Copyright 2026 The OpenSSL Project Authors. All Rights Reserved.
++ *
++ * Licensed under the Apache License 2.0 (the "License").  You may not use
++ * this file except in compliance with the License.  You can obtain a copy
++ * in the file LICENSE in the source distribution or at
++ * https://www.openssl.org/source/license.html
++ */
++
++#include <string.h>
++#include <openssl/evp.h>
++#include "crypto/slh_dsa/slh_dsa_local.h"
++#include "crypto/slh_dsa/slh_dsa_key.h"
++#include "testutil.h"
++
++static int test_sha2_prefix(int idx)
++{
++    static const char *names[] = {
++        "SLH-DSA-SHA2-128s", "SLH-DSA-SHA2-128f",
++        "SLH-DSA-SHA2-192s", "SLH-DSA-SHA2-192f",
++        "SLH-DSA-SHA2-256s", "SLH-DSA-SHA2-256f"
++    };
++    SLH_DSA_KEY key = { 0 };
++    SLH_DSA_HASH_CTX *ctx = NULL, *dup = NULL;
++    unsigned char input[128 + SLH_ADRSC_SIZE + 2144];
++    unsigned char out[32], digest[64];
++    size_t n, prefix, len, i, rep, sample;
++    int ret = 0;
++
++    key.params = ossl_slh_dsa_params_get(names[idx]);
++    if (!TEST_ptr(key.params))
++        goto end;
++    n = key.params->n;
++    prefix = n == 16 ? 64 : 128;
++    key.pub = key.priv + 2 * n;
++    key.hash_func = ossl_slh_get_hash_fn(0, key.params->security_category);
++    for (sample = 0; sample < 3; sample++) {
++        for (i = 0; i < n; i++)
++            key.pub[i] = (unsigned char)(i * 37 + sample * 61);
++        memset(input, 0, prefix);
++        memcpy(input, key.pub, n);
++        for (i = prefix; i < sizeof(input); i++)
++            input[i] = (unsigned char)(i * 43 + sample * 71);
++        if (!TEST_ptr(ctx = ossl_slh_dsa_hash_ctx_new(&key))
++            || !TEST_ptr(dup = ossl_slh_dsa_hash_ctx_dup(ctx)))
++            goto end;
++        ossl_slh_dsa_hash_ctx_free(ctx);
++        ctx = NULL;
++        for (rep = 0; rep < 4; rep++) {
++            len = rep == 0 ? 0 : rep == 1 ? n : rep == 2 ? 2 * n : SLH_WOTS_LEN(n) * n;
++            input[prefix] ^= (unsigned char)(rep + 1);
++            if (!TEST_true(EVP_Q_digest(NULL, n == 16 ? "SHA256" : "SHA512",
++                    NULL, input, prefix + SLH_ADRSC_SIZE + len, digest, NULL))
++                || !TEST_true(key.hash_func->T(dup, key.pub, input + prefix,
++                    input + prefix + SLH_ADRSC_SIZE, len, out, n))
++                || !TEST_mem_eq(out, n, digest, n))
++                goto end;
++            if (len == 2 * n
++                && (!TEST_true(key.hash_func->H(dup, key.pub, input + prefix,
++                        input + prefix + SLH_ADRSC_SIZE,
++                        input + prefix + SLH_ADRSC_SIZE + n, out, n))
++                    || !TEST_mem_eq(out, n, digest, n)))
++                goto end;
++        }
++        ossl_slh_dsa_hash_ctx_free(dup);
++        dup = NULL;
++    }
++    ret = 1;
++end:
++    ossl_slh_dsa_hash_ctx_free(ctx);
++    ossl_slh_dsa_hash_ctx_free(dup);
++    return ret;
++}
++
++int setup_tests(void)
++{
++    ADD_ALL_TESTS(test_sha2_prefix, 6);
++    return 1;
++}

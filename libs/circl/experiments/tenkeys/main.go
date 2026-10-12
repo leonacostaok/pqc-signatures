@@ -1,0 +1,145 @@
+// Command tenkeys measures each of ten new keys once through ordinary APIs.
+package main
+
+import (
+	"bytes"
+	"encoding/hex"
+	"encoding/json"
+	"flag"
+	"os"
+	"runtime"
+	"syscall"
+	"time"
+
+	"github.com/cloudflare/circl/sign/slhdsa"
+)
+
+type input struct {
+	Index                  int `json:"index"`
+	Seed, Message, Context string
+}
+type cases struct{ Warmup, Measured []input }
+type corpus struct {
+	ID         string           `json:"id"`
+	Parameters map[string]cases `json:"parameters"`
+}
+type timing struct {
+	Wall int64 `json:"wall_ns"`
+	CPU  int64 `json:"cpu_ns"`
+}
+type row struct {
+	Index     int               `json:"index"`
+	Seed      string            `json:"seed"`
+	PK        string            `json:"public_key"`
+	SK        string            `json:"secret_key"`
+	Signature string            `json:"signature"`
+	Valid     bool              `json:"valid"`
+	Tamper    bool              `json:"tamper_rejected"`
+	Preserved bool              `json:"inputs_preserved"`
+	Timing    map[string]timing `json:"timing"`
+}
+
+func must(err error) {
+	if err != nil {
+		panic(err)
+	}
+}
+func check(ok bool, msg string) {
+	if !ok {
+		panic(msg)
+	}
+}
+func decode(s string) []byte { out, err := hex.DecodeString(s); must(err); return out }
+func cpu() int64 {
+	var r syscall.Rusage
+	must(syscall.Getrusage(syscall.RUSAGE_SELF, &r))
+	return (r.Utime.Sec+r.Stime.Sec)*1e9 + (int64(r.Utime.Usec)+int64(r.Stime.Usec))*1000
+}
+func measure(enabled bool, fn func()) timing {
+	if !enabled {
+		fn()
+		return timing{}
+	}
+	beginCPU := cpu()
+	begin := time.Now()
+	fn()
+	wall := time.Since(begin).Nanoseconds()
+	used := cpu() - beginCPU
+	return timing{wall, used}
+}
+func one(id slhdsa.ID, c input, measured bool) row {
+	seed := decode(c.Seed)
+	savedSeed := bytes.Clone(seed)
+	reader := bytes.NewReader(seed)
+	var pub slhdsa.PublicKey
+	var priv slhdsa.PrivateKey
+	var err error
+	kg := measure(measured, func() { pub, priv, err = slhdsa.GenerateKey(reader, id) })
+	must(err)
+	check(reader.Len() == 0, "keygen did not consume the complete seed")
+	check(bytes.Equal(seed, savedSeed), "keygen mutated seed")
+	pk, err := pub.MarshalBinary()
+	must(err)
+	sk, err := priv.MarshalBinary()
+	must(err)
+	msg, ctx := decode(c.Message), decode(c.Context)
+	signSK, signMsg, signCtx := bytes.Clone(sk), bytes.Clone(msg), bytes.Clone(ctx)
+	signKey := slhdsa.PrivateKey{ID: id}
+	must(signKey.UnmarshalBinary(signSK))
+	signMessage := slhdsa.NewMessage(signMsg)
+	var sig []byte
+	sg := measure(measured, func() { sig, err = slhdsa.SignDeterministic(&signKey, signMessage, signCtx) })
+	must(err)
+	afterSK, err := signKey.MarshalBinary()
+	must(err)
+	check(bytes.Equal(afterSK, sk) && bytes.Equal(signSK, sk) && bytes.Equal(signMsg, msg) && bytes.Equal(signCtx, ctx), "sign mutated input")
+	verifyPK, verifyMsg, verifyCtx, verifySig := bytes.Clone(pk), bytes.Clone(msg), bytes.Clone(ctx), bytes.Clone(sig)
+	verifyKey := slhdsa.PublicKey{ID: id}
+	must(verifyKey.UnmarshalBinary(verifyPK))
+	verifyMessage := slhdsa.NewMessage(verifyMsg)
+	valid := false
+	vr := measure(measured, func() { valid = slhdsa.Verify(&verifyKey, verifyMessage, verifySig, verifyCtx) })
+	check(valid, "valid signature rejected")
+	afterPK, err := verifyKey.MarshalBinary()
+	must(err)
+	check(bytes.Equal(afterPK, pk) && bytes.Equal(verifyPK, pk) && bytes.Equal(verifyMsg, msg) && bytes.Equal(verifyCtx, ctx) && bytes.Equal(verifySig, sig), "verify mutated input")
+	bad := bytes.Clone(sig)
+	bad[len(bad)/2] ^= 1
+	badKey := slhdsa.PublicKey{ID: id}
+	must(badKey.UnmarshalBinary(bytes.Clone(pk)))
+	check(!slhdsa.Verify(&badKey, slhdsa.NewMessage(bytes.Clone(msg)), bad, bytes.Clone(ctx)), "tampered signature accepted")
+	return row{c.Index, c.Seed, hex.EncodeToString(pk), hex.EncodeToString(sk), hex.EncodeToString(sig), true, true, true, map[string]timing{"keygen": kg, "sign": sg, "verify": vr}}
+}
+func main() {
+	path := flag.String("corpus", "", "input corpus")
+	param := flag.String("param", "", "parameter set")
+	warmup := flag.Int("warmup-cycles", 1, "disjoint warmup cycles")
+	flag.Parse()
+	check(flag.NArg() == 0 && *warmup > 0, "invalid arguments")
+	raw, err := os.ReadFile(*path)
+	must(err)
+	var data corpus
+	must(json.Unmarshal(raw, &data))
+	c, ok := data.Parameters[*param]
+	check(ok && len(c.Measured) == 10 && len(c.Warmup) == 4, "require exactly ten measured and four warmup keys")
+	seeds := map[string]bool{}
+	for _, group := range [][]input{c.Warmup, c.Measured} {
+		for _, v := range group {
+			check(!seeds[v.Seed], "duplicate or overlapping seed")
+			seeds[v.Seed] = true
+		}
+	}
+	id, err := slhdsa.IDByName(*param)
+	must(err)
+	for cycle := 0; cycle < *warmup; cycle++ {
+		for _, v := range c.Warmup {
+			one(id, v, false)
+		}
+	}
+	rows := make([]row, 0, 10)
+	for _, v := range c.Measured {
+		rows = append(rows, one(id, v, true))
+	}
+	output := map[string]any{"schema": "fresh-ten-keys-worker-v1", "param": *param, "corpus_id": data.ID, "runtime": runtime.Version(), "arch": runtime.GOARCH, "measured_calls": map[string]int{"keygen": 10, "sign": 10, "verify": 10}, "warmup_keys": 4, "warmup_cycles": *warmup, "timing_scope": "public API only; fresh caller copies and key decoding outside timer; no cross-call cryptographic cache", "rows": rows}
+	must(json.NewEncoder(os.Stdout).Encode(output))
+}

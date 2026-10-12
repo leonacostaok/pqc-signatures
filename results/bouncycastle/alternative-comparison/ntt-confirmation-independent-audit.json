@@ -1,0 +1,969 @@
+{
+  "schema": "bc-ntt-java17-audit-v1",
+  "passed": true,
+  "plan_sha256": "3eae6929ce3d80a789169ff66fe8cd3a8b3abf822a2031365f6ee8ce8aa8ebc9",
+  "manifest_sha256": "6b0e78983a109d51e39f83453dc5820076b41de0355c8a83065f430b8613dfa7",
+  "portable_source_and_fixture_checks": true,
+  "local_binary_checks": "passed",
+  "local_runtime_checks": "passed",
+  "held_out_against_screen_fixtures": "passed",
+  "local_native_binary_data_checks": "passed",
+  "processes_checked": 216,
+  "output_rows_checked": 27648,
+  "summary": [
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "keygen",
+      "variant": "companion",
+      "wall_ns": {
+        "original_sum": 43864119,
+        "changed_sum": 42977401,
+        "original_mean": 85672.107421875,
+        "changed_mean": 83940.236328125,
+        "original_over_changed": 1.0206321922537847,
+        "percent_change": -2.021511021342981,
+        "changed_larger_keys": 193,
+        "round_original_over_changed": [
+          1.049255457970741,
+          0.9936454006093188,
+          1.0083899469446356,
+          1.0321640954633917
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 44379000,
+        "changed_sum": 43805000,
+        "original_mean": 86677.734375,
+        "changed_mean": 85556.640625,
+        "original_over_changed": 1.0131035269946354,
+        "percent_change": -1.2934045381824744,
+        "changed_larger_keys": 177,
+        "round_original_over_changed": [
+          1.0454963235294117,
+          0.9915397631133672,
+          0.9903988183161004,
+          1.0255891016200294
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 36212624,
+        "changed_sum": 36338408,
+        "original_mean": 70727.78125,
+        "changed_mean": 70973.453125,
+        "original_over_changed": 0.9965385385072456,
+        "percent_change": 0.3473484826727935,
+        "changed_larger_keys": 347,
+        "round_original_over_changed": [
+          0.9945514369042288,
+          0.9978542150729294,
+          1.0071451300810774,
+          0.9867349411185335
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "keygen",
+      "variant": "both",
+      "wall_ns": {
+        "original_sum": 43864119,
+        "changed_sum": 52874965,
+        "original_mean": 85672.107421875,
+        "changed_mean": 103271.416015625,
+        "original_over_changed": 0.8295819959408011,
+        "percent_change": 20.542635314298696,
+        "changed_larger_keys": 223,
+        "round_original_over_changed": [
+          0.8107674322637686,
+          1.035727777721168,
+          0.5939007003052912,
+          1.0521488663877103
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 44379000,
+        "changed_sum": 45597000,
+        "original_mean": 86677.734375,
+        "changed_mean": 89056.640625,
+        "original_over_changed": 0.9732877162971248,
+        "percent_change": 2.7445413371189,
+        "changed_larger_keys": 216,
+        "round_original_over_changed": [
+          0.9895606785558939,
+          1.0314034275127373,
+          0.8488684918499763,
+          1.0443340519261413
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 36212624,
+        "changed_sum": 36286472,
+        "original_mean": 70727.78125,
+        "changed_mean": 70872.015625,
+        "original_over_changed": 0.9979648613951778,
+        "percent_change": 0.20392888402673837,
+        "changed_larger_keys": 129,
+        "round_original_over_changed": [
+          0.9915616561656165,
+          0.9999206557712347,
+          1.0004041264924726,
+          1.0
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "sign",
+      "variant": "companion",
+      "wall_ns": {
+        "original_sum": 183117923,
+        "changed_sum": 171659456,
+        "original_mean": 357652.193359375,
+        "changed_mean": 335272.375,
+        "original_over_changed": 1.0667511552640596,
+        "percent_change": -6.2574251674971215,
+        "changed_larger_keys": 64,
+        "round_original_over_changed": [
+          1.0756196047581559,
+          1.0381079180348924,
+          1.0936581297123185,
+          1.0592811260966142
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 179713000,
+        "changed_sum": 170121000,
+        "original_mean": 351001.953125,
+        "changed_mean": 332267.578125,
+        "original_over_changed": 1.0563833976992847,
+        "percent_change": -5.337399075192106,
+        "changed_larger_keys": 56,
+        "round_original_over_changed": [
+          1.054772641863961,
+          1.0491425646275916,
+          1.0467185243839956,
+          1.075474417487389
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 46656192,
+        "changed_sum": 46656192,
+        "original_mean": 91125.375,
+        "changed_mean": 91125.375,
+        "original_over_changed": 1.0,
+        "percent_change": 0.0,
+        "changed_larger_keys": 128,
+        "round_original_over_changed": [
+          1.0042184185050156,
+          1.0,
+          0.9957993017980137,
+          1.0
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "sign",
+      "variant": "both",
+      "wall_ns": {
+        "original_sum": 183117923,
+        "changed_sum": 168593745,
+        "original_mean": 357652.193359375,
+        "changed_mean": 329284.658203125,
+        "original_over_changed": 1.0861489730831948,
+        "percent_change": -7.931598263049322,
+        "changed_larger_keys": 37,
+        "round_original_over_changed": [
+          1.0653722008739117,
+          1.0645864565860101,
+          1.1303522260720866,
+          1.0842726566518242
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 179713000,
+        "changed_sum": 167219000,
+        "original_mean": 351001.953125,
+        "changed_mean": 326599.609375,
+        "original_over_changed": 1.0747163898839247,
+        "percent_change": -6.952196001402234,
+        "changed_larger_keys": 33,
+        "round_original_over_changed": [
+          1.0641201838775414,
+          1.0670942395986178,
+          1.069662279553514,
+          1.0988072448829334
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 46656192,
+        "changed_sum": 46754496,
+        "original_mean": 91125.375,
+        "changed_mean": 91317.375,
+        "original_over_changed": 0.9978974428469938,
+        "percent_change": 0.21069872140444534,
+        "changed_larger_keys": 256,
+        "round_original_over_changed": [
+          1.0,
+          0.9957993017980137,
+          1.0,
+          0.9957993017980137
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "verify",
+      "variant": "companion",
+      "wall_ns": {
+        "original_sum": 57563481,
+        "changed_sum": 57192420,
+        "original_mean": 112428.673828125,
+        "changed_mean": 111703.9453125,
+        "original_over_changed": 1.0064879401850804,
+        "percent_change": -0.6446118156058,
+        "changed_larger_keys": 260,
+        "round_original_over_changed": [
+          1.0637554822183177,
+          0.9827980608023438,
+          1.0183891350825907,
+          0.9636455413132263
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 57470000,
+        "changed_sum": 57439000,
+        "original_mean": 112246.09375,
+        "changed_mean": 112185.546875,
+        "original_over_changed": 1.0005397029892582,
+        "percent_change": -0.053941186706107924,
+        "changed_larger_keys": 248,
+        "round_original_over_changed": [
+          1.0593526505935265,
+          0.9849125775521714,
+          0.9976116234326279,
+          0.9641562350365962
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 30769616,
+        "changed_sum": 30720784,
+        "original_mean": 60096.90625,
+        "changed_mean": 60001.53125,
+        "original_over_changed": 1.0015895427668773,
+        "percent_change": -0.15870201305079323,
+        "changed_larger_keys": 26,
+        "round_original_over_changed": [
+          1.0064328746699278,
+          0.9997402645976491,
+          0.9999895968574187,
+          1.0002288715177718
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_44",
+      "operation": "verify",
+      "variant": "both",
+      "wall_ns": {
+        "original_sum": 57563481,
+        "changed_sum": 56746055,
+        "original_mean": 112428.673828125,
+        "changed_mean": 110832.138671875,
+        "original_over_changed": 1.0144049837473283,
+        "percent_change": -1.4200426829642177,
+        "changed_larger_keys": 258,
+        "round_original_over_changed": [
+          0.9951671681964586,
+          1.0228467761193851,
+          1.081612616608463,
+          0.9574584284683343
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 57470000,
+        "changed_sum": 57564000,
+        "original_mean": 112246.09375,
+        "changed_mean": 112429.6875,
+        "original_over_changed": 0.9983670349524008,
+        "percent_change": 0.16356359839917456,
+        "changed_larger_keys": 253,
+        "round_original_over_changed": [
+          0.9957033957033957,
+          1.0199313718332481,
+          1.0167692203664886,
+          0.9622474057891862
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 30769616,
+        "changed_sum": 30721984,
+        "original_mean": 60096.90625,
+        "changed_mean": 60003.875,
+        "original_over_changed": 1.0015504207019963,
+        "percent_change": -0.1548020618781898,
+        "changed_larger_keys": 44,
+        "round_original_over_changed": [
+          0.9995424663972764,
+          1.0000311773178776,
+          1.0064328746699278,
+          1.0002288715177718
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "keygen",
+      "variant": "companion",
+      "wall_ns": {
+        "original_sum": 82081496,
+        "changed_sum": 80723489,
+        "original_mean": 160315.421875,
+        "changed_mean": 157663.064453125,
+        "original_over_changed": 1.0168229472836587,
+        "percent_change": -1.6544618046435255,
+        "changed_larger_keys": 123,
+        "round_original_over_changed": [
+          0.9871749532111687,
+          1.0321447308748257,
+          1.0163201239360196,
+          1.0322773928508535
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 80205000,
+        "changed_sum": 78326000,
+        "original_mean": 156650.390625,
+        "changed_mean": 152980.46875,
+        "original_over_changed": 1.0239894798662001,
+        "percent_change": -2.3427467115516465,
+        "changed_larger_keys": 116,
+        "round_original_over_changed": [
+          1.0244607967520933,
+          1.0259368885767322,
+          1.0168113614693632,
+          1.0290496242204574
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 58611712,
+        "changed_sum": 58427392,
+        "original_mean": 114476.0,
+        "changed_mean": 114116.0,
+        "original_over_changed": 1.0031546847067896,
+        "percent_change": -0.3144763967993236,
+        "changed_larger_keys": 0,
+        "round_original_over_changed": [
+          1.0,
+          1.0063193371717456,
+          1.0063193371717456,
+          1.0
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "keygen",
+      "variant": "both",
+      "wall_ns": {
+        "original_sum": 82081496,
+        "changed_sum": 85297404,
+        "original_mean": 160315.421875,
+        "changed_mean": 166596.4921875,
+        "original_over_changed": 0.9622977036909588,
+        "percent_change": 3.9179451602587845,
+        "changed_larger_keys": 190,
+        "round_original_over_changed": [
+          1.0010597581582397,
+          1.048060204665313,
+          0.8499997436322941,
+          0.9742669741044417
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 80205000,
+        "changed_sum": 79463000,
+        "original_mean": 156650.390625,
+        "changed_mean": 155201.171875,
+        "original_over_changed": 1.0093376791714384,
+        "percent_change": -0.9251293560251894,
+        "changed_larger_keys": 180,
+        "round_original_over_changed": [
+          1.0619706454837183,
+          1.0415605582153407,
+          0.9652248475609756,
+          0.9736735928989309
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 58611712,
+        "changed_sum": 58611712,
+        "original_mean": 114476.0,
+        "changed_mean": 114476.0,
+        "original_over_changed": 1.0,
+        "percent_change": 0.0,
+        "changed_larger_keys": 128,
+        "round_original_over_changed": [
+          0.993720346078705,
+          1.0,
+          1.0,
+          1.0063193371717456
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "variant": "companion",
+      "wall_ns": {
+        "original_sum": 290491875,
+        "changed_sum": 272098875,
+        "original_mean": 567366.943359375,
+        "changed_mean": 531443.115234375,
+        "original_over_changed": 1.0675967513647382,
+        "percent_change": -6.3316745089686215,
+        "changed_larger_keys": 56,
+        "round_original_over_changed": [
+          1.0981981161405463,
+          1.0580421702329899,
+          1.0455350886521102,
+          1.0677856301137452
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 285548000,
+        "changed_sum": 269198000,
+        "original_mean": 557710.9375,
+        "changed_mean": 525777.34375,
+        "original_over_changed": 1.0607359638630303,
+        "percent_change": -5.725832434476863,
+        "changed_larger_keys": 38,
+        "round_original_over_changed": [
+          1.0808342661874741,
+          1.0516266017312803,
+          1.0465207075712526,
+          1.0636402773035643
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 72280192,
+        "changed_sum": 72154792,
+        "original_mean": 141172.25,
+        "changed_mean": 140927.328125,
+        "original_over_changed": 1.0017379303096043,
+        "percent_change": -0.1734915147984073,
+        "changed_larger_keys": 128,
+        "round_original_over_changed": [
+          0.9949063421346317,
+          1.0,
+          1.0069791950973326,
+          1.0051197360491637
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "variant": "both",
+      "wall_ns": {
+        "original_sum": 290491875,
+        "changed_sum": 326652326,
+        "original_mean": 567366.943359375,
+        "changed_mean": 637992.82421875,
+        "original_over_changed": 0.889299882101559,
+        "percent_change": 12.44800771105905,
+        "changed_larger_keys": 70,
+        "round_original_over_changed": [
+          1.1154431952306518,
+          0.5594591449644254,
+          1.0594908638731284,
+          1.1231375619175559
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 285548000,
+        "changed_sum": 269064000,
+        "original_mean": 557710.9375,
+        "changed_mean": 525515.625,
+        "original_over_changed": 1.0612642345315613,
+        "percent_change": -5.772759746172273,
+        "changed_larger_keys": 56,
+        "round_original_over_changed": [
+          1.0989471792490977,
+          0.9971560511347638,
+          1.0595998297147722,
+          1.0940434563527812
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 72280192,
+        "changed_sum": 72188032,
+        "original_mean": 141172.25,
+        "changed_mean": 140992.25,
+        "original_over_changed": 1.0012766659160344,
+        "percent_change": -0.12750381183270765,
+        "changed_larger_keys": 0,
+        "round_original_over_changed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0051197360491637
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "verify",
+      "variant": "companion",
+      "wall_ns": {
+        "original_sum": 79502404,
+        "changed_sum": 80639299,
+        "original_mean": 155278.1328125,
+        "changed_mean": 157498.630859375,
+        "original_over_changed": 0.9859014771445371,
+        "percent_change": 1.4300133616085287,
+        "changed_larger_keys": 234,
+        "round_original_over_changed": [
+          1.0036069833624703,
+          1.020277234843134,
+          0.9814359874735913,
+          0.938924033150611
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 79637000,
+        "changed_sum": 79215000,
+        "original_mean": 155541.015625,
+        "changed_mean": 154716.796875,
+        "original_over_changed": 1.0053272738748975,
+        "percent_change": -0.529904441402862,
+        "changed_larger_keys": 220,
+        "round_original_over_changed": [
+          0.9999505537974683,
+          1.022142095373521,
+          1.020510483135825,
+          0.9786232995806484
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 49851760,
+        "changed_sum": 49663680,
+        "original_mean": 97366.71875,
+        "changed_mean": 96999.375,
+        "original_over_changed": 1.003787073370318,
+        "percent_change": -0.3772785554612357,
+        "changed_larger_keys": 128,
+        "round_original_over_changed": [
+          0.9971261234099059,
+          1.0000705639341319,
+          1.0106036153402425,
+          1.0074449865899764
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_65",
+      "operation": "verify",
+      "variant": "both",
+      "wall_ns": {
+        "original_sum": 79502404,
+        "changed_sum": 79848253,
+        "original_mean": 155278.1328125,
+        "changed_mean": 155953.619140625,
+        "original_over_changed": 0.9956686716740064,
+        "percent_change": 0.43501703420187887,
+        "changed_larger_keys": 171,
+        "round_original_over_changed": [
+          1.0481834475183276,
+          0.9954410765001437,
+          0.9468714887011667,
+          0.9948726083093913
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 79637000,
+        "changed_sum": 77856000,
+        "original_mean": 155541.015625,
+        "changed_mean": 152062.5,
+        "original_over_changed": 1.0228755651459105,
+        "percent_change": -2.2363976543566477,
+        "changed_larger_keys": 159,
+        "round_original_over_changed": [
+          1.0464683053040102,
+          1.044093998028739,
+          1.0119011750527267,
+          0.9894519131334023
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 49851760,
+        "changed_sum": 49663680,
+        "original_mean": 97366.71875,
+        "changed_mean": 96999.375,
+        "original_over_changed": 1.003787073370318,
+        "percent_change": -0.3772785554612357,
+        "changed_larger_keys": 128,
+        "round_original_over_changed": [
+          0.9971261234099059,
+          1.010441579653503,
+          1.007677642420913,
+          1.0
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "keygen",
+      "variant": "companion",
+      "wall_ns": {
+        "original_sum": 118067498,
+        "changed_sum": 116627246,
+        "original_mean": 230600.58203125,
+        "changed_mean": 227787.58984375,
+        "original_over_changed": 1.01234918982825,
+        "percent_change": -1.2198547647719327,
+        "changed_larger_keys": 176,
+        "round_original_over_changed": [
+          0.9856061067001685,
+          1.135054036987692,
+          1.0163529307452202,
+          0.9264024790328934
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 115875000,
+        "changed_sum": 113833000,
+        "original_mean": 226318.359375,
+        "changed_mean": 222330.078125,
+        "original_over_changed": 1.0179385591173034,
+        "percent_change": -1.762243797195251,
+        "changed_larger_keys": 175,
+        "round_original_over_changed": [
+          1.0139504292439767,
+          1.088816511747054,
+          1.0120919829454114,
+          0.9609032925357697
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 92033024,
+        "changed_sum": 92033024,
+        "original_mean": 179752.0,
+        "changed_mean": 179752.0,
+        "original_over_changed": 1.0,
+        "percent_change": 0.0,
+        "changed_larger_keys": 128,
+        "round_original_over_changed": [
+          1.0,
+          1.0,
+          1.0075191335093765,
+          0.9925369819199502
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "keygen",
+      "variant": "both",
+      "wall_ns": {
+        "original_sum": 118067498,
+        "changed_sum": 118675825,
+        "original_mean": 230600.58203125,
+        "changed_mean": 231788.720703125,
+        "original_over_changed": 0.9948740444821007,
+        "percent_change": 0.5152366318459611,
+        "changed_larger_keys": 179,
+        "round_original_over_changed": [
+          0.9815716475902676,
+          0.9458846324252563,
+          1.1075419404413576,
+          0.960260096789438
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 115875000,
+        "changed_sum": 114592000,
+        "original_mean": 226318.359375,
+        "changed_mean": 223812.5,
+        "original_over_changed": 1.0111962440659035,
+        "percent_change": -1.1072276159654781,
+        "changed_larger_keys": 172,
+        "round_original_over_changed": [
+          1.0135294117647058,
+          1.0051349616567007,
+          1.0703330007022211,
+          0.9599435145002411
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 92033024,
+        "changed_sum": 91688960,
+        "original_mean": 179752.0,
+        "changed_mean": 179080.0,
+        "original_over_changed": 1.003752512843422,
+        "percent_change": -0.37384841336952634,
+        "changed_larger_keys": 0,
+        "round_original_over_changed": [
+          1.0075191335093765,
+          1.0075191335093765,
+          1.0,
+          1.0
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "sign",
+      "variant": "companion",
+      "wall_ns": {
+        "original_sum": 361651551,
+        "changed_sum": 353750705,
+        "original_mean": 706350.685546875,
+        "changed_mean": 690919.345703125,
+        "original_over_changed": 1.0223345024853026,
+        "percent_change": -2.1846570208681304,
+        "changed_larger_keys": 106,
+        "round_original_over_changed": [
+          1.030069055604043,
+          1.0521095452985307,
+          1.03370949479663,
+          0.9763910738140521
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 360872000,
+        "changed_sum": 348609000,
+        "original_mean": 704828.125,
+        "changed_mean": 680876.953125,
+        "original_over_changed": 1.0351769460914664,
+        "percent_change": -3.3981577955618625,
+        "changed_larger_keys": 89,
+        "round_original_over_changed": [
+          1.0413798641703378,
+          1.045880753812837,
+          1.0315675398527082,
+          1.022113879724815
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 109429376,
+        "changed_sum": 109085312,
+        "original_mean": 213729.25,
+        "changed_mean": 213057.25,
+        "original_over_changed": 1.0031540818254248,
+        "percent_change": -0.31441648721455273,
+        "changed_larger_keys": 0,
+        "round_original_over_changed": [
+          1.0,
+          1.0063181275965611,
+          1.0,
+          1.0063181275965611
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "sign",
+      "variant": "both",
+      "wall_ns": {
+        "original_sum": 361651551,
+        "changed_sum": 342036998,
+        "original_mean": 706350.685546875,
+        "changed_mean": 668041.01171875,
+        "original_over_changed": 1.0573462903565771,
+        "percent_change": -5.423605386390284,
+        "changed_larger_keys": 48,
+        "round_original_over_changed": [
+          1.0501592988837514,
+          1.0812167824369572,
+          1.0275503968923887,
+          1.070945682533617
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 360872000,
+        "changed_sum": 340845000,
+        "original_mean": 704828.125,
+        "changed_mean": 665712.890625,
+        "original_over_changed": 1.0587569129663044,
+        "percent_change": -5.549613159236511,
+        "changed_larger_keys": 36,
+        "round_original_over_changed": [
+          1.061311103576481,
+          1.0645444952514949,
+          1.038867308978677,
+          1.0703446486894388
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 109429376,
+        "changed_sum": 109601408,
+        "original_mean": 213729.25,
+        "changed_mean": 214065.25,
+        "original_over_changed": 0.9984303851278991,
+        "percent_change": 0.15720824360727637,
+        "changed_larger_keys": 128,
+        "round_original_over_changed": [
+          0.9937215405115963,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "verify",
+      "variant": "companion",
+      "wall_ns": {
+        "original_sum": 128032580,
+        "changed_sum": 123139451,
+        "original_mean": 250063.6328125,
+        "changed_mean": 240506.740234375,
+        "original_over_changed": 1.0397364854257796,
+        "percent_change": -3.821784267723105,
+        "changed_larger_keys": 184,
+        "round_original_over_changed": [
+          1.0649197571386495,
+          1.1237478441677309,
+          1.0527404767002784,
+          0.9222835595540759
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 124497000,
+        "changed_sum": 122314000,
+        "original_mean": 243158.203125,
+        "changed_mean": 238894.53125,
+        "original_over_changed": 1.017847507235476,
+        "percent_change": -1.7534559065680244,
+        "changed_larger_keys": 176,
+        "round_original_over_changed": [
+          1.0335109653617545,
+          1.0642891878748582,
+          1.02002002002002,
+          0.9551335425606866
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 81462416,
+        "changed_sum": 81460184,
+        "original_mean": 159106.28125,
+        "changed_mean": 159101.921875,
+        "original_over_changed": 1.000027399889006,
+        "percent_change": -0.002739913827254359,
+        "changed_larger_keys": 256,
+        "round_original_over_changed": [
+          0.9916722933192921,
+          1.0085007493235574,
+          1.0084047403587695,
+          0.9916722933192921
+        ],
+        "paired_observations": 512
+      }
+    },
+    {
+      "parameter": "ml_dsa_87",
+      "operation": "verify",
+      "variant": "both",
+      "wall_ns": {
+        "original_sum": 128032580,
+        "changed_sum": 124111627,
+        "original_mean": 250063.6328125,
+        "changed_mean": 242405.521484375,
+        "original_over_changed": 1.0315921488967348,
+        "percent_change": -3.0624650381957497,
+        "changed_larger_keys": 254,
+        "round_original_over_changed": [
+          0.986137942109265,
+          1.207659011817108,
+          1.0310025419566393,
+          0.9168169949161381
+        ],
+        "paired_observations": 512
+      },
+      "cpu_ns": {
+        "original_sum": 124497000,
+        "changed_sum": 122154000,
+        "original_mean": 243158.203125,
+        "changed_mean": 238582.03125,
+        "original_over_changed": 1.0191807063215286,
+        "percent_change": -1.8819730595918016,
+        "changed_larger_keys": 244,
+        "round_original_over_changed": [
+          0.9804906504196779,
+          1.116446741939872,
+          1.0272511463041851,
+          0.9577098452250979
+        ],
+        "paired_observations": 512
+      },
+      "allocated_bytes": {
+        "original_sum": 81462416,
+        "changed_sum": 81461696,
+        "original_mean": 159106.28125,
+        "changed_mean": 159104.875,
+        "original_over_changed": 1.0000088385098194,
+        "percent_change": -0.0008838431700852745,
+        "changed_larger_keys": 22,
+        "round_original_over_changed": [
+          1.0000390548104678,
+          1.0000739346081642,
+          0.9999225504224131,
+          1.0
+        ],
+        "paired_observations": 512
+      }
+    }
+  ]
+}

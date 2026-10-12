@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java",
+    "-Xmx512m",
+    "-XX:ActiveProcessorCount=2",
+    "-cp",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/libs/bouncycastle/build/pattern-research/baseline-driver:/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/libs/bouncycastle/build/pattern-research/baseline-classes",
+    "org.bouncycastle.crypto.signers.slhdsa.AddressTrace"
+  ],
+  "started_at": "2026-10-12T07:41:35.361841+00:00"
+}

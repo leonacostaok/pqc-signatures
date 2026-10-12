@@ -1,0 +1,347 @@
+{
+  "source_file": "results/circl/experiments/sha2-prefix-go127-arm64.json",
+  "sha256": "bb528fc0bfbd0b201115ed3a53938fb34f6da4faecadd0629901dadb43e7d3f6",
+  "sha2_pairs": 360,
+  "shake_pairs": 60,
+  "pair_losses": [
+    {
+      "fork": 10,
+      "round": 0,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "keygen",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "speedup": 0.9978375081871564
+    },
+    {
+      "fork": 10,
+      "round": 1,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "keygen",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "speedup": 0.9949617999676067
+    },
+    {
+      "fork": 10,
+      "round": 2,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "keygen",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "speedup": 0.996474001842389
+    },
+    {
+      "fork": 10,
+      "round": 0,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "speedup": 0.9975353121360289
+    },
+    {
+      "fork": 10,
+      "round": 2,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "speedup": 0.9999292392730047
+    },
+    {
+      "fork": 10,
+      "round": 3,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "speedup": 0.999813917544897
+    },
+    {
+      "fork": 10,
+      "round": 0,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "speedup": 0.9971782092190384
+    },
+    {
+      "fork": 11,
+      "round": 0,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "keygen",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "speedup": 0.998384917232086
+    },
+    {
+      "fork": 11,
+      "round": 3,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "keygen",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "speedup": 0.9964480457963688
+    },
+    {
+      "fork": 11,
+      "round": 0,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "speedup": 0.9982760482007693
+    },
+    {
+      "fork": 11,
+      "round": 1,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "speedup": 0.9992341057070143
+    },
+    {
+      "fork": 11,
+      "round": 2,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "speedup": 0.9669358504439525
+    },
+    {
+      "fork": 11,
+      "round": 3,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "speedup": 0.9973721173851056
+    },
+    {
+      "fork": 12,
+      "round": 2,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "keygen",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "speedup": 0.9973677298418026
+    },
+    {
+      "fork": 12,
+      "round": 0,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "speedup": 0.9987349201074462
+    },
+    {
+      "fork": 12,
+      "round": 2,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "speedup": 0.9976754649147617
+    },
+    {
+      "fork": 12,
+      "round": 3,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "speedup": 0.992385546214313
+    },
+    {
+      "fork": 12,
+      "round": 3,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "speedup": 0.9715921901177635
+    },
+    {
+      "fork": 13,
+      "round": 0,
+      "param": "SLH-DSA-SHA2-256f",
+      "op": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "speedup": 0.26648581415812894
+    },
+    {
+      "fork": 13,
+      "round": 2,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "keygen",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "speedup": 0.9972142925223417
+    },
+    {
+      "fork": 13,
+      "round": 1,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "speedup": 0.9981308758865745
+    },
+    {
+      "fork": 13,
+      "round": 2,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "speedup": 0.9870533505741402
+    },
+    {
+      "fork": 13,
+      "round": 0,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "speedup": 0.9984835376631727
+    },
+    {
+      "fork": 14,
+      "round": 2,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "keygen",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "speedup": 0.9974369817972004
+    },
+    {
+      "fork": 14,
+      "round": 3,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "speedup": 0.996071590608032
+    },
+    {
+      "fork": 14,
+      "round": 2,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "verify",
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "speedup": 0.9998498080003086
+    },
+    {
+      "fork": 14,
+      "round": 3,
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "verify",
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "speedup": 0.9994951079706534
+    }
+  ],
+  "fork_losses": [
+    {
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "keygen",
+      "fork": 10,
+      "speedup": 0.9971557550147727,
+      "baseline_ns": 2341450.0370370373,
+      "candidate_ns": 2345223.763888889
+    },
+    {
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "keygen",
+      "fork": 11,
+      "speedup": 0.9995703988437195,
+      "baseline_ns": 2343607.2546296297,
+      "candidate_ns": 2342680.361111111
+    },
+    {
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "fork": 10,
+      "speedup": 0.9998715784089509,
+      "baseline_ns": 54642614.5,
+      "candidate_ns": 54649631.916666664
+    },
+    {
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "fork": 11,
+      "speedup": 0.9978240827929374,
+      "baseline_ns": 54621090.333333336,
+      "candidate_ns": 54719177.08333333
+    },
+    {
+      "param": "SLH-DSA-SHAKE-128f",
+      "op": "sign",
+      "fork": 12,
+      "speedup": 0.998205192511104,
+      "baseline_ns": 54805638.916666664,
+      "candidate_ns": 54991225.66666667
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "complete": true,
+  "ready_sha256": "8c123b23d7b7e5b76fffd774e2413bc82a0d0bf8d8ad766f11418648ad7b4da3",
+  "python_version": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "optimize": 0,
+  "variants": {
+    "original": {
+      "archive_sha256": "3959b768646d4e427f151ec99881d802f9b944618f817d4ca529d05f0e7aa521",
+      "driver_sha256": "e1774426a3189480322d5dbb607a3d66734d3363cfcb39b49cb8454ca764821e",
+      "hash_members": {
+        "sha2_256.c.o": "00d61e42033573321ca33755a2315f1d66d3174c306124fe5163996325d2eb92",
+        "sha2_512.c.o": "cffa47863173ebd4d7e9ff807dca93e6059135e3b6350bdbced8b596aa229ac0"
+      },
+      "linked_libraries": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/ten-new-keys/baseline/driver:\n\t/opt/homebrew/opt/openssl@3/lib/libcrypto.3.dylib (compatibility version 3.0.0, current version 3.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n"
+    },
+    "sha256-only": {
+      "archive_sha256": "04050db4690e236cf4df404c16afd8952bc119a610c447b5e46a5f23ebd9fa2e",
+      "driver_sha256": "969701324f09108ca7fcc67cd1e812f18c9381b536995d9b83fcc988ebedc903",
+      "hash_members": {
+        "sha2_256.c.o": "c937eec0eb714f1911523540b6d3efa12d5980c5e718cac95d823f94a2cf705a",
+        "sha2_512.c.o": "b2c1b700a6fe2a95251228c56f67b5c34ee8337fe87cdb107c5a3f9d5c3037ed"
+      },
+      "linked_libraries": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-ablation/sha256-only/driver:\n\t/opt/homebrew/opt/openssl@3/lib/libcrypto.3.dylib (compatibility version 3.0.0, current version 3.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n"
+    },
+    "sha512-only": {
+      "archive_sha256": "21001ff7d60bf7b48935b43c56a0e8a1d909acbf7841aafe2c5c8358fac70b93",
+      "driver_sha256": "ccb5ca3b0cd00562488c2e91fc91dc2dd11a8dee2469de509d2b7bcae3efd816",
+      "hash_members": {
+        "sha2_256.c.o": "521d4661aef6d9c24f779ccde56c719f3352d750a84798d9f12c53f3fc0351d6",
+        "sha2_512.c.o": "d1a64c03b766b286c9262b68966097b7ee9beeaf5ec3cf83e0860076e78c767c"
+      },
+      "linked_libraries": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-ablation/sha512-only/driver:\n\t/opt/homebrew/opt/openssl@3/lib/libcrypto.3.dylib (compatibility version 3.0.0, current version 3.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n"
+    },
+    "full": {
+      "archive_sha256": "c86a787170a16f9d39d7dcca2d66213f8b8a3283616bb5c34d6baaea1f071cdd",
+      "driver_sha256": "9d4dddf3c3a35aaaaebf392a271522f0d0c3fc45d9b34b29f38c2fea9211e1be",
+      "hash_members": {
+        "sha2_256.c.o": "a329033fd354634e61faa6aa8f10adf15e505ad2730502bbca24967c111469ea",
+        "sha2_512.c.o": "6374d26e9365ef6d32bd366a6f72e9e3bc48c7be231f8483fc6e2c29f4840a0c"
+      },
+      "linked_libraries": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/ten-new-keys/candidate/driver:\n\t/opt/homebrew/opt/openssl@3/lib/libcrypto.3.dylib (compatibility version 3.0.0, current version 3.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n"
+    }
+  },
+  "backend_path": "/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib/libcrypto.3.dylib",
+  "backend_sha256": "a7e687f76c5b69423480050f6bfa91dc2c2f616866476cca485ebc2b68ed0b15",
+  "claim": "Every static archive contains exactly the checked SHA compression objects; each driver links the recorded OpenSSL library path."
+}

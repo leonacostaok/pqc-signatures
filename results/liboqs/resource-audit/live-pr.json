@@ -1,0 +1,61 @@
+{
+  "baseRefOid": "fd44469daeffe6b28f031f54f9bb66cbae69a572",
+  "files": [
+    {
+      "path": "src/sig/slh_dsa/CMakeLists.txt",
+      "additions": 3,
+      "deletions": 0,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "src/sig/slh_dsa/patches/sha2_openssl.patch",
+      "additions": 114,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "src/sig/slh_dsa/slh_dsa_c/sha2_256.c",
+      "additions": 32,
+      "deletions": 0,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "src/sig/slh_dsa/slh_dsa_c/sha2_512.c",
+      "additions": 32,
+      "deletions": 0,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "src/sig/slh_dsa/templates/slh_dsa_cmake_template.jinja",
+      "additions": 3,
+      "deletions": 0,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "tests/CMakeLists.txt",
+      "additions": 9,
+      "deletions": 0,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "tests/test_hash.py",
+      "additions": 8,
+      "deletions": 0,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "tests/test_slh_dsa_sha2.c",
+      "additions": 53,
+      "deletions": 0,
+      "changeType": "ADDED"
+    }
+  ],
+  "headRefOid": "94b42a7232057236dcb3dd56310df3d9d0a1cbd7",
+  "headRepositoryOwner": {
+    "id": "MDQ6VXNlcjcyOTM3OTE=",
+    "name": "Leon Acosta",
+    "login": "leonacostaok"
+  },
+  "title": "SLH-DSA SHA2: ~4–5× sign/verify speedup",
+  "url": "https://github.com/open-quantum-safe/liboqs/pull/2625"
+}

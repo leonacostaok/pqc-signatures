@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "script": "libs/bouncycastle/experiments/wots-alternatives/audit.py",
+      "sha256": "702d6fe4a2b3e98174ee707b2cc5787e96b02f91d034ee5e076c405c81e46bc4",
+      "mode": "-O",
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/audit.py\", line 5, in <module>\n    raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n",
+      "stdout": ""
+    },
+    {
+      "script": "libs/bouncycastle/experiments/wots-alternatives/audit.py",
+      "sha256": "702d6fe4a2b3e98174ee707b2cc5787e96b02f91d034ee5e076c405c81e46bc4",
+      "mode": "PYTHONOPTIMIZE=1",
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/audit.py\", line 5, in <module>\n    raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n",
+      "stdout": ""
+    },
+    {
+      "script": "libs/bouncycastle/experiments/wots-alternatives/audit_portable.py",
+      "sha256": "138bd2d95e41439bab730df1650c4546dff36451a6c3c9be316a45063980dc0e",
+      "mode": "-O",
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/audit_portable.py\", line 9, in <module>\n    raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n",
+      "stdout": ""
+    },
+    {
+      "script": "libs/bouncycastle/experiments/wots-alternatives/audit_portable.py",
+      "sha256": "138bd2d95e41439bab730df1650c4546dff36451a6c3c9be316a45063980dc0e",
+      "mode": "PYTHONOPTIMIZE=1",
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/audit_portable.py\", line 9, in <module>\n    raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n",
+      "stdout": ""
+    },
+    {
+      "script": "libs/bouncycastle/experiments/wots-alternatives/confirmation.py",
+      "sha256": "3e910105ad79ecba98d744eb55791afd016df5bf9f57f21a5aa137c0d147ee3d",
+      "mode": "-O",
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/confirmation.py\", line 5, in <module>\n    if sys.flags.optimize:raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n",
+      "stdout": ""
+    },
+    {
+      "script": "libs/bouncycastle/experiments/wots-alternatives/confirmation.py",
+      "sha256": "3e910105ad79ecba98d744eb55791afd016df5bf9f57f21a5aa137c0d147ee3d",
+      "mode": "PYTHONOPTIMIZE=1",
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/confirmation.py\", line 5, in <module>\n    if sys.flags.optimize:raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n",
+      "stdout": ""
+    },
+    {
+      "script": "libs/bouncycastle/experiments/wots-alternatives/prescribe.py",
+      "sha256": "4a5fd991d5f672119fbb31edb9724fe626e77d69ba19f23a022e3168e65d9cb4",
+      "mode": "-O",
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/prescribe.py\", line 6, in <module>\n    raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n",
+      "stdout": ""
+    },
+    {
+      "script": "libs/bouncycastle/experiments/wots-alternatives/prescribe.py",
+      "sha256": "4a5fd991d5f672119fbb31edb9724fe626e77d69ba19f23a022e3168e65d9cb4",
+      "mode": "PYTHONOPTIMIZE=1",
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/prescribe.py\", line 6, in <module>\n    raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n",
+      "stdout": ""
+    },
+    {
+      "script": "libs/bouncycastle/experiments/wots-alternatives/rebuild.py",
+      "sha256": "53a0c32ba797190dcac7731430fe98c4b88dd5b8f85924dbee62f0eaf9d06217",
+      "mode": "-O",
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/rebuild.py\", line 4, in <module>\n    if sys.flags.optimize:raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n",
+      "stdout": ""
+    },
+    {
+      "script": "libs/bouncycastle/experiments/wots-alternatives/rebuild.py",
+      "sha256": "53a0c32ba797190dcac7731430fe98c4b88dd5b8f85924dbee62f0eaf9d06217",
+      "mode": "PYTHONOPTIMIZE=1",
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/rebuild.py\", line 4, in <module>\n    if sys.flags.optimize:raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n",
+      "stdout": ""
+    },
+    {
+      "script": "libs/bouncycastle/experiments/wots-alternatives/run.py",
+      "sha256": "16df6484c8c3f4ad41c9d6dffab1aaa399cf539e402033a008296cb7ff9e0d43",
+      "mode": "-O",
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/run.py\", line 6, in <module>\n    raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n",
+      "stdout": ""
+    },
+    {
+      "script": "libs/bouncycastle/experiments/wots-alternatives/run.py",
+      "sha256": "16df6484c8c3f4ad41c9d6dffab1aaa399cf539e402033a008296cb7ff9e0d43",
+      "mode": "PYTHONOPTIMIZE=1",
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/run.py\", line 6, in <module>\n    raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n",
+      "stdout": ""
+    },
+    {
+      "script": "libs/bouncycastle/experiments/wots-alternatives/selection.py",
+      "sha256": "aa7070609b08021550f57a7a4a183f9100317ac336f76ea5085ebe6b6a3bdd18",
+      "mode": "-O",
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/selection.py\", line 5, in <module>\n    if sys.flags.optimize:raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n",
+      "stdout": ""
+    },
+    {
+      "script": "libs/bouncycastle/experiments/wots-alternatives/selection.py",
+      "sha256": "aa7070609b08021550f57a7a4a183f9100317ac336f76ea5085ebe6b6a3bdd18",
+      "mode": "PYTHONOPTIMIZE=1",
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/selection.py\", line 5, in <module>\n    if sys.flags.optimize:raise RuntimeError('Assertions required; do not use Python -O or PYTHONOPTIMIZE')\nRuntimeError: Assertions required; do not use Python -O or PYTHONOPTIMIZE\n",
+      "stdout": ""
+    }
+  ]
+}

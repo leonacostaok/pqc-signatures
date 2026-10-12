@@ -1,0 +1,8 @@
+{
+  "recorded_after_collection_at": "2026-10-12T07:46:40.715648+00:00",
+  "platform": "macOS-26.2-arm64-arm-64bit",
+  "cpu": "Apple M1 Pro",
+  "memory_bytes": 17179869184,
+  "python": "3.9.6",
+  "note": "Shared desktop; other research agents performed read-only work. Root serialized all crypto processes; unrelated desktop activity was not controlled."
+}

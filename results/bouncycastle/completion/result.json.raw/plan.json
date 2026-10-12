@@ -1,0 +1,1138 @@
+{
+  "manifest": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-bc-completion/libs/bouncycastle/build/completion/prepared-3c77380c1f371a02/manifest.json",
+  "manifest_sha256": "5fd9dea9ab654d8ae03932fe6fca8545d934ca1511c799b0cc2ebfe743ade70d",
+  "collector_sha256": "97a11311db1b0ee311c89554047ab396a05963deae92b03574e713d86ca43f7d",
+  "started_at": "2026-10-12T06:46:18.964664+00:00",
+  "jobs": [
+    {
+      "experiment": "baseline",
+      "side": "baseline",
+      "mode": "timing",
+      "parameter": "ml_dsa_44",
+      "operation": "all",
+      "warm": 100,
+      "cycles": 1,
+      "fork": 0
+    },
+    {
+      "experiment": "baseline",
+      "side": "baseline",
+      "mode": "timing",
+      "parameter": "ml_dsa_65",
+      "operation": "all",
+      "warm": 100,
+      "cycles": 1,
+      "fork": 0
+    },
+    {
+      "experiment": "baseline",
+      "side": "baseline",
+      "mode": "timing",
+      "parameter": "ml_dsa_87",
+      "operation": "all",
+      "warm": 100,
+      "cycles": 1,
+      "fork": 0
+    },
+    {
+      "experiment": "baseline",
+      "side": "baseline",
+      "mode": "timing",
+      "parameter": "falcon_512",
+      "operation": "all",
+      "warm": 2,
+      "cycles": 1,
+      "fork": 0
+    },
+    {
+      "experiment": "baseline",
+      "side": "baseline",
+      "mode": "timing",
+      "parameter": "falcon_1024",
+      "operation": "all",
+      "warm": 2,
+      "cycles": 1,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_128s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "sha2_128s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "sha2_128s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_128s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_192f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "sha2_192f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "sha2_192f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_192f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_192s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "sha2_192s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "sha2_192s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_192s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_256f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "sha2_256f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "sha2_256f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_256f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_256s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "sha2_256s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "sha2_256s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_256s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_128s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "shake_128s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "shake_128s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_128s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_192f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "shake_192f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "shake_192f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_192f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_192s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "shake_192s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "shake_192s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_192s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_256f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "shake_256f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "shake_256f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_256f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_256s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "shake_256s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "fors",
+      "side": "fors",
+      "mode": "resource",
+      "parameter": "shake_256s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "fors",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_256s",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_44",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_44",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_44",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_44",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_44",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_44",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_44",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_44",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_44",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_44",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_44",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_44",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_65",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_65",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_65",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_65",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_65",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_65",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_65",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_65",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_65",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_87",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_87",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_87",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_87",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_87",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_87",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_87",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_87",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_87",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_87",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "combined",
+      "side": "combined",
+      "mode": "resource",
+      "parameter": "ml_dsa_87",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "combined",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "ml_dsa_87",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "wots",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "wots",
+      "side": "wots",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "wots",
+      "side": "wots",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "wots",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "wots",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "wots",
+      "side": "wots",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "wots",
+      "side": "wots",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "wots",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "wots",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "wots",
+      "side": "wots",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "wots",
+      "side": "wots",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "wots",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "sha2_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "wots",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "wots",
+      "side": "wots",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "wots",
+      "side": "wots",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "wots",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "keygen",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "wots",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "wots",
+      "side": "wots",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "wots",
+      "side": "wots",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "wots",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "sign",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "wots",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "wots",
+      "side": "wots",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 0
+    },
+    {
+      "experiment": "wots",
+      "side": "wots",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    },
+    {
+      "experiment": "wots",
+      "side": "baseline",
+      "mode": "resource",
+      "parameter": "shake_128f",
+      "operation": "verify",
+      "warm": 100,
+      "cycles": 10,
+      "fork": 1
+    }
+  ]
+}

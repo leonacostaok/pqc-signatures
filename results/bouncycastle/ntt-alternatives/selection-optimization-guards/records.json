@@ -1,0 +1,23 @@
+[
+  {
+    "mode": "flag",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "-O",
+      "libs/bouncycastle/experiments/ntt-alternatives/select_confirmation.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "expected_rejection": true
+  },
+  {
+    "mode": "environment",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "libs/bouncycastle/experiments/ntt-alternatives/select_confirmation.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "expected_rejection": true
+  }
+]

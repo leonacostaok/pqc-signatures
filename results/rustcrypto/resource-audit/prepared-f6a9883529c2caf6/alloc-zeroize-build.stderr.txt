@@ -1,0 +1,11 @@
+   Compiling zeroize v1.9.1
+   Compiling hybrid-array v0.4.15
+   Compiling crypto-common v0.2.2
+   Compiling module-lattice v0.2.3
+   Compiling digest v0.11.3
+   Compiling signature v3.0.0
+   Compiling shake v0.1.0
+   Compiling ml-dsa-baseline v0.1.1 (/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-pr-resources/libs/rustcrypto/build/resource-audit/prepared-f6a9883529c2caf6/baseline/ml-dsa)
+   Compiling ml-dsa-candidate v0.1.1 (/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-pr-resources/libs/rustcrypto/build/resource-audit/prepared-f6a9883529c2caf6/candidate/ml-dsa)
+   Compiling mldsa-resource-audit v0.0.0 (/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-pr-resources/libs/rustcrypto/build/resource-audit/prepared-f6a9883529c2caf6)
+    Finished `release` profile [optimized] target(s) in 19.78s

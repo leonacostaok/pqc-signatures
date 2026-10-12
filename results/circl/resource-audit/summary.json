@@ -1,0 +1,4337 @@
+{
+  "schema": "circl-resource-review-v1",
+  "execution_sha256": "0bc10ae7431554ab332a3ddf5ff7d4bac6f154bd966588518c78959ed62e1117",
+  "processes": 42,
+  "checked_operations": 378,
+  "paired_operations": 189,
+  "all_raw_outputs_match": true,
+  "no_gc_during_operations": true,
+  "cells": [
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "keygen",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 864,
+            "allocated_objects": 9,
+            "heap_alloc_change": 864,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 1952,
+            "allocated_objects": 21,
+            "heap_alloc_change": 1952,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 864,
+            "allocated_objects": 9,
+            "heap_alloc_change": 864,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 1952,
+            "allocated_objects": 21,
+            "heap_alloc_change": 1952,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 864,
+            "allocated_objects": 9,
+            "heap_alloc_change": 864,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 1952,
+            "allocated_objects": 21,
+            "heap_alloc_change": 1952,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 864,
+            "allocated_objects": 9,
+            "heap_alloc_change": 864,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 1952,
+            "allocated_objects": 21,
+            "heap_alloc_change": 1952,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 864,
+            "allocated_objects": 9,
+            "heap_alloc_change": 864,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 1952,
+            "allocated_objects": 21,
+            "heap_alloc_change": 1952,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 864,
+            "allocated_objects": 9,
+            "heap_alloc_change": 864,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 1952,
+            "allocated_objects": 21,
+            "heap_alloc_change": 1952,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 864,
+            "allocated_objects": 9,
+            "heap_alloc_change": 864,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 1952,
+            "allocated_objects": 21,
+            "heap_alloc_change": 1952,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 864,
+            "allocated_objects": 9,
+            "heap_alloc_change": 864,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 1952,
+            "allocated_objects": 21,
+            "heap_alloc_change": 1952,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 864,
+            "allocated_objects": 9,
+            "heap_alloc_change": 864,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 1952,
+            "allocated_objects": 21,
+            "heap_alloc_change": 1952,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 864,
+        "candidate_mean": 1952,
+        "baseline_range": [
+          864,
+          864
+        ],
+        "candidate_range": [
+          1952,
+          1952
+        ],
+        "delta_range": [
+          1088,
+          1088
+        ],
+        "delta_median": 1088,
+        "candidate_over_baseline_total": 2.259259259259259,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 9,
+        "candidate_mean": 21,
+        "baseline_range": [
+          9,
+          9
+        ],
+        "candidate_range": [
+          21,
+          21
+        ],
+        "delta_range": [
+          12,
+          12
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 2.3333333333333335,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 27888,
+            "allocated_objects": 53,
+            "heap_alloc_change": 27888,
+            "heap_objects_change": 53,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 28976,
+            "allocated_objects": 65,
+            "heap_alloc_change": 28976,
+            "heap_objects_change": 65,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 28048,
+            "allocated_objects": 55,
+            "heap_alloc_change": 28048,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 29136,
+            "allocated_objects": 67,
+            "heap_alloc_change": 29136,
+            "heap_objects_change": 67,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 29584,
+            "allocated_objects": 55,
+            "heap_alloc_change": 29584,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 30672,
+            "allocated_objects": 67,
+            "heap_alloc_change": 30672,
+            "heap_objects_change": 67,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 27888,
+            "allocated_objects": 53,
+            "heap_alloc_change": 27888,
+            "heap_objects_change": 53,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 28976,
+            "allocated_objects": 65,
+            "heap_alloc_change": 28976,
+            "heap_objects_change": 65,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 28048,
+            "allocated_objects": 55,
+            "heap_alloc_change": 28048,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 29184,
+            "allocated_objects": 68,
+            "heap_alloc_change": 29184,
+            "heap_objects_change": 68,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 29584,
+            "allocated_objects": 55,
+            "heap_alloc_change": 29584,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 30672,
+            "allocated_objects": 67,
+            "heap_alloc_change": 30672,
+            "heap_objects_change": 67,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 27888,
+            "allocated_objects": 53,
+            "heap_alloc_change": 27888,
+            "heap_objects_change": 53,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 28976,
+            "allocated_objects": 65,
+            "heap_alloc_change": 28976,
+            "heap_objects_change": 65,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 28048,
+            "allocated_objects": 55,
+            "heap_alloc_change": 28048,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 29136,
+            "allocated_objects": 67,
+            "heap_alloc_change": 29136,
+            "heap_objects_change": 67,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 29584,
+            "allocated_objects": 55,
+            "heap_alloc_change": 29584,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 30720,
+            "allocated_objects": 68,
+            "heap_alloc_change": 30720,
+            "heap_objects_change": 68,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 28506.666666666668,
+        "candidate_mean": 29605.333333333332,
+        "baseline_range": [
+          27888,
+          29584
+        ],
+        "candidate_range": [
+          28976,
+          30720
+        ],
+        "delta_range": [
+          1088,
+          1136
+        ],
+        "delta_median": 1088,
+        "candidate_over_baseline_total": 1.0385406922357343,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 54.333333333333336,
+        "candidate_mean": 66.55555555555556,
+        "baseline_range": [
+          53,
+          55
+        ],
+        "candidate_range": [
+          65,
+          68
+        ],
+        "delta_range": [
+          12,
+          13
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 1.2249488752556237,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 8512,
+            "allocated_objects": 43,
+            "heap_alloc_change": 8512,
+            "heap_objects_change": 43,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 9600,
+            "allocated_objects": 55,
+            "heap_alloc_change": 9600,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 8672,
+            "allocated_objects": 45,
+            "heap_alloc_change": 8672,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 9760,
+            "allocated_objects": 57,
+            "heap_alloc_change": 9760,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 10208,
+            "allocated_objects": 45,
+            "heap_alloc_change": 10208,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 11296,
+            "allocated_objects": 57,
+            "heap_alloc_change": 11296,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 8512,
+            "allocated_objects": 43,
+            "heap_alloc_change": 8512,
+            "heap_objects_change": 43,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 9600,
+            "allocated_objects": 55,
+            "heap_alloc_change": 9600,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 8672,
+            "allocated_objects": 45,
+            "heap_alloc_change": 8672,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 9760,
+            "allocated_objects": 57,
+            "heap_alloc_change": 9760,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 10208,
+            "allocated_objects": 45,
+            "heap_alloc_change": 10208,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 11296,
+            "allocated_objects": 57,
+            "heap_alloc_change": 11296,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 8512,
+            "allocated_objects": 43,
+            "heap_alloc_change": 8512,
+            "heap_objects_change": 43,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 9600,
+            "allocated_objects": 55,
+            "heap_alloc_change": 9600,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 8672,
+            "allocated_objects": 45,
+            "heap_alloc_change": 8672,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 9760,
+            "allocated_objects": 57,
+            "heap_alloc_change": 9760,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 10208,
+            "allocated_objects": 45,
+            "heap_alloc_change": 10208,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 11296,
+            "allocated_objects": 57,
+            "heap_alloc_change": 11296,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 9130.666666666666,
+        "candidate_mean": 10218.666666666666,
+        "baseline_range": [
+          8512,
+          10208
+        ],
+        "candidate_range": [
+          9600,
+          11296
+        ],
+        "delta_range": [
+          1088,
+          1088
+        ],
+        "delta_median": 1088,
+        "candidate_over_baseline_total": 1.1191588785046729,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 44.333333333333336,
+        "candidate_mean": 56.333333333333336,
+        "baseline_range": [
+          43,
+          45
+        ],
+        "candidate_range": [
+          55,
+          57
+        ],
+        "delta_range": [
+          12,
+          12
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 1.2706766917293233,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "keygen",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1152,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1152,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2240,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2240,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1152,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1152,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2240,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2240,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1152,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1152,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2240,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2240,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1152,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1152,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2240,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2240,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1152,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1152,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2240,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2240,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1152,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1152,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2240,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2240,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1152,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1152,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2240,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2240,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1152,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1152,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2240,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2240,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1152,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1152,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2240,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2240,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 1152,
+        "candidate_mean": 2240,
+        "baseline_range": [
+          1152,
+          1152
+        ],
+        "candidate_range": [
+          2240,
+          2240
+        ],
+        "delta_range": [
+          1088,
+          1088
+        ],
+        "delta_median": 1088,
+        "candidate_over_baseline_total": 1.9444444444444444,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 9,
+        "candidate_mean": 21,
+        "baseline_range": [
+          9,
+          9
+        ],
+        "candidate_range": [
+          21,
+          21
+        ],
+        "delta_range": [
+          12,
+          12
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 2.3333333333333335,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 15584,
+            "allocated_objects": 34,
+            "heap_alloc_change": 15584,
+            "heap_objects_change": 34,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 16672,
+            "allocated_objects": 46,
+            "heap_alloc_change": 16672,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 15728,
+            "allocated_objects": 35,
+            "heap_alloc_change": 15728,
+            "heap_objects_change": 35,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 16816,
+            "allocated_objects": 47,
+            "heap_alloc_change": 16816,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 17264,
+            "allocated_objects": 35,
+            "heap_alloc_change": 17264,
+            "heap_objects_change": 35,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 18352,
+            "allocated_objects": 47,
+            "heap_alloc_change": 18352,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 15584,
+            "allocated_objects": 34,
+            "heap_alloc_change": 15584,
+            "heap_objects_change": 34,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 16672,
+            "allocated_objects": 46,
+            "heap_alloc_change": 16672,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 15728,
+            "allocated_objects": 35,
+            "heap_alloc_change": 15728,
+            "heap_objects_change": 35,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 16816,
+            "allocated_objects": 47,
+            "heap_alloc_change": 16816,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 17264,
+            "allocated_objects": 35,
+            "heap_alloc_change": 17264,
+            "heap_objects_change": 35,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 18352,
+            "allocated_objects": 47,
+            "heap_alloc_change": 18352,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 15584,
+            "allocated_objects": 34,
+            "heap_alloc_change": 15584,
+            "heap_objects_change": 34,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 16672,
+            "allocated_objects": 46,
+            "heap_alloc_change": 16672,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 15728,
+            "allocated_objects": 35,
+            "heap_alloc_change": 15728,
+            "heap_objects_change": 35,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 16816,
+            "allocated_objects": 47,
+            "heap_alloc_change": 16816,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 17264,
+            "allocated_objects": 35,
+            "heap_alloc_change": 17264,
+            "heap_objects_change": 35,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 18352,
+            "allocated_objects": 47,
+            "heap_alloc_change": 18352,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 16192,
+        "candidate_mean": 17280,
+        "baseline_range": [
+          15584,
+          17264
+        ],
+        "candidate_range": [
+          16672,
+          18352
+        ],
+        "delta_range": [
+          1088,
+          1088
+        ],
+        "delta_median": 1088,
+        "candidate_over_baseline_total": 1.0671936758893281,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 34.666666666666664,
+        "candidate_mean": 46.666666666666664,
+        "baseline_range": [
+          34,
+          35
+        ],
+        "candidate_range": [
+          46,
+          47
+        ],
+        "delta_range": [
+          12,
+          12
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 1.3461538461538463,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 5856,
+            "allocated_objects": 23,
+            "heap_alloc_change": 5856,
+            "heap_objects_change": 23,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 6944,
+            "allocated_objects": 35,
+            "heap_alloc_change": 6944,
+            "heap_objects_change": 35,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 6016,
+            "allocated_objects": 25,
+            "heap_alloc_change": 6016,
+            "heap_objects_change": 25,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 7104,
+            "allocated_objects": 37,
+            "heap_alloc_change": 7104,
+            "heap_objects_change": 37,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 7552,
+            "allocated_objects": 25,
+            "heap_alloc_change": 7552,
+            "heap_objects_change": 25,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 8640,
+            "allocated_objects": 37,
+            "heap_alloc_change": 8640,
+            "heap_objects_change": 37,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 5856,
+            "allocated_objects": 23,
+            "heap_alloc_change": 5856,
+            "heap_objects_change": 23,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 6944,
+            "allocated_objects": 35,
+            "heap_alloc_change": 6944,
+            "heap_objects_change": 35,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 6016,
+            "allocated_objects": 25,
+            "heap_alloc_change": 6016,
+            "heap_objects_change": 25,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 7104,
+            "allocated_objects": 37,
+            "heap_alloc_change": 7104,
+            "heap_objects_change": 37,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 7552,
+            "allocated_objects": 25,
+            "heap_alloc_change": 7552,
+            "heap_objects_change": 25,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 8640,
+            "allocated_objects": 37,
+            "heap_alloc_change": 8640,
+            "heap_objects_change": 37,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 5856,
+            "allocated_objects": 23,
+            "heap_alloc_change": 5856,
+            "heap_objects_change": 23,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 6944,
+            "allocated_objects": 35,
+            "heap_alloc_change": 6944,
+            "heap_objects_change": 35,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 6016,
+            "allocated_objects": 25,
+            "heap_alloc_change": 6016,
+            "heap_objects_change": 25,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 7104,
+            "allocated_objects": 37,
+            "heap_alloc_change": 7104,
+            "heap_objects_change": 37,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 7552,
+            "allocated_objects": 25,
+            "heap_alloc_change": 7552,
+            "heap_objects_change": 25,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 8640,
+            "allocated_objects": 37,
+            "heap_alloc_change": 8640,
+            "heap_objects_change": 37,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 6474.666666666667,
+        "candidate_mean": 7562.666666666667,
+        "baseline_range": [
+          5856,
+          7552
+        ],
+        "candidate_range": [
+          6944,
+          8640
+        ],
+        "delta_range": [
+          1088,
+          1088
+        ],
+        "delta_median": 1088,
+        "candidate_over_baseline_total": 1.1680395387149918,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 24.333333333333332,
+        "candidate_mean": 36.333333333333336,
+        "baseline_range": [
+          23,
+          25
+        ],
+        "candidate_range": [
+          35,
+          37
+        ],
+        "delta_range": [
+          12,
+          12
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 1.4931506849315068,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "keygen",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1216,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1216,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2592,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2592,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1216,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1216,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2592,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2592,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1216,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1216,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2592,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2592,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1216,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1216,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2592,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2592,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1216,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1216,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2592,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2592,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1216,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1216,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2592,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2592,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1216,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1216,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2592,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2592,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1216,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1216,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2592,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2592,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1216,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1216,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2592,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2592,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 1216,
+        "candidate_mean": 2592,
+        "baseline_range": [
+          1216,
+          1216
+        ],
+        "candidate_range": [
+          2592,
+          2592
+        ],
+        "delta_range": [
+          1376,
+          1376
+        ],
+        "delta_median": 1376,
+        "candidate_over_baseline_total": 2.1315789473684212,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 9,
+        "candidate_mean": 21,
+        "baseline_range": [
+          9,
+          9
+        ],
+        "candidate_range": [
+          21,
+          21
+        ],
+        "delta_range": [
+          12,
+          12
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 2.3333333333333335,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "sign",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 52952,
+            "allocated_objects": 54,
+            "heap_alloc_change": 52952,
+            "heap_objects_change": 54,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 54312,
+            "allocated_objects": 65,
+            "heap_alloc_change": 54312,
+            "heap_objects_change": 65,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 53096,
+            "allocated_objects": 55,
+            "heap_alloc_change": 53096,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 54472,
+            "allocated_objects": 67,
+            "heap_alloc_change": 54472,
+            "heap_objects_change": 67,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 54632,
+            "allocated_objects": 55,
+            "heap_alloc_change": 54632,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 56008,
+            "allocated_objects": 67,
+            "heap_alloc_change": 56008,
+            "heap_objects_change": 67,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 52952,
+            "allocated_objects": 54,
+            "heap_alloc_change": 52952,
+            "heap_objects_change": 54,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 54312,
+            "allocated_objects": 65,
+            "heap_alloc_change": 54312,
+            "heap_objects_change": 65,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 53096,
+            "allocated_objects": 55,
+            "heap_alloc_change": 53096,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 54520,
+            "allocated_objects": 68,
+            "heap_alloc_change": 54520,
+            "heap_objects_change": 68,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 54632,
+            "allocated_objects": 55,
+            "heap_alloc_change": 54632,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 56008,
+            "allocated_objects": 67,
+            "heap_alloc_change": 56008,
+            "heap_objects_change": 67,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 52936,
+            "allocated_objects": 53,
+            "heap_alloc_change": 52936,
+            "heap_objects_change": 53,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 54312,
+            "allocated_objects": 65,
+            "heap_alloc_change": 54312,
+            "heap_objects_change": 65,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 53096,
+            "allocated_objects": 55,
+            "heap_alloc_change": 53096,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 54472,
+            "allocated_objects": 67,
+            "heap_alloc_change": 54472,
+            "heap_objects_change": 67,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 54632,
+            "allocated_objects": 55,
+            "heap_alloc_change": 54632,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 56008,
+            "allocated_objects": 67,
+            "heap_alloc_change": 56008,
+            "heap_objects_change": 67,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 53558.22222222222,
+        "candidate_mean": 54936,
+        "baseline_range": [
+          52936,
+          54632
+        ],
+        "candidate_range": [
+          54312,
+          56008
+        ],
+        "delta_range": [
+          1360,
+          1424
+        ],
+        "delta_median": 1376,
+        "candidate_over_baseline_total": 1.0257248601729374,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 54.55555555555556,
+        "candidate_mean": 66.44444444444444,
+        "baseline_range": [
+          53,
+          55
+        ],
+        "candidate_range": [
+          65,
+          68
+        ],
+        "delta_range": [
+          11,
+          13
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 1.2179226069246436,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "verify",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 10536,
+            "allocated_objects": 43,
+            "heap_alloc_change": 10536,
+            "heap_objects_change": 43,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 11912,
+            "allocated_objects": 55,
+            "heap_alloc_change": 11912,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 10696,
+            "allocated_objects": 45,
+            "heap_alloc_change": 10696,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 12072,
+            "allocated_objects": 57,
+            "heap_alloc_change": 12072,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 12232,
+            "allocated_objects": 45,
+            "heap_alloc_change": 12232,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 13608,
+            "allocated_objects": 57,
+            "heap_alloc_change": 13608,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 10536,
+            "allocated_objects": 43,
+            "heap_alloc_change": 10536,
+            "heap_objects_change": 43,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 11912,
+            "allocated_objects": 55,
+            "heap_alloc_change": 11912,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 10696,
+            "allocated_objects": 45,
+            "heap_alloc_change": 10696,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 12072,
+            "allocated_objects": 57,
+            "heap_alloc_change": 12072,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 12232,
+            "allocated_objects": 45,
+            "heap_alloc_change": 12232,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 13608,
+            "allocated_objects": 57,
+            "heap_alloc_change": 13608,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 10536,
+            "allocated_objects": 43,
+            "heap_alloc_change": 10536,
+            "heap_objects_change": 43,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 11912,
+            "allocated_objects": 55,
+            "heap_alloc_change": 11912,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 10696,
+            "allocated_objects": 45,
+            "heap_alloc_change": 10696,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 12072,
+            "allocated_objects": 57,
+            "heap_alloc_change": 12072,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 12232,
+            "allocated_objects": 45,
+            "heap_alloc_change": 12232,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 13608,
+            "allocated_objects": 57,
+            "heap_alloc_change": 13608,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 11154.666666666666,
+        "candidate_mean": 12530.666666666666,
+        "baseline_range": [
+          10536,
+          12232
+        ],
+        "candidate_range": [
+          11912,
+          13608
+        ],
+        "delta_range": [
+          1376,
+          1376
+        ],
+        "delta_median": 1376,
+        "candidate_over_baseline_total": 1.1233564427444418,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 44.333333333333336,
+        "candidate_mean": 56.333333333333336,
+        "baseline_range": [
+          43,
+          45
+        ],
+        "candidate_range": [
+          55,
+          57
+        ],
+        "delta_range": [
+          12,
+          12
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 1.2706766917293233,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "keygen",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1552,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1552,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2928,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2928,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1552,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1552,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2928,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2928,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1552,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1552,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2928,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2928,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1552,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1552,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2928,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2928,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1552,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1552,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2928,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2928,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1552,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1552,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2928,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2928,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1552,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1552,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2928,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2928,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1552,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1552,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2928,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2928,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1552,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1552,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2928,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2928,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 1552,
+        "candidate_mean": 2928,
+        "baseline_range": [
+          1552,
+          1552
+        ],
+        "candidate_range": [
+          2928,
+          2928
+        ],
+        "delta_range": [
+          1376,
+          1376
+        ],
+        "delta_median": 1376,
+        "candidate_over_baseline_total": 1.8865979381443299,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 9,
+        "candidate_mean": 21,
+        "baseline_range": [
+          9,
+          9
+        ],
+        "candidate_range": [
+          21,
+          21
+        ],
+        "delta_range": [
+          12,
+          12
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 2.3333333333333335,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "sign",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 27000,
+            "allocated_objects": 38,
+            "heap_alloc_change": 27000,
+            "heap_objects_change": 38,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 28376,
+            "allocated_objects": 50,
+            "heap_alloc_change": 28376,
+            "heap_objects_change": 50,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 27144,
+            "allocated_objects": 39,
+            "heap_alloc_change": 27144,
+            "heap_objects_change": 39,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 28520,
+            "allocated_objects": 51,
+            "heap_alloc_change": 28520,
+            "heap_objects_change": 51,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 28680,
+            "allocated_objects": 39,
+            "heap_alloc_change": 28680,
+            "heap_objects_change": 39,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 30056,
+            "allocated_objects": 51,
+            "heap_alloc_change": 30056,
+            "heap_objects_change": 51,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 27000,
+            "allocated_objects": 38,
+            "heap_alloc_change": 27000,
+            "heap_objects_change": 38,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 28376,
+            "allocated_objects": 50,
+            "heap_alloc_change": 28376,
+            "heap_objects_change": 50,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 27144,
+            "allocated_objects": 39,
+            "heap_alloc_change": 27144,
+            "heap_objects_change": 39,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 28568,
+            "allocated_objects": 52,
+            "heap_alloc_change": 28568,
+            "heap_objects_change": 52,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 28680,
+            "allocated_objects": 39,
+            "heap_alloc_change": 28680,
+            "heap_objects_change": 39,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 30056,
+            "allocated_objects": 51,
+            "heap_alloc_change": 30056,
+            "heap_objects_change": 51,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 27000,
+            "allocated_objects": 38,
+            "heap_alloc_change": 27000,
+            "heap_objects_change": 38,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 28376,
+            "allocated_objects": 50,
+            "heap_alloc_change": 28376,
+            "heap_objects_change": 50,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 27144,
+            "allocated_objects": 39,
+            "heap_alloc_change": 27144,
+            "heap_objects_change": 39,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 28520,
+            "allocated_objects": 51,
+            "heap_alloc_change": 28520,
+            "heap_objects_change": 51,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 28680,
+            "allocated_objects": 39,
+            "heap_alloc_change": 28680,
+            "heap_objects_change": 39,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 30056,
+            "allocated_objects": 51,
+            "heap_alloc_change": 30056,
+            "heap_objects_change": 51,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 27608,
+        "candidate_mean": 28989.333333333332,
+        "baseline_range": [
+          27000,
+          28680
+        ],
+        "candidate_range": [
+          28376,
+          30056
+        ],
+        "delta_range": [
+          1376,
+          1424
+        ],
+        "delta_median": 1376,
+        "candidate_over_baseline_total": 1.0500338066260988,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 38.666666666666664,
+        "candidate_mean": 50.77777777777778,
+        "baseline_range": [
+          38,
+          39
+        ],
+        "candidate_range": [
+          50,
+          52
+        ],
+        "delta_range": [
+          12,
+          13
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 1.3132183908045978,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "verify",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 8488,
+            "allocated_objects": 27,
+            "heap_alloc_change": 8488,
+            "heap_objects_change": 27,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 9864,
+            "allocated_objects": 39,
+            "heap_alloc_change": 9864,
+            "heap_objects_change": 39,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 8648,
+            "allocated_objects": 29,
+            "heap_alloc_change": 8648,
+            "heap_objects_change": 29,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 10024,
+            "allocated_objects": 41,
+            "heap_alloc_change": 10024,
+            "heap_objects_change": 41,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 10184,
+            "allocated_objects": 29,
+            "heap_alloc_change": 10184,
+            "heap_objects_change": 29,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 11560,
+            "allocated_objects": 41,
+            "heap_alloc_change": 11560,
+            "heap_objects_change": 41,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 8488,
+            "allocated_objects": 27,
+            "heap_alloc_change": 8488,
+            "heap_objects_change": 27,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 9864,
+            "allocated_objects": 39,
+            "heap_alloc_change": 9864,
+            "heap_objects_change": 39,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 8648,
+            "allocated_objects": 29,
+            "heap_alloc_change": 8648,
+            "heap_objects_change": 29,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 10024,
+            "allocated_objects": 41,
+            "heap_alloc_change": 10024,
+            "heap_objects_change": 41,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 10184,
+            "allocated_objects": 29,
+            "heap_alloc_change": 10184,
+            "heap_objects_change": 29,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 11560,
+            "allocated_objects": 41,
+            "heap_alloc_change": 11560,
+            "heap_objects_change": 41,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 8488,
+            "allocated_objects": 27,
+            "heap_alloc_change": 8488,
+            "heap_objects_change": 27,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 9864,
+            "allocated_objects": 39,
+            "heap_alloc_change": 9864,
+            "heap_objects_change": 39,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 8648,
+            "allocated_objects": 29,
+            "heap_alloc_change": 8648,
+            "heap_objects_change": 29,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 10024,
+            "allocated_objects": 41,
+            "heap_alloc_change": 10024,
+            "heap_objects_change": 41,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 10184,
+            "allocated_objects": 29,
+            "heap_alloc_change": 10184,
+            "heap_objects_change": 29,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 11560,
+            "allocated_objects": 41,
+            "heap_alloc_change": 11560,
+            "heap_objects_change": 41,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 9106.666666666666,
+        "candidate_mean": 10482.666666666666,
+        "baseline_range": [
+          8488,
+          10184
+        ],
+        "candidate_range": [
+          9864,
+          11560
+        ],
+        "delta_range": [
+          1376,
+          1376
+        ],
+        "delta_median": 1376,
+        "candidate_over_baseline_total": 1.1510980966325037,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 28.333333333333332,
+        "candidate_mean": 40.333333333333336,
+        "baseline_range": [
+          27,
+          29
+        ],
+        "candidate_range": [
+          39,
+          41
+        ],
+        "delta_range": [
+          12,
+          12
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 1.423529411764706,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "keygen",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1392,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1392,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2768,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2768,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1392,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1392,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2768,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2768,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1392,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1392,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2768,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2768,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1392,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1392,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2768,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2768,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1392,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1392,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2768,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2768,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1392,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1392,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2768,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2768,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1392,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1392,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2816,
+            "allocated_objects": 22,
+            "heap_alloc_change": 2816,
+            "heap_objects_change": 22,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1392,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1392,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2768,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2768,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1392,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1392,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 2768,
+            "allocated_objects": 21,
+            "heap_alloc_change": 2768,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 1392,
+        "candidate_mean": 2773.3333333333335,
+        "baseline_range": [
+          1392,
+          1392
+        ],
+        "candidate_range": [
+          2768,
+          2816
+        ],
+        "delta_range": [
+          1376,
+          1424
+        ],
+        "delta_median": 1376,
+        "candidate_over_baseline_total": 1.9923371647509578,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 9,
+        "candidate_mean": 21.11111111111111,
+        "baseline_range": [
+          9,
+          9
+        ],
+        "candidate_range": [
+          21,
+          22
+        ],
+        "delta_range": [
+          12,
+          13
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 2.345679012345679,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "sign",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 70880,
+            "allocated_objects": 56,
+            "heap_alloc_change": 70880,
+            "heap_objects_change": 56,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 72256,
+            "allocated_objects": 68,
+            "heap_alloc_change": 72256,
+            "heap_objects_change": 68,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 71024,
+            "allocated_objects": 57,
+            "heap_alloc_change": 71024,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 72400,
+            "allocated_objects": 69,
+            "heap_alloc_change": 72400,
+            "heap_objects_change": 69,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 72560,
+            "allocated_objects": 57,
+            "heap_alloc_change": 72560,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 73936,
+            "allocated_objects": 69,
+            "heap_alloc_change": 73936,
+            "heap_objects_change": 69,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 70880,
+            "allocated_objects": 56,
+            "heap_alloc_change": 70880,
+            "heap_objects_change": 56,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 72256,
+            "allocated_objects": 68,
+            "heap_alloc_change": 72256,
+            "heap_objects_change": 68,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 71024,
+            "allocated_objects": 57,
+            "heap_alloc_change": 71024,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 72400,
+            "allocated_objects": 69,
+            "heap_alloc_change": 72400,
+            "heap_objects_change": 69,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 72560,
+            "allocated_objects": 57,
+            "heap_alloc_change": 72560,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 73936,
+            "allocated_objects": 69,
+            "heap_alloc_change": 73936,
+            "heap_objects_change": 69,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 70880,
+            "allocated_objects": 56,
+            "heap_alloc_change": 70880,
+            "heap_objects_change": 56,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 72256,
+            "allocated_objects": 68,
+            "heap_alloc_change": 72256,
+            "heap_objects_change": 68,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 71024,
+            "allocated_objects": 57,
+            "heap_alloc_change": 71024,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 72448,
+            "allocated_objects": 70,
+            "heap_alloc_change": 72448,
+            "heap_objects_change": 70,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 72560,
+            "allocated_objects": 57,
+            "heap_alloc_change": 72560,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 73936,
+            "allocated_objects": 69,
+            "heap_alloc_change": 73936,
+            "heap_objects_change": 69,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 71488,
+        "candidate_mean": 72869.33333333333,
+        "baseline_range": [
+          70880,
+          72560
+        ],
+        "candidate_range": [
+          72256,
+          73936
+        ],
+        "delta_range": [
+          1376,
+          1424
+        ],
+        "delta_median": 1376,
+        "candidate_over_baseline_total": 1.0193225902715608,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 56.666666666666664,
+        "candidate_mean": 68.77777777777777,
+        "baseline_range": [
+          56,
+          57
+        ],
+        "candidate_range": [
+          68,
+          70
+        ],
+        "delta_range": [
+          12,
+          13
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 1.2137254901960783,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "verify",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 11888,
+            "allocated_objects": 45,
+            "heap_alloc_change": 11888,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 13264,
+            "allocated_objects": 57,
+            "heap_alloc_change": 13264,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 12048,
+            "allocated_objects": 47,
+            "heap_alloc_change": 12048,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 13424,
+            "allocated_objects": 59,
+            "heap_alloc_change": 13424,
+            "heap_objects_change": 59,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 13584,
+            "allocated_objects": 47,
+            "heap_alloc_change": 13584,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 14960,
+            "allocated_objects": 59,
+            "heap_alloc_change": 14960,
+            "heap_objects_change": 59,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 11888,
+            "allocated_objects": 45,
+            "heap_alloc_change": 11888,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 13264,
+            "allocated_objects": 57,
+            "heap_alloc_change": 13264,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 12048,
+            "allocated_objects": 47,
+            "heap_alloc_change": 12048,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 13424,
+            "allocated_objects": 59,
+            "heap_alloc_change": 13424,
+            "heap_objects_change": 59,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 13584,
+            "allocated_objects": 47,
+            "heap_alloc_change": 13584,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 14960,
+            "allocated_objects": 59,
+            "heap_alloc_change": 14960,
+            "heap_objects_change": 59,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 11888,
+            "allocated_objects": 45,
+            "heap_alloc_change": 11888,
+            "heap_objects_change": 45,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 13264,
+            "allocated_objects": 57,
+            "heap_alloc_change": 13264,
+            "heap_objects_change": 57,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 12048,
+            "allocated_objects": 47,
+            "heap_alloc_change": 12048,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 13424,
+            "allocated_objects": 59,
+            "heap_alloc_change": 13424,
+            "heap_objects_change": 59,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 13584,
+            "allocated_objects": 47,
+            "heap_alloc_change": 13584,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 14960,
+            "allocated_objects": 59,
+            "heap_alloc_change": 14960,
+            "heap_objects_change": 59,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 12506.666666666666,
+        "candidate_mean": 13882.666666666666,
+        "baseline_range": [
+          11888,
+          13584
+        ],
+        "candidate_range": [
+          13264,
+          14960
+        ],
+        "delta_range": [
+          1376,
+          1376
+        ],
+        "delta_median": 1376,
+        "candidate_over_baseline_total": 1.1100213219616204,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 46.333333333333336,
+        "candidate_mean": 58.333333333333336,
+        "baseline_range": [
+          45,
+          47
+        ],
+        "candidate_range": [
+          57,
+          59
+        ],
+        "delta_range": [
+          12,
+          12
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 1.2589928057553956,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "keygen",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1648,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1648,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 3024,
+            "allocated_objects": 21,
+            "heap_alloc_change": 3024,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1648,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1648,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 3072,
+            "allocated_objects": 22,
+            "heap_alloc_change": 3072,
+            "heap_objects_change": 22,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1648,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1648,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 3024,
+            "allocated_objects": 21,
+            "heap_alloc_change": 3024,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1648,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1648,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 3024,
+            "allocated_objects": 21,
+            "heap_alloc_change": 3024,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1648,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1648,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 3024,
+            "allocated_objects": 21,
+            "heap_alloc_change": 3024,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1648,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1648,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 3024,
+            "allocated_objects": 21,
+            "heap_alloc_change": 3024,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 1648,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1648,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 3024,
+            "allocated_objects": 21,
+            "heap_alloc_change": 3024,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 1648,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1648,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 3024,
+            "allocated_objects": 21,
+            "heap_alloc_change": 3024,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 1648,
+            "allocated_objects": 9,
+            "heap_alloc_change": 1648,
+            "heap_objects_change": 9,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 3024,
+            "allocated_objects": 21,
+            "heap_alloc_change": 3024,
+            "heap_objects_change": 21,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 1648,
+        "candidate_mean": 3029.3333333333335,
+        "baseline_range": [
+          1648,
+          1648
+        ],
+        "candidate_range": [
+          3024,
+          3072
+        ],
+        "delta_range": [
+          1376,
+          1424
+        ],
+        "delta_median": 1376,
+        "candidate_over_baseline_total": 1.838187702265372,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 9,
+        "candidate_mean": 21.11111111111111,
+        "baseline_range": [
+          9,
+          9
+        ],
+        "candidate_range": [
+          21,
+          22
+        ],
+        "delta_range": [
+          12,
+          13
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 2.345679012345679,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "sign",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 45616,
+            "allocated_objects": 43,
+            "heap_alloc_change": 45616,
+            "heap_objects_change": 43,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 46992,
+            "allocated_objects": 55,
+            "heap_alloc_change": 46992,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 45760,
+            "allocated_objects": 44,
+            "heap_alloc_change": 45760,
+            "heap_objects_change": 44,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 47136,
+            "allocated_objects": 56,
+            "heap_alloc_change": 47136,
+            "heap_objects_change": 56,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 47296,
+            "allocated_objects": 44,
+            "heap_alloc_change": 47296,
+            "heap_objects_change": 44,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 48672,
+            "allocated_objects": 56,
+            "heap_alloc_change": 48672,
+            "heap_objects_change": 56,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 45616,
+            "allocated_objects": 43,
+            "heap_alloc_change": 45616,
+            "heap_objects_change": 43,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 46992,
+            "allocated_objects": 55,
+            "heap_alloc_change": 46992,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 45760,
+            "allocated_objects": 44,
+            "heap_alloc_change": 45760,
+            "heap_objects_change": 44,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 47136,
+            "allocated_objects": 56,
+            "heap_alloc_change": 47136,
+            "heap_objects_change": 56,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 47296,
+            "allocated_objects": 44,
+            "heap_alloc_change": 47296,
+            "heap_objects_change": 44,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 48672,
+            "allocated_objects": 56,
+            "heap_alloc_change": 48672,
+            "heap_objects_change": 56,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 45616,
+            "allocated_objects": 43,
+            "heap_alloc_change": 45616,
+            "heap_objects_change": 43,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 46992,
+            "allocated_objects": 55,
+            "heap_alloc_change": 46992,
+            "heap_objects_change": 55,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 45760,
+            "allocated_objects": 44,
+            "heap_alloc_change": 45760,
+            "heap_objects_change": 44,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 47136,
+            "allocated_objects": 56,
+            "heap_alloc_change": 47136,
+            "heap_objects_change": 56,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 47296,
+            "allocated_objects": 44,
+            "heap_alloc_change": 47296,
+            "heap_objects_change": 44,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 48672,
+            "allocated_objects": 56,
+            "heap_alloc_change": 48672,
+            "heap_objects_change": 56,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 46224,
+        "candidate_mean": 47600,
+        "baseline_range": [
+          45616,
+          47296
+        ],
+        "candidate_range": [
+          46992,
+          48672
+        ],
+        "delta_range": [
+          1376,
+          1376
+        ],
+        "delta_median": 1376,
+        "candidate_over_baseline_total": 1.0297680858428522,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 43.666666666666664,
+        "candidate_mean": 55.666666666666664,
+        "baseline_range": [
+          43,
+          44
+        ],
+        "candidate_range": [
+          55,
+          56
+        ],
+        "delta_range": [
+          12,
+          12
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 1.2748091603053435,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "verify",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 10624,
+            "allocated_objects": 32,
+            "heap_alloc_change": 10624,
+            "heap_objects_change": 32,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 12000,
+            "allocated_objects": 44,
+            "heap_alloc_change": 12000,
+            "heap_objects_change": 44,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 10784,
+            "allocated_objects": 34,
+            "heap_alloc_change": 10784,
+            "heap_objects_change": 34,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 12160,
+            "allocated_objects": 46,
+            "heap_alloc_change": 12160,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 12320,
+            "allocated_objects": 34,
+            "heap_alloc_change": 12320,
+            "heap_objects_change": 34,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 13696,
+            "allocated_objects": 46,
+            "heap_alloc_change": 13696,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 10624,
+            "allocated_objects": 32,
+            "heap_alloc_change": 10624,
+            "heap_objects_change": 32,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 12000,
+            "allocated_objects": 44,
+            "heap_alloc_change": 12000,
+            "heap_objects_change": 44,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 10784,
+            "allocated_objects": 34,
+            "heap_alloc_change": 10784,
+            "heap_objects_change": 34,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 12160,
+            "allocated_objects": 46,
+            "heap_alloc_change": 12160,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 12320,
+            "allocated_objects": 34,
+            "heap_alloc_change": 12320,
+            "heap_objects_change": 34,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 13696,
+            "allocated_objects": 46,
+            "heap_alloc_change": 13696,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 10624,
+            "allocated_objects": 32,
+            "heap_alloc_change": 10624,
+            "heap_objects_change": 32,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 12000,
+            "allocated_objects": 44,
+            "heap_alloc_change": 12000,
+            "heap_objects_change": 44,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 10784,
+            "allocated_objects": 34,
+            "heap_alloc_change": 10784,
+            "heap_objects_change": 34,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 12160,
+            "allocated_objects": 46,
+            "heap_alloc_change": 12160,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 12320,
+            "allocated_objects": 34,
+            "heap_alloc_change": 12320,
+            "heap_objects_change": 34,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 13696,
+            "allocated_objects": 46,
+            "heap_alloc_change": 13696,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 11242.666666666666,
+        "candidate_mean": 12618.666666666666,
+        "baseline_range": [
+          10624,
+          12320
+        ],
+        "candidate_range": [
+          12000,
+          13696
+        ],
+        "delta_range": [
+          1376,
+          1376
+        ],
+        "delta_median": 1376,
+        "candidate_over_baseline_total": 1.1223908918406071,
+        "increased_pairs": 9
+      },
+      "allocated_objects": {
+        "baseline_mean": 33.333333333333336,
+        "candidate_mean": 45.333333333333336,
+        "baseline_range": [
+          32,
+          34
+        ],
+        "candidate_range": [
+          44,
+          46
+        ],
+        "delta_range": [
+          12,
+          12
+        ],
+        "delta_median": 12,
+        "candidate_over_baseline_total": 1.36,
+        "increased_pairs": 9
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "keygen",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 976,
+            "allocated_objects": 8,
+            "heap_alloc_change": 976,
+            "heap_objects_change": 8,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 976,
+        "candidate_mean": 976,
+        "baseline_range": [
+          976,
+          976
+        ],
+        "candidate_range": [
+          976,
+          976
+        ],
+        "delta_range": [
+          0,
+          0
+        ],
+        "delta_median": 0,
+        "candidate_over_baseline_total": 1.0,
+        "increased_pairs": 0
+      },
+      "allocated_objects": {
+        "baseline_mean": 8,
+        "candidate_mean": 8,
+        "baseline_range": [
+          8,
+          8
+        ],
+        "candidate_range": [
+          8,
+          8
+        ],
+        "delta_range": [
+          0,
+          0
+        ],
+        "delta_median": 0,
+        "candidate_over_baseline_total": 1.0,
+        "increased_pairs": 0
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "sign",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 27328,
+            "allocated_objects": 46,
+            "heap_alloc_change": 27328,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 27328,
+            "allocated_objects": 46,
+            "heap_alloc_change": 27328,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 27472,
+            "allocated_objects": 47,
+            "heap_alloc_change": 27472,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 27472,
+            "allocated_objects": 47,
+            "heap_alloc_change": 27472,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 29008,
+            "allocated_objects": 47,
+            "heap_alloc_change": 29008,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 29008,
+            "allocated_objects": 47,
+            "heap_alloc_change": 29008,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 27328,
+            "allocated_objects": 46,
+            "heap_alloc_change": 27328,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 27328,
+            "allocated_objects": 46,
+            "heap_alloc_change": 27328,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 27472,
+            "allocated_objects": 47,
+            "heap_alloc_change": 27472,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 27472,
+            "allocated_objects": 47,
+            "heap_alloc_change": 27472,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 29008,
+            "allocated_objects": 47,
+            "heap_alloc_change": 29008,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 29008,
+            "allocated_objects": 47,
+            "heap_alloc_change": 29008,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 27328,
+            "allocated_objects": 46,
+            "heap_alloc_change": 27328,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 27328,
+            "allocated_objects": 46,
+            "heap_alloc_change": 27328,
+            "heap_objects_change": 46,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 27472,
+            "allocated_objects": 47,
+            "heap_alloc_change": 27472,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 27472,
+            "allocated_objects": 47,
+            "heap_alloc_change": 27472,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 29008,
+            "allocated_objects": 47,
+            "heap_alloc_change": 29008,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 29008,
+            "allocated_objects": 47,
+            "heap_alloc_change": 29008,
+            "heap_objects_change": 47,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 27936,
+        "candidate_mean": 27936,
+        "baseline_range": [
+          27328,
+          29008
+        ],
+        "candidate_range": [
+          27328,
+          29008
+        ],
+        "delta_range": [
+          0,
+          0
+        ],
+        "delta_median": 0,
+        "candidate_over_baseline_total": 1.0,
+        "increased_pairs": 0
+      },
+      "allocated_objects": {
+        "baseline_mean": 46.666666666666664,
+        "candidate_mean": 46.666666666666664,
+        "baseline_range": [
+          46,
+          47
+        ],
+        "candidate_range": [
+          46,
+          47
+        ],
+        "delta_range": [
+          0,
+          0
+        ],
+        "delta_median": 0,
+        "candidate_over_baseline_total": 1.0,
+        "increased_pairs": 0
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "operation": "verify",
+      "pairs": [
+        {
+          "round": 0,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 8464,
+            "allocated_objects": 40,
+            "heap_alloc_change": 8464,
+            "heap_objects_change": 40,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 8464,
+            "allocated_objects": 40,
+            "heap_alloc_change": 8464,
+            "heap_objects_change": 40,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 8624,
+            "allocated_objects": 42,
+            "heap_alloc_change": 8624,
+            "heap_objects_change": 42,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 8624,
+            "allocated_objects": 42,
+            "heap_alloc_change": 8624,
+            "heap_objects_change": 42,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 0,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 10160,
+            "allocated_objects": 42,
+            "heap_alloc_change": 10160,
+            "heap_objects_change": 42,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 10160,
+            "allocated_objects": 42,
+            "heap_alloc_change": 10160,
+            "heap_objects_change": 42,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 8464,
+            "allocated_objects": 40,
+            "heap_alloc_change": 8464,
+            "heap_objects_change": 40,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 8464,
+            "allocated_objects": 40,
+            "heap_alloc_change": 8464,
+            "heap_objects_change": 40,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 8624,
+            "allocated_objects": 42,
+            "heap_alloc_change": 8624,
+            "heap_objects_change": 42,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 8624,
+            "allocated_objects": 42,
+            "heap_alloc_change": 8624,
+            "heap_objects_change": 42,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 1,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 10160,
+            "allocated_objects": 42,
+            "heap_alloc_change": 10160,
+            "heap_objects_change": 42,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 10160,
+            "allocated_objects": 42,
+            "heap_alloc_change": 10160,
+            "heap_objects_change": 42,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 0,
+          "baseline": {
+            "allocated_bytes": 8464,
+            "allocated_objects": 40,
+            "heap_alloc_change": 8464,
+            "heap_objects_change": 40,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 8464,
+            "allocated_objects": 40,
+            "heap_alloc_change": 8464,
+            "heap_objects_change": 40,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 1,
+          "baseline": {
+            "allocated_bytes": 8624,
+            "allocated_objects": 42,
+            "heap_alloc_change": 8624,
+            "heap_objects_change": 42,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 8624,
+            "allocated_objects": 42,
+            "heap_alloc_change": 8624,
+            "heap_objects_change": 42,
+            "collections_during_call": 0
+          }
+        },
+        {
+          "round": 2,
+          "index": 2,
+          "baseline": {
+            "allocated_bytes": 10160,
+            "allocated_objects": 42,
+            "heap_alloc_change": 10160,
+            "heap_objects_change": 42,
+            "collections_during_call": 0
+          },
+          "candidate": {
+            "allocated_bytes": 10160,
+            "allocated_objects": 42,
+            "heap_alloc_change": 10160,
+            "heap_objects_change": 42,
+            "collections_during_call": 0
+          }
+        }
+      ],
+      "allocated_bytes": {
+        "baseline_mean": 9082.666666666666,
+        "candidate_mean": 9082.666666666666,
+        "baseline_range": [
+          8464,
+          10160
+        ],
+        "candidate_range": [
+          8464,
+          10160
+        ],
+        "delta_range": [
+          0,
+          0
+        ],
+        "delta_median": 0,
+        "candidate_over_baseline_total": 1.0,
+        "increased_pairs": 0
+      },
+      "allocated_objects": {
+        "baseline_mean": 41.333333333333336,
+        "candidate_mean": 41.333333333333336,
+        "baseline_range": [
+          40,
+          42
+        ],
+        "candidate_range": [
+          40,
+          42
+        ],
+        "delta_range": [
+          0,
+          0
+        ],
+        "delta_median": 0,
+        "candidate_over_baseline_total": 1.0,
+        "increased_pairs": 0
+      }
+    }
+  ]
+}

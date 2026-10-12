@@ -1,0 +1,2306 @@
+[
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-128s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-192s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256f",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "keygen"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "sign"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "default",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "baseline",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  },
+  {
+    "round": 3,
+    "parameter": "SLH-DSA-SHA2-256s",
+    "variant": "candidate",
+    "mode": "resource",
+    "settings": "constrained",
+    "operation": "verify"
+  }
+]

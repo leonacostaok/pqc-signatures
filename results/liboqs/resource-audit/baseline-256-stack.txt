@@ -1,0 +1,9 @@
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:34:sha2_256_compress	160	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:152:sha2_256_init	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:163:sha2_224_init	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:174:sha2_256_copy	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:183:sha2_256_update	64	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:218:sha2_256_final_pad	32	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:245:sha2_256_final_len	48	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:255:sha2_256	176	static
+liboqs-performance/libs/liboqs/deps/liboqs/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:264:sha2_224	176	static

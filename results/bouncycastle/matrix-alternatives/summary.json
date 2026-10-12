@@ -1,0 +1,3047 @@
+{
+  "batches": 288,
+  "comparisons": [
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 70470.4375,
+          "losing_keys": 118,
+          "losing_rounds": 2,
+          "paired_keys": 512,
+          "ratio": 0.9971644505899159,
+          "rounds": [
+            {
+              "baseline_total": 9003488,
+              "ratio": 1.0007362565445026,
+              "round": 0,
+              "variant_total": 8996864
+            },
+            {
+              "baseline_total": 8996864,
+              "ratio": 0.997681909758601,
+              "round": 1,
+              "variant_total": 9017768
+            },
+            {
+              "baseline_total": 9028064,
+              "ratio": 0.9902806638211838,
+              "round": 2,
+              "variant_total": 9116672
+            },
+            {
+              "baseline_total": 9052448,
+              "ratio": 1.0000318156108596,
+              "round": 3,
+              "variant_total": 9052160
+            }
+          ],
+          "tied_keys": 377,
+          "variant_per_call": 70670.828125
+        },
+        "cpu_ns": {
+          "baseline_per_call": 81927.734375,
+          "losing_keys": 393,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9694469481615013,
+          "rounds": [
+            {
+              "baseline_total": 10436000,
+              "ratio": 0.9690779088123317,
+              "round": 0,
+              "variant_total": 10769000
+            },
+            {
+              "baseline_total": 10424000,
+              "ratio": 0.9613575578714378,
+              "round": 1,
+              "variant_total": 10843000
+            },
+            {
+              "baseline_total": 10437000,
+              "ratio": 0.9678227002967359,
+              "round": 2,
+              "variant_total": 10784000
+            },
+            {
+              "baseline_total": 10650000,
+              "ratio": 0.9794904810080015,
+              "round": 3,
+              "variant_total": 10873000
+            }
+          ],
+          "tied_keys": 35,
+          "variant_per_call": 84509.765625
+        },
+        "wall_ns": {
+          "baseline_per_call": 80050.29296875,
+          "losing_keys": 426,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9689943557022992,
+          "rounds": [
+            {
+              "baseline_total": 10184590,
+              "ratio": 0.9667272956117642,
+              "round": 0,
+              "variant_total": 10535122
+            },
+            {
+              "baseline_total": 10186252,
+              "ratio": 0.9602504244002024,
+              "round": 1,
+              "variant_total": 10607912
+            },
+            {
+              "baseline_total": 10205332,
+              "ratio": 0.9674488922999451,
+              "round": 2,
+              "variant_total": 10548704
+            },
+            {
+              "baseline_total": 10409576,
+              "ratio": 0.9815295210091703,
+              "round": 3,
+              "variant_total": 10605464
+            }
+          ],
+          "tied_keys": 1,
+          "variant_per_call": 82611.72265625
+        }
+      },
+      "operation": "keygen",
+      "parameter": "ml_dsa_44",
+      "variant": "lazy"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 70470.4375,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.2218399059612168,
+          "rounds": [
+            {
+              "baseline_total": 9003488,
+              "ratio": 1.2331653225806452,
+              "round": 0,
+              "variant_total": 7301120
+            },
+            {
+              "baseline_total": 8996864,
+              "ratio": 1.215410070993882,
+              "round": 1,
+              "variant_total": 7402328
+            },
+            {
+              "baseline_total": 9028064,
+              "ratio": 1.223150492508324,
+              "round": 2,
+              "variant_total": 7380992
+            },
+            {
+              "baseline_total": 9052448,
+              "ratio": 1.2158274308898362,
+              "round": 3,
+              "variant_total": 7445504
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 57675.671875
+        },
+        "cpu_ns": {
+          "baseline_per_call": 81927.734375,
+          "losing_keys": 139,
+          "losing_rounds": 1,
+          "paired_keys": 512,
+          "ratio": 1.0183040807904256,
+          "rounds": [
+            {
+              "baseline_total": 10436000,
+              "ratio": 0.992486923442701,
+              "round": 0,
+              "variant_total": 10515000
+            },
+            {
+              "baseline_total": 10424000,
+              "ratio": 1.0194621026894866,
+              "round": 1,
+              "variant_total": 10225000
+            },
+            {
+              "baseline_total": 10437000,
+              "ratio": 1.0159641779421786,
+              "round": 2,
+              "variant_total": 10273000
+            },
+            {
+              "baseline_total": 10650000,
+              "ratio": 1.0461689587426326,
+              "round": 3,
+              "variant_total": 10180000
+            }
+          ],
+          "tied_keys": 52,
+          "variant_per_call": 80455.078125
+        },
+        "wall_ns": {
+          "baseline_per_call": 80050.29296875,
+          "losing_keys": 156,
+          "losing_rounds": 1,
+          "paired_keys": 512,
+          "ratio": 1.0191752885511323,
+          "rounds": [
+            {
+              "baseline_total": 10184590,
+              "ratio": 0.992561289350524,
+              "round": 0,
+              "variant_total": 10260918
+            },
+            {
+              "baseline_total": 10186252,
+              "ratio": 1.0219769778944003,
+              "round": 1,
+              "variant_total": 9967203
+            },
+            {
+              "baseline_total": 10205332,
+              "ratio": 1.016357495230844,
+              "round": 2,
+              "variant_total": 10041085
+            },
+            {
+              "baseline_total": 10409576,
+              "ratio": 1.0466706423672332,
+              "round": 3,
+              "variant_total": 9945417
+            }
+          ],
+          "tied_keys": 3,
+          "variant_per_call": 78544.185546875
+        }
+      },
+      "operation": "keygen",
+      "parameter": "ml_dsa_44",
+      "variant": "stream"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 70470.4375,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.2245100312391908,
+          "rounds": [
+            {
+              "baseline_total": 9003488,
+              "ratio": 1.2092516503919681,
+              "round": 0,
+              "variant_total": 7445504
+            },
+            {
+              "baseline_total": 8996864,
+              "ratio": 1.2189234184239734,
+              "round": 1,
+              "variant_total": 7380992
+            },
+            {
+              "baseline_total": 9028064,
+              "ratio": 1.23238310735253,
+              "round": 2,
+              "variant_total": 7325696
+            },
+            {
+              "baseline_total": 9052448,
+              "ratio": 1.2377960335604976,
+              "round": 3,
+              "variant_total": 7313360
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 57549.90625
+        },
+        "cpu_ns": {
+          "baseline_per_call": 81927.734375,
+          "losing_keys": 281,
+          "losing_rounds": 3,
+          "paired_keys": 512,
+          "ratio": 0.9883603119624891,
+          "rounds": [
+            {
+              "baseline_total": 10436000,
+              "ratio": 0.9958015267175573,
+              "round": 0,
+              "variant_total": 10480000
+            },
+            {
+              "baseline_total": 10424000,
+              "ratio": 0.9815442561205273,
+              "round": 1,
+              "variant_total": 10620000
+            },
+            {
+              "baseline_total": 10437000,
+              "ratio": 0.974964969640355,
+              "round": 2,
+              "variant_total": 10705000
+            },
+            {
+              "baseline_total": 10650000,
+              "ratio": 1.0013162843174126,
+              "round": 3,
+              "variant_total": 10636000
+            }
+          ],
+          "tied_keys": 65,
+          "variant_per_call": 82892.578125
+        },
+        "wall_ns": {
+          "baseline_per_call": 80050.29296875,
+          "losing_keys": 309,
+          "losing_rounds": 3,
+          "paired_keys": 512,
+          "ratio": 0.9865686854314526,
+          "rounds": [
+            {
+              "baseline_total": 10184590,
+              "ratio": 0.9953592986133603,
+              "round": 0,
+              "variant_total": 10232074
+            },
+            {
+              "baseline_total": 10186252,
+              "ratio": 0.9794669912116503,
+              "round": 1,
+              "variant_total": 10399791
+            },
+            {
+              "baseline_total": 10205332,
+              "ratio": 0.9708772001592548,
+              "round": 2,
+              "variant_total": 10511455
+            },
+            {
+              "baseline_total": 10409576,
+              "ratio": 1.0008806377667356,
+              "round": 3,
+              "variant_total": 10400417
+            }
+          ],
+          "tied_keys": 2,
+          "variant_per_call": 81140.111328125
+        }
+      },
+      "operation": "keygen",
+      "parameter": "ml_dsa_44",
+      "variant": "combined"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 90714.5625,
+          "losing_keys": 128,
+          "losing_rounds": 1,
+          "paired_keys": 512,
+          "ratio": 0.9989428542522243,
+          "rounds": [
+            {
+              "baseline_total": 11611464,
+              "ratio": 1.0,
+              "round": 0,
+              "variant_total": 11611464
+            },
+            {
+              "baseline_total": 11611464,
+              "ratio": 0.9957847852977921,
+              "round": 1,
+              "variant_total": 11660616
+            },
+            {
+              "baseline_total": 11611464,
+              "ratio": 1.0,
+              "round": 2,
+              "variant_total": 11611464
+            },
+            {
+              "baseline_total": 11611464,
+              "ratio": 1.0,
+              "round": 3,
+              "variant_total": 11611464
+            }
+          ],
+          "tied_keys": 384,
+          "variant_per_call": 90810.5625
+        },
+        "cpu_ns": {
+          "baseline_per_call": 331785.15625,
+          "losing_keys": 446,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9645738815419646,
+          "rounds": [
+            {
+              "baseline_total": 42295000,
+              "ratio": 0.9593966201655892,
+              "round": 0,
+              "variant_total": 44085000
+            },
+            {
+              "baseline_total": 42504000,
+              "ratio": 0.9704774299609562,
+              "round": 1,
+              "variant_total": 43797000
+            },
+            {
+              "baseline_total": 42660000,
+              "ratio": 0.9678517140458742,
+              "round": 2,
+              "variant_total": 44077000
+            },
+            {
+              "baseline_total": 42415000,
+              "ratio": 0.9606151198079449,
+              "round": 3,
+              "variant_total": 44154000
+            }
+          ],
+          "tied_keys": 12,
+          "variant_per_call": 343970.703125
+        },
+        "wall_ns": {
+          "baseline_per_call": 330387.52734375,
+          "losing_keys": 454,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9653475335635755,
+          "rounds": [
+            {
+              "baseline_total": 41990078,
+              "ratio": 0.957843905813301,
+              "round": 0,
+              "variant_total": 43838122
+            },
+            {
+              "baseline_total": 42293210,
+              "ratio": 0.9715355264081286,
+              "round": 1,
+              "variant_total": 43532335
+            },
+            {
+              "baseline_total": 42595507,
+              "ratio": 0.9687263514015231,
+              "round": 2,
+              "variant_total": 43970629
+            },
+            {
+              "baseline_total": 42279619,
+              "ratio": 0.9633196778272708,
+              "round": 3,
+              "variant_total": 43889500
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 342247.23828125
+        }
+      },
+      "operation": "sign",
+      "parameter": "ml_dsa_44",
+      "variant": "lazy"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 90714.5625,
+          "losing_keys": 128,
+          "losing_rounds": 1,
+          "paired_keys": 512,
+          "ratio": 0.9989428542522243,
+          "rounds": [
+            {
+              "baseline_total": 11611464,
+              "ratio": 1.0,
+              "round": 0,
+              "variant_total": 11611464
+            },
+            {
+              "baseline_total": 11611464,
+              "ratio": 1.0,
+              "round": 1,
+              "variant_total": 11611464
+            },
+            {
+              "baseline_total": 11611464,
+              "ratio": 1.0,
+              "round": 2,
+              "variant_total": 11611464
+            },
+            {
+              "baseline_total": 11611464,
+              "ratio": 0.9957847852977921,
+              "round": 3,
+              "variant_total": 11660616
+            }
+          ],
+          "tied_keys": 384,
+          "variant_per_call": 90810.5625
+        },
+        "cpu_ns": {
+          "baseline_per_call": 331785.15625,
+          "losing_keys": 220,
+          "losing_rounds": 2,
+          "paired_keys": 512,
+          "ratio": 1.0000647580697386,
+          "rounds": [
+            {
+              "baseline_total": 42295000,
+              "ratio": 0.9947785591645695,
+              "round": 0,
+              "variant_total": 42517000
+            },
+            {
+              "baseline_total": 42504000,
+              "ratio": 1.0036837631056956,
+              "round": 1,
+              "variant_total": 42348000
+            },
+            {
+              "baseline_total": 42660000,
+              "ratio": 1.0069870644887169,
+              "round": 2,
+              "variant_total": 42364000
+            },
+            {
+              "baseline_total": 42415000,
+              "ratio": 0.9948632546793639,
+              "round": 3,
+              "variant_total": 42634000
+            }
+          ],
+          "tied_keys": 52,
+          "variant_per_call": 331763.671875
+        },
+        "wall_ns": {
+          "baseline_per_call": 330387.52734375,
+          "losing_keys": 246,
+          "losing_rounds": 2,
+          "paired_keys": 512,
+          "ratio": 1.0024442660118535,
+          "rounds": [
+            {
+              "baseline_total": 41990078,
+              "ratio": 0.9941030786147991,
+              "round": 0,
+              "variant_total": 42239159
+            },
+            {
+              "baseline_total": 42293210,
+              "ratio": 1.0055525636422595,
+              "round": 1,
+              "variant_total": 42059671
+            },
+            {
+              "baseline_total": 42595507,
+              "ratio": 1.0119691516416358,
+              "round": 2,
+              "variant_total": 42091705
+            },
+            {
+              "baseline_total": 42279619,
+              "ratio": 0.9982103824778595,
+              "round": 3,
+              "variant_total": 42355419
+            }
+          ],
+          "tied_keys": 1,
+          "variant_per_call": 329581.94140625
+        }
+      },
+      "operation": "sign",
+      "parameter": "ml_dsa_44",
+      "variant": "stream"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 90714.5625,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.0,
+          "rounds": [
+            {
+              "baseline_total": 11611464,
+              "ratio": 1.0,
+              "round": 0,
+              "variant_total": 11611464
+            },
+            {
+              "baseline_total": 11611464,
+              "ratio": 1.0,
+              "round": 1,
+              "variant_total": 11611464
+            },
+            {
+              "baseline_total": 11611464,
+              "ratio": 1.0,
+              "round": 2,
+              "variant_total": 11611464
+            },
+            {
+              "baseline_total": 11611464,
+              "ratio": 1.0,
+              "round": 3,
+              "variant_total": 11611464
+            }
+          ],
+          "tied_keys": 512,
+          "variant_per_call": 90714.5625
+        },
+        "cpu_ns": {
+          "baseline_per_call": 331785.15625,
+          "losing_keys": 439,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9698440247550755,
+          "rounds": [
+            {
+              "baseline_total": 42295000,
+              "ratio": 0.9638567945124313,
+              "round": 0,
+              "variant_total": 43881000
+            },
+            {
+              "baseline_total": 42504000,
+              "ratio": 0.9714311834346574,
+              "round": 1,
+              "variant_total": 43754000
+            },
+            {
+              "baseline_total": 42660000,
+              "ratio": 0.973128336146722,
+              "round": 2,
+              "variant_total": 43838000
+            },
+            {
+              "baseline_total": 42415000,
+              "ratio": 0.9709726896046517,
+              "round": 3,
+              "variant_total": 43683000
+            }
+          ],
+          "tied_keys": 10,
+          "variant_per_call": 342101.5625
+        },
+        "wall_ns": {
+          "baseline_per_call": 330387.52734375,
+          "losing_keys": 449,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9719236904736692,
+          "rounds": [
+            {
+              "baseline_total": 41990078,
+              "ratio": 0.9630524103891029,
+              "round": 0,
+              "variant_total": 43601031
+            },
+            {
+              "baseline_total": 42293210,
+              "ratio": 0.9726190682616378,
+              "round": 1,
+              "variant_total": 43483838
+            },
+            {
+              "baseline_total": 42595507,
+              "ratio": 0.9777956151203532,
+              "round": 2,
+              "variant_total": 43562792
+            },
+            {
+              "baseline_total": 42279619,
+              "ratio": 0.9742455364669865,
+              "round": 3,
+              "variant_total": 43397293
+            }
+          ],
+          "tied_keys": 2,
+          "variant_per_call": 339931.55078125
+        }
+      },
+      "operation": "sign",
+      "parameter": "ml_dsa_44",
+      "variant": "combined"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 60157.375,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.005363054617089,
+          "rounds": [
+            {
+              "baseline_total": 7700144,
+              "ratio": 1.006999167214185,
+              "round": 0,
+              "variant_total": 7646624
+            },
+            {
+              "baseline_total": 7700144,
+              "ratio": 1.0,
+              "round": 1,
+              "variant_total": 7700144
+            },
+            {
+              "baseline_total": 7700144,
+              "ratio": 1.0072868647016655,
+              "round": 2,
+              "variant_total": 7644440
+            },
+            {
+              "baseline_total": 7700144,
+              "ratio": 1.0072046486464992,
+              "round": 3,
+              "variant_total": 7645064
+            }
+          ],
+          "tied_keys": 128,
+          "variant_per_call": 59836.46875
+        },
+        "cpu_ns": {
+          "baseline_per_call": 108544.921875,
+          "losing_keys": 279,
+          "losing_rounds": 1,
+          "paired_keys": 512,
+          "ratio": 0.9979708375233444,
+          "rounds": [
+            {
+              "baseline_total": 14056000,
+              "ratio": 1.0137756941940137,
+              "round": 0,
+              "variant_total": 13865000
+            },
+            {
+              "baseline_total": 13525000,
+              "ratio": 0.965450781640374,
+              "round": 1,
+              "variant_total": 14009000
+            },
+            {
+              "baseline_total": 14135000,
+              "ratio": 1.0069815487639808,
+              "round": 2,
+              "variant_total": 14037000
+            },
+            {
+              "baseline_total": 13859000,
+              "ratio": 1.0059519489003412,
+              "round": 3,
+              "variant_total": 13777000
+            }
+          ],
+          "tied_keys": 33,
+          "variant_per_call": 108765.625
+        },
+        "wall_ns": {
+          "baseline_per_call": 106746.921875,
+          "losing_keys": 298,
+          "losing_rounds": 1,
+          "paired_keys": 512,
+          "ratio": 1.0010877178586186,
+          "rounds": [
+            {
+              "baseline_total": 13815207,
+              "ratio": 1.0180165223484992,
+              "round": 0,
+              "variant_total": 13570710
+            },
+            {
+              "baseline_total": 13309422,
+              "ratio": 0.968143002167978,
+              "round": 1,
+              "variant_total": 13747372
+            },
+            {
+              "baseline_total": 13914584,
+              "ratio": 1.0096168608952345,
+              "round": 2,
+              "variant_total": 13782044
+            },
+            {
+              "baseline_total": 13615211,
+              "ratio": 1.0089142472490007,
+              "round": 3,
+              "variant_total": 13494914
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 106630.9375
+        }
+      },
+      "operation": "verify",
+      "parameter": "ml_dsa_44",
+      "variant": "lazy"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 60157.375,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.282605726377676,
+          "rounds": [
+            {
+              "baseline_total": 7700144,
+              "ratio": 1.2771893601832218,
+              "round": 0,
+              "variant_total": 6028976
+            },
+            {
+              "baseline_total": 7700144,
+              "ratio": 1.2876873968197058,
+              "round": 1,
+              "variant_total": 5979824
+            },
+            {
+              "baseline_total": 7700144,
+              "ratio": 1.2771893601832218,
+              "round": 2,
+              "variant_total": 6028976
+            },
+            {
+              "baseline_total": 7700144,
+              "ratio": 1.2884492849072868,
+              "round": 3,
+              "variant_total": 5976288
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 46902.46875
+        },
+        "cpu_ns": {
+          "baseline_per_call": 108544.921875,
+          "losing_keys": 109,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.0290332734645509,
+          "rounds": [
+            {
+              "baseline_total": 14056000,
+              "ratio": 1.0178131788559015,
+              "round": 0,
+              "variant_total": 13810000
+            },
+            {
+              "baseline_total": 13525000,
+              "ratio": 1.0063244047619047,
+              "round": 1,
+              "variant_total": 13440000
+            },
+            {
+              "baseline_total": 14135000,
+              "ratio": 1.0306985562199213,
+              "round": 2,
+              "variant_total": 13714000
+            },
+            {
+              "baseline_total": 13859000,
+              "ratio": 1.0625622939507782,
+              "round": 3,
+              "variant_total": 13043000
+            }
+          ],
+          "tied_keys": 35,
+          "variant_per_call": 105482.421875
+        },
+        "wall_ns": {
+          "baseline_per_call": 106746.921875,
+          "losing_keys": 119,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.0333105550755888,
+          "rounds": [
+            {
+              "baseline_total": 13815207,
+              "ratio": 1.020489105010855,
+              "round": 0,
+              "variant_total": 13537829
+            },
+            {
+              "baseline_total": 13309422,
+              "ratio": 1.0110051666050872,
+              "round": 1,
+              "variant_total": 13164544
+            },
+            {
+              "baseline_total": 13914584,
+              "ratio": 1.0365805808496311,
+              "round": 2,
+              "variant_total": 13423543
+            },
+            {
+              "baseline_total": 13615211,
+              "ratio": 1.0664688436132077,
+              "round": 3,
+              "variant_total": 12766628
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 103305.75
+        }
+      },
+      "operation": "verify",
+      "parameter": "ml_dsa_44",
+      "variant": "stream"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 60157.375,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.288432468828047,
+          "rounds": [
+            {
+              "baseline_total": 7700144,
+              "ratio": 1.287799382670625,
+              "round": 0,
+              "variant_total": 5979304
+            },
+            {
+              "baseline_total": 7700144,
+              "ratio": 1.2883371860029635,
+              "round": 1,
+              "variant_total": 5976808
+            },
+            {
+              "baseline_total": 7700144,
+              "ratio": 1.2887184018851756,
+              "round": 2,
+              "variant_total": 5975040
+            },
+            {
+              "baseline_total": 7700144,
+              "ratio": 1.288875438711604,
+              "round": 3,
+              "variant_total": 5974312
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 46690.359375
+        },
+        "cpu_ns": {
+          "baseline_per_call": 108544.921875,
+          "losing_keys": 258,
+          "losing_rounds": 3,
+          "paired_keys": 512,
+          "ratio": 0.9956287285691252,
+          "rounds": [
+            {
+              "baseline_total": 14056000,
+              "ratio": 0.9994311717861206,
+              "round": 0,
+              "variant_total": 14064000
+            },
+            {
+              "baseline_total": 13525000,
+              "ratio": 0.982921511627907,
+              "round": 1,
+              "variant_total": 13760000
+            },
+            {
+              "baseline_total": 14135000,
+              "ratio": 1.0049768929968006,
+              "round": 2,
+              "variant_total": 14065000
+            },
+            {
+              "baseline_total": 13859000,
+              "ratio": 0.9949030868628859,
+              "round": 3,
+              "variant_total": 13930000
+            }
+          ],
+          "tied_keys": 53,
+          "variant_per_call": 109021.484375
+        },
+        "wall_ns": {
+          "baseline_per_call": 106746.921875,
+          "losing_keys": 282,
+          "losing_rounds": 2,
+          "paired_keys": 512,
+          "ratio": 0.9979133886769826,
+          "rounds": [
+            {
+              "baseline_total": 13815207,
+              "ratio": 1.001676686667031,
+              "round": 0,
+              "variant_total": 13792082
+            },
+            {
+              "baseline_total": 13309422,
+              "ratio": 0.9847434347093408,
+              "round": 1,
+              "variant_total": 13515624
+            },
+            {
+              "baseline_total": 13914584,
+              "ratio": 1.0079292320530353,
+              "round": 2,
+              "variant_total": 13805120
+            },
+            {
+              "baseline_total": 13615211,
+              "ratio": 0.9970219419782498,
+              "round": 3,
+              "variant_total": 13655879
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 106970.126953125
+        }
+      },
+      "operation": "verify",
+      "parameter": "ml_dsa_44",
+      "variant": "combined"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 113720.0,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.0,
+          "rounds": [
+            {
+              "baseline_total": 14556160,
+              "ratio": 1.0,
+              "round": 0,
+              "variant_total": 14556160
+            },
+            {
+              "baseline_total": 14556160,
+              "ratio": 1.0,
+              "round": 1,
+              "variant_total": 14556160
+            },
+            {
+              "baseline_total": 14556160,
+              "ratio": 1.0,
+              "round": 2,
+              "variant_total": 14556160
+            },
+            {
+              "baseline_total": 14556160,
+              "ratio": 1.0,
+              "round": 3,
+              "variant_total": 14556160
+            }
+          ],
+          "tied_keys": 512,
+          "variant_per_call": 113720.0
+        },
+        "cpu_ns": {
+          "baseline_per_call": 148718.75,
+          "losing_keys": 439,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9643974415806472,
+          "rounds": [
+            {
+              "baseline_total": 19040000,
+              "ratio": 0.9629779486142019,
+              "round": 0,
+              "variant_total": 19772000
+            },
+            {
+              "baseline_total": 19179000,
+              "ratio": 0.9627045477361711,
+              "round": 1,
+              "variant_total": 19922000
+            },
+            {
+              "baseline_total": 18955000,
+              "ratio": 0.9623781478472786,
+              "round": 2,
+              "variant_total": 19696000
+            },
+            {
+              "baseline_total": 18970000,
+              "ratio": 0.9695885509838998,
+              "round": 3,
+              "variant_total": 19565000
+            }
+          ],
+          "tied_keys": 13,
+          "variant_per_call": 154208.984375
+        },
+        "wall_ns": {
+          "baseline_per_call": 146726.248046875,
+          "losing_keys": 452,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9591110072382625,
+          "rounds": [
+            {
+              "baseline_total": 18786920,
+              "ratio": 0.9620135402433376,
+              "round": 0,
+              "variant_total": 19528748
+            },
+            {
+              "baseline_total": 18917960,
+              "ratio": 0.9424054923655678,
+              "round": 1,
+              "variant_total": 20074119
+            },
+            {
+              "baseline_total": 18707294,
+              "ratio": 0.9632177795663873,
+              "round": 2,
+              "variant_total": 19421666
+            },
+            {
+              "baseline_total": 18711665,
+              "ratio": 0.9694159138646727,
+              "round": 3,
+              "variant_total": 19301999
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 152981.5078125
+        }
+      },
+      "operation": "keygen",
+      "parameter": "ml_dsa_65",
+      "variant": "lazy"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 113720.0,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.3079598853579832,
+          "rounds": [
+            {
+              "baseline_total": 14556160,
+              "ratio": 1.3133725042948505,
+              "round": 0,
+              "variant_total": 11083040
+            },
+            {
+              "baseline_total": 14556160,
+              "ratio": 1.3025749106570146,
+              "round": 1,
+              "variant_total": 11174912
+            },
+            {
+              "baseline_total": 14556160,
+              "ratio": 1.3025749106570146,
+              "round": 2,
+              "variant_total": 11174912
+            },
+            {
+              "baseline_total": 14556160,
+              "ratio": 1.3134066340201422,
+              "round": 3,
+              "variant_total": 11082752
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 86944.5625
+        },
+        "cpu_ns": {
+          "baseline_per_call": 148718.75,
+          "losing_keys": 80,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.0249700494016611,
+          "rounds": [
+            {
+              "baseline_total": 19040000,
+              "ratio": 1.0242616601215773,
+              "round": 0,
+              "variant_total": 18589000
+            },
+            {
+              "baseline_total": 19179000,
+              "ratio": 1.0366466677476893,
+              "round": 1,
+              "variant_total": 18501000
+            },
+            {
+              "baseline_total": 18955000,
+              "ratio": 1.0215575316626246,
+              "round": 2,
+              "variant_total": 18555000
+            },
+            {
+              "baseline_total": 18970000,
+              "ratio": 1.0174855181291569,
+              "round": 3,
+              "variant_total": 18644000
+            }
+          ],
+          "tied_keys": 24,
+          "variant_per_call": 145095.703125
+        },
+        "wall_ns": {
+          "baseline_per_call": 146726.248046875,
+          "losing_keys": 79,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.025144617219822,
+          "rounds": [
+            {
+              "baseline_total": 18786920,
+              "ratio": 1.025466132754626,
+              "round": 0,
+              "variant_total": 18320371
+            },
+            {
+              "baseline_total": 18917960,
+              "ratio": 1.0348166374667758,
+              "round": 1,
+              "variant_total": 18281461
+            },
+            {
+              "baseline_total": 18707294,
+              "ratio": 1.022172773935075,
+              "round": 2,
+              "variant_total": 18301499
+            },
+            {
+              "baseline_total": 18711665,
+              "ratio": 1.0181623234018287,
+              "round": 3,
+              "variant_total": 18377880
+            }
+          ],
+          "tied_keys": 1,
+          "variant_per_call": 143127.365234375
+        }
+      },
+      "operation": "keygen",
+      "parameter": "ml_dsa_65",
+      "variant": "stream"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 113720.0,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.3106754766813802,
+          "rounds": [
+            {
+              "baseline_total": 14556160,
+              "ratio": 1.3025749106570146,
+              "round": 0,
+              "variant_total": 11174912
+            },
+            {
+              "baseline_total": 14556160,
+              "ratio": 1.3134066340201422,
+              "round": 1,
+              "variant_total": 11082752
+            },
+            {
+              "baseline_total": 14556160,
+              "ratio": 1.3133810365598817,
+              "round": 2,
+              "variant_total": 11082968
+            },
+            {
+              "baseline_total": 14556160,
+              "ratio": 1.3134066340201422,
+              "round": 3,
+              "variant_total": 11082752
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 86764.421875
+        },
+        "cpu_ns": {
+          "baseline_per_call": 148718.75,
+          "losing_keys": 291,
+          "losing_rounds": 3,
+          "paired_keys": 512,
+          "ratio": 0.9859508733765814,
+          "rounds": [
+            {
+              "baseline_total": 19040000,
+              "ratio": 0.9691540262648886,
+              "round": 0,
+              "variant_total": 19646000
+            },
+            {
+              "baseline_total": 19179000,
+              "ratio": 1.0058212712397734,
+              "round": 1,
+              "variant_total": 19068000
+            },
+            {
+              "baseline_total": 18955000,
+              "ratio": 0.9875481921433782,
+              "round": 2,
+              "variant_total": 19194000
+            },
+            {
+              "baseline_total": 18970000,
+              "ratio": 0.9818332384452151,
+              "round": 3,
+              "variant_total": 19321000
+            }
+          ],
+          "tied_keys": 55,
+          "variant_per_call": 150837.890625
+        },
+        "wall_ns": {
+          "baseline_per_call": 146726.248046875,
+          "losing_keys": 319,
+          "losing_rounds": 3,
+          "paired_keys": 512,
+          "ratio": 0.9850232456622217,
+          "rounds": [
+            {
+              "baseline_total": 18786920,
+              "ratio": 0.9675666288366264,
+              "round": 0,
+              "variant_total": 19416668
+            },
+            {
+              "baseline_total": 18917960,
+              "ratio": 1.0059443257186338,
+              "round": 1,
+              "variant_total": 18806170
+            },
+            {
+              "baseline_total": 18707294,
+              "ratio": 0.9854198398289936,
+              "round": 2,
+              "variant_total": 18984085
+            },
+            {
+              "baseline_total": 18711665,
+              "ratio": 0.9817688988387405,
+              "round": 3,
+              "variant_total": 19059134
+            }
+          ],
+          "tied_keys": 3,
+          "variant_per_call": 148957.142578125
+        }
+      },
+      "operation": "keygen",
+      "parameter": "ml_dsa_65",
+      "variant": "combined"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 142098.6875,
+          "losing_keys": 128,
+          "losing_rounds": 1,
+          "paired_keys": 512,
+          "ratio": 0.9987348772808998,
+          "rounds": [
+            {
+              "baseline_total": 18188632,
+              "ratio": 1.0,
+              "round": 0,
+              "variant_total": 18188632
+            },
+            {
+              "baseline_total": 18188632,
+              "ratio": 1.0,
+              "round": 1,
+              "variant_total": 18188632
+            },
+            {
+              "baseline_total": 18188632,
+              "ratio": 1.0,
+              "round": 2,
+              "variant_total": 18188632
+            },
+            {
+              "baseline_total": 18188632,
+              "ratio": 0.9949586429296936,
+              "round": 3,
+              "variant_total": 18280792
+            }
+          ],
+          "tied_keys": 384,
+          "variant_per_call": 142278.6875
+        },
+        "cpu_ns": {
+          "baseline_per_call": 547363.28125,
+          "losing_keys": 461,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9580082998899273,
+          "rounds": [
+            {
+              "baseline_total": 69826000,
+              "ratio": 0.9586084759956618,
+              "round": 0,
+              "variant_total": 72841000
+            },
+            {
+              "baseline_total": 70012000,
+              "ratio": 0.9584514079975905,
+              "round": 1,
+              "variant_total": 73047000
+            },
+            {
+              "baseline_total": 69691000,
+              "ratio": 0.9447193265463812,
+              "round": 2,
+              "variant_total": 73769000
+            },
+            {
+              "baseline_total": 70721000,
+              "ratio": 0.9704159062530017,
+              "round": 3,
+              "variant_total": 72877000
+            }
+          ],
+          "tied_keys": 6,
+          "variant_per_call": 571355.46875
+        },
+        "wall_ns": {
+          "baseline_per_call": 545043.63671875,
+          "losing_keys": 466,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9576464820062512,
+          "rounds": [
+            {
+              "baseline_total": 69527428,
+              "ratio": 0.9579204809239055,
+              "round": 0,
+              "variant_total": 72581628
+            },
+            {
+              "baseline_total": 69709173,
+              "ratio": 0.9580348675504862,
+              "round": 1,
+              "variant_total": 72762668
+            },
+            {
+              "baseline_total": 69406370,
+              "ratio": 0.9445549885162046,
+              "round": 2,
+              "variant_total": 73480497
+            },
+            {
+              "baseline_total": 70419371,
+              "ratio": 0.9702371114242817,
+              "round": 3,
+              "variant_total": 72579548
+            }
+          ],
+          "tied_keys": 1,
+          "variant_per_call": 569149.103515625
+        }
+      },
+      "operation": "sign",
+      "parameter": "ml_dsa_65",
+      "variant": "lazy"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 142098.6875,
+          "losing_keys": 128,
+          "losing_rounds": 1,
+          "paired_keys": 512,
+          "ratio": 0.9987348772808998,
+          "rounds": [
+            {
+              "baseline_total": 18188632,
+              "ratio": 1.0,
+              "round": 0,
+              "variant_total": 18188632
+            },
+            {
+              "baseline_total": 18188632,
+              "ratio": 0.9949586429296936,
+              "round": 1,
+              "variant_total": 18280792
+            },
+            {
+              "baseline_total": 18188632,
+              "ratio": 1.0,
+              "round": 2,
+              "variant_total": 18188632
+            },
+            {
+              "baseline_total": 18188632,
+              "ratio": 1.0,
+              "round": 3,
+              "variant_total": 18188632
+            }
+          ],
+          "tied_keys": 384,
+          "variant_per_call": 142278.6875
+        },
+        "cpu_ns": {
+          "baseline_per_call": 547363.28125,
+          "losing_keys": 234,
+          "losing_rounds": 3,
+          "paired_keys": 512,
+          "ratio": 0.9963204578985726,
+          "rounds": [
+            {
+              "baseline_total": 69826000,
+              "ratio": 0.9868980820601246,
+              "round": 0,
+              "variant_total": 70753000
+            },
+            {
+              "baseline_total": 70012000,
+              "ratio": 0.9953935395814377,
+              "round": 1,
+              "variant_total": 70336000
+            },
+            {
+              "baseline_total": 69691000,
+              "ratio": 0.9942363934660104,
+              "round": 2,
+              "variant_total": 70095000
+            },
+            {
+              "baseline_total": 70721000,
+              "ratio": 1.0088443816778647,
+              "round": 3,
+              "variant_total": 70101000
+            }
+          ],
+          "tied_keys": 38,
+          "variant_per_call": 549384.765625
+        },
+        "wall_ns": {
+          "baseline_per_call": 545043.63671875,
+          "losing_keys": 251,
+          "losing_rounds": 3,
+          "paired_keys": 512,
+          "ratio": 0.9960762719747266,
+          "rounds": [
+            {
+              "baseline_total": 69527428,
+              "ratio": 0.9863503805044445,
+              "round": 0,
+              "variant_total": 70489584
+            },
+            {
+              "baseline_total": 69709173,
+              "ratio": 0.9954141151767341,
+              "round": 1,
+              "variant_total": 70030324
+            },
+            {
+              "baseline_total": 69406370,
+              "ratio": 0.9943338772155637,
+              "round": 2,
+              "variant_total": 69801876
+            },
+            {
+              "baseline_total": 70419371,
+              "ratio": 1.0082980578591278,
+              "round": 3,
+              "variant_total": 69839836
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 547190.6640625
+        }
+      },
+      "operation": "sign",
+      "parameter": "ml_dsa_65",
+      "variant": "stream"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 142098.6875,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.0,
+          "rounds": [
+            {
+              "baseline_total": 18188632,
+              "ratio": 1.0,
+              "round": 0,
+              "variant_total": 18188632
+            },
+            {
+              "baseline_total": 18188632,
+              "ratio": 1.0,
+              "round": 1,
+              "variant_total": 18188632
+            },
+            {
+              "baseline_total": 18188632,
+              "ratio": 1.0,
+              "round": 2,
+              "variant_total": 18188632
+            },
+            {
+              "baseline_total": 18188632,
+              "ratio": 1.0,
+              "round": 3,
+              "variant_total": 18188632
+            }
+          ],
+          "tied_keys": 512,
+          "variant_per_call": 142098.6875
+        },
+        "cpu_ns": {
+          "baseline_per_call": 547363.28125,
+          "losing_keys": 486,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9503994899550998,
+          "rounds": [
+            {
+              "baseline_total": 69826000,
+              "ratio": 0.9377778374675996,
+              "round": 0,
+              "variant_total": 74459000
+            },
+            {
+              "baseline_total": 70012000,
+              "ratio": 0.9518966689326989,
+              "round": 1,
+              "variant_total": 73550000
+            },
+            {
+              "baseline_total": 69691000,
+              "ratio": 0.9560332528533801,
+              "round": 2,
+              "variant_total": 72896000
+            },
+            {
+              "baseline_total": 70721000,
+              "ratio": 0.9560638628651769,
+              "round": 3,
+              "variant_total": 73971000
+            }
+          ],
+          "tied_keys": 3,
+          "variant_per_call": 575929.6875
+        },
+        "wall_ns": {
+          "baseline_per_call": 545043.63671875,
+          "losing_keys": 489,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9488550541034271,
+          "rounds": [
+            {
+              "baseline_total": 69527428,
+              "ratio": 0.9327845697208672,
+              "round": 0,
+              "variant_total": 74537498
+            },
+            {
+              "baseline_total": 69709173,
+              "ratio": 0.9510129608738039,
+              "round": 1,
+              "variant_total": 73299919
+            },
+            {
+              "baseline_total": 69406370,
+              "ratio": 0.956050639035023,
+              "round": 2,
+              "variant_total": 72596960
+            },
+            {
+              "baseline_total": 70419371,
+              "ratio": 0.955876939884536,
+              "round": 3,
+              "variant_total": 73669913
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 574422.44140625
+        }
+      },
+      "operation": "sign",
+      "parameter": "ml_dsa_65",
+      "variant": "combined"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 97274.125,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.006089338744355,
+          "rounds": [
+            {
+              "baseline_total": 12479536,
+              "ratio": 1.0083880317990181,
+              "round": 0,
+              "variant_total": 12375728
+            },
+            {
+              "baseline_total": 12467888,
+              "ratio": 1.0074468346427783,
+              "round": 1,
+              "variant_total": 12375728
+            },
+            {
+              "baseline_total": 12375728,
+              "ratio": 1.0,
+              "round": 2,
+              "variant_total": 12375728
+            },
+            {
+              "baseline_total": 12481200,
+              "ratio": 1.0085224885356239,
+              "round": 3,
+              "variant_total": 12375728
+            }
+          ],
+          "tied_keys": 128,
+          "variant_per_call": 96685.375
+        },
+        "cpu_ns": {
+          "baseline_per_call": 151240.234375,
+          "losing_keys": 348,
+          "losing_rounds": 2,
+          "paired_keys": 512,
+          "ratio": 0.9930747034305867,
+          "rounds": [
+            {
+              "baseline_total": 19058000,
+              "ratio": 0.9727936297279363,
+              "round": 0,
+              "variant_total": 19591000
+            },
+            {
+              "baseline_total": 18944000,
+              "ratio": 0.9659392208851724,
+              "round": 1,
+              "variant_total": 19612000
+            },
+            {
+              "baseline_total": 19588000,
+              "ratio": 1.0117768595041323,
+              "round": 2,
+              "variant_total": 19360000
+            },
+            {
+              "baseline_total": 19845000,
+              "ratio": 1.0223057902328456,
+              "round": 3,
+              "variant_total": 19412000
+            }
+          ],
+          "tied_keys": 23,
+          "variant_per_call": 152294.921875
+        },
+        "wall_ns": {
+          "baseline_per_call": 149151.681640625,
+          "losing_keys": 364,
+          "losing_rounds": 2,
+          "paired_keys": 512,
+          "ratio": 0.9929519550120528,
+          "rounds": [
+            {
+              "baseline_total": 18785081,
+              "ratio": 0.9728538436986661,
+              "round": 0,
+              "variant_total": 19309253
+            },
+            {
+              "baseline_total": 18646542,
+              "ratio": 0.9635940403187736,
+              "round": 1,
+              "variant_total": 19351035
+            },
+            {
+              "baseline_total": 19332874,
+              "ratio": 1.012262949437102,
+              "round": 2,
+              "variant_total": 19098668
+            },
+            {
+              "baseline_total": 19601164,
+              "ratio": 1.023626080318333,
+              "round": 3,
+              "variant_total": 19148754
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 150210.37109375
+        }
+      },
+      "operation": "verify",
+      "parameter": "ml_dsa_65",
+      "variant": "lazy"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 97274.125,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.3964254631914226,
+          "rounds": [
+            {
+              "baseline_total": 12479536,
+              "ratio": 1.38746609031317,
+              "round": 0,
+              "variant_total": 8994480
+            },
+            {
+              "baseline_total": 12467888,
+              "ratio": 1.400521212447991,
+              "round": 1,
+              "variant_total": 8902320
+            },
+            {
+              "baseline_total": 12375728,
+              "ratio": 1.3901688548603062,
+              "round": 2,
+              "variant_total": 8902320
+            },
+            {
+              "baseline_total": 12481200,
+              "ratio": 1.4076837707861518,
+              "round": 3,
+              "variant_total": 8866480
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 69659.375
+        },
+        "cpu_ns": {
+          "baseline_per_call": 151240.234375,
+          "losing_keys": 79,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.0437109122277335,
+          "rounds": [
+            {
+              "baseline_total": 19058000,
+              "ratio": 1.0181099417703938,
+              "round": 0,
+              "variant_total": 18719000
+            },
+            {
+              "baseline_total": 18944000,
+              "ratio": 1.0168545356951153,
+              "round": 1,
+              "variant_total": 18630000
+            },
+            {
+              "baseline_total": 19588000,
+              "ratio": 1.0628323385784049,
+              "round": 2,
+              "variant_total": 18430000
+            },
+            {
+              "baseline_total": 19845000,
+              "ratio": 1.0777711399554661,
+              "round": 3,
+              "variant_total": 18413000
+            }
+          ],
+          "tied_keys": 17,
+          "variant_per_call": 144906.25
+        },
+        "wall_ns": {
+          "baseline_per_call": 149151.681640625,
+          "losing_keys": 82,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.0440344818096288,
+          "rounds": [
+            {
+              "baseline_total": 18785081,
+              "ratio": 1.0171525234343404,
+              "round": 0,
+              "variant_total": 18468303
+            },
+            {
+              "baseline_total": 18646542,
+              "ratio": 1.0165409620136237,
+              "round": 1,
+              "variant_total": 18343129
+            },
+            {
+              "baseline_total": 19332874,
+              "ratio": 1.0639626623884078,
+              "round": 2,
+              "variant_total": 18170632
+            },
+            {
+              "baseline_total": 19601164,
+              "ratio": 1.0791985004436289,
+              "round": 3,
+              "variant_total": 18162705
+            }
+          ],
+          "tied_keys": 1,
+          "variant_per_call": 142860.876953125
+        }
+      },
+      "operation": "verify",
+      "parameter": "ml_dsa_65",
+      "variant": "stream"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 97274.125,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.3998549224941639,
+          "rounds": [
+            {
+              "baseline_total": 12479536,
+              "ratio": 1.401829635420879,
+              "round": 0,
+              "variant_total": 8902320
+            },
+            {
+              "baseline_total": 12467888,
+              "ratio": 1.406182385794588,
+              "round": 1,
+              "variant_total": 8866480
+            },
+            {
+              "baseline_total": 12375728,
+              "ratio": 1.3901688548603062,
+              "round": 2,
+              "variant_total": 8902320
+            },
+            {
+              "baseline_total": 12481200,
+              "ratio": 1.4012635307727406,
+              "round": 3,
+              "variant_total": 8907104
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 69488.71875
+        },
+        "cpu_ns": {
+          "baseline_per_call": 151240.234375,
+          "losing_keys": 181,
+          "losing_rounds": 1,
+          "paired_keys": 512,
+          "ratio": 1.0205063324503485,
+          "rounds": [
+            {
+              "baseline_total": 19058000,
+              "ratio": 1.0026304713804715,
+              "round": 0,
+              "variant_total": 19008000
+            },
+            {
+              "baseline_total": 18944000,
+              "ratio": 0.9960565750039434,
+              "round": 1,
+              "variant_total": 19019000
+            },
+            {
+              "baseline_total": 19588000,
+              "ratio": 1.0370605675561202,
+              "round": 2,
+              "variant_total": 18888000
+            },
+            {
+              "baseline_total": 19845000,
+              "ratio": 1.0464564437882304,
+              "round": 3,
+              "variant_total": 18964000
+            }
+          ],
+          "tied_keys": 47,
+          "variant_per_call": 148201.171875
+        },
+        "wall_ns": {
+          "baseline_per_call": 149151.681640625,
+          "losing_keys": 208,
+          "losing_rounds": 1,
+          "paired_keys": 512,
+          "ratio": 1.020324953682939,
+          "rounds": [
+            {
+              "baseline_total": 18785081,
+              "ratio": 1.0024212758502575,
+              "round": 0,
+              "variant_total": 18739707
+            },
+            {
+              "baseline_total": 18646542,
+              "ratio": 0.9941996751963136,
+              "round": 1,
+              "variant_total": 18755329
+            },
+            {
+              "baseline_total": 19332874,
+              "ratio": 1.0369488863413907,
+              "round": 2,
+              "variant_total": 18643999
+            },
+            {
+              "baseline_total": 19601164,
+              "ratio": 1.0478870932354565,
+              "round": 3,
+              "variant_total": 18705416
+            }
+          ],
+          "tied_keys": 1,
+          "variant_per_call": 146180.568359375
+        }
+      },
+      "operation": "verify",
+      "parameter": "ml_dsa_65",
+      "variant": "combined"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 178636.0,
+          "losing_keys": 256,
+          "losing_rounds": 2,
+          "paired_keys": 512,
+          "ratio": 0.9968526785714286,
+          "rounds": [
+            {
+              "baseline_total": 22851584,
+              "ratio": 0.9925280199252802,
+              "round": 0,
+              "variant_total": 23023616
+            },
+            {
+              "baseline_total": 22851584,
+              "ratio": 0.9925280199252802,
+              "round": 1,
+              "variant_total": 23023616
+            },
+            {
+              "baseline_total": 22851584,
+              "ratio": 1.0,
+              "round": 2,
+              "variant_total": 22851584
+            },
+            {
+              "baseline_total": 22906880,
+              "ratio": 1.0024197884925614,
+              "round": 3,
+              "variant_total": 22851584
+            }
+          ],
+          "tied_keys": 128,
+          "variant_per_call": 179200.0
+        },
+        "cpu_ns": {
+          "baseline_per_call": 208099.609375,
+          "losing_keys": 336,
+          "losing_rounds": 3,
+          "paired_keys": 512,
+          "ratio": 0.9848228562977752,
+          "rounds": [
+            {
+              "baseline_total": 25859000,
+              "ratio": 0.9666193181818182,
+              "round": 0,
+              "variant_total": 26752000
+            },
+            {
+              "baseline_total": 26528000,
+              "ratio": 0.9920718025430068,
+              "round": 1,
+              "variant_total": 26740000
+            },
+            {
+              "baseline_total": 27118000,
+              "ratio": 1.0061217675212406,
+              "round": 2,
+              "variant_total": 26953000
+            },
+            {
+              "baseline_total": 27042000,
+              "ratio": 0.97469723183391,
+              "round": 3,
+              "variant_total": 27744000
+            }
+          ],
+          "tied_keys": 12,
+          "variant_per_call": 211306.640625
+        },
+        "wall_ns": {
+          "baseline_per_call": 206156.6640625,
+          "losing_keys": 344,
+          "losing_rounds": 3,
+          "paired_keys": 512,
+          "ratio": 0.9849480877449327,
+          "rounds": [
+            {
+              "baseline_total": 25597381,
+              "ratio": 0.9657416392644024,
+              "round": 0,
+              "variant_total": 26505413
+            },
+            {
+              "baseline_total": 26293410,
+              "ratio": 0.9926392640638251,
+              "round": 1,
+              "variant_total": 26488384
+            },
+            {
+              "baseline_total": 26868835,
+              "ratio": 1.0064820705256494,
+              "round": 2,
+              "variant_total": 26695791
+            },
+            {
+              "baseline_total": 26792586,
+              "ratio": 0.9751387282113562,
+              "round": 3,
+              "variant_total": 27475666
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 209307.13671875
+        }
+      },
+      "operation": "keygen",
+      "parameter": "ml_dsa_87",
+      "variant": "lazy"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 178636.0,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.419716451702313,
+          "rounds": [
+            {
+              "baseline_total": 22851584,
+              "ratio": 1.4226698967231926,
+              "round": 0,
+              "variant_total": 16062464
+            },
+            {
+              "baseline_total": 22851584,
+              "ratio": 1.4226443887074893,
+              "round": 1,
+              "variant_total": 16062752
+            },
+            {
+              "baseline_total": 22851584,
+              "ratio": 1.4075693276855423,
+              "round": 2,
+              "variant_total": 16234784
+            },
+            {
+              "baseline_total": 22906880,
+              "ratio": 1.426112456967997,
+              "round": 3,
+              "variant_total": 16062464
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 125825.125
+        },
+        "cpu_ns": {
+          "baseline_per_call": 208099.609375,
+          "losing_keys": 166,
+          "losing_rounds": 1,
+          "paired_keys": 512,
+          "ratio": 1.0146270390720973,
+          "rounds": [
+            {
+              "baseline_total": 25859000,
+              "ratio": 0.9826714801444043,
+              "round": 0,
+              "variant_total": 26315000
+            },
+            {
+              "baseline_total": 26528000,
+              "ratio": 1.0133312960770082,
+              "round": 1,
+              "variant_total": 26179000
+            },
+            {
+              "baseline_total": 27118000,
+              "ratio": 1.0320837297811607,
+              "round": 2,
+              "variant_total": 26275000
+            },
+            {
+              "baseline_total": 27042000,
+              "ratio": 1.0304854812895359,
+              "round": 3,
+              "variant_total": 26242000
+            }
+          ],
+          "tied_keys": 9,
+          "variant_per_call": 205099.609375
+        },
+        "wall_ns": {
+          "baseline_per_call": 206156.6640625,
+          "losing_keys": 168,
+          "losing_rounds": 1,
+          "paired_keys": 512,
+          "ratio": 1.0150765081896012,
+          "rounds": [
+            {
+              "baseline_total": 25597381,
+              "ratio": 0.9822903706430293,
+              "round": 0,
+              "variant_total": 26058874
+            },
+            {
+              "baseline_total": 26293410,
+              "ratio": 1.014021649427642,
+              "round": 1,
+              "variant_total": 25929831
+            },
+            {
+              "baseline_total": 26868835,
+              "ratio": 1.0325959758293657,
+              "round": 2,
+              "variant_total": 26020666
+            },
+            {
+              "baseline_total": 26792586,
+              "ratio": 1.0314711948565547,
+              "round": 3,
+              "variant_total": 25975118
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 203094.705078125
+        }
+      },
+      "operation": "keygen",
+      "parameter": "ml_dsa_87",
+      "variant": "stream"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 178636.0,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.4197291454730416,
+          "rounds": [
+            {
+              "baseline_total": 22851584,
+              "ratio": 1.4226698967231926,
+              "round": 0,
+              "variant_total": 16062464
+            },
+            {
+              "baseline_total": 22851584,
+              "ratio": 1.4075942979689668,
+              "round": 1,
+              "variant_total": 16234496
+            },
+            {
+              "baseline_total": 22851584,
+              "ratio": 1.4226698967231926,
+              "round": 2,
+              "variant_total": 16062464
+            },
+            {
+              "baseline_total": 22906880,
+              "ratio": 1.426112456967997,
+              "round": 3,
+              "variant_total": 16062464
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 125824.0
+        },
+        "cpu_ns": {
+          "baseline_per_call": 208099.609375,
+          "losing_keys": 366,
+          "losing_rounds": 3,
+          "paired_keys": 512,
+          "ratio": 0.969816953842513,
+          "rounds": [
+            {
+              "baseline_total": 25859000,
+              "ratio": 0.9375997099347353,
+              "round": 0,
+              "variant_total": 27580000
+            },
+            {
+              "baseline_total": 26528000,
+              "ratio": 0.9674337186827614,
+              "round": 1,
+              "variant_total": 27421000
+            },
+            {
+              "baseline_total": 27118000,
+              "ratio": 1.000184413381035,
+              "round": 2,
+              "variant_total": 27113000
+            },
+            {
+              "baseline_total": 27042000,
+              "ratio": 0.9745216043821399,
+              "round": 3,
+              "variant_total": 27749000
+            }
+          ],
+          "tied_keys": 22,
+          "variant_per_call": 214576.171875
+        },
+        "wall_ns": {
+          "baseline_per_call": 206156.6640625,
+          "losing_keys": 379,
+          "losing_rounds": 3,
+          "paired_keys": 512,
+          "ratio": 0.9686243410039769,
+          "rounds": [
+            {
+              "baseline_total": 25597381,
+              "ratio": 0.9371351892119432,
+              "round": 0,
+              "variant_total": 27314502
+            },
+            {
+              "baseline_total": 26293410,
+              "ratio": 0.9668202310514665,
+              "round": 1,
+              "variant_total": 27195759
+            },
+            {
+              "baseline_total": 26868835,
+              "ratio": 1.0001927138887787,
+              "round": 2,
+              "variant_total": 26863658
+            },
+            {
+              "baseline_total": 26792586,
+              "ratio": 0.9708395063320963,
+              "round": 3,
+              "variant_total": 27597338
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 212834.486328125
+        }
+      },
+      "operation": "keygen",
+      "parameter": "ml_dsa_87",
+      "variant": "combined"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 210752.6875,
+          "losing_keys": 128,
+          "losing_rounds": 1,
+          "paired_keys": 512,
+          "ratio": 1.0,
+          "rounds": [
+            {
+              "baseline_total": 26933336,
+              "ratio": 1.0,
+              "round": 0,
+              "variant_total": 26933336
+            },
+            {
+              "baseline_total": 26933336,
+              "ratio": 1.0,
+              "round": 1,
+              "variant_total": 26933336
+            },
+            {
+              "baseline_total": 26933336,
+              "ratio": 0.9936532128986406,
+              "round": 2,
+              "variant_total": 27105368
+            },
+            {
+              "baseline_total": 27105368,
+              "ratio": 1.0063873261002647,
+              "round": 3,
+              "variant_total": 26933336
+            }
+          ],
+          "tied_keys": 256,
+          "variant_per_call": 210752.6875
+        },
+        "cpu_ns": {
+          "baseline_per_call": 636998.046875,
+          "losing_keys": 457,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9603824533196701,
+          "rounds": [
+            {
+              "baseline_total": 81719000,
+              "ratio": 0.9627705321693234,
+              "round": 0,
+              "variant_total": 84879000
+            },
+            {
+              "baseline_total": 81344000,
+              "ratio": 0.9603778040141676,
+              "round": 1,
+              "variant_total": 84700000
+            },
+            {
+              "baseline_total": 81722000,
+              "ratio": 0.9593810899016224,
+              "round": 2,
+              "variant_total": 85182000
+            },
+            {
+              "baseline_total": 81358000,
+              "ratio": 0.959003253335848,
+              "round": 3,
+              "variant_total": 84836000
+            }
+          ],
+          "tied_keys": 5,
+          "variant_per_call": 663275.390625
+        },
+        "wall_ns": {
+          "baseline_per_call": 635506.263671875,
+          "losing_keys": 458,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.961120456033361,
+          "rounds": [
+            {
+              "baseline_total": 81796370,
+              "ratio": 0.9670811309487144,
+              "round": 0,
+              "variant_total": 84580670
+            },
+            {
+              "baseline_total": 81106293,
+              "ratio": 0.9596872807592353,
+              "round": 1,
+              "variant_total": 84513252
+            },
+            {
+              "baseline_total": 81456212,
+              "ratio": 0.9591584391004037,
+              "round": 2,
+              "variant_total": 84924668
+            },
+            {
+              "baseline_total": 81020332,
+              "ratio": 0.9585600636456666,
+              "round": 3,
+              "variant_total": 84522958
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 661213.9609375
+        }
+      },
+      "operation": "sign",
+      "parameter": "ml_dsa_87",
+      "variant": "lazy"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 210752.6875,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.0015968315250663,
+          "rounds": [
+            {
+              "baseline_total": 26933336,
+              "ratio": 1.0,
+              "round": 0,
+              "variant_total": 26933336
+            },
+            {
+              "baseline_total": 26933336,
+              "ratio": 1.0,
+              "round": 1,
+              "variant_total": 26933336
+            },
+            {
+              "baseline_total": 26933336,
+              "ratio": 1.0,
+              "round": 2,
+              "variant_total": 26933336
+            },
+            {
+              "baseline_total": 27105368,
+              "ratio": 1.0063873261002647,
+              "round": 3,
+              "variant_total": 26933336
+            }
+          ],
+          "tied_keys": 384,
+          "variant_per_call": 210416.6875
+        },
+        "cpu_ns": {
+          "baseline_per_call": 636998.046875,
+          "losing_keys": 80,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.0232643507944077,
+          "rounds": [
+            {
+              "baseline_total": 81719000,
+              "ratio": 1.026827000402091,
+              "round": 0,
+              "variant_total": 79584000
+            },
+            {
+              "baseline_total": 81344000,
+              "ratio": 1.0197445122792062,
+              "round": 1,
+              "variant_total": 79769000
+            },
+            {
+              "baseline_total": 81722000,
+              "ratio": 1.0298539437702419,
+              "round": 2,
+              "variant_total": 79353000
+            },
+            {
+              "baseline_total": 81358000,
+              "ratio": 1.0166954087625903,
+              "round": 3,
+              "variant_total": 80022000
+            }
+          ],
+          "tied_keys": 13,
+          "variant_per_call": 622515.625
+        },
+        "wall_ns": {
+          "baseline_per_call": 635506.263671875,
+          "losing_keys": 81,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.0247290285369086,
+          "rounds": [
+            {
+              "baseline_total": 81796370,
+              "ratio": 1.0318228282085835,
+              "round": 0,
+              "variant_total": 79273658
+            },
+            {
+              "baseline_total": 81106293,
+              "ratio": 1.0209807474965473,
+              "round": 1,
+              "variant_total": 79439591
+            },
+            {
+              "baseline_total": 81456212,
+              "ratio": 1.030009689698376,
+              "round": 2,
+              "variant_total": 79082957
+            },
+            {
+              "baseline_total": 81020332,
+              "ratio": 1.0161727456487522,
+              "round": 3,
+              "variant_total": 79730865
+            }
+          ],
+          "tied_keys": 1,
+          "variant_per_call": 620170.060546875
+        }
+      },
+      "operation": "sign",
+      "parameter": "ml_dsa_87",
+      "variant": "stream"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 210752.6875,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.0015968315250663,
+          "rounds": [
+            {
+              "baseline_total": 26933336,
+              "ratio": 1.0,
+              "round": 0,
+              "variant_total": 26933336
+            },
+            {
+              "baseline_total": 26933336,
+              "ratio": 1.0,
+              "round": 1,
+              "variant_total": 26933336
+            },
+            {
+              "baseline_total": 26933336,
+              "ratio": 1.0,
+              "round": 2,
+              "variant_total": 26933336
+            },
+            {
+              "baseline_total": 27105368,
+              "ratio": 1.0063873261002647,
+              "round": 3,
+              "variant_total": 26933336
+            }
+          ],
+          "tied_keys": 384,
+          "variant_per_call": 210416.6875
+        },
+        "cpu_ns": {
+          "baseline_per_call": 636998.046875,
+          "losing_keys": 411,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9690946800418371,
+          "rounds": [
+            {
+              "baseline_total": 81719000,
+              "ratio": 0.9744925946242458,
+              "round": 0,
+              "variant_total": 83858000
+            },
+            {
+              "baseline_total": 81344000,
+              "ratio": 0.9691886095555821,
+              "round": 1,
+              "variant_total": 83930000
+            },
+            {
+              "baseline_total": 81722000,
+              "ratio": 0.9517276718646278,
+              "round": 2,
+              "variant_total": 85867000
+            },
+            {
+              "baseline_total": 81358000,
+              "ratio": 0.9815295153759848,
+              "round": 3,
+              "variant_total": 82889000
+            }
+          ],
+          "tied_keys": 7,
+          "variant_per_call": 657312.5
+        },
+        "wall_ns": {
+          "baseline_per_call": 635506.263671875,
+          "losing_keys": 419,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.934221021182438,
+          "rounds": [
+            {
+              "baseline_total": 81796370,
+              "ratio": 0.9787236496726497,
+              "round": 0,
+              "variant_total": 83574531
+            },
+            {
+              "baseline_total": 81106293,
+              "ratio": 0.9698519270592577,
+              "round": 1,
+              "variant_total": 83627501
+            },
+            {
+              "baseline_total": 81456212,
+              "ratio": 0.8270229408110351,
+              "round": 2,
+              "variant_total": 98493292
+            },
+            {
+              "baseline_total": 81020332,
+              "ratio": 0.9809469571754238,
+              "round": 3,
+              "variant_total": 82593999
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 680252.583984375
+        }
+      },
+      "operation": "sign",
+      "parameter": "ml_dsa_87",
+      "variant": "combined"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 158410.5625,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.0004369514916742,
+          "rounds": [
+            {
+              "baseline_total": 20276912,
+              "ratio": 1.0,
+              "round": 0,
+              "variant_total": 20276912
+            },
+            {
+              "baseline_total": 20276912,
+              "ratio": 1.0,
+              "round": 1,
+              "variant_total": 20276912
+            },
+            {
+              "baseline_total": 20276912,
+              "ratio": 1.000909841212174,
+              "round": 2,
+              "variant_total": 20258480
+            },
+            {
+              "baseline_total": 20275472,
+              "ratio": 1.0008387598674728,
+              "round": 3,
+              "variant_total": 20258480
+            }
+          ],
+          "tied_keys": 266,
+          "variant_per_call": 158341.375
+        },
+        "cpu_ns": {
+          "baseline_per_call": 226873.046875,
+          "losing_keys": 405,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9615254082958768,
+          "rounds": [
+            {
+              "baseline_total": 29076000,
+              "ratio": 0.9474095796676442,
+              "round": 0,
+              "variant_total": 30690000
+            },
+            {
+              "baseline_total": 28769000,
+              "ratio": 0.9271350306155334,
+              "round": 1,
+              "variant_total": 31030000
+            },
+            {
+              "baseline_total": 29226000,
+              "ratio": 0.9869647440226935,
+              "round": 2,
+              "variant_total": 29612000
+            },
+            {
+              "baseline_total": 29088000,
+              "ratio": 0.9868702290076335,
+              "round": 3,
+              "variant_total": 29475000
+            }
+          ],
+          "tied_keys": 11,
+          "variant_per_call": 235951.171875
+        },
+        "wall_ns": {
+          "baseline_per_call": 231570.41015625,
+          "losing_keys": 414,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9436603626402056,
+          "rounds": [
+            {
+              "baseline_total": 30621004,
+              "ratio": 0.9376239049879467,
+              "round": 0,
+              "variant_total": 32658088
+            },
+            {
+              "baseline_total": 30126459,
+              "ratio": 0.9227055804858615,
+              "round": 1,
+              "variant_total": 32650132
+            },
+            {
+              "baseline_total": 29021498,
+              "ratio": 0.9894648233067966,
+              "round": 2,
+              "variant_total": 29330500
+            },
+            {
+              "baseline_total": 28795089,
+              "ratio": 0.9287541492636675,
+              "round": 3,
+              "variant_total": 31003995
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 245395.927734375
+        }
+      },
+      "operation": "verify",
+      "parameter": "ml_dsa_87",
+      "variant": "lazy"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 158410.5625,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.493630805967053,
+          "rounds": [
+            {
+              "baseline_total": 20276912,
+              "ratio": 1.4844197114106301,
+              "round": 0,
+              "variant_total": 13659824
+            },
+            {
+              "baseline_total": 20276912,
+              "ratio": 1.5026684578910112,
+              "round": 1,
+              "variant_total": 13493936
+            },
+            {
+              "baseline_total": 20276912,
+              "ratio": 1.4844197114106301,
+              "round": 2,
+              "variant_total": 13659824
+            },
+            {
+              "baseline_total": 20275472,
+              "ratio": 1.5032461947811768,
+              "round": 3,
+              "variant_total": 13487792
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 106057.375
+        },
+        "cpu_ns": {
+          "baseline_per_call": 226873.046875,
+          "losing_keys": 240,
+          "losing_rounds": 1,
+          "paired_keys": 512,
+          "ratio": 1.0049660423065276,
+          "rounds": [
+            {
+              "baseline_total": 29076000,
+              "ratio": 1.006612428596157,
+              "round": 0,
+              "variant_total": 28885000
+            },
+            {
+              "baseline_total": 28769000,
+              "ratio": 0.9983689616879511,
+              "round": 1,
+              "variant_total": 28816000
+            },
+            {
+              "baseline_total": 29226000,
+              "ratio": 1.0042953850383147,
+              "round": 2,
+              "variant_total": 29101000
+            },
+            {
+              "baseline_total": 29088000,
+              "ratio": 1.0105965326755377,
+              "round": 3,
+              "variant_total": 28783000
+            }
+          ],
+          "tied_keys": 9,
+          "variant_per_call": 225751.953125
+        },
+        "wall_ns": {
+          "baseline_per_call": 231570.41015625,
+          "losing_keys": 245,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.035729526237192,
+          "rounds": [
+            {
+              "baseline_total": 30621004,
+              "ratio": 1.0702481265504895,
+              "round": 0,
+              "variant_total": 28611126
+            },
+            {
+              "baseline_total": 30126459,
+              "ratio": 1.0557677716360672,
+              "round": 1,
+              "variant_total": 28535119
+            },
+            {
+              "baseline_total": 29021498,
+              "ratio": 1.0068374681849537,
+              "round": 2,
+              "variant_total": 28824412
+            },
+            {
+              "baseline_total": 28795089,
+              "ratio": 1.010237273286283,
+              "round": 3,
+              "variant_total": 28503293
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 223581.93359375
+        }
+      },
+      "operation": "verify",
+      "parameter": "ml_dsa_87",
+      "variant": "stream"
+    },
+    {
+      "metrics": {
+        "allocated_bytes": {
+          "baseline_per_call": 158410.5625,
+          "losing_keys": 0,
+          "losing_rounds": 0,
+          "paired_keys": 512,
+          "ratio": 1.5037396681895485,
+          "rounds": [
+            {
+              "baseline_total": 20276912,
+              "ratio": 1.503352957993421,
+              "round": 0,
+              "variant_total": 13487792
+            },
+            {
+              "baseline_total": 20276912,
+              "ratio": 1.503352957993421,
+              "round": 1,
+              "variant_total": 13487792
+            },
+            {
+              "baseline_total": 20276912,
+              "ratio": 1.503352957993421,
+              "round": 2,
+              "variant_total": 13487792
+            },
+            {
+              "baseline_total": 20275472,
+              "ratio": 1.5049010759328314,
+              "round": 3,
+              "variant_total": 13472960
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 105344.40625
+        },
+        "cpu_ns": {
+          "baseline_per_call": 226873.046875,
+          "losing_keys": 319,
+          "losing_rounds": 4,
+          "paired_keys": 512,
+          "ratio": 0.9791292620221689,
+          "rounds": [
+            {
+              "baseline_total": 29076000,
+              "ratio": 0.978034915402469,
+              "round": 0,
+              "variant_total": 29729000
+            },
+            {
+              "baseline_total": 28769000,
+              "ratio": 0.9685553647779686,
+              "round": 1,
+              "variant_total": 29703000
+            },
+            {
+              "baseline_total": 29226000,
+              "ratio": 0.9846703278191435,
+              "round": 2,
+              "variant_total": 29681000
+            },
+            {
+              "baseline_total": 29088000,
+              "ratio": 0.985299098977034,
+              "round": 3,
+              "variant_total": 29522000
+            }
+          ],
+          "tied_keys": 20,
+          "variant_per_call": 231708.984375
+        },
+        "wall_ns": {
+          "baseline_per_call": 231570.41015625,
+          "losing_keys": 330,
+          "losing_rounds": 2,
+          "paired_keys": 512,
+          "ratio": 1.0090255512013786,
+          "rounds": [
+            {
+              "baseline_total": 30621004,
+              "ratio": 1.0402849186496348,
+              "round": 0,
+              "variant_total": 29435209
+            },
+            {
+              "baseline_total": 30126459,
+              "ratio": 1.024626648382884,
+              "round": 1,
+              "variant_total": 29402377
+            },
+            {
+              "baseline_total": 29021498,
+              "ratio": 0.9868388270363152,
+              "round": 2,
+              "variant_total": 29408549
+            },
+            {
+              "baseline_total": 28795089,
+              "ratio": 0.9841991325197563,
+              "round": 3,
+              "variant_total": 29257381
+            }
+          ],
+          "tied_keys": 0,
+          "variant_per_call": 229499.0546875
+        }
+      },
+      "operation": "verify",
+      "parameter": "ml_dsa_87",
+      "variant": "combined"
+    }
+  ],
+  "local_evidence": {
+    "baseline_classes": "verified",
+    "baseline_gate_classes": "verified",
+    "baseline_sources": "verified",
+    "combined_classes": "verified",
+    "combined_gate_classes": "verified",
+    "combined_sources": "verified",
+    "lazy_classes": "verified",
+    "lazy_gate_classes": "verified",
+    "lazy_sources": "verified",
+    "runtime": "verified",
+    "stream_classes": "verified",
+    "stream_gate_classes": "verified",
+    "stream_sources": "verified"
+  },
+  "measured_calls": 36864,
+  "preparation_passed": true,
+  "schema": "bc-matrix-audit-v1"
+}

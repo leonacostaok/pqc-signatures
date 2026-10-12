@@ -1,0 +1,35 @@
+{
+  "inverse_vectors": 260,
+  "inverse_coefficients": 66560,
+  "raw_representative_differences": 18,
+  "vector_witness": {
+    "case_index": 15,
+    "coefficient": 137,
+    "old": -4178559,
+    "new": 4201858,
+    "input_first8": [
+      700113,
+      829953,
+      -834726,
+      3977494,
+      3152363,
+      -2271085,
+      -4362704,
+      2845376
+    ]
+  },
+  "sparse_products": 108,
+  "scalar_witness": {
+    "difference_input": 2145386737,
+    "old": -3959542,
+    "new": 4420875
+  },
+  "g": 3975713,
+  "bounds": {
+    "pointwise": 5514722,
+    "fused": 6176124,
+    "left": 4211177,
+    "reduce32": 4259832,
+    "max_sum_or_difference": 2145386752
+  }
+}

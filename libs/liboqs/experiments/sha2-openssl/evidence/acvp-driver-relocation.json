@@ -1,0 +1,7 @@
+{
+  "note": "The first corrected run used check_acvp.py, copied unchanged to check_acvp_executed.py to preserve the sealed legacy script. Those original commands and logs are retained with pre-relocation- prefixes. The final external-validation-run.json records a complete rerun using check_acvp_executed.py.",
+  "executed_driver_file": "check_acvp_executed.py",
+  "executed_driver_sha256": "7b0bffe710576220875c0a876a3142c5882ea861b6d68af2fe624b47648b5d0e",
+  "restored_legacy_driver_sha256": "4d66c2460baa28b6f0a54bf02936b640cd30125f65b1e99c837094a0bac8e0e0",
+  "matches_frozen_legacy_hash": true
+}

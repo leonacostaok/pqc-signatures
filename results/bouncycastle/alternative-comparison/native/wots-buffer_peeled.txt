@@ -1,0 +1,8 @@
+ORIGIN org.bouncycastle.crypto.signers.slhdsa.WotsPlus /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/build/wots-alternatives/buffer_peeled-classes
+ORIGIN org.bouncycastle.crypto.signers.slhdsa.ADRS /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/build/wots-alternatives/buffer_peeled-classes
+ORIGIN org.bouncycastle.crypto.signers.slhdsa.SLHDSAEngine /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/build/wots-alternatives/buffer_peeled-classes
+TEST org.bouncycastle.pqc.crypto.test.SLHDSATest#testSigVerSingleFile count=1 ignored=0 failures=0
+TEST org.bouncycastle.pqc.crypto.test.SLHDSATest#testSigVer count=1 ignored=0 failures=0
+TEST org.bouncycastle.pqc.crypto.test.SLHDSATest#testComponentLengthChecks count=1 ignored=0 failures=0
+TEST org.bouncycastle.pqc.crypto.test.SLHDSATest#testUninitialisedSignerThrowsIllegalStateException count=1 ignored=0 failures=0
+PASS native methods=4

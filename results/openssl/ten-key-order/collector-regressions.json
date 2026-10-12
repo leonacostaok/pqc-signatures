@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "collector_sha256": "c424d4878702d6eaa93aacc8f0bba9c10f302ed248340065566357e43faeb8b7",
+  "checks": [
+    "valid completion accepted",
+    "infinite timing rejected",
+    "changed raw output rejected",
+    "changed manifest rejected"
+  ]
+}

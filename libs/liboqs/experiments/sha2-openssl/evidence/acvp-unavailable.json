@@ -1,0 +1,13 @@
+{
+  "status": "not_run",
+  "upstream_harness_built": true,
+  "attempted_sources": [
+    "https://raw.githubusercontent.com/usnistgov/ACVP-Server/refs/tags/v1.1.0.42/gen-val/json-files/SLH-DSA-keyGen-FIPS205/internalProjection.json",
+    "https://raw.githubusercontent.com/usnistgov/ACVP-Server/refs/tags/v1.1.0.42/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+    "https://raw.githubusercontent.com/usnistgov/ACVP-Server/refs/tags/v1.1.0.42/gen-val/json-files/SLH-DSA-sigVer-FIPS205/internalProjection.json"
+  ],
+  "urllib_error": "URLError: [Errno 8] nodename nor servname provided, or not known",
+  "curl_error": "curl (28): Resolving timed out after 10005 milliseconds",
+  "dependency_setup": "pytest/requests installation stopped after files.pythonhosted.org DNS retries; no pytest suite was executed",
+  "follow_up": "Run check_acvp.py after retrieving the three vector documents and recording SHA256 hashes in acvp-vectors.json."
+}

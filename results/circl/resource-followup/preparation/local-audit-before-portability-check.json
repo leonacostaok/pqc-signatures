@@ -1,0 +1,16 @@
+{
+  "schema": "circl-resource-followup-portable-audit-v1",
+  "passed": true,
+  "source_archive_sha256": "d77be932330100fc0f0e76c7babe714e5473422f8b48d1734e1ab7b6dc5ec0d8",
+  "source_entries_verified": 1287,
+  "execution_sha256": {
+    "baseline": "fde2d473c91e651421345ea4402e5a8f921c5ae2a469ade21a031b32841f0e90",
+    "resource": "e1caaf57df078321a0965fe94ee46c4ae4f6abf2da613ba6143647fc402fa0bd"
+  },
+  "processes": 315,
+  "checked_calls": 267555,
+  "complete_declared_cells_and_balanced_orders": true,
+  "all_raw_hashes_and_output_digests_verified": true,
+  "requires_original_build_directories": false,
+  "limitation": "Verifies archived selected source files/binaries and their bindings, not a new compiler rebuild or independent cryptographic implementation."
+}

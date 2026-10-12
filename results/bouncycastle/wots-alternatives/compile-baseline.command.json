@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/javac",
+    "-J-XX:ActiveProcessorCount=2",
+    "--release",
+    "8",
+    "-cp",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/build/wots-alternatives/baseline-classes",
+    "-sourcepath",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/results/bouncycastle/wots-alternatives/preparation/baseline",
+    "-d",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/build/wots-alternatives/baseline-classes",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/results/bouncycastle/wots-alternatives/preparation/baseline/WotsPlus.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/results/bouncycastle/wots-alternatives/preparation/baseline/SLHDSAEngine.java"
+  ],
+  "started_at": "2026-10-12T07:58:24.790194+00:00"
+}

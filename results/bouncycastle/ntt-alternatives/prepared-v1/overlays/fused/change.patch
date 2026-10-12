@@ -1,0 +1,28 @@
+--- a/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/Ntt.java
++++ b/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/Ntt.java
+@@ -66,7 +66,7 @@
+         final int f = 41978; // (mont^2)/256
+ 
+         k = 256;
+-        for (len = 1; len < MLDSAEngine.DilithiumN; len <<= 1)
++        for (len = 1; len < 128; len <<= 1)
+         {
+             for (start = 0; start < MLDSAEngine.DilithiumN; start = j + len)
+             {
+@@ -81,9 +81,14 @@
+             }
+         }
+ 
+-        for (j = 0; j < MLDSAEngine.DilithiumN; ++j)
++        // Combine the last twiddle with f: MontgomeryReduce(f * -25847) = 3975713.
++        // Inputs satisfy |x| < q. The last sum/difference is below 256*q < 2^31;
++        // outputs remain in (-q, q), though their signed representatives may differ.
++        for (j = 0; j < 128; ++j)
+         {
+-            out[j] = Reduce.montgomeryReduce((long)((long)f * (long)out[j]));
++            int a = out[j], b = out[j + 128];
++            out[j] = Reduce.montgomeryReduce(41978L * (a + b));
++            out[j + 128] = Reduce.montgomeryReduce(3975713L * (a - b));
+         }
+     }
+ }

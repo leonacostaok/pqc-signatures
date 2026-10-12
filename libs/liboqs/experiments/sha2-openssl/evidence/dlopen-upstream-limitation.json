@@ -1,0 +1,29 @@
+[
+  {
+    "command": [
+      "cmake",
+      "-S",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs",
+      "-B",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/baseline-dlopen",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DOQS_MINIMAL_BUILD=SIG_slh_dsa_pure_sha2_128f",
+      "-DOQS_DLOPEN_OPENSSL=ON",
+      "-DOPENSSL_ROOT_DIR=/opt/homebrew/opt/openssl@3"
+    ],
+    "returncode": 0,
+    "log": "baseline-dlopen-0.log"
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/baseline-dlopen",
+      "--target",
+      "oqs-internal",
+      "-j2"
+    ],
+    "returncode": 2,
+    "log": "baseline-dlopen-1.log"
+  }
+]

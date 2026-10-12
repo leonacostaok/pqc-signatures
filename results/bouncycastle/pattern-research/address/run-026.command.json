@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java",
+    "-Xmx512m",
+    "-XX:ActiveProcessorCount=2",
+    "-cp",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/libs/bouncycastle/build/pattern-research/candidate-driver:/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/libs/bouncycastle/build/pattern-research/candidate-classes",
+    "org.bouncycastle.crypto.signers.slhdsa.SlhDeepProbe",
+    "allocation",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-pattern-research/results/bouncycastle/pattern-research/address/preparation/fixtures.tsv",
+    "sha2_128f",
+    "candidate",
+    "keygen.total",
+    "1",
+    "2",
+    "100",
+    "40"
+  ],
+  "started_at": "2026-10-12T07:43:19.195902+00:00"
+}

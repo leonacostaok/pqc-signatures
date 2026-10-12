@@ -1,0 +1,2905 @@
+{
+  "all_round_ratios_and_key_losses_retained": true,
+  "allocation": "separate JVM cohort; allocated bytes on calling thread, no inference about GC or peak/live memory",
+  "audit_sha256": "4c5047f4ba8b41c6000bdea5d928abdfdf853fb43fbb9dfca8b4b506547f0105",
+  "environment_limitation": "Root observed fseventsd at approximately 80% CPU before collection; controlled jobs are exclusive but the host is not reserved.",
+  "java_version_log": "openjdk version \"25.0.4.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS, mixed mode, sharing)\n",
+  "jobs": [
+    {
+      "index": 0,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 1,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 2,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 3,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 4,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 5,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 6,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 7,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 8,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 9,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 10,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 11,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 12,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 13,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 14,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 15,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 16,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 17,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 18,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 19,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 20,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 21,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 22,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 23,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 24,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 25,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 26,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 27,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 28,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 29,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 30,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 31,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 32,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 33,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 34,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 35,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 36,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 37,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 38,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 39,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 40,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 41,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 42,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 43,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 44,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 45,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 46,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 47,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 48,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 49,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 50,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 51,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 52,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 53,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 54,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 55,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 56,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 57,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 58,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 59,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 60,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 61,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 62,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 63,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 64,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 65,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 66,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 67,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 68,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 69,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 70,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 71,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 72,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 73,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 74,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 75,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 76,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 77,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 78,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 79,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 80,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 81,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 82,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 83,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 84,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 85,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 86,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 87,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 88,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 89,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 90,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 91,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 92,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 93,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 94,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 95,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 96,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 97,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 98,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 99,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 100,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 101,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 102,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 103,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 104,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 105,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 106,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 107,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 108,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 109,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 110,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 111,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 112,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 113,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 114,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 115,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 116,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 117,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 118,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 119,
+      "mode": "timing",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 120,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 121,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 122,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 123,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 124,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 125,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 126,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 127,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 128,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 129,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 130,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 131,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 132,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 133,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 134,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 135,
+      "mode": "timing",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 136,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 137,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 138,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 139,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 140,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 141,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 142,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 143,
+      "mode": "timing",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 144,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 145,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 146,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 147,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 148,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 149,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 150,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 151,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 152,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 153,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 154,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 155,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 156,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 157,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 158,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 159,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 160,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 161,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 162,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 163,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 164,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 165,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 166,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 167,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 168,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 169,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 170,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 171,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 172,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 173,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 174,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 175,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_87",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 176,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 177,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 178,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 179,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 180,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 181,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 182,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 183,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 184,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 185,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 186,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 187,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 188,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 189,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 190,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 191,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 192,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 193,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 194,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 195,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 196,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 197,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 198,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 199,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_65",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 200,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 201,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 202,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 203,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 204,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 205,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 206,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 207,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 208,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "lazy"
+    },
+    {
+      "index": 209,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "combined"
+    },
+    {
+      "index": 210,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "baseline"
+    },
+    {
+      "index": 211,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 0,
+      "shuffle_seed": 421000,
+      "variant": "stream"
+    },
+    {
+      "index": 212,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "stream"
+    },
+    {
+      "index": 213,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "baseline"
+    },
+    {
+      "index": 214,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "combined"
+    },
+    {
+      "index": 215,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 0,
+      "parameter": "ml_dsa_44",
+      "round": 1,
+      "shuffle_seed": 421001,
+      "variant": "lazy"
+    },
+    {
+      "index": 216,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 217,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 218,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 219,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 220,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 221,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 222,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 223,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 224,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 225,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 226,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 227,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 228,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 229,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 230,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 231,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 232,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 233,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 234,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 235,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 236,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 237,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 238,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 239,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 240,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 241,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 242,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 243,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 244,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 245,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 246,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 247,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 248,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 249,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 250,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 251,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 252,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 253,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 254,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 255,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 256,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 257,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 258,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 259,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 260,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 261,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 262,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 263,
+      "mode": "allocation",
+      "operation": "verify",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 264,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 265,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 266,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 267,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 268,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 269,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 270,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 271,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_87",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 272,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 273,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 274,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 275,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 276,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 277,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    },
+    {
+      "index": 278,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 279,
+      "mode": "allocation",
+      "operation": "keygen",
+      "pair": 1,
+      "parameter": "ml_dsa_44",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 280,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "lazy"
+    },
+    {
+      "index": 281,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "combined"
+    },
+    {
+      "index": 282,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "baseline"
+    },
+    {
+      "index": 283,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 2,
+      "shuffle_seed": 421002,
+      "variant": "stream"
+    },
+    {
+      "index": 284,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "stream"
+    },
+    {
+      "index": 285,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "baseline"
+    },
+    {
+      "index": 286,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "combined"
+    },
+    {
+      "index": 287,
+      "mode": "allocation",
+      "operation": "sign",
+      "pair": 1,
+      "parameter": "ml_dsa_65",
+      "round": 3,
+      "shuffle_seed": 421003,
+      "variant": "lazy"
+    }
+  ],
+  "jvm_flags": [
+    "-Xms512m",
+    "-Xmx512m",
+    "-XX:ActiveProcessorCount=2"
+  ],
+  "measured_distinct_keys_per_batch": 128,
+  "platform": "macOS-26.2-arm64-arm-64bit",
+  "prepared_sha256": "205a29cd5dcee49f238f73b27709edf48a3429b07f2be32b403a8df63159b988",
+  "primary_ratio": "sum baseline / sum variant over all four rounds, wall and calling-thread CPU separately",
+  "repetitions_per_measured_key": 1,
+  "runner_sha256": "4271b2dde7f73e8417038a4645d64933bbfa994260fa8713033e88ec2c528cf0",
+  "schema": "bc-matrix-plan-v1",
+  "scope": "fresh public API generator or signer init/update/operation; predecoded key objects, caller copies and keygen result encoding outside measurement",
+  "sealed_at": "2026-10-12T08:09:16.723169+00:00",
+  "warmup_calls": 1000,
+  "warmup_distinct_keys": 2
+}

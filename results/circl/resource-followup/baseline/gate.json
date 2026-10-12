@@ -1,0 +1,600 @@
+{
+  "manifest_sha256": "3ab524da771b3fd959ef2e02e8ce0e2e170d3ea0132f44225b89c1a911c0e875",
+  "passed": true,
+  "records": [
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-128f.json",
+        "-param",
+        "SLH-DSA-SHA2-128f",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-128f-baseline-default.json",
+      "sha256": "68dae9ef8904f1741fc3512cc80316cd1add637dec4142e1499ecffed2542dc6"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "baseline",
+      "settings": "constrained",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-128f.json",
+        "-param",
+        "SLH-DSA-SHA2-128f",
+        "-mode",
+        "check",
+        "-settings",
+        "constrained"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-128f-baseline-constrained.json",
+      "sha256": "59c7631c33521210a94a9fb031d1824220b379b223f3a3fc7aaee19031cb21cb"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "candidate",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/candidate/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-128f.json",
+        "-param",
+        "SLH-DSA-SHA2-128f",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-128f-candidate-default.json",
+      "sha256": "1c68dfeece78f343565bf97627801e8c2cf4a1ffeb19945c24e27715c6a0eb0a"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "candidate",
+      "settings": "constrained",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/candidate/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-128f.json",
+        "-param",
+        "SLH-DSA-SHA2-128f",
+        "-mode",
+        "check",
+        "-settings",
+        "constrained"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-128f-candidate-constrained.json",
+      "sha256": "8e7842a32d0782a0d78d996b997926c1045d3bc0283226aa5dc21d19e90be7fa"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-128s.json",
+        "-param",
+        "SLH-DSA-SHA2-128s",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-128s-baseline-default.json",
+      "sha256": "73b2f3b08c1e8e2c83aace61ccd0abfc93d60fad145d0874d3055c1e0ddf3bbf"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "variant": "baseline",
+      "settings": "constrained",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-128s.json",
+        "-param",
+        "SLH-DSA-SHA2-128s",
+        "-mode",
+        "check",
+        "-settings",
+        "constrained"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-128s-baseline-constrained.json",
+      "sha256": "9da9225a48cf2d0e613c5d7d92744dcec8a04cd37485b5d14c52ce4989fff50d"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "variant": "candidate",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/candidate/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-128s.json",
+        "-param",
+        "SLH-DSA-SHA2-128s",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-128s-candidate-default.json",
+      "sha256": "c7db1fc1ce9d4d0d44c1a5f0b0e3039117b12dca698e0e19f957f727734c962d"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "variant": "candidate",
+      "settings": "constrained",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/candidate/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-128s.json",
+        "-param",
+        "SLH-DSA-SHA2-128s",
+        "-mode",
+        "check",
+        "-settings",
+        "constrained"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-128s-candidate-constrained.json",
+      "sha256": "751f2aa6eea31d06350024dc22dfc8e5148501e18a14a22205fa5ca3135a84f2"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-192f.json",
+        "-param",
+        "SLH-DSA-SHA2-192f",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-192f-baseline-default.json",
+      "sha256": "8a8dbb41d0823975d69c956537eb086d9037c9d88dd8459a637b307f23b75832"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "variant": "baseline",
+      "settings": "constrained",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-192f.json",
+        "-param",
+        "SLH-DSA-SHA2-192f",
+        "-mode",
+        "check",
+        "-settings",
+        "constrained"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-192f-baseline-constrained.json",
+      "sha256": "2f981c06b9ca1675e02327915f5773ecbcacd67516ae6986ddc407e9d8daf7ea"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "variant": "candidate",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/candidate/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-192f.json",
+        "-param",
+        "SLH-DSA-SHA2-192f",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-192f-candidate-default.json",
+      "sha256": "aeca035c01e193eef85b477c7d497eb1905214958ff555bf0f834500dcc30476"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "variant": "candidate",
+      "settings": "constrained",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/candidate/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-192f.json",
+        "-param",
+        "SLH-DSA-SHA2-192f",
+        "-mode",
+        "check",
+        "-settings",
+        "constrained"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-192f-candidate-constrained.json",
+      "sha256": "f1ae83045f52ba57daf50d29bb72a8e491151b08022cb97d5a40249ab7174cbb"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-192s.json",
+        "-param",
+        "SLH-DSA-SHA2-192s",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-192s-baseline-default.json",
+      "sha256": "4a73d9476b420edd5acb46c219afa9fe90ee8d4f6e3bd7eccbd74c242d8f7c67"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "variant": "baseline",
+      "settings": "constrained",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-192s.json",
+        "-param",
+        "SLH-DSA-SHA2-192s",
+        "-mode",
+        "check",
+        "-settings",
+        "constrained"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-192s-baseline-constrained.json",
+      "sha256": "491ce18bdd24fb1860becc7ce90e74184a20bf02747aae03a29282a312b6b57a"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "variant": "candidate",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/candidate/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-192s.json",
+        "-param",
+        "SLH-DSA-SHA2-192s",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-192s-candidate-default.json",
+      "sha256": "a6b63b475af3e9052104b1e4f3d1a3a9757df6c2676ed093c2f9b73691f2c22c"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "variant": "candidate",
+      "settings": "constrained",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/candidate/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-192s.json",
+        "-param",
+        "SLH-DSA-SHA2-192s",
+        "-mode",
+        "check",
+        "-settings",
+        "constrained"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-192s-candidate-constrained.json",
+      "sha256": "734bcc6757d203d5522a074fe6dffac4ab831dc64f9de688e5d29fb200862f28"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-256f.json",
+        "-param",
+        "SLH-DSA-SHA2-256f",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-256f-baseline-default.json",
+      "sha256": "8821ea1357825af239a1a4b97f7ae354fa68517ed0ea38eeb057e38f81f27b59"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "variant": "baseline",
+      "settings": "constrained",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-256f.json",
+        "-param",
+        "SLH-DSA-SHA2-256f",
+        "-mode",
+        "check",
+        "-settings",
+        "constrained"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-256f-baseline-constrained.json",
+      "sha256": "80d5da6bc78c4479d9c89ba6a3d8e69e6684fce758b1ba6ed382005d4fbc80e4"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "variant": "candidate",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/candidate/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-256f.json",
+        "-param",
+        "SLH-DSA-SHA2-256f",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-256f-candidate-default.json",
+      "sha256": "727d0af5c3873ca715cb1c3b2f8ba753ecaacc220eca24401403d3721173e00a"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "variant": "candidate",
+      "settings": "constrained",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/candidate/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-256f.json",
+        "-param",
+        "SLH-DSA-SHA2-256f",
+        "-mode",
+        "check",
+        "-settings",
+        "constrained"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-256f-candidate-constrained.json",
+      "sha256": "16b71de30a76de94197fb183ec78927da5861dc0eb8a80d3f088d3ff584cccb6"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-256s.json",
+        "-param",
+        "SLH-DSA-SHA2-256s",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-256s-baseline-default.json",
+      "sha256": "0120c75eb10e195281f5e2f8fdb77e594bfcbf89280f5eef68ea7ecf69d6dd2c"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "variant": "baseline",
+      "settings": "constrained",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-256s.json",
+        "-param",
+        "SLH-DSA-SHA2-256s",
+        "-mode",
+        "check",
+        "-settings",
+        "constrained"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-256s-baseline-constrained.json",
+      "sha256": "ddcc17df5d4b610f0b045b4bee3b26ae9d2d943310b054ecc329577ccbcce58d"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "variant": "candidate",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/candidate/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-256s.json",
+        "-param",
+        "SLH-DSA-SHA2-256s",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-256s-candidate-default.json",
+      "sha256": "c8cc9978e7fb5576ec14a33438c56d66f8447254ed33370ccb654393e3178aeb"
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "variant": "candidate",
+      "settings": "constrained",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/candidate/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHA2-256s.json",
+        "-param",
+        "SLH-DSA-SHA2-256s",
+        "-mode",
+        "check",
+        "-settings",
+        "constrained"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHA2-256s-candidate-constrained.json",
+      "sha256": "85aeb8dd1d017f06b1993557b3448d5da8069bcf1f6d27b0c9d90a559cad403a"
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/ML-DSA-44.json",
+        "-param",
+        "ML-DSA-44",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/ML-DSA-44-baseline-default.json",
+      "sha256": "28372a9a42b2c19f6caf966d1bea2a9414728a7e71e466bf8dbbb36e9c3e53b8"
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/ML-DSA-65.json",
+        "-param",
+        "ML-DSA-65",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/ML-DSA-65-baseline-default.json",
+      "sha256": "849eecaf8442ecb34ec462d26968353a2c4f2cbc75deaf4cc8a2967a96b7848f"
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/ML-DSA-87.json",
+        "-param",
+        "ML-DSA-87",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/ML-DSA-87-baseline-default.json",
+      "sha256": "f1456e5821fba3f608a818f9a4f743b33b73764dddcb461fef347db1651a25f9"
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHAKE-128f.json",
+        "-param",
+        "SLH-DSA-SHAKE-128f",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHAKE-128f-baseline-default.json",
+      "sha256": "f63cb57bc97fb64408626a8bddcec28abd47ce68157c6890596ac1c3b6c13b65"
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHAKE-128s.json",
+        "-param",
+        "SLH-DSA-SHAKE-128s",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHAKE-128s-baseline-default.json",
+      "sha256": "67e44ddb106c619b7e733e3ece401af6cc4e81100ec485290daedc7e9a79a59a"
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHAKE-192f.json",
+        "-param",
+        "SLH-DSA-SHAKE-192f",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHAKE-192f-baseline-default.json",
+      "sha256": "fe7643cbc0ac5181d01ac2f8e0e56b57854d0a17d3aa3a74baa665cedddcb077"
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHAKE-192s.json",
+        "-param",
+        "SLH-DSA-SHAKE-192s",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHAKE-192s-baseline-default.json",
+      "sha256": "19a9673adac6e8359388a50b6ac12a6b987fec32c0c72d76cd808ad989049443"
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHAKE-256f.json",
+        "-param",
+        "SLH-DSA-SHAKE-256f",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHAKE-256f-baseline-default.json",
+      "sha256": "dc1966f870613712e294fc2bafe5039f477f4c7f9395c6f58c3c52854b69ac91"
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "variant": "baseline",
+      "settings": "default",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/baseline/resourcefollowup",
+        "-fixture",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/SLH-DSA-SHAKE-256s.json",
+        "-param",
+        "SLH-DSA-SHAKE-256s",
+        "-mode",
+        "check",
+        "-settings",
+        "default"
+      ],
+      "raw": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/js-go-resource-followup/libs/circl/build/resource-followup/snapshot-ab94abaa46d28853/checks/SLH-DSA-SHAKE-256s-baseline-default.json",
+      "sha256": "53ce7cd770e59a43b708a1f3c52a90a51eb6848825c5d343304b1eda38bd0ee4"
+    }
+  ]
+}

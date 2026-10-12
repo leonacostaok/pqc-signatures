@@ -1,0 +1,4616 @@
+{
+  "passed": true,
+  "finished_at": "2026-10-12T08:07:57.929468+00:00",
+  "manifest_sha256": "5de31b1005d3b920cf19cd24240160615f834fc0f07affb3d6d7522dfe466f98",
+  "plan_sha256": "c4026898d92606190fa0944287d514e0bffa6c3663bdfb927f54236f92f2dc9e",
+  "runs": [
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-000.stdout.jsonl",
+      "sha256": "afd060983000d0788f3d84111e040a322b36eb689d6afe205a03458eaed91d02"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-001.stdout.jsonl",
+      "sha256": "d9bc5c47c450ab5649d5dd32d7a99b4a5432d5a57dfaf7ad08a920625cb08dad"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-002.stdout.jsonl",
+      "sha256": "46db1c0266906392cef1747e2b20874a38f36cee335d6ac69fc29e12f97d875e"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-003.stdout.jsonl",
+      "sha256": "efe551db196a3b89bc8d2532ceddf72a8e6802093a14df57db66b94a43af1047"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-004.stdout.jsonl",
+      "sha256": "32f71fd913828c08bab7470a2802b5c94090faf648ce68ede2274f6666fa1bbc"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-005.stdout.jsonl",
+      "sha256": "80f12fa9f93421423e9fea873192ccfad9d966e5a4d56cd34d5c3a3c00630c51"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-006.stdout.jsonl",
+      "sha256": "1549c4ec9e4a3a0969b86c990d7d5b1bbafb5eaf6cd257798c9f48b02616ebc8"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-007.stdout.jsonl",
+      "sha256": "0cbf31323a1d9a62aae652ce349dbd3fd42996be5e2ab9a5425f1299a00ca42a"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-008.stdout.jsonl",
+      "sha256": "66791378a0ac33bc84653b5e16c1253f6defae155002306e8e992245fa40f43b"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-009.stdout.jsonl",
+      "sha256": "6bc300b5a340b28a0aa4c123b33a74f7c02549627418e444099ba74ebc7b9e37"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-010.stdout.jsonl",
+      "sha256": "a314157928d67b08f61bec795efa8d3d29d58e4b62aca25ece3f09ad1d55e4db"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-011.stdout.jsonl",
+      "sha256": "9f1554c18c89b1835d0be12e50ea9dc2e8b69a7a02c82ded935431106102abc2"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-012.stdout.jsonl",
+      "sha256": "2d4557458b29bb8fee71d4a8b338990067d8b18bae1cd15327e11ef0cd7c7733"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-013.stdout.jsonl",
+      "sha256": "154b7f23fcf44a709189df5cb23840965eda52dd62227a17f64cb6afeb69f9b5"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-014.stdout.jsonl",
+      "sha256": "07a2f2b2ebef9226239db5e5fc5b9f9de1fa768313bb2dd5af3314e61035c8fa"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-015.stdout.jsonl",
+      "sha256": "16a95b3adecad99ce999c2409b81fff9f010ed74318054e81bf8583570f6668e"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-016.stdout.jsonl",
+      "sha256": "236e4eb2a44837bf959d62864211b1a1c50ff446ff8319b2adaea5851ef30d82"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-017.stdout.jsonl",
+      "sha256": "329a4d2f871c7efcf4d4a560121e9ca3e183ef7eea96931d810d23bd8d85e7b6"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-018.stdout.jsonl",
+      "sha256": "c9e09517fc69e743b24031e9c7c1d20749d631dd4fc17f9f2d2b2c49a61731ab"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-019.stdout.jsonl",
+      "sha256": "f6267f80c84e9773aa65534ae77e262b113b664778afc147bd1e41d04a27f98c"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-020.stdout.jsonl",
+      "sha256": "9dee5e13e144a77c67fb95430ff9b5e2367a91ed0114725325e94426f63dc83f"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-021.stdout.jsonl",
+      "sha256": "3c1a918b01f30521e4f1b574cfc6c2c8aa7256e4dec4c2983222c0a6b25a37a2"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-022.stdout.jsonl",
+      "sha256": "eab0ceae0c590eac203db22b75e761fdc8ce24217c71aca67ef19c13d14b60d3"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-023.stdout.jsonl",
+      "sha256": "2db261751a379caafce7f29cd195312a2346ae872c9f3db8036231dadb48101d"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-024.stdout.jsonl",
+      "sha256": "18e3b0ed65cec2b0a593021ac86c4024c104997872db2e780ba1c912746dc8de"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-025.stdout.jsonl",
+      "sha256": "857c71871b522a67225d5038a986f8d86961c4fa16136bc35d3f0d7a4b0aa661"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-026.stdout.jsonl",
+      "sha256": "8194c9d2bd05bf6ac21f302e4a2d71e05d272344e31e319fd82d5287e70c144d"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-027.stdout.jsonl",
+      "sha256": "c314bd997a5b021ea0c2d9bcba2d8b854762e61a7e7762c66e2aa3928f0a6c24"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-028.stdout.jsonl",
+      "sha256": "d7265c2d9525ef77ae47e35990e1e78132786fb00f0b57c47431aaa90ca24c4b"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-029.stdout.jsonl",
+      "sha256": "2a9faafd541281a089b44b3a909bd6ccee6174fd3e6392201128a703f64c85cc"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-030.stdout.jsonl",
+      "sha256": "f7c79f78f10e8a8222b932628a8ddada482451c2f72da9c6575f3504e13c3a7e"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-031.stdout.jsonl",
+      "sha256": "0a644b2f0c67617ec24bdbde8dc932e2ace60d22be89ded14495a9252184afd9"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-032.stdout.jsonl",
+      "sha256": "e72c8d6d661bea01a2483171de7407d6e49fcd62625f618dffa6efb5f3f33f6d"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-033.stdout.jsonl",
+      "sha256": "bac7148fd31da50dee093975f4d5a0b75683795364b0ca148f17ad56723a8451"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-034.stdout.jsonl",
+      "sha256": "24b27664a9d3fa55ee95231e2f33000b02a3d210aa6e1d54204f1b8ace5243d4"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-035.stdout.jsonl",
+      "sha256": "83998ae8a78db509c72aadf59773fa19dc6b02c60fa5f0759b2fe21b1943bdbe"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-036.stdout.jsonl",
+      "sha256": "ed97741ddc81de1d9cb5180362a72a46a626e5a58a5efdeb90ffbd8dfcf24207"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-037.stdout.jsonl",
+      "sha256": "58ed8a6e19e690c495600bccf8bd42ae9e2a9dc68f4fe6ccd78592ff4e70160c"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-038.stdout.jsonl",
+      "sha256": "1ecbae9f6f0a3985ab427e34b126fba2c3d92d1b9f9add826746e47bb4c45be0"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-039.stdout.jsonl",
+      "sha256": "837e6d59d180699b068a157051c7fe2854d5e414f4a97d4e3c03e5d509a4b5f6"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-040.stdout.jsonl",
+      "sha256": "a7805b30ae3fb3dd0138585b6d1db69f6b9c19d81e7051969835f35d7decba36"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-041.stdout.jsonl",
+      "sha256": "1165f52fe34ca2ed21be80cef84f53d29c88d8562a62740cca1176f86f4e2718"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-042.stdout.jsonl",
+      "sha256": "ee8ffa741da68dd4f27d4f7fba99f8a6811498c44b48966ab584c7193eed0f50"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-043.stdout.jsonl",
+      "sha256": "32a2dc08ec8e516869ba5adc731231faf09eff992241a4d86bc640d843b7f48d"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-044.stdout.jsonl",
+      "sha256": "9ac5dd315495cfeb13313c0c63e5c03b6030ac17a4d59fe2031c863cae7dc8c1"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-045.stdout.jsonl",
+      "sha256": "1cddc468febdc8bbdc871787a4570a816e5b6d36adc0132411a0421ee6355d1d"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-046.stdout.jsonl",
+      "sha256": "a079241db4c0420126d5659f0972a5b01de5db774fe853619716218f1803b38b"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-047.stdout.jsonl",
+      "sha256": "5f5beedd598df5ab26df3b7aeee31734945de43b45acb3e85e5b10321364c701"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-048.stdout.jsonl",
+      "sha256": "afba94b74cfb11dd0f2a5d149ae14ed050f5b6a1b57fe48d1e7c53d7af4c3e65"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-049.stdout.jsonl",
+      "sha256": "3f7b6662fda20e60892520463453c6c0a703f6fda9c16d74d2dddc99e467bd77"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-050.stdout.jsonl",
+      "sha256": "1f494066d05c7fa05e31d4eb140c0646ca24d1ba125d55c965f18f5592a3d8cc"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-051.stdout.jsonl",
+      "sha256": "0a02210e8f7e1175163b08e6fee26cc4a86d6f1a6bfb638892c1c9a23a052458"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-052.stdout.jsonl",
+      "sha256": "db57d1e3cb66de15cbc5fc899884634eb5cd72cc2d23ed9a3f58e1f4605c5da0"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-053.stdout.jsonl",
+      "sha256": "3c6caaf19de541b7cfd03455ea76cd27f28755997a92d6bcafa078fb2fe16fa8"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-054.stdout.jsonl",
+      "sha256": "7176961cead51b3b99dd3118f26965abbf99c5cee02ed5f748bf2d8c07f65252"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-055.stdout.jsonl",
+      "sha256": "733fedfbff7cf13d4b4a73692f1ed09a00b6f8636a798fd3ff8451cd7aa0e261"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-056.stdout.jsonl",
+      "sha256": "b93fb55c8945b21294673927255f4e3356685125d0d02db5f35f7f22e62be4f7"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-057.stdout.jsonl",
+      "sha256": "b55b56c5cbca1599898c808c52b8e95f84844a3be88d4106d39cfcb7b725ea7e"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-058.stdout.jsonl",
+      "sha256": "37749448fd3d369435599599da3fd1bae18f122eb8a8f939a55fee51e1494c25"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-059.stdout.jsonl",
+      "sha256": "e008b7c41b6e07c24176f5c3da9ef9a7192f91ebec404b56257c82e8ef0293d2"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-060.stdout.jsonl",
+      "sha256": "2e620b1eb49478b44401391b0df627d52e12838d3685937cbf1390bf3ec33c0a"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-061.stdout.jsonl",
+      "sha256": "4a176cd239fb581f3f5b0b5320b7689090a5920c3c5456fa4109495f4c9378c5"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-062.stdout.jsonl",
+      "sha256": "4a48131c618b41ac42388fef134585deab528f6c03f6cf1bf8c9416c9d7e0b37"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-063.stdout.jsonl",
+      "sha256": "fae4426ccf400654994ccc07d7c8827d6845c3711bda4ff51c12c0227446d747"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-064.stdout.jsonl",
+      "sha256": "05e626ec69c6af19d28adb5c9de096c178b922294db21c3e5c3ffd9d7ca51b6d"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-065.stdout.jsonl",
+      "sha256": "19d751d9e54541811ee383fd9cc3075d506521439c90a69a22bd5e111e5df445"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-066.stdout.jsonl",
+      "sha256": "1168e409cf93d22d5149b133d1bf6afa2b0f8b6a1ad6131dc3fa7bcd29ee08bd"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-067.stdout.jsonl",
+      "sha256": "f1eab43e6d9df5f1fd1ec1f28c27d0e206f2501ddd2c6ae5bac8c44ad2d41e1b"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-068.stdout.jsonl",
+      "sha256": "2246faf782d5e1c91cb819617720d8e405b69447a1dbb49d6648f02a23f90e71"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-069.stdout.jsonl",
+      "sha256": "265fd8b710ee0875f44d40b6246c9b78c42b08be0d1ad2032ceb3d08e8f1b586"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-070.stdout.jsonl",
+      "sha256": "1fba9b5f33dce09aff985c2fccb9c2c5d8f9b4f99821b138968944e2b07dca67"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-071.stdout.jsonl",
+      "sha256": "c822036cc1edb2afbc32e0f8e1ec20bdc53e370d58ea8a59e3dc2c9ef7da43cd"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-072.stdout.jsonl",
+      "sha256": "4e9ff496b22f1fdb1011873a6f4ffaa52fb0a9a29ad29d3ad856d6535d6355d5"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-073.stdout.jsonl",
+      "sha256": "61901dfbfb94bc9cf25f25ea632d074b5f8ba3fcb8e099c2417ba7d2101f27aa"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-074.stdout.jsonl",
+      "sha256": "1d7a3608d986d648b31fdba59df440745ef7a18affc2a7a2d944220645a13f3b"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-075.stdout.jsonl",
+      "sha256": "47cb0e1c5cb48d01dd3bf57e47e4ea45eeb59e83a273ffc3e0ea0a9a94e128e9"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-076.stdout.jsonl",
+      "sha256": "38e336600feefed97044672925995b8983f6b4a29dc02edca4dae94739668d11"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-077.stdout.jsonl",
+      "sha256": "74ec28b8c6f1c68b5712e9060db913ca8dcd148aebe96dcbe1fc87a4ccd9e803"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-078.stdout.jsonl",
+      "sha256": "5656de30713b292b7227265076b576e2317964eb59b3d2d630ecf64de546d1ae"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-079.stdout.jsonl",
+      "sha256": "4363ec8e711e5a7d04c0346d2ad8ae4aeaf0c5e2d59272e67364bcad78c308e2"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-080.stdout.jsonl",
+      "sha256": "40ea1320f6239d18b28d3825f9c0fe17952c48ea00d5a9711414add9ddc08413"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-081.stdout.jsonl",
+      "sha256": "be2dc820af3102e01502a3e7eb1312f77e52e46b921f5b1f74b250beeb3e60ce"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-082.stdout.jsonl",
+      "sha256": "4060c1eec886338b1d9c3790fd6061e17279c3536bca20fcdbe86cd626bec61c"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-083.stdout.jsonl",
+      "sha256": "1f3de42743c431a998fbc1afa94cf949140fd3962070903851d20c441b0940e0"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-084.stdout.jsonl",
+      "sha256": "cb869b2fe2574093428d6214079417847644ec2059f9de87540da864adb3690a"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-085.stdout.jsonl",
+      "sha256": "9c8979e957152790398baf9824ca8567531165ff868801d5e7c7be5f18409cbf"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-086.stdout.jsonl",
+      "sha256": "f69298c27e85c731f11f04039058fff82803845b860fa978add8e44025b7e72d"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-087.stdout.jsonl",
+      "sha256": "acc7ae13a772112fde74c1f105fa7fcfdac43e3ff558a65293ed646212baacad"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-088.stdout.jsonl",
+      "sha256": "7860c06546807d7a98a582fc3c66c702ded7a699cbec241617558fea09a10b19"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-089.stdout.jsonl",
+      "sha256": "5c558f177ffb4f0507fdb55b250194319f7aa78f1599976f2e87e33d26a467ba"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-090.stdout.jsonl",
+      "sha256": "f105f31df2c52f2b1049419c79f28fef575d98dea268b270d0068f7d3185066a"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-091.stdout.jsonl",
+      "sha256": "de3a4137463e9bea0195cd35134aeaa76d9d1a86553287f64f515dcdbc91e827"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-092.stdout.jsonl",
+      "sha256": "fd5d1c0ae3d46bc9901ce9894c41d53410fbb780916d12ea71ae6bcb70199b78"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-093.stdout.jsonl",
+      "sha256": "d95d3459315e74fe62fe63bd58c99fb8d944f1296dc8746536d0d613aab4eb77"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-094.stdout.jsonl",
+      "sha256": "916e6a2db10a42f2e0c6c1baeadf54375dd439ae0be3a16c1268239b2cc70ddd"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-095.stdout.jsonl",
+      "sha256": "1055e130c11cb4c45d52d3d4e8a024fddd75321c8ed3bb88b34cf02679be09c0"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-096.stdout.jsonl",
+      "sha256": "d64cbf173688a9e368a57673d250193855c0c0eb9412eac99d8438b53c231a5b"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-097.stdout.jsonl",
+      "sha256": "bce75dce964a44b9483d9a268a75ed0d1c55ec79aa145d4ec4720d4f809d1a62"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-098.stdout.jsonl",
+      "sha256": "39f7158de2ffb8354e294b6dd49abbd61c78198f8c1013acb68fdb73d8a8b679"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-099.stdout.jsonl",
+      "sha256": "30c3228f82eabfb170e85a94a5f299cb2f7064ac8125fce748588f806df489b9"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-100.stdout.jsonl",
+      "sha256": "7dbb772f7d299741126954432fa38460b3e7cbc35d95e09e40d10764d4503912"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-101.stdout.jsonl",
+      "sha256": "6aea75720bc191f6d071738beba25a73ca5611d3353d0b8010b0d4891b797250"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-102.stdout.jsonl",
+      "sha256": "9c00c1d625462cdfc77c6b16900a8dc460dac5d299928da84bd3d0b81c6da649"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-103.stdout.jsonl",
+      "sha256": "3d6707bbad9db669ab7365154fb16863591ecf568573dda7a95e1d4e36ce8ccf"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-104.stdout.jsonl",
+      "sha256": "f55644d90d558f673a3a559ea16f0b97446ac4f2e38db6ed0645f4293b1f9df8"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-105.stdout.jsonl",
+      "sha256": "fbd00ba914df9a084fc2650df1a85a7ac5291c79b6b48196d218f8c441ec9cd6"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-106.stdout.jsonl",
+      "sha256": "fc251cc6b49b541b42883a051222ba60366af3b2317a5cabc64b189a5d038c89"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-107.stdout.jsonl",
+      "sha256": "701a92b5c8d3ad03b3c58ab87c1e63b05ff5ab51c1c4b0f52986c62d1af74102"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-108.stdout.jsonl",
+      "sha256": "4e0def605bf2374504faf640d0f84024bb1b0fec9953291a509a63f8928c2018"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-109.stdout.jsonl",
+      "sha256": "cc9dc244a60cdb64e740328fb771e40ea6914797a5afaeb90b01abbe541ba849"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-110.stdout.jsonl",
+      "sha256": "b66de9a301f5e7d9eeda4a677ca336e048e4a99bc439e86fe3cff45766e77402"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-111.stdout.jsonl",
+      "sha256": "cbb2217c8d08139061633aec9388d19f1e438b85100a29129e6e925b3e18f663"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-112.stdout.jsonl",
+      "sha256": "e484b1659a2655fc15a205503621de71fe0621a4f3b9758f91b1ed6cdd0b65f7"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-113.stdout.jsonl",
+      "sha256": "32150a1860b22cb7af2fdfcc9b102c69086f5af208ad52be86da707d5031a1f1"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-114.stdout.jsonl",
+      "sha256": "b29feb0b952ef77cb517e95dd3fa5bbd5b35bc0580149b3109525cefae9c9679"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-115.stdout.jsonl",
+      "sha256": "1fd2c9673a6aa5d8bc7a4d9aca4fdfd09ab21cd1880f5a75ff8ca8d85f1d1808"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-116.stdout.jsonl",
+      "sha256": "6b49c0e0def8692aef16bf711122316d03402a539e97c61bfc0ec5acedcb1ca1"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-117.stdout.jsonl",
+      "sha256": "c0d004c43ad31baa5495cda92246b2357ef6dd0e129a70090a7421d16a692318"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-118.stdout.jsonl",
+      "sha256": "866ab548bfd7e55c2c6977d9ef46c04d751dc25915c896b56b69028e2fae69ca"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-119.stdout.jsonl",
+      "sha256": "6631b3d87d21c5ed896541802c079f7bbe8e11d8f50119297a8c03b5120a151e"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-120.stdout.jsonl",
+      "sha256": "621a5f1cba893d7ff0dfddd443182d8d63a305bd8e63310529aa181bc5d86687"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-121.stdout.jsonl",
+      "sha256": "f671946d262b5cd909e303be75f2df40e10aa92859d6944a6918a93c2e690f76"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-122.stdout.jsonl",
+      "sha256": "6de245e56ca242df5b3e2fea393a0fd609cb8555ee3a7b1fd36fcf3c9888c413"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-123.stdout.jsonl",
+      "sha256": "039b1f04068a6ccb8d10573096e4be643b8000f1b7e66dbcd534df41920e33c8"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-124.stdout.jsonl",
+      "sha256": "8e0f70143d08fa526c1d19fcb4d574044b9c45874a5903a64a998ad10de0131f"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-125.stdout.jsonl",
+      "sha256": "0903f569746f4962727eec8be88ee6a2280630a86889e8b168211d4df00b946b"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-126.stdout.jsonl",
+      "sha256": "4bd0fb97681a560e1d680b47ae1795704e76c1a955a645c6295bf6aed6d5f334"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-127.stdout.jsonl",
+      "sha256": "b735e83c568889b2f10cdf5fe23829af5cda0ba7fc6aa0ae58c1264223f84d33"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-128.stdout.jsonl",
+      "sha256": "ddbd144844573b7b2a122ca98847c063fc1408497a78aa63f8bccde5b155089f"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-129.stdout.jsonl",
+      "sha256": "b70d13cc9f7c64dcc96cd05395aabe298eec3497b614c93a1c0c32c17d49a1c7"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-130.stdout.jsonl",
+      "sha256": "0d5fe042d9fef18ac80200906f2d75123193670b8c093c5b26c238ee22b4eda8"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-131.stdout.jsonl",
+      "sha256": "af27b6b6c4d0f0e49596defc320eabd8b8d3d75aea42e3d439d774c8f82dca8f"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-132.stdout.jsonl",
+      "sha256": "e17e92d89c52a9355f247530be01ee8147e2215ba6eacead907abe4b4ec40adb"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-133.stdout.jsonl",
+      "sha256": "e3044c8601b0c5a439125b9cc84338a99e0081b48772103a26dbc9c796d338e0"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-134.stdout.jsonl",
+      "sha256": "f076362a4ce3b47494acff98df44ca83551d5ee1f563b00f80466d2b34dea4f3"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-135.stdout.jsonl",
+      "sha256": "99219d74d833c4839acaf6a7923b7ada02e8bd8604838164b2eec6707495a123"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-136.stdout.jsonl",
+      "sha256": "abc5a9fe5ee9b0f0019239037169062f5c3dc2aacd910c51acdc8cd826ed3b43"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-137.stdout.jsonl",
+      "sha256": "352f49943253939b458013c0ed5a3c35cc1def1e2a19b877ce95d65fc8940cb1"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-138.stdout.jsonl",
+      "sha256": "f69abec08be98c1367e9e8340ec5824118fa3b5b43f6b6f96772559ea470d429"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-139.stdout.jsonl",
+      "sha256": "cdb0d272acf0572206f0cc4f6419a31cfe33f684831d1e8251032a3447a678e6"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-140.stdout.jsonl",
+      "sha256": "a358b2f4aeadbd4474d586a5c90b57b89372f53a39ec12228fa063e70289caf2"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-141.stdout.jsonl",
+      "sha256": "8ddacdcfdb7afdd13ed5f07aad014e2a90412e0720a9cb88c596bb44797ad33e"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-142.stdout.jsonl",
+      "sha256": "efd135fbdc6cc02e4b422f40fa465634a78b51aa04d7a628578a2d197217a03a"
+    },
+    {
+      "job": {
+        "mode": "bench",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-143.stdout.jsonl",
+      "sha256": "af210a1759fdec028e7259802adf998d5f1f88e5e68b9d5a89e4a6ed040cf891"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-144.stdout.jsonl",
+      "sha256": "df5171b5b1077143f8294f11e87314bb9bc28587a8ed385e2343254a08beaf8b"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-145.stdout.jsonl",
+      "sha256": "568f356a46ecaf2659522f4760630657bad6cbc011f29e21cf9d95c2a3757eee"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-146.stdout.jsonl",
+      "sha256": "17654a7e6b3d9f22f7d5cbe6d2ec38bfecfaf4f4a768b90546d2680cd15035cb"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-147.stdout.jsonl",
+      "sha256": "f05ba14cdda0a6225556fc44318d6a8a475c0ef8b7ba7e8faae0f672da726268"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-148.stdout.jsonl",
+      "sha256": "df5171b5b1077143f8294f11e87314bb9bc28587a8ed385e2343254a08beaf8b"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-149.stdout.jsonl",
+      "sha256": "1e42571ceced4f68e90f91ac2c519d9aa47f4e4b62fef31b20f0fb43e9d722ff"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-150.stdout.jsonl",
+      "sha256": "be69ba516f538e17c0be456ccf5c0d2fdb6b58cb34a0e9b5a8e4911f87daef4e"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-151.stdout.jsonl",
+      "sha256": "f05ba14cdda0a6225556fc44318d6a8a475c0ef8b7ba7e8faae0f672da726268"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-152.stdout.jsonl",
+      "sha256": "df5171b5b1077143f8294f11e87314bb9bc28587a8ed385e2343254a08beaf8b"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-153.stdout.jsonl",
+      "sha256": "7e90a09f383dd1d567a91eb7abaf85d2c44c565092ca09564adf7bdd2a3a669a"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-154.stdout.jsonl",
+      "sha256": "59a1b61636b6cd3fa9218960a28237fc63d03effe71d4dd772d78bc3e88d8ec6"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-155.stdout.jsonl",
+      "sha256": "f05ba14cdda0a6225556fc44318d6a8a475c0ef8b7ba7e8faae0f672da726268"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-156.stdout.jsonl",
+      "sha256": "df5171b5b1077143f8294f11e87314bb9bc28587a8ed385e2343254a08beaf8b"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-157.stdout.jsonl",
+      "sha256": "7ada4f25a7097f7f954281633acc3b83c6fd15076af2371e309cefb0b48af67b"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-158.stdout.jsonl",
+      "sha256": "594ae13e2ae77858465cfd03017426d06424828f2c09d5f065826e5ed9c2f593"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-159.stdout.jsonl",
+      "sha256": "f05ba14cdda0a6225556fc44318d6a8a475c0ef8b7ba7e8faae0f672da726268"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-160.stdout.jsonl",
+      "sha256": "9791888d9f7f33643467ce3f759ba4645559e6577c3cbb6824ea9819e79d1d62"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-161.stdout.jsonl",
+      "sha256": "d54e495fd1999427c4682b6fc64fc56209dc3c8a37633ad6dd7219da439ba6d9"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-162.stdout.jsonl",
+      "sha256": "9c6adc074df48c66a7290dbd597550a17a17a01cb1154e9f2b110ace5bf8f824"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-163.stdout.jsonl",
+      "sha256": "594ae13e2ae77858465cfd03017426d06424828f2c09d5f065826e5ed9c2f593"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-164.stdout.jsonl",
+      "sha256": "df5171b5b1077143f8294f11e87314bb9bc28587a8ed385e2343254a08beaf8b"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-165.stdout.jsonl",
+      "sha256": "d54e495fd1999427c4682b6fc64fc56209dc3c8a37633ad6dd7219da439ba6d9"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-166.stdout.jsonl",
+      "sha256": "9c6adc074df48c66a7290dbd597550a17a17a01cb1154e9f2b110ace5bf8f824"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-167.stdout.jsonl",
+      "sha256": "f05ba14cdda0a6225556fc44318d6a8a475c0ef8b7ba7e8faae0f672da726268"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-168.stdout.jsonl",
+      "sha256": "3e1cd112410ce2ebc52df0ac5dd712957a72b31a833896d311bc7135ba11d251"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-169.stdout.jsonl",
+      "sha256": "237b9d6b9a8375fdf8dda44bea56371b35884827608874eb76849dfacef97a60"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-170.stdout.jsonl",
+      "sha256": "a78efff8e204e5a1a154971c9103cfad1fa2c14d3cfc5ad9f8ef9e709b6f39c8"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-171.stdout.jsonl",
+      "sha256": "b1a7fb07190ded00f745ed9a3d4042b498223d8b426bc459deb90f566d91a9ea"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-172.stdout.jsonl",
+      "sha256": "f1d3b7f9d9e999808acf86436f9d0fd4ecff31cc6939542228aa1eec1dc6682a"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-173.stdout.jsonl",
+      "sha256": "83336f0dedb0ccf20baa8f75d22566210dfb3c608118c708ddadd045b7134e91"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-174.stdout.jsonl",
+      "sha256": "df24ff84d44679f187e7cd127e30c6dc2f0488bd78c5081ad810fbf5656fc4be"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-175.stdout.jsonl",
+      "sha256": "959cdb4da166713c8654f6964f4468cbdd30c8053776a3e0e348a843166de538"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-176.stdout.jsonl",
+      "sha256": "30acff57cd89f72b5015e9dc61a3ce609edc8efb203770f0d46d8f2380b42194"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-177.stdout.jsonl",
+      "sha256": "ad34a3a09faaf9b308485191c2988a1c422a59eeec719404bc1e02ef613f3e92"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-178.stdout.jsonl",
+      "sha256": "8d95e08dc86713828656fa9ffee56930642d264f2a0433d753dfab89b67f35c0"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-179.stdout.jsonl",
+      "sha256": "959cdb4da166713c8654f6964f4468cbdd30c8053776a3e0e348a843166de538"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-180.stdout.jsonl",
+      "sha256": "3e1cd112410ce2ebc52df0ac5dd712957a72b31a833896d311bc7135ba11d251"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-181.stdout.jsonl",
+      "sha256": "e078e24c5fef87aa2fff6f70d45010611934a28050dc0039f0705d30e90c55e7"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-182.stdout.jsonl",
+      "sha256": "64e1fa5704f97be519812e5320ece4d1bf90fdde95fab3fae3b3a35824860c11"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-183.stdout.jsonl",
+      "sha256": "bb9e176a47366fa22e1c78def1b213c25085d423ac77a02bce078c446bb02c4f"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-184.stdout.jsonl",
+      "sha256": "0d96f0a157e2135c9fae127d2af7c718172ae5d684002cc539899f4404db1e5e"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-185.stdout.jsonl",
+      "sha256": "3482e5cef0b0f556aa96d223253a436e4bbf5357efd8a27553ae7e47b0c3fea1"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-186.stdout.jsonl",
+      "sha256": "d4fc8fd198b4cbd6f7aa49d8ce434790bb39d37eece3a46cda070716a3918c09"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-187.stdout.jsonl",
+      "sha256": "64e1fa5704f97be519812e5320ece4d1bf90fdde95fab3fae3b3a35824860c11"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-188.stdout.jsonl",
+      "sha256": "d0d9f4ed6eb3404b01167b1826c87e99ac70975bb6c86087fdb259719adb82f2"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-189.stdout.jsonl",
+      "sha256": "da80e9ce556089b0c8540d5bf2ed301e482e5647e16a49ec9c36e670b662d731"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-190.stdout.jsonl",
+      "sha256": "f79a9411363b2980c4cbbe40f544da4dd2c66ccc542ca8b99a59e3ae0b5502b1"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-191.stdout.jsonl",
+      "sha256": "959cdb4da166713c8654f6964f4468cbdd30c8053776a3e0e348a843166de538"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-192.stdout.jsonl",
+      "sha256": "fd46ba9652c5160e997e5a9c847f7de70d072ef89393273feb52d00401d5cabd"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-193.stdout.jsonl",
+      "sha256": "ea0626e50e73ce12ed34de888c07cd81b1f30e349077de34c1b067f1eca0b119"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-194.stdout.jsonl",
+      "sha256": "0304e51d4fc0a6b9ab160ec745a04aae477ea0121eb59a0b2d963a631a71d1bf"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-195.stdout.jsonl",
+      "sha256": "ebf6517129d1653f223917ac5b709a07e89c1ca995dcae699b4af399fe354182"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-196.stdout.jsonl",
+      "sha256": "fd46ba9652c5160e997e5a9c847f7de70d072ef89393273feb52d00401d5cabd"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-197.stdout.jsonl",
+      "sha256": "fc9dd75d73943b61ba317d1d58d9409e8c5b6f61d1c0514477bcaa8d339c3a10"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-198.stdout.jsonl",
+      "sha256": "ff8e42e76ee8e951d8ab46f8eb9069bf4dde6753f887e68f4f27f8577d49d4e8"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-199.stdout.jsonl",
+      "sha256": "ebf6517129d1653f223917ac5b709a07e89c1ca995dcae699b4af399fe354182"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-200.stdout.jsonl",
+      "sha256": "fd46ba9652c5160e997e5a9c847f7de70d072ef89393273feb52d00401d5cabd"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-201.stdout.jsonl",
+      "sha256": "1915a8cc34eaf522164ae6057cc3986fa7a835812b3a4eb76f095177171e7a3a"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-202.stdout.jsonl",
+      "sha256": "43b7c662ea75e252f4a37b7a57ed65e6a47b224f3dacb0c10771dfc079b8d8c6"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-203.stdout.jsonl",
+      "sha256": "ebf6517129d1653f223917ac5b709a07e89c1ca995dcae699b4af399fe354182"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-204.stdout.jsonl",
+      "sha256": "fd46ba9652c5160e997e5a9c847f7de70d072ef89393273feb52d00401d5cabd"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-205.stdout.jsonl",
+      "sha256": "6283623629fadeb464e4c4c6eb875bc07e4bae0140b91429cdd8f79e92e48f92"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-206.stdout.jsonl",
+      "sha256": "e0321df5e72bce001052666181cd1cd919fdf28b3e19233d7cff354a6cec6701"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-207.stdout.jsonl",
+      "sha256": "ebf6517129d1653f223917ac5b709a07e89c1ca995dcae699b4af399fe354182"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-208.stdout.jsonl",
+      "sha256": "13aff53f11e4219c79256e520afebcf4a05eda8034959a63dada2e240de0f1a0"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-209.stdout.jsonl",
+      "sha256": "29ec6deec14d3f74514be84215e7f1bcc9e68fbd22198fd42ff614a98f66eb78"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-210.stdout.jsonl",
+      "sha256": "9508ab2cdcdd43f4203e2f34183ae95ab146115397144caec2995df668fbb3e1"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-211.stdout.jsonl",
+      "sha256": "e0321df5e72bce001052666181cd1cd919fdf28b3e19233d7cff354a6cec6701"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-212.stdout.jsonl",
+      "sha256": "fd46ba9652c5160e997e5a9c847f7de70d072ef89393273feb52d00401d5cabd"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-213.stdout.jsonl",
+      "sha256": "29ec6deec14d3f74514be84215e7f1bcc9e68fbd22198fd42ff614a98f66eb78"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-214.stdout.jsonl",
+      "sha256": "db6ec3a0b6c9cbda6f93e4e1c508750397547de1e0cc56f1f43163aeeeab6f1c"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "sha2_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-215.stdout.jsonl",
+      "sha256": "ebf6517129d1653f223917ac5b709a07e89c1ca995dcae699b4af399fe354182"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-216.stdout.jsonl",
+      "sha256": "145f7be14b9325a203e4323c4e0526764e7f3a92787563e0bc9014f13e5df18c"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-217.stdout.jsonl",
+      "sha256": "584fbf29cf61e64500dbe258f1f6effff87461385331114cf77eab481b2748e8"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-218.stdout.jsonl",
+      "sha256": "0b2e0338e6c295e4af09ab3eabbb6c0ab60a920a0f42f3cfa14b7eca0c3e7be5"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-219.stdout.jsonl",
+      "sha256": "4768754a353d9edd74f1457dcd60ba72074dbcb1f1216a492b2addb38f6b5b18"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-220.stdout.jsonl",
+      "sha256": "145f7be14b9325a203e4323c4e0526764e7f3a92787563e0bc9014f13e5df18c"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-221.stdout.jsonl",
+      "sha256": "c107f14d5d01f072dceb4832fdad1297fc1b15b886fe0885269e11cc637c6c7f"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-222.stdout.jsonl",
+      "sha256": "9f19233492c384dd2eb6bb94ad39efe64dbc3edf1ca8e6175fad82da53bdcf16"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-223.stdout.jsonl",
+      "sha256": "4768754a353d9edd74f1457dcd60ba72074dbcb1f1216a492b2addb38f6b5b18"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-224.stdout.jsonl",
+      "sha256": "145f7be14b9325a203e4323c4e0526764e7f3a92787563e0bc9014f13e5df18c"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-225.stdout.jsonl",
+      "sha256": "a3f4bbca7daa0be15624a7ab03056b2ecf6ec6820855d45c5a2b39a139901832"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-226.stdout.jsonl",
+      "sha256": "01acffdd1568041311ff7ce749ae5ea782129358ec7f40874847f3f13acf4ac8"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-227.stdout.jsonl",
+      "sha256": "4768754a353d9edd74f1457dcd60ba72074dbcb1f1216a492b2addb38f6b5b18"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-228.stdout.jsonl",
+      "sha256": "145f7be14b9325a203e4323c4e0526764e7f3a92787563e0bc9014f13e5df18c"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-229.stdout.jsonl",
+      "sha256": "6379633dfba076a6fee6eaef83ba5a29e25514206f2a226e0628b3dd7834b1de"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-230.stdout.jsonl",
+      "sha256": "b5a10a4f39ac279996a9e7a7d8d84496e12f431815a9aa634ccdc5947aebe0f4"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-231.stdout.jsonl",
+      "sha256": "4768754a353d9edd74f1457dcd60ba72074dbcb1f1216a492b2addb38f6b5b18"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-232.stdout.jsonl",
+      "sha256": "6379633dfba076a6fee6eaef83ba5a29e25514206f2a226e0628b3dd7834b1de"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-233.stdout.jsonl",
+      "sha256": "3c07a34a89fa9e1f9fad032b9e8248fa2e821eaa6dcba66a74d619444fb821ad"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-234.stdout.jsonl",
+      "sha256": "4b352dc0dd3ee648db61423a0a6df27c82424626d9575c589127ce9947ebe7f5"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-235.stdout.jsonl",
+      "sha256": "b5a10a4f39ac279996a9e7a7d8d84496e12f431815a9aa634ccdc5947aebe0f4"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-236.stdout.jsonl",
+      "sha256": "145f7be14b9325a203e4323c4e0526764e7f3a92787563e0bc9014f13e5df18c"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-237.stdout.jsonl",
+      "sha256": "3c07a34a89fa9e1f9fad032b9e8248fa2e821eaa6dcba66a74d619444fb821ad"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-238.stdout.jsonl",
+      "sha256": "4b352dc0dd3ee648db61423a0a6df27c82424626d9575c589127ce9947ebe7f5"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "keygen.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-239.stdout.jsonl",
+      "sha256": "4768754a353d9edd74f1457dcd60ba72074dbcb1f1216a492b2addb38f6b5b18"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-240.stdout.jsonl",
+      "sha256": "de934d3e13fee71c5c5c2dad808fbf8c891bad23e9d310ca81bc8c1e2f208545"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-241.stdout.jsonl",
+      "sha256": "8c54a09f243a42b68f87c4c91ccbc3d349c676cdccf78898c5e43bdb843c0485"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-242.stdout.jsonl",
+      "sha256": "dde3a92e8114eeaa76dd529ee3dce7a06b04cb98af7e0c96bd6c266e8d97a07f"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-243.stdout.jsonl",
+      "sha256": "6eea47b975d2fc82b48a64d41deb9213209822601ce76fe01dfcf88b019e2e9c"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-244.stdout.jsonl",
+      "sha256": "15efe0660a73fb810cd4738ff185d50ad8d0b708b9fd9db9f8688bf3c6fef502"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-245.stdout.jsonl",
+      "sha256": "81753d2a2d658fd5cfac2ca0f3d7a439130ef1b2f1a92ede589b24a6898bec06"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-246.stdout.jsonl",
+      "sha256": "5208121b11ba5de50d13ed58eddcd28a83e8da0fd2b9d39865baf46ec9480830"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-247.stdout.jsonl",
+      "sha256": "ea939e8aad4e7ccfdcb5354ae14f54b62ed1bfc20870e359cecb089be4bcfbd1"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-248.stdout.jsonl",
+      "sha256": "de934d3e13fee71c5c5c2dad808fbf8c891bad23e9d310ca81bc8c1e2f208545"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-249.stdout.jsonl",
+      "sha256": "3ad52f08bfbeab667ef753cdaa3a2e97e4a079c09186e66bce83a899abf89e7b"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-250.stdout.jsonl",
+      "sha256": "9af931ddbb7a3644807c8fa01d217d789037ebe691259d4f00666622e167d822"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-251.stdout.jsonl",
+      "sha256": "6eea47b975d2fc82b48a64d41deb9213209822601ce76fe01dfcf88b019e2e9c"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-252.stdout.jsonl",
+      "sha256": "bd4bb2aa4777d2e75c55fcede2186587bec2dfad26737d13ac6b215ef619ec92"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-253.stdout.jsonl",
+      "sha256": "012d5a26ddcfdd0506c1e1e22cf6fa4d05ce5aef40e49085c859dff060d3d5e0"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-254.stdout.jsonl",
+      "sha256": "764bd9fd0729685d0b993270d7994cbfa0453b342887f225cc58b2ff8bb7bbd0"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-255.stdout.jsonl",
+      "sha256": "ea939e8aad4e7ccfdcb5354ae14f54b62ed1bfc20870e359cecb089be4bcfbd1"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-256.stdout.jsonl",
+      "sha256": "906665bd9dc87290aed673fa696a60686e33785ada5eca408c746f6ac6e6bd9d"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-257.stdout.jsonl",
+      "sha256": "7aba4ccad7e6fee335bf56f6a254c96271953ccf04f7f1bc06f54a88434aabfc"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-258.stdout.jsonl",
+      "sha256": "8efd467b708832ace7aa44dc80f65a140afd8043d541af0de7554a4070527d78"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-259.stdout.jsonl",
+      "sha256": "764bd9fd0729685d0b993270d7994cbfa0453b342887f225cc58b2ff8bb7bbd0"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-260.stdout.jsonl",
+      "sha256": "de934d3e13fee71c5c5c2dad808fbf8c891bad23e9d310ca81bc8c1e2f208545"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-261.stdout.jsonl",
+      "sha256": "96814249650fe66da1231ab3b70f6972ae1920e96137a9530fff0944325aca09"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-262.stdout.jsonl",
+      "sha256": "8efd467b708832ace7aa44dc80f65a140afd8043d541af0de7554a4070527d78"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "sign.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-263.stdout.jsonl",
+      "sha256": "ebbac58522ffd587e81a7de835cac87b7a888b8cb970df9453d5c92078359267"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-264.stdout.jsonl",
+      "sha256": "35f44c513fdeb289ec96155b0ba1e3f67aa77c2e5e6b5f67cb157311e8084ab8"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 0,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-265.stdout.jsonl",
+      "sha256": "9c9065a0cc835320f0e91d14926f1e41655b007ce68c52543a48f2cc312d9f9b"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "object_hoist",
+        "warmup_calls": 20
+      },
+      "raw": "run-266.stdout.jsonl",
+      "sha256": "d652762bbd0d1fc6c1d6d8764a08de14228847ff3c67fd572440ad61f04fb9dc"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "object_hoist"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-267.stdout.jsonl",
+      "sha256": "b467667ff72f0a658f5c0b157e821f0e3b6b744d61b5ee6fa0998205dd8950d3"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-268.stdout.jsonl",
+      "sha256": "2297783e59bc5aa43b1b1feb85157e6a281db5ba68e68a5f5f75047bec1f23d1"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 0,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-269.stdout.jsonl",
+      "sha256": "55a7f2ef6202ad5560e337a68124c1ca8c4e8c2175e3af83de5d7b9f37545f87"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "field_rewrite",
+        "warmup_calls": 20
+      },
+      "raw": "run-270.stdout.jsonl",
+      "sha256": "8b69a1452a8de8dbf74cfb287f828acbac7a63dd4eb1daf164745d2462e57b41"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "field_rewrite"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-271.stdout.jsonl",
+      "sha256": "b467667ff72f0a658f5c0b157e821f0e3b6b744d61b5ee6fa0998205dd8950d3"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-272.stdout.jsonl",
+      "sha256": "35f44c513fdeb289ec96155b0ba1e3f67aa77c2e5e6b5f67cb157311e8084ab8"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 0,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-273.stdout.jsonl",
+      "sha256": "9c878f7a6b576d874407114bdf5b23cad0191b612be2644db07c48e8906ddc77"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "two_addresses",
+        "warmup_calls": 20
+      },
+      "raw": "run-274.stdout.jsonl",
+      "sha256": "de0b39042921a5ac4c8cb27d807d73a64c7ef7b3e81188e5f5480ad4dbc135c8"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "two_addresses"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-275.stdout.jsonl",
+      "sha256": "b467667ff72f0a658f5c0b157e821f0e3b6b744d61b5ee6fa0998205dd8950d3"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-276.stdout.jsonl",
+      "sha256": "2297783e59bc5aa43b1b1feb85157e6a281db5ba68e68a5f5f75047bec1f23d1"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-277.stdout.jsonl",
+      "sha256": "47c2e3f9d9a40b7a30330c8a63e2c4c0b37526f6fdd91533d466aa09467c4dfd"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-278.stdout.jsonl",
+      "sha256": "64fb1f68062ee4b9e4d1fc27149158bb40ef09688166f324216522ec712dd715"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-279.stdout.jsonl",
+      "sha256": "b467667ff72f0a658f5c0b157e821f0e3b6b744d61b5ee6fa0998205dd8950d3"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-280.stdout.jsonl",
+      "sha256": "47c2e3f9d9a40b7a30330c8a63e2c4c0b37526f6fdd91533d466aa09467c4dfd"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-281.stdout.jsonl",
+      "sha256": "56ed52f3b3d9fdae65d74cc045f8d0d8a311ce40ce8fbf2ae04c67b30d0327ad"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-282.stdout.jsonl",
+      "sha256": "66370d9b4ab338869d817aa6bb3157d649e9230a3e9c84bd5e9575ecaa2e7aac"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "buffer",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer",
+        "warmup_calls": 20
+      },
+      "raw": "run-283.stdout.jsonl",
+      "sha256": "64fb1f68062ee4b9e4d1fc27149158bb40ef09688166f324216522ec712dd715"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-284.stdout.jsonl",
+      "sha256": "2297783e59bc5aa43b1b1feb85157e6a281db5ba68e68a5f5f75047bec1f23d1"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 0,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-285.stdout.jsonl",
+      "sha256": "e810167b83b15aeceae5808079a63e0b64018aa6dafeb28ce6afd2f17795b142"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "buffer_peeled",
+        "warmup_calls": 20
+      },
+      "raw": "run-286.stdout.jsonl",
+      "sha256": "920416a2209bcf554e6927b41f352ad0236326b7defe059eea1365995e91394e"
+    },
+    {
+      "job": {
+        "mode": "allocation",
+        "parameter": "shake_128f",
+        "operation": "verify.total",
+        "comparison": [
+          "baseline",
+          "buffer_peeled"
+        ],
+        "fork": 1,
+        "variant": "baseline",
+        "warmup_calls": 20
+      },
+      "raw": "run-287.stdout.jsonl",
+      "sha256": "b467667ff72f0a658f5c0b157e821f0e3b6b744d61b5ee6fa0998205dd8950d3"
+    }
+  ]
+}

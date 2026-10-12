@@ -1,0 +1,12 @@
+{
+  "schema": "bc-deep-preparation-review-v1",
+  "complete": true,
+  "manifest_sha256": "bd2846a0a790bf2a19c4f4877a225a3241d234c33d12395fb77ff882b83a81e2",
+  "corpus_counts": {
+    "warmup": 96,
+    "measured": 384
+  },
+  "checker_sha256": "c0652f600f7d034c25d5926a86f20705409f6192ff9a37c9ce33ad395c7a4120",
+  "checked_at": "2026-10-12T03:26:44.141911+00:00",
+  "input_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ml-deep/results/bouncycastle/ml-deep/confirmation-plan/manifest.json"
+}

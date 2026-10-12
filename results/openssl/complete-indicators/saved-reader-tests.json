@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "libs/openssl/experiments/complete-indicators/test_saved_check.py"
+  ],
+  "source_sha256": "a020522c47f4d563ca64d23118844af8dc01a67ed7ea6dda179914cc8f3e2e6c",
+  "returncode": 0,
+  "stdout": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/tmpt4b_wx7u/check.json\n/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/tmpu358_1hu/check.json\n",
+  "stderr": "..\n----------------------------------------------------------------------\nRan 2 tests in 1.052s\n\nOK\n"
+}

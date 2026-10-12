@@ -1,0 +1,40 @@
+--- FAIL: TestSHA2PrefixReuse (0.00s)
+    --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-128s (0.00s)
+        --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-128s/F (0.00s)
+            state_prefix_test.go:122: hashed 306 bytes after setup; want 114 without repeated seed blocks
+        --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-128s/H (0.00s)
+            state_prefix_test.go:122: hashed 354 bytes after setup; want 162 without repeated seed blocks
+        state_prefix_test.go:135: T hashed 402 bytes after setup; want 210 without repeated seed blocks
+    --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-128f (0.00s)
+        --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-128f/F (0.00s)
+            state_prefix_test.go:122: hashed 306 bytes after setup; want 114 without repeated seed blocks
+        --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-128f/H (0.00s)
+            state_prefix_test.go:122: hashed 354 bytes after setup; want 162 without repeated seed blocks
+        state_prefix_test.go:135: T hashed 402 bytes after setup; want 210 without repeated seed blocks
+    --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-192s (0.00s)
+        --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-192s/F (0.00s)
+            state_prefix_test.go:122: hashed 330 bytes after setup; want 138 without repeated seed blocks
+        --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-192s/H (0.00s)
+            state_prefix_test.go:122: hashed 594 bytes after setup; want 210 without repeated seed blocks
+        state_prefix_test.go:135: T hashed 666 bytes after setup; want 282 without repeated seed blocks
+    --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-192f (0.00s)
+        --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-192f/F (0.00s)
+            state_prefix_test.go:122: hashed 330 bytes after setup; want 138 without repeated seed blocks
+        --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-192f/H (0.00s)
+            state_prefix_test.go:122: hashed 594 bytes after setup; want 210 without repeated seed blocks
+        state_prefix_test.go:135: T hashed 666 bytes after setup; want 282 without repeated seed blocks
+    --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-256s (0.00s)
+        --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-256s/F (0.00s)
+            state_prefix_test.go:122: hashed 354 bytes after setup; want 162 without repeated seed blocks
+        --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-256s/H (0.00s)
+            state_prefix_test.go:122: hashed 642 bytes after setup; want 258 without repeated seed blocks
+        state_prefix_test.go:135: T hashed 738 bytes after setup; want 354 without repeated seed blocks
+    --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-256f (0.00s)
+        --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-256f/F (0.00s)
+            state_prefix_test.go:122: hashed 354 bytes after setup; want 162 without repeated seed blocks
+        --- FAIL: TestSHA2PrefixReuse/SLH-DSA-SHA2-256f/H (0.00s)
+            state_prefix_test.go:122: hashed 642 bytes after setup; want 258 without repeated seed blocks
+        state_prefix_test.go:135: T hashed 738 bytes after setup; want 354 without repeated seed blocks
+FAIL
+FAIL	github.com/cloudflare/circl/sign/slhdsa	0.392s
+FAIL

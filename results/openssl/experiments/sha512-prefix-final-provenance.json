@@ -1,0 +1,45 @@
+{
+  "upstream_commit": "122db7eb076bf0625df87b91bcc2dccfaccc4900",
+  "commands": {
+    "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.2.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+    "cpu": "Apple M1 Pro\n",
+    "cpus": "8\n",
+    "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.2\nBuildVersion:\t\t25C56\n",
+    "baseline_openssl": "OpenSSL 4.2.0-dev  (Library: OpenSSL 4.2.0-dev )\nbuilt on: Sun Oct 11 22:51:16 2026 UTC\nplatform: darwin64-arm64-cc\noptions:  bn(64,64)\ncompiler: cc -fPIC -arch arm64 -O3 -Wall -DL_ENDIAN -DOPENSSL_PIC -D_REENTRANT -DNDEBUG -I/opt/homebrew/opt/ruby/include\nOPENSSLDIR: \"/usr/local/ssl\"\nMODULESDIR: \"/usr/local/lib/ossl-modules\"\nSeeding source: os-specific\nCPUINFO: OPENSSL_armcap=0x987d\n",
+    "candidate_openssl": "OpenSSL 4.2.0-dev  (Library: OpenSSL 4.2.0-dev )\nbuilt on: Sun Oct 11 22:54:59 2026 UTC\nplatform: darwin64-arm64-cc\noptions:  bn(64,64)\ncompiler: cc -fPIC -arch arm64 -O3 -Wall -DL_ENDIAN -DOPENSSL_PIC -D_REENTRANT -DNDEBUG -I/opt/homebrew/opt/ruby/include\nOPENSSLDIR: \"/usr/local/ssl\"\nMODULESDIR: \"/usr/local/lib/ossl-modules\"\nSeeding source: os-specific\nCPUINFO: OPENSSL_armcap=0x987d\n"
+  },
+  "environment_overrides": {
+    "OPENSSL_CONF": null,
+    "OPENSSL_MODULES": null,
+    "OPENSSL_ia32cap": null,
+    "OPENSSL_armcap": null,
+    "DYLD_LIBRARY_PATH": null,
+    "DYLD_INSERT_LIBRARIES": null
+  },
+  "experiment_sha256": {
+    "sha512-prefix-bench.py": "7ab6e4cd39c6b931dd1a8596052acfd50723c11d175b09421ca1b94ccc7ea021",
+    "sha512-prefix-build.sh": "bd1b86c205527d743b88fb22cf2870dc7d03c727a59b0cd5232affa795e17ad2",
+    "sha512-prefix-check.c": "dbb62be7e11602eb1f3cd7010ee915d931d38a85dd3214dea26894dcbb679add",
+    "sha512-prefix-check.py": "041461a52125b684ed47a192e95ae068fca5d6a1aabf14775be69b7dc765e56b",
+    "sha512-prefix-corpus.py": "85efa9de6a371c9d31508077434e6df84ff6da3e58d408613bffddf848e5b624",
+    "sha512-prefix-driver.c": "cea67ee60ddd0a6436d3f3b6420638e5ba630dbd75c8a124fbfc8748645cb6c2",
+    "sha512-prefix-gate-test.py": "2589b49e7b4692eb778273c0412bcb902b0e0bffdc05bfae4ca31f0d6c48639e",
+    "sha512-prefix-gate.py": "ed57233c4c1e9f0bb162bdd0bd5a6ecb81f8522b6720a340932f5e003f5f7c2c",
+    "sha512-prefix.patch": "5e6d70d5838c05d4c19cf5dc69e8f7f3a9ad40c2bbe4dff8c8c51b26e4a9064a"
+  },
+  "binary_sha256": {
+    "baseline": "511fcb88c2b28e001c268ba2c2d4f9b65569abf4e32220f466c31f3ba799f2da",
+    "candidate": "a7252e9b08091f3eea3a8c9efa42d3eb06a4205aaf351ce928f8444f64882730"
+  },
+  "cpu_clock": "getrusage(RUSAGE_SELF), user+system; wall timer uses CLOCK_MONOTONIC",
+  "limitations": [
+    "No FIPS provider enabled",
+    "Targeted sanitizer instrumentation; other libcrypto uninstrumented",
+    "One arm64 host; desktop processes remain active"
+  ],
+  "python": {
+    "version": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+    "optimize": 0,
+    "PYTHONOPTIMIZE": null
+  }
+}

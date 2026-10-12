@@ -1,0 +1,45 @@
+{
+  "source_commit": "dd039f5f899aefb24b86b94c4b5cba1b2ec39f2f",
+  "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-trim",
+  "argv": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/submission-pytest/bin/python",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "-vv",
+    "-s",
+    "tests/test_hash.py::test_slh_dsa_sha2"
+  ],
+  "started_utc": "2026-10-12T02:50:49.502692+00:00",
+  "finished_utc": "2026-10-12T02:50:50.779513+00:00",
+  "exit_code": 0,
+  "complete": true,
+  "environment": {
+    "OQS_BUILD_DIR": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/provider-performance/libs/liboqs/build/sha2-trim",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "SKIP_TESTS": null,
+    "SKIP_ALGS": null,
+    "PYTEST_ADDOPTS": null,
+    "PYTHONOPTIMIZE": null,
+    "PYTHONPATH": null
+  },
+  "runtime": {
+    "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+    "optimize": 0,
+    "pytest": "8.4.2"
+  },
+  "source_sha256": {
+    "tests/CMakeLists.txt": "06c6c7457f6645a57a12b49c594e8d005981cb0d9d2cf9a1939bdc74bf9598a8",
+    "tests/test_slh_dsa_sha2.c": "b5165f90a1fb55f7074cebeaa18832a36288c56c1d5e9df7fe315bd855c5b8cc",
+    "src/sig/slh_dsa/slh_dsa_c/sha2_256.c": "1ac1b1dbc03ddfc6fd909503429eb20fd8e01dc35ae273db4de565f8ac842a12",
+    "src/sig/slh_dsa/slh_dsa_c/sha2_512.c": "7afdba3b2881c66c59345c921e709ca3cdedb8a7179cba3d40cfa8c5a6e49716",
+    "tests/test_hash.py": "455221991debfb402eb6a667e6aee18725f36c62e58b17312683326bf47043cf",
+    "tests/helpers.py": "e04fa66a21b53b1b88d942073e4d52316ce196047f0c962d0a689c277ecfa1ae"
+  },
+  "binary_sha256": "0bef1d212a265e32608ba72fffc95fc1da8c32145b97379ceb5a06802ff424ac",
+  "build_config_sha256": "64ec04c2dd71529bd715b3137e603cf78ccd399c2e008c0713f9908802956474",
+  "log_sha256": "9474c67356db241217800ddeb6094ab155ff6ce509d5bfafa735bde064aadd6f",
+  "source_clean_after": true
+}

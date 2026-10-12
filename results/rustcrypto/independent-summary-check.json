@@ -1,0 +1,93 @@
+{
+  "source_sha256": "04cc8e6744b6baa702aeb884f9248b2bfb1e154daec99fc22ceda43e980eb122",
+  "pairs_checked": 360,
+  "summaries_checked": 12,
+  "balanced_orders_per_fork": true,
+  "whole_16_case_cycles": true,
+  "summary": [
+    {
+      "operation": "keygen",
+      "parameter": "ML-DSA-44",
+      "speedup": 1.173791032719654,
+      "fork_min": 1.170763466119346,
+      "fork_max": 1.177395639533277
+    },
+    {
+      "operation": "keygen",
+      "parameter": "ML-DSA-65",
+      "speedup": 1.1733412494100748,
+      "fork_min": 1.17087718437401,
+      "fork_max": 1.178218324875785
+    },
+    {
+      "operation": "keygen",
+      "parameter": "ML-DSA-87",
+      "speedup": 1.1774658630284827,
+      "fork_min": 1.174658456206116,
+      "fork_max": 1.1801341308387352
+    },
+    {
+      "operation": "keygen_sign",
+      "parameter": "ML-DSA-44",
+      "speedup": 1.0376261073832276,
+      "fork_min": 1.0363147227472012,
+      "fork_max": 1.0418436685654022
+    },
+    {
+      "operation": "keygen_sign",
+      "parameter": "ML-DSA-65",
+      "speedup": 1.0379502153183566,
+      "fork_min": 1.0317529844672806,
+      "fork_max": 1.0425223271576145
+    },
+    {
+      "operation": "keygen_sign",
+      "parameter": "ML-DSA-87",
+      "speedup": 1.0666180417893618,
+      "fork_min": 1.06097260614876,
+      "fork_max": 1.071674254354321
+    },
+    {
+      "operation": "sign",
+      "parameter": "ML-DSA-44",
+      "speedup": 1.0014019026372902,
+      "fork_min": 0.9223891103260683,
+      "fork_max": 1.0064645413190436
+    },
+    {
+      "operation": "sign",
+      "parameter": "ML-DSA-65",
+      "speedup": 1.000452070445791,
+      "fork_min": 0.9988036355735737,
+      "fork_max": 1.0040123363771134
+    },
+    {
+      "operation": "sign",
+      "parameter": "ML-DSA-87",
+      "speedup": 1.000018708984485,
+      "fork_min": 0.9976542884827055,
+      "fork_max": 1.0020976912923631
+    },
+    {
+      "operation": "verify",
+      "parameter": "ML-DSA-44",
+      "speedup": 1.0002081136133865,
+      "fork_min": 0.9968509296422441,
+      "fork_max": 1.0021137419307515
+    },
+    {
+      "operation": "verify",
+      "parameter": "ML-DSA-65",
+      "speedup": 0.9999035207322203,
+      "fork_min": 0.9984671375616627,
+      "fork_max": 1.0013494280953696
+    },
+    {
+      "operation": "verify",
+      "parameter": "ML-DSA-87",
+      "speedup": 1.000058022870466,
+      "fork_min": 0.9968766776514171,
+      "fork_max": 1.005248137009473
+    }
+  ]
+}

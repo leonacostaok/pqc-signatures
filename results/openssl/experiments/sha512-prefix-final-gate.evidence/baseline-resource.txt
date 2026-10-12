@@ -1,0 +1,2 @@
+{"hash_cases":768,"redundant_prefix_bytes":65536}
+Repeated H/T calls rehash the public seed prefix

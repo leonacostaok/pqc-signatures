@@ -1,0 +1,44 @@
+[
+  {
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/tests/test_sig",
+      "SLH_DSA_PURE_SHA2_128F"
+    ],
+    "returncode": 0
+  },
+  {
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/tests/test_sig",
+      "SLH_DSA_PURE_SHA2_128S"
+    ],
+    "returncode": 0
+  },
+  {
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/tests/test_sig",
+      "SLH_DSA_PURE_SHA2_192F"
+    ],
+    "returncode": 0
+  },
+  {
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/tests/test_sig",
+      "SLH_DSA_PURE_SHA2_192S"
+    ],
+    "returncode": 0
+  },
+  {
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/tests/test_sig",
+      "SLH_DSA_PURE_SHA2_256F"
+    ],
+    "returncode": 0
+  },
+  {
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/tests/test_sig",
+      "SLH_DSA_PURE_SHA2_256S"
+    ],
+    "returncode": 0
+  }
+]

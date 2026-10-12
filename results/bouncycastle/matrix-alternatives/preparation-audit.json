@@ -1,0 +1,19 @@
+{
+  "local_evidence": {
+    "baseline_classes": "verified",
+    "baseline_gate_classes": "verified",
+    "baseline_sources": "verified",
+    "combined_classes": "verified",
+    "combined_gate_classes": "verified",
+    "combined_sources": "verified",
+    "lazy_classes": "verified",
+    "lazy_gate_classes": "verified",
+    "lazy_sources": "verified",
+    "runtime": "verified",
+    "stream_classes": "verified",
+    "stream_gate_classes": "verified",
+    "stream_sources": "verified"
+  },
+  "preparation_passed": true,
+  "schema": "bc-matrix-audit-v1"
+}

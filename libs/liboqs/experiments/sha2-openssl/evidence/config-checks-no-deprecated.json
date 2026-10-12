@@ -1,0 +1,49 @@
+[
+  {
+    "configuration": "no-deprecated",
+    "command": [
+      "cmake",
+      "-S",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance",
+      "-B",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/no-deprecated",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DOQS_MINIMAL_BUILD=SIG_slh_dsa_pure_sha2_128f",
+      "-DOPENSSL_ROOT_DIR=/opt/homebrew/Cellar/openssl@3/3.6.4_1",
+      "-DCMAKE_C_FLAGS=-DOPENSSL_NO_DEPRECATED"
+    ],
+    "returncode": 0,
+    "log": "config-no-deprecated-0.log"
+  },
+  {
+    "configuration": "no-deprecated",
+    "command": [
+      "cmake",
+      "--build",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/no-deprecated",
+      "--target",
+      "test_slh_dsa_sha2",
+      "test_sig",
+      "-j2"
+    ],
+    "returncode": 0,
+    "log": "config-no-deprecated-1.log"
+  },
+  {
+    "configuration": "no-deprecated",
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/no-deprecated/tests/test_slh_dsa_sha2"
+    ],
+    "returncode": 0,
+    "log": "config-no-deprecated-2.log"
+  },
+  {
+    "configuration": "no-deprecated",
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/no-deprecated/tests/test_sig",
+      "SLH_DSA_PURE_SHA2_128F"
+    ],
+    "returncode": 0,
+    "log": "config-no-deprecated-3.log"
+  }
+]

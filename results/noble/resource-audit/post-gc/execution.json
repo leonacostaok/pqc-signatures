@@ -1,0 +1,1741 @@
+{
+  "schema": "noble-resource-execution-v1",
+  "mode": "retained",
+  "started_at": "2026-10-12T06:04:14.076390+00:00",
+  "manifest_sha256": "71161d2e7dd0d289857121a5a783fa6c5d903e8d4375c2f2f4108c948b3b1b28",
+  "python_version": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "python_optimize": 0,
+  "node_options": "",
+  "runs": [
+    {
+      "round": 0,
+      "parameter": 44,
+      "operation": "keygen",
+      "variant": "baseline",
+      "index": 0,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 44, \"round\": 0, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:04:14.076791+00:00",
+      "completed_at": "2026-10-12T06:04:14.702466+00:00",
+      "exit_code": 0,
+      "raw": "000.json",
+      "sha256": "7d3a3471b39e55bd9533d5128616daae1337c409e2b68b3a51fc3b15b53e533d"
+    },
+    {
+      "round": 0,
+      "parameter": 44,
+      "operation": "keygen",
+      "variant": "candidate",
+      "index": 1,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 44, \"round\": 0, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:04:14.703028+00:00",
+      "completed_at": "2026-10-12T06:04:15.265449+00:00",
+      "exit_code": 0,
+      "raw": "001.json",
+      "sha256": "7068ba1a97c48b4445a38555fd685cf1caa91d69c75e29e4ab121dc9c3f1ae3e"
+    },
+    {
+      "round": 0,
+      "parameter": 44,
+      "operation": "getPublicKey",
+      "variant": "candidate",
+      "index": 2,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 44, \"round\": 0, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:04:15.265976+00:00",
+      "completed_at": "2026-10-12T06:04:15.783555+00:00",
+      "exit_code": 0,
+      "raw": "002.json",
+      "sha256": "7f52d80e82b4fb2baecad2dc74ac8fef2f79a687b2eb77981c10e2b9a972e966"
+    },
+    {
+      "round": 0,
+      "parameter": 44,
+      "operation": "getPublicKey",
+      "variant": "baseline",
+      "index": 3,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 44, \"round\": 0, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:04:15.784094+00:00",
+      "completed_at": "2026-10-12T06:04:16.398393+00:00",
+      "exit_code": 0,
+      "raw": "003.json",
+      "sha256": "d44649bd0ec71657be31a844f8c7e1b8c6a7f2a06f82634ac682903bfda17122"
+    },
+    {
+      "round": 0,
+      "parameter": 44,
+      "operation": "sign",
+      "variant": "baseline",
+      "index": 4,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 44, \"round\": 0, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:04:16.399064+00:00",
+      "completed_at": "2026-10-12T06:04:19.195685+00:00",
+      "exit_code": 0,
+      "raw": "004.json",
+      "sha256": "470e8711cc301e0a6b0b8c5ef55d4c1e234031f9f57997d4d1c1845954e30f03"
+    },
+    {
+      "round": 0,
+      "parameter": 44,
+      "operation": "sign",
+      "variant": "candidate",
+      "index": 5,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 44, \"round\": 0, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:04:19.196515+00:00",
+      "completed_at": "2026-10-12T06:04:21.801923+00:00",
+      "exit_code": 0,
+      "raw": "005.json",
+      "sha256": "ce4d6d91d760544a7b083c62bae0ff697601edf8296149937366a4d989f1421b"
+    },
+    {
+      "round": 0,
+      "parameter": 44,
+      "operation": "verify",
+      "variant": "candidate",
+      "index": 6,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 44, \"round\": 0, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:04:21.802553+00:00",
+      "completed_at": "2026-10-12T06:04:22.515523+00:00",
+      "exit_code": 0,
+      "raw": "006.json",
+      "sha256": "28884835ae81cd2a03610e30fa6f146d7194ae6ec07a14a9719b834ff644969b"
+    },
+    {
+      "round": 0,
+      "parameter": 44,
+      "operation": "verify",
+      "variant": "baseline",
+      "index": 7,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 44, \"round\": 0, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:04:22.516185+00:00",
+      "completed_at": "2026-10-12T06:04:23.281048+00:00",
+      "exit_code": 0,
+      "raw": "007.json",
+      "sha256": "c7d93999e2781a147b0035e252cefd8feb4d8b19fec5ff78aaab5835c6c89a30"
+    },
+    {
+      "round": 0,
+      "parameter": 65,
+      "operation": "keygen",
+      "variant": "candidate",
+      "index": 8,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 65, \"round\": 0, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:04:23.281769+00:00",
+      "completed_at": "2026-10-12T06:04:24.097840+00:00",
+      "exit_code": 0,
+      "raw": "008.json",
+      "sha256": "5f2e56ca077cbeb5f5b409fd21206014311009a1caabaa8e992c2210406e469f"
+    },
+    {
+      "round": 0,
+      "parameter": 65,
+      "operation": "keygen",
+      "variant": "baseline",
+      "index": 9,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 65, \"round\": 0, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:04:24.098619+00:00",
+      "completed_at": "2026-10-12T06:04:25.033476+00:00",
+      "exit_code": 0,
+      "raw": "009.json",
+      "sha256": "196cae327f47b8d6ee48795c6c506a25b8dd952dccad0885f0334aa295275605"
+    },
+    {
+      "round": 0,
+      "parameter": 65,
+      "operation": "getPublicKey",
+      "variant": "baseline",
+      "index": 10,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 65, \"round\": 0, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:04:25.034221+00:00",
+      "completed_at": "2026-10-12T06:04:25.898560+00:00",
+      "exit_code": 0,
+      "raw": "010.json",
+      "sha256": "257098322b5c9ccb91d83e84560b0bcdc7ed918ca09afbdce86b6326733f40e9"
+    },
+    {
+      "round": 0,
+      "parameter": 65,
+      "operation": "getPublicKey",
+      "variant": "candidate",
+      "index": 11,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 65, \"round\": 0, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:04:25.899340+00:00",
+      "completed_at": "2026-10-12T06:04:26.642188+00:00",
+      "exit_code": 0,
+      "raw": "011.json",
+      "sha256": "fefb21844db03fc98b3bb6872b3e3972c5b6a6c1692fa8a93129aaf059b47615"
+    },
+    {
+      "round": 0,
+      "parameter": 65,
+      "operation": "sign",
+      "variant": "candidate",
+      "index": 12,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 65, \"round\": 0, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:04:26.642988+00:00",
+      "completed_at": "2026-10-12T06:04:32.562499+00:00",
+      "exit_code": 0,
+      "raw": "012.json",
+      "sha256": "c9559c1be46d7e2c17441bb5d469c0024a30932ab35a41f2d7d171045396a2c2"
+    },
+    {
+      "round": 0,
+      "parameter": 65,
+      "operation": "sign",
+      "variant": "baseline",
+      "index": 13,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 65, \"round\": 0, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:04:32.563314+00:00",
+      "completed_at": "2026-10-12T06:04:39.244009+00:00",
+      "exit_code": 0,
+      "raw": "013.json",
+      "sha256": "6540662eb667ab5870fa9a1a5853f7397c65df215b053713d9355a852bf7a374"
+    },
+    {
+      "round": 0,
+      "parameter": 65,
+      "operation": "verify",
+      "variant": "baseline",
+      "index": 14,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 65, \"round\": 0, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:04:39.244806+00:00",
+      "completed_at": "2026-10-12T06:04:40.352725+00:00",
+      "exit_code": 0,
+      "raw": "014.json",
+      "sha256": "a44ecd917ca36d41ee6f742b7bd5f9f49f4be40c0bf9cfd64239abb2c939b50d"
+    },
+    {
+      "round": 0,
+      "parameter": 65,
+      "operation": "verify",
+      "variant": "candidate",
+      "index": 15,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 65, \"round\": 0, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:04:40.354038+00:00",
+      "completed_at": "2026-10-12T06:04:41.349327+00:00",
+      "exit_code": 0,
+      "raw": "015.json",
+      "sha256": "4289d9a1f68f3899910d9f13624125fc55c8c5224ab30826036ce13b9f0fdb99"
+    },
+    {
+      "round": 0,
+      "parameter": 87,
+      "operation": "keygen",
+      "variant": "baseline",
+      "index": 16,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 87, \"round\": 0, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:04:41.350079+00:00",
+      "completed_at": "2026-10-12T06:04:42.735468+00:00",
+      "exit_code": 0,
+      "raw": "016.json",
+      "sha256": "eee475d1ef28357ce7250127f991dd268075bf565b1948941e2fd7f5332128cf"
+    },
+    {
+      "round": 0,
+      "parameter": 87,
+      "operation": "keygen",
+      "variant": "candidate",
+      "index": 17,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 87, \"round\": 0, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:04:42.736735+00:00",
+      "completed_at": "2026-10-12T06:04:43.888757+00:00",
+      "exit_code": 0,
+      "raw": "017.json",
+      "sha256": "211f08aba68787b61202a66a341c4d393a008ed5501c921263d25f25383abe34"
+    },
+    {
+      "round": 0,
+      "parameter": 87,
+      "operation": "getPublicKey",
+      "variant": "candidate",
+      "index": 18,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 87, \"round\": 0, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:04:43.889616+00:00",
+      "completed_at": "2026-10-12T06:04:44.967866+00:00",
+      "exit_code": 0,
+      "raw": "018.json",
+      "sha256": "210521af28510b406d93cd392c132d553767eb59a2e33a0176ac116641112070"
+    },
+    {
+      "round": 0,
+      "parameter": 87,
+      "operation": "getPublicKey",
+      "variant": "baseline",
+      "index": 19,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 87, \"round\": 0, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:04:44.968866+00:00",
+      "completed_at": "2026-10-12T06:04:46.285469+00:00",
+      "exit_code": 0,
+      "raw": "019.json",
+      "sha256": "af8a8a0cdbdabf8b8676986ca555491dd45beb00d348588a84ca3e7f4e553ccc"
+    },
+    {
+      "round": 0,
+      "parameter": 87,
+      "operation": "sign",
+      "variant": "baseline",
+      "index": 20,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 87, \"round\": 0, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:04:46.287018+00:00",
+      "completed_at": "2026-10-12T06:04:54.260257+00:00",
+      "exit_code": 0,
+      "raw": "020.json",
+      "sha256": "577db2d4730927cfd44a1cd86cfdda10355c08f060340abd85b475e0c466556c"
+    },
+    {
+      "round": 0,
+      "parameter": 87,
+      "operation": "sign",
+      "variant": "candidate",
+      "index": 21,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 87, \"round\": 0, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:04:54.261270+00:00",
+      "completed_at": "2026-10-12T06:05:01.005948+00:00",
+      "exit_code": 0,
+      "raw": "021.json",
+      "sha256": "4ef00eee36283306f08cd267a5b2ef80f3331d9c87da5c5800e7f50804c8906e"
+    },
+    {
+      "round": 0,
+      "parameter": 87,
+      "operation": "verify",
+      "variant": "candidate",
+      "index": 22,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 87, \"round\": 0, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:01.007289+00:00",
+      "completed_at": "2026-10-12T06:05:02.405475+00:00",
+      "exit_code": 0,
+      "raw": "022.json",
+      "sha256": "df103c58e081c54414deda4c591eb89661bc927af192136a417f5b979b84ef09"
+    },
+    {
+      "round": 0,
+      "parameter": 87,
+      "operation": "verify",
+      "variant": "baseline",
+      "index": 23,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 87, \"round\": 0, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:02.406619+00:00",
+      "completed_at": "2026-10-12T06:05:04.038635+00:00",
+      "exit_code": 0,
+      "raw": "023.json",
+      "sha256": "724545cdbac507b034157ae74a679da8e89919ecf8fab2eab8f4e000c81e8321"
+    },
+    {
+      "round": 1,
+      "parameter": 44,
+      "operation": "keygen",
+      "variant": "candidate",
+      "index": 24,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 44, \"round\": 1, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:04.039878+00:00",
+      "completed_at": "2026-10-12T06:05:04.604994+00:00",
+      "exit_code": 0,
+      "raw": "024.json",
+      "sha256": "67162c0ba64cf88088d0d87846728d56f5a7165d8024de9c396d77b9f2b9c845"
+    },
+    {
+      "round": 1,
+      "parameter": 44,
+      "operation": "keygen",
+      "variant": "baseline",
+      "index": 25,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 44, \"round\": 1, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:04.606229+00:00",
+      "completed_at": "2026-10-12T06:05:05.234127+00:00",
+      "exit_code": 0,
+      "raw": "025.json",
+      "sha256": "8eff07689a54f456dfb737573a7151fa6fbce870a2332443f42bfadceffed031"
+    },
+    {
+      "round": 1,
+      "parameter": 44,
+      "operation": "getPublicKey",
+      "variant": "baseline",
+      "index": 26,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 44, \"round\": 1, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:05.235614+00:00",
+      "completed_at": "2026-10-12T06:05:05.814814+00:00",
+      "exit_code": 0,
+      "raw": "026.json",
+      "sha256": "6d3c65dba5a68d0298a88384a02b031dbe050034f90dcae039b3573a89db6054"
+    },
+    {
+      "round": 1,
+      "parameter": 44,
+      "operation": "getPublicKey",
+      "variant": "candidate",
+      "index": 27,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 44, \"round\": 1, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:05.816063+00:00",
+      "completed_at": "2026-10-12T06:05:06.334669+00:00",
+      "exit_code": 0,
+      "raw": "027.json",
+      "sha256": "7f52d80e82b4fb2baecad2dc74ac8fef2f79a687b2eb77981c10e2b9a972e966"
+    },
+    {
+      "round": 1,
+      "parameter": 44,
+      "operation": "sign",
+      "variant": "candidate",
+      "index": 28,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 44, \"round\": 1, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:06.335869+00:00",
+      "completed_at": "2026-10-12T06:05:08.928754+00:00",
+      "exit_code": 0,
+      "raw": "028.json",
+      "sha256": "9b8d1cea87a3462dc2d8f220b3fdde2d5cc68c5c704769680c3915605dbbb10b"
+    },
+    {
+      "round": 1,
+      "parameter": 44,
+      "operation": "sign",
+      "variant": "baseline",
+      "index": 29,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 44, \"round\": 1, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:08.930331+00:00",
+      "completed_at": "2026-10-12T06:05:11.725198+00:00",
+      "exit_code": 0,
+      "raw": "029.json",
+      "sha256": "5bcd97322cbdeb50126c00ae6e58f410029e89a25583aef008f758abbd84a999"
+    },
+    {
+      "round": 1,
+      "parameter": 44,
+      "operation": "verify",
+      "variant": "baseline",
+      "index": 30,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 44, \"round\": 1, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:11.726516+00:00",
+      "completed_at": "2026-10-12T06:05:12.495059+00:00",
+      "exit_code": 0,
+      "raw": "030.json",
+      "sha256": "d29ae37f093a050cd9c4c572385428dfd853214b1eca93902a001762682a0ec1"
+    },
+    {
+      "round": 1,
+      "parameter": 44,
+      "operation": "verify",
+      "variant": "candidate",
+      "index": 31,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 44, \"round\": 1, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:12.496046+00:00",
+      "completed_at": "2026-10-12T06:05:13.216439+00:00",
+      "exit_code": 0,
+      "raw": "031.json",
+      "sha256": "1d96f1b2300d249babfa6fd9aebe94adab2da65fd6c57903289762204e990c95"
+    },
+    {
+      "round": 1,
+      "parameter": 65,
+      "operation": "keygen",
+      "variant": "baseline",
+      "index": 32,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 65, \"round\": 1, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:13.217414+00:00",
+      "completed_at": "2026-10-12T06:05:14.149203+00:00",
+      "exit_code": 0,
+      "raw": "032.json",
+      "sha256": "e5fc1a2e944c8e345415ee30c62137b3da6867ce52b5a8b3c6f44be079555702"
+    },
+    {
+      "round": 1,
+      "parameter": 65,
+      "operation": "keygen",
+      "variant": "candidate",
+      "index": 33,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 65, \"round\": 1, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:14.150166+00:00",
+      "completed_at": "2026-10-12T06:05:14.963317+00:00",
+      "exit_code": 0,
+      "raw": "033.json",
+      "sha256": "5871f8963546dc311c334919c4bbe17a8c690d3b64973a67877dbd43d88d594d"
+    },
+    {
+      "round": 1,
+      "parameter": 65,
+      "operation": "getPublicKey",
+      "variant": "candidate",
+      "index": 34,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 65, \"round\": 1, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:14.964301+00:00",
+      "completed_at": "2026-10-12T06:05:15.709080+00:00",
+      "exit_code": 0,
+      "raw": "034.json",
+      "sha256": "71c4af6e30eb5ae85dbc269f14d627c229a0ea3f6b8ab559081dcb48bbdf53d4"
+    },
+    {
+      "round": 1,
+      "parameter": 65,
+      "operation": "getPublicKey",
+      "variant": "baseline",
+      "index": 35,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 65, \"round\": 1, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:15.710059+00:00",
+      "completed_at": "2026-10-12T06:05:16.581942+00:00",
+      "exit_code": 0,
+      "raw": "035.json",
+      "sha256": "2de2e15487ee816a64b3b9930cf171675269dc2264b09cfaf54e6db058bd67d0"
+    },
+    {
+      "round": 1,
+      "parameter": 65,
+      "operation": "sign",
+      "variant": "baseline",
+      "index": 36,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 65, \"round\": 1, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:16.583093+00:00",
+      "completed_at": "2026-10-12T06:05:23.286951+00:00",
+      "exit_code": 0,
+      "raw": "036.json",
+      "sha256": "9c767706d135b09ead6f5cb04ac52470f0dd1902b88cf59f059c22798cb1ec15"
+    },
+    {
+      "round": 1,
+      "parameter": 65,
+      "operation": "sign",
+      "variant": "candidate",
+      "index": 37,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 65, \"round\": 1, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:23.288074+00:00",
+      "completed_at": "2026-10-12T06:05:29.216947+00:00",
+      "exit_code": 0,
+      "raw": "037.json",
+      "sha256": "466e66f1100e179aa9a8fe49042146c91f34f9250ff8beaaeb2a091f589d127e"
+    },
+    {
+      "round": 1,
+      "parameter": 65,
+      "operation": "verify",
+      "variant": "candidate",
+      "index": 38,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 65, \"round\": 1, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:29.218020+00:00",
+      "completed_at": "2026-10-12T06:05:30.208634+00:00",
+      "exit_code": 0,
+      "raw": "038.json",
+      "sha256": "101e8f43398727c3e3d5580893345e145f14a84e86973de540d93722c9eb809d"
+    },
+    {
+      "round": 1,
+      "parameter": 65,
+      "operation": "verify",
+      "variant": "baseline",
+      "index": 39,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 65, \"round\": 1, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:30.209715+00:00",
+      "completed_at": "2026-10-12T06:05:31.326239+00:00",
+      "exit_code": 0,
+      "raw": "039.json",
+      "sha256": "98b2b5e2ef6689427064cde3c70f7363717147087cd6ea3089577704b9216263"
+    },
+    {
+      "round": 1,
+      "parameter": 87,
+      "operation": "keygen",
+      "variant": "candidate",
+      "index": 40,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 87, \"round\": 1, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:31.327316+00:00",
+      "completed_at": "2026-10-12T06:05:32.484295+00:00",
+      "exit_code": 0,
+      "raw": "040.json",
+      "sha256": "ac60386bc8f4c0948af9b371c947cbe4bb30e10751cb40074c39efd67e67adc1"
+    },
+    {
+      "round": 1,
+      "parameter": 87,
+      "operation": "keygen",
+      "variant": "baseline",
+      "index": 41,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 87, \"round\": 1, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:32.485616+00:00",
+      "completed_at": "2026-10-12T06:05:33.868638+00:00",
+      "exit_code": 0,
+      "raw": "041.json",
+      "sha256": "84a4386f25eaef9c38d71b355f835c07f199ea9a2211211682f8e1e58beb4b3a"
+    },
+    {
+      "round": 1,
+      "parameter": 87,
+      "operation": "getPublicKey",
+      "variant": "baseline",
+      "index": 42,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 87, \"round\": 1, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:33.869792+00:00",
+      "completed_at": "2026-10-12T06:05:35.181333+00:00",
+      "exit_code": 0,
+      "raw": "042.json",
+      "sha256": "acf5da6b10bb1adec0bf6daadf5446e504886ad1000269f2740337d34eeb9338"
+    },
+    {
+      "round": 1,
+      "parameter": 87,
+      "operation": "getPublicKey",
+      "variant": "candidate",
+      "index": 43,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 87, \"round\": 1, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:35.182670+00:00",
+      "completed_at": "2026-10-12T06:05:36.258362+00:00",
+      "exit_code": 0,
+      "raw": "043.json",
+      "sha256": "6694018bf8e59759e468cacc5386722ef571a292f53357c3f003283a3d5438c0"
+    },
+    {
+      "round": 1,
+      "parameter": 87,
+      "operation": "sign",
+      "variant": "candidate",
+      "index": 44,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 87, \"round\": 1, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:36.259836+00:00",
+      "completed_at": "2026-10-12T06:05:42.989886+00:00",
+      "exit_code": 0,
+      "raw": "044.json",
+      "sha256": "46ed0e54f9f13e430d0cf5485a7fc5791d2fd4ada5c4e792a3a87b9771dcfd8a"
+    },
+    {
+      "round": 1,
+      "parameter": 87,
+      "operation": "sign",
+      "variant": "baseline",
+      "index": 45,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 87, \"round\": 1, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:42.991066+00:00",
+      "completed_at": "2026-10-12T06:05:51.014942+00:00",
+      "exit_code": 0,
+      "raw": "045.json",
+      "sha256": "eef72c5930bba45dcc23a1288bb9b0b5bc0b8aaaf2fdd86e7fc9072af943d14e"
+    },
+    {
+      "round": 1,
+      "parameter": 87,
+      "operation": "verify",
+      "variant": "baseline",
+      "index": 46,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 87, \"round\": 1, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:51.016329+00:00",
+      "completed_at": "2026-10-12T06:05:52.659897+00:00",
+      "exit_code": 0,
+      "raw": "046.json",
+      "sha256": "eea35f4fe4222deb473e600c0c916a87934c778cb2718b23af63270a018d2041"
+    },
+    {
+      "round": 1,
+      "parameter": 87,
+      "operation": "verify",
+      "variant": "candidate",
+      "index": 47,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 87, \"round\": 1, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:52.661081+00:00",
+      "completed_at": "2026-10-12T06:05:54.060886+00:00",
+      "exit_code": 0,
+      "raw": "047.json",
+      "sha256": "b5ea523dfdbac653a6c370787c36dd4d11b54304e2f73d38fda2990d744887d1"
+    },
+    {
+      "round": 2,
+      "parameter": 44,
+      "operation": "keygen",
+      "variant": "baseline",
+      "index": 48,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 44, \"round\": 2, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:54.062060+00:00",
+      "completed_at": "2026-10-12T06:05:54.684857+00:00",
+      "exit_code": 0,
+      "raw": "048.json",
+      "sha256": "b729ccc334259ca15b7d5a4afc988c569b182d1191a89095aba8999f5da9307d"
+    },
+    {
+      "round": 2,
+      "parameter": 44,
+      "operation": "keygen",
+      "variant": "candidate",
+      "index": 49,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 44, \"round\": 2, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:54.686012+00:00",
+      "completed_at": "2026-10-12T06:05:55.250423+00:00",
+      "exit_code": 0,
+      "raw": "049.json",
+      "sha256": "f68764fdd5f57463784296305540a8bef0e009b8f04a1a588cb9c66a70d704b0"
+    },
+    {
+      "round": 2,
+      "parameter": 44,
+      "operation": "getPublicKey",
+      "variant": "candidate",
+      "index": 50,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 44, \"round\": 2, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:55.251626+00:00",
+      "completed_at": "2026-10-12T06:05:55.778945+00:00",
+      "exit_code": 0,
+      "raw": "050.json",
+      "sha256": "44e3783559188a05b291325e393cb3ee71e368de3bb2c2a42bd6a22ad4055fba"
+    },
+    {
+      "round": 2,
+      "parameter": 44,
+      "operation": "getPublicKey",
+      "variant": "baseline",
+      "index": 51,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 44, \"round\": 2, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:55.780422+00:00",
+      "completed_at": "2026-10-12T06:05:56.360314+00:00",
+      "exit_code": 0,
+      "raw": "051.json",
+      "sha256": "76d9d07950633c64bac23ca1f5717fd071703434d08260529dd1ce4533fbb2ac"
+    },
+    {
+      "round": 2,
+      "parameter": 44,
+      "operation": "sign",
+      "variant": "baseline",
+      "index": 52,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 44, \"round\": 2, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:05:56.361871+00:00",
+      "completed_at": "2026-10-12T06:05:59.167404+00:00",
+      "exit_code": 0,
+      "raw": "052.json",
+      "sha256": "0df2fb2d602385639cf5c876507ba5b542eb3045e952857327f6163b5382070a"
+    },
+    {
+      "round": 2,
+      "parameter": 44,
+      "operation": "sign",
+      "variant": "candidate",
+      "index": 53,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 44, \"round\": 2, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:05:59.168652+00:00",
+      "completed_at": "2026-10-12T06:06:01.767767+00:00",
+      "exit_code": 0,
+      "raw": "053.json",
+      "sha256": "b86cf7a0299875f8d6d7ad4df71897763dfb63002290f98108155273a5ab9e8d"
+    },
+    {
+      "round": 2,
+      "parameter": 44,
+      "operation": "verify",
+      "variant": "candidate",
+      "index": 54,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 44, \"round\": 2, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:01.769096+00:00",
+      "completed_at": "2026-10-12T06:06:02.488895+00:00",
+      "exit_code": 0,
+      "raw": "054.json",
+      "sha256": "af80c2d6546885ef7d111fe67a1331f0cfe0a3c6eb125fb199881677ff7d5112"
+    },
+    {
+      "round": 2,
+      "parameter": 44,
+      "operation": "verify",
+      "variant": "baseline",
+      "index": 55,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 44, \"round\": 2, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:02.490154+00:00",
+      "completed_at": "2026-10-12T06:06:03.259687+00:00",
+      "exit_code": 0,
+      "raw": "055.json",
+      "sha256": "9e4e58c35b8aedd311b7c0df26e0770a433cd86b32de3a7158fa49c4a841c923"
+    },
+    {
+      "round": 2,
+      "parameter": 65,
+      "operation": "keygen",
+      "variant": "candidate",
+      "index": 56,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 65, \"round\": 2, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:03.261065+00:00",
+      "completed_at": "2026-10-12T06:06:04.079925+00:00",
+      "exit_code": 0,
+      "raw": "056.json",
+      "sha256": "ea33168f3bace3a8167cf5eee997970685a5dd314d55ad4f5ec2051fabf6b496"
+    },
+    {
+      "round": 2,
+      "parameter": 65,
+      "operation": "keygen",
+      "variant": "baseline",
+      "index": 57,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 65, \"round\": 2, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:04.081204+00:00",
+      "completed_at": "2026-10-12T06:06:05.009251+00:00",
+      "exit_code": 0,
+      "raw": "057.json",
+      "sha256": "8ac4f30c2a4186b9e91c11e6419cfe04455d6e220e8d7875ce82da1bcffb9e0f"
+    },
+    {
+      "round": 2,
+      "parameter": 65,
+      "operation": "getPublicKey",
+      "variant": "baseline",
+      "index": 58,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 65, \"round\": 2, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:05.010548+00:00",
+      "completed_at": "2026-10-12T06:06:05.874898+00:00",
+      "exit_code": 0,
+      "raw": "058.json",
+      "sha256": "3c18dbd192eb4a518537c78587e6953fea9bb1fb3fb57aad2f493a01fed22e6c"
+    },
+    {
+      "round": 2,
+      "parameter": 65,
+      "operation": "getPublicKey",
+      "variant": "candidate",
+      "index": 59,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 65, \"round\": 2, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:05.876330+00:00",
+      "completed_at": "2026-10-12T06:06:06.629768+00:00",
+      "exit_code": 0,
+      "raw": "059.json",
+      "sha256": "8bab04da92be56e4a07a8d099c60eb5211a4adcf8ede2d23ac1af7e379cb413d"
+    },
+    {
+      "round": 2,
+      "parameter": 65,
+      "operation": "sign",
+      "variant": "candidate",
+      "index": 60,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 65, \"round\": 2, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:06.631134+00:00",
+      "completed_at": "2026-10-12T06:06:12.543337+00:00",
+      "exit_code": 0,
+      "raw": "060.json",
+      "sha256": "64893fe9f29b9773697049c597b55523ce8d3776c786997ad124ee86d668d61c"
+    },
+    {
+      "round": 2,
+      "parameter": 65,
+      "operation": "sign",
+      "variant": "baseline",
+      "index": 61,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 65, \"round\": 2, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:12.544710+00:00",
+      "completed_at": "2026-10-12T06:06:19.292637+00:00",
+      "exit_code": 0,
+      "raw": "061.json",
+      "sha256": "bd1171933596d646675ab9ab3298f26897240311e45d7b7ad539403aed4e4b38"
+    },
+    {
+      "round": 2,
+      "parameter": 65,
+      "operation": "verify",
+      "variant": "baseline",
+      "index": 62,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 65, \"round\": 2, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:19.294019+00:00",
+      "completed_at": "2026-10-12T06:06:20.408690+00:00",
+      "exit_code": 0,
+      "raw": "062.json",
+      "sha256": "cc9f500b9c48e3bd63e9476952de176109da37e55de9f7d1b7b87119088815f7"
+    },
+    {
+      "round": 2,
+      "parameter": 65,
+      "operation": "verify",
+      "variant": "candidate",
+      "index": 63,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 65, \"round\": 2, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:20.410033+00:00",
+      "completed_at": "2026-10-12T06:06:21.409969+00:00",
+      "exit_code": 0,
+      "raw": "063.json",
+      "sha256": "7f207674ed9e823daffd60c87656938a7c11fb4ac8adddb585949eaea1460147"
+    },
+    {
+      "round": 2,
+      "parameter": 87,
+      "operation": "keygen",
+      "variant": "baseline",
+      "index": 64,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 87, \"round\": 2, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:21.411337+00:00",
+      "completed_at": "2026-10-12T06:06:22.798934+00:00",
+      "exit_code": 0,
+      "raw": "064.json",
+      "sha256": "32f21a80082adbfe219548e9c98dee915cc62d71aa417cf9ea07202c437285d2"
+    },
+    {
+      "round": 2,
+      "parameter": 87,
+      "operation": "keygen",
+      "variant": "candidate",
+      "index": 65,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 87, \"round\": 2, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:22.800391+00:00",
+      "completed_at": "2026-10-12T06:06:23.948155+00:00",
+      "exit_code": 0,
+      "raw": "065.json",
+      "sha256": "e8a7fece3d3dcc662869d1ac560ce81c79855c916a8374decb9e47374c067d44"
+    },
+    {
+      "round": 2,
+      "parameter": 87,
+      "operation": "getPublicKey",
+      "variant": "candidate",
+      "index": 66,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 87, \"round\": 2, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:23.949647+00:00",
+      "completed_at": "2026-10-12T06:06:25.022836+00:00",
+      "exit_code": 0,
+      "raw": "066.json",
+      "sha256": "241fa3a1b975b5dc978aa81b0b6516b123e44ae1bcb7413906b8e683a9444f7b"
+    },
+    {
+      "round": 2,
+      "parameter": 87,
+      "operation": "getPublicKey",
+      "variant": "baseline",
+      "index": 67,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 87, \"round\": 2, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:25.024459+00:00",
+      "completed_at": "2026-10-12T06:06:26.353818+00:00",
+      "exit_code": 0,
+      "raw": "067.json",
+      "sha256": "3f68fd9ad6ee684caea56745c4f2981c3d413afd2f5eb4b18858823794df5c3f"
+    },
+    {
+      "round": 2,
+      "parameter": 87,
+      "operation": "sign",
+      "variant": "baseline",
+      "index": 68,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 87, \"round\": 2, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:26.355255+00:00",
+      "completed_at": "2026-10-12T06:06:34.363858+00:00",
+      "exit_code": 0,
+      "raw": "068.json",
+      "sha256": "1f5a8af38bcdc5c0e4f1196a2e6683c53e4b77ec6fa8f8c7c5a9105885acf1dc"
+    },
+    {
+      "round": 2,
+      "parameter": 87,
+      "operation": "sign",
+      "variant": "candidate",
+      "index": 69,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 87, \"round\": 2, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:34.365659+00:00",
+      "completed_at": "2026-10-12T06:06:41.111416+00:00",
+      "exit_code": 0,
+      "raw": "069.json",
+      "sha256": "c8154e0331e10e0ebd98f74eadc208232ee43e9d17376742501a9881ae4c2824"
+    },
+    {
+      "round": 2,
+      "parameter": 87,
+      "operation": "verify",
+      "variant": "candidate",
+      "index": 70,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 87, \"round\": 2, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:41.112983+00:00",
+      "completed_at": "2026-10-12T06:06:42.518173+00:00",
+      "exit_code": 0,
+      "raw": "070.json",
+      "sha256": "95c8aada972705369c809826578d0321ad81bc00f0917dad5a7637fbd2b7cf70"
+    },
+    {
+      "round": 2,
+      "parameter": 87,
+      "operation": "verify",
+      "variant": "baseline",
+      "index": 71,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 87, \"round\": 2, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:42.519737+00:00",
+      "completed_at": "2026-10-12T06:06:44.292336+00:00",
+      "exit_code": 0,
+      "raw": "071.json",
+      "sha256": "4acc513630dcf5c0152b1aad6904b83bce5a06679752f3b772c2f9ff2cb8688e"
+    },
+    {
+      "round": 3,
+      "parameter": 44,
+      "operation": "keygen",
+      "variant": "candidate",
+      "index": 72,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 44, \"round\": 3, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:44.293928+00:00",
+      "completed_at": "2026-10-12T06:06:44.862607+00:00",
+      "exit_code": 0,
+      "raw": "072.json",
+      "sha256": "5efebd110ab7556172c81e2567d82ce50313d8b1e6cfa2c81bed611e13783b0c"
+    },
+    {
+      "round": 3,
+      "parameter": 44,
+      "operation": "keygen",
+      "variant": "baseline",
+      "index": 73,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 44, \"round\": 3, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:44.864294+00:00",
+      "completed_at": "2026-10-12T06:06:45.487659+00:00",
+      "exit_code": 0,
+      "raw": "073.json",
+      "sha256": "d160df6235acc8912f5e41b67cb22b957f9183e23b6afb8ad90f8e92982cf9c2"
+    },
+    {
+      "round": 3,
+      "parameter": 44,
+      "operation": "getPublicKey",
+      "variant": "baseline",
+      "index": 74,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 44, \"round\": 3, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:45.489505+00:00",
+      "completed_at": "2026-10-12T06:06:46.083287+00:00",
+      "exit_code": 0,
+      "raw": "074.json",
+      "sha256": "3f3b1a7b4d8c44a909a17769486a64cc85b9fa07ecd7d63a3ce0ca5b21b98b14"
+    },
+    {
+      "round": 3,
+      "parameter": 44,
+      "operation": "getPublicKey",
+      "variant": "candidate",
+      "index": 75,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 44, \"round\": 3, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:46.085315+00:00",
+      "completed_at": "2026-10-12T06:06:46.604971+00:00",
+      "exit_code": 0,
+      "raw": "075.json",
+      "sha256": "1eefc43305b309f325f81524002f385d689263d5dec3d1497cd5298c37dca7dc"
+    },
+    {
+      "round": 3,
+      "parameter": 44,
+      "operation": "sign",
+      "variant": "candidate",
+      "index": 76,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 44, \"round\": 3, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:46.606537+00:00",
+      "completed_at": "2026-10-12T06:06:49.221717+00:00",
+      "exit_code": 0,
+      "raw": "076.json",
+      "sha256": "6f2f7774aac67605b5d101a936eec3032fa4fa0bf5b148ae1e9798bb5a5f3a7a"
+    },
+    {
+      "round": 3,
+      "parameter": 44,
+      "operation": "sign",
+      "variant": "baseline",
+      "index": 77,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 44, \"round\": 3, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:49.223302+00:00",
+      "completed_at": "2026-10-12T06:06:52.042877+00:00",
+      "exit_code": 0,
+      "raw": "077.json",
+      "sha256": "c8583f373de3e1b950622186b2571f5216217974d973c70103cf995cc07f891b"
+    },
+    {
+      "round": 3,
+      "parameter": 44,
+      "operation": "verify",
+      "variant": "baseline",
+      "index": 78,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 44, \"round\": 3, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:52.044684+00:00",
+      "completed_at": "2026-10-12T06:06:52.813977+00:00",
+      "exit_code": 0,
+      "raw": "078.json",
+      "sha256": "210e85d06138b0c07da812d4271eb05a0c2f3d8650fb36616ce2004701c7af5c"
+    },
+    {
+      "round": 3,
+      "parameter": 44,
+      "operation": "verify",
+      "variant": "candidate",
+      "index": 79,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 44, \"round\": 3, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:52.815571+00:00",
+      "completed_at": "2026-10-12T06:06:53.519909+00:00",
+      "exit_code": 0,
+      "raw": "079.json",
+      "sha256": "517ee2d059ad7bf746857d2bca37296e336bd982e6c83b49253a9a21904c8dac"
+    },
+    {
+      "round": 3,
+      "parameter": 65,
+      "operation": "keygen",
+      "variant": "baseline",
+      "index": 80,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 65, \"round\": 3, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:53.521698+00:00",
+      "completed_at": "2026-10-12T06:06:54.454418+00:00",
+      "exit_code": 0,
+      "raw": "080.json",
+      "sha256": "89d91cfafbe99954dc8c25612c29625234b1528b01c2f3ab79c81657536fdecd"
+    },
+    {
+      "round": 3,
+      "parameter": 65,
+      "operation": "keygen",
+      "variant": "candidate",
+      "index": 81,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 65, \"round\": 3, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:54.456026+00:00",
+      "completed_at": "2026-10-12T06:06:55.269289+00:00",
+      "exit_code": 0,
+      "raw": "081.json",
+      "sha256": "36b1d0dbd89d9c4840994664b4e387570b10719e8c058fbae5d244d859522200"
+    },
+    {
+      "round": 3,
+      "parameter": 65,
+      "operation": "getPublicKey",
+      "variant": "candidate",
+      "index": 82,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 65, \"round\": 3, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:06:55.270903+00:00",
+      "completed_at": "2026-10-12T06:06:56.019353+00:00",
+      "exit_code": 0,
+      "raw": "082.json",
+      "sha256": "b6d98e2327051064a49d8dbcc2ed639f52330ac8ce24f9e904f263709f34cfc5"
+    },
+    {
+      "round": 3,
+      "parameter": 65,
+      "operation": "getPublicKey",
+      "variant": "baseline",
+      "index": 83,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 65, \"round\": 3, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:56.021055+00:00",
+      "completed_at": "2026-10-12T06:06:56.882344+00:00",
+      "exit_code": 0,
+      "raw": "083.json",
+      "sha256": "b5b5c77605c70ae84b5c2d26bd2306ad6644dd691b19fa1e400e053e24757eac"
+    },
+    {
+      "round": 3,
+      "parameter": 65,
+      "operation": "sign",
+      "variant": "baseline",
+      "index": 84,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 65, \"round\": 3, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:06:56.884037+00:00",
+      "completed_at": "2026-10-12T06:07:03.579881+00:00",
+      "exit_code": 0,
+      "raw": "084.json",
+      "sha256": "9491c4075532acb27b40e945b7d73a783c24f3794678860366f02d5b15869021"
+    },
+    {
+      "round": 3,
+      "parameter": 65,
+      "operation": "sign",
+      "variant": "candidate",
+      "index": 85,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 65, \"round\": 3, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:07:03.581632+00:00",
+      "completed_at": "2026-10-12T06:07:09.521172+00:00",
+      "exit_code": 0,
+      "raw": "085.json",
+      "sha256": "25fd2046f5ff40e6aa6c02e2271bfdb6608ada1f75c9c53bbd67b37a179f1dd9"
+    },
+    {
+      "round": 3,
+      "parameter": 65,
+      "operation": "verify",
+      "variant": "candidate",
+      "index": 86,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 65, \"round\": 3, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:07:09.523218+00:00",
+      "completed_at": "2026-10-12T06:07:10.518219+00:00",
+      "exit_code": 0,
+      "raw": "086.json",
+      "sha256": "c62ce199abd4f09430f2715f940c9e1b7805089f0779ef15c5758c7f5bfd5568"
+    },
+    {
+      "round": 3,
+      "parameter": 65,
+      "operation": "verify",
+      "variant": "baseline",
+      "index": 87,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 65, \"round\": 3, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:07:10.520203+00:00",
+      "completed_at": "2026-10-12T06:07:11.645159+00:00",
+      "exit_code": 0,
+      "raw": "087.json",
+      "sha256": "761fe84d155422d2e568c465e939ca0663332b03f9605c0228930c77449c9148"
+    },
+    {
+      "round": 3,
+      "parameter": 87,
+      "operation": "keygen",
+      "variant": "candidate",
+      "index": 88,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 87, \"round\": 3, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:07:11.646920+00:00",
+      "completed_at": "2026-10-12T06:07:12.814207+00:00",
+      "exit_code": 0,
+      "raw": "088.json",
+      "sha256": "b98dcc4d1d463db1970b841cfea10e0cf6c4913ed991b4701508f917aabddf14"
+    },
+    {
+      "round": 3,
+      "parameter": 87,
+      "operation": "keygen",
+      "variant": "baseline",
+      "index": 89,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"keygen\", \"parameter\": 87, \"round\": 3, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:07:12.815992+00:00",
+      "completed_at": "2026-10-12T06:07:14.206202+00:00",
+      "exit_code": 0,
+      "raw": "089.json",
+      "sha256": "b1c28cc3c04c4d55e58931460ba52e3f9a0ae854f6239d327fd1541f5b441c88"
+    },
+    {
+      "round": 3,
+      "parameter": 87,
+      "operation": "getPublicKey",
+      "variant": "baseline",
+      "index": 90,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 87, \"round\": 3, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:07:14.207889+00:00",
+      "completed_at": "2026-10-12T06:07:15.521591+00:00",
+      "exit_code": 0,
+      "raw": "090.json",
+      "sha256": "28ed3066dba066021188a3201c3c775d2233a53128b297d12681383c532b97ef"
+    },
+    {
+      "round": 3,
+      "parameter": 87,
+      "operation": "getPublicKey",
+      "variant": "candidate",
+      "index": 91,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"getPublicKey\", \"parameter\": 87, \"round\": 3, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:07:15.523490+00:00",
+      "completed_at": "2026-10-12T06:07:16.632893+00:00",
+      "exit_code": 0,
+      "raw": "091.json",
+      "sha256": "55f67a1c64f2060717431b6bf14376e7f5632f11f4bf61dc35adc5389d91d243"
+    },
+    {
+      "round": 3,
+      "parameter": 87,
+      "operation": "sign",
+      "variant": "candidate",
+      "index": 92,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 87, \"round\": 3, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:07:16.634924+00:00",
+      "completed_at": "2026-10-12T06:07:23.385995+00:00",
+      "exit_code": 0,
+      "raw": "092.json",
+      "sha256": "88f2d652c9a06f7f771d9fc8f0c34f9ca6ce1e1b4ce1ff27413cdc6821e8f6a7"
+    },
+    {
+      "round": 3,
+      "parameter": 87,
+      "operation": "sign",
+      "variant": "baseline",
+      "index": 93,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"sign\", \"parameter\": 87, \"round\": 3, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:07:23.387763+00:00",
+      "completed_at": "2026-10-12T06:07:31.339354+00:00",
+      "exit_code": 0,
+      "raw": "093.json",
+      "sha256": "ed7d030b35c287acb7838514c521437db01ae68f0a26da99dde8c1a75c9b2c37"
+    },
+    {
+      "round": 3,
+      "parameter": 87,
+      "operation": "verify",
+      "variant": "baseline",
+      "index": 94,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/baseline/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 87, \"round\": 3, \"variant\": \"baseline\"}"
+      ],
+      "started_at": "2026-10-12T06:07:31.341125+00:00",
+      "completed_at": "2026-10-12T06:07:32.973673+00:00",
+      "exit_code": 0,
+      "raw": "094.json",
+      "sha256": "6b58e25ddce2ab33e61bcc00b782314d1e2c5d87576e8791fb850e082df06e5e"
+    },
+    {
+      "round": 3,
+      "parameter": 87,
+      "operation": "verify",
+      "variant": "candidate",
+      "index": 95,
+      "argv": [
+        "/Users/dandelionlabs/.nvm/versions/node/v22.23.2/bin/node",
+        "--expose-gc",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/experiments/published-memory/worker.mjs",
+        "{\"fixture\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/fixture.json\", \"mode\": \"retained\", \"module\": \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/noble/build/published-memory/candidate/node_modules/@noble/post-quantum/ml-dsa.js\", \"operation\": \"verify\", \"parameter\": 87, \"round\": 3, \"variant\": \"candidate\"}"
+      ],
+      "started_at": "2026-10-12T06:07:32.975639+00:00",
+      "completed_at": "2026-10-12T06:07:34.369292+00:00",
+      "exit_code": 0,
+      "raw": "095.json",
+      "sha256": "d180b8ca647e56c5402e05b6dea3ceb592b36ac7b2264754ecd8aa03515d0951"
+    }
+  ],
+  "completed_at": "2026-10-12T06:07:34.557075+00:00",
+  "all_checks_passed": true
+}

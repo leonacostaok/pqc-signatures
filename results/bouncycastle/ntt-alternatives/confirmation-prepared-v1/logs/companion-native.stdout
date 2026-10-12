@@ -1,0 +1,7 @@
+ORIGIN org.bouncycastle.crypto.signers.mldsa.Ntt /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/prepared-v1/companion
+ORIGIN org.bouncycastle.crypto.signers.mldsa.PolyVecMatrix /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/prepared-v1/companion
+ORIGIN org.bouncycastle.crypto.signers.mldsa.Poly /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/prepared-v1/companion
+ORIGIN org.bouncycastle.crypto.signers.mldsa.MLDSAEngine /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/prepared-v1/companion
+TEST org.bouncycastle.pqc.crypto.test.MLDSATest count=14 ignored=0 failures=0
+TEST org.bouncycastle.pqc.crypto.test.MLDSAWycheproofTest count=3 ignored=0 failures=0
+PASS native methods=17

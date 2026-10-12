@@ -1,0 +1,19 @@
+{
+  "repository": "/Users/dandelionlabs/development/personal/circl",
+  "production_path": "sign/slhdsa/state.go",
+  "source_identity": {
+    "baseline": {
+      "commit": "91db3e785ba2635b4f24a023e1ad76d2780e2865",
+      "production_sha256": "9e08f7a7c6f73fc54e89f7afa302e18ff370eb66043588b09d8583964827dd78",
+      "measured_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/circl-performance/libs/circl/build/sha2-prefix/77d64496410a03a3/baseline/sign/slhdsa/state.go",
+      "exact_match": true
+    },
+    "candidate": {
+      "commit": "1c31496b567c27e672979358befd2505cb735fa9",
+      "production_sha256": "b65c3ea2b17a2cc440f5cfc9b527c928e6d963e7bd7d2c49cecd954b07105172",
+      "measured_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/circl-performance/libs/circl/build/sha2-prefix/77d64496410a03a3/candidate/sign/slhdsa/state.go",
+      "exact_match": true
+    }
+  },
+  "diff": " sign/slhdsa/state.go             |  78 ++++++++++++++++---\n sign/slhdsa/state_prefix_test.go | 164 +++++++++++++++++++++++++++++++++++++++\n 2 files changed, 233 insertions(+), 9 deletions(-)\n"
+}

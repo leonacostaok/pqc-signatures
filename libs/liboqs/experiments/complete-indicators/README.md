@@ -1,0 +1,5 @@
+# liboqs completion indicators
+
+The shared [C-provider protocol and tools](../../../openssl/experiments/complete-indicators/README.md) measure the unchanged ML-DSA, SHAKE and Falcon baselines separately from paired SHA2 resource diagnostics. The expanded baseline is built at `fd44469daeffe6b28f031f54f9bb66cbae69a572`; paired SHA2 probes reuse the original sealed libraries whose changed runtime matches published head `94b42a7232057236dcb3dd56310df3d9d0a1cbd7`. No reduced ablation or experimental implementation is substituted for that patch.
+
+Results, failed preparation attempts, build logs and source bindings are retained in [results/liboqs/complete-indicators](../../../../results/liboqs/complete-indicators/). Operation allocation counters, process peak RSS and observed overwritten thread-stack extent have different boundaries and must not be treated as interchangeable memory totals. The final summary records those boundaries, original denominators, percentage changes, raw source references and unmeasured values explicitly.

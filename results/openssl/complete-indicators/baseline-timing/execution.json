@@ -1,0 +1,2537 @@
+{
+  "schema": "c-provider-indicators-execution-v1",
+  "complete": true,
+  "provider": "openssl",
+  "phase": "baseline-timing",
+  "manifest": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/ready.json",
+  "manifest_sha256": "8e1c55732ea272eb6ce8ae656c4c4aedf52b50895439d0b970f564ad747bde0a",
+  "collector_sha256": "a9bb110a29345cbc771763c982a9b57d19afcaa28ec6218785408de1dfa7df1c",
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "python_optimization": 0,
+  "started_at": "2026-10-12T06:57:59.059050+00:00",
+  "jobs": [
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 0
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 1
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192f",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-128s",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256f",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 0,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 1,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-192s",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    },
+    {
+      "parameter": "SLH-DSA-SHAKE-256s",
+      "op": 2,
+      "side": "baseline",
+      "mode": "timing",
+      "key": 0,
+      "fork": 2
+    }
+  ],
+  "executed": [
+    {
+      "index": 0,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:57:59.060190+00:00",
+      "finished_at": "2026-10-12T06:58:00.485823+00:00",
+      "returncode": 0,
+      "raw_file": "000.jsonl",
+      "raw_sha256": "c9da2ad116604ccb0e9aa446b4c03eb7232ad0a71450fc55d4d55d8896dfee23",
+      "stderr_file": "000.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 1,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:00.487061+00:00",
+      "finished_at": "2026-10-12T06:58:00.494519+00:00",
+      "returncode": 0,
+      "raw_file": "001.jsonl",
+      "raw_sha256": "0e0d969bfae07b17f2adf1037faa55301bfad81c990e66606d5441aeb9077a13",
+      "stderr_file": "001.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 2,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:00.495671+00:00",
+      "finished_at": "2026-10-12T06:58:00.516875+00:00",
+      "returncode": 0,
+      "raw_file": "002.jsonl",
+      "raw_sha256": "fd0df9d62db9dd42bc10acce9aa3d9440ec9c9ce9650e9cecf0345a2b8cb4a63",
+      "stderr_file": "002.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 3,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-128s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:00.517912+00:00",
+      "finished_at": "2026-10-12T06:58:01.476602+00:00",
+      "returncode": 0,
+      "raw_file": "003.jsonl",
+      "raw_sha256": "ec33cef08cf29b15ba1cb06df62e8881e3b853b0268d58fc09d35e67d8ccba2f",
+      "stderr_file": "003.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 4,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:01.477851+00:00",
+      "finished_at": "2026-10-12T06:58:01.506090+00:00",
+      "returncode": 0,
+      "raw_file": "004.jsonl",
+      "raw_sha256": "f6ba76057c1ef2eab843f8ade51aea33e08d3ac1c74b99db2f0aa9e2e647a86d",
+      "stderr_file": "004.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 5,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:01.507032+00:00",
+      "finished_at": "2026-10-12T06:58:01.543536+00:00",
+      "returncode": 0,
+      "raw_file": "005.jsonl",
+      "raw_sha256": "7f2a89ab22d742ea055487c6ef910c2dfbe2fcf12048cebe9b1da58bbf85123e",
+      "stderr_file": "005.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 6,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:01.544436+00:00",
+      "finished_at": "2026-10-12T06:58:01.555858+00:00",
+      "returncode": 0,
+      "raw_file": "006.jsonl",
+      "raw_sha256": "d08ab825224827dfd9938a3853b0f92f1a5474536facd55d60d3f28c06a834f9",
+      "stderr_file": "006.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 7,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:01.556799+00:00",
+      "finished_at": "2026-10-12T06:58:02.737692+00:00",
+      "returncode": 0,
+      "raw_file": "007.jsonl",
+      "raw_sha256": "6a55dca8015043cedd5ea009df1628c42feb94202f7724a0f987e93fd17ff1da",
+      "stderr_file": "007.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 8,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-128s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:02.739558+00:00",
+      "finished_at": "2026-10-12T06:58:02.752927+00:00",
+      "returncode": 0,
+      "raw_file": "008.jsonl",
+      "raw_sha256": "1e17add649eb280671c6c904e6167aaf0f10cc13d28053a393c35f4746208a03",
+      "stderr_file": "008.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 9,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-128s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:02.753920+00:00",
+      "finished_at": "2026-10-12T06:58:10.024916+00:00",
+      "returncode": 0,
+      "raw_file": "009.jsonl",
+      "raw_sha256": "f1b04facca5e90f3ebc46412cf468f8c8ae702e8a3269f62a406e4c71e2f972c",
+      "stderr_file": "009.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 10,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:10.026261+00:00",
+      "finished_at": "2026-10-12T06:58:10.036831+00:00",
+      "returncode": 0,
+      "raw_file": "010.jsonl",
+      "raw_sha256": "3543415bdee73c7377aaf7049b41bfadc7ae7c2c9bff973b6c8d131981ad5d46",
+      "stderr_file": "010.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 11,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:10.037973+00:00",
+      "finished_at": "2026-10-12T06:58:10.045690+00:00",
+      "returncode": 0,
+      "raw_file": "011.jsonl",
+      "raw_sha256": "fdfab0557f7454d33528bea037b1e06b6fffd7e77ef8940380cbef2d66e61c06",
+      "stderr_file": "011.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 12,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:10.046833+00:00",
+      "finished_at": "2026-10-12T06:58:10.111862+00:00",
+      "returncode": 0,
+      "raw_file": "012.jsonl",
+      "raw_sha256": "01230ce32d86a29816e850b6ecf517e64d39043ee14d9a713ebfb3fe52e70004",
+      "stderr_file": "012.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 13,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:10.112948+00:00",
+      "finished_at": "2026-10-12T06:58:10.150968+00:00",
+      "returncode": 0,
+      "raw_file": "013.jsonl",
+      "raw_sha256": "9e169b3b9a29931a2cda3a6bb454ed201bf60d5a04af5b68f3911cc418703114",
+      "stderr_file": "013.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 14,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:10.152056+00:00",
+      "finished_at": "2026-10-12T06:58:10.159323+00:00",
+      "returncode": 0,
+      "raw_file": "014.jsonl",
+      "raw_sha256": "7c7616926ea163bcc59c5b89b3fb6243ffeeb75e256bff86109e8129dc2d050f",
+      "stderr_file": "014.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 15,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:10.160376+00:00",
+      "finished_at": "2026-10-12T06:58:10.173462+00:00",
+      "returncode": 0,
+      "raw_file": "015.jsonl",
+      "raw_sha256": "3b5258d2d75fb23ad87175023cdfb3bc3894694515573e1485d76f737c3884ab",
+      "stderr_file": "015.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 16,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:10.174509+00:00",
+      "finished_at": "2026-10-12T06:58:10.181427+00:00",
+      "returncode": 0,
+      "raw_file": "016.jsonl",
+      "raw_sha256": "a00a9c92a530cc32c58f4532a1cccd2e3d63a332e246fac2eb719b5c3308b782",
+      "stderr_file": "016.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 17,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:10.182519+00:00",
+      "finished_at": "2026-10-12T06:58:23.036599+00:00",
+      "returncode": 0,
+      "raw_file": "017.jsonl",
+      "raw_sha256": "dc983b4ef9ed6d283451ad52d96a61fc3e88992391f988d39e77f951f6ee4923",
+      "stderr_file": "017.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 18,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:23.038116+00:00",
+      "finished_at": "2026-10-12T06:58:23.055596+00:00",
+      "returncode": 0,
+      "raw_file": "018.jsonl",
+      "raw_sha256": "0fbd96254284c19d3e5b0a4653cf289884c215ac25aede4bb3b74b7383ec886f",
+      "stderr_file": "018.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 19,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:23.056781+00:00",
+      "finished_at": "2026-10-12T06:58:23.994305+00:00",
+      "returncode": 0,
+      "raw_file": "019.jsonl",
+      "raw_sha256": "6ef9e49383b9e6e234a395743c9f7da2478fe5291b1357a9e7f2d4f36a6890c8",
+      "stderr_file": "019.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 20,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:23.996072+00:00",
+      "finished_at": "2026-10-12T06:58:35.203145+00:00",
+      "returncode": 0,
+      "raw_file": "020.jsonl",
+      "raw_sha256": "c778f53df0ed5f132a46cb785787a7756df10c9919c75678d705f6ba42e4843d",
+      "stderr_file": "020.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 21,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:35.204678+00:00",
+      "finished_at": "2026-10-12T06:58:35.216344+00:00",
+      "returncode": 0,
+      "raw_file": "021.jsonl",
+      "raw_sha256": "3c6bd6cebe9f61ad27868f264420be66653b086e933131ca1976e4fbe9715294",
+      "stderr_file": "021.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 22,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:35.217566+00:00",
+      "finished_at": "2026-10-12T06:58:35.223467+00:00",
+      "returncode": 0,
+      "raw_file": "022.jsonl",
+      "raw_sha256": "8e5a3b52ef86e1d5acd277e47ce1d758f40176049aae96f0d726aff9a0364ad2",
+      "stderr_file": "022.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 23,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 0
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:35.224667+00:00",
+      "finished_at": "2026-10-12T06:58:35.805018+00:00",
+      "returncode": 0,
+      "raw_file": "023.jsonl",
+      "raw_sha256": "333e08868cebf7e47473b7d331557e5115476d6f8ec4ea77b3d6fc0425757c54",
+      "stderr_file": "023.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 24,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:35.806809+00:00",
+      "finished_at": "2026-10-12T06:58:47.002046+00:00",
+      "returncode": 0,
+      "raw_file": "024.jsonl",
+      "raw_sha256": "6ce9f0cbb2fb8dcf68a1e4050088299e06f6afc7c59059b997d14714eb44c6d4",
+      "stderr_file": "024.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 25,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:47.004087+00:00",
+      "finished_at": "2026-10-12T06:58:47.014838+00:00",
+      "returncode": 0,
+      "raw_file": "025.jsonl",
+      "raw_sha256": "d0269a395635aa66782c55c6067dff70de68c212b94756079e06d3e6d502c9fb",
+      "stderr_file": "025.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 26,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:47.016216+00:00",
+      "finished_at": "2026-10-12T06:58:47.025048+00:00",
+      "returncode": 0,
+      "raw_file": "026.jsonl",
+      "raw_sha256": "d0448285b49dced63c1d1e369c5b8ce9f80f9da4debe104a413c98482c709826",
+      "stderr_file": "026.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 27,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:47.026304+00:00",
+      "finished_at": "2026-10-12T06:58:47.033714+00:00",
+      "returncode": 0,
+      "raw_file": "027.jsonl",
+      "raw_sha256": "76f82fd5215d02dba054bad031fea11cf1a17a2c34f28ec5a31aec6f7c276bbd",
+      "stderr_file": "027.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 28,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:47.034946+00:00",
+      "finished_at": "2026-10-12T06:58:47.982847+00:00",
+      "returncode": 0,
+      "raw_file": "028.jsonl",
+      "raw_sha256": "f52994eb059c1947ed5d241ccadff1057599f715e253e7c5b6f8f148d211ba2f",
+      "stderr_file": "028.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 29,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:47.984327+00:00",
+      "finished_at": "2026-10-12T06:58:47.996661+00:00",
+      "returncode": 0,
+      "raw_file": "029.jsonl",
+      "raw_sha256": "1e25d7fd1272e42ca8f3a7cd30cffec086fd76fc4b3ac7d78ff2d868f9516900",
+      "stderr_file": "029.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 30,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:47.998166+00:00",
+      "finished_at": "2026-10-12T06:58:48.011856+00:00",
+      "returncode": 0,
+      "raw_file": "030.jsonl",
+      "raw_sha256": "42aa36a21f3f1daef1d016e2fd7a768d03798f3eff10e41e0e525c578dc5642f",
+      "stderr_file": "030.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 31,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:48.013334+00:00",
+      "finished_at": "2026-10-12T06:58:48.034529+00:00",
+      "returncode": 0,
+      "raw_file": "031.jsonl",
+      "raw_sha256": "ab8f5d397896682356abd50486be47d8eb52cb91d7fa452d53e517b34bd94cdf",
+      "stderr_file": "031.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 32,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:48.035954+00:00",
+      "finished_at": "2026-10-12T06:58:48.065167+00:00",
+      "returncode": 0,
+      "raw_file": "032.jsonl",
+      "raw_sha256": "02dd3cea882cea17e7da61e1c11e5c88fb4296d9d92ef857bc784cfec98c7067",
+      "stderr_file": "032.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 33,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:48.066679+00:00",
+      "finished_at": "2026-10-12T06:58:48.073121+00:00",
+      "returncode": 0,
+      "raw_file": "033.jsonl",
+      "raw_sha256": "3009c6189e908a03ae1fcc1244a98c113db052c6383dbc40eae5371492401885",
+      "stderr_file": "033.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 34,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:48.074803+00:00",
+      "finished_at": "2026-10-12T06:58:48.113932+00:00",
+      "returncode": 0,
+      "raw_file": "034.jsonl",
+      "raw_sha256": "ca632c6aadeb2d6f09f8c8573e83131d4810d2815899172fed0b69b85e5ee874",
+      "stderr_file": "034.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 35,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-128s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:48.115545+00:00",
+      "finished_at": "2026-10-12T06:58:49.077227+00:00",
+      "returncode": 0,
+      "raw_file": "035.jsonl",
+      "raw_sha256": "41c60dc342bf37d91e400d04055945d88582fc6175b8366f23d1c326c0ed9d17",
+      "stderr_file": "035.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 36,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:49.079132+00:00",
+      "finished_at": "2026-10-12T06:58:49.100006+00:00",
+      "returncode": 0,
+      "raw_file": "036.jsonl",
+      "raw_sha256": "b469ed1b20edd83a025b694ac49749d8a43836884cd456127d194425dd6780be",
+      "stderr_file": "036.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 37,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-128s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:49.101523+00:00",
+      "finished_at": "2026-10-12T06:58:49.113977+00:00",
+      "returncode": 0,
+      "raw_file": "037.jsonl",
+      "raw_sha256": "1f591c0f284edd8d8d6e77d8b68d8e5012e0f2b5c63630596a2ff37aefe44afc",
+      "stderr_file": "037.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 38,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:58:49.115486+00:00",
+      "finished_at": "2026-10-12T06:59:01.926422+00:00",
+      "returncode": 0,
+      "raw_file": "038.jsonl",
+      "raw_sha256": "4ab479f649be3e708c8f17a37364df423c38e6df1ef71ab9e55639be1092b917",
+      "stderr_file": "038.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 39,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:01.928711+00:00",
+      "finished_at": "2026-10-12T06:59:01.943646+00:00",
+      "returncode": 0,
+      "raw_file": "039.jsonl",
+      "raw_sha256": "23710825b375a852222da9ba4e842ae102af09c54c18214656f5125d0276617a",
+      "stderr_file": "039.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 40,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:01.945702+00:00",
+      "finished_at": "2026-10-12T06:59:02.529952+00:00",
+      "returncode": 0,
+      "raw_file": "040.jsonl",
+      "raw_sha256": "f91d04db7371398d66e18b2a1b8a154ab6533df0f36c00faca19758dd1eca41a",
+      "stderr_file": "040.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 41,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:02.531689+00:00",
+      "finished_at": "2026-10-12T06:59:02.540249+00:00",
+      "returncode": 0,
+      "raw_file": "041.jsonl",
+      "raw_sha256": "66fa799e71ad82ef90b4998dfa90db59dabcdfc8c1c80c9d842a024222d8ea45",
+      "stderr_file": "041.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 42,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:02.541795+00:00",
+      "finished_at": "2026-10-12T06:59:03.966352+00:00",
+      "returncode": 0,
+      "raw_file": "042.jsonl",
+      "raw_sha256": "e3dc0860d0f2d30f0d0703ef1f9d609fa5ff1d56915c41ea80ec902a0777f95d",
+      "stderr_file": "042.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 43,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-128s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:03.968517+00:00",
+      "finished_at": "2026-10-12T06:59:11.239476+00:00",
+      "returncode": 0,
+      "raw_file": "043.jsonl",
+      "raw_sha256": "df13fa6f1c2826bcf1e4b2dad584873b29e3de743f78cd0525391cf7e3003564",
+      "stderr_file": "043.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 44,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:11.241289+00:00",
+      "finished_at": "2026-10-12T06:59:11.307302+00:00",
+      "returncode": 0,
+      "raw_file": "044.jsonl",
+      "raw_sha256": "37e2051eaeb08860096055721975c701c3188da9d002d5fa535c2fd316f73a73",
+      "stderr_file": "044.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 45,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:11.309091+00:00",
+      "finished_at": "2026-10-12T06:59:11.317453+00:00",
+      "returncode": 0,
+      "raw_file": "045.jsonl",
+      "raw_sha256": "259cfbfdb8caae3a1f77e742a1e669669d8c2dbc82a47a2097a1929d7bffbf14",
+      "stderr_file": "045.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 46,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:11.319481+00:00",
+      "finished_at": "2026-10-12T06:59:11.355964+00:00",
+      "returncode": 0,
+      "raw_file": "046.jsonl",
+      "raw_sha256": "fdee52a783e9e41016558f5fd7bec69ff17fe43cba029a664e20f6a1d060dc8e",
+      "stderr_file": "046.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 47,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 1
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:11.357829+00:00",
+      "finished_at": "2026-10-12T06:59:12.538011+00:00",
+      "returncode": 0,
+      "raw_file": "047.jsonl",
+      "raw_sha256": "e45cfddf588a36b2c635e6f9c57c77e7faf0a28b3e1715848c6165975ae237f1",
+      "stderr_file": "047.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 48,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-128s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:12.539997+00:00",
+      "finished_at": "2026-10-12T06:59:13.500944+00:00",
+      "returncode": 0,
+      "raw_file": "048.jsonl",
+      "raw_sha256": "b5fa81ce5afa48c7bdb377dc4659f830e26766fb94ef923c0a36cf57f4da4bc8",
+      "stderr_file": "048.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 49,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:13.503254+00:00",
+      "finished_at": "2026-10-12T06:59:24.713593+00:00",
+      "returncode": 0,
+      "raw_file": "049.jsonl",
+      "raw_sha256": "031b57d9dfd7417ebcac54ce2e29ff6d5163063bd415429af68afba2180d5078",
+      "stderr_file": "049.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 50,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:24.715494+00:00",
+      "finished_at": "2026-10-12T06:59:24.746569+00:00",
+      "returncode": 0,
+      "raw_file": "050.jsonl",
+      "raw_sha256": "3923ffc52168c6c1557d5e785a16148081e1767648259322c96e1726548e0015",
+      "stderr_file": "050.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 51,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:24.748322+00:00",
+      "finished_at": "2026-10-12T06:59:24.755642+00:00",
+      "returncode": 0,
+      "raw_file": "051.jsonl",
+      "raw_sha256": "3ffe2298863ee71152203254361b1d7e83353426e51123edb94c80db0ad0b2f7",
+      "stderr_file": "051.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 52,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:24.757356+00:00",
+      "finished_at": "2026-10-12T06:59:24.765916+00:00",
+      "returncode": 0,
+      "raw_file": "052.jsonl",
+      "raw_sha256": "284543957213a059d73dfe4d31009fb08f128e55969869fa7bc05a74e6139c8c",
+      "stderr_file": "052.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 53,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:24.767654+00:00",
+      "finished_at": "2026-10-12T06:59:25.950143+00:00",
+      "returncode": 0,
+      "raw_file": "053.jsonl",
+      "raw_sha256": "ce9b16a535f72dbd4307fd77a9ac5ea0a1e7b5ce49d25aa6a443f0fdd490ba26",
+      "stderr_file": "053.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 54,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:25.952315+00:00",
+      "finished_at": "2026-10-12T06:59:25.961005+00:00",
+      "returncode": 0,
+      "raw_file": "054.jsonl",
+      "raw_sha256": "d6f69a2bf7c78aad266f62a19f84122034656d909bf6b8eb888d15c1dd1c12a3",
+      "stderr_file": "054.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 55,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:25.962810+00:00",
+      "finished_at": "2026-10-12T06:59:25.977107+00:00",
+      "returncode": 0,
+      "raw_file": "055.jsonl",
+      "raw_sha256": "f203ec9b0f0918917f8702c3d9e4d8a2eaf81a3fdc75ead5f902fb40510a4ca7",
+      "stderr_file": "055.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 56,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:25.978901+00:00",
+      "finished_at": "2026-10-12T06:59:26.015883+00:00",
+      "returncode": 0,
+      "raw_file": "056.jsonl",
+      "raw_sha256": "98422d2eaddd975fb34a9f01efeb389b7912314e7706060cef69d26a1b35e6ae",
+      "stderr_file": "056.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 57,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:26.017673+00:00",
+      "finished_at": "2026-10-12T06:59:26.024688+00:00",
+      "returncode": 0,
+      "raw_file": "057.jsonl",
+      "raw_sha256": "cbbf41a12853bcf9086896b6320ea78164d9ab8f974b5308a57e9e89d6edd61b",
+      "stderr_file": "057.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 58,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:26.026817+00:00",
+      "finished_at": "2026-10-12T06:59:26.606468+00:00",
+      "returncode": 0,
+      "raw_file": "058.jsonl",
+      "raw_sha256": "d279054e725564770398957651191ceac230a952b2ef7bbf8cee04a25931ad06",
+      "stderr_file": "058.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 59,
+      "job": {
+        "parameter": "ML-DSA-44",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-44",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-44.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:26.609595+00:00",
+      "finished_at": "2026-10-12T06:59:26.618541+00:00",
+      "returncode": 0,
+      "raw_file": "059.jsonl",
+      "raw_sha256": "9a1c52c6c17df7ab9c7ae65d808feb76150d317671739e891bb4b7f1842455fb",
+      "stderr_file": "059.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 60,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192f",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192f.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:26.620498+00:00",
+      "finished_at": "2026-10-12T06:59:26.657384+00:00",
+      "returncode": 0,
+      "raw_file": "060.jsonl",
+      "raw_sha256": "d16ba7d4406e767485ff743a6437eaceb932f5688d1147730eaea6b443a228bf",
+      "stderr_file": "060.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 61,
+      "job": {
+        "parameter": "ML-DSA-87",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-87",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-87.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:26.659246+00:00",
+      "finished_at": "2026-10-12T06:59:26.666594+00:00",
+      "returncode": 0,
+      "raw_file": "061.jsonl",
+      "raw_sha256": "4c40dc919dcb4392f6d1887bbea32bb3720bd057e94d5b91d9db204d7417bb0d",
+      "stderr_file": "061.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 62,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:26.668428+00:00",
+      "finished_at": "2026-10-12T06:59:27.610137+00:00",
+      "returncode": 0,
+      "raw_file": "062.jsonl",
+      "raw_sha256": "a9b9b57b47ec3bb411ee66a2aa649468412dcc1f178df0c13f22291ffafaf626",
+      "stderr_file": "062.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 63,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-128s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:27.612446+00:00",
+      "finished_at": "2026-10-12T06:59:27.626954+00:00",
+      "returncode": 0,
+      "raw_file": "063.jsonl",
+      "raw_sha256": "39f3c33be4dc49d0d0544fd9423bc318f4152c05622ea9f8aa734c1b1a813ba1",
+      "stderr_file": "063.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 64,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-128s",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-128s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-128s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:27.628957+00:00",
+      "finished_at": "2026-10-12T06:59:34.910204+00:00",
+      "returncode": 0,
+      "raw_file": "064.jsonl",
+      "raw_sha256": "d76cbb5750e0a5d2989e47efe432911dadc52c201023a58af690b079f07a79ac",
+      "stderr_file": "064.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 65,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:34.912528+00:00",
+      "finished_at": "2026-10-12T06:59:47.727508+00:00",
+      "returncode": 0,
+      "raw_file": "065.jsonl",
+      "raw_sha256": "94c552180b5e4cab90de2108578cfb0021912ed83e5507a3450d94dba58116dd",
+      "stderr_file": "065.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 66,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256f",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256f",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256f.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:47.729624+00:00",
+      "finished_at": "2026-10-12T06:59:47.798527+00:00",
+      "returncode": 0,
+      "raw_file": "066.jsonl",
+      "raw_sha256": "185285bb1d2046560de9e43e987459799369a7c42d99df88f6631cebcc6e8ff5",
+      "stderr_file": "066.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 67,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 0,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.outputs",
+        "0",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:47.800634+00:00",
+      "finished_at": "2026-10-12T06:59:49.223726+00:00",
+      "returncode": 0,
+      "raw_file": "067.jsonl",
+      "raw_sha256": "79b1d5a9fb87f7893707e7327e1136528497ca81eb687b828eea823c78fbea72",
+      "stderr_file": "067.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 68,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 1,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.outputs",
+        "1",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:49.227084+00:00",
+      "finished_at": "2026-10-12T06:59:49.243534+00:00",
+      "returncode": 0,
+      "raw_file": "068.jsonl",
+      "raw_sha256": "2c4785036fb247d95006bb6e9bd9871e7e1e1017427b627e8405ca5e01f8dea4",
+      "stderr_file": "068.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 69,
+      "job": {
+        "parameter": "ML-DSA-65",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "ML-DSA-65",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/ML-DSA-65.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:49.245567+00:00",
+      "finished_at": "2026-10-12T06:59:49.252032+00:00",
+      "returncode": 0,
+      "raw_file": "069.jsonl",
+      "raw_sha256": "2d6b6e6d548166ac790f1aa9bd90bf2cb19d92dfc8668e7821e3e87f3bf003ea",
+      "stderr_file": "069.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 70,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-192s",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-192s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-192s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:49.253984+00:00",
+      "finished_at": "2026-10-12T06:59:49.269626+00:00",
+      "returncode": 0,
+      "raw_file": "070.jsonl",
+      "raw_sha256": "ae0a933dc42806b740de952ea91e65b087f80b28f0224d3e63b494885b8b5e02",
+      "stderr_file": "070.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 71,
+      "job": {
+        "parameter": "SLH-DSA-SHAKE-256s",
+        "op": 2,
+        "side": "baseline",
+        "mode": "timing",
+        "key": 0,
+        "fork": 2
+      },
+      "command": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/build/complete-indicators/prepared-v2/baseline",
+        "timing",
+        "SLH-DSA-SHAKE-256s",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.input",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/prepared-v2/SLH-DSA-SHAKE-256s.outputs",
+        "2",
+        "0"
+      ],
+      "started_at": "2026-10-12T06:59:49.271900+00:00",
+      "finished_at": "2026-10-12T06:59:49.294480+00:00",
+      "returncode": 0,
+      "raw_file": "071.jsonl",
+      "raw_sha256": "79ec9a70bbf16da19cbaf9ce057d7e40d72cdf6903de10712a7ef10283d68b49",
+      "stderr_file": "071.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "finished_at": "2026-10-12T06:59:49.392497+00:00"
+}

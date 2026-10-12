@@ -1,0 +1,38 @@
+[
+  {
+    "script": "prepare_native.py",
+    "mode": "-O",
+    "exit_code": 1,
+    "diagnostic": "optimized Python is unsupported"
+  },
+  {
+    "script": "prepare_native.py",
+    "mode": "environment",
+    "exit_code": 1,
+    "diagnostic": "optimized Python is unsupported"
+  },
+  {
+    "script": "run_native.py",
+    "mode": "-O",
+    "exit_code": 1,
+    "diagnostic": "optimized Python is unsupported"
+  },
+  {
+    "script": "run_native.py",
+    "mode": "environment",
+    "exit_code": 1,
+    "diagnostic": "optimized Python is unsupported"
+  },
+  {
+    "script": "audit_native.py",
+    "mode": "-O",
+    "exit_code": 1,
+    "diagnostic": "optimized Python is unsupported"
+  },
+  {
+    "script": "audit_native.py",
+    "mode": "environment",
+    "exit_code": 1,
+    "diagnostic": "optimized Python is unsupported"
+  }
+]

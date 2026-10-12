@@ -1,0 +1,11 @@
+   Compiling ml-dsa v0.1.1 (/Users/dandelionlabs/development/personal/rustcrypto-signatures/worktrees/keygen-reuse/ml-dsa)
+    Finished `test` profile [optimized + debuginfo] target(s) in 5.89s
+     Running tests/key-cache.rs (target/debug/deps/key_cache-6b5d02da6210dd78)
+
+running 3 tests
+test key_cache_44 ... ok
+test key_cache_65 ... ok
+test key_cache_87 ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+

@@ -1,0 +1,182 @@
+[
+  {
+    "parameter": "SLH_DSA_PURE_SHA2_128F",
+    "operation": "sign",
+    "paired_speedups": [
+      5.485104047108139
+    ],
+    "median_speedup": 5.485104047108139,
+    "geometric_mean_speedup": 5.485104047108139,
+    "paired_bootstrap_95pct": [
+      5.485104047108139,
+      5.485104047108139
+    ],
+    "baseline_median_ns": 27479000.0,
+    "candidate_median_ns": 5009750.0
+  },
+  {
+    "parameter": "SLH_DSA_PURE_SHA2_128F",
+    "operation": "verify",
+    "paired_speedups": [
+      5.395264715554094
+    ],
+    "median_speedup": 5.395264715554094,
+    "geometric_mean_speedup": 5.395264715554093,
+    "paired_bootstrap_95pct": [
+      5.395264715554093,
+      5.395264715554093
+    ],
+    "baseline_median_ns": 1640700.0,
+    "candidate_median_ns": 304100.0
+  },
+  {
+    "parameter": "SLH_DSA_PURE_SHA2_128S",
+    "operation": "sign",
+    "paired_speedups": [
+      5.336188096680713
+    ],
+    "median_speedup": 5.336188096680713,
+    "geometric_mean_speedup": 5.336188096680713,
+    "paired_bootstrap_95pct": [
+      5.336188096680713,
+      5.336188096680713
+    ],
+    "baseline_median_ns": 587870500.0,
+    "candidate_median_ns": 110166750.0
+  },
+  {
+    "parameter": "SLH_DSA_PURE_SHA2_128S",
+    "operation": "verify",
+    "paired_speedups": [
+      5.382797731568998
+    ],
+    "median_speedup": 5.382797731568998,
+    "geometric_mean_speedup": 5.382797731568998,
+    "paired_bootstrap_95pct": [
+      5.382797731568998,
+      5.382797731568998
+    ],
+    "baseline_median_ns": 569500.0,
+    "candidate_median_ns": 105800.0
+  },
+  {
+    "parameter": "SLH_DSA_PURE_SHA2_192F",
+    "operation": "sign",
+    "paired_speedups": [
+      4.2928116601699635
+    ],
+    "median_speedup": 4.2928116601699635,
+    "geometric_mean_speedup": 4.2928116601699635,
+    "paired_bootstrap_95pct": [
+      4.2928116601699635,
+      4.2928116601699635
+    ],
+    "baseline_median_ns": 44326500.0,
+    "candidate_median_ns": 10325750.0
+  },
+  {
+    "parameter": "SLH_DSA_PURE_SHA2_192F",
+    "operation": "verify",
+    "paired_speedups": [
+      3.121282648047582
+    ],
+    "median_speedup": 3.121282648047582,
+    "geometric_mean_speedup": 3.1212826480475817,
+    "paired_bootstrap_95pct": [
+      3.1212826480475817,
+      3.1212826480475817
+    ],
+    "baseline_median_ns": 2414000.0,
+    "candidate_median_ns": 773400.0
+  },
+  {
+    "parameter": "SLH_DSA_PURE_SHA2_192S",
+    "operation": "sign",
+    "paired_speedups": [
+      4.533189062075272
+    ],
+    "median_speedup": 4.533189062075272,
+    "geometric_mean_speedup": 4.533189062075272,
+    "paired_bootstrap_95pct": [
+      4.533189062075272,
+      4.533189062075272
+    ],
+    "baseline_median_ns": 1075655500.0,
+    "candidate_median_ns": 237284500.0
+  },
+  {
+    "parameter": "SLH_DSA_PURE_SHA2_192S",
+    "operation": "verify",
+    "paired_speedups": [
+      4.242360379346681
+    ],
+    "median_speedup": 4.242360379346681,
+    "geometric_mean_speedup": 4.242360379346682,
+    "paired_bootstrap_95pct": [
+      4.242360379346682,
+      4.242360379346682
+    ],
+    "baseline_median_ns": 805200.0,
+    "candidate_median_ns": 189800.0
+  },
+  {
+    "parameter": "SLH_DSA_PURE_SHA2_256F",
+    "operation": "sign",
+    "paired_speedups": [
+      4.287494100991034
+    ],
+    "median_speedup": 4.287494100991034,
+    "geometric_mean_speedup": 4.287494100991034,
+    "paired_bootstrap_95pct": [
+      4.287494100991034,
+      4.287494100991034
+    ],
+    "baseline_median_ns": 90852000.0,
+    "candidate_median_ns": 21190000.0
+  },
+  {
+    "parameter": "SLH_DSA_PURE_SHA2_256F",
+    "operation": "verify",
+    "paired_speedups": [
+      3.4037171229200216
+    ],
+    "median_speedup": 3.4037171229200216,
+    "geometric_mean_speedup": 3.403717122920021,
+    "paired_bootstrap_95pct": [
+      3.403717122920021,
+      3.403717122920021
+    ],
+    "baseline_median_ns": 2536450.0,
+    "candidate_median_ns": 745200.0
+  },
+  {
+    "parameter": "SLH_DSA_PURE_SHA2_256S",
+    "operation": "sign",
+    "paired_speedups": [
+      4.393323916058998
+    ],
+    "median_speedup": 4.393323916058998,
+    "geometric_mean_speedup": 4.393323916058998,
+    "paired_bootstrap_95pct": [
+      4.393323916058998,
+      4.393323916058998
+    ],
+    "baseline_median_ns": 949363250.0,
+    "candidate_median_ns": 216092250.0
+  },
+  {
+    "parameter": "SLH_DSA_PURE_SHA2_256S",
+    "operation": "verify",
+    "paired_speedups": [
+      5.900715900527506
+    ],
+    "median_speedup": 5.900715900527506,
+    "geometric_mean_speedup": 5.900715900527506,
+    "paired_bootstrap_95pct": [
+      5.900715900527506,
+      5.900715900527506
+    ],
+    "baseline_median_ns": 1566050.0,
+    "candidate_median_ns": 265400.0
+  }
+]

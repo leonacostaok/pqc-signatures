@@ -1,0 +1,128 @@
+[
+  {
+    "configuration": "no-openssl",
+    "command": [
+      "cmake",
+      "-S",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance",
+      "-B",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/no-openssl",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DOQS_MINIMAL_BUILD=SIG_slh_dsa_pure_sha2_128f",
+      "-DOPENSSL_ROOT_DIR=/opt/homebrew/Cellar/openssl@3/3.6.4_1",
+      "-DOQS_USE_OPENSSL=OFF"
+    ],
+    "returncode": 0,
+    "log": "config-no-openssl-0.log"
+  },
+  {
+    "configuration": "no-openssl",
+    "command": [
+      "cmake",
+      "--build",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/no-openssl",
+      "--target",
+      "test_slh_dsa_sha2",
+      "test_sig",
+      "-j2"
+    ],
+    "returncode": 0,
+    "log": "config-no-openssl-1.log"
+  },
+  {
+    "configuration": "no-openssl",
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/no-openssl/tests/test_slh_dsa_sha2"
+    ],
+    "returncode": 0,
+    "log": "config-no-openssl-2.log"
+  },
+  {
+    "configuration": "no-openssl",
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/no-openssl/tests/test_sig",
+      "SLH_DSA_PURE_SHA2_128F"
+    ],
+    "returncode": 0,
+    "log": "config-no-openssl-3.log"
+  },
+  {
+    "configuration": "sha2-disabled",
+    "command": [
+      "cmake",
+      "-S",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance",
+      "-B",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/sha2-disabled",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DOQS_MINIMAL_BUILD=SIG_slh_dsa_pure_sha2_128f",
+      "-DOPENSSL_ROOT_DIR=/opt/homebrew/Cellar/openssl@3/3.6.4_1",
+      "-DOQS_USE_OPENSSL=ON",
+      "-DOQS_USE_SHA2_OPENSSL=OFF",
+      "-DOQS_USE_AES_OPENSSL=ON"
+    ],
+    "returncode": 0,
+    "log": "config-sha2-disabled-0.log"
+  },
+  {
+    "configuration": "sha2-disabled",
+    "command": [
+      "cmake",
+      "--build",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/sha2-disabled",
+      "--target",
+      "test_slh_dsa_sha2",
+      "test_sig",
+      "-j2"
+    ],
+    "returncode": 0,
+    "log": "config-sha2-disabled-1.log"
+  },
+  {
+    "configuration": "sha2-disabled",
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/sha2-disabled/tests/test_slh_dsa_sha2"
+    ],
+    "returncode": 0,
+    "log": "config-sha2-disabled-2.log"
+  },
+  {
+    "configuration": "sha2-disabled",
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/sha2-disabled/tests/test_sig",
+      "SLH_DSA_PURE_SHA2_128F"
+    ],
+    "returncode": 0,
+    "log": "config-sha2-disabled-3.log"
+  },
+  {
+    "configuration": "dlopen",
+    "command": [
+      "cmake",
+      "-S",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/sha2-performance",
+      "-B",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/dlopen",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DOQS_MINIMAL_BUILD=SIG_slh_dsa_pure_sha2_128f",
+      "-DOPENSSL_ROOT_DIR=/opt/homebrew/Cellar/openssl@3/3.6.4_1",
+      "-DOQS_DLOPEN_OPENSSL=ON"
+    ],
+    "returncode": 0,
+    "log": "config-dlopen-0.log"
+  },
+  {
+    "configuration": "dlopen",
+    "command": [
+      "cmake",
+      "--build",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/configs/dlopen",
+      "--target",
+      "test_slh_dsa_sha2",
+      "test_sig",
+      "-j2"
+    ],
+    "returncode": 2,
+    "log": "config-dlopen-1.log"
+  }
+]

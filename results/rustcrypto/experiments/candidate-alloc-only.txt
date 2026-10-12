@@ -1,0 +1,50 @@
+$ cargo test -p ml-dsa --release --no-default-features --features alloc --lib -- --test-threads=1
+   Compiling crypto-common v0.2.2
+   Compiling digest v0.11.3
+   Compiling shake v0.1.0
+   Compiling signature v3.0.0
+   Compiling ml-dsa v0.1.1 (/Users/dandelionlabs/development/personal/rustcrypto-signatures/worktrees/keygen-reuse/ml-dsa)
+    Finished `release` profile [optimized] target(s) in 12.21s
+     Running unittests src/lib.rs (target/release/deps/ml_dsa-d650f4c597df65a2)
+
+running 37 tests
+test algebra::test::barrett_reduce_boundary ... ok
+test algebra::test::constant_time_div_accuracy ... ok
+test algebra::test::decompose ... ok
+test algebra::test::decompose_edge_case ... ok
+test algebra::test::high_low_bits_consistency ... ok
+test algebra::test::mod_plus_minus ... ok
+test crypto::test::g ... ok
+test crypto::test::h ... ok
+test encode::tests::bit_pack ... ok
+test encode::tests::simple_bit_pack ... ok
+test hint::test::decompose_produces_valid_r0 ... ok
+test hint::test::hint_round_trip ... ok
+test hint::test::make_hint_correctness ... ok
+test hint::test::use_hint_arithmetic ... ok
+test hint::test::use_hint_m_wraparound ... ok
+test hint::test::use_hint_r0_is_zero ... ok
+test hint::test::use_hint_threshold ... ok
+test ntt::test::ntt ... ok
+test ntt::test::ntt_matrix ... ok
+test ntt::test::ntt_vector ... ok
+test sampling::test::test_rej_ntt_poly ... ok
+test sampling::test::test_sample_cbd ... ok
+test sampling::test::test_sample_in_ball ... ok
+test test::context_length_validation ... ok
+test test::debug_implementations ... ok
+test test::derived_verifying_key_validates_signatures ... ok
+test test::encode_decode_round_trip ... ok
+test test::from_seed_implementations_match ... ok
+test test::output_sizes ... ok
+test test::public_from_private ... ok
+test test::sign_internal_verify_mu_round_trip ... ok
+test test::sign_mu_verify_internal_round_trip ... ok
+test test::sign_mu_verify_mu_round_trip ... ok
+test test::sign_verify_round_trip ... ok
+test test::to_seed_returns_correct_seed ... ok
+test test::verification_rejects_invalid_signature ... ok
+test test::verification_rejects_wrong_message ... ok
+
+test result: ok. 37 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+

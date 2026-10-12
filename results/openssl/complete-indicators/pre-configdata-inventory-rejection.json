@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/experiments/complete-indicators/independent-check.py",
+    "--provider",
+    "openssl",
+    "--out",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/openssl/complete-indicators/unexpected-pre-configdata-success.json"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/experiments/complete-indicators/independent-check.py\", line 104, in <module>\n    if __name__=='__main__':main()\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/experiments/complete-indicators/independent-check.py\", line 30, in main\n    require(entry['original_path'] in ready['binaries'].values() or Path(entry['original_path']).suffix in ['.a','.dylib','.so'],'source/configuration/fixture cannot be silently unavailable')\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/experiments/complete-indicators/independent-check.py\", line 9, in require\n    if not ok:raise ValueError(message)\nValueError: source/configuration/fixture cannot be silently unavailable\n",
+  "checker_sha256": "62049b2d98adadeaee3f480aac7f5d4fef2b730815edb630c4ce6725d9616ce1",
+  "inventory_sha256": "1b1580b4433de09c02145edbb77b0d4c1ae03b5ebe1761aa7899bfa82b160ba3",
+  "reason": "Initial snapshot inventory omitted Perl configdata.pm; saved-evidence gate correctly rejected missing configuration"
+}

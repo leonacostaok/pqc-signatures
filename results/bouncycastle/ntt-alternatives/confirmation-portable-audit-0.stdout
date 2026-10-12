@@ -1,0 +1,13 @@
+{
+  "schema": "bc-ntt-java17-audit-v1",
+  "passed": true,
+  "plan_sha256": "3eae6929ce3d80a789169ff66fe8cd3a8b3abf822a2031365f6ee8ce8aa8ebc9",
+  "manifest_sha256": "6b0e78983a109d51e39f83453dc5820076b41de0355c8a83065f430b8613dfa7",
+  "portable_source_and_fixture_checks": true,
+  "local_binary_checks": "passed",
+  "local_runtime_checks": "passed",
+  "held_out_against_screen_fixtures": "passed",
+  "local_native_binary_data_checks": "passed",
+  "processes_checked": 216,
+  "output_rows_checked": 27648
+}

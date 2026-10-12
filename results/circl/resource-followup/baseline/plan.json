@@ -1,0 +1,218 @@
+[
+  {
+    "round": 0,
+    "parameter": "ML-DSA-44",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "ML-DSA-65",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "ML-DSA-87",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHAKE-128f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHAKE-128s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHAKE-192f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHAKE-192s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHAKE-256f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 0,
+    "parameter": "SLH-DSA-SHAKE-256s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "ML-DSA-44",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "ML-DSA-65",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "ML-DSA-87",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHAKE-128f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHAKE-128s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHAKE-192f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHAKE-192s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHAKE-256f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 1,
+    "parameter": "SLH-DSA-SHAKE-256s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "ML-DSA-44",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "ML-DSA-65",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "ML-DSA-87",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHAKE-128f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHAKE-128s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHAKE-192f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHAKE-192s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHAKE-256f",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  },
+  {
+    "round": 2,
+    "parameter": "SLH-DSA-SHAKE-256s",
+    "variant": "baseline",
+    "mode": "latency",
+    "settings": "default",
+    "operation": null
+  }
+]

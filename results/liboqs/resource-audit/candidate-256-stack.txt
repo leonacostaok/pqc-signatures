@@ -1,0 +1,9 @@
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:48:sha2_256_compress	144	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:184:sha2_256_init	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:195:sha2_224_init	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:206:sha2_256_copy	0	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:215:sha2_256_update	176	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:250:sha2_256_final_pad	144	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:277:sha2_256_final_len	160	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:287:sha2_256	304	static
+liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_256.c:296:sha2_224	304	static

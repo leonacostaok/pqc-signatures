@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/ten-new-keys/candidate/driver",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-ablation/evidence/inputs.bin",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-ablation/evidence/final/02-full/outputs.bin",
+    "10"
+  ],
+  "started_utc": "2026-10-12T02:22:24.267467+00:00"
+}

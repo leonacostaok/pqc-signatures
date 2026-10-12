@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/javac",
+    "-J-XX:ActiveProcessorCount=2",
+    "-cp",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/prepared-v1/baseline",
+    "-d",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/prepared-v1/driver",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/libs/bouncycastle/experiments/ntt-alternatives/MLDeep.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/libs/bouncycastle/experiments/ntt-alternatives/MalformedCheck.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/libs/bouncycastle/experiments/ntt-alternatives/NTTBench.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/libs/bouncycastle/experiments/ntt-alternatives/NTTGate.java"
+  ],
+  "cwd": null,
+  "started_at": "2026-10-12T07:58:12.065576+00:00"
+}

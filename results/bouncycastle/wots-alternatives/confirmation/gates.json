@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "trace_cases_per_variant": 24,
+  "native_chain_cases_per_variant": 2514,
+  "whole_checks_per_variant": 234,
+  "fast_coverage": "six fast sets,12 keys each,3 operations",
+  "slow_coverage": "six slow sets,measured case0 only,3 operations",
+  "manifest_sha256": "5de31b1005d3b920cf19cd24240160615f834fc0f07affb3d6d7522dfe466f98"
+}

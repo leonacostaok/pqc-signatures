@@ -1,0 +1,11 @@
+{
+  "command": [
+    "cargo",
+    "build",
+    "--release",
+    "--offline",
+    "--locked"
+  ],
+  "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/tenkey-981027a2c750a158",
+  "started_at": "2026-10-12T01:56:42.021998+00:00"
+}

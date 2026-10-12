@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "files": [
+    "src/sig/slh_dsa/CMakeLists.txt",
+    "src/sig/slh_dsa/slh_dsa_c/sha2_256.c",
+    "src/sig/slh_dsa/slh_dsa_c/sha2_512.c"
+  ],
+  "added_lines": 67,
+  "sha256": "363391ab2296705e27957b8fc8d866d0eb68fc6de60b55b36de98dfb7be1f9c7",
+  "sections_identical_to_full_patch": true,
+  "claim": "Identical compiled runtime inputs when built with the same configuration; no separate performance measurement. Tests and importer/template integration remain recommended for the maintained PR."
+}

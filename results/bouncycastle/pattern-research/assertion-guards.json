@@ -1,0 +1,20 @@
+{
+  "invntt_oracle.py": {
+    "optimization_rejected": true,
+    "exit_code": 1,
+    "stderr": "Assertions are required; do not use -O or PYTHONOPTIMIZE",
+    "source_sha256": "99857806838e3e64c868587561de81c4df10e594d504b113aaa09e087d0805d0"
+  },
+  "run_address_probe.py": {
+    "optimization_rejected": true,
+    "exit_code": 1,
+    "stderr": "Assertions are required; do not use -O or PYTHONOPTIMIZE",
+    "source_sha256": "d79a6cd84b08eb01a593e1be6fedcd5474ebd3c441aacf211bcea300c5bb186e"
+  },
+  "address_audit.py": {
+    "optimization_rejected": true,
+    "exit_code": 1,
+    "stderr": "Assertions are required; do not use -O or PYTHONOPTIMIZE",
+    "source_sha256": "137b8efeb0f2f490463478bf8d7c2cebf15c141863a70e11535f829f527157b1"
+  }
+}

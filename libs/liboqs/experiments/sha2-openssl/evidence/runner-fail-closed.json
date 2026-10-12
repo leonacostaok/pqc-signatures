@@ -1,0 +1,12 @@
+[
+  {
+    "case": "ungranted",
+    "returncode": 2,
+    "stderr": "usage: paired_benchmark.py [-h] --build BUILD --evidence EVIDENCE --output\n                           OUTPUT [--forks FORKS] [--sign-iters SIGN_ITERS]\n                           [--verify-iters VERIFY_ITERS]\n                           [--exclusive-window-granted] [--pilot]\npaired_benchmark.py: error: reserve the exclusive machine window before final timing\n"
+  },
+  {
+    "case": "missing-evidence",
+    "returncode": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-openssl/paired_benchmark.py\", line 23, in <module>\n    cm=json.loads((a.evidence/'corpus-manifest.json').read_text())\n  File \"/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 1256, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n  File \"/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 1242, in open\n    return io.open(self, mode, buffering, encoding, errors, newline,\n  File \"/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 1110, in _opener\n    return self._accessor.open(self, flags, mode)\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/nonexistent-evidence/corpus-manifest.json'\n"
+  }
+]

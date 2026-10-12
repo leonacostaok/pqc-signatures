@@ -1,0 +1,33 @@
+/Users/dandelionlabs/development/personal/bc-java/core/src/main/java/org/bouncycastle/crypto/CryptoServicesRegistrar.java:442: warning: [removal] SecurityManager in java.lang has been deprecated and marked for removal
+        final SecurityManager securityManager = System.getSecurityManager();
+              ^
+/Users/dandelionlabs/development/personal/bc-java/core/src/main/java/org/bouncycastle/crypto/CryptoServicesRegistrar.java:442: warning: [removal] getSecurityManager() in System has been deprecated and marked for removal
+        final SecurityManager securityManager = System.getSecurityManager();
+                                                      ^
+/Users/dandelionlabs/development/personal/bc-java/core/src/main/java/org/bouncycastle/crypto/CryptoServicesRegistrar.java:446: warning: [removal] AccessController in java.security has been deprecated and marked for removal
+            AccessController.doPrivileged(new PrivilegedAction<Object>()
+            ^
+/Users/dandelionlabs/development/personal/bc-java/core/src/main/java/org/bouncycastle/util/Properties.java:588: warning: [removal] AccessControlException in java.security has been deprecated and marked for removal
+        catch (AccessControlException e)
+               ^
+/Users/dandelionlabs/development/personal/bc-java/core/src/main/java/org/bouncycastle/util/Properties.java:614: warning: [removal] AccessControlException in java.security has been deprecated and marked for removal
+       catch (AccessControlException e)
+              ^
+/Users/dandelionlabs/development/personal/bc-java/core/src/main/java/org/bouncycastle/util/Properties.java:638: warning: [removal] AccessControlException in java.security has been deprecated and marked for removal
+        catch (AccessControlException e)
+               ^
+/Users/dandelionlabs/development/personal/bc-java/core/src/main/java/org/bouncycastle/util/Properties.java:758: warning: [removal] AccessController in java.security has been deprecated and marked for removal
+        String val = (String)AccessController.doPrivileged(new PrivilegedAction()
+                             ^
+/Users/dandelionlabs/development/personal/bc-java/core/src/main/java/org/bouncycastle/util/Properties.java:780: warning: [removal] AccessController in java.security has been deprecated and marked for removal
+        return (String)AccessController.doPrivileged(new PrivilegedAction()
+                       ^
+/Users/dandelionlabs/development/personal/bc-java/core/src/main/java/org/bouncycastle/util/Strings.java:23: warning: [removal] AccessController in java.security has been deprecated and marked for removal
+            LINE_SEPARATOR = AccessController.doPrivileged(new PrivilegedAction<String>()
+                             ^
+/Users/dandelionlabs/development/personal/bc-java/core/src/main/java/org/bouncycastle/asn1/x509/X509ObjectIdentifiers.java:221: warning: [dep-ann] deprecated item is not annotated with @Deprecated
+    static final ASN1ObjectIdentifier id_PasswordBasedMac = MiscObjectIdentifiers.entrust.branch("66.13");
+                                      ^
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+10 warnings

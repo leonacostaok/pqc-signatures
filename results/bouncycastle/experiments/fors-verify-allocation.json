@@ -1,0 +1,530 @@
+{
+  "schema": "bc-fors-verify-allocation-v1",
+  "date": "2026-10-11T23:40:28.659629+00:00",
+  "prepared": {
+    "schema": "bc-fors-base2b-prepared-v1",
+    "upstream_commit": "c314b9cdffa3958a0eff5344f8fdcdb0181ed830",
+    "java": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java",
+    "java_version": "openjdk version \"25.0.4.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS, mixed mode, sharing)\n",
+    "baseline": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/baseline",
+    "candidate": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/candidate",
+    "driver": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/driver",
+    "fixtures": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/fixtures.bin",
+    "checks": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/checks",
+    "correctness": {
+      "differential_cases": 48,
+      "negative_parity_cases": 240,
+      "operations": [
+        "keygen",
+        "sign",
+        "verify"
+      ],
+      "caller_inputs_unchanged": true
+    },
+    "corpus": "fors-base2b-v1/204",
+    "release": 8,
+    "jvm_environment": {
+      "JAVA_TOOL_OPTIONS": "",
+      "JDK_JAVA_OPTIONS": ""
+    },
+    "provenance": {
+      "libs/bouncycastle/experiments/ForsOperations.java": "02a4433bc401b695c4e4672a2e20f0735c684583d694a1e9db96b46facb8f30a",
+      "libs/bouncycastle/experiments/ForsBenchmark.java": "fd248620e7309ab0ec5e09ebdb6d7b7601c7d6d3fac8c185c9e82ec379b42f7d",
+      "libs/bouncycastle/experiments/ForsAllocationCheck.java": "9a58e9b4600e8bdf9310b824641f2d61409fa447ac1941ce7692093e72156d97",
+      "libs/bouncycastle/experiments/fors.py": "b93ca80c74a15f7e09198dfef9623cd9387b5d9d8d7015027ac1cfe42752473a",
+      "libs/bouncycastle/patches/fors-base2b.patch": "ce1829dff5abd139ae80b2764625922bb4ff42138bcee2e962ec73d6cd8921e2",
+      "fixture": "b68537703f7e28b1b99c21be063f0be20abbdfd9e47c09f41d418f99c6e83a0b",
+      "baseline_classes": "17be0149192d23c0bedeeede1778d3e5bccd93d40ab703f1a2eed8a389900ee5",
+      "candidate_classes": "8b37c96be155a85e3abc2ca0f86c628e8640dd9c3d3db5a5f1501b9f933ce9e8",
+      "driver_classes": "0f434a44397e67d96d93579c645863add2dbaae0bfee07a557461367a8e3c381"
+    }
+  },
+  "driver_source_sha256": "0ea0e6ba347f847bf1aa3e28899486abbaa9d925ccee7ca2c74edafba9c18124",
+  "collector_sha256": "8da6721f594b25f13ab659570b1b47ebf935365151310725b364d4616eea48ac",
+  "driver_class_sha256": "d31e8c607379dae565ff6f22945ec599067775351b7c4239e42ba851f1fc51aa",
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java",
+    "-Xmx1g",
+    "-XX:ActiveProcessorCount=1",
+    "-cp",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/verify-allocation-0ea0e6ba347f847b:/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/driver",
+    "ForsVerifyAllocation",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/baseline",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/candidate",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/fixtures.bin"
+  ],
+  "warmup_calls_per_side_parameter": 256,
+  "method": "median of four fixed 128-call whole-corpus batches; current-thread allocation including identical reflective wrapper overhead; excludes key decoding and fixture parsing; not peak heap or a latency measurement",
+  "summary": [
+    {
+      "parameter": "sha2_128f",
+      "baseline_bytes_per_verify": 266463.0,
+      "candidate_bytes_per_verify": 253608.0,
+      "bytes_saved_per_verify": 12855.0,
+      "allocation_reduction_fraction": 0.04824309566431362
+    },
+    {
+      "parameter": "sha2_128s",
+      "baseline_bytes_per_verify": 103097.3125,
+      "candidate_bytes_per_verify": 95890.5625,
+      "bytes_saved_per_verify": 7206.75,
+      "allocation_reduction_fraction": 0.06990240410000988
+    },
+    {
+      "parameter": "sha2_192f",
+      "baseline_bytes_per_verify": 464844.0,
+      "candidate_bytes_per_verify": 451772.0,
+      "bytes_saved_per_verify": 13072.0,
+      "allocation_reduction_fraction": 0.028121262186884204
+    },
+    {
+      "parameter": "sha2_192s",
+      "baseline_bytes_per_verify": 170140.0,
+      "candidate_bytes_per_verify": 159820.0,
+      "bytes_saved_per_verify": 10320.0,
+      "allocation_reduction_fraction": 0.06065593041025038
+    },
+    {
+      "parameter": "sha2_256f",
+      "baseline_bytes_per_verify": 569900.0,
+      "candidate_bytes_per_verify": 552184.0,
+      "bytes_saved_per_verify": 17716.0,
+      "allocation_reduction_fraction": 0.031086155465871207
+    },
+    {
+      "parameter": "sha2_256s",
+      "baseline_bytes_per_verify": 294872.0,
+      "candidate_bytes_per_verify": 280888.0,
+      "bytes_saved_per_verify": 13984.0,
+      "allocation_reduction_fraction": 0.04742396700941425
+    },
+    {
+      "parameter": "shake_128f",
+      "baseline_bytes_per_verify": 263120.0,
+      "candidate_bytes_per_verify": 250427.40625,
+      "bytes_saved_per_verify": 12692.59375,
+      "allocation_reduction_fraction": 0.04823880263757981
+    },
+    {
+      "parameter": "shake_128s",
+      "baseline_bytes_per_verify": 98484.0,
+      "candidate_bytes_per_verify": 91328.0,
+      "bytes_saved_per_verify": 7156.0,
+      "allocation_reduction_fraction": 0.07266154908411519
+    },
+    {
+      "parameter": "shake_192f",
+      "baseline_bytes_per_verify": 467648.0,
+      "candidate_bytes_per_verify": 454640.0,
+      "bytes_saved_per_verify": 13008.0,
+      "allocation_reduction_fraction": 0.027815793075133433
+    },
+    {
+      "parameter": "shake_192s",
+      "baseline_bytes_per_verify": 171872.0,
+      "candidate_bytes_per_verify": 161576.0,
+      "bytes_saved_per_verify": 10296.0,
+      "allocation_reduction_fraction": 0.05990504561534165
+    },
+    {
+      "parameter": "shake_256f",
+      "baseline_bytes_per_verify": 560580.0,
+      "candidate_bytes_per_verify": 542936.0,
+      "bytes_saved_per_verify": 17644.0,
+      "allocation_reduction_fraction": 0.03147454422205573
+    },
+    {
+      "parameter": "shake_256s",
+      "baseline_bytes_per_verify": 288576.0,
+      "candidate_bytes_per_verify": 274528.0,
+      "bytes_saved_per_verify": 14048.0,
+      "allocation_reduction_fraction": 0.04868041694389
+    }
+  ],
+  "rows": [
+    {
+      "parameter": "sha2_128f",
+      "round": 0,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 34254848,
+      "candidate_bytes": 32463456
+    },
+    {
+      "parameter": "sha2_128f",
+      "round": 1,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 34127616,
+      "candidate_bytes": 32461824
+    },
+    {
+      "parameter": "sha2_128f",
+      "round": 2,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 34086912,
+      "candidate_bytes": 32461824
+    },
+    {
+      "parameter": "sha2_128f",
+      "round": 3,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 34086912,
+      "candidate_bytes": 32461824
+    },
+    {
+      "parameter": "sha2_128s",
+      "round": 0,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 13198336,
+      "candidate_bytes": 12275712
+    },
+    {
+      "parameter": "sha2_128s",
+      "round": 1,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 13196624,
+      "candidate_bytes": 12274320
+    },
+    {
+      "parameter": "sha2_128s",
+      "round": 2,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 13196288,
+      "candidate_bytes": 12273664
+    },
+    {
+      "parameter": "sha2_128s",
+      "round": 3,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 13196288,
+      "candidate_bytes": 12273664
+    },
+    {
+      "parameter": "sha2_192f",
+      "round": 0,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 59500032,
+      "candidate_bytes": 57826816
+    },
+    {
+      "parameter": "sha2_192f",
+      "round": 1,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 59500032,
+      "candidate_bytes": 57826816
+    },
+    {
+      "parameter": "sha2_192f",
+      "round": 2,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 59500032,
+      "candidate_bytes": 57826816
+    },
+    {
+      "parameter": "sha2_192f",
+      "round": 3,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 59500032,
+      "candidate_bytes": 57826816
+    },
+    {
+      "parameter": "sha2_192s",
+      "round": 0,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 21777920,
+      "candidate_bytes": 20456960
+    },
+    {
+      "parameter": "sha2_192s",
+      "round": 1,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 21777920,
+      "candidate_bytes": 20456960
+    },
+    {
+      "parameter": "sha2_192s",
+      "round": 2,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 21777920,
+      "candidate_bytes": 20456960
+    },
+    {
+      "parameter": "sha2_192s",
+      "round": 3,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 21777920,
+      "candidate_bytes": 20456960
+    },
+    {
+      "parameter": "sha2_256f",
+      "round": 0,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 72947200,
+      "candidate_bytes": 70679552
+    },
+    {
+      "parameter": "sha2_256f",
+      "round": 1,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 72947200,
+      "candidate_bytes": 70679552
+    },
+    {
+      "parameter": "sha2_256f",
+      "round": 2,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 72947200,
+      "candidate_bytes": 70679552
+    },
+    {
+      "parameter": "sha2_256f",
+      "round": 3,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 72947200,
+      "candidate_bytes": 70679552
+    },
+    {
+      "parameter": "sha2_256s",
+      "round": 0,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 37743616,
+      "candidate_bytes": 35953664
+    },
+    {
+      "parameter": "sha2_256s",
+      "round": 1,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 37743616,
+      "candidate_bytes": 35953664
+    },
+    {
+      "parameter": "sha2_256s",
+      "round": 2,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 37743616,
+      "candidate_bytes": 35953664
+    },
+    {
+      "parameter": "sha2_256s",
+      "round": 3,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 37743616,
+      "candidate_bytes": 35953664
+    },
+    {
+      "parameter": "shake_128f",
+      "round": 0,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 33679360,
+      "candidate_bytes": 32056096
+    },
+    {
+      "parameter": "shake_128f",
+      "round": 1,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 33679360,
+      "candidate_bytes": 32054272
+    },
+    {
+      "parameter": "shake_128f",
+      "round": 2,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 33679360,
+      "candidate_bytes": 32054272
+    },
+    {
+      "parameter": "shake_128f",
+      "round": 3,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 33679360,
+      "candidate_bytes": 32055144
+    },
+    {
+      "parameter": "shake_128s",
+      "round": 0,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 12623872,
+      "candidate_bytes": 11689984
+    },
+    {
+      "parameter": "shake_128s",
+      "round": 1,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 12623872,
+      "candidate_bytes": 11689984
+    },
+    {
+      "parameter": "shake_128s",
+      "round": 2,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 12588032,
+      "candidate_bytes": 11689984
+    },
+    {
+      "parameter": "shake_128s",
+      "round": 3,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 12588032,
+      "candidate_bytes": 11689984
+    },
+    {
+      "parameter": "shake_192f",
+      "round": 0,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 59858944,
+      "candidate_bytes": 58193920
+    },
+    {
+      "parameter": "shake_192f",
+      "round": 1,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 59858944,
+      "candidate_bytes": 58193920
+    },
+    {
+      "parameter": "shake_192f",
+      "round": 2,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 59858944,
+      "candidate_bytes": 58193920
+    },
+    {
+      "parameter": "shake_192f",
+      "round": 3,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 59858944,
+      "candidate_bytes": 58193920
+    },
+    {
+      "parameter": "shake_192s",
+      "round": 0,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 21999616,
+      "candidate_bytes": 20681728
+    },
+    {
+      "parameter": "shake_192s",
+      "round": 1,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 21999616,
+      "candidate_bytes": 20681728
+    },
+    {
+      "parameter": "shake_192s",
+      "round": 2,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 21999616,
+      "candidate_bytes": 20681728
+    },
+    {
+      "parameter": "shake_192s",
+      "round": 3,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 21999616,
+      "candidate_bytes": 20681728
+    },
+    {
+      "parameter": "shake_256f",
+      "round": 0,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 71754240,
+      "candidate_bytes": 69495808
+    },
+    {
+      "parameter": "shake_256f",
+      "round": 1,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 71754240,
+      "candidate_bytes": 69495808
+    },
+    {
+      "parameter": "shake_256f",
+      "round": 2,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 71754240,
+      "candidate_bytes": 69495808
+    },
+    {
+      "parameter": "shake_256f",
+      "round": 3,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 71754240,
+      "candidate_bytes": 69495808
+    },
+    {
+      "parameter": "shake_256s",
+      "round": 0,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 36937728,
+      "candidate_bytes": 35139584
+    },
+    {
+      "parameter": "shake_256s",
+      "round": 1,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 36937728,
+      "candidate_bytes": 35139584
+    },
+    {
+      "parameter": "shake_256s",
+      "round": 2,
+      "calls_per_side": 128,
+      "order": "BA",
+      "baseline_bytes": 36937728,
+      "candidate_bytes": 35139584
+    },
+    {
+      "parameter": "shake_256s",
+      "round": 3,
+      "calls_per_side": 128,
+      "order": "AB",
+      "baseline_bytes": 36937728,
+      "candidate_bytes": 35139584
+    }
+  ]
+}

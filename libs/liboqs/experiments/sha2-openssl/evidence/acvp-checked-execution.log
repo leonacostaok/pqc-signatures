@@ -1,0 +1,63 @@
+keyGen SLH-DSA-SHA2-128s group 1 passed
+keyGen SLH-DSA-SHA2-128f group 3 passed
+keyGen SLH-DSA-SHA2-192s group 5 passed
+keyGen SLH-DSA-SHA2-192f group 7 passed
+keyGen SLH-DSA-SHA2-256s group 9 passed
+keyGen SLH-DSA-SHA2-256f group 11 passed
+sigGen SLH-DSA-SHA2-128f group 1 passed
+sigGen SLH-DSA-SHA2-192f group 3 passed
+sigGen SLH-DSA-SHA2-256f group 5 passed
+sigGen SLH-DSA-SHA2-128f group 13 passed
+sigGen SLH-DSA-SHA2-192f group 14 passed
+sigGen SLH-DSA-SHA2-256f group 15 passed
+sigGen SLH-DSA-SHA2-128s group 19 passed
+sigGen SLH-DSA-SHA2-192s group 21 passed
+sigGen SLH-DSA-SHA2-256s group 23 passed
+sigGen SLH-DSA-SHA2-128s group 31 passed
+sigGen SLH-DSA-SHA2-192s group 32 passed
+sigGen SLH-DSA-SHA2-256s group 33 passed
+sigGen SLH-DSA-SHA2-128f group 37 passed
+sigGen SLH-DSA-SHA2-192f group 39 passed
+sigGen SLH-DSA-SHA2-256f group 41 passed
+sigGen SLH-DSA-SHA2-128f group 49 passed
+sigGen SLH-DSA-SHA2-192f group 50 passed
+sigGen SLH-DSA-SHA2-256f group 51 passed
+sigGen SLH-DSA-SHA2-128s group 55 passed
+sigGen SLH-DSA-SHA2-192s group 57 passed
+sigGen SLH-DSA-SHA2-256s group 59 passed
+sigGen SLH-DSA-SHA2-128s group 67 passed
+sigGen SLH-DSA-SHA2-192s group 68 passed
+sigGen SLH-DSA-SHA2-256s group 69 passed
+sigVer SLH-DSA-SHA2-128f group 1 passed
+sigVer SLH-DSA-SHA2-192f group 3 passed
+sigVer SLH-DSA-SHA2-256f group 5 passed
+sigVer SLH-DSA-SHA2-128f group 13 passed
+sigVer SLH-DSA-SHA2-192f group 14 passed
+sigVer SLH-DSA-SHA2-256f group 15 passed
+sigVer SLH-DSA-SHA2-128s group 19 passed
+sigVer SLH-DSA-SHA2-192s group 21 passed
+sigVer SLH-DSA-SHA2-256s group 23 passed
+sigVer SLH-DSA-SHA2-128s group 31 passed
+sigVer SLH-DSA-SHA2-192s group 32 passed
+sigVer SLH-DSA-SHA2-256s group 33 passed
+{
+  "keyGen SLH-DSA-SHA2-128s": 10,
+  "keyGen SLH-DSA-SHA2-128f": 10,
+  "keyGen SLH-DSA-SHA2-192s": 10,
+  "keyGen SLH-DSA-SHA2-192f": 10,
+  "keyGen SLH-DSA-SHA2-256s": 10,
+  "keyGen SLH-DSA-SHA2-256f": 10,
+  "sigGen SLH-DSA-SHA2-128f": 28,
+  "sigGen SLH-DSA-SHA2-192f": 28,
+  "sigGen SLH-DSA-SHA2-256f": 28,
+  "sigGen SLH-DSA-SHA2-128s": 28,
+  "sigGen SLH-DSA-SHA2-192s": 28,
+  "sigGen SLH-DSA-SHA2-256s": 28,
+  "sigVer SLH-DSA-SHA2-128f": 28,
+  "sigVer SLH-DSA-SHA2-192f": 28,
+  "sigVer SLH-DSA-SHA2-256f": 28,
+  "sigVer SLH-DSA-SHA2-128s": 28,
+  "sigVer SLH-DSA-SHA2-192s": 28,
+  "sigVer SLH-DSA-SHA2-256s": 28
+}
+total cases: 396

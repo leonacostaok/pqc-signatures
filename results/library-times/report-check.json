@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "cells": 612,
+  "unsupported_cells": 36,
+  "exact_parameter_sets": 17,
+  "libraries": 6,
+  "minima_checked": 102,
+  "local_links_checked": 125,
+  "assertion_disable_guards": 2,
+  "deterministic_output_sha256": {
+    "docs/library-times.md": "5ea1f18f841870bf76b3c778a0e67fdbc36f689e3c25bf1d882c52aa9d34ddae",
+    "results/library-times/comparison.json": "985491110080c0141e40b23c91adb574745fc0aeef9a12d1ec8b14870b100edd",
+    "results/library-times/comparison.csv": "51cfa3f5ac23c5aa13cadbe628b91a7578ab4aab343840ba212d6d5d0af4537a"
+  },
+  "scope": "Saved-data report integrity, coverage, units, minima and source hashes; no new performance or cryptographic test"
+}

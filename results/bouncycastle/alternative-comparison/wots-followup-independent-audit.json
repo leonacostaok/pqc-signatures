@@ -1,0 +1,1 @@
+{"audit": "saved_confirmation_passed", "processes": 384, "observations": 3840, "cells": 96, "binary_checks": "Use audit.py for local binary seals or audit_portable.py for explicit binary availability; this checker verifies saved confirmation data."}

@@ -1,0 +1,1710 @@
+{
+  "schema": "c-indicators-artifact-inventory-v1",
+  "ready_sha256": "ad0b32e475e6b268d95819238f444d4ed9d00940173678cfc68583ba66077e7a",
+  "entries": [
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/experiments/complete-indicators/driver.c",
+      "sha256": "515983ee307dd08dae294e01bc48befaf346bd2df06d276a719af91cd96b26bf",
+      "repository_path": "libs/openssl/experiments/complete-indicators/driver.c",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/experiments/complete-indicators/prepare.py",
+      "sha256": "5f29c5f3b22c51e8dac400df2029a5a4f440b0d2fd9b8d5e4b81f2d6c19bdbfa",
+      "repository_path": "libs/openssl/experiments/complete-indicators/prepare.py",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib/libcrypto.3.dylib",
+      "sha256": "a7e687f76c5b69423480050f6bfa91dc2c2f616866476cca485ebc2b68ed0b15",
+      "repository_path": null,
+      "kind": "local compiled artifact",
+      "availability": "local-build-only",
+      "unavailable_reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+      "sha256": "8d11edf6dfe40ba6100177206fe3c9face65e079ba62400f8697466066df8a19",
+      "repository_path": null,
+      "kind": "local compiled artifact",
+      "availability": "local-build-only",
+      "unavailable_reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/baseline/lib/liboqs.a",
+      "sha256": "3959b768646d4e427f151ec99881d802f9b944618f817d4ca529d05f0e7aa521",
+      "repository_path": null,
+      "kind": "local compiled artifact",
+      "availability": "local-build-only",
+      "unavailable_reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/baseline/CMakeCache.txt",
+      "sha256": "a270de939c788426da49441bebbe019699f54373ac558ed7e68bdcdfe4e9cf42",
+      "repository_path": "results/liboqs/complete-indicators/source-snapshot/a270de939c788426da49441bebbe019699f54373ac558ed7e68bdcdfe4e9cf42.txt",
+      "kind": "archived source/configuration",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/baseline/include/oqs/oqsconfig.h",
+      "sha256": "64ec04c2dd71529bd715b3137e603cf78ccd399c2e008c0713f9908802956474",
+      "repository_path": "results/liboqs/complete-indicators/source-snapshot/64ec04c2dd71529bd715b3137e603cf78ccd399c2e008c0713f9908802956474.h",
+      "kind": "archived source/configuration",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/candidate",
+      "sha256": "4769d4f535192c6ff9094d7d2cf3f38d99efaa4556b23a4948203488d9092f1b",
+      "repository_path": null,
+      "kind": "local compiled artifact",
+      "availability": "local-build-only",
+      "unavailable_reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/lib/liboqs.a",
+      "sha256": "c86a787170a16f9d39d7dcca2d66213f8b8a3283616bb5c34d6baaea1f071cdd",
+      "repository_path": null,
+      "kind": "local compiled artifact",
+      "availability": "local-build-only",
+      "unavailable_reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/CMakeCache.txt",
+      "sha256": "ba1085bf8b4fae5fed8323d699e5bc2f70e8040b708c8d1189fe2f1938b387f8",
+      "repository_path": "results/liboqs/complete-indicators/source-snapshot/ba1085bf8b4fae5fed8323d699e5bc2f70e8040b708c8d1189fe2f1938b387f8.txt",
+      "kind": "archived source/configuration",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/include/oqs/oqsconfig.h",
+      "sha256": "64ec04c2dd71529bd715b3137e603cf78ccd399c2e008c0713f9908802956474",
+      "repository_path": "results/liboqs/complete-indicators/source-snapshot/64ec04c2dd71529bd715b3137e603cf78ccd399c2e008c0713f9908802956474.h",
+      "kind": "archived source/configuration",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+      "sha256": "7446741ef5b769fb7b7c4b2c174861737c18ac7572e864f097467619be93ec60",
+      "repository_path": null,
+      "kind": "local compiled artifact",
+      "availability": "local-build-only",
+      "unavailable_reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/baseline-extended-make/lib/liboqs.a",
+      "sha256": "13de375faee783cb9d19ef23b624ea6e58cd0a3249df7c9e58bb0669c6f8b1cf",
+      "repository_path": null,
+      "kind": "local compiled artifact",
+      "availability": "local-build-only",
+      "unavailable_reason": "Compiled binary/library not committed; its recorded digest is bound, but file bytes require the original local build"
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/baseline-extended-make/CMakeCache.txt",
+      "sha256": "9470a31d5920e425147e7af2f3d434942095d9b2adb4ea43e7db2d9c1a1bfd97",
+      "repository_path": "results/liboqs/complete-indicators/source-snapshot/9470a31d5920e425147e7af2f3d434942095d9b2adb4ea43e7db2d9c1a1bfd97.txt",
+      "kind": "archived source/configuration",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/baseline-extended-make/include/oqs/oqsconfig.h",
+      "sha256": "6a3cd5bdef3bc104409f963640146995d269acd8daa127c81e150a10e65ca3ab",
+      "repository_path": "results/liboqs/complete-indicators/source-snapshot/6a3cd5bdef3bc104409f963640146995d269acd8daa127c81e150a10e65ca3ab.h",
+      "kind": "archived source/configuration",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.input",
+      "sha256": "1fd675b1c5506c5e37742ac1ff0080a7f8a2b0f0356d087c88f9935ba85fe0c3",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.outputs",
+      "sha256": "c4248ce8f4be5494cafc9312b2239bfd9e6f0f8244694a9f96f2c10151a888d9",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.input",
+      "sha256": "8c5ae7d1130f3f246265b5724b1928443698217e7c2ce9548dc5449cec71bf4e",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.outputs",
+      "sha256": "43623afb47933bfb05d9ec6f573710caa16ecec62277bfbbee17b72a81e0c0a2",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-65.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.input",
+      "sha256": "e8f9952b0f880d04f549932e8bdab2b2ac461d074a1a1e82dc570832d779576b",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.outputs",
+      "sha256": "66a829440eb64f7e74a7cb5d787466b2b9cd8e220b199b42c82b2bbd74d220f6",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-87.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+      "sha256": "d3738bf1298d6d993d001758a72feda94095938e758dcf699297a79ad3c4c159",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+      "sha256": "3c0ba12df4bfcfea31db0f37c6f74c4bd9d23e1336d70c59b730047ba59bb000",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s.input",
+      "sha256": "9d9e570eacc0525cbffd37a51e67251020abacfd9feae965726312bb44510d39",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s.outputs",
+      "sha256": "2fe594e0f3b236614a51e85a9adee4b0db7be97fe90b1ce787384743f73ea7db",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f.input",
+      "sha256": "3a243dc5dcd371a0509e949d3b279917d85607c5537e8c7614cc1a33908f34cb",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f.outputs",
+      "sha256": "f943c318bc441e364575f81ce293cb41757cd14dba47ca101980db0f46a235c4",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s.input",
+      "sha256": "28cac55c1badf8ff956d7865b2f249226f289472a46c2bbddd6754bf85520440",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s.outputs",
+      "sha256": "994465e7148f7f9719d33332283fc2159510406a07efae61e6e76c8beff29a08",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f.input",
+      "sha256": "0ad8ea558b4bfe03f4b8b8d94dcb32daaa359b3f757aac1bb171adb9edba6afc",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f.outputs",
+      "sha256": "9e25565f19ea80063f836a7384c93e099ce743f44d2a1b2dc245a00a42f3be86",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s.input",
+      "sha256": "c610002111768fb5bd5a7ec34519a16aa6ff3d3c34a555d499f66033959afff1",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s.outputs",
+      "sha256": "a1c26b87553a999adbfb3e4de0207e763b55c37aa37dfa1b61069b1f00c76d83",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.input",
+      "sha256": "d23e6d1bb593cb46ce826a50d8aeff83b19f97dab06fa168a059e96e139be5fb",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.outputs",
+      "sha256": "624d635c03aa4f47d0402a33f02edbe339262baf051c1ff5264b9f14ba2ec1ba",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.input",
+      "sha256": "6341ce2221de62ca5c2ca98b7eedd3fb542fb6b7972cb23aec05c43c73dff62c",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.outputs",
+      "sha256": "97a2997228e2b14fd0909992b537c5c845dd385a1c8902f6d8e18715794f7f6d",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.input",
+      "sha256": "e4e7074d12c2c667974615c492e33ff80b85b5b14fb592e96900b95931e366ed",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.outputs",
+      "sha256": "5cb6a2c3a015703b0ac3003682c1a55b1faac478a0d75904596f6f6636a269f7",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.input",
+      "sha256": "a6eb4d7d82190a4b4ae82026ee11b9f8b3462c2794000f954f514b8c41ff4f97",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.outputs",
+      "sha256": "41670c880ea18ab7b0135150169da4606460d4e4d306c56743383145917c12c2",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.input",
+      "sha256": "3839ae87cac2589d3eeb4984314ff5af463e8f0ef1c0dc6ea3eda2d6606846d4",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.outputs",
+      "sha256": "24d5f6268e55dea4285f35415ced307593ce7253923a6db2cf49c31837cc972e",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.input",
+      "sha256": "35f95eb289dd5a93a617306a550a0484e9ae619bd07c407b6df99391ef73d374",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.outputs",
+      "sha256": "c689bcad5d922d3ae8b8f7587c62107c75dd6804e365acf72e38e6002a086d8d",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.input",
+      "sha256": "271b1aa5822b3193a3463adcf106e7767e45b7a6a685a4951e67d72555b07006",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/Falcon-512.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512.outputs",
+      "sha256": "c957d016043e3831ed324dcdf7eb8305ff427044067d8ecfe3dccfed454f73f8",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/Falcon-512.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.input",
+      "sha256": "2806c05344aeb3da401ba54a9d63831e022b44343a4fb9667aa49d31a7268731",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/Falcon-1024.input",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024.outputs",
+      "sha256": "59dc59685a457559aa63ada04346c5243d8059f83540d9a2edb1b1def44bd955",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/Falcon-1024.outputs",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87-support.json",
+      "sha256": "7f5728f206b6228003901d3a8cdd1bf4425feff9d118a6e82d5671e08f7f7d84",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-87-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87-extended-2-check.json",
+      "sha256": "abd35d03f89d4f6af1a194ab30982e5c556d1ab7410192d70ed6057d0d0dc52c",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-87-extended-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/baseline-compile.json",
+      "sha256": "19f21d7926be4e9a98b0963f3cd32f4e0672fee6bba715c31588f13e18f012d9",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/baseline-compile.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87-prepare.json",
+      "sha256": "c1bf5e0f9c837c0ef7182c021bb84838c8040a36279281fac780f9eb51e1aea7",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-87-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f-extended-1-check.json",
+      "sha256": "07e1e6c951ae8537d7d153329f1332d57e6ff5e4cab64b56cf3c4321c157a924",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f-extended-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-candidate-1-check.json",
+      "sha256": "e6396af6081959dcda30b17eadf87e184f51ab7abb340ed4071b99e55dcfb99b",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-candidate-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65-extended-2-check.json",
+      "sha256": "a9a491cf315a2ee6a02fa404202a2bbab5bff819b3f94868b96d4b9c84e30935",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-65-extended-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512-extended-2-check.json",
+      "sha256": "d3ff10351c5a11aa43f0c85ae938879720d9960d3c9fc3af5a5e053bb5c2cb94",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/Falcon-512-extended-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-baseline-1-check.json",
+      "sha256": "ec2c61b729d5f2807b1187fbe1dff1eea8c9649b9090d81f6788109618e4ca88",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-baseline-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-candidate-0-check.json",
+      "sha256": "10c6d10d1ede9d5cb8dd5cfdc9fe23c1346d3eda6f00151bbbc830c543f7f5eb",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-candidate-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-candidate-0-check.json",
+      "sha256": "e6f90c8ee7a7f6e2aaace8c8f63b699f01db3e5ff1b716aab6e27260202a1dc4",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-candidate-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-baseline-0-check.json",
+      "sha256": "50fdfbf14bff9c93fd29075259e419368a7b8a615c396d60085cea57f30dc174",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-baseline-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-prepare.json",
+      "sha256": "90579ba94f261af77a881504459d1d311ce81963ccdab98213148956fb716a13",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-candidate-2-check.json",
+      "sha256": "ad7850ca98c925ca8330ebcfeb476b331414945815a0a47a2ab7831d3cb7579e",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-candidate-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f-extended-2-check.json",
+      "sha256": "ed1d09327043d79121140b2bcf6b62093c877da75d42e80538b8a5c1161dd944",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f-extended-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f-extended-1-check.json",
+      "sha256": "3d4ec54f844f23edf9f76d57893796fa56ac002b427264969bbf9d984279a0a3",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f-extended-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-support.json",
+      "sha256": "e4d42d245caa3fff16e04da914b009354e987f831347fec24fb63d61ea0eb32b",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-baseline-2-check.json",
+      "sha256": "f0e8fde37f89958240131f991c2e6468defe9fc230b830857dc5f7f02b81bac9",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-baseline-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s-support.json",
+      "sha256": "5c4961d6b070301cec4a64c9ea3f70cc5b18985cc7414d10ea8741c232f595fe",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-baseline-1-check.json",
+      "sha256": "f3dcfa947a20a73513cee4a1d0250579a6a332fbd7daa86e30e0816046ca393d",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-baseline-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024-support.json",
+      "sha256": "5e490083ff7dc7d3af3e4d91fceec682fd4668d56f5fbdbbe8921f432f7def41",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/Falcon-1024-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s-extended-0-check.json",
+      "sha256": "ebf77196f5f354cf7b5eabe815320530fc1b4a683fe2b05fc0989501dd5e543e",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s-extended-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024-prepare.json",
+      "sha256": "5744bbdb0cbf0c4b95df6564cb5d12973056b50a7d2cf02e1a1b3715b01781fd",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/Falcon-1024-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44-extended-1-check.json",
+      "sha256": "97cfe5c89cdea8ff5fab55bb8cdfe32b092c1ecf2d727af3e12dfc08520592b9",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-44-extended-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s-prepare.json",
+      "sha256": "f67e156476bf496f827762f94fba7c6ee79e260cbf26d12e4ca7bb8795abe0fb",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024-extended-1-check.json",
+      "sha256": "5846d1fadc3a07f9b23321e3a37d6a2d953543ae364bb73c89b64a808bd89e46",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/Falcon-1024-extended-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-support.json",
+      "sha256": "ca80bf9b88eadd91cdd0f36c6b2278585fc5e608ee607ab52ee233f57c17f734",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512-support.json",
+      "sha256": "4443abeca57e42b71ebcb11f591c52173ddca6a38a925ebe0e6ef956968c93d9",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/Falcon-512-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-candidate-1-check.json",
+      "sha256": "aa06e7e27f955b912118c2bdb55563c94c6ef88540d1ece44de36501c7706aa3",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-candidate-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65-extended-0-check.json",
+      "sha256": "7777a06291c0d7f0a6af47bab15d496ffc63e69c33ed50ecc581516a5bca7630",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-65-extended-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/extended-compile.json",
+      "sha256": "cafb14c6312d3630d2034d09028fa71968afd9fff14457629ad7e6e67eda78a5",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/extended-compile.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512-prepare.json",
+      "sha256": "db09338d51e187efc9090e38699718cf4c0ff8fd67502de2fd8111766063e314",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/Falcon-512-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87-extended-0-check.json",
+      "sha256": "904c342ecf8bae293aceb749cf63fb2ddde2337a924f12b185e7e5ac3d1e2bb1",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-87-extended-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-baseline-1-check.json",
+      "sha256": "e8154a920bbd14792a864985b2c5382a3c8a4ea5f4ef53010aa8b845eefdbb2e",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-baseline-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-prepare.json",
+      "sha256": "0515dae0c63706c59fac194e5bd6ff9a21be2606dbb96e2744a60354076d1e0b",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f-prepare.json",
+      "sha256": "cf87ad40d750636c9b08e54e8da75727936a255b0889065254dd517312578a2a",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-candidate-2-check.json",
+      "sha256": "7339ec6ce5d4583b5abae0d623020905ceb35e31ebbb9caab7310430cfc8a10e",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-candidate-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s-extended-1-check.json",
+      "sha256": "9e978f59a971db8fdedca760e81b652f92af98e428fb7afc265a51a7972f588e",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s-extended-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512-extended-0-check.json",
+      "sha256": "a0b3b56447775649e7d714044a9516fe64587abfcb93a4bfa150955d93b131c6",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/Falcon-512-extended-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f-support.json",
+      "sha256": "d2c9ae26126568d24e66f04cdc24db024f0fe1a8f595099ab0cdd96872da6654",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f-extended-0-check.json",
+      "sha256": "a89c4f2a4f5ebc875f9c1f7ce85805ab3b668eddba163509c42de4beb9a815b7",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f-extended-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44-support.json",
+      "sha256": "d658549d33e9f81f541348dfc6fc8d8c3e22807679443e272a853a8b47b15e18",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-44-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-baseline-2-check.json",
+      "sha256": "b8c9427a9a788dcf1ee7ae0673f361d635eee4d026fbcc4293be85ac5a671821",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-baseline-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-candidate-2-check.json",
+      "sha256": "32ed89862a81a568b18f55dee48569a6c7093df977be7bb1737dd4cf05ff8733",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-candidate-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44-prepare.json",
+      "sha256": "efa787d47504e337bcc2fd770b9241f1488f31654fa95672933aa3e8b19d72f3",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-44-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-candidate-0-check.json",
+      "sha256": "4aa53aef109b8b017c4f101b8dc06a0089ef37df7f411452e4f05d3cae797dac",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-candidate-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-baseline-1-check.json",
+      "sha256": "ea55f65833a9ba497dbba729e46ad2e943efa71805726adb6ead1ff0f7fcc1b5",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-baseline-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s-extended-2-check.json",
+      "sha256": "82d289c8f23460905ded5b6fab16dfcdf7f9cd17d05e2ebc08d92f9b136ed703",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s-extended-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s-extended-1-check.json",
+      "sha256": "f440bb31f0e8316f4edcd4f8ff908ae10e73e2a24caae800069fe5409b5002e3",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s-extended-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-baseline-0-check.json",
+      "sha256": "e49ff0b32ec8d1a90f78a9cf83ae856b1bbc257c50244fe56369ce9a2a96f62d",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-baseline-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-candidate-1-check.json",
+      "sha256": "27af8b07bc691c7e9effd48ea6d67a59e1c40be64db9132a7c8a98f4587dd270",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-candidate-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-baseline-2-check.json",
+      "sha256": "f9c1596357f1052f05387d8302e117a792b4ae924459d809c20f5be8b88bb3f2",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-baseline-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-prepare.json",
+      "sha256": "5b1fad617178169b9ed1b73821c2da94c134ba11d5d69a4c9ad48959700e931c",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-candidate-1-check.json",
+      "sha256": "f055b32e7554c66f6146109732f0dcbfcc3812db17a911a3997bfcf3502bb53c",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-candidate-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-baseline-1-check.json",
+      "sha256": "6f0fd590f307fd0a6d2d22c54c406dd0103af3b9c190847b09a5a8593b23479a",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-baseline-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f-extended-0-check.json",
+      "sha256": "11defb572982a984d2cefa8f823f83075d099145bea98bfa8fcbcbf21b2bf2ec",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f-extended-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-support.json",
+      "sha256": "2f65d09e001efc90ac2ab71d1de978dbd84ad6c30338f19de9c57766471148fd",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-baseline-0-check.json",
+      "sha256": "1bd9348a70e8538d6ddc70e6b7a61a33a7cb5ccac19fb125f5ae4a7465360fb0",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-baseline-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-candidate-2-check.json",
+      "sha256": "e3f62fc462c9492353a4f5663659e16b1fa4b480a0fa9f0a23db5458a0166901",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-candidate-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f-support.json",
+      "sha256": "33e58c3a3c2d0240b5f3c39128943b8f32b35c16468b573d22d84d2f41b610f1",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65-support.json",
+      "sha256": "f8720cf0ada3e46f833405f06c956783821274c842bfa65b6f93916edd486c0c",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-65-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s-extended-2-check.json",
+      "sha256": "40bce5513054454d654cc1dfe0c83e0644a38a6ec922ebe06e567396fa927d34",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s-extended-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44-extended-0-check.json",
+      "sha256": "bba224d34addbb0e44eb27eb314a351ffbc2b889701d2756d1dc0ac05ee3577c",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-44-extended-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s-extended-1-check.json",
+      "sha256": "3fa54ad9e357d8db6c7a4646be703632b9b043a9bb330c196aad2b3c9805c982",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256s-extended-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65-prepare.json",
+      "sha256": "a6431bbb8bfc96c3a4e55942501f38fae374d242812786480b46f1d79dfb15e4",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-65-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f-prepare.json",
+      "sha256": "c224768070fe93ed3c0cbb541d9939a6ca797df7d4106505da109e4166280ef3",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-baseline-2-check.json",
+      "sha256": "abfc0e1f82968835340b4d2009aaf552c8c90627f17e46de8fafba8f1eadc43b",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-baseline-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f-prepare.json",
+      "sha256": "b0dd6fa2cbccf5875eb0cd3043838b474494b7eab576701156eac68bbbc5b544",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-candidate-2-check.json",
+      "sha256": "abb844a2c68bb17d1b2a0b682c4ae5e86ab4f3dfdb87e8f695e48f5039523e4c",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-candidate-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f-extended-0-check.json",
+      "sha256": "9eb98aa61ba52615eb9aa7308c3898b30c26a8ed467808efac406f54e27f1420",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f-extended-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f-support.json",
+      "sha256": "85c6a86b151301afcc3122b09e8c6d8326ed01efc4d42fcc5f8cca7f52a75e2c",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-candidate-0-check.json",
+      "sha256": "74eada9bdbd6a49dead0fb859a1db40b3f40f3215ff4d454c594feffb20c9d56",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-candidate-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024-extended-2-check.json",
+      "sha256": "8bdeb6b21ef5d5d0e4fa101f3c9d7bc3cbd23e58951dbd835da40f2efbdc314a",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/Falcon-1024-extended-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-baseline-0-check.json",
+      "sha256": "8bf7188a20c9fc18d1ea0d5fe6f69849d4556384e1b61775d93e21767eacd8e8",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-baseline-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-support.json",
+      "sha256": "3d7095b1cb078cca5b1a17f9ca69f1c7046b047cefb3201c06d7bd3ea8fe0e06",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-prepare.json",
+      "sha256": "f1e192341dea1df303998ae214d6387ce73ab7e8d6450d9edd995ee7e5b646c0",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s-extended-2-check.json",
+      "sha256": "70685c86af1628ad4194935c008b197bc28410fb8859bd7ab8c5bdadb9b2c88b",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s-extended-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-candidate-1-check.json",
+      "sha256": "8c5e3aad40a9fe3eb253d75252c28571fb02bce24686d1122dbea68ceb33a18f",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-candidate-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f-extended-2-check.json",
+      "sha256": "e1bbcc31f6ceb45f0b8a5a02436a8869161a2905a550bfa84b99a6f5483356d0",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192f-extended-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f-extended-1-check.json",
+      "sha256": "6f64f261b852d6160c858a7f8cd651bd658ed865ee4efa82482607b6f1d41fb9",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-256f-extended-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s-support.json",
+      "sha256": "6d91ceef9dc68fb636cafdcbe25e3e443c70387e196929ea5d9afe842096af00",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-baseline-0-check.json",
+      "sha256": "71611778a0e1e439c8dd5317c97415cd9361adaa663f27289ec5d8a52b7195d6",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-baseline-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s-prepare.json",
+      "sha256": "924000e57aec6dfb8d913c05ed7b4563e829021458bfe9ee81405c3be5a160aa",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-candidate-1-check.json",
+      "sha256": "3d15c4300e19f4c7e79f5eea424d06c9b6e467bd61e8279bf22cdbe0a263ee35",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-candidate-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44-extended-2-check.json",
+      "sha256": "5930924bf66b95edca2a3580b8ae9293dd56419c1d17c537049636063f823e37",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-44-extended-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s-extended-0-check.json",
+      "sha256": "7dee5441b982ab5a6e8b492e78cdc9134cfedce5baeaa13e1a2ec5056a49a852",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-192s-extended-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-prepare.json",
+      "sha256": "3a3dacbdc317904205036497ebe62dfeb03ac053936d74a8edcc3e3d9d406a4a",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-baseline-2-check.json",
+      "sha256": "0bee816d962cd08f7909cc733d11a0e36ec9d21c6ee02c65dc2b82e546a70476",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-baseline-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-candidate-0-check.json",
+      "sha256": "469bdf865911c5a820d762fdd664e200e3b08fc1cdfe2033179c17c15a59e63d",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-candidate-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-support.json",
+      "sha256": "a9e627be7aafc1ae8d997945cbd932c7cdb41eacd660e8d192ebbb34ddb33a15",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192f-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-baseline-1-check.json",
+      "sha256": "d014f4fcdcb3d04eeefe0c0be779276112bcb4cd8b72556240989b4709b5954f",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256s-baseline-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-candidate-0-check.json",
+      "sha256": "4a5a6ebc28e3c1cfd5567a54773919c6d3be0e9ed67f39f658e59750a076a2fb",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s-candidate-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-candidate-2-check.json",
+      "sha256": "9513c260e83066fecb870cc789237dc2dbecdab36336095167b991297d8935c5",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-256f-candidate-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f-extended-2-check.json",
+      "sha256": "1b45b60ade18ad6e2c8095de4fb9c103dc161ada6ac6348be13ed72ba9d339b7",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128f-extended-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-support.json",
+      "sha256": "e8492dc4bf9054f3c7af3c0fc348ab5f6d1460a0030bbf5e106c7c81438e59f2",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-65-extended-1-check.json",
+      "sha256": "2f253970a3ab74a6dc40e7113fc12d9d6329d460302cd6cb641a78bb080e497c",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-65-extended-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-1024-extended-0-check.json",
+      "sha256": "c0beda3fe33246b35790940bd6bb6993440841fb11bffac5a7d4f5a74bf5bd8d",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/Falcon-1024-extended-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-baseline-0-check.json",
+      "sha256": "6a40dbd735a66e2a1236e95ceb1c0399878b809b09e8e5c2b57cc006529b37c5",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-baseline-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-87-extended-1-check.json",
+      "sha256": "6bbeedd311932e44ae802d79c7f6c29a1d8643d91affc0ca29f1c917fbf84061",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/ML-DSA-87-extended-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-prepare.json",
+      "sha256": "9f14a46df2b20316bc741cb4e9a618b4551f4a0b673e8923fc23839df021088c",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128f-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s-prepare.json",
+      "sha256": "f8640c7bc6648ab5166c639889832257708c022f56ffac3020bd189e3504f8b4",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s-prepare.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s-extended-0-check.json",
+      "sha256": "da2493235d79f7df2148649bc3f95a72408791d46d1b626b02564cad7444033c",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s-extended-0-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/candidate-compile.json",
+      "sha256": "c6c17d42bfa3c52a5a303c9dc3d44821f496210e510f0b7d3c10478a3d7255a1",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/candidate-compile.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/Falcon-512-extended-1-check.json",
+      "sha256": "1403f4b45d3ffe1d3590a04913c7607d6ea2a4aacb098f779cc7e2601b3f9b05",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/Falcon-512-extended-1-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-baseline-2-check.json",
+      "sha256": "544eea254f69c2d7d6e5ff448499e2b793b843813c90da65585e49b6d6a4423f",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-128s-baseline-2-check.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s-support.json",
+      "sha256": "4e4404fd312ee185649efad65f29cd3696ae47253a6fa72a7465ab36348b7161",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHAKE-128s-support.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/manifest.json",
+      "sha256": "79a0a4b3a9e91eef7e5de459b2f433070d0b0b301d5db6d70c034189e7f50e19",
+      "repository_path": "results/liboqs/complete-indicators/prepared-v1/manifest.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/baseline-extended-configure.json",
+      "sha256": "4fb36a74b589f12aedf3884aca270856430a0bab62ed1d814a54db55532191f6",
+      "repository_path": "results/liboqs/complete-indicators/baseline-extended-configure.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/baseline-extended-build.json",
+      "sha256": "eeccdccde105ad97a66de9210a538203cecc2ac5652d558256f07c9104b870d3",
+      "repository_path": "results/liboqs/complete-indicators/baseline-extended-build.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_256.c",
+      "sha256": "1ac1b1dbc03ddfc6fd909503429eb20fd8e01dc35ae273db4de565f8ac842a12",
+      "repository_path": "results/liboqs/complete-indicators/source-snapshot/1ac1b1dbc03ddfc6fd909503429eb20fd8e01dc35ae273db4de565f8ac842a12.c",
+      "kind": "archived source/configuration",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c",
+      "sha256": "7afdba3b2881c66c59345c921e709ca3cdedb8a7179cba3d40cfa8c5a6e49716",
+      "repository_path": "results/liboqs/complete-indicators/source-snapshot/7afdba3b2881c66c59345c921e709ca3cdedb8a7179cba3d40cfa8c5a6e49716.c",
+      "kind": "archived source/configuration",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/experiments/sha2-openssl/evidence/final-paired/ready-manifest.json",
+      "sha256": "cd6d94cd1c41d13776e4f69259bf24d7ec14fb7c9866a221ebe352ad882a0b1c",
+      "repository_path": "libs/liboqs/experiments/sha2-openssl/evidence/final-paired/ready-manifest.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/000.jsonl",
+      "sha256": "83681269a1821be7df0f1e522bba1350a29604627662c226f907f951a9879040",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/000.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/000.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/000.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/001.jsonl",
+      "sha256": "071270872eef347a908b049a23f25317b2e42d5c105fc26b783cc5391324e4df",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/001.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/001.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/001.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/002.jsonl",
+      "sha256": "006a6ac3bd8d51c68a5ccf251e5c2a028c089a7db2dd1ffe2ff0f9a2f6ad1225",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/002.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/002.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/002.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/003.jsonl",
+      "sha256": "f3285ee1650d43bc920e9a8c7058e336842c42b3d0d50dc34a31af1449824ad2",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/003.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/003.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/003.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/004.jsonl",
+      "sha256": "9ed33b821ed1749ec8159c708535d2ba680fd3cbf4e4a8d98ff06d201f5b0f7c",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/004.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/004.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/004.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/005.jsonl",
+      "sha256": "0c122a3d60f24986cf91f237e5df4f3d459526eec256cb0a32283722ab908a6e",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/005.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/005.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/005.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/006.jsonl",
+      "sha256": "a5908642d81ca6f1a206c3f21548d109fd11906123f97579d2342392ac8ee6ba",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/006.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/006.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/006.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/007.jsonl",
+      "sha256": "aa41aabe55238faadd6cfa0fef3281dac3fcb167cb22068afe5fafd0e4bd01a3",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/007.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/007.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/007.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/008.jsonl",
+      "sha256": "747744ed25b285e2a25fb11c2c0a43cc629fcdd52c502f3b2ca9e90290ae7db6",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/008.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/008.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/008.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/009.jsonl",
+      "sha256": "032612d5d8cffd3164f0480a1b07f557916ef77278fba849fc17996b43409f82",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/009.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/009.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/009.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/010.jsonl",
+      "sha256": "1fb109cf332f9de624807622c67dc1ba5f6666900704118d45d5790875db872a",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/010.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/010.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/010.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/011.jsonl",
+      "sha256": "d7277a5a48b49b9ef83be660ea580f6aec08e7b4d98e6bcebc8bb25fad7d6ac8",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/011.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/011.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/011.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/012.jsonl",
+      "sha256": "83681269a1821be7df0f1e522bba1350a29604627662c226f907f951a9879040",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/012.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/012.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/012.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/013.jsonl",
+      "sha256": "071270872eef347a908b049a23f25317b2e42d5c105fc26b783cc5391324e4df",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/013.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/013.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/013.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/014.jsonl",
+      "sha256": "006a6ac3bd8d51c68a5ccf251e5c2a028c089a7db2dd1ffe2ff0f9a2f6ad1225",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/014.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/014.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/014.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/015.jsonl",
+      "sha256": "5fe98f0b8ba7c7f5d32de6b4c6958b823cd0b2ced35495ccb564b513586dfcee",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/015.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/015.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/015.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/016.jsonl",
+      "sha256": "f4e2ef7e5b7261192202aca1c185dda3ca3064732729c9f7f1b0ed2f3f1b7f46",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/016.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/016.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/016.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/017.jsonl",
+      "sha256": "0532dc27cc96b3413ffd0e11a9e01eacd04f280905b947a9570a0d4d712346f8",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/017.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/017.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/017.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/018.jsonl",
+      "sha256": "6a27551d96cda621080e5f90fdf7a2a10096e57b0c156dd9c7ca66157c33a489",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/018.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/018.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/018.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/019.jsonl",
+      "sha256": "224b1bd3a99429bfad357305b4b2bf46fc006cd4c5bb42712ff6a6cf7451edc9",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/019.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/019.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/019.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/020.jsonl",
+      "sha256": "f9d94d1f9f58e04e7f540056c7b965a0cb01ae808609cc13ba66039d05da25db",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/020.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/020.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/020.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/021.jsonl",
+      "sha256": "3e9a0cbb2e3a3a60b6300e490c5bf06ce759f3e2066d84270484231e7844ad83",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/021.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/021.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/021.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/022.jsonl",
+      "sha256": "1fb109cf332f9de624807622c67dc1ba5f6666900704118d45d5790875db872a",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/022.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/022.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/022.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/023.jsonl",
+      "sha256": "d7277a5a48b49b9ef83be660ea580f6aec08e7b4d98e6bcebc8bb25fad7d6ac8",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/023.jsonl",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/023.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/023.stderr",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/resource-smoke/report.json",
+      "sha256": "43fc292b4b0ca312116dae77ecd033b012ed7cb37f3d18b5e3ded5f72f32c383",
+      "repository_path": "results/liboqs/complete-indicators/resource-smoke/report.json",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/experiments/complete-indicators/smoke.py",
+      "sha256": "3f8a154c0cf86895ec93e5a403f48d6bc1bc729716c931a3403b18c842991001",
+      "repository_path": "libs/openssl/experiments/complete-indicators/smoke.py",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/experiments/complete-indicators/seal.py",
+      "sha256": "c242fc1ed019fcb52bad0ea54e62a29edad4fd6b8462f2e2e3259153b1c873f2",
+      "repository_path": "libs/openssl/experiments/complete-indicators/seal.py",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    },
+    {
+      "original_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/openssl/experiments/complete-indicators/collect.py",
+      "sha256": "a9bb110a29345cbc771763c982a9b57d19afcaa28ec6218785408de1dfa7df1c",
+      "repository_path": "libs/openssl/experiments/complete-indicators/collect.py",
+      "kind": "repository artifact",
+      "availability": "saved",
+      "unavailable_reason": null
+    }
+  ]
+}

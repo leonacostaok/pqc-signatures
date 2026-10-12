@@ -1,0 +1,21 @@
+{
+  "SLH-DSA-SHA2-128s/keygen": 10,
+  "SLH-DSA-SHA2-128f/keygen": 10,
+  "SLH-DSA-SHA2-192s/keygen": 10,
+  "SLH-DSA-SHA2-192f/keygen": 10,
+  "SLH-DSA-SHA2-256s/keygen": 10,
+  "SLH-DSA-SHA2-256f/keygen": 10,
+  "SLH-DSA-SHA2-128f/siggen": 2,
+  "SLH-DSA-SHA2-192f/siggen": 2,
+  "SLH-DSA-SHA2-256f/siggen": 2,
+  "SLH-DSA-SHA2-128s/siggen": 2,
+  "SLH-DSA-SHA2-192s/siggen": 2,
+  "SLH-DSA-SHA2-256s/siggen": 2,
+  "SLH-DSA-SHA2-128f/sigver": 24,
+  "SLH-DSA-SHA2-192f/sigver": 24,
+  "SLH-DSA-SHA2-256f/sigver": 24,
+  "SLH-DSA-SHA2-128s/sigver": 24,
+  "SLH-DSA-SHA2-192s/sigver": 24,
+  "SLH-DSA-SHA2-256s/sigver": 24
+}
+all selected shared cases passed: 216

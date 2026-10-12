@@ -1,0 +1,40 @@
+{
+  "schema": "bc-matrix-preflight-v1",
+  "optimized_python": [
+    {
+      "file": "archive.py",
+      "optimized_exit": 1
+    },
+    {
+      "file": "audit.py",
+      "optimized_exit": 1
+    },
+    {
+      "file": "collect.py",
+      "optimized_exit": 1
+    },
+    {
+      "file": "preflight.py",
+      "optimized_exit": 1
+    },
+    {
+      "file": "prepare.py",
+      "optimized_exit": 1
+    },
+    {
+      "file": "variants.py",
+      "optimized_exit": 1
+    }
+  ],
+  "balanced_jobs": 288,
+  "conservative_integer_bounds": {
+    "lazy_sum": 4424577512915007,
+    "q_times_2pow31": 17996808470921216,
+    "lazy_numerator": 22421385983836223,
+    "lazy_output": 5220386,
+    "individual_product_output": 4337377,
+    "original_row_output": 30361639,
+    "challenge_product_output": 5514723,
+    "inverse_final_output": 4211178
+  }
+}

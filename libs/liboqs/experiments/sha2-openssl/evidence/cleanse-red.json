@@ -1,0 +1,5 @@
+{
+  "returncode": 1,
+  "stdout": "SHA256_Transform calls: 1; SHA512_Transform calls: 1\ncleanse calls: 0; bytes: 0; failed: 0\n",
+  "before_fix": true
+}

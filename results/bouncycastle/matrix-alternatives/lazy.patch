@@ -1,0 +1,31 @@
+--- a/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/Poly.java
++++ b/core/src/main/java/org/bouncycastle/crypto/signers/mldsa/Poly.java
+@@ -196,22 +196,14 @@
+     {
+         int[] thisCoeffs = this.coeffs;
+         int L = engine.getDilithiumL();
+-
+-        int[] u0 = u.getVectorIndex(0).coeffs;
+-        int[] v0 = v.getVectorIndex(0).coeffs;
+         for (int k = 0; k < DilithiumN; ++k)
+         {
+-            thisCoeffs[k] = Reduce.montgomeryReduce((long)u0[k] * (long)v0[k]);
+-        }
+-
+-        for (int i = 1; i < L; ++i)
+-        {
+-            int[] ui = u.getVectorIndex(i).coeffs;
+-            int[] vi = v.getVectorIndex(i).coeffs;
+-            for (int k = 0; k < DilithiumN; ++k)
+-            {
+-                thisCoeffs[k] += Reduce.montgomeryReduce((long)ui[k] * (long)vi[k]);
+-            }
++            long sum = 0;
++            for (int i = 0; i < L; ++i)
++            {
++                sum += (long)u.getVectorIndex(i).coeffs[k] * (long)v.getVectorIndex(i).coeffs[k];
++            }
++            thisCoeffs[k] = Reduce.montgomeryReduce(sum);
+         }
+     }
+ 

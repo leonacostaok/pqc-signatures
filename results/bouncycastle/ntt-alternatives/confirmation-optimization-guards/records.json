@@ -1,0 +1,71 @@
+[
+  {
+    "script": "confirmation_prepare.py",
+    "mode": "flag",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "-O",
+      "libs/bouncycastle/experiments/ntt-alternatives/confirmation_prepare.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "expected_rejection": true
+  },
+  {
+    "script": "confirmation_prepare.py",
+    "mode": "environment",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "libs/bouncycastle/experiments/ntt-alternatives/confirmation_prepare.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "expected_rejection": true
+  },
+  {
+    "script": "confirmation_protocol.py",
+    "mode": "flag",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "-O",
+      "libs/bouncycastle/experiments/ntt-alternatives/confirmation_protocol.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "expected_rejection": true
+  },
+  {
+    "script": "confirmation_protocol.py",
+    "mode": "environment",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "libs/bouncycastle/experiments/ntt-alternatives/confirmation_protocol.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "expected_rejection": true
+  },
+  {
+    "script": "confirmation_audit.py",
+    "mode": "flag",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "-O",
+      "libs/bouncycastle/experiments/ntt-alternatives/confirmation_audit.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "expected_rejection": true
+  },
+  {
+    "script": "confirmation_audit.py",
+    "mode": "environment",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "libs/bouncycastle/experiments/ntt-alternatives/confirmation_audit.py",
+      "--help"
+    ],
+    "exit_code": 1,
+    "expected_rejection": true
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "command": [
+      "cc",
+      "-O3",
+      "-fstack-usage",
+      "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-memory/libs/liboqs/build/resource-audit/candidate",
+      "-I/opt/homebrew/Cellar/openssl@3/3.6.4_1/include",
+      "-c",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_256.c",
+      "-o",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-memory/libs/liboqs/build/resource-audit/candidate/sha2_256.o"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "cc",
+      "-O3",
+      "-fstack-usage",
+      "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-memory/libs/liboqs/build/resource-audit/candidate",
+      "-I/opt/homebrew/Cellar/openssl@3/3.6.4_1/include",
+      "-c",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c/sha2_512.c",
+      "-o",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-memory/libs/liboqs/build/resource-audit/candidate/sha2_512.o"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "cc",
+      "-O3",
+      "-I/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/deps/liboqs/worktrees/signoff-20261012/src/sig/slh_dsa/slh_dsa_c",
+      "-I/opt/homebrew/Cellar/openssl@3/3.6.4_1/include",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-memory/libs/liboqs/experiments/resource-audit/hash-resources.c",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-memory/libs/liboqs/build/resource-audit/candidate/sha2_256.o",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-memory/libs/liboqs/build/resource-audit/candidate/sha2_512.o",
+      "-L/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib",
+      "-lcrypto",
+      "-o",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-memory/libs/liboqs/build/resource-audit/candidate/probe"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-memory/libs/liboqs/build/resource-audit/candidate/probe"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  }
+]

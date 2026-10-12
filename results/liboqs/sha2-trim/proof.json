@@ -1,0 +1,22 @@
+{
+  "full_commit": "b14f1b616f938698ebc0bf8b75b3736c30e1502c",
+  "trimmed_commit": "dd039f5f899aefb24b86b94c4b5cba1b2ec39f2f",
+  "changed_files": [
+    "tests/CMakeLists.txt"
+  ],
+  "production_sources_unchanged": true,
+  "test_passed": true,
+  "reason": "Directory-wide OpenSSL include precedes test target; OQS_USE_SHA2_OPENSSL depends on OQS_USE_OPENSSL",
+  "artifacts": {
+    "libs/liboqs/build/sha2-trim/tests/CMakeFiles/test_slh_dsa_sha2.dir/flags.make": "763c7536cd408f1e8dcd18c31f6afa6fca8cd2adad78b9b8bd13ad1d310d14ba",
+    "libs/liboqs/build/sha2-trim/tests/test_slh_dsa_sha2": "0bef1d212a265e32608ba72fffc95fc1da8c32145b97379ceb5a06802ff424ac",
+    "libs/liboqs/build/sha2-trim/CMakeCache.txt": "d91020f2f31dcced1b4c86b3eab3647e58aeaa032198a29db6605db81159b0f7"
+  },
+  "source_sha256": {
+    "tests/CMakeLists.txt": "06c6c7457f6645a57a12b49c594e8d005981cb0d9d2cf9a1939bdc74bf9598a8",
+    "tests/test_slh_dsa_sha2.c": "b5165f90a1fb55f7074cebeaa18832a36288c56c1d5e9df7fe315bd855c5b8cc",
+    "src/sig/slh_dsa/slh_dsa_c/sha2_256.c": "1ac1b1dbc03ddfc6fd909503429eb20fd8e01dc35ae273db4de565f8ac842a12",
+    "src/sig/slh_dsa/slh_dsa_c/sha2_512.c": "7afdba3b2881c66c59345c921e709ca3cdedb8a7179cba3d40cfa8c5a6e49716"
+  },
+  "build_note": "Built from the recorded trimmed tree before its commit; no source changes occurred between successful build/test and commit."
+}

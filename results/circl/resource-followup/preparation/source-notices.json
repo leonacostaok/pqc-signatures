@@ -1,0 +1,27 @@
+[
+  {
+    "component": "CIRCL",
+    "file": "LICENSE",
+    "sha256": "b0da1764fe4d13d610b695536fc3f2ebc362482d053a1cd258e36975bc6b97a7"
+  },
+  {
+    "component": "Go",
+    "file": "LICENSE",
+    "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+  },
+  {
+    "component": "github.com/bwesterb/go-ristretto@v1.2.4",
+    "file": "LICENSE",
+    "sha256": "92b743d0e576ff8b7018d84a899a3937990f3ff19b63ae91c039e322db20b334"
+  },
+  {
+    "component": "golang.org/x/crypto@v0.54.0",
+    "file": "LICENSE",
+    "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+  },
+  {
+    "component": "golang.org/x/sys@v0.47.0",
+    "file": "LICENSE",
+    "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+  }
+]

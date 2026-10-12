@@ -1,0 +1,49 @@
+{
+  "grant_received_at": "2026-10-12T12:57:36.452173+00:00",
+  "grant": "Root: WOTS collector exited0,384/384, finalseal, no processes remain; WOTS/matrix/root quiet. Run sealed Java17 heldout216-process confirmation exactly once. Final planned measurement batch.",
+  "plan_sha256": "3eae6929ce3d80a789169ff66fe8cd3a8b3abf822a2031365f6ee8ce8aa8ebc9",
+  "controlled_concurrent_work": "root, WOTS, matrix quiet",
+  "limitation": "Uncontrolled OS/background activity remains possible.",
+  "cohorts": [
+    {
+      "mode": "timing",
+      "argv": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "libs/bouncycastle/experiments/ntt-alternatives/confirmation_protocol.py",
+        "collect",
+        "--plan",
+        "results/bouncycastle/ntt-alternatives/confirmation-plan-v1/protocol.json",
+        "--mode",
+        "timing",
+        "--out",
+        "results/bouncycastle/ntt-alternatives/confirmation-timing",
+        "--exclusive-window-grant",
+        "2026-10-12T12:57:36.452173+00:00; Root: WOTS collector exited0,384/384, finalseal, no processes remain; WOTS/matrix/root quiet. Run sealed Java17 heldout216-process confirmation exactly once. Final planned measurement batch."
+      ],
+      "started_at": "2026-10-12T12:57:36.453207+00:00",
+      "exit_code": 0,
+      "completed_at": "2026-10-12T12:58:48.517076+00:00"
+    },
+    {
+      "mode": "allocation",
+      "argv": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "libs/bouncycastle/experiments/ntt-alternatives/confirmation_protocol.py",
+        "collect",
+        "--plan",
+        "results/bouncycastle/ntt-alternatives/confirmation-plan-v1/protocol.json",
+        "--mode",
+        "allocation",
+        "--out",
+        "results/bouncycastle/ntt-alternatives/confirmation-allocation",
+        "--exclusive-window-grant",
+        "2026-10-12T12:57:36.452173+00:00; Root: WOTS collector exited0,384/384, finalseal, no processes remain; WOTS/matrix/root quiet. Run sealed Java17 heldout216-process confirmation exactly once. Final planned measurement batch."
+      ],
+      "started_at": "2026-10-12T12:58:48.518117+00:00",
+      "exit_code": 0,
+      "completed_at": "2026-10-12T12:59:59.401769+00:00"
+    }
+  ],
+  "release_recorded_at": "2026-10-12T12:59:59.402486+00:00",
+  "collection_complete": true
+}

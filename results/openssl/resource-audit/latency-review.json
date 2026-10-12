@@ -1,0 +1,3541 @@
+{
+  "complete": true,
+  "no_new_measurements": true,
+  "balanced": {
+    "source": "results/openssl/experiments/sha512-prefix-final.json",
+    "sha256": "9b0438fedef5eb9d295142fda77c6f639010c07b1577e4ac19da3729eeeb591e",
+    "groups": {
+      "affected": {
+        "wall": {
+          "pairs": 720,
+          "losses": 12,
+          "minimum": 0.840064001008331,
+          "maximum": 1.6125526076719134,
+          "median": 1.11504352018905
+        },
+        "cpu": {
+          "pairs": 720,
+          "losses": 11,
+          "minimum": 0.8399220841099231,
+          "maximum": 1.6113631143109717,
+          "median": 1.1108648810201731
+        }
+      },
+      "controls": {
+        "wall": {
+          "pairs": 540,
+          "losses": 285,
+          "minimum": 0.38358109438203675,
+          "maximum": 2.0795649042733286,
+          "median": 0.9998694232042733
+        },
+        "cpu": {
+          "pairs": 540,
+          "losses": 300,
+          "minimum": 0.9057126629759772,
+          "maximum": 1.0837230559259745,
+          "median": 0.9997042502573565
+        }
+      }
+    },
+    "parameters": [
+      {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "operation": "sign",
+        "wall_median_fork_ratio": 0.9975926556654904,
+        "cpu_median_fork_ratio": 0.9979580892547193,
+        "wall_fork_ratios": [
+          0.997331279512689,
+          0.9957394448711476,
+          0.9975926556654904,
+          1.0016471604175434,
+          0.9993363852961448
+        ],
+        "cpu_fork_ratios": [
+          0.9974262240757437,
+          0.997553860574157,
+          0.9979580892547193,
+          1.0012212716968576,
+          0.9996494837803258
+        ],
+        "wall_pairs": {
+          "pairs": 90,
+          "losses": 49,
+          "minimum": 0.38358109438203675,
+          "maximum": 1.0544849351385328,
+          "median": 0.9996315214146807
+        },
+        "cpu_pairs": {
+          "pairs": 90,
+          "losses": 53,
+          "minimum": 0.9551225301208642,
+          "maximum": 1.0242035432865417,
+          "median": 0.9995319412701876
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "operation": "verify",
+        "wall_median_fork_ratio": 1.0001633967453876,
+        "cpu_median_fork_ratio": 1.00000892320013,
+        "wall_fork_ratios": [
+          0.9984433381882525,
+          1.0019150115317452,
+          0.9957020063466329,
+          1.0001633967453876,
+          1.0034239562676437
+        ],
+        "cpu_fork_ratios": [
+          0.998800322094515,
+          1.0010302962137305,
+          0.9976659821582917,
+          1.00000892320013,
+          1.0028816147949815
+        ],
+        "wall_pairs": {
+          "pairs": 90,
+          "losses": 39,
+          "minimum": 0.8168075395384435,
+          "maximum": 1.0460220838052097,
+          "median": 1.0003586630650805
+        },
+        "cpu_pairs": {
+          "pairs": 90,
+          "losses": 43,
+          "minimum": 0.9414631428533973,
+          "maximum": 1.0240806659764867,
+          "median": 1.0001237767029627
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-128s",
+        "operation": "sign",
+        "wall_median_fork_ratio": 1.0009027990118637,
+        "cpu_median_fork_ratio": 1.000285809696333,
+        "wall_fork_ratios": [
+          1.0009027990118637,
+          1.0011814137592088,
+          0.9974523515436986,
+          1.0018567545333457,
+          1.0005324046919446
+        ],
+        "cpu_fork_ratios": [
+          0.9996739843149809,
+          1.000285809696333,
+          0.9968384686011147,
+          1.0010524714914775,
+          1.0004773538542813
+        ],
+        "wall_pairs": {
+          "pairs": 90,
+          "losses": 50,
+          "minimum": 0.9716988391522293,
+          "maximum": 1.1215228324728503,
+          "median": 0.9996536455043871
+        },
+        "cpu_pairs": {
+          "pairs": 90,
+          "losses": 52,
+          "minimum": 0.9833057453701738,
+          "maximum": 1.0206427674648013,
+          "median": 0.9995652634116468
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-128s",
+        "operation": "verify",
+        "wall_median_fork_ratio": 0.9994080754029975,
+        "cpu_median_fork_ratio": 0.9991750385296108,
+        "wall_fork_ratios": [
+          1.000870045945752,
+          0.9994080754029975,
+          0.9999354505344891,
+          0.9969860949764089,
+          0.9993733949471929
+        ],
+        "cpu_fork_ratios": [
+          1.0006710985102956,
+          0.9995836641186517,
+          0.9991750385296108,
+          0.9966414367141243,
+          0.9990029095167736
+        ],
+        "wall_pairs": {
+          "pairs": 90,
+          "losses": 48,
+          "minimum": 0.9014327856343001,
+          "maximum": 1.101629856306546,
+          "median": 0.9997021696350477
+        },
+        "cpu_pairs": {
+          "pairs": 90,
+          "losses": 51,
+          "minimum": 0.9057126629759772,
+          "maximum": 1.0318446951032747,
+          "median": 0.9995371467234708
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-192f",
+        "operation": "sign",
+        "wall_median_fork_ratio": 1.0943717427149224,
+        "cpu_median_fork_ratio": 1.094360845709159,
+        "wall_fork_ratios": [
+          1.0958974560775456,
+          1.0943717427149224,
+          1.0914618179247222,
+          1.096398874954358,
+          1.092943158425824
+        ],
+        "cpu_fork_ratios": [
+          1.0964801810082843,
+          1.0950694786534114,
+          1.0918942586019846,
+          1.094360845709159,
+          1.0932523278465702
+        ],
+        "wall_pairs": {
+          "pairs": 90,
+          "losses": 0,
+          "minimum": 1.0317603930005161,
+          "maximum": 1.2733590650645203,
+          "median": 1.0948029083998518
+        },
+        "cpu_pairs": {
+          "pairs": 90,
+          "losses": 0,
+          "minimum": 1.0354699789053707,
+          "maximum": 1.1702326099881093,
+          "median": 1.0953479852183463
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-192f",
+        "operation": "verify",
+        "wall_median_fork_ratio": 1.0730377981557195,
+        "cpu_median_fork_ratio": 1.0733393451732018,
+        "wall_fork_ratios": [
+          1.0745493520492198,
+          1.0730377981557195,
+          1.0724040976745863,
+          1.0738347070206746,
+          1.0706551839429443
+        ],
+        "cpu_fork_ratios": [
+          1.074108275754011,
+          1.0733393451732018,
+          1.071167491160752,
+          1.0734538446711535,
+          1.071340866139077
+        ],
+        "wall_pairs": {
+          "pairs": 90,
+          "losses": 1,
+          "minimum": 0.9916825707097054,
+          "maximum": 1.265336543974315,
+          "median": 1.0727636954183914
+        },
+        "cpu_pairs": {
+          "pairs": 90,
+          "losses": 0,
+          "minimum": 1.0324668614104222,
+          "maximum": 1.1317820510971017,
+          "median": 1.0725320827256102
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-192s",
+        "operation": "sign",
+        "wall_median_fork_ratio": 1.1359998689126076,
+        "cpu_median_fork_ratio": 1.1351385886881116,
+        "wall_fork_ratios": [
+          1.14127254412073,
+          1.134953086681799,
+          1.1359998689126076,
+          1.136628665367106,
+          1.1357735254179977
+        ],
+        "cpu_fork_ratios": [
+          1.139859154590035,
+          1.1351385886881116,
+          1.1362878511139158,
+          1.133056994527039,
+          1.1348970190082068
+        ],
+        "wall_pairs": {
+          "pairs": 90,
+          "losses": 0,
+          "minimum": 1.1050858084989772,
+          "maximum": 1.6125526076719134,
+          "median": 1.1361423562638144
+        },
+        "cpu_pairs": {
+          "pairs": 90,
+          "losses": 0,
+          "minimum": 1.1042861849974497,
+          "maximum": 1.6113631143109717,
+          "median": 1.1364378788475915
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-192s",
+        "operation": "verify",
+        "wall_median_fork_ratio": 1.1720907008737553,
+        "cpu_median_fork_ratio": 1.1715203943065924,
+        "wall_fork_ratios": [
+          1.1730793439537488,
+          1.1720907008737553,
+          1.168651637295182,
+          1.172523382185192,
+          1.1717496948311314
+        ],
+        "cpu_fork_ratios": [
+          1.1725560807608533,
+          1.171672016583456,
+          1.169767976391533,
+          1.1715203943065924,
+          1.1714314600585207
+        ],
+        "wall_pairs": {
+          "pairs": 90,
+          "losses": 0,
+          "minimum": 1.039467680608365,
+          "maximum": 1.3676338236816745,
+          "median": 1.1718412572838246
+        },
+        "cpu_pairs": {
+          "pairs": 90,
+          "losses": 0,
+          "minimum": 1.1008782634489958,
+          "maximum": 1.1970474174867178,
+          "median": 1.1715209293217037
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-256f",
+        "operation": "sign",
+        "wall_median_fork_ratio": 1.1006197869916097,
+        "cpu_median_fork_ratio": 1.10051009821749,
+        "wall_fork_ratios": [
+          1.1028959679469574,
+          1.1004816486453404,
+          1.09795523276867,
+          1.1006197869916097,
+          1.1026984702368998
+        ],
+        "cpu_fork_ratios": [
+          1.1012115185918738,
+          1.1003395592648686,
+          1.098298426509979,
+          1.10051009821749,
+          1.1012274608072903
+        ],
+        "wall_pairs": {
+          "pairs": 90,
+          "losses": 7,
+          "minimum": 0.9656323613290755,
+          "maximum": 1.218612542185723,
+          "median": 1.0997788464446607
+        },
+        "cpu_pairs": {
+          "pairs": 90,
+          "losses": 7,
+          "minimum": 0.9652855506991598,
+          "maximum": 1.1192031375998828,
+          "median": 1.0997788837518985
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-256f",
+        "operation": "verify",
+        "wall_median_fork_ratio": 1.0821254863196876,
+        "cpu_median_fork_ratio": 1.081905569347775,
+        "wall_fork_ratios": [
+          1.0789476909390578,
+          1.0821254863196876,
+          1.0830256739757718,
+          1.0830375002408898,
+          1.0755674742198607
+        ],
+        "cpu_fork_ratios": [
+          1.0805658070419117,
+          1.081905569347775,
+          1.0822695833339462,
+          1.0831094650174111,
+          1.077451450289399
+        ],
+        "wall_pairs": {
+          "pairs": 90,
+          "losses": 0,
+          "minimum": 1.0328915423702152,
+          "maximum": 1.1212044065913722,
+          "median": 1.0820449218246329
+        },
+        "cpu_pairs": {
+          "pairs": 90,
+          "losses": 0,
+          "minimum": 1.0330602280936614,
+          "maximum": 1.1025984970311726,
+          "median": 1.0818576808331546
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-256s",
+        "operation": "sign",
+        "wall_median_fork_ratio": 1.1951650448203193,
+        "cpu_median_fork_ratio": 1.1934643645114547,
+        "wall_fork_ratios": [
+          1.1819590213251265,
+          1.194222381835245,
+          1.1968039234473502,
+          1.2028427006801308,
+          1.1951650448203193
+        ],
+        "cpu_fork_ratios": [
+          1.1862450612080946,
+          1.193233485255207,
+          1.1953973328091578,
+          1.2014643303526005,
+          1.1934643645114547
+        ],
+        "wall_pairs": {
+          "pairs": 90,
+          "losses": 4,
+          "minimum": 0.840064001008331,
+          "maximum": 1.608023575443897,
+          "median": 1.1923915339920557
+        },
+        "cpu_pairs": {
+          "pairs": 90,
+          "losses": 4,
+          "minimum": 0.8399220841099231,
+          "maximum": 1.608347449955232,
+          "median": 1.1919602833333547
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-256s",
+        "operation": "verify",
+        "wall_median_fork_ratio": 1.1497379867476492,
+        "cpu_median_fork_ratio": 1.1495184172597157,
+        "wall_fork_ratios": [
+          1.149932371584188,
+          1.1497379867476492,
+          1.1483058852853865,
+          1.1481036015266997,
+          1.1504933565104571
+        ],
+        "cpu_fork_ratios": [
+          1.1502270113744186,
+          1.1495184172597157,
+          1.1482915777585885,
+          1.1484856480935892,
+          1.1503952630596057
+        ],
+        "wall_pairs": {
+          "pairs": 90,
+          "losses": 0,
+          "minimum": 1.0664312680893826,
+          "maximum": 1.3422225605694382,
+          "median": 1.1485968673820401
+        },
+        "cpu_pairs": {
+          "pairs": 90,
+          "losses": 0,
+          "minimum": 1.0900851698757075,
+          "maximum": 1.1858913104966633,
+          "median": 1.148688513370931
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHAKE-128f",
+        "operation": "sign",
+        "wall_median_fork_ratio": 1.000359844691813,
+        "cpu_median_fork_ratio": 1.0004728602170387,
+        "wall_fork_ratios": [
+          1.0003199697634124,
+          1.000359844691813,
+          1.0089771346063634,
+          0.9998095140709775,
+          1.002070371358491
+        ],
+        "cpu_fork_ratios": [
+          1.0004728602170387,
+          0.9998291744781723,
+          1.0036033854457078,
+          1.000129334907324,
+          1.0005243113962918
+        ],
+        "wall_pairs": {
+          "pairs": 90,
+          "losses": 42,
+          "minimum": 0.9875689969923006,
+          "maximum": 2.0795649042733286,
+          "median": 1.00018377926571
+        },
+        "cpu_pairs": {
+          "pairs": 90,
+          "losses": 40,
+          "minimum": 0.9859529771670347,
+          "maximum": 1.0837230559259745,
+          "median": 1.0002216932713752
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHAKE-128f",
+        "operation": "verify",
+        "wall_median_fork_ratio": 0.9998883409960657,
+        "cpu_median_fork_ratio": 0.9992106617583043,
+        "wall_fork_ratios": [
+          1.0005227691039846,
+          0.9975795786075039,
+          0.9999492065858964,
+          0.9998883409960657,
+          0.9978754992758238
+        ],
+        "cpu_fork_ratios": [
+          0.9998481559245906,
+          0.9981465934052814,
+          0.9997967522079219,
+          0.9992106617583043,
+          0.9981814640336372
+        ],
+        "wall_pairs": {
+          "pairs": 90,
+          "losses": 57,
+          "minimum": 0.9730154915813588,
+          "maximum": 1.0321946870511318,
+          "median": 0.9991425830612897
+        },
+        "cpu_pairs": {
+          "pairs": 90,
+          "losses": 61,
+          "minimum": 0.9842241107143903,
+          "maximum": 1.0166659494957184,
+          "median": 0.9990405599405856
+        }
+      }
+    ],
+    "losses": [
+      {
+        "fork": 0,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9970202504233563,
+        "cpu_speedup": 0.9976903416086658
+      },
+      {
+        "fork": 0,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9972539368658073,
+        "cpu_speedup": 0.9982674932544361
+      },
+      {
+        "fork": 0,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9972732806606882,
+        "cpu_speedup": 0.9980396407264639
+      },
+      {
+        "fork": 0,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 1.0000253099769116,
+        "cpu_speedup": 0.9991632034936958
+      },
+      {
+        "fork": 0,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9969783889120011,
+        "cpu_speedup": 0.999789588724468
+      },
+      {
+        "fork": 0,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9997456288323024,
+        "cpu_speedup": 0.9993364366648905
+      },
+      {
+        "fork": 0,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9973418838854636,
+        "cpu_speedup": 0.9983488622890864
+      },
+      {
+        "fork": 0,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "verify",
+        "speedup": 0.9014327856343001,
+        "cpu_speedup": 0.9057126629759772
+      },
+      {
+        "fork": 0,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "sign",
+        "speedup": 0.9970016385411916,
+        "cpu_speedup": 0.9988450275470814
+      },
+      {
+        "fork": 0,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9986448930843612,
+        "cpu_speedup": 0.9978212576896788
+      },
+      {
+        "fork": 0,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9879745782451004,
+        "cpu_speedup": 0.9877946029832455
+      },
+      {
+        "fork": 0,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9933337285668176,
+        "cpu_speedup": 0.9940030232419979
+      },
+      {
+        "fork": 0,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.997350988975195,
+        "cpu_speedup": 0.9981819089955546
+      },
+      {
+        "fork": 0,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9985056618087051,
+        "cpu_speedup": 0.9990019176271164
+      },
+      {
+        "fork": 0,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9983926081648281,
+        "cpu_speedup": 0.9984154490103793
+      },
+      {
+        "fork": 0,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9976870525716027,
+        "cpu_speedup": 0.9992139165054912
+      },
+      {
+        "fork": 0,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-256s-0.txt",
+        "operation": "sign",
+        "speedup": 0.8414343270427934,
+        "cpu_speedup": 0.8414075630252101
+      },
+      {
+        "fork": 0,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9969477197475897,
+        "cpu_speedup": 0.9976957222896474
+      },
+      {
+        "fork": 0,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9997465078115618,
+        "cpu_speedup": 0.9997127933848969
+      },
+      {
+        "fork": 0,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9989270845332324,
+        "cpu_speedup": 0.9989849087571393
+      },
+      {
+        "fork": 0,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9979774941722986,
+        "cpu_speedup": 0.9978637430848759
+      },
+      {
+        "fork": 0,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9946076424203198,
+        "cpu_speedup": 0.9965887262370007
+      },
+      {
+        "fork": 0,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 1.0000913870928787,
+        "cpu_speedup": 0.9999705821786838
+      },
+      {
+        "fork": 0,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9883978729433729,
+        "cpu_speedup": 0.9880555073489167
+      },
+      {
+        "fork": 0,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.99727629886718,
+        "cpu_speedup": 0.9961694480827824
+      },
+      {
+        "fork": 0,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 1.0000947121241317,
+        "cpu_speedup": 0.9994996860775389
+      },
+      {
+        "fork": 0,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9836069279874756,
+        "cpu_speedup": 0.9833057453701738
+      },
+      {
+        "fork": 0,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9891910933125684,
+        "cpu_speedup": 0.9949874530268792
+      },
+      {
+        "fork": 0,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9967084415864516,
+        "cpu_speedup": 0.9980518487489944
+      },
+      {
+        "fork": 0,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9988185358596245,
+        "cpu_speedup": 0.9997640754284558
+      },
+      {
+        "fork": 0,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.999711066165848,
+        "cpu_speedup": 0.9993651173535698
+      },
+      {
+        "fork": 0,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9923235051689722,
+        "cpu_speedup": 0.9953724466236799
+      },
+      {
+        "fork": 0,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9760831172137276,
+        "cpu_speedup": 0.986311076754598
+      },
+      {
+        "fork": 0,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9988475585471329,
+        "cpu_speedup": 0.9983031290300686
+      },
+      {
+        "fork": 0,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9946443773145738,
+        "cpu_speedup": 0.9976393982270222
+      },
+      {
+        "fork": 0,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9981142873225695,
+        "cpu_speedup": 0.9998085535751835
+      },
+      {
+        "fork": 0,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9932553349540789,
+        "cpu_speedup": 0.9954168700947952
+      },
+      {
+        "fork": 0,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.997456203027416,
+        "cpu_speedup": 0.9963470137998017
+      },
+      {
+        "fork": 0,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9955757499319601,
+        "cpu_speedup": 0.9961933244966062
+      },
+      {
+        "fork": 0,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "sign",
+        "speedup": 0.9999149602013743,
+        "cpu_speedup": 0.9999007241464404
+      },
+      {
+        "fork": 0,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9895535749549099,
+        "cpu_speedup": 0.9912857194727861
+      },
+      {
+        "fork": 0,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9993909681587386,
+        "cpu_speedup": 0.9993702219378304
+      },
+      {
+        "fork": 0,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9852858043792949,
+        "cpu_speedup": 0.9850629110806576
+      },
+      {
+        "fork": 0,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.38358109438203675,
+        "cpu_speedup": 0.9551225301208642
+      },
+      {
+        "fork": 0,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9982731004104515,
+        "cpu_speedup": 0.9991185447518908
+      },
+      {
+        "fork": 0,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9999432140829074,
+        "cpu_speedup": 1.0002096093450241
+      },
+      {
+        "fork": 0,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-256f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9806998321592574,
+        "cpu_speedup": 0.9779627295232598
+      },
+      {
+        "fork": 0,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9962082021239705,
+        "cpu_speedup": 0.9961872024338687
+      },
+      {
+        "fork": 0,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9988412874709262,
+        "cpu_speedup": 0.9990941746940717
+      },
+      {
+        "fork": 0,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-256s-0.txt",
+        "operation": "sign",
+        "speedup": 0.840064001008331,
+        "cpu_speedup": 0.8399220841099231
+      },
+      {
+        "fork": 0,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9958881862019545,
+        "cpu_speedup": 0.9976328983182277
+      },
+      {
+        "fork": 0,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 1.000444960982899,
+        "cpu_speedup": 0.99978001099945
+      },
+      {
+        "fork": 0,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 1.000079726273129,
+        "cpu_speedup": 0.999620797589071
+      },
+      {
+        "fork": 0,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9932937855746325,
+        "cpu_speedup": 0.997560427244021
+      },
+      {
+        "fork": 0,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9983408288569933,
+        "cpu_speedup": 0.9977642586560341
+      },
+      {
+        "fork": 0,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9978376618090045,
+        "cpu_speedup": 0.9982184575627455
+      },
+      {
+        "fork": 0,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9968883083229788,
+        "cpu_speedup": 0.9975291836380202
+      },
+      {
+        "fork": 0,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9952039846812871,
+        "cpu_speedup": 0.9948050175927641
+      },
+      {
+        "fork": 0,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 1.0005300238792671,
+        "cpu_speedup": 0.9999322144959301
+      },
+      {
+        "fork": 0,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9139330507121468,
+        "cpu_speedup": 0.9821465803916302
+      },
+      {
+        "fork": 0,
+        "round": 5,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9990960934287876,
+        "cpu_speedup": 0.9994121881375165
+      },
+      {
+        "fork": 0,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9866430672255084,
+        "cpu_speedup": 0.989007613416789
+      },
+      {
+        "fork": 0,
+        "round": 5,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9978205436291786,
+        "cpu_speedup": 0.9978381304339109
+      },
+      {
+        "fork": 0,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9909605161221383,
+        "cpu_speedup": 0.9930703017717789
+      },
+      {
+        "fork": 0,
+        "round": 5,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9910612575477227,
+        "cpu_speedup": 0.9950396431455083
+      },
+      {
+        "fork": 0,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 1.0002270775824753,
+        "cpu_speedup": 0.999492127983748
+      },
+      {
+        "fork": 0,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9984611061738722,
+        "cpu_speedup": 0.9988552626845072
+      },
+      {
+        "fork": 1,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.998894065972735,
+        "cpu_speedup": 0.9994652641909447
+      },
+      {
+        "fork": 1,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9949323164229817,
+        "cpu_speedup": 0.9960330817814937
+      },
+      {
+        "fork": 1,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9965417655909911,
+        "cpu_speedup": 0.9969102124122958
+      },
+      {
+        "fork": 1,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9986467162870694,
+        "cpu_speedup": 0.9991116988592343
+      },
+      {
+        "fork": 1,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "verify",
+        "speedup": 1.0006345670261423,
+        "cpu_speedup": 0.999557074800261
+      },
+      {
+        "fork": 1,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-256f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9665530045196027,
+        "cpu_speedup": 0.9660082445340418
+      },
+      {
+        "fork": 1,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "sign",
+        "speedup": 0.9834868454531576,
+        "cpu_speedup": 0.9835760689567322
+      },
+      {
+        "fork": 1,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9961853963704875,
+        "cpu_speedup": 0.9976824682212196
+      },
+      {
+        "fork": 1,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.953714107460318,
+        "cpu_speedup": 0.9934691110059232
+      },
+      {
+        "fork": 1,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9979922088621761,
+        "cpu_speedup": 0.9979770120923941
+      },
+      {
+        "fork": 1,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9982274307907691,
+        "cpu_speedup": 0.9976352057681767
+      },
+      {
+        "fork": 1,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9992261328031609,
+        "cpu_speedup": 0.9995812316198465
+      },
+      {
+        "fork": 1,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9861750696681622,
+        "cpu_speedup": 0.9917726178395909
+      },
+      {
+        "fork": 1,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9930246189917936,
+        "cpu_speedup": 0.9956419536340483
+      },
+      {
+        "fork": 1,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9864309415801612,
+        "cpu_speedup": 0.9860754476938396
+      },
+      {
+        "fork": 1,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9904102241334941,
+        "cpu_speedup": 0.9937440776021146
+      },
+      {
+        "fork": 1,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9972282657288469,
+        "cpu_speedup": 0.998296569563384
+      },
+      {
+        "fork": 1,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9982878838374927,
+        "cpu_speedup": 0.9987537004628646
+      },
+      {
+        "fork": 1,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9995498815992901,
+        "cpu_speedup": 0.9997320856803064
+      },
+      {
+        "fork": 1,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-256f-1.txt",
+        "operation": "sign",
+        "speedup": 0.980040264074289,
+        "cpu_speedup": 0.9767314395074962
+      },
+      {
+        "fork": 1,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9716988391522293,
+        "cpu_speedup": 0.992276364494886
+      },
+      {
+        "fork": 1,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.999981119844931,
+        "cpu_speedup": 1.0003401917673593
+      },
+      {
+        "fork": 1,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9887399938373184,
+        "cpu_speedup": 0.9894114709612136
+      },
+      {
+        "fork": 1,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9965045259498231,
+        "cpu_speedup": 0.9972956099152603
+      },
+      {
+        "fork": 1,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9991309826413783,
+        "cpu_speedup": 0.9991953839685692
+      },
+      {
+        "fork": 1,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9984125011298924,
+        "cpu_speedup": 0.9986139241222461
+      },
+      {
+        "fork": 1,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9951654444226021,
+        "cpu_speedup": 0.9963309919341915
+      },
+      {
+        "fork": 1,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9984434118058712,
+        "cpu_speedup": 0.9995245075373753
+      },
+      {
+        "fork": 1,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9955164230081198,
+        "cpu_speedup": 0.9970186213975007
+      },
+      {
+        "fork": 1,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9874916776450923,
+        "cpu_speedup": 0.9865776568302294
+      },
+      {
+        "fork": 1,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9988155790624539,
+        "cpu_speedup": 0.9986325055014147
+      },
+      {
+        "fork": 1,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "sign",
+        "speedup": 1.00007546576527,
+        "cpu_speedup": 0.9998521012634328
+      },
+      {
+        "fork": 1,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9976945635774949,
+        "cpu_speedup": 0.9979373217438544
+      },
+      {
+        "fork": 1,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9967065638482817,
+        "cpu_speedup": 0.9967126143402176
+      },
+      {
+        "fork": 1,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9897334597381835,
+        "cpu_speedup": 0.9918790737109852
+      },
+      {
+        "fork": 1,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9990112642877287,
+        "cpu_speedup": 0.9992155454950374
+      },
+      {
+        "fork": 1,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9993060668651814,
+        "cpu_speedup": 1.000640365923385
+      },
+      {
+        "fork": 1,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9970122859532384,
+        "cpu_speedup": 0.9974813214459979
+      },
+      {
+        "fork": 1,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-256s-0.txt",
+        "operation": "sign",
+        "speedup": 0.8409341769450503,
+        "cpu_speedup": 0.8410126670926965
+      },
+      {
+        "fork": 1,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9961439588688946,
+        "cpu_speedup": 0.9967787915130889
+      },
+      {
+        "fork": 1,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9995912918802221,
+        "cpu_speedup": 1.0005091666528907
+      },
+      {
+        "fork": 1,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9993430255402751,
+        "cpu_speedup": 0.9993298430637184
+      },
+      {
+        "fork": 1,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9820372741221426,
+        "cpu_speedup": 0.9962213788489943
+      },
+      {
+        "fork": 1,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.991642361065697,
+        "cpu_speedup": 0.9926836540446321
+      },
+      {
+        "fork": 1,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9998552899921251,
+        "cpu_speedup": 0.999956205658229
+      },
+      {
+        "fork": 1,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "verify",
+        "speedup": 0.9860335764638768,
+        "cpu_speedup": 0.9860754070265638
+      },
+      {
+        "fork": 1,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9875689969923006,
+        "cpu_speedup": 0.9859529771670347
+      },
+      {
+        "fork": 1,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.988817604627198,
+        "cpu_speedup": 0.9890090503912738
+      },
+      {
+        "fork": 1,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9991432268706805,
+        "cpu_speedup": 0.9995020026607285
+      },
+      {
+        "fork": 1,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9987840123069266,
+        "cpu_speedup": 0.9991109525548788
+      },
+      {
+        "fork": 1,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9989535771634713,
+        "cpu_speedup": 0.9995657072363245
+      },
+      {
+        "fork": 1,
+        "round": 5,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9998016397778365,
+        "cpu_speedup": 0.9999180988861448
+      },
+      {
+        "fork": 1,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9989499373583322,
+        "cpu_speedup": 0.9994091398453613
+      },
+      {
+        "fork": 1,
+        "round": 5,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.993795146632935,
+        "cpu_speedup": 0.9952957347995517
+      },
+      {
+        "fork": 1,
+        "round": 5,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9960999106297971,
+        "cpu_speedup": 0.9965682210026191
+      },
+      {
+        "fork": 1,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9977214468812304,
+        "cpu_speedup": 0.9978615908823875
+      },
+      {
+        "fork": 1,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "verify",
+        "speedup": 0.9984686532297495,
+        "cpu_speedup": 0.9988676512093689
+      },
+      {
+        "fork": 1,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9998834514358783,
+        "cpu_speedup": 0.9994733701974194
+      },
+      {
+        "fork": 1,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "sign",
+        "speedup": 0.996709022246558,
+        "cpu_speedup": 0.9970430844643206
+      },
+      {
+        "fork": 1,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9983445910009574,
+        "cpu_speedup": 0.9987285357191594
+      },
+      {
+        "fork": 1,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9647047314908898,
+        "cpu_speedup": 0.9834021289063758
+      },
+      {
+        "fork": 1,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9882431262038031,
+        "cpu_speedup": 0.9952740158813912
+      },
+      {
+        "fork": 1,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9680883211428178,
+        "cpu_speedup": 0.979501967018098
+      },
+      {
+        "fork": 1,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 1.0001189212146953,
+        "cpu_speedup": 0.9998300085845665
+      },
+      {
+        "fork": 2,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9975417339185733,
+        "cpu_speedup": 0.9995641964628363
+      },
+      {
+        "fork": 2,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9881886301540178,
+        "cpu_speedup": 0.9978908180900289
+      },
+      {
+        "fork": 2,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 1.0007554788713344,
+        "cpu_speedup": 0.9992654805784423
+      },
+      {
+        "fork": 2,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.8168075395384435,
+        "cpu_speedup": 0.9414631428533973
+      },
+      {
+        "fork": 2,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9848786091413171,
+        "cpu_speedup": 0.9837649948891346
+      },
+      {
+        "fork": 2,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9864188374895708,
+        "cpu_speedup": 0.9863156427732391
+      },
+      {
+        "fork": 2,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9999835369266735,
+        "cpu_speedup": 0.9996177558975982
+      },
+      {
+        "fork": 2,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9961073313489582,
+        "cpu_speedup": 0.9965502223085624
+      },
+      {
+        "fork": 2,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.8727078733945892,
+        "cpu_speedup": 0.96345640101585
+      },
+      {
+        "fork": 2,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9995760849086227,
+        "cpu_speedup": 0.9994247417624906
+      },
+      {
+        "fork": 2,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9922415426499088,
+        "cpu_speedup": 0.9947952509170114
+      },
+      {
+        "fork": 2,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9860792144174313,
+        "cpu_speedup": 0.9859144958357994
+      },
+      {
+        "fork": 2,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "sign",
+        "speedup": 0.9823458829176019,
+        "cpu_speedup": 0.9833237671660866
+      },
+      {
+        "fork": 2,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9857389887767979,
+        "cpu_speedup": 0.9859320164443999
+      },
+      {
+        "fork": 2,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9997610307540143,
+        "cpu_speedup": 0.9994619209422363
+      },
+      {
+        "fork": 2,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9954390414123244,
+        "cpu_speedup": 0.9965556190363614
+      },
+      {
+        "fork": 2,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "verify",
+        "speedup": 0.9996806219039012,
+        "cpu_speedup": 0.999823152711035
+      },
+      {
+        "fork": 2,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 1.0008763987976677,
+        "cpu_speedup": 0.9999818809724844
+      },
+      {
+        "fork": 2,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9977204862962568,
+        "cpu_speedup": 0.9987084372090229
+      },
+      {
+        "fork": 2,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9949396953503212,
+        "cpu_speedup": 0.9973522253298376
+      },
+      {
+        "fork": 2,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9999654277219383,
+        "cpu_speedup": 0.999968536441094
+      },
+      {
+        "fork": 2,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9954823314923053,
+        "cpu_speedup": 0.9960270856122784
+      },
+      {
+        "fork": 2,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9858902544380347,
+        "cpu_speedup": 1.0003483274617972
+      },
+      {
+        "fork": 2,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9996138070633356,
+        "cpu_speedup": 1.0001433018069357
+      },
+      {
+        "fork": 2,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9994038655504921,
+        "cpu_speedup": 1.000048115431751
+      },
+      {
+        "fork": 2,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9993298854502207,
+        "cpu_speedup": 0.998528894113584
+      },
+      {
+        "fork": 2,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9983299710082968,
+        "cpu_speedup": 0.998719080681195
+      },
+      {
+        "fork": 2,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9956010092382092,
+        "cpu_speedup": 0.9963506171701981
+      },
+      {
+        "fork": 2,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "verify",
+        "speedup": 0.9964849003545666,
+        "cpu_speedup": 0.9968416292977129
+      },
+      {
+        "fork": 2,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9966942983864856,
+        "cpu_speedup": 0.9967731211470777
+      },
+      {
+        "fork": 2,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-256f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9714324128791032,
+        "cpu_speedup": 0.9727707805323625
+      },
+      {
+        "fork": 2,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9876152035865949,
+        "cpu_speedup": 0.9920495021017227
+      },
+      {
+        "fork": 2,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9953393391046059,
+        "cpu_speedup": 0.9967686974913341
+      },
+      {
+        "fork": 2,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9857929351334861,
+        "cpu_speedup": 0.9859288986752849
+      },
+      {
+        "fork": 2,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9958938881976803,
+        "cpu_speedup": 0.9973397233445961
+      },
+      {
+        "fork": 2,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9992899314543392,
+        "cpu_speedup": 0.9993259871597723
+      },
+      {
+        "fork": 2,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 1.002988684517494,
+        "cpu_speedup": 0.9990101264068579
+      },
+      {
+        "fork": 2,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "verify",
+        "speedup": 0.9876326109952756,
+        "cpu_speedup": 0.9872485277598121
+      },
+      {
+        "fork": 2,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-256f-0.txt",
+        "operation": "sign",
+        "speedup": 0.989347884241637,
+        "cpu_speedup": 0.9723885798365968
+      },
+      {
+        "fork": 2,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9844855099260087,
+        "cpu_speedup": 0.984678634781333
+      },
+      {
+        "fork": 2,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9975925699237594,
+        "cpu_speedup": 0.9984689193777587
+      },
+      {
+        "fork": 2,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.995446020224741,
+        "cpu_speedup": 0.9967540086038327
+      },
+      {
+        "fork": 2,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.999700266084542,
+        "cpu_speedup": 1.0000311498249945
+      },
+      {
+        "fork": 2,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.999479264696656,
+        "cpu_speedup": 1.000012572369703
+      },
+      {
+        "fork": 2,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "sign",
+        "speedup": 0.9932780155373789,
+        "cpu_speedup": 0.9960661830114457
+      },
+      {
+        "fork": 2,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9965926639323847,
+        "cpu_speedup": 0.9979604398529388
+      },
+      {
+        "fork": 2,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 1.0002770960335683,
+        "cpu_speedup": 0.9999547051446463
+      },
+      {
+        "fork": 2,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.998807978244773,
+        "cpu_speedup": 0.9987604926128018
+      },
+      {
+        "fork": 2,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9989552806723586,
+        "cpu_speedup": 0.998472491476703
+      },
+      {
+        "fork": 2,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9989441826997827,
+        "cpu_speedup": 0.9990839705711969
+      },
+      {
+        "fork": 2,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 1.0002028438036206,
+        "cpu_speedup": 0.9996105970844705
+      },
+      {
+        "fork": 2,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9984394690277043,
+        "cpu_speedup": 0.9990222815175238
+      },
+      {
+        "fork": 2,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9996485685380098,
+        "cpu_speedup": 0.9992646301302706
+      },
+      {
+        "fork": 2,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9979176084990959,
+        "cpu_speedup": 0.9985200696104926
+      },
+      {
+        "fork": 2,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "sign",
+        "speedup": 0.9978918871566191,
+        "cpu_speedup": 0.9982113696889424
+      },
+      {
+        "fork": 2,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9660405277917781,
+        "cpu_speedup": 0.9912711130574992
+      },
+      {
+        "fork": 2,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9997237173661943,
+        "cpu_speedup": 0.9992204183754717
+      },
+      {
+        "fork": 2,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9859342921617754,
+        "cpu_speedup": 0.9852255098458855
+      },
+      {
+        "fork": 2,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-192f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9916825707097054,
+        "cpu_speedup": 1.0324668614104222
+      },
+      {
+        "fork": 2,
+        "round": 5,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9967030871989061,
+        "cpu_speedup": 0.998526516102602
+      },
+      {
+        "fork": 2,
+        "round": 5,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9997160590329973,
+        "cpu_speedup": 0.999043561429441
+      },
+      {
+        "fork": 2,
+        "round": 5,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9955695828379629,
+        "cpu_speedup": 0.9960957286547861
+      },
+      {
+        "fork": 2,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9979462623423475,
+        "cpu_speedup": 0.9981944877493455
+      },
+      {
+        "fork": 3,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9985889591065636,
+        "cpu_speedup": 0.9991565389983567
+      },
+      {
+        "fork": 3,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9969623309353463,
+        "cpu_speedup": 0.9974150701084226
+      },
+      {
+        "fork": 3,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9975217669895594,
+        "cpu_speedup": 0.9983326149945102
+      },
+      {
+        "fork": 3,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9829890405766604,
+        "cpu_speedup": 0.9837888426398597
+      },
+      {
+        "fork": 3,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9999340769040003,
+        "cpu_speedup": 1.0001352150233325
+      },
+      {
+        "fork": 3,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9970655869531482,
+        "cpu_speedup": 0.9973921396886389
+      },
+      {
+        "fork": 3,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9973020102207784,
+        "cpu_speedup": 0.997564536420945
+      },
+      {
+        "fork": 3,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9994564550929164,
+        "cpu_speedup": 0.9995951161717902
+      },
+      {
+        "fork": 3,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9977498328850782,
+        "cpu_speedup": 0.9983152865741541
+      },
+      {
+        "fork": 3,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9985952338051479,
+        "cpu_speedup": 0.9991678947737777
+      },
+      {
+        "fork": 3,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9977918631968753,
+        "cpu_speedup": 0.9987891487425636
+      },
+      {
+        "fork": 3,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9954920242233415,
+        "cpu_speedup": 0.998043793778002
+      },
+      {
+        "fork": 3,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9921008193132779,
+        "cpu_speedup": 0.9954614933130785
+      },
+      {
+        "fork": 3,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9988048146473779,
+        "cpu_speedup": 0.9985856568633831
+      },
+      {
+        "fork": 3,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "verify",
+        "speedup": 0.9828400439685706,
+        "cpu_speedup": 0.9838903688803109
+      },
+      {
+        "fork": 3,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9991077002526547,
+        "cpu_speedup": 0.9992510147278633
+      },
+      {
+        "fork": 3,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "sign",
+        "speedup": 0.9878604539329109,
+        "cpu_speedup": 0.9904511160012575
+      },
+      {
+        "fork": 3,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9978660440979868,
+        "cpu_speedup": 0.9982482404580045
+      },
+      {
+        "fork": 3,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9590393840916125,
+        "cpu_speedup": 0.9589363796246996
+      },
+      {
+        "fork": 3,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 1.0000464234080089,
+        "cpu_speedup": 0.9990375584517303
+      },
+      {
+        "fork": 3,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9991486378205128,
+        "cpu_speedup": 0.9991342685906628
+      },
+      {
+        "fork": 3,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9880478870196321,
+        "cpu_speedup": 0.9872739779874214
+      },
+      {
+        "fork": 3,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.993211267230117,
+        "cpu_speedup": 0.9951458256773461
+      },
+      {
+        "fork": 3,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9939428365746937,
+        "cpu_speedup": 0.9943552634914554
+      },
+      {
+        "fork": 3,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "verify",
+        "speedup": 0.9864536285529935,
+        "cpu_speedup": 0.9871548962393127
+      },
+      {
+        "fork": 3,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "sign",
+        "speedup": 0.9996070249242321,
+        "cpu_speedup": 0.9994593431727214
+      },
+      {
+        "fork": 3,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9982542742074499,
+        "cpu_speedup": 0.9992335552044429
+      },
+      {
+        "fork": 3,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9974412171507607,
+        "cpu_speedup": 0.9979235344881743
+      },
+      {
+        "fork": 3,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9992523857689433,
+        "cpu_speedup": 0.9996320905120231
+      },
+      {
+        "fork": 3,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9994949832775919,
+        "cpu_speedup": 0.999902921396459
+      },
+      {
+        "fork": 3,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9997131612300714,
+        "cpu_speedup": 0.9994893702232754
+      },
+      {
+        "fork": 3,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 1.000418615299081,
+        "cpu_speedup": 0.9999247404363091
+      },
+      {
+        "fork": 3,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9932553228991681,
+        "cpu_speedup": 0.996520727503956
+      },
+      {
+        "fork": 3,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.994416391854501,
+        "cpu_speedup": 0.9962874004484396
+      },
+      {
+        "fork": 3,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9991641712254946,
+        "cpu_speedup": 0.9991378171039466
+      },
+      {
+        "fork": 3,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.997441429636491,
+        "cpu_speedup": 0.9981870223610003
+      },
+      {
+        "fork": 3,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9950687234846746,
+        "cpu_speedup": 0.9953096978893641
+      },
+      {
+        "fork": 3,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9970451274235882,
+        "cpu_speedup": 0.9972479656419531
+      },
+      {
+        "fork": 3,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-256f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9656323613290755,
+        "cpu_speedup": 0.9652855506991598
+      },
+      {
+        "fork": 3,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 1.0003365031934153,
+        "cpu_speedup": 0.9999663255444317
+      },
+      {
+        "fork": 3,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9942896329803368,
+        "cpu_speedup": 0.99555270670332
+      },
+      {
+        "fork": 3,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9862512890456072,
+        "cpu_speedup": 0.986081095930552
+      },
+      {
+        "fork": 3,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9877234814453277,
+        "cpu_speedup": 0.9926300523835123
+      },
+      {
+        "fork": 3,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9895301605230575,
+        "cpu_speedup": 0.9890622055348575
+      },
+      {
+        "fork": 3,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 1.0002205499044283,
+        "cpu_speedup": 0.9999364355037821
+      },
+      {
+        "fork": 3,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9997531481834998,
+        "cpu_speedup": 1.0001120285738763
+      },
+      {
+        "fork": 3,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9973799071828198,
+        "cpu_speedup": 0.9979349298599084
+      },
+      {
+        "fork": 3,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "verify",
+        "speedup": 0.991196802765176,
+        "cpu_speedup": 0.9951120798066526
+      },
+      {
+        "fork": 3,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9355170566407341,
+        "cpu_speedup": 0.9726221715416214
+      },
+      {
+        "fork": 3,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 1.000450437769207,
+        "cpu_speedup": 0.9992048431256997
+      },
+      {
+        "fork": 3,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.996650115855677,
+        "cpu_speedup": 0.9977118601913415
+      },
+      {
+        "fork": 3,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9987845175431312,
+        "cpu_speedup": 0.9995641715766675
+      },
+      {
+        "fork": 3,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9989538631665588,
+        "cpu_speedup": 0.9993394107543929
+      },
+      {
+        "fork": 3,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9980513218202244,
+        "cpu_speedup": 0.9984301204459388
+      },
+      {
+        "fork": 3,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9958878175781135,
+        "cpu_speedup": 0.9982288449912587
+      },
+      {
+        "fork": 3,
+        "round": 5,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9957532549066013,
+        "cpu_speedup": 0.996432403256913
+      },
+      {
+        "fork": 3,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "verify",
+        "speedup": 0.9983086307380892,
+        "cpu_speedup": 0.9991800880469766
+      },
+      {
+        "fork": 3,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9960545601679575,
+        "cpu_speedup": 0.9957634012534085
+      },
+      {
+        "fork": 3,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9975557169378927,
+        "cpu_speedup": 0.9977819586097633
+      },
+      {
+        "fork": 3,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9986578039115429,
+        "cpu_speedup": 0.9992860246052087
+      },
+      {
+        "fork": 3,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 1.000279474587775,
+        "cpu_speedup": 0.9998601282158023
+      },
+      {
+        "fork": 3,
+        "round": 5,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9976944956082647,
+        "cpu_speedup": 0.9972123796682449
+      },
+      {
+        "fork": 3,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9973925914308399,
+        "cpu_speedup": 0.9980538701816932
+      },
+      {
+        "fork": 4,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9865570510456725,
+        "cpu_speedup": 0.9913458036748882
+      },
+      {
+        "fork": 4,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9999765628400481,
+        "cpu_speedup": 0.999507509640415
+      },
+      {
+        "fork": 4,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9896561015200405,
+        "cpu_speedup": 0.9906410378802593
+      },
+      {
+        "fork": 4,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9985049287515491,
+        "cpu_speedup": 0.9985629603017784
+      },
+      {
+        "fork": 4,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "verify",
+        "speedup": 0.9842142173191817,
+        "cpu_speedup": 0.984544493278966
+      },
+      {
+        "fork": 4,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9991147754110089,
+        "cpu_speedup": 0.9991824935907497
+      },
+      {
+        "fork": 4,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9952181150520272,
+        "cpu_speedup": 0.9991130250546916
+      },
+      {
+        "fork": 4,
+        "round": 0,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9939837472846712,
+        "cpu_speedup": 0.9955177550712369
+      },
+      {
+        "fork": 4,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9966080267294266,
+        "cpu_speedup": 0.9966574650418312
+      },
+      {
+        "fork": 4,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-256f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9741600890968625,
+        "cpu_speedup": 0.9741786533408265
+      },
+      {
+        "fork": 4,
+        "round": 0,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9999717269730333,
+        "cpu_speedup": 0.9995386357203508
+      },
+      {
+        "fork": 4,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9910486022827286,
+        "cpu_speedup": 0.9923437955256312
+      },
+      {
+        "fork": 4,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 1.0003875787687022,
+        "cpu_speedup": 0.999695707129816
+      },
+      {
+        "fork": 4,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9990384313232568,
+        "cpu_speedup": 0.999572024230981
+      },
+      {
+        "fork": 4,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9994329881524368,
+        "cpu_speedup": 0.9992630289510114
+      },
+      {
+        "fork": 4,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9939156801991472,
+        "cpu_speedup": 0.9958605671720072
+      },
+      {
+        "fork": 4,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "verify",
+        "speedup": 0.999925186353991,
+        "cpu_speedup": 0.9994622631235024
+      },
+      {
+        "fork": 4,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.996731131491295,
+        "cpu_speedup": 0.9970524199208104
+      },
+      {
+        "fork": 4,
+        "round": 1,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9930587253354896,
+        "cpu_speedup": 0.994776385468081
+      },
+      {
+        "fork": 4,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9982062660660881,
+        "cpu_speedup": 0.9989907226693048
+      },
+      {
+        "fork": 4,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9902769910298789,
+        "cpu_speedup": 0.9948492652628389
+      },
+      {
+        "fork": 4,
+        "round": 1,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9998586084812289,
+        "cpu_speedup": 0.9996348019579144
+      },
+      {
+        "fork": 4,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 1.0006066686888957,
+        "cpu_speedup": 0.999986659151322
+      },
+      {
+        "fork": 4,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9898808784107653,
+        "cpu_speedup": 0.9881411269837322
+      },
+      {
+        "fork": 4,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9966693035987845,
+        "cpu_speedup": 0.9969928639435903
+      },
+      {
+        "fork": 4,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9963789863771596,
+        "cpu_speedup": 0.9976140516018538
+      },
+      {
+        "fork": 4,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9999063870760673,
+        "cpu_speedup": 0.9999732239979918
+      },
+      {
+        "fork": 4,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.997712349917147,
+        "cpu_speedup": 0.9982813782949688
+      },
+      {
+        "fork": 4,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9974439624005785,
+        "cpu_speedup": 0.9984861709178223
+      },
+      {
+        "fork": 4,
+        "round": 2,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9994288726825411,
+        "cpu_speedup": 1.0001917431019633
+      },
+      {
+        "fork": 4,
+        "round": 2,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9937791645583853,
+        "cpu_speedup": 0.9942550261480795
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9979841779484294,
+        "cpu_speedup": 0.997242659243057
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.982474931790746,
+        "cpu_speedup": 0.9936326876556072
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9983239234881089,
+        "cpu_speedup": 0.9988465203363479
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9993807037343251,
+        "cpu_speedup": 0.9994712225460635
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 1.0001495215311005,
+        "cpu_speedup": 0.9995744114908898
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9998528931023211,
+        "cpu_speedup": 0.9998593185127022
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "sign",
+        "speedup": 0.9999293062397141,
+        "cpu_speedup": 0.9997903593637123
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9858386333115534,
+        "cpu_speedup": 0.9925218058846108
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.9995360887050667,
+        "cpu_speedup": 0.9993655154369441
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9964273891834835,
+        "cpu_speedup": 0.997531180965374
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9963655192981422,
+        "cpu_speedup": 0.9972481769583315
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.9886081822156803,
+        "cpu_speedup": 0.9882776463037984
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9975867840439855,
+        "cpu_speedup": 0.9980525610659189
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-256s-1.txt",
+        "operation": "sign",
+        "speedup": 0.845293139009452,
+        "cpu_speedup": 0.8440709780671188
+      },
+      {
+        "fork": 4,
+        "round": 3,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9985675376339225,
+        "cpu_speedup": 0.998265838720172
+      },
+      {
+        "fork": 4,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "sign",
+        "speedup": 0.9994737052482912,
+        "cpu_speedup": 0.9992999696653522
+      },
+      {
+        "fork": 4,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-1.txt",
+        "operation": "verify",
+        "speedup": 1.0003687250268567,
+        "cpu_speedup": 0.9999538573482173
+      },
+      {
+        "fork": 4,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9999331532928687,
+        "cpu_speedup": 0.9999330859744857
+      },
+      {
+        "fork": 4,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9981549998840664,
+        "cpu_speedup": 0.9982822427675125
+      },
+      {
+        "fork": 4,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9968588460153098,
+        "cpu_speedup": 0.9960528713489873
+      },
+      {
+        "fork": 4,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "sign",
+        "speedup": 0.9992497126257792,
+        "cpu_speedup": 0.9995918911029427
+      },
+      {
+        "fork": 4,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "sign",
+        "speedup": 0.998092893087717,
+        "cpu_speedup": 0.9984272770967731
+      },
+      {
+        "fork": 4,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-0.txt",
+        "operation": "verify",
+        "speedup": 0.997976600952807,
+        "cpu_speedup": 0.9980109005285603
+      },
+      {
+        "fork": 4,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128f-0.txt",
+        "operation": "verify",
+        "speedup": 1.0000535040111287,
+        "cpu_speedup": 0.9999765640170614
+      },
+      {
+        "fork": 4,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9853897915759079,
+        "cpu_speedup": 0.9857823835691518
+      },
+      {
+        "fork": 4,
+        "round": 4,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9980603549738712,
+        "cpu_speedup": 0.9983346216448911
+      },
+      {
+        "fork": 4,
+        "round": 4,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "sign",
+        "speedup": 0.9885019266737274,
+        "cpu_speedup": 0.988101588054175
+      },
+      {
+        "fork": 4,
+        "round": 5,
+        "case": "SLH-DSA-SHAKE-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9896819455577712,
+        "cpu_speedup": 0.9936150309760879
+      },
+      {
+        "fork": 4,
+        "round": 5,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "verify",
+        "speedup": 0.9730154915813588,
+        "cpu_speedup": 0.9842241107143903
+      },
+      {
+        "fork": 4,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "sign",
+        "speedup": 0.9998955562445941,
+        "cpu_speedup": 0.9999738530475907
+      },
+      {
+        "fork": 4,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "verify",
+        "speedup": 0.9998802379273177,
+        "cpu_speedup": 0.9995172186466806
+      },
+      {
+        "fork": 4,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-1.txt",
+        "operation": "verify",
+        "speedup": 0.9972872228874501,
+        "cpu_speedup": 0.9974979912734818
+      },
+      {
+        "fork": 4,
+        "round": 5,
+        "case": "SLH-DSA-SHAKE-128f-1.txt",
+        "operation": "sign",
+        "speedup": 1.0149234192957193,
+        "cpu_speedup": 0.9983942417634599
+      },
+      {
+        "fork": 4,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128f-2.txt",
+        "operation": "verify",
+        "speedup": 0.9986477599119534,
+        "cpu_speedup": 0.9991258623703922
+      },
+      {
+        "fork": 4,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-0.txt",
+        "operation": "sign",
+        "speedup": 0.9994967088149471,
+        "cpu_speedup": 0.9994876004982447
+      },
+      {
+        "fork": 4,
+        "round": 5,
+        "case": "SLH-DSA-SHA2-128s-2.txt",
+        "operation": "verify",
+        "speedup": 0.9921050459522213,
+        "cpu_speedup": 0.9961319049285737
+      }
+    ]
+  },
+  "candidate_first_ten_keys": {
+    "source": "results/openssl/ten-key-order/summary.json",
+    "sha256": "96cc4fd93babd6f4eab167bcf6eaadd97acb51e3c7f340f49eb8f26b06b37cbd",
+    "cells": [
+      {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "operation": "keygen",
+        "wall_total_ratio": 1.000407664084794,
+        "cpu_total_ratio": 1.0028524857375714,
+        "wall": {
+          "pairs": 10,
+          "losses": 3,
+          "minimum": 0.9198473282442748,
+          "maximum": 1.0576131687242798,
+          "median": 1.0061730494524181
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 3,
+          "minimum": 0.9341085271317829,
+          "maximum": 1.0573770491803278,
+          "median": 1.0061226521537132
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "operation": "sign",
+        "wall_total_ratio": 1.002582844291387,
+        "cpu_total_ratio": 1.0019703393557693,
+        "wall": {
+          "pairs": 10,
+          "losses": 4,
+          "minimum": 0.9767521956259687,
+          "maximum": 1.0251804895228034,
+          "median": 1.0021284479526416
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 4,
+          "minimum": 0.9791163272350708,
+          "maximum": 1.0191901408450703,
+          "median": 1.001950372146108
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-128f",
+        "operation": "verify",
+        "wall_total_ratio": 1.0123214785774293,
+        "cpu_total_ratio": 1.014619061006466,
+        "wall": {
+          "pairs": 10,
+          "losses": 4,
+          "minimum": 0.9148351648351648,
+          "maximum": 1.0906515580736544,
+          "median": 1.0122851951062861
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 3,
+          "minimum": 0.9596541786743515,
+          "maximum": 1.0963172804532577,
+          "median": 1.0040650406504064
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-128s",
+        "operation": "keygen",
+        "wall_total_ratio": 1.0066969795388112,
+        "cpu_total_ratio": 1.0045131291028446,
+        "wall": {
+          "pairs": 10,
+          "losses": 2,
+          "minimum": 0.987331189710611,
+          "maximum": 1.0256812389727505,
+          "median": 1.0083041263298775
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 3,
+          "minimum": 0.988009283135637,
+          "maximum": 1.0164213280994439,
+          "median": 1.0065194363026024
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-128s",
+        "operation": "sign",
+        "wall_total_ratio": 0.9990735830183739,
+        "cpu_total_ratio": 1.0029707048910896,
+        "wall": {
+          "pairs": 10,
+          "losses": 2,
+          "minimum": 0.951454369506626,
+          "maximum": 1.0108973108659334,
+          "median": 1.003269690019128
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 2,
+          "minimum": 0.9978027158768511,
+          "maximum": 1.0079754705442685,
+          "median": 1.0022148656639176
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-128s",
+        "operation": "verify",
+        "wall_total_ratio": 1.0196523053665911,
+        "cpu_total_ratio": 1.0211161387631975,
+        "wall": {
+          "pairs": 10,
+          "losses": 2,
+          "minimum": 0.9779411764705882,
+          "maximum": 1.0740740740740742,
+          "median": 1.0187217194570135
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 3,
+          "minimum": 0.9779411764705882,
+          "maximum": 1.0814814814814815,
+          "median": 1.0154442456768038
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-192f",
+        "operation": "keygen",
+        "wall_total_ratio": 0.9862773722627737,
+        "cpu_total_ratio": 0.9944297859865142,
+        "wall": {
+          "pairs": 10,
+          "losses": 4,
+          "minimum": 0.8487179487179487,
+          "maximum": 1.0515151515151515,
+          "median": 1.0119412561488557
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 4,
+          "minimum": 0.8945945945945946,
+          "maximum": 1.0483383685800605,
+          "median": 1.0193644400085549
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-192f",
+        "operation": "sign",
+        "wall_total_ratio": 1.107760645795071,
+        "cpu_total_ratio": 1.1040773335329406,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.0892363326951713,
+          "maximum": 1.125549009105517,
+          "median": 1.106918844973527
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.0879506540465809,
+          "maximum": 1.1169559124717041,
+          "median": 1.1039771366047224
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-192f",
+        "operation": "verify",
+        "wall_total_ratio": 1.0642494833740372,
+        "cpu_total_ratio": 1.0679721333082282,
+        "wall": {
+          "pairs": 10,
+          "losses": 1,
+          "minimum": 0.9543230016313213,
+          "maximum": 1.1041666666666667,
+          "median": 1.080201622524457
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 1,
+          "minimum": 0.9832214765100671,
+          "maximum": 1.1039697542533082,
+          "median": 1.0810654432339108
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-192s",
+        "operation": "keygen",
+        "wall_total_ratio": 1.4472900705453995,
+        "cpu_total_ratio": 1.0350807966036426,
+        "wall": {
+          "pairs": 10,
+          "losses": 2,
+          "minimum": 0.995331247957421,
+          "maximum": 5.439401186148842,
+          "median": 1.01073383857414
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 2,
+          "minimum": 0.9993354535529501,
+          "maximum": 1.2867323512531088,
+          "median": 1.0084353321207282
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-192s",
+        "operation": "sign",
+        "wall_total_ratio": 1.1514349664126773,
+        "cpu_total_ratio": 1.1467202669916925,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.006329781622534,
+          "maximum": 1.3237352252414538,
+          "median": 1.146269161504621
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.1312564939374659,
+          "maximum": 1.181976714603561,
+          "median": 1.1428292871368835
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-192s",
+        "operation": "verify",
+        "wall_total_ratio": 1.2002960039467192,
+        "cpu_total_ratio": 1.1857493857493857,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.125,
+          "maximum": 1.3666666666666667,
+          "median": 1.1715350149763597
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.1148325358851674,
+          "maximum": 1.2748815165876777,
+          "median": 1.1736008473741255
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-256f",
+        "operation": "keygen",
+        "wall_total_ratio": 1.0474694198182022,
+        "cpu_total_ratio": 1.0373821284238887,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.0,
+          "maximum": 1.1587651598676958,
+          "median": 1.0345189168968398
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.003370786516854,
+          "maximum": 1.0947603121516165,
+          "median": 1.034395147262378
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-256f",
+        "operation": "sign",
+        "wall_total_ratio": 1.136223242684885,
+        "cpu_total_ratio": 1.1161221918313409,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.102592837858489,
+          "maximum": 1.2121676108814372,
+          "median": 1.1265623923387367
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.0987244897959183,
+          "maximum": 1.152550184350676,
+          "median": 1.1132065890232004
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-256f",
+        "operation": "verify",
+        "wall_total_ratio": 1.1030908754395705,
+        "cpu_total_ratio": 1.1037998146431882,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.053763440860215,
+          "maximum": 1.1856617647058822,
+          "median": 1.0958995106266451
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.0636363636363637,
+          "maximum": 1.1636029411764706,
+          "median": 1.096919847355267
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-256s",
+        "operation": "keygen",
+        "wall_total_ratio": 1.0170794553723546,
+        "cpu_total_ratio": 1.0092812660888208,
+        "wall": {
+          "pairs": 10,
+          "losses": 3,
+          "minimum": 0.9852120535714286,
+          "maximum": 1.106525101954718,
+          "median": 1.0098411828131428
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 3,
+          "minimum": 0.9895607090310377,
+          "maximum": 1.0463608821249912,
+          "median": 1.007613710472935
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-256s",
+        "operation": "sign",
+        "wall_total_ratio": 1.1940896466526205,
+        "cpu_total_ratio": 1.1918480209476419,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.1860293611539936,
+          "maximum": 1.2237831401184875,
+          "median": 1.192307997130992
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.1867398632000157,
+          "maximum": 1.2053832679545062,
+          "median": 1.191442532560269
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHA2-256s",
+        "operation": "verify",
+        "wall_total_ratio": 1.1774249223334483,
+        "cpu_total_ratio": 1.1759227319765437,
+        "wall": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.1126279863481228,
+          "maximum": 1.3706293706293706,
+          "median": 1.147029945999018
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 0,
+          "minimum": 1.1126279863481228,
+          "maximum": 1.3251748251748252,
+          "median": 1.1497101600194384
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHAKE-128f",
+        "operation": "keygen",
+        "wall_total_ratio": 1.0098626534190531,
+        "cpu_total_ratio": 1.0074621406101398,
+        "wall": {
+          "pairs": 10,
+          "losses": 5,
+          "minimum": 0.931958762886598,
+          "maximum": 1.1200294550810015,
+          "median": 1.0003671067986342
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 4,
+          "minimum": 0.9516468114926419,
+          "maximum": 1.0824135393671817,
+          "median": 1.0018368846436445
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHAKE-128f",
+        "operation": "sign",
+        "wall_total_ratio": 1.0033268157038255,
+        "cpu_total_ratio": 1.0027606850775224,
+        "wall": {
+          "pairs": 10,
+          "losses": 2,
+          "minimum": 0.9962268857775421,
+          "maximum": 1.0105143864509223,
+          "median": 1.001960197023378
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 2,
+          "minimum": 0.9980897504149313,
+          "maximum": 1.0079762918124784,
+          "median": 1.0025928361374215
+        }
+      },
+      {
+        "parameter": "SLH-DSA-SHAKE-128f",
+        "operation": "verify",
+        "wall_total_ratio": 1.0002067397146992,
+        "cpu_total_ratio": 0.9987071417489787,
+        "wall": {
+          "pairs": 10,
+          "losses": 5,
+          "minimum": 0.9565217391304348,
+          "maximum": 1.022715539494063,
+          "median": 1.000993257572205
+        },
+        "cpu": {
+          "pairs": 10,
+          "losses": 5,
+          "minimum": 0.9664256198347108,
+          "maximum": 1.0111761575306013,
+          "median": 1.0009927647502799
+        }
+      }
+    ],
+    "limitation": "One pass; all candidate batches precede all baseline batches, so elapsed-time drift is confounded with variant order."
+  }
+}

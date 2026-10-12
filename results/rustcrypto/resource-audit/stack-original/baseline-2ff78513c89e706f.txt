@@ -1,0 +1,940 @@
+
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/prepared-4b0bcedd916d66de/target/release/mldsa-keygen-experiment:	file format mach-o arm64
+
+Disassembly of section __TEXT,__text:
+
+0000000100084cf4 <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE>:
+100084cf4:     	stp	x28, x27, [sp, #-0x60]!
+100084cf8:     	stp	x26, x25, [sp, #0x10]
+100084cfc:     	stp	x24, x23, [sp, #0x20]
+100084d00:     	stp	x22, x21, [sp, #0x30]
+100084d04:     	stp	x20, x19, [sp, #0x40]
+100084d08:     	stp	x29, x30, [sp, #0x50]
+100084d0c:     	add	x29, sp, #0x50
+100084d10:     	sub	x9, sp, #0x61, lsl #12  ; =0x61000
+100084d14:     	sub	sp, sp, #0x1, lsl #12   ; =0x1000
+100084d18:     	str	xzr, [sp]
+100084d1c:     	cmp	sp, x9
+100084d20:     	b.ne	0x100084d14 <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE+0x20>
+100084d24:     	sub	sp, sp, #0x510
+100084d28:     	str	xzr, [sp]
+100084d2c:     	mov	x21, x0
+100084d30:     	mov	x20, x8
+100084d34:     	add	x28, sp, #0x32, lsl #12 ; =0x32000
+100084d38:     	add	x28, x28, #0x60
+100084d3c:     	strb	wzr, [x28, #0xd0]
+100084d40:     	movi.2d	v0, #0000000000000000
+100084d44:     	stp	q0, q0, [x28, #0xb0]
+100084d48:     	add	x24, sp, #0x18, lsl #12 ; =0x18000
+100084d4c:     	add	x24, x24, #0x7a0
+100084d50:     	orr	x8, x28, #0x8
+100084d54:     	add	x9, x28, #0xd0
+100084d58:     	stp	q0, q0, [x28, #0x90]
+100084d5c:     	stp	q0, q0, [x28, #0x70]
+100084d60:     	stp	q0, q0, [x28, #0x50]
+100084d64:     	stp	q0, q0, [x28, #0x30]
+100084d68:     	stp	q0, q0, [x28, #0x10]
+100084d6c:     	str	q0, [x28]
+100084d70:     	stp	x8, x9, [x24, #0x40]
+100084d74:     	mov	w8, #0x20               ; =32
+100084d78:     	stp	x0, x8, [x24, #0x50]
+100084d7c:     	add	x19, sp, #0x18, lsl #12 ; =0x18000
+100084d80:     	add	x19, x19, #0x7e0
+100084d84:     	add	x0, sp, #0x18, lsl #12  ; =0x18000
+100084d88:     	add	x0, x0, #0x7e0
+100084d8c:     	bl	0x10006d538 <__ZN6keccak6Keccak12with_backend18aarch64_sha3_inner17h71f7f95dee27c96aE>
+100084d90:     	ldp	q0, q1, [x28, #0xa0]
+100084d94:     	stp	q0, q1, [x24, #0xe0]
+100084d98:     	ldr	q0, [x28, #0xc0]
+100084d9c:     	str	q0, [x24, #0x100]
+100084da0:     	ldr	x8, [x28, #0xd0]
+100084da4:     	str	x8, [x24, #0x110]
+100084da8:     	ldp	q0, q1, [x28, #0x60]
+100084dac:     	stp	q0, q1, [x24, #0xa0]
+100084db0:     	ldp	q0, q1, [x28, #0x80]
+100084db4:     	stp	q0, q1, [x24, #0xc0]
+100084db8:     	ldp	q0, q1, [x28, #0x20]
+100084dbc:     	stp	q0, q1, [x24, #0x60]
+100084dc0:     	ldp	q0, q1, [x28, #0x40]
+100084dc4:     	stp	q0, q1, [x24, #0x80]
+100084dc8:     	ldp	q0, q1, [x28]
+100084dcc:     	stp	q0, q1, [x24, #0x40]
+100084dd0:     	ldr	w8, [x24, #0x40]
+100084dd4:     	tbnz	w8, #0x0, 0x100085aec <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE+0xdf8>
+100084dd8:     	orr	x8, x19, #0x8
+100084ddc:     	add	x9, x19, #0xd0
+100084de0:     	stp	x8, x9, [x28]
+100084de4:     	adrp	x8, 0x1000f5000 <dyld_stub_binder+0x1000f5000>
+100084de8:     	add	x8, x8, #0xd70
+100084dec:     	mov	w9, #0x1                ; =1
+100084df0:     	stp	x8, x9, [x28, #0x10]
+100084df4:     	add	x19, sp, #0x32, lsl #12 ; =0x32000
+100084df8:     	add	x19, x19, #0x60
+100084dfc:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+100084e00:     	add	x0, x0, #0x60
+100084e04:     	bl	0x10006d538 <__ZN6keccak6Keccak12with_backend18aarch64_sha3_inner17h71f7f95dee27c96aE>
+100084e08:     	ldp	q0, q1, [x24, #0xe0]
+100084e0c:     	stp	q0, q1, [x28, #0xa0]
+100084e10:     	ldr	q0, [x24, #0x100]
+100084e14:     	str	q0, [x28, #0xc0]
+100084e18:     	ldr	x8, [x24, #0x110]
+100084e1c:     	str	x8, [x28, #0xd0]
+100084e20:     	ldp	q0, q1, [x24, #0xa0]
+100084e24:     	stp	q0, q1, [x28, #0x60]
+100084e28:     	ldp	q0, q1, [x24, #0xc0]
+100084e2c:     	stp	q0, q1, [x28, #0x80]
+100084e30:     	ldp	q0, q1, [x24, #0x60]
+100084e34:     	stp	q0, q1, [x28, #0x20]
+100084e38:     	ldp	q0, q1, [x24, #0x80]
+100084e3c:     	stp	q0, q1, [x28, #0x40]
+100084e40:     	ldp	q0, q1, [x24, #0x40]
+100084e44:     	stp	q0, q1, [x28]
+100084e48:     	ldr	w8, [x28]
+100084e4c:     	tbnz	w8, #0x0, 0x100085aec <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE+0xdf8>
+100084e50:     	stp	x21, x20, [sp]
+100084e54:     	add	x26, sp, #0x4f, lsl #12 ; =0x4f000
+100084e58:     	add	x26, x26, #0x900
+100084e5c:     	add	x22, sp, #0x4b, lsl #12 ; =0x4b000
+100084e60:     	add	x22, x22, #0x8e0
+100084e64:     	add	x21, sp, #0x20
+100084e68:     	orr	x8, x19, #0x8
+100084e6c:     	add	x9, x19, #0xd0
+100084e70:     	stp	x8, x9, [x24, #0x40]
+100084e74:     	adrp	x8, 0x1000f5000 <dyld_stub_binder+0x1000f5000>
+100084e78:     	add	x8, x8, #0xd71
+100084e7c:     	mov	w9, #0x1                ; =1
+100084e80:     	stp	x8, x9, [x24, #0x50]
+100084e84:     	add	x23, sp, #0x18, lsl #12 ; =0x18000
+100084e88:     	add	x23, x23, #0x7e0
+100084e8c:     	add	x0, sp, #0x18, lsl #12  ; =0x18000
+100084e90:     	add	x0, x0, #0x7e0
+100084e94:     	bl	0x10006d538 <__ZN6keccak6Keccak12with_backend18aarch64_sha3_inner17h71f7f95dee27c96aE>
+100084e98:     	ldp	q0, q1, [x28, #0xa0]
+100084e9c:     	stp	q0, q1, [sp, #0xc0]
+100084ea0:     	ldr	q0, [x28, #0xc0]
+100084ea4:     	str	q0, [sp, #0xe0]
+100084ea8:     	ldr	x8, [x28, #0xd0]
+100084eac:     	str	x8, [sp, #0xf0]
+100084eb0:     	ldp	q0, q1, [x28, #0x60]
+100084eb4:     	stp	q0, q1, [sp, #0x80]
+100084eb8:     	ldp	q0, q1, [x28, #0x80]
+100084ebc:     	stp	q0, q1, [sp, #0xa0]
+100084ec0:     	ldp	q0, q1, [x28, #0x20]
+100084ec4:     	stp	q0, q1, [sp, #0x40]
+100084ec8:     	ldp	q0, q1, [x28, #0x40]
+100084ecc:     	stp	q0, q1, [sp, #0x60]
+100084ed0:     	ldp	q0, q1, [x28]
+100084ed4:     	stp	q0, q1, [sp, #0x20]
+100084ed8:     	movi.2d	v0, #0000000000000000
+100084edc:     	stp	q0, q0, [sp, #0x180]
+100084ee0:     	ldr	w8, [sp, #0x20]
+100084ee4:     	tbz	w8, #0x0, 0x100085088 <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE+0x394>
+100084ee8:     	add	x8, sp, #0x20
+100084eec:     	orr	x9, x8, #0x8
+100084ef0:     	add	x8, x8, #0xd0
+100084ef4:     	stp	x9, x8, [x28]
+100084ef8:     	add	x23, sp, #0x180
+100084efc:     	mov	w8, #0x20               ; =32
+100084f00:     	stp	x23, x8, [x28, #0x10]
+100084f04:     	add	x19, sp, #0x32, lsl #12 ; =0x32000
+100084f08:     	add	x19, x19, #0x60
+100084f0c:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+100084f10:     	add	x0, x0, #0x60
+100084f14:     	bl	0x10006d998 <__ZN6keccak6Keccak12with_backend18aarch64_sha3_inner17hbd8d229ffbe6c032E>
+100084f18:     	ldr	w8, [sp, #0x20]
+100084f1c:     	ldp	q0, q1, [sp, #0x180]
+100084f20:     	stp	q0, q1, [sp, #0x100]
+100084f24:     	movi.2d	v0, #0000000000000000
+100084f28:     	stp	q0, q0, [sp, #0x1a0]
+100084f2c:     	stp	q0, q0, [sp, #0x180]
+100084f30:     	tbnz	w8, #0x0, 0x1000851d8 <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE+0x4e4>
+100084f34:     	ldrb	w8, [sp, #0xf0]
+100084f38:     	ldur	q0, [x21, #0x98]
+100084f3c:     	ldur	q1, [x21, #0xa8]
+100084f40:     	ldur	q2, [x21, #0xb8]
+100084f44:     	stp	q1, q2, [x28, #0xa0]
+100084f48:     	ldr	x9, [sp, #0xe8]
+100084f4c:     	str	x9, [x28, #0xc0]
+100084f50:     	ldur	q1, [sp, #0x78]
+100084f54:     	ldur	q2, [sp, #0x88]
+100084f58:     	ldur	q3, [sp, #0x98]
+100084f5c:     	stp	q2, q3, [x28, #0x60]
+100084f60:     	ldur	q2, [x21, #0x88]
+100084f64:     	stp	q2, q0, [x28, #0x80]
+100084f68:     	ldur	q0, [sp, #0x38]
+100084f6c:     	ldur	q2, [sp, #0x48]
+100084f70:     	ldur	q3, [sp, #0x58]
+100084f74:     	stp	q2, q3, [x28, #0x20]
+100084f78:     	ldur	q2, [sp, #0x68]
+100084f7c:     	stp	q2, q1, [x28, #0x40]
+100084f80:     	ldur	q1, [sp, #0x28]
+100084f84:     	stp	q1, q0, [x28]
+100084f88:     	strb	w8, [x28, #0xc8]
+100084f8c:     	ubfiz	x9, x8, #3, #3
+100084f90:     	mov	w10, #0x1f              ; =31
+100084f94:     	lsl	x9, x10, x9
+100084f98:     	and	x8, x8, #0xf8
+100084f9c:     	ldr	x10, [x19, x8]
+100084fa0:     	eor	x9, x10, x9
+100084fa4:     	str	x9, [x19, x8]
+100084fa8:     	ldr	x8, [x28, #0x80]
+100084fac:     	eor	x8, x8, #0x8000000000000000
+100084fb0:     	str	x8, [x28, #0x80]
+100084fb4:     	ldp	q0, q1, [x28, #0xa0]
+100084fb8:     	stp	q0, q1, [x24, #0xe0]
+100084fbc:     	ldr	x8, [x28, #0xc0]
+100084fc0:     	str	x8, [x24, #0x100]
+100084fc4:     	ldp	q0, q1, [x28, #0x60]
+100084fc8:     	stp	q0, q1, [x24, #0xa0]
+100084fcc:     	ldp	q0, q1, [x28, #0x20]
+100084fd0:     	stp	q0, q1, [x24, #0x60]
+100084fd4:     	ldp	q1, q0, [x28, #0x40]
+100084fd8:     	stp	q1, q0, [x24, #0x80]
+100084fdc:     	ldp	q1, q0, [x28]
+100084fe0:     	stp	q1, q0, [x24, #0x40]
+100084fe4:     	ldp	q1, q0, [x28, #0x80]
+100084fe8:     	stp	q1, q0, [x24, #0xc0]
+100084fec:     	add	x8, sp, #0x18, lsl #12  ; =0x18000
+100084ff0:     	add	x8, x8, #0x7e0
+100084ff4:     	add	x9, x8, #0xc8
+100084ff8:     	strb	wzr, [x24, #0x108]
+100084ffc:     	stp	x8, x9, [x28]
+100085000:     	mov	w8, #0x40               ; =64
+100085004:     	stp	x23, x8, [x28, #0x10]
+100085008:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+10008500c:     	add	x0, x0, #0x60
+100085010:     	bl	0x10006d998 <__ZN6keccak6Keccak12with_backend18aarch64_sha3_inner17hbd8d229ffbe6c032E>
+100085014:     	ldp	q1, q0, [x24, #0xc0]
+100085018:     	stur	q0, [x21, #0x98]
+10008501c:     	ldp	q0, q2, [x24, #0xe0]
+100085020:     	stur	q0, [x21, #0xa8]
+100085024:     	stur	q2, [x21, #0xb8]
+100085028:     	ldr	q0, [x24, #0x100]
+10008502c:     	stur	q0, [x21, #0xc8]
+100085030:     	ldp	q2, q0, [x24, #0x80]
+100085034:     	stur	q0, [sp, #0x78]
+100085038:     	ldp	q0, q3, [x24, #0xa0]
+10008503c:     	stur	q0, [sp, #0x88]
+100085040:     	stur	q3, [sp, #0x98]
+100085044:     	stur	q1, [x21, #0x88]
+100085048:     	ldp	q1, q0, [x24, #0x40]
+10008504c:     	stur	q0, [sp, #0x38]
+100085050:     	ldp	q0, q3, [x24, #0x60]
+100085054:     	stur	q0, [sp, #0x48]
+100085058:     	stur	q3, [sp, #0x58]
+10008505c:     	mov	w8, #0x1                ; =1
+100085060:     	str	x8, [sp, #0x20]
+100085064:     	stur	q2, [sp, #0x68]
+100085068:     	stur	q1, [sp, #0x28]
+10008506c:     	ldp	q0, q1, [sp, #0x180]
+100085070:     	stp	q0, q1, [sp, #0x120]
+100085074:     	ldp	q0, q1, [sp, #0x1a0]
+100085078:     	stp	q0, q1, [sp, #0x140]
+10008507c:     	movi.2d	v0, #0000000000000000
+100085080:     	stp	q0, q0, [sp, #0x180]
+100085084:     	b	0x100085228 <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE+0x534>
+100085088:     	ldrb	w8, [sp, #0xf0]
+10008508c:     	ldur	q0, [x21, #0x98]
+100085090:     	ldur	q1, [x21, #0xa8]
+100085094:     	ldur	q2, [x21, #0xb8]
+100085098:     	stp	q1, q2, [x28, #0xa0]
+10008509c:     	ldr	x9, [sp, #0xe8]
+1000850a0:     	str	x9, [x28, #0xc0]
+1000850a4:     	ldur	q1, [sp, #0x78]
+1000850a8:     	ldur	q2, [sp, #0x88]
+1000850ac:     	ldur	q3, [sp, #0x98]
+1000850b0:     	stp	q2, q3, [x28, #0x60]
+1000850b4:     	ldur	q2, [x21, #0x88]
+1000850b8:     	stp	q2, q0, [x28, #0x80]
+1000850bc:     	ldur	q0, [sp, #0x38]
+1000850c0:     	ldur	q2, [sp, #0x48]
+1000850c4:     	ldur	q3, [sp, #0x58]
+1000850c8:     	stp	q2, q3, [x28, #0x20]
+1000850cc:     	ldur	q2, [sp, #0x68]
+1000850d0:     	stp	q2, q1, [x28, #0x40]
+1000850d4:     	ldur	q1, [sp, #0x28]
+1000850d8:     	stp	q1, q0, [x28]
+1000850dc:     	strb	w8, [x28, #0xc8]
+1000850e0:     	ubfiz	x9, x8, #3, #3
+1000850e4:     	mov	w10, #0x1f              ; =31
+1000850e8:     	lsl	x9, x10, x9
+1000850ec:     	and	x8, x8, #0xf8
+1000850f0:     	add	x10, sp, #0x32, lsl #12 ; =0x32000
+1000850f4:     	add	x10, x10, #0x60
+1000850f8:     	ldr	x11, [x10, x8]
+1000850fc:     	eor	x9, x11, x9
+100085100:     	str	x9, [x10, x8]
+100085104:     	ldr	x8, [x28, #0x80]
+100085108:     	eor	x8, x8, #0x8000000000000000
+10008510c:     	str	x8, [x28, #0x80]
+100085110:     	ldp	q0, q1, [x28, #0xa0]
+100085114:     	stp	q0, q1, [x24, #0xe0]
+100085118:     	ldr	x8, [x28, #0xc0]
+10008511c:     	str	x8, [x24, #0x100]
+100085120:     	ldp	q0, q1, [x28, #0x60]
+100085124:     	stp	q0, q1, [x24, #0xa0]
+100085128:     	ldp	q0, q1, [x28, #0x20]
+10008512c:     	stp	q0, q1, [x24, #0x60]
+100085130:     	ldp	q1, q0, [x28, #0x40]
+100085134:     	stp	q1, q0, [x24, #0x80]
+100085138:     	ldp	q1, q0, [x28]
+10008513c:     	stp	q1, q0, [x24, #0x40]
+100085140:     	ldp	q1, q0, [x28, #0x80]
+100085144:     	stp	q1, q0, [x24, #0xc0]
+100085148:     	add	x8, x23, #0xc8
+10008514c:     	strb	wzr, [x24, #0x108]
+100085150:     	stp	x23, x8, [x28]
+100085154:     	add	x8, sp, #0x180
+100085158:     	mov	w9, #0x20               ; =32
+10008515c:     	stp	x8, x9, [x28, #0x10]
+100085160:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+100085164:     	add	x0, x0, #0x60
+100085168:     	bl	0x10006d998 <__ZN6keccak6Keccak12with_backend18aarch64_sha3_inner17hbd8d229ffbe6c032E>
+10008516c:     	ldp	q1, q0, [x24, #0xc0]
+100085170:     	stur	q0, [x21, #0x98]
+100085174:     	ldp	q0, q2, [x24, #0xe0]
+100085178:     	stur	q0, [x21, #0xa8]
+10008517c:     	stur	q2, [x21, #0xb8]
+100085180:     	ldr	q0, [x24, #0x100]
+100085184:     	stur	q0, [x21, #0xc8]
+100085188:     	ldp	q2, q0, [x24, #0x80]
+10008518c:     	stur	q0, [sp, #0x78]
+100085190:     	ldp	q0, q3, [x24, #0xa0]
+100085194:     	stur	q0, [sp, #0x88]
+100085198:     	stur	q3, [sp, #0x98]
+10008519c:     	stur	q1, [x21, #0x88]
+1000851a0:     	ldp	q1, q0, [x24, #0x40]
+1000851a4:     	stur	q0, [sp, #0x38]
+1000851a8:     	ldp	q0, q3, [x24, #0x60]
+1000851ac:     	stur	q0, [sp, #0x48]
+1000851b0:     	stur	q3, [sp, #0x58]
+1000851b4:     	mov	w8, #0x1                ; =1
+1000851b8:     	str	x8, [sp, #0x20]
+1000851bc:     	stur	q2, [sp, #0x68]
+1000851c0:     	stur	q1, [sp, #0x28]
+1000851c4:     	ldp	q0, q1, [sp, #0x180]
+1000851c8:     	stp	q0, q1, [sp, #0x100]
+1000851cc:     	movi.2d	v0, #0000000000000000
+1000851d0:     	stp	q0, q0, [sp, #0x1a0]
+1000851d4:     	stp	q0, q0, [sp, #0x180]
+1000851d8:     	add	x8, sp, #0x20
+1000851dc:     	orr	x9, x8, #0x8
+1000851e0:     	add	x8, x8, #0xd0
+1000851e4:     	stp	x9, x8, [x28]
+1000851e8:     	add	x23, sp, #0x180
+1000851ec:     	mov	w8, #0x40               ; =64
+1000851f0:     	stp	x23, x8, [x28, #0x10]
+1000851f4:     	add	x19, sp, #0x32, lsl #12 ; =0x32000
+1000851f8:     	add	x19, x19, #0x60
+1000851fc:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+100085200:     	add	x0, x0, #0x60
+100085204:     	bl	0x10006d998 <__ZN6keccak6Keccak12with_backend18aarch64_sha3_inner17hbd8d229ffbe6c032E>
+100085208:     	ldr	w8, [sp, #0x20]
+10008520c:     	ldp	q0, q1, [sp, #0x180]
+100085210:     	stp	q0, q1, [sp, #0x120]
+100085214:     	ldp	q0, q1, [sp, #0x1a0]
+100085218:     	stp	q0, q1, [sp, #0x140]
+10008521c:     	movi.2d	v0, #0000000000000000
+100085220:     	stp	q0, q0, [sp, #0x180]
+100085224:     	tbz	w8, #0x0, 0x100085254 <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE+0x560>
+100085228:     	add	x8, sp, #0x20
+10008522c:     	orr	x9, x8, #0x8
+100085230:     	add	x8, x8, #0xd0
+100085234:     	stp	x9, x8, [x28]
+100085238:     	add	x8, sp, #0x180
+10008523c:     	mov	w9, #0x20               ; =32
+100085240:     	stp	x8, x9, [x28, #0x10]
+100085244:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+100085248:     	add	x0, x0, #0x60
+10008524c:     	bl	0x10006d998 <__ZN6keccak6Keccak12with_backend18aarch64_sha3_inner17hbd8d229ffbe6c032E>
+100085250:     	b	0x10008538c <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE+0x698>
+100085254:     	ldrb	w8, [sp, #0xf0]
+100085258:     	ldur	q0, [x21, #0x98]
+10008525c:     	ldur	q1, [x21, #0xa8]
+100085260:     	ldur	q2, [x21, #0xb8]
+100085264:     	stp	q1, q2, [x28, #0xa0]
+100085268:     	ldr	x9, [sp, #0xe8]
+10008526c:     	str	x9, [x28, #0xc0]
+100085270:     	ldur	q1, [sp, #0x78]
+100085274:     	ldur	q2, [sp, #0x88]
+100085278:     	ldur	q3, [sp, #0x98]
+10008527c:     	stp	q2, q3, [x28, #0x60]
+100085280:     	ldur	q2, [x21, #0x88]
+100085284:     	stp	q2, q0, [x28, #0x80]
+100085288:     	ldur	q0, [sp, #0x38]
+10008528c:     	ldur	q2, [sp, #0x48]
+100085290:     	ldur	q3, [sp, #0x58]
+100085294:     	stp	q2, q3, [x28, #0x20]
+100085298:     	ldur	q2, [sp, #0x68]
+10008529c:     	stp	q2, q1, [x28, #0x40]
+1000852a0:     	ldur	q1, [sp, #0x28]
+1000852a4:     	stp	q1, q0, [x28]
+1000852a8:     	strb	w8, [x28, #0xc8]
+1000852ac:     	ubfiz	x9, x8, #3, #3
+1000852b0:     	mov	w10, #0x1f              ; =31
+1000852b4:     	lsl	x9, x10, x9
+1000852b8:     	and	x8, x8, #0xf8
+1000852bc:     	ldr	x10, [x19, x8]
+1000852c0:     	eor	x9, x10, x9
+1000852c4:     	str	x9, [x19, x8]
+1000852c8:     	ldr	x8, [x28, #0x80]
+1000852cc:     	eor	x8, x8, #0x8000000000000000
+1000852d0:     	str	x8, [x28, #0x80]
+1000852d4:     	ldp	q0, q1, [x28, #0xa0]
+1000852d8:     	stp	q0, q1, [x24, #0xe0]
+1000852dc:     	ldr	x8, [x28, #0xc0]
+1000852e0:     	str	x8, [x24, #0x100]
+1000852e4:     	ldp	q0, q1, [x28, #0x60]
+1000852e8:     	stp	q0, q1, [x24, #0xa0]
+1000852ec:     	ldp	q0, q1, [x28, #0x20]
+1000852f0:     	stp	q0, q1, [x24, #0x60]
+1000852f4:     	ldp	q1, q0, [x28, #0x40]
+1000852f8:     	stp	q1, q0, [x24, #0x80]
+1000852fc:     	ldp	q1, q0, [x28]
+100085300:     	stp	q1, q0, [x24, #0x40]
+100085304:     	ldp	q1, q0, [x28, #0x80]
+100085308:     	stp	q1, q0, [x24, #0xc0]
+10008530c:     	add	x8, sp, #0x18, lsl #12  ; =0x18000
+100085310:     	add	x8, x8, #0x7e0
+100085314:     	add	x9, x8, #0xc8
+100085318:     	strb	wzr, [x24, #0x108]
+10008531c:     	stp	x8, x9, [x28]
+100085320:     	mov	w8, #0x20               ; =32
+100085324:     	stp	x23, x8, [x28, #0x10]
+100085328:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+10008532c:     	add	x0, x0, #0x60
+100085330:     	bl	0x10006d998 <__ZN6keccak6Keccak12with_backend18aarch64_sha3_inner17hbd8d229ffbe6c032E>
+100085334:     	ldp	q1, q0, [x24, #0xc0]
+100085338:     	stur	q0, [x21, #0x98]
+10008533c:     	ldp	q0, q2, [x24, #0xe0]
+100085340:     	stur	q0, [x21, #0xa8]
+100085344:     	stur	q2, [x21, #0xb8]
+100085348:     	ldr	q0, [x24, #0x100]
+10008534c:     	stur	q0, [x21, #0xc8]
+100085350:     	ldp	q2, q0, [x24, #0x80]
+100085354:     	stur	q0, [sp, #0x78]
+100085358:     	ldp	q0, q3, [x24, #0xa0]
+10008535c:     	stur	q0, [sp, #0x88]
+100085360:     	stur	q3, [sp, #0x98]
+100085364:     	stur	q1, [x21, #0x88]
+100085368:     	ldp	q1, q0, [x24, #0x40]
+10008536c:     	stur	q0, [sp, #0x38]
+100085370:     	ldp	q0, q3, [x24, #0x60]
+100085374:     	stur	q0, [sp, #0x48]
+100085378:     	stur	q3, [sp, #0x58]
+10008537c:     	stur	q2, [sp, #0x68]
+100085380:     	mov	w8, #0x1                ; =1
+100085384:     	str	x8, [sp, #0x20]
+100085388:     	stur	q1, [sp, #0x28]
+10008538c:     	ldp	q0, q1, [sp, #0x180]
+100085390:     	stp	q0, q1, [sp, #0x160]
+100085394:     	add	x8, sp, #0x100
+100085398:     	mov	w9, #0x20               ; =32
+10008539c:     	stp	x8, x9, [x28]
+1000853a0:     	add	x19, sp, #0x180
+1000853a4:     	add	x8, sp, #0x180
+1000853a8:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+1000853ac:     	add	x0, x0, #0x60
+1000853b0:     	bl	0x100039140 <__ZN12hybrid_array7from_fn50_$LT$impl$u20$hybrid_array..Array$LT$T$C$U$GT$$GT$11try_from_fn17h1112f1b51d530442E>
+1000853b4:     	strb	wzr, [x26]
+1000853b8:     	str	xzr, [x24, #0x40]
+1000853bc:     	add	x20, sp, #0x18, lsl #12 ; =0x18000
+1000853c0:     	add	x20, x20, #0x7e0
+1000853c4:     	add	x21, sp, #0x120
+1000853c8:     	stp	x20, x21, [x28]
+1000853cc:     	mov	w23, #0x40              ; =64
+1000853d0:     	add	x25, sp, #0x4f, lsl #12 ; =0x4f000
+1000853d4:     	add	x25, x25, #0x900
+1000853d8:     	stp	x23, x25, [x28, #0x10]
+1000853dc:     	add	x27, sp, #0xe, lsl #12  ; =0xe000
+1000853e0:     	add	x27, x27, #0x180
+1000853e4:     	add	x8, sp, #0xe, lsl #12   ; =0xe000
+1000853e8:     	add	x8, x8, #0x180
+1000853ec:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+1000853f0:     	add	x0, x0, #0x60
+1000853f4:     	bl	0x10003a87c <__ZN12hybrid_array7from_fn50_$LT$impl$u20$hybrid_array..Array$LT$T$C$U$GT$$GT$11try_from_fn17h4771e4435cca887bE>
+1000853f8:     	strb	wzr, [x26]
+1000853fc:     	mov	w8, #0x7                ; =7
+100085400:     	str	x8, [x24, #0x40]
+100085404:     	stp	x20, x21, [x28]
+100085408:     	stp	x23, x25, [x28, #0x10]
+10008540c:     	add	x20, sp, #0xf, lsl #12  ; =0xf000
+100085410:     	add	x20, x20, #0xd80
+100085414:     	add	x23, sp, #0x32, lsl #12 ; =0x32000
+100085418:     	add	x23, x23, #0x60
+10008541c:     	add	x8, sp, #0xf, lsl #12   ; =0xf000
+100085420:     	add	x8, x8, #0xd80
+100085424:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+100085428:     	add	x0, x0, #0x60
+10008542c:     	bl	0x10003e354 <__ZN12hybrid_array7from_fn50_$LT$impl$u20$hybrid_array..Array$LT$T$C$U$GT$$GT$11try_from_fn17hbdc2f1ba4ef937a0E>
+100085430:     	mov	w9, #0x1c00             ; =7168
+100085434:     	add	x8, sp, #0x32, lsl #12  ; =0x32000
+100085438:     	add	x8, x8, #0x60
+10008543c:     	add	x0, sp, #0xe, lsl #12   ; =0xe000
+100085440:     	add	x0, x0, #0x180
+100085444:     	add	x1, x27, x9
+100085448:     	bl	0x1000299a8 <__ZN12hybrid_array4iter113_$LT$impl$u20$core..iter..traits..collect..FromIterator$LT$T$GT$$u20$for$u20$hybrid_array..Array$LT$T$C$U$GT$$GT$9from_iter17hb4c419b143bcabdeE>
+10008544c:     	add	x8, x19, #0xe, lsl #12  ; =0xe000
+100085450:     	stp	x19, x8, [x24, #0x40]
+100085454:     	str	x23, [x24, #0x50]
+100085458:     	add	x19, sp, #0x11, lsl #12 ; =0x11000
+10008545c:     	add	x19, x19, #0xd80
+100085460:     	add	x8, sp, #0x11, lsl #12  ; =0x11000
+100085464:     	add	x8, x8, #0xd80
+100085468:     	add	x0, sp, #0x18, lsl #12  ; =0x18000
+10008546c:     	add	x0, x0, #0x7e0
+100085470:     	bl	0x100029058 <__ZN12hybrid_array4iter113_$LT$impl$u20$core..iter..traits..collect..FromIterator$LT$T$GT$$u20$for$u20$hybrid_array..Array$LT$T$C$U$GT$$GT$9from_iter17hb41558d3b1ff8f44E>
+100085474:     	add	x8, sp, #0x32, lsl #12  ; =0x32000
+100085478:     	add	x8, x8, #0x60
+10008547c:     	add	x0, sp, #0x11, lsl #12  ; =0x11000
+100085480:     	add	x0, x0, #0xd80
+100085484:     	add	x1, x19, #0x2, lsl #12  ; =0x2000
+100085488:     	bl	0x1000174e0 <__ZN12hybrid_array4iter113_$LT$impl$u20$core..iter..traits..collect..FromIterator$LT$T$GT$$u20$for$u20$hybrid_array..Array$LT$T$C$U$GT$$GT$9from_iter17h5f8b087918db1f1cE>
+10008548c:     	add	x21, x23, #0x2, lsl #12 ; =0x2000
+100085490:     	add	x8, x20, #0x2, lsl #12  ; =0x2000
+100085494:     	stp	x23, x21, [x24, #0x40]
+100085498:     	stp	x20, x8, [x24, #0x50]
+10008549c:     	adrp	x8, 0x1000f5000 <dyld_stub_binder+0x1000f5000>
+1000854a0:     	ldr	q0, [x8, #0x520]
+1000854a4:     	str	q0, [sp, #0x10]
+1000854a8:     	str	q0, [x24, #0x60]
+1000854ac:     	add	x8, sp, #0x13, lsl #12  ; =0x13000
+1000854b0:     	add	x8, x8, #0xd80
+1000854b4:     	add	x0, sp, #0x18, lsl #12  ; =0x18000
+1000854b8:     	add	x0, x0, #0x7e0
+1000854bc:     	bl	0x100015660 <__ZN12hybrid_array4iter113_$LT$impl$u20$core..iter..traits..collect..FromIterator$LT$T$GT$$u20$for$u20$hybrid_array..Array$LT$T$C$U$GT$$GT$9from_iter17h5a6c1b93a529c78cE>
+1000854c0:     	add	x8, sp, #0x32, lsl #12  ; =0x32000
+1000854c4:     	add	x8, x8, #0x60
+1000854c8:     	add	x0, sp, #0x13, lsl #12  ; =0x13000
+1000854cc:     	add	x0, x0, #0xd80
+1000854d0:     	bl	0x100055ee8 <__ZN135_$LT$module_lattice..algebra..Vector$LT$ml_dsa_baseline..algebra..BaseField$C$K$GT$$u20$as$u20$ml_dsa_baseline..algebra..AlgebraExt$GT$11power2round17hc07aea0270d25097E>
+1000854d4:     	add	x19, sp, #0x15, lsl #12 ; =0x15000
+1000854d8:     	add	x19, x19, #0xd80
+1000854dc:     	add	x0, sp, #0x15, lsl #12  ; =0x15000
+1000854e0:     	add	x0, x0, #0xd80
+1000854e4:     	add	x1, sp, #0x32, lsl #12  ; =0x32000
+1000854e8:     	add	x1, x1, #0x60
+1000854ec:     	mov	w2, #0x2000             ; =8192
+1000854f0:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+1000854f4:     	add	x0, sp, #0x4f, lsl #12  ; =0x4f000
+1000854f8:     	add	x0, x0, #0x900
+1000854fc:     	mov	x1, x21
+100085500:     	mov	w2, #0x2000             ; =8192
+100085504:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+100085508:     	add	x21, sp, #0x32, lsl #12 ; =0x32000
+10008550c:     	add	x21, x21, #0x60
+100085510:     	add	x8, sp, #0x32, lsl #12  ; =0x32000
+100085514:     	add	x8, x8, #0x60
+100085518:     	add	x0, sp, #0x15, lsl #12  ; =0x15000
+10008551c:     	add	x0, x0, #0xd80
+100085520:     	add	x1, x19, #0x2, lsl #12  ; =0x2000
+100085524:     	bl	0x10002aa54 <__ZN12hybrid_array4iter113_$LT$impl$u20$core..iter..traits..collect..FromIterator$LT$T$GT$$u20$for$u20$hybrid_array..Array$LT$T$C$U$GT$$GT$9from_iter17hbec7bbccc4901508E>
+100085528:     	ldp	q0, q1, [sp, #0x100]
+10008552c:     	stp	q0, q1, [x24, #0x40]
+100085530:     	add	x19, sp, #0x17, lsl #12 ; =0x17000
+100085534:     	add	x19, x19, #0xd80
+100085538:     	add	x8, sp, #0x17, lsl #12  ; =0x17000
+10008553c:     	add	x8, x8, #0xd80
+100085540:     	add	x0, sp, #0x18, lsl #12  ; =0x18000
+100085544:     	add	x0, x0, #0x7e0
+100085548:     	add	x1, sp, #0x32, lsl #12  ; =0x32000
+10008554c:     	add	x1, x1, #0x60
+100085550:     	bl	0x100059ec0 <__ZN64_$LT$P$u20$as$u20$ml_dsa_baseline..param..VerifyingKeyParams$GT$9concat_vk17h23304b075fefc766E>
+100085554:     	orr	x8, x21, #0x8
+100085558:     	strb	wzr, [x28, #0xd0]
+10008555c:     	add	x9, x21, #0xd0
+100085560:     	movi.2d	v0, #0000000000000000
+100085564:     	stp	q0, q0, [x28, #0xb0]
+100085568:     	stp	q0, q0, [x28, #0x90]
+10008556c:     	stp	q0, q0, [x28, #0x70]
+100085570:     	stp	q0, q0, [x28, #0x50]
+100085574:     	stp	q0, q0, [x28, #0x30]
+100085578:     	stp	q0, q0, [x28, #0x10]
+10008557c:     	str	q0, [x28]
+100085580:     	stp	x8, x9, [x24, #0x40]
+100085584:     	mov	w8, #0xa20              ; =2592
+100085588:     	stp	x19, x8, [x24, #0x50]
+10008558c:     	add	x19, sp, #0x18, lsl #12 ; =0x18000
+100085590:     	add	x19, x19, #0x7e0
+100085594:     	add	x0, sp, #0x18, lsl #12  ; =0x18000
+100085598:     	add	x0, x0, #0x7e0
+10008559c:     	bl	0x10006d538 <__ZN6keccak6Keccak12with_backend18aarch64_sha3_inner17h71f7f95dee27c96aE>
+1000855a0:     	ldp	q0, q1, [x28, #0xa0]
+1000855a4:     	stp	q0, q1, [x24, #0xe0]
+1000855a8:     	ldr	q0, [x28, #0xc0]
+1000855ac:     	str	q0, [x24, #0x100]
+1000855b0:     	ldr	x8, [x28, #0xd0]
+1000855b4:     	str	x8, [x24, #0x110]
+1000855b8:     	ldp	q0, q1, [x28, #0x60]
+1000855bc:     	stp	q0, q1, [x24, #0xa0]
+1000855c0:     	ldp	q0, q1, [x28, #0x80]
+1000855c4:     	stp	q0, q1, [x24, #0xc0]
+1000855c8:     	ldp	q0, q1, [x28, #0x20]
+1000855cc:     	stp	q0, q1, [x24, #0x60]
+1000855d0:     	ldp	q0, q1, [x28, #0x40]
+1000855d4:     	stp	q0, q1, [x24, #0x80]
+1000855d8:     	ldp	q0, q1, [x28]
+1000855dc:     	stp	q0, q1, [x24, #0x40]
+1000855e0:     	movi.2d	v0, #0000000000000000
+1000855e4:     	stp	q0, q0, [x22, #0x20]
+1000855e8:     	stp	q0, q0, [x22]
+1000855ec:     	ldr	w8, [x24, #0x40]
+1000855f0:     	tbz	w8, #0x0, 0x100085600 <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE+0x90c>
+1000855f4:     	orr	x8, x19, #0x8
+1000855f8:     	add	x9, x19, #0xd0
+1000855fc:     	b	0x1000856e8 <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE+0x9f4>
+100085600:     	ldrb	w8, [x24, #0x110]
+100085604:     	ldur	q0, [x24, #0xd8]
+100085608:     	ldur	q1, [x24, #0xe8]
+10008560c:     	ldur	q2, [x24, #0xf8]
+100085610:     	stp	q1, q2, [x28, #0xa0]
+100085614:     	ldr	x9, [x24, #0x108]
+100085618:     	str	x9, [x28, #0xc0]
+10008561c:     	ldur	q1, [x24, #0x98]
+100085620:     	ldur	q2, [x24, #0xa8]
+100085624:     	ldur	q3, [x24, #0xb8]
+100085628:     	stp	q2, q3, [x28, #0x60]
+10008562c:     	ldur	q2, [x24, #0xc8]
+100085630:     	stp	q2, q0, [x28, #0x80]
+100085634:     	ldur	q0, [x24, #0x58]
+100085638:     	ldur	q2, [x24, #0x68]
+10008563c:     	ldur	q3, [x24, #0x78]
+100085640:     	stp	q2, q3, [x28, #0x20]
+100085644:     	ldur	q2, [x24, #0x88]
+100085648:     	stp	q2, q1, [x28, #0x40]
+10008564c:     	ldur	q1, [x24, #0x48]
+100085650:     	stp	q1, q0, [x28]
+100085654:     	strb	w8, [x28, #0xc8]
+100085658:     	ubfiz	x9, x8, #3, #3
+10008565c:     	mov	w10, #0x1f              ; =31
+100085660:     	and	x8, x8, #0xf8
+100085664:     	ldr	x11, [x21, x8]
+100085668:     	lsl	x9, x10, x9
+10008566c:     	eor	x9, x11, x9
+100085670:     	str	x9, [x21, x8]
+100085674:     	ldr	x8, [x28, #0x80]
+100085678:     	eor	x8, x8, #0x8000000000000000
+10008567c:     	str	x8, [x28, #0x80]
+100085680:     	ldp	q1, q0, [x28, #0x80]
+100085684:     	str	q0, [x22, #0x2090]
+100085688:     	ldp	q0, q2, [x28, #0xa0]
+10008568c:     	str	q0, [x22, #0x20a0]
+100085690:     	str	q2, [x22, #0x20b0]
+100085694:     	ldp	q2, q0, [x28, #0x40]
+100085698:     	str	q0, [x22, #0x2050]
+10008569c:     	ldp	q0, q3, [x28, #0x60]
+1000856a0:     	str	q0, [x22, #0x2060]
+1000856a4:     	str	q3, [x22, #0x2070]
+1000856a8:     	ldp	q3, q0, [x28]
+1000856ac:     	str	q0, [x22, #0x2010]
+1000856b0:     	ldp	q0, q4, [x28, #0x20]
+1000856b4:     	str	q0, [x22, #0x2020]
+1000856b8:     	str	q4, [x22, #0x2030]
+1000856bc:     	str	q2, [x22, #0x2040]
+1000856c0:     	str	q3, [x22, #0x2000]
+1000856c4:     	ldr	x8, [x28, #0xc0]
+1000856c8:     	str	x8, [x22, #0x20c0]
+1000856cc:     	str	q1, [x22, #0x2080]
+1000856d0:     	add	x8, sp, #0x4d, lsl #12  ; =0x4d000
+1000856d4:     	add	x8, x8, #0x8e0
+1000856d8:     	add	x9, x8, #0xc8
+1000856dc:     	add	x10, sp, #0x4d, lsl #12 ; =0x4d000
+1000856e0:     	add	x10, x10, #0x8e0
+1000856e4:     	strb	wzr, [x10, #0xc8]
+1000856e8:     	stp	x8, x9, [x28]
+1000856ec:     	add	x8, sp, #0x4b, lsl #12  ; =0x4b000
+1000856f0:     	add	x8, x8, #0x8e0
+1000856f4:     	mov	w9, #0x40               ; =64
+1000856f8:     	stp	x8, x9, [x28, #0x10]
+1000856fc:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+100085700:     	add	x0, x0, #0x60
+100085704:     	bl	0x10006d998 <__ZN6keccak6Keccak12with_backend18aarch64_sha3_inner17hbd8d229ffbe6c032E>
+100085708:     	add	x27, sp, #0x4d, lsl #12 ; =0x4d000
+10008570c:     	add	x27, x27, #0x8e0
+100085710:     	ldp	q0, q1, [x22]
+100085714:     	stp	q0, q1, [x24]
+100085718:     	ldp	q0, q1, [x22, #0x20]
+10008571c:     	stp	q0, q1, [x24, #0x20]
+100085720:     	mov	w20, #0x1c00            ; =7168
+100085724:     	add	x22, sp, #0x4b, lsl #12 ; =0x4b000
+100085728:     	add	x22, x22, #0x8e0
+10008572c:     	add	x0, sp, #0x4b, lsl #12  ; =0x4b000
+100085730:     	add	x0, x0, #0x8e0
+100085734:     	add	x1, sp, #0xe, lsl #12   ; =0xe000
+100085738:     	add	x1, x1, #0x180
+10008573c:     	mov	w2, #0x1c00             ; =7168
+100085740:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+100085744:     	add	x23, sp, #0x4d, lsl #12 ; =0x4d000
+100085748:     	add	x23, x23, #0x8e0
+10008574c:     	add	x0, sp, #0x4d, lsl #12  ; =0x4d000
+100085750:     	add	x0, x0, #0x8e0
+100085754:     	add	x1, sp, #0xf, lsl #12   ; =0xf000
+100085758:     	add	x1, x1, #0xd80
+10008575c:     	mov	w2, #0x2000             ; =8192
+100085760:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+100085764:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+100085768:     	add	x0, x0, #0x60
+10008576c:     	add	x1, sp, #0x180
+100085770:     	mov	w2, #0xe000             ; =57344
+100085774:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+100085778:     	ldp	q0, q1, [sp, #0x100]
+10008577c:     	add	x25, sp, #0x5f, lsl #12 ; =0x5f000
+100085780:     	add	x25, x25, #0x900
+100085784:     	stp	q0, q1, [x25]
+100085788:     	add	x19, sp, #0x18, lsl #12 ; =0x18000
+10008578c:     	add	x19, x19, #0x7e0
+100085790:     	add	x8, x19, #0x17, lsl #12 ; =0x17000
+100085794:     	add	x21, x8, #0xc00
+100085798:     	add	x0, sp, #0x4b, lsl #12  ; =0x4b000
+10008579c:     	add	x0, x0, #0x8e0
+1000857a0:     	add	x1, x22, x20
+1000857a4:     	mov	x8, x21
+1000857a8:     	bl	0x1000299a8 <__ZN12hybrid_array4iter113_$LT$impl$u20$core..iter..traits..collect..FromIterator$LT$T$GT$$u20$for$u20$hybrid_array..Array$LT$T$C$U$GT$$GT$9from_iter17hb4c419b143bcabdeE>
+1000857ac:     	add	x8, x19, #0x4, lsl #12  ; =0x4000
+1000857b0:     	add	x0, sp, #0x4d, lsl #12  ; =0x4d000
+1000857b4:     	add	x0, x0, #0x8e0
+1000857b8:     	add	x1, x23, #0x2, lsl #12  ; =0x2000
+1000857bc:     	bl	0x100013918 <__ZN12hybrid_array4iter113_$LT$impl$u20$core..iter..traits..collect..FromIterator$LT$T$GT$$u20$for$u20$hybrid_array..Array$LT$T$C$U$GT$$GT$9from_iter17h524d72f16a7a3e8dE>
+1000857c0:     	add	x9, sp, #0x4f, lsl #12  ; =0x4f000
+1000857c4:     	add	x9, x9, #0x900
+1000857c8:     	add	x8, x19, #0x6, lsl #12  ; =0x6000
+1000857cc:     	add	x0, sp, #0x4f, lsl #12  ; =0x4f000
+1000857d0:     	add	x0, x0, #0x900
+1000857d4:     	add	x1, x9, #0x2, lsl #12   ; =0x2000
+1000857d8:     	bl	0x100013918 <__ZN12hybrid_array4iter113_$LT$impl$u20$core..iter..traits..collect..FromIterator$LT$T$GT$$u20$for$u20$hybrid_array..Array$LT$T$C$U$GT$$GT$9from_iter17h524d72f16a7a3e8dE>
+1000857dc:     	add	x23, x19, #0x16, lsl #12 ; =0x16000
+1000857e0:     	add	x1, sp, #0x4b, lsl #12  ; =0x4b000
+1000857e4:     	add	x1, x1, #0x8e0
+1000857e8:     	mov	x0, x23
+1000857ec:     	mov	w2, #0x1c00             ; =7168
+1000857f0:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+1000857f4:     	add	x0, sp, #0x18, lsl #12  ; =0x18000
+1000857f8:     	add	x0, x0, #0x7e0
+1000857fc:     	add	x1, sp, #0x4d, lsl #12  ; =0x4d000
+100085800:     	add	x1, x1, #0x8e0
+100085804:     	mov	w2, #0x2000             ; =8192
+100085808:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+10008580c:     	add	x22, x19, #0x2, lsl #12 ; =0x2000
+100085810:     	add	x1, sp, #0x4f, lsl #12  ; =0x4f000
+100085814:     	add	x1, x1, #0x900
+100085818:     	mov	x0, x22
+10008581c:     	mov	w2, #0x2000             ; =8192
+100085820:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+100085824:     	add	x8, x19, #0x19, lsl #12 ; =0x19000
+100085828:     	add	x20, x8, #0x840
+10008582c:     	ldp	q0, q1, [x25]
+100085830:     	stp	q0, q1, [x20]
+100085834:     	add	x8, x19, #0x19, lsl #12 ; =0x19000
+100085838:     	add	x8, x8, #0x860
+10008583c:     	ldp	q0, q1, [sp, #0x160]
+100085840:     	stp	q0, q1, [x8]
+100085844:     	add	x8, x19, #0x19, lsl #12 ; =0x19000
+100085848:     	add	x8, x8, #0x800
+10008584c:     	ldp	q0, q1, [x24]
+100085850:     	stp	q0, q1, [x8]
+100085854:     	ldp	q0, q1, [x24, #0x20]
+100085858:     	add	x24, x19, #0x8, lsl #12 ; =0x8000
+10008585c:     	stp	q0, q1, [x8, #0x20]
+100085860:     	add	x1, sp, #0x32, lsl #12  ; =0x32000
+100085864:     	add	x1, x1, #0x60
+100085868:     	mov	x0, x24
+10008586c:     	mov	w2, #0xe000             ; =57344
+100085870:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+100085874:     	stp	x24, x23, [x28]
+100085878:     	str	x21, [x28, #0x10]
+10008587c:     	add	x19, sp, #0x4b, lsl #12 ; =0x4b000
+100085880:     	add	x19, x19, #0x8e0
+100085884:     	add	x8, sp, #0x4b, lsl #12  ; =0x4b000
+100085888:     	add	x8, x8, #0x8e0
+10008588c:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+100085890:     	add	x0, x0, #0x60
+100085894:     	bl	0x100029058 <__ZN12hybrid_array4iter113_$LT$impl$u20$core..iter..traits..collect..FromIterator$LT$T$GT$$u20$for$u20$hybrid_array..Array$LT$T$C$U$GT$$GT$9from_iter17hb41558d3b1ff8f44E>
+100085898:     	add	x21, sp, #0x32, lsl #12 ; =0x32000
+10008589c:     	add	x21, x21, #0x60
+1000858a0:     	add	x8, sp, #0x32, lsl #12  ; =0x32000
+1000858a4:     	add	x8, x8, #0x60
+1000858a8:     	add	x0, sp, #0x4b, lsl #12  ; =0x4b000
+1000858ac:     	add	x0, x0, #0x8e0
+1000858b0:     	add	x1, x19, #0x2, lsl #12  ; =0x2000
+1000858b4:     	bl	0x1000174e0 <__ZN12hybrid_array4iter113_$LT$impl$u20$core..iter..traits..collect..FromIterator$LT$T$GT$$u20$for$u20$hybrid_array..Array$LT$T$C$U$GT$$GT$9from_iter17h5f8b087918db1f1cE>
+1000858b8:     	add	x8, x21, #0x2, lsl #12  ; =0x2000
+1000858bc:     	stp	x21, x8, [x26]
+1000858c0:     	add	x8, sp, #0x18, lsl #12  ; =0x18000
+1000858c4:     	add	x8, x8, #0x7e0
+1000858c8:     	stp	x8, x22, [x26, #0x10]
+1000858cc:     	ldr	q0, [sp, #0x10]
+1000858d0:     	str	q0, [x26, #0x20]
+1000858d4:     	add	x8, sp, #0x4d, lsl #12  ; =0x4d000
+1000858d8:     	add	x8, x8, #0x8e0
+1000858dc:     	add	x0, sp, #0x4f, lsl #12  ; =0x4f000
+1000858e0:     	add	x0, x0, #0x900
+1000858e4:     	bl	0x100015660 <__ZN12hybrid_array4iter113_$LT$impl$u20$core..iter..traits..collect..FromIterator$LT$T$GT$$u20$for$u20$hybrid_array..Array$LT$T$C$U$GT$$GT$9from_iter17h5a6c1b93a529c78cE>
+1000858e8:     	add	x8, sp, #0x32, lsl #12  ; =0x32000
+1000858ec:     	add	x8, x8, #0x60
+1000858f0:     	add	x0, sp, #0x4d, lsl #12  ; =0x4d000
+1000858f4:     	add	x0, x0, #0x8e0
+1000858f8:     	bl	0x100055ee8 <__ZN135_$LT$module_lattice..algebra..Vector$LT$ml_dsa_baseline..algebra..BaseField$C$K$GT$$u20$as$u20$ml_dsa_baseline..algebra..AlgebraExt$GT$11power2round17hc07aea0270d25097E>
+1000858fc:     	add	x21, sp, #0x32, lsl #12 ; =0x32000
+100085900:     	add	x21, x21, #0x60
+100085904:     	add	x0, sp, #0x4f, lsl #12  ; =0x4f000
+100085908:     	add	x0, x0, #0x900
+10008590c:     	add	x1, sp, #0x32, lsl #12  ; =0x32000
+100085910:     	add	x1, x1, #0x60
+100085914:     	mov	w2, #0x2000             ; =8192
+100085918:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+10008591c:     	mov	x22, #0x0               ; =0
+100085920:     	ldp	q0, q1, [x20]
+100085924:     	str	q0, [x27, #0x2000]
+100085928:     	mov	w26, #0x8400            ; =33792
+10008592c:     	mov	w28, #0x8800            ; =34816
+100085930:     	mov	w19, #0x8c00            ; =35840
+100085934:     	str	q1, [x27, #0x2010]
+100085938:     	mov	w27, #0x9400            ; =37888
+10008593c:     	mov	w25, #0x9800            ; =38912
+100085940:     	mov	w20, #0x1c00            ; =7168
+100085944:     	add	x23, sp, #0x51, lsl #12 ; =0x51000
+100085948:     	add	x23, x23, #0x900
+10008594c:     	add	x8, sp, #0x18, lsl #12  ; =0x18000
+100085950:     	add	x8, x8, #0x7e0
+100085954:     	add	x24, x8, x22
+100085958:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+10008595c:     	add	x0, x0, #0x60
+100085960:     	add	x1, x24, #0x8, lsl #12  ; =0x8000
+100085964:     	mov	w2, #0x400              ; =1024
+100085968:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+10008596c:     	add	x0, x21, #0x400
+100085970:     	add	x1, x24, x26
+100085974:     	mov	w2, #0x400              ; =1024
+100085978:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+10008597c:     	add	x0, x21, #0x800
+100085980:     	add	x1, x24, x28
+100085984:     	mov	w2, #0x400              ; =1024
+100085988:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+10008598c:     	add	x0, x21, #0xc00
+100085990:     	add	x1, x24, x19
+100085994:     	mov	w2, #0x400              ; =1024
+100085998:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+10008599c:     	add	x0, x21, #0x1, lsl #12  ; =0x1000
+1000859a0:     	add	x1, x24, #0x9, lsl #12  ; =0x9000
+1000859a4:     	mov	w2, #0x400              ; =1024
+1000859a8:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+1000859ac:     	mov	w8, #0x1400             ; =5120
+1000859b0:     	add	x0, x21, x8
+1000859b4:     	add	x1, x24, x27
+1000859b8:     	mov	w2, #0x400              ; =1024
+1000859bc:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+1000859c0:     	mov	w8, #0x1800             ; =6144
+1000859c4:     	add	x0, x21, x8
+1000859c8:     	add	x1, x24, x25
+1000859cc:     	mov	w2, #0x400              ; =1024
+1000859d0:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+1000859d4:     	add	x0, sp, #0x5f, lsl #12  ; =0x5f000
+1000859d8:     	add	x0, x0, #0x900
+1000859dc:     	add	x1, sp, #0x32, lsl #12  ; =0x32000
+1000859e0:     	add	x1, x1, #0x60
+1000859e4:     	mov	w2, #0x1c00             ; =7168
+1000859e8:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+1000859ec:     	add	x0, x23, x22
+1000859f0:     	add	x1, sp, #0x5f, lsl #12  ; =0x5f000
+1000859f4:     	add	x1, x1, #0x900
+1000859f8:     	mov	w2, #0x1c00             ; =7168
+1000859fc:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+100085a00:     	add	x22, x22, x20
+100085a04:     	cmp	x22, #0xe, lsl #12      ; =0xe000
+100085a08:     	b.ne	0x10008594c <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE+0xc58>
+100085a0c:     	add	x8, sp, #0x32, lsl #12  ; =0x32000
+100085a10:     	strb	wzr, [x8, #0x60]!
+100085a14:     	add	x8, sp, #0x5f, lsl #12  ; =0x5f000
+100085a18:     	add	x8, x8, #0x900
+100085a1c:     	add	x0, sp, #0x4f, lsl #12  ; =0x4f000
+100085a20:     	add	x0, x0, #0x8e0
+100085a24:     	add	x1, sp, #0x4f, lsl #12  ; =0x4f000
+100085a28:     	add	x1, x1, #0x900
+100085a2c:     	add	x2, sp, #0x51, lsl #12  ; =0x51000
+100085a30:     	add	x2, x2, #0x900
+100085a34:     	add	x3, sp, #0x32, lsl #12  ; =0x32000
+100085a38:     	add	x3, x3, #0x60
+100085a3c:     	bl	0x1000725b4 <__ZN15ml_dsa_baseline9verifying21VerifyingKey$LT$P$GT$3new17h6c09d31fbaa66fc9E>
+100085a40:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+100085a44:     	add	x0, x0, #0x60
+100085a48:     	add	x1, sp, #0x18, lsl #12  ; =0x18000
+100085a4c:     	add	x1, x1, #0x7e0
+100085a50:     	mov	w2, #0x9880             ; =39040
+100085a54:     	movk	w2, #0x1, lsl #16
+100085a58:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+100085a5c:     	bl	0x1000a1ffc <__RNvCshXwFllX56pT_7___rustc35___rust_no_alloc_shim_is_unstable_v2>
+100085a60:     	mov	w0, #0x9880             ; =39040
+100085a64:     	movk	w0, #0x1, lsl #16
+100085a68:     	mov	w1, #0x4                ; =4
+100085a6c:     	bl	0x1000a1fe4 <__RNvCshXwFllX56pT_7___rustc12___rust_alloc>
+100085a70:     	cbz	x0, 0x100085b04 <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE+0xe10>
+100085a74:     	mov	x21, x0
+100085a78:     	add	x1, sp, #0x32, lsl #12  ; =0x32000
+100085a7c:     	add	x1, x1, #0x60
+100085a80:     	mov	w2, #0x9880             ; =39040
+100085a84:     	movk	w2, #0x1, lsl #16
+100085a88:     	bl	0x1000f4ba4 <dyld_stub_binder+0x1000f4ba4>
+100085a8c:     	bl	0x1000a1ffc <__RNvCshXwFllX56pT_7___rustc35___rust_no_alloc_shim_is_unstable_v2>
+100085a90:     	mov	w0, #0x20               ; =32
+100085a94:     	mov	w1, #0x1                ; =1
+100085a98:     	bl	0x1000a1fe4 <__RNvCshXwFllX56pT_7___rustc12___rust_alloc>
+100085a9c:     	cbz	x0, 0x100085b18 <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE+0xe24>
+100085aa0:     	ldp	x10, x8, [sp]
+100085aa4:     	ldp	q0, q1, [x10]
+100085aa8:     	stp	q0, q1, [x0]
+100085aac:     	add	x9, sp, #0x5f, lsl #12  ; =0x5f000
+100085ab0:     	add	x9, x9, #0x900
+100085ab4:     	ldp	q0, q1, [x9]
+100085ab8:     	stp	q0, q1, [x8, #0x10]
+100085abc:     	ldr	q0, [x9, #0x20]
+100085ac0:     	str	q0, [x8, #0x30]
+100085ac4:     	stp	x21, x0, [x8]
+100085ac8:     	add	sp, sp, #0x61, lsl #12  ; =0x61000
+100085acc:     	add	sp, sp, #0x510
+100085ad0:     	ldp	x29, x30, [sp, #0x50]
+100085ad4:     	ldp	x20, x19, [sp, #0x40]
+100085ad8:     	ldp	x22, x21, [sp, #0x30]
+100085adc:     	ldp	x24, x23, [sp, #0x20]
+100085ae0:     	ldp	x26, x25, [sp, #0x10]
+100085ae4:     	ldp	x28, x27, [sp], #0x60
+100085ae8:     	ret
+100085aec:     	adrp	x0, 0x1000f5000 <dyld_stub_binder+0x1000f5000>
+100085af0:     	add	x0, x0, #0x580
+100085af4:     	adrp	x2, 0x100120000 <dyld_stub_binder+0x100120000>
+100085af8:     	add	x2, x2, #0x600
+100085afc:     	mov	w1, #0x28               ; =40
+100085b00:     	bl	0x1000f4988 <__ZN4core9panicking5panic17h30f5ec71e3af4326E>
+100085b04:     	mov	w0, #0x4                ; =4
+100085b08:     	mov	w1, #0x9880             ; =39040
+100085b0c:     	movk	w1, #0x1, lsl #16
+100085b10:     	bl	0x1000f43d4 <__ZN5alloc5alloc18handle_alloc_error17h77990a064974ed31E>
+100085b14:     	b	0x100085b24 <__ZN15ml_dsa_baseline7signing19SigningKey$LT$P$GT$9from_seed17h2ff78513c89e706fE+0xe30>
+100085b18:     	mov	w0, #0x1                ; =1
+100085b1c:     	mov	w1, #0x20               ; =32
+100085b20:     	bl	0x1000f43d4 <__ZN5alloc5alloc18handle_alloc_error17h77990a064974ed31E>
+100085b24:     	brk	#0x1
+100085b28:     	mov	x19, x0
+100085b2c:     	add	x0, sp, #0x18, lsl #12  ; =0x18000
+100085b30:     	add	x0, x0, #0x7e0
+100085b34:     	bl	0x100091e08 <__ZN4core3ptr97drop_in_place$LT$ml_dsa_baseline..signing..ExpandedSigningKey$LT$ml_dsa_baseline..MlDsa87$GT$$GT$17hdca0d0963e0cc6dbE>
+100085b38:     	mov	x0, x19
+100085b3c:     	bl	0x1000f4a48 <dyld_stub_binder+0x1000f4a48>
+100085b40:     	mov	x19, x0
+100085b44:     	mov	x0, x21
+100085b48:     	bl	0x100090ce4 <__ZN4core3ptr140drop_in_place$LT$module_lattice..maybe_box..MaybeBox$LT$ml_dsa_baseline..signing..ExpandedSigningKey$LT$ml_dsa_baseline..MlDsa87$GT$$GT$$GT$17hd1c5aaf42843f87dE>
+100085b4c:     	add	x8, sp, #0x5f, lsl #12  ; =0x5f000
+100085b50:     	add	x8, x8, #0x900
+100085b54:     	ldp	x0, x1, [x8]
+100085b58:     	bl	0x1000913b0 <__ZN4core3ptr93drop_in_place$LT$ml_dsa_baseline..verifying..VerifyingKey$LT$ml_dsa_baseline..MlDsa87$GT$$GT$17h9ad427a4bd2a3454E>
+100085b5c:     	mov	x0, x19
+100085b60:     	bl	0x1000f4a48 <dyld_stub_binder+0x1000f4a48>
+100085b64:     	mov	x19, x0
+100085b68:     	add	x0, sp, #0x32, lsl #12  ; =0x32000
+100085b6c:     	add	x0, x0, #0x60
+100085b70:     	bl	0x100091e08 <__ZN4core3ptr97drop_in_place$LT$ml_dsa_baseline..signing..ExpandedSigningKey$LT$ml_dsa_baseline..MlDsa87$GT$$GT$17hdca0d0963e0cc6dbE>
+100085b74:     	add	x8, sp, #0x5f, lsl #12  ; =0x5f000
+100085b78:     	add	x8, x8, #0x900
+100085b7c:     	ldp	x0, x1, [x8]
+100085b80:     	bl	0x1000913b0 <__ZN4core3ptr93drop_in_place$LT$ml_dsa_baseline..verifying..VerifyingKey$LT$ml_dsa_baseline..MlDsa87$GT$$GT$17h9ad427a4bd2a3454E>
+100085b84:     	mov	x0, x19
+100085b88:     	bl	0x1000f4a48 <dyld_stub_binder+0x1000f4a48>

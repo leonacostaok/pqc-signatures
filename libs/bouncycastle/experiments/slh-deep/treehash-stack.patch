@@ -1,0 +1,106 @@
+diff --git a/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/Fors.java b/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/Fors.java
+index e19cf31..5a00597 100644
+--- a/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/Fors.java
++++ b/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/Fors.java
+@@ -1,7 +1,6 @@
+ package org.bouncycastle.crypto.signers.slhdsa;
+ 
+ import java.math.BigInteger;
+-import java.util.LinkedList;
+ 
+ import org.bouncycastle.util.Arrays;
+ 
+@@ -23,7 +22,9 @@ byte[] treehash(byte[] skSeed, int s, int z, byte[] pkSeed, ADRS adrsParam)
+             return null;
+         }
+ 
+-        LinkedList<NodeEntry> stack = new LinkedList<NodeEntry>();
++        byte[][] nodes = new byte[z + 1][];
++        int[] heights = new int[z + 1];
++        int size = 0;
+         ADRS adrs = new ADRS(adrsParam);
+ 
+         for (int idx = 0; idx < (1 << z); idx++)
+@@ -45,22 +46,24 @@ byte[] treehash(byte[] skSeed, int s, int z, byte[] pkSeed, ADRS adrsParam)
+             int adrsTreeIndex = s + idx;
+ 
+             // while ( Top node on Stack has same height as node )
+-            while (!stack.isEmpty() && ((NodeEntry)stack.get(0)).nodeHeight == adrsTreeHeight)
++            while (size > 0 && heights[size - 1] == adrsTreeHeight)
+             {
+                 adrsTreeIndex = (adrsTreeIndex - 1) / 2;
+                 adrs.setTreeIndex(adrsTreeIndex);
+ 
+-                NodeEntry current = ((NodeEntry)stack.remove(0));
+-                node = engine.H(pkSeed, adrs, current.nodeValue, node);
++                byte[] left = nodes[--size];
++                node = engine.H(pkSeed, adrs, left, node);
++                nodes[size] = null;
+ 
+                 // topmost node is now one layer higher
+                 adrs.setTreeHeight(++adrsTreeHeight);
+             }
+ 
+-            stack.add(0, new NodeEntry(node, adrsTreeHeight));
++            nodes[size] = node;
++            heights[size++] = adrsTreeHeight;
+         }
+ 
+-        return ((NodeEntry)stack.get(0)).nodeValue;
++        return nodes[0];
+     }
+ 
+     public SIG_FORS[] sign(byte[] md, byte[] skSeed, byte[] pkSeed, ADRS paramAdrs)
+diff --git a/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/HT.java b/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/HT.java
+index d2db257..51f3f94 100644
+--- a/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/HT.java
++++ b/core/src/main/java/org/bouncycastle/crypto/signers/slhdsa/HT.java
+@@ -1,7 +1,5 @@
+ package org.bouncycastle.crypto.signers.slhdsa;
+ 
+-import java.util.LinkedList;
+-
+ import org.bouncycastle.util.Arrays;
+ 
+ class HT
+@@ -153,7 +151,9 @@ byte[] treehash(byte[] skSeed, int s, int z, byte[] pkSeed, ADRS adrsParam)
+             return null;
+         }
+ 
+-        LinkedList<NodeEntry> stack = new LinkedList<NodeEntry>();
++        byte[][] nodes = new byte[z + 1][];
++        int[] heights = new int[z + 1];
++        int size = 0;
+         ADRS adrs = new ADRS(adrsParam);
+ 
+         for (int idx = 0; idx < (1 << z); idx++)
+@@ -170,22 +170,24 @@ byte[] treehash(byte[] skSeed, int s, int z, byte[] pkSeed, ADRS adrsParam)
+             int adrsTreeIndex = s + idx;
+ 
+             // while ( Top node on Stack has same height as node )
+-            while (!stack.isEmpty() && ((NodeEntry)stack.get(0)).nodeHeight == adrsTreeHeight)
++            while (size > 0 && heights[size - 1] == adrsTreeHeight)
+             {
+                 adrsTreeIndex = (adrsTreeIndex - 1) / 2;
+                 adrs.setTreeIndex(adrsTreeIndex);
+ 
+-                NodeEntry current = ((NodeEntry)stack.remove(0));
+-                node = engine.H(pkSeed, adrs, current.nodeValue, node);
++                byte[] left = nodes[--size];
++                node = engine.H(pkSeed, adrs, left, node);
++                nodes[size] = null;
+ 
+                 // topmost node is now one layer higher
+                 adrs.setTreeHeight(++adrsTreeHeight);
+             }
+ 
+-            stack.add(0, new NodeEntry(node, adrsTreeHeight));
++            nodes[size] = node;
++            heights[size++] = adrsTreeHeight;
+         }
+ 
+-        return ((NodeEntry)stack.get(0)).nodeValue;
++        return nodes[0];
+     }
+ 
+     //    # Input: Message M, signature SIG_HT, public seed PK.seed, tree index idx_tree,

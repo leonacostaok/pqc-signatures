@@ -1,0 +1,849 @@
+{
+  "schema": "circl-published-memory-execution-v1",
+  "started_at": "2026-10-12T06:00:48.695247+00:00",
+  "completed_at": "2026-10-12T06:01:17.922928+00:00",
+  "runs": [
+    {
+      "index": 0,
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-128f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:48.695754+00:00",
+      "completed_at": "2026-10-12T06:00:49.128830+00:00",
+      "exit_code": 0,
+      "raw": "000.json",
+      "sha256": "7149ba024653a9665dbbeefa2901a94f274069424db2f2f8317b8d72fe20a1fb"
+    },
+    {
+      "index": 1,
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-128f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:49.130451+00:00",
+      "completed_at": "2026-10-12T06:00:49.553963+00:00",
+      "exit_code": 0,
+      "raw": "001.json",
+      "sha256": "11382b2604ff210969e03fdbabe118361e5d408cc2137debec174e41a80149ef"
+    },
+    {
+      "index": 2,
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-128s",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-128s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:49.555514+00:00",
+      "completed_at": "2026-10-12T06:00:50.285923+00:00",
+      "exit_code": 0,
+      "raw": "002.json",
+      "sha256": "e78897c6ee8fbd8fc36efb70e0df16cf7a0668c034dec78dcd80847aee013836"
+    },
+    {
+      "index": 3,
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-128s",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-128s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:50.287637+00:00",
+      "completed_at": "2026-10-12T06:00:51.293358+00:00",
+      "exit_code": 0,
+      "raw": "003.json",
+      "sha256": "1ed22a5f59b6da1dd596f91353d8626f8aff4338cdb1b28719b1f682f0e0e0ca"
+    },
+    {
+      "index": 4,
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-192f",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-192f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:51.294709+00:00",
+      "completed_at": "2026-10-12T06:00:51.391269+00:00",
+      "exit_code": 0,
+      "raw": "004.json",
+      "sha256": "3d2b52c8bfc51635992145e395efd083b772263310f869c42da37ac3dcdcc8b7"
+    },
+    {
+      "index": 5,
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-192f",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-192f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:51.393661+00:00",
+      "completed_at": "2026-10-12T06:00:51.469379+00:00",
+      "exit_code": 0,
+      "raw": "005.json",
+      "sha256": "7af7a8e75d592ff879edd81fc1bf7c2a1caeec5ddb407e52e0da9184ecebd5fa"
+    },
+    {
+      "index": 6,
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-192s",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-192s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:51.471199+00:00",
+      "completed_at": "2026-10-12T06:00:52.900182+00:00",
+      "exit_code": 0,
+      "raw": "006.json",
+      "sha256": "4f5ef8ae8f16a3c3362e192c4266a71f6414d8480ca836d9c643f6685258427a"
+    },
+    {
+      "index": 7,
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-192s",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-192s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:52.901863+00:00",
+      "completed_at": "2026-10-12T06:00:54.841558+00:00",
+      "exit_code": 0,
+      "raw": "007.json",
+      "sha256": "3358894f305acad0ea17025813a28b648a0e41e1563b93f889663199a7d46f61"
+    },
+    {
+      "index": 8,
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-256f",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-256f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:54.843905+00:00",
+      "completed_at": "2026-10-12T06:00:55.027683+00:00",
+      "exit_code": 0,
+      "raw": "008.json",
+      "sha256": "e247b7fbdf3db4951b6dbdfb6ac7681ac25913f623f0c972f7d11a06024eaa00"
+    },
+    {
+      "index": 9,
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-256f",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-256f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:55.030058+00:00",
+      "completed_at": "2026-10-12T06:00:55.163185+00:00",
+      "exit_code": 0,
+      "raw": "009.json",
+      "sha256": "35d5b218c49976b4f69bfceb88f4ed5d1973db400cb414dea7e56c7264899a73"
+    },
+    {
+      "index": 10,
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-256s",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-256s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:55.165505+00:00",
+      "completed_at": "2026-10-12T06:00:56.424463+00:00",
+      "exit_code": 0,
+      "raw": "010.json",
+      "sha256": "6b77996745570f66dda31e77eb346b384c5feb43460fe6800572e52ab13aef8c"
+    },
+    {
+      "index": 11,
+      "round": 0,
+      "parameter": "SLH-DSA-SHA2-256s",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-256s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:56.426347+00:00",
+      "completed_at": "2026-10-12T06:00:58.149767+00:00",
+      "exit_code": 0,
+      "raw": "011.json",
+      "sha256": "10a1ccdf0a38cce2625d4806d8240d35a6037f723d9fab314b4685e51c95b67a"
+    },
+    {
+      "index": 12,
+      "round": 0,
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHAKE-128f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:58.152633+00:00",
+      "completed_at": "2026-10-12T06:00:58.416656+00:00",
+      "exit_code": 0,
+      "raw": "012.json",
+      "sha256": "dd75e3f3a24554852ce01c1d948d6dc2ec52c633a749faf585cc6ddac6086924"
+    },
+    {
+      "index": 13,
+      "round": 0,
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHAKE-128f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:58.418282+00:00",
+      "completed_at": "2026-10-12T06:00:58.680690+00:00",
+      "exit_code": 0,
+      "raw": "013.json",
+      "sha256": "dd75e3f3a24554852ce01c1d948d6dc2ec52c633a749faf585cc6ddac6086924"
+    },
+    {
+      "index": 14,
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-128f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:58.682564+00:00",
+      "completed_at": "2026-10-12T06:00:58.728336+00:00",
+      "exit_code": 0,
+      "raw": "014.json",
+      "sha256": "473365ad9d07123c8609a2c069ad387a451dc5f18efe8a48f59eb3a3113cb6cc"
+    },
+    {
+      "index": 15,
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-128f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:58.729979+00:00",
+      "completed_at": "2026-10-12T06:00:58.786033+00:00",
+      "exit_code": 0,
+      "raw": "015.json",
+      "sha256": "7149ba024653a9665dbbeefa2901a94f274069424db2f2f8317b8d72fe20a1fb"
+    },
+    {
+      "index": 16,
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-128s",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-128s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:58.787764+00:00",
+      "completed_at": "2026-10-12T06:00:59.806153+00:00",
+      "exit_code": 0,
+      "raw": "016.json",
+      "sha256": "1ed22a5f59b6da1dd596f91353d8626f8aff4338cdb1b28719b1f682f0e0e0ca"
+    },
+    {
+      "index": 17,
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-128s",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-128s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:00:59.807807+00:00",
+      "completed_at": "2026-10-12T06:01:00.565741+00:00",
+      "exit_code": 0,
+      "raw": "017.json",
+      "sha256": "e78897c6ee8fbd8fc36efb70e0df16cf7a0668c034dec78dcd80847aee013836"
+    },
+    {
+      "index": 18,
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-192f",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-192f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:00.567445+00:00",
+      "completed_at": "2026-10-12T06:01:00.640638+00:00",
+      "exit_code": 0,
+      "raw": "018.json",
+      "sha256": "d89e6bcdedff400cfb7cd57d15fc8072f7d0fb073ee43f4c8212b5a8c0ea9fff"
+    },
+    {
+      "index": 19,
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-192f",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-192f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:00.642625+00:00",
+      "completed_at": "2026-10-12T06:01:00.738638+00:00",
+      "exit_code": 0,
+      "raw": "019.json",
+      "sha256": "3d2b52c8bfc51635992145e395efd083b772263310f869c42da37ac3dcdcc8b7"
+    },
+    {
+      "index": 20,
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-192s",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-192s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:00.740592+00:00",
+      "completed_at": "2026-10-12T06:01:02.687886+00:00",
+      "exit_code": 0,
+      "raw": "020.json",
+      "sha256": "3358894f305acad0ea17025813a28b648a0e41e1563b93f889663199a7d46f61"
+    },
+    {
+      "index": 21,
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-192s",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-192s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:02.689693+00:00",
+      "completed_at": "2026-10-12T06:01:04.114420+00:00",
+      "exit_code": 0,
+      "raw": "021.json",
+      "sha256": "2d724e2737f38e3a1592975f465e71d57234c2a39733303babd0527b9d012e86"
+    },
+    {
+      "index": 22,
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-256f",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-256f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:04.116525+00:00",
+      "completed_at": "2026-10-12T06:01:04.251807+00:00",
+      "exit_code": 0,
+      "raw": "022.json",
+      "sha256": "35d5b218c49976b4f69bfceb88f4ed5d1973db400cb414dea7e56c7264899a73"
+    },
+    {
+      "index": 23,
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-256f",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-256f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:04.253848+00:00",
+      "completed_at": "2026-10-12T06:01:04.435229+00:00",
+      "exit_code": 0,
+      "raw": "023.json",
+      "sha256": "e247b7fbdf3db4951b6dbdfb6ac7681ac25913f623f0c972f7d11a06024eaa00"
+    },
+    {
+      "index": 24,
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-256s",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-256s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:04.437310+00:00",
+      "completed_at": "2026-10-12T06:01:06.172627+00:00",
+      "exit_code": 0,
+      "raw": "024.json",
+      "sha256": "10a1ccdf0a38cce2625d4806d8240d35a6037f723d9fab314b4685e51c95b67a"
+    },
+    {
+      "index": 25,
+      "round": 1,
+      "parameter": "SLH-DSA-SHA2-256s",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-256s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:06.174567+00:00",
+      "completed_at": "2026-10-12T06:01:07.436313+00:00",
+      "exit_code": 0,
+      "raw": "025.json",
+      "sha256": "b36889aa8d7d9fa9cfb8bc0c080664c6dd9f471f54aefcb1ac550ac395d3f5db"
+    },
+    {
+      "index": 26,
+      "round": 1,
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHAKE-128f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:07.438464+00:00",
+      "completed_at": "2026-10-12T06:01:07.722927+00:00",
+      "exit_code": 0,
+      "raw": "026.json",
+      "sha256": "dd75e3f3a24554852ce01c1d948d6dc2ec52c633a749faf585cc6ddac6086924"
+    },
+    {
+      "index": 27,
+      "round": 1,
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHAKE-128f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:07.724886+00:00",
+      "completed_at": "2026-10-12T06:01:08.064224+00:00",
+      "exit_code": 0,
+      "raw": "027.json",
+      "sha256": "dd75e3f3a24554852ce01c1d948d6dc2ec52c633a749faf585cc6ddac6086924"
+    },
+    {
+      "index": 28,
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-128f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:08.098661+00:00",
+      "completed_at": "2026-10-12T06:01:08.279929+00:00",
+      "exit_code": 0,
+      "raw": "028.json",
+      "sha256": "7149ba024653a9665dbbeefa2901a94f274069424db2f2f8317b8d72fe20a1fb"
+    },
+    {
+      "index": 29,
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-128f",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-128f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:08.285337+00:00",
+      "completed_at": "2026-10-12T06:01:08.362261+00:00",
+      "exit_code": 0,
+      "raw": "029.json",
+      "sha256": "308de132625ed87d51481c3e746ef12fe7aa69ade5a95c6969be0d209478d9dc"
+    },
+    {
+      "index": 30,
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-128s",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-128s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:08.364212+00:00",
+      "completed_at": "2026-10-12T06:01:09.113359+00:00",
+      "exit_code": 0,
+      "raw": "030.json",
+      "sha256": "e78897c6ee8fbd8fc36efb70e0df16cf7a0668c034dec78dcd80847aee013836"
+    },
+    {
+      "index": 31,
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-128s",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-128s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:09.115174+00:00",
+      "completed_at": "2026-10-12T06:01:10.093687+00:00",
+      "exit_code": 0,
+      "raw": "031.json",
+      "sha256": "1ed22a5f59b6da1dd596f91353d8626f8aff4338cdb1b28719b1f682f0e0e0ca"
+    },
+    {
+      "index": 32,
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-192f",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-192f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:10.095562+00:00",
+      "completed_at": "2026-10-12T06:01:10.191366+00:00",
+      "exit_code": 0,
+      "raw": "032.json",
+      "sha256": "5134e5423a69f0d09a56463c44f0b26bdb3594cec7b3b9382fb949fbcb3dcbae"
+    },
+    {
+      "index": 33,
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-192f",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-192f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:10.193535+00:00",
+      "completed_at": "2026-10-12T06:01:10.268493+00:00",
+      "exit_code": 0,
+      "raw": "033.json",
+      "sha256": "7af7a8e75d592ff879edd81fc1bf7c2a1caeec5ddb407e52e0da9184ecebd5fa"
+    },
+    {
+      "index": 34,
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-192s",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-192s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:10.270815+00:00",
+      "completed_at": "2026-10-12T06:01:11.727377+00:00",
+      "exit_code": 0,
+      "raw": "034.json",
+      "sha256": "4f5ef8ae8f16a3c3362e192c4266a71f6414d8480ca836d9c643f6685258427a"
+    },
+    {
+      "index": 35,
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-192s",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-192s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:11.729388+00:00",
+      "completed_at": "2026-10-12T06:01:13.698613+00:00",
+      "exit_code": 0,
+      "raw": "035.json",
+      "sha256": "3358894f305acad0ea17025813a28b648a0e41e1563b93f889663199a7d46f61"
+    },
+    {
+      "index": 36,
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-256f",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-256f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:13.700577+00:00",
+      "completed_at": "2026-10-12T06:01:13.885943+00:00",
+      "exit_code": 0,
+      "raw": "036.json",
+      "sha256": "e247b7fbdf3db4951b6dbdfb6ac7681ac25913f623f0c972f7d11a06024eaa00"
+    },
+    {
+      "index": 37,
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-256f",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-256f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:13.888269+00:00",
+      "completed_at": "2026-10-12T06:01:14.020128+00:00",
+      "exit_code": 0,
+      "raw": "037.json",
+      "sha256": "0aa84075cf634b302e561f134f3f6a890f6fd48ec5df997fee30dfc0714483d7"
+    },
+    {
+      "index": 38,
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-256s",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-256s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:14.022384+00:00",
+      "completed_at": "2026-10-12T06:01:15.282836+00:00",
+      "exit_code": 0,
+      "raw": "038.json",
+      "sha256": "b36889aa8d7d9fa9cfb8bc0c080664c6dd9f471f54aefcb1ac550ac395d3f5db"
+    },
+    {
+      "index": 39,
+      "round": 2,
+      "parameter": "SLH-DSA-SHA2-256s",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHA2-256s",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:15.285125+00:00",
+      "completed_at": "2026-10-12T06:01:17.080194+00:00",
+      "exit_code": 0,
+      "raw": "039.json",
+      "sha256": "10a1ccdf0a38cce2625d4806d8240d35a6037f723d9fab314b4685e51c95b67a"
+    },
+    {
+      "index": 40,
+      "round": 2,
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "variant": "baseline",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/baseline/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHAKE-128f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:17.082362+00:00",
+      "completed_at": "2026-10-12T06:01:17.351389+00:00",
+      "exit_code": 0,
+      "raw": "040.json",
+      "sha256": "dd75e3f3a24554852ce01c1d948d6dc2ec52c633a749faf585cc6ddac6086924"
+    },
+    {
+      "index": 41,
+      "round": 2,
+      "parameter": "SLH-DSA-SHAKE-128f",
+      "variant": "candidate",
+      "argv": [
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/candidate/memoryaudit",
+        "-corpus",
+        "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/published-memory-audit/libs/circl/build/published-memory/corpus.json",
+        "-param",
+        "SLH-DSA-SHAKE-128f",
+        "-warmup-cycles",
+        "1"
+      ],
+      "started_at": "2026-10-12T06:01:17.353312+00:00",
+      "completed_at": "2026-10-12T06:01:17.619439+00:00",
+      "exit_code": 0,
+      "raw": "041.json",
+      "sha256": "dd75e3f3a24554852ce01c1d948d6dc2ec52c633a749faf585cc6ddac6086924"
+    }
+  ],
+  "all_outputs_match": true,
+  "manifest_sha256": "a60cdeb04f7f5a9e3a24964fd490ced0d2794ac59907b23e70c0cabcadf868fe"
+}

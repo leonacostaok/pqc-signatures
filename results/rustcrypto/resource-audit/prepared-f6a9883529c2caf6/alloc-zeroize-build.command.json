@@ -1,0 +1,16 @@
+{
+  "command": [
+    "cargo",
+    "rustc",
+    "--offline",
+    "--locked",
+    "--release",
+    "--no-default-features",
+    "--features",
+    "allocation,zeroization",
+    "--",
+    "--emit=asm,link"
+  ],
+  "cwd": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-pr-resources/libs/rustcrypto/build/resource-audit/prepared-f6a9883529c2caf6",
+  "started_at": "2026-10-12T06:02:47.744651+00:00"
+}

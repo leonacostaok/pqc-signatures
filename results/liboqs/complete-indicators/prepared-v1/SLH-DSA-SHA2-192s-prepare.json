@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/baseline",
+    "prepare",
+    "SLH_DSA_PURE_SHA2_192S",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s.input",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/SLH-DSA-SHA2-192s.outputs"
+  ],
+  "started_at": "2026-10-12T06:42:22.840695+00:00",
+  "finished_at": "2026-10-12T06:42:34.930973+00:00",
+  "returncode": 0,
+  "stdout": "{\"complete\":true,\"records\":11,\"verified\":true,\"tamper_rejected\":true}\n",
+  "stderr": ""
+}

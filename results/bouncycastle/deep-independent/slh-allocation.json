@@ -1,0 +1,532 @@
+{
+  "schema": "bc-deep-independent-review-v1",
+  "kind": "slh",
+  "complete": true,
+  "result_sha256": "08c459905d462d9f464e5c4dd386f82e33a167fb1c6e2c4261585496185ee349",
+  "manifest_sha256": "afe0512047ceb707a9316ebc20a34462d6683127342f6ea0a453930cfbee16bd",
+  "upstream": "c314b9cdffa3958a0eff5344f8fdcdb0181ed830",
+  "processes": 24,
+  "samples": 192,
+  "raw_hashes": {
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/baseline-sha2_128f-check": {
+      ".command.json": "5f5f6a83770a074d0d626a91af3acd2552e5f35a030f90be6fbe890ca1add6a5",
+      ".status.json": "d43541cc2dce39a4a359f46223e2802fb7164234c0b556a9814478f5796648d0",
+      ".stdout.txt": "ba736318316fd2436651bfb42608d9be6cd0a88f483620e84022de8231156edf",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/baseline-sha2_128f-stages": {
+      ".command.json": "e42c4a223c71d71e95ccbfe466806095bb0910e4bc996142462f5b09a2bc67c8",
+      ".status.json": "756d65bdba84e6ac1a93a53ba7a1c9603cb1fbfc640fdd958d645d8c8f738ca9",
+      ".stdout.txt": "d6bb3256996210ff88cc9226382db289d94851b707c15d0ba2b5908a4f512c05",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/baseline-shake_128f-check": {
+      ".command.json": "f337def4063264bfed84b7d1f562c8225748d7ce02f08f8ca419fc91caa1f9c0",
+      ".status.json": "16018fad98a1ea63f627bb385a14d6e319f8d0ab2bf32378ccd5710b8e300bb4",
+      ".stdout.txt": "2ee70b0b05fc132ab670338e3aa645a360f77a6863247e52c7f3312b78311904",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/baseline-shake_128f-stages": {
+      ".command.json": "87fce393f08dd8d04a4a1b402da6f33ad40b984d898106205029e69ff796c7aa",
+      ".status.json": "a44c8d2068a60aa5f97020fcc2c62a01ece7081db9eb7eaef02a6ed463017fd6",
+      ".stdout.txt": "a17760f6e9cf5ddcf564e1d2bdbc5201ceae3b3021ee86d814af2fe39d05a8ac",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/candidate-sha2_128f-check": {
+      ".command.json": "22e1840a5149417c38c8e7bcc9de4edf37f34c19e777706787724849fc157aa3",
+      ".status.json": "5691e3cc48457c8185069e0a8a02fa7fcc197525ab96363517cc7b4ac190a1db",
+      ".stdout.txt": "9fd25d472c82fff58f2192d803794583c6ffca9fac53a0c880b96493ad74b6f5",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/candidate-sha2_128f-stages": {
+      ".command.json": "bd13f0c5d05b50680c62834526d29e0b704b705540f0ccae30ece8e4e444c8db",
+      ".status.json": "a96a74491f4e803b98dd846df00bcab3f78014805264247a300a4001d7c8b584",
+      ".stdout.txt": "199c3ec22176a7996ea7ad53b14ad0eb27245cd58afaab3491e250628cc10712",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/candidate-shake_128f-check": {
+      ".command.json": "f9ec576d54d9462c072e254b23df4c04470b2ba7a692f5a6a48190eb5ef00b18",
+      ".status.json": "dfc59e1a2192106c2ede7dcbd903c11c1886583e70ad19685d51862d6d848995",
+      ".stdout.txt": "173a0dbfa9eade33f4bc95255b0dd905430867dfd0c8bfa97d3a6ca621f6fe91",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/libs/bouncycastle/build/slh-deep/prepared-c8eeabbff5cec835/checks/candidate-shake_128f-stages": {
+      ".command.json": "8fd5b2c04e7619c5d3ad4009f3eab08dce92b487d557f900b99271ed6e6e5c7f",
+      ".status.json": "ec2fb4325133e283d7bc6834a3993b123e94c11f28fcd783a7112ba64a15ede7",
+      ".stdout.txt": "0b190cf01191bd757b9b5b80001364b8320cb394ea072e7dbc4ff6acda3646a3",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0000-sha2_128f-keygen.total-baseline": {
+      ".command.json": "c6c177ea7ab3c9088e260c74134a945a9e04039c9cd90dead45316dc58e97fd7",
+      ".status.json": "08c8bfb52e7ddde9932771f892613f9993f1be4faabd1f40cb48d939cc508133",
+      ".stdout.txt": "eb9ae6e8a7b12f5b6695bd66bcef3c83a5ed9a8ac064b019487c8379d009d0de",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0000-sha2_128f-keygen.total-candidate": {
+      ".command.json": "c59b340e4adab62c1757bfb436ac9ab8e170de09cde911e5f63661af30c51a1f",
+      ".status.json": "aae1a282fac1742055ff91595c5d3913855aabf2545edd36bd7933e1818856e0",
+      ".stdout.txt": "fdb00988c27f485c1291ffe7814eb448a9a13b7f437aa1cd19fe11e16f9dfc38",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0000-sha2_128f-sign.total-candidate": {
+      ".command.json": "f5a2555dbdc4f2e59577b5187092443a6abda3bf78b1cdbe926b51f41b275c17",
+      ".status.json": "7da4135516bffb4099e89c5be311634200272d984f0befcddd851418a4ed0579",
+      ".stdout.txt": "2986c207ae0c5c5fa402cdd8a8bdc10c26d822d86db72e5d31ed706ac1c4f2c2",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0000-sha2_128f-sign.total-baseline": {
+      ".command.json": "446c8307b8ff889e7df85f98303e90b7604b9ead73d216150124f0637bcdcd9b",
+      ".status.json": "74220c44f045f012a4d7f026ce35e045568320a3fc6e0793e1d68331c6365a42",
+      ".stdout.txt": "5965f41443317a5b555f93d006a14a1ead6e404a95150e5a16102b3ede1f6086",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0000-sha2_128f-verify.total-baseline": {
+      ".command.json": "f4681c8f4cae3adbcb81d4aa8c0a7634e1aeddc5836e8cdfe9ae77f783e600e1",
+      ".status.json": "9a810c140346f2e1f732f0e5d05d5795659cb6435850e468cbe4750b42a8741d",
+      ".stdout.txt": "0ea955567722e64e6558735929beed75952839f64ec428d052c27767a82ab706",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0000-sha2_128f-verify.total-candidate": {
+      ".command.json": "fd106d868f7ad127902c3acc00a31396592c55d4dd7518c4108041eaf8f9f571",
+      ".status.json": "712b7f837831d4128926b28feacdea60a90bedd9100e25d9fdc792ff691a06b2",
+      ".stdout.txt": "db6e9b017535772dfcec62539826fd2ecd0f343f52955dbb193c011d7f15123f",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0000-shake_128f-keygen.total-candidate": {
+      ".command.json": "90c575caf6f044de287f1d5317a1d3d93c62fae228fad98b4ed0226bce4376b8",
+      ".status.json": "a66c56f817a6f8830640255a80189db444aa9bfa8a86b3738ce8b6a47b9d5276",
+      ".stdout.txt": "e17d1184f6a9a99cda0f990fd72d12d7fef26d26d2199d6bccdb0a573574a8bb",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0000-shake_128f-keygen.total-baseline": {
+      ".command.json": "86906f6105e25d412d729542b62f8f93b2822d360965124d009aa85f6a117e1a",
+      ".status.json": "f9bf29b36f99474796d439f7d23381251e5135b813be2de3f6610377c722d0a8",
+      ".stdout.txt": "c374fe2abc146e84d3259dd4593fcd36f943b8e2c8410516e4279c9bdf4fd410",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0000-shake_128f-sign.total-baseline": {
+      ".command.json": "8898558c76b3eb901e197628176ebcd5e1a6dc756b23758b29dc7cc86b7e0775",
+      ".status.json": "aeee24e7ee50f769ed916730fde22cc2a486bdb39afbe16991a212608ce3062c",
+      ".stdout.txt": "137b42d4bfb0e11adfa7ecb9480c92cdc45e1a7a5677af0952e68475d6a98168",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0000-shake_128f-sign.total-candidate": {
+      ".command.json": "c3bb25b8718aa6ee5c9d32c0db715fc7afc4d016987a572de33e2a5358e6d887",
+      ".status.json": "7ea7105ef8ced7542c2f0e8d8fd51797648ef70bbc60bb6d89920c333d9a1064",
+      ".stdout.txt": "a8c51d21d2d52b6668a3dee174ab120aecae8b6372715d71af08f959fab9c54d",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0000-shake_128f-verify.total-candidate": {
+      ".command.json": "63445f3b830855303c57f769f239543cada8000abdd1c79580b40c2a40fcaad1",
+      ".status.json": "ea0baa0cd5834ca94dabddcd76ac7a33d1481cef207d19ad3f341201b1ade96b",
+      ".stdout.txt": "4cb28e3480d84bb67ca4094c170f38d942e74ad0641d9f78916c1372e8dd0132",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0000-shake_128f-verify.total-baseline": {
+      ".command.json": "3d0176ac3bc15d7b241fe91c66f66a827be757ab031b47c26695e4ac8d23f0a0",
+      ".status.json": "f8f899162290d3ac8be99f0ee8fe7da7b2714dbd708333676fbdc38bc0b71e58",
+      ".stdout.txt": "0b64d5ea7ccd65b9f07639cfcb0c1b50bd6047b96593598d4627ace8765c62ab",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0001-sha2_128f-keygen.total-candidate": {
+      ".command.json": "43285b85c2e20d649b8da17e58a747dbbde9b197d1533ea82957e6e21c266e6d",
+      ".status.json": "9ff3e3a30e50c5a742129b032232b62509828a345643b8178232ee53a136e648",
+      ".stdout.txt": "f44c511426ecfb4f1bfd63f7a273a5b1329084d46a886eeefa0a53d55b8c2510",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0001-sha2_128f-keygen.total-baseline": {
+      ".command.json": "58a2f5e15df004db18ef0f559cff3cf9b466078d4005e66ef1eba8c650c48183",
+      ".status.json": "5c18b88623983dbf7f264c8ba63a5f60e31e146069b4249b19a191136c6d5200",
+      ".stdout.txt": "e45ba87daa6958227e4c0765438a8afcc3273baa11295d7e41c85f936858fe5b",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0001-sha2_128f-sign.total-baseline": {
+      ".command.json": "1daf9ac756d049242531808eea3e32d20c627145abcefe97c27e0a3a3c297071",
+      ".status.json": "c017944e3473b8ce7db7de6932619931ace891c43219d8b0632441905330e030",
+      ".stdout.txt": "90ee0e2a2cfb0e2ca7e8c7e30691eeb6523ca974aab26291c7ce16a6bc5171ec",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0001-sha2_128f-sign.total-candidate": {
+      ".command.json": "47f67cac75a24e643fc7d987400f2cb135d1fdb3497eaf103b755297372fa9ed",
+      ".status.json": "86bac19c88d9b3ccf2d62f3eb9610510e7296aab67479fbd8699910a81b8aab2",
+      ".stdout.txt": "acd415a44761607c9bd3a98f6b37723f98fbc16eb83a060217d1468911288237",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0001-sha2_128f-verify.total-candidate": {
+      ".command.json": "ed2a1be1aed815b9422f309b4f2880be61372dedb672144e40c54dad82ff7c3e",
+      ".status.json": "e0c0f797f30970ceec070f29c7c8c6f3e8b6b52b0d4221b11c713dea460fd3d3",
+      ".stdout.txt": "42aafb7e23d9c4198f654eb8138bf1c9e57df2ce7d4e7b7411c8611680c7d73b",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0001-sha2_128f-verify.total-baseline": {
+      ".command.json": "479f413ad4d0ad66aac6225f7e8fdf6ee2f3cb89eca7d2b317ef3dfc50f9a706",
+      ".status.json": "b1975a11dee2ff03dd5ffc2c97746df93224375146864ea7838fe4dab208cf72",
+      ".stdout.txt": "84a43fc771d916cd7a45202cba57d26f6201ede8379b124f9d6c287239143ec2",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0001-shake_128f-keygen.total-baseline": {
+      ".command.json": "99b0764f6e3f8f8133fbdab9a5d28e4c12e0aa7c16e58ad25130a8934dc969c8",
+      ".status.json": "d7ec468f2e0d1d4cc968729c9a8a77e5ea10228b2a31eccc48cef63cc8422a63",
+      ".stdout.txt": "dd28a4d116d1b165abaede57e64c96b3b3f441c6adddb4d8e4810816dabec36c",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0001-shake_128f-keygen.total-candidate": {
+      ".command.json": "874f4c77853ffd1d012ed75c8c02162df4a76da28acc39e7f129444323fb90ff",
+      ".status.json": "f6a9baaa845d7f6f4d486a8bfb8a8f087ca227eba968a806171fde888f4d1df4",
+      ".stdout.txt": "83f7422a93a527ede6c966d9afb8b703d72c2e3035f2f7d9fb2dbeee90889ea7",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0001-shake_128f-sign.total-candidate": {
+      ".command.json": "af04cd7f53a0441fef030c4fd255630e745bd7f574b73bf2b705f34e674ce9fa",
+      ".status.json": "a1d25b4beab9cc2d8216a2da9aef2641622913e8ad7435dae8156ca27e3f158a",
+      ".stdout.txt": "671130a39025f6c8da0fb0809197902d8ae913e4bd63452709db3ae27c106d27",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0001-shake_128f-sign.total-baseline": {
+      ".command.json": "43242b8c48d751b4d780e17b4746ba7ac97aa911db3dfdf15cca612c50942350",
+      ".status.json": "ce6e70997da95efd1a572dd98f25e4df7e273dee1e08dd4502d4d50a132da2d3",
+      ".stdout.txt": "891d2da66f7e76b94fc44704896dbf88b4582a84daf629daeb6cbd7c54dcd687",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0001-shake_128f-verify.total-baseline": {
+      ".command.json": "9078e8979de0ddda3887906019f6ec444042d918b60f5a21ff5ce8025ba744c8",
+      ".status.json": "45b0cfa7e61713189252ad8a1d08efcbc89da708d52cc3dc397815004f480e21",
+      ".stdout.txt": "0efabe46d1f62be3b4290b541e123aa89b6f8de156c79b0aee2b578ff381d06a",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json.raw/0001-shake_128f-verify.total-candidate": {
+      ".command.json": "09c2fe5cfa68a81d3ca0ae5a0e9e0e9fac41330149b24b0a7edb09d967e98438",
+      ".status.json": "18a2916ffd8485770d29af1481195d46ccaf4e6d63c5ebfbfa032fb0e51c5259",
+      ".stdout.txt": "60e107e4551a6b26193d77036289705553aabbcdbb8e03bc34a5f8a526495a9c",
+      ".stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "summary": [
+    {
+      "parameter": "sha2_128f",
+      "operation": "keygen.total",
+      "forks": 2,
+      "wall_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "cpu_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "thread_cpu_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "allocated_bytes": {
+        "baseline": 171288.0,
+        "candidate": 45848.0,
+        "ratios": [
+          3.735997208166114,
+          3.735997208166114
+        ],
+        "median_ratio": 3.735997208166114,
+        "min_ratio": 3.735997208166114,
+        "max_ratio": 3.735997208166114,
+        "losses": 0
+      }
+    },
+    {
+      "parameter": "sha2_128f",
+      "operation": "sign.total",
+      "forks": 2,
+      "wall_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "cpu_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "thread_cpu_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "allocated_bytes": {
+        "baseline": 4096472.0,
+        "candidate": 1365155.5,
+        "ratios": [
+          3.0013026614442984,
+          3.0001706443398444
+        ],
+        "median_ratio": 3.0007366528920714,
+        "min_ratio": 3.0001706443398444,
+        "max_ratio": 3.0013026614442984,
+        "losses": 0
+      }
+    },
+    {
+      "parameter": "sha2_128f",
+      "operation": "verify.total",
+      "forks": 2,
+      "wall_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "cpu_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "thread_cpu_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "allocated_bytes": {
+        "baseline": 273026.0,
+        "candidate": 104746.0,
+        "ratios": [
+          2.6005943649629475,
+          2.61253899297648
+        ],
+        "median_ratio": 2.6065666789697137,
+        "min_ratio": 2.6005943649629475,
+        "max_ratio": 2.61253899297648,
+        "losses": 0
+      }
+    },
+    {
+      "parameter": "shake_128f",
+      "operation": "keygen.total",
+      "forks": 2,
+      "wall_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "cpu_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "thread_cpu_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "allocated_bytes": {
+        "baseline": 170792.0,
+        "candidate": 45352.0,
+        "ratios": [
+          3.765919915328982,
+          3.765919915328982
+        ],
+        "median_ratio": 3.765919915328982,
+        "min_ratio": 3.765919915328982,
+        "max_ratio": 3.765919915328982,
+        "losses": 0
+      }
+    },
+    {
+      "parameter": "shake_128f",
+      "operation": "sign.total",
+      "forks": 2,
+      "wall_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "cpu_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "thread_cpu_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "allocated_bytes": {
+        "baseline": 4086648.0,
+        "candidate": 1355432.0,
+        "ratios": [
+          3.0150151390848086,
+          3.0150151390848086
+        ],
+        "median_ratio": 3.0150151390848086,
+        "min_ratio": 3.0150151390848086,
+        "max_ratio": 3.0150151390848086,
+        "losses": 0
+      }
+    },
+    {
+      "parameter": "shake_128f",
+      "operation": "verify.total",
+      "forks": 2,
+      "wall_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "cpu_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "thread_cpu_ns": {
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "ratios": [
+          null,
+          null
+        ],
+        "median_ratio": null,
+        "min_ratio": null,
+        "max_ratio": null,
+        "losses": 0
+      },
+      "allocated_bytes": {
+        "baseline": 266290.0,
+        "candidate": 100692.0,
+        "ratios": [
+          2.6445993723433836,
+          2.6445993723433836
+        ],
+        "median_ratio": 2.6445993723433836,
+        "min_ratio": 2.6445993723433836,
+        "max_ratio": 2.6445993723433836,
+        "losses": 0
+      }
+    }
+  ],
+  "limitations": [
+    "Retained classes are hash-bound, not independently recompiled.",
+    "Stage digests use sealed cross-variant preparation outputs; whole-operation digests are independently derived from fixture bytes.",
+    "Four measured keys repeat in complete cycles; stage probes overlap and cannot be summed."
+  ],
+  "checker_sha256": "c0652f600f7d034c25d5926a86f20705409f6192ff9a37c9ce33ad395c7a4120",
+  "checked_at": "2026-10-12T03:26:41.724293+00:00",
+  "input_path": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-slh-deep/results/bouncycastle/slh-deep/pilot-allocation.json"
+}

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/libs/liboqs/build/complete-indicators/prepared-v1/extended",
+    "prepare",
+    "ML-DSA-44",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.input",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-completion/results/liboqs/complete-indicators/prepared-v1/ML-DSA-44.outputs"
+  ],
+  "started_at": "2026-10-12T06:42:03.758928+00:00",
+  "finished_at": "2026-10-12T06:42:03.766316+00:00",
+  "returncode": 0,
+  "stdout": "{\"complete\":true,\"records\":11,\"verified\":true,\"tamper_rejected\":true}\n",
+  "stderr": ""
+}

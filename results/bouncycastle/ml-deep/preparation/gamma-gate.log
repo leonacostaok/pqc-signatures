@@ -1,0 +1,2 @@
+$ /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java -Xmx512m -XX:ActiveProcessorCount=2 -cp /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ml-deep/libs/bouncycastle/build/ml-deep/prepared-v6/gamma org.bouncycastle.crypto.signers.mldsa.SamplingCheck false true
+{"checks":148,"matrix_shared":false,"gamma_shared":true}

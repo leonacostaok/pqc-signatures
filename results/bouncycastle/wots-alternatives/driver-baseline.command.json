@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/javac",
+    "-J-XX:ActiveProcessorCount=2",
+    "--release",
+    "8",
+    "-cp",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/build/wots-alternatives/baseline-classes",
+    "-d",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/build/wots-alternatives/baseline-driver",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/AddressTrace.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/ChainGate.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/SlhDeepProbe.java",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-wots-alternatives/libs/bouncycastle/experiments/wots-alternatives/WotsAlternativeProbe.java"
+  ],
+  "started_at": "2026-10-12T07:58:25.257911+00:00"
+}

@@ -1,0 +1,17 @@
+In file included from /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-openssl/public_verify.c:2:
+In file included from /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/include/oqs/oqs.h:20:
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/include/oqs/sig_stfl.h:277:24: error: redefinition of typedef 'OQS_SIG' is a C11 feature [-Werror,-Wtypedef-redefinition]
+  277 | typedef struct OQS_SIG OQS_SIG;
+      |                        ^
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/include/oqs/sig.h:660:3: note: previous definition is here
+  660 | } OQS_SIG;
+      |   ^
+In file included from /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/experiments/sha2-openssl/public_verify.c:2:
+In file included from /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/include/oqs/oqs.h:20:
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/include/oqs/sig_stfl.h:503:3: error: redefinition of typedef 'OQS_SIG_STFL_SECRET_KEY' is a C11 feature [-Werror,-Wtypedef-redefinition]
+  503 | } OQS_SIG_STFL_SECRET_KEY;
+      |   ^
+/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/include/oqs/sig_stfl.h:204:40: note: previous definition is here
+  204 | typedef struct OQS_SIG_STFL_SECRET_KEY OQS_SIG_STFL_SECRET_KEY;
+      |                                        ^
+2 errors generated.

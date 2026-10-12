@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin/java",
+    "-Xms64m",
+    "-Xmx512m",
+    "-XX:ActiveProcessorCount=2",
+    "-XX:+UseG1GC",
+    "-cp",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/confirmation-prepared-v1/driver:/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-ntt-alternatives/results/bouncycastle/ntt-alternatives/.build/prepared-v1/baseline",
+    "org.bouncycastle.crypto.signers.mldsa.NTTGate"
+  ],
+  "cwd": null,
+  "started_at": "2026-10-12T12:43:10.195153+00:00"
+}

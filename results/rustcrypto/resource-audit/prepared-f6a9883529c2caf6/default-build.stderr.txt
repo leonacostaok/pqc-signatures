@@ -1,0 +1,47 @@
+     Locking 7 packages to latest Rust 1.93.0 compatible versions
+      Adding block-buffer v0.10.4
+      Adding cpufeatures v0.2.17
+      Adding crypto-common v0.1.7
+      Adding digest v0.10.7
+      Adding generic-array v0.14.7
+      Adding sha2 v0.10.9 (available: v0.11.0)
+      Adding version_check v0.9.5
+   Compiling typenum v1.20.1
+   Compiling libc v0.2.186
+   Compiling cmov v0.5.4
+   Compiling cfg-if v1.0.5
+   Compiling ctutils v0.4.3
+   Compiling getrandom v0.4.3
+   Compiling hybrid-array v0.4.15
+   Compiling rand_core v0.10.1
+   Compiling version_check v0.9.5
+   Compiling generic-array v0.14.7
+   Compiling autocfg v1.5.1
+   Compiling crypto-common v0.2.2
+   Compiling num-traits v0.2.19
+   Compiling const-oid v0.10.2
+   Compiling zeroize v1.9.1
+   Compiling digest v0.11.3
+   Compiling cpufeatures v0.3.1
+   Compiling keccak v0.2.2
+   Compiling der v0.8.2
+   Compiling sponge-cursor v0.1.0
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.228
+   Compiling spki v0.8.1
+   Compiling pkcs8 v0.11.0
+   Compiling shake v0.1.0
+   Compiling module-lattice v0.2.3
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling signature v3.0.0
+   Compiling serde_json v1.0.150
+   Compiling digest v0.10.7
+   Compiling cpufeatures v0.2.17
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling sha2 v0.10.9
+   Compiling ml-dsa-baseline v0.1.1 (/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-pr-resources/libs/rustcrypto/build/resource-audit/prepared-f6a9883529c2caf6/baseline/ml-dsa)
+   Compiling ml-dsa-candidate v0.1.1 (/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-pr-resources/libs/rustcrypto/build/resource-audit/prepared-f6a9883529c2caf6/candidate/ml-dsa)
+   Compiling mldsa-resource-audit v0.0.0 (/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-pr-resources/libs/rustcrypto/build/resource-audit/prepared-f6a9883529c2caf6)
+    Finished `release` profile [optimized] target(s) in 28.76s

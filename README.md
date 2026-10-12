@@ -1,88 +1,31 @@
 # pqc-signatures
 
-Post-quantum signature benchmarks across six libraries: **ML-DSA** (FIPS 204), **SLH-DSA** (FIPS 205) and
-Falcon. Each library's keygen, sign and verify are measured separately for time, CPU and memory, against
-5 alternatives per process. Verify is also split into its algorithm stages, with alternatives per stage.
-Every number comes from a run whose output was checked byte for byte.
+Performance experiments for post-quantum signatures in noble (TypeScript/JavaScript), liboqs and OpenSSL (C), CIRCL (Go), RustCrypto (Rust), and Bouncy Castle (Java). The project measures key generation, signing, verification, and resource costs for ML-DSA, SLH-DSA, and supported Falcon implementations.
 
-| library | language | version |
-|---|---|---|
-| [noble](docs/noble/README.md) | JavaScript | @noble/post-quantum 0.7.1 |
-| [liboqs](docs/liboqs/README.md) | C | 0.16.0 |
-| [OpenSSL](docs/openssl/README.md) | C | 3.5.9 |
-| [CIRCL](docs/circl/README.md) | Go | 1.6.5 |
-| [RustCrypto](docs/rustcrypto/README.md) | Rust | ml-dsa 0.1.1, slh-dsa 0.2.0-rc.5 |
-| [Bouncy Castle](docs/bouncycastle/README.md) | Java | 1.86 |
+## Results
 
-## Where to read
+- **[Actual times between libraries](docs/library-times.md)**: keygen, signing and verification for the same exact parameter set, with separate original/patched views and comparability limits.
+- **[Are the optimizations worth it?](docs/performance-summary.md)** Short verdicts with time and memory percentages.
+- [Time and memory comparison](docs/audit/complete-performance-comparison.md): every library/parameter combination, with paired changes, baseline-only timings and explicit unsupported cases.
+- [Memory and GC measurements](docs/audit/completed-resource-measurements.md): allocation, heap, process memory, GC and stack diagnostics with percentages.
+- [Resource audit](docs/audit/published-resource-regressions.md): cleanup, local stack frames and the limits of each probe.
+- [Production experiments](docs/provider-improvements.md): individual patches, source revisions, protocols and pull requests.
+- [Bouncy Castle research](docs/bouncycastle/pattern-research.md): new arithmetic/coding candidates and a preliminary address-hoisting screen.
+- [Bouncy Castle alternatives](docs/bouncycastle/alternative-comparison.md): separate NTT, matrix and WOTS experiments with fresh-key comparisons and additional native correctness tests.
+- [Raw data](results/) and [measurement contract](common/CONTRACT.md): inputs, checks and reproduction details.
 
-- **[RESULTS.md](RESULTS.md)**: all cross-library tables: baselines, best variants, variant leaderboards, verify stages, memory
-- **[results/MATCH.md](results/MATCH.md)**: byte-match, cross-verification, validation and stage-agreement report
-- **[docs/methodology.md](docs/methodology.md)**: how it was measured
-- **[docs/approaches.md](docs/approaches.md)**: every alternative explained, grouped by idea
-- **[docs/validation.md](docs/validation.md)**, **[docs/verify-stages.md](docs/verify-stages.md)**, **[docs/memory.md](docs/memory.md)**
-- `docs/<lib>/{keygen,sign,verify,verify-stages,memory,validation}.md`: per-library, per-process write-ups with full tables
+Compare each patch with its own baseline. The reports identify hardware, versions, API boundaries and measurement limitations; they do not establish a universally fastest library. Lower allocation does not necessarily mean lower peak memory or faster execution.
 
-## Correctness: everything matches
+## AI-assisted testing disclosure
 
-- All 6 libraries produce **byte-identical** public keys, secret keys and signatures for all 15 ML-DSA / SLH-DSA
-  parameter sets from the shared seeds ([common/reference.json](common/reference.json)).
-- **36/36 cross-verification pairs** pass: every library verifies every other library's signatures (Falcon
-  between noble, liboqs and Bouncy Castle) and rejects tampered copies.
-- **Validation suite** (NIST ACVP FIPS 204/205 keyGen/sigGen/sigVer + 258 negative tests), run through every
-  variant: 35,763 checks, **0 failures**. No library bugs found.
-- **1,660 benchmark rows and 2,115 verify-stage rows** all match their reference; the canonical intermediate verify
-  values (mu, A, w', w1, H_msg, FORS pk, WOTS pks, roots) agree across all libraries (93/93 comparisons).
+This is supporting research and testing work developed with AI assistance, including test harnesses, experiments, analysis and documentation. Source revisions, scripts, raw outputs and checks are retained for independent review and reproduction. AI-assisted results are not an independent cryptographic security audit or certification.
 
-## Headline results (baseline v0, median, 4-core x86-64, AVX2)
+## Historical results
 
-| | ML-DSA-44 sign | ML-DSA-44 verify | SLH-DSA-SHA2-128f sign | SLH-DSA-SHAKE-128s sign | SLH-DSA-SHAKE-128s verify |
-|---|---|---|---|---|---|
-| noble | 2.07 ms | 1.19 ms | 100.8 ms | 14.2 s | 12.4 ms |
-| liboqs | **26.3 µs** | **18.0 µs** | **27.3 ms** | 1.10 s | 1.63 ms |
-| OpenSSL | 253 µs | 132 µs | 46.3 ms | **0.99 s** | **0.92 ms** |
-| CIRCL | 74.9 µs | 46.4 µs | 49.3 ms | 1.25 s | 1.08 ms |
-| RustCrypto | 176 µs | 103 µs | 36.1 ms | 2.29 s | 1.89 ms |
-| Bouncy Castle | 167 µs | 105 µs | 47.7 ms | 1.19 s | 1.06 ms |
+[The original cross-library run](RESULTS.md) is retained with its [harness audit](https://github.com/leonacostaok/pqc-signatures/pull/3). Its known measurement and validation limitations are separate from the later production-patch experiments; historical success counts must not be treated as a blanket correctness guarantee.
 
-## What we learned
+## Build and run
 
-- **ML-DSA is fast everywhere; SLH-DSA "s" signing is the real cost.** ML-DSA does everything in micro- to
-  milliseconds. SLH-DSA "s" sets take 0.5–4 s per signature in compiled code (14–26 s in pure JS). Pick "f" sets if
-  signing speed matters and signature size doesn't.
-- **liboqs is fastest for ML-DSA by 2.5–10×** (hand-written AVX2 from mldsa-native); OpenSSL leads the SHAKE SLH-DSA
-  sets and liboqs the SHA2 ones.
-- **The biggest single wins were hashing tricks.** Caching the SHA-2 midstate of PK.seed (1.2–4× on SHA2 SLH-DSA in
-  liboqs, OpenSSL, CIRCL, Bouncy Castle), and 4-lane AVX2 Keccak (RustCrypto SLH-DSA-SHAKE verify 4–5× faster).
-- **Rewriting the hot code paths in noble gave 1.8–2.2×** across all processes (lazy NTT, unrolled Keccak, direct
-  compression-function calls). Note this is our patched copy, not the npm package.
-- **Build flags barely matter** for libraries that already ship assembly (±15%); **removing the assembly costs 20–40%**.
-- **Per-key caching** (expanded matrix, NTT(t1), tr) gives 1.1–4× on ML-DSA verify/sign, but only when the same key
-  is reused. Every caching result is labelled as such.
-- **Batch parallelism scales (mostly 2.2–3.5× on 4 cores); splitting one ML-DSA verify across threads does not.** The
-  stages are 5–500 µs, so the thread hand-off costs more than it saves.
-- **Verify, best of everything:** combining the fastest stage from any library gives ML-DSA-44 verify in ~7 µs
-  (with per-key caches) and SLH-DSA-SHAKE-128s in ~364 µs (vs 0.92 ms for the fastest stock library).
-- **Stack:** most implementations stay at 1–8 KiB. RustCrypto ML-DSA keygen needs 197–428 KiB and liboqs ML-DSA
-  30–113 KiB, which matters on embedded targets. **Heap** varies by orders of magnitude (Bouncy Castle allocates
-  84 MB per SLH-DSA-SHAKE-128s signature; CIRCL's PGO build allocates 13.9 MB per SLH-DSA-SHA2 signature because
-  of a heap escape).
+Use `libs/<library>/run.sh build` before running that library's original harness. Later production experiments have their own pinned builds and reproduction commands in the linked reports. Keep timing runs serial and preserve their source/runtime identities.
 
-## Caveats
-
-- Numbers are from one VM (4 vCPU, AVX2 + AVX-512VL, no SHA-NI). Other CPUs, especially ones with SHA-NI or ARM, will rank differently.
-- "Best" stage combinations that use per-key caches only apply when verifying many signatures under one key.
-- Memory methods differ by runtime (stack painting in C/Rust/Go, calibrated recursion probes in JS/Java), so compare
-  within a language more than across. A few JVM stack readings are 0 B, which are below the probe's resolution after JIT inlining.
-- noble's SLH-DSA "s" sets have baseline-only memory measurements (same code path as "f").
-
-## Reproduce
-
-```sh
-npm install
-common/run-final.sh          # resumable: build, bench, verify stages, memory, validation for all libraries
-common/run-all.sh            # one-shot variant, also redoes byte-match and cross-verification
-```
-Each library is driven by `libs/<lib>/run.sh {build|vectors|crossverify|bench|stages|memory|validate}`; the
-contract is in [common/CONTRACT.md](common/CONTRACT.md). The validation suite is generated by
-[common/gen-validation.mjs](common/gen-validation.mjs) from usnistgov/ACVP-Server.
+Regenerate the completed comparison from saved evidence with `bash common/update-completion-reports.sh`; this checks coverage, percentages, saved-evidence hashes and collection chronology without rerunning cryptography.

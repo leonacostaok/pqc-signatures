@@ -1,0 +1,269 @@
+{
+  "checked_at": "2026-10-12T06:09:48.195726+00:00",
+  "live_pr": {
+    "baseRefOid": "fd44469daeffe6b28f031f54f9bb66cbae69a572",
+    "files": [
+      {
+        "path": "src/sig/slh_dsa/CMakeLists.txt",
+        "additions": 3,
+        "deletions": 0,
+        "changeType": "MODIFIED"
+      },
+      {
+        "path": "src/sig/slh_dsa/patches/sha2_openssl.patch",
+        "additions": 114,
+        "deletions": 0,
+        "changeType": "ADDED"
+      },
+      {
+        "path": "src/sig/slh_dsa/slh_dsa_c/sha2_256.c",
+        "additions": 32,
+        "deletions": 0,
+        "changeType": "MODIFIED"
+      },
+      {
+        "path": "src/sig/slh_dsa/slh_dsa_c/sha2_512.c",
+        "additions": 32,
+        "deletions": 0,
+        "changeType": "MODIFIED"
+      },
+      {
+        "path": "src/sig/slh_dsa/templates/slh_dsa_cmake_template.jinja",
+        "additions": 3,
+        "deletions": 0,
+        "changeType": "MODIFIED"
+      },
+      {
+        "path": "tests/CMakeLists.txt",
+        "additions": 9,
+        "deletions": 0,
+        "changeType": "MODIFIED"
+      },
+      {
+        "path": "tests/test_hash.py",
+        "additions": 8,
+        "deletions": 0,
+        "changeType": "MODIFIED"
+      },
+      {
+        "path": "tests/test_slh_dsa_sha2.c",
+        "additions": 53,
+        "deletions": 0,
+        "changeType": "ADDED"
+      }
+    ],
+    "headRefOid": "94b42a7232057236dcb3dd56310df3d9d0a1cbd7",
+    "headRepositoryOwner": {
+      "id": "MDQ6VXNlcjcyOTM3OTE=",
+      "name": "Leon Acosta",
+      "login": "leonacostaok"
+    },
+    "title": "SLH-DSA SHA2: ~4\u20135\u00d7 sign/verify speedup",
+    "url": "https://github.com/open-quantum-safe/liboqs/pull/2625"
+  },
+  "baseline": "fd44469daeffe6b28f031f54f9bb66cbae69a572",
+  "signed_head": "94b42a7232057236dcb3dd56310df3d9d0a1cbd7",
+  "measured_candidate": "b14f1b616f938698ebc0bf8b75b3736c30e1502c",
+  "signed_tree": "2fa651336fae4d370c4ff10192ee64781ee0bff7",
+  "measured_tree": "2e06ac9762ba731cb51c837bb2682b0806a7b088",
+  "runtime_identical": true,
+  "runtime_sha256": {
+    "src/sig/slh_dsa/slh_dsa_c/sha2_256.c": "1ac1b1dbc03ddfc6fd909503429eb20fd8e01dc35ae273db4de565f8ac842a12",
+    "src/sig/slh_dsa/slh_dsa_c/sha2_512.c": "7afdba3b2881c66c59345c921e709ca3cdedb8a7179cba3d40cfa8c5a6e49716"
+  },
+  "architecture": "arm64",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.2.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "trim_tree": "2fa651336fae4d370c4ff10192ee64781ee0bff7",
+  "measurement_to_trim_diff": "tests/CMakeLists.txt | 3 ---\n 1 file changed, 3 deletions(-)",
+  "complete": true,
+  "variants": {
+    "baseline": {
+      "binary_sha256": "106d3d374e15fc02a0e0ae94b06e0c04f4f96e7f7cbeb9716cf4ed2af4215262",
+      "object_sha256": {
+        "256": "db591b0e3db2a993824bee3393f8611a533687810cbeaa5c9be5bc0fa577f296",
+        "512": "2c1cdf9e863c335ed1c755deed21a51ae22ea8b640f1b174c4a10d914c9f0b7d"
+      },
+      "config_sha256": "fbd9215055a057b72f891a50740f85d507046f402c1821cd5a586fb4c04ad498",
+      "linked_libraries": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-memory/libs/liboqs/build/resource-audit/baseline/probe:\n\t/opt/homebrew/opt/openssl@3/lib/libcrypto.3.dylib (compatibility version 3.0.0, current version 3.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n"
+    },
+    "candidate": {
+      "binary_sha256": "21cbf9fea377010600207361901f62fd73306cd2a8f1b09689097037e67edf5b",
+      "object_sha256": {
+        "256": "eed8e7174d4d597f45572a4f94d615fed6ba8c747f87e853b964cb6b1c8ea430",
+        "512": "1c82e40b3874a984185d195e3988a5278980c3d4822c571ec6699528e9915fe0"
+      },
+      "config_sha256": "fbd9215055a057b72f891a50740f85d507046f402c1821cd5a586fb4c04ad498",
+      "linked_libraries": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-memory/libs/liboqs/build/resource-audit/candidate/probe:\n\t/opt/homebrew/opt/openssl@3/lib/libcrypto.3.dylib (compatibility version 3.0.0, current version 3.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n"
+    }
+  },
+  "stack_frames": [
+    {
+      "function": "sha2_224",
+      "baseline_bytes": 176,
+      "candidate_bytes": 304,
+      "delta_bytes": 128
+    },
+    {
+      "function": "sha2_224_init",
+      "baseline_bytes": 0,
+      "candidate_bytes": 0,
+      "delta_bytes": 0
+    },
+    {
+      "function": "sha2_256",
+      "baseline_bytes": 176,
+      "candidate_bytes": 304,
+      "delta_bytes": 128
+    },
+    {
+      "function": "sha2_256_compress",
+      "baseline_bytes": 160,
+      "candidate_bytes": 144,
+      "delta_bytes": -16
+    },
+    {
+      "function": "sha2_256_copy",
+      "baseline_bytes": 0,
+      "candidate_bytes": 0,
+      "delta_bytes": 0
+    },
+    {
+      "function": "sha2_256_final_len",
+      "baseline_bytes": 48,
+      "candidate_bytes": 160,
+      "delta_bytes": 112
+    },
+    {
+      "function": "sha2_256_final_pad",
+      "baseline_bytes": 32,
+      "candidate_bytes": 144,
+      "delta_bytes": 112
+    },
+    {
+      "function": "sha2_256_init",
+      "baseline_bytes": 0,
+      "candidate_bytes": 0,
+      "delta_bytes": 0
+    },
+    {
+      "function": "sha2_256_update",
+      "baseline_bytes": 64,
+      "candidate_bytes": 176,
+      "delta_bytes": 112
+    },
+    {
+      "function": "sha2_384",
+      "baseline_bytes": 320,
+      "candidate_bytes": 544,
+      "delta_bytes": 224
+    },
+    {
+      "function": "sha2_384_init",
+      "baseline_bytes": 0,
+      "candidate_bytes": 0,
+      "delta_bytes": 0
+    },
+    {
+      "function": "sha2_512",
+      "baseline_bytes": 320,
+      "candidate_bytes": 544,
+      "delta_bytes": 224
+    },
+    {
+      "function": "sha2_512_224",
+      "baseline_bytes": 320,
+      "candidate_bytes": 544,
+      "delta_bytes": 224
+    },
+    {
+      "function": "sha2_512_224_init",
+      "baseline_bytes": 0,
+      "candidate_bytes": 0,
+      "delta_bytes": 0
+    },
+    {
+      "function": "sha2_512_256",
+      "baseline_bytes": 320,
+      "candidate_bytes": 544,
+      "delta_bytes": 224
+    },
+    {
+      "function": "sha2_512_256_init",
+      "baseline_bytes": 0,
+      "candidate_bytes": 0,
+      "delta_bytes": 0
+    },
+    {
+      "function": "sha2_512_compress",
+      "baseline_bytes": 192,
+      "candidate_bytes": 256,
+      "delta_bytes": 64
+    },
+    {
+      "function": "sha2_512_copy",
+      "baseline_bytes": 0,
+      "candidate_bytes": 0,
+      "delta_bytes": 0
+    },
+    {
+      "function": "sha2_512_final_len",
+      "baseline_bytes": 48,
+      "candidate_bytes": 272,
+      "delta_bytes": 224
+    },
+    {
+      "function": "sha2_512_final_pad",
+      "baseline_bytes": 32,
+      "candidate_bytes": 272,
+      "delta_bytes": 240
+    },
+    {
+      "function": "sha2_512_init",
+      "baseline_bytes": 0,
+      "candidate_bytes": 0,
+      "delta_bytes": 0
+    },
+    {
+      "function": "sha2_512_update",
+      "baseline_bytes": 64,
+      "candidate_bytes": 304,
+      "delta_bytes": 240
+    }
+  ],
+  "stack_max_local_delta_bytes": 240,
+  "backend_path": "/opt/homebrew/Cellar/openssl@3/3.6.4_1/lib/libcrypto.3.dylib",
+  "backend_sha256": "a7e687f76c5b69423480050f6bfa91dc2c2f616866476cca485ebc2b68ed0b15",
+  "probe_sha256": "6af1973fac24101955304c5071f7f3db4c28f3e1d6d153bbd2c014857df35828",
+  "saved_output_check": {
+    "complete": true,
+    "variants": {
+      "baseline": {
+        "rows": 52,
+        "digests": 104,
+        "raw_sha256": "fc5b3cae6ea9ae98a0a08ceb653a5c4c9ecaa75a1446a227308804aef58ee19c",
+        "openssl_allocator_calls": 0
+      },
+      "candidate": {
+        "rows": 52,
+        "digests": 104,
+        "raw_sha256": "fc5b3cae6ea9ae98a0a08ceb653a5c4c9ecaa75a1446a227308804aef58ee19c",
+        "openssl_allocator_calls": 0
+      }
+    },
+    "scope": "OpenSSL allocation hooks around the private SHA2 functions; not whole-process or full SLH API accounting"
+  },
+  "validator": {
+    "command": [
+      "python3",
+      "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/c-provider-memory/libs/liboqs/experiments/resource-audit/test_checker.py"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.006s\n\nOK\n"
+  },
+  "limits": [
+    "OpenSSL allocator hooks only; not all libc or whole SLH API allocations.",
+    "Individual compiler stack frames include inlining choices; exclude callee and full-operation peak stack.",
+    "No RSS, no new latency measurements."
+  ]
+}

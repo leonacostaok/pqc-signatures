@@ -1,0 +1,8 @@
+Completed circl baseline SLH-DSA-SHA2-128f
+Completed circl baseline SLH-DSA-SHA2-128s
+Completed circl baseline SLH-DSA-SHA2-192f
+Completed circl baseline SLH-DSA-SHA2-192s
+Completed circl baseline SLH-DSA-SHA2-256f
+Completed circl baseline SLH-DSA-SHA2-256s
+Completed circl baseline SLH-DSA-SHAKE-128f
+Saved /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/circl-performance/results/circl/experiments/tenkeys-baseline.json

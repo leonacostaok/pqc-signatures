@@ -1,0 +1,148 @@
+{
+  "plan_sha256": "c4026898d92606190fa0944287d514e0bffa6c3663bdfb927f54236f92f2dc9e",
+  "summary_sha256": "6523cac79f035c7da62f9171c650bc7344770bd69d0a8f75073277e3cb2f0c3d",
+  "script_sha256": "aa7070609b08021550f57a7a4a183f9100317ac336f76ea5085ebe6b6a3bdd18",
+  "decisions": [
+    {
+      "variant": "object_hoist",
+      "selected": true,
+      "lower_allocation_both_pairs": [
+        [
+          "sha2_128f",
+          "keygen.total"
+        ],
+        [
+          "sha2_128f",
+          "sign.total"
+        ],
+        [
+          "shake_128f",
+          "keygen.total"
+        ],
+        [
+          "shake_128f",
+          "sign.total"
+        ]
+      ],
+      "clear_regressions": [],
+      "repeatable_improvements": []
+    },
+    {
+      "variant": "field_rewrite",
+      "selected": true,
+      "lower_allocation_both_pairs": [
+        [
+          "sha2_128f",
+          "sign.total"
+        ]
+      ],
+      "clear_regressions": [
+        [
+          "sha2_128f",
+          "keygen.total"
+        ]
+      ],
+      "repeatable_improvements": [
+        [
+          "sha2_128f",
+          "sign.total"
+        ]
+      ]
+    },
+    {
+      "variant": "two_addresses",
+      "selected": true,
+      "lower_allocation_both_pairs": [
+        [
+          "sha2_128f",
+          "keygen.total"
+        ],
+        [
+          "sha2_128f",
+          "sign.total"
+        ],
+        [
+          "shake_128f",
+          "keygen.total"
+        ],
+        [
+          "shake_128f",
+          "sign.total"
+        ]
+      ],
+      "clear_regressions": [],
+      "repeatable_improvements": []
+    },
+    {
+      "variant": "buffer",
+      "selected": true,
+      "lower_allocation_both_pairs": [
+        [
+          "sha2_128f",
+          "keygen.total"
+        ],
+        [
+          "sha2_128f",
+          "sign.total"
+        ],
+        [
+          "sha2_128f",
+          "verify.total"
+        ],
+        [
+          "shake_128f",
+          "keygen.total"
+        ],
+        [
+          "shake_128f",
+          "sign.total"
+        ],
+        [
+          "shake_128f",
+          "verify.total"
+        ]
+      ],
+      "clear_regressions": [],
+      "repeatable_improvements": []
+    },
+    {
+      "variant": "buffer_peeled",
+      "selected": false,
+      "lower_allocation_both_pairs": [
+        [
+          "sha2_128f",
+          "keygen.total"
+        ],
+        [
+          "sha2_128f",
+          "sign.total"
+        ],
+        [
+          "sha2_128f",
+          "verify.total"
+        ],
+        [
+          "shake_128f",
+          "keygen.total"
+        ],
+        [
+          "shake_128f",
+          "sign.total"
+        ],
+        [
+          "shake_128f",
+          "verify.total"
+        ]
+      ],
+      "clear_regressions": [
+        [
+          "sha2_128f",
+          "keygen.total"
+        ]
+      ],
+      "repeatable_improvements": []
+    }
+  ],
+  "rule": "Evaluate each address/buffer mechanism separately against stock. Advance if any targeted128f operation shows both pairs with lower allocation and no targeted128f cell shows a clear latency regression, OR any targeted128f operation has repeatable latency improvement. Clear regression means wall and thread CPU each exceed stock by more than2% in both pairs. Repeatable improvement means wall and thread CPU each fall by at least2% in both pairs. Address targets are keygen/sign; buffer targets include verification. Keep all initial losers and explicitly label confirmation as selected. Never combine mechanisms. Compare selected buffer peeling to both stock and old buffer.",
+  "limits": "Selected confirmation is conditional on this short warmup/noisy host screen; all initial results remain retained. No mechanisms are combined."
+}

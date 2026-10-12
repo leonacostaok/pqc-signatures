@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/candidate/corpus",
+    "check",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/liboqs-performance/libs/liboqs/build/sha2-openssl/corpus.bin"
+  ],
+  "returncode": 0,
+  "cases": 24
+}

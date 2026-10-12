@@ -1,0 +1,22 @@
+{
+  "schema": "bc-matrix-portable-audit-v1",
+  "mode": "copied source/fixture/raw evidence; explicit missing runtime/class/source-path simulation in prepared-object reader only; sealed files unchanged",
+  "local_evidence": {
+    "baseline_classes": "unavailable; archived hashes only, not verified locally",
+    "baseline_sources": "unavailable; archived hashes only, not verified locally",
+    "baseline_gate_classes": "unavailable; archived hashes only, not verified locally",
+    "lazy_classes": "unavailable; archived hashes only, not verified locally",
+    "lazy_sources": "unavailable; archived hashes only, not verified locally",
+    "lazy_gate_classes": "unavailable; archived hashes only, not verified locally",
+    "stream_classes": "unavailable; archived hashes only, not verified locally",
+    "stream_sources": "unavailable; archived hashes only, not verified locally",
+    "stream_gate_classes": "unavailable; archived hashes only, not verified locally",
+    "combined_classes": "unavailable; archived hashes only, not verified locally",
+    "combined_sources": "unavailable; archived hashes only, not verified locally",
+    "combined_gate_classes": "unavailable; archived hashes only, not verified locally",
+    "runtime": "unavailable; recorded hash and version only"
+  },
+  "copied_files_unchanged": true,
+  "replayed_batches": 288,
+  "comparisons_identical": 27
+}

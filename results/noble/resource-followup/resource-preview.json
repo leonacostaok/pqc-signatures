@@ -1,0 +1,2712 @@
+{
+  "kind": "lightweight preview from completed saved resource JSON; no source rehash; final independent validation pending",
+  "execution_sha256": "0292f007372c7c930fcdc608620635635f492a12a564b70c6b445cdad134165a",
+  "ranges": {
+    "default": {
+      "checked_throughput_ops_s": {
+        "minimum_percent": 8.391970572709528,
+        "maximum_percent": 23.975964939569906,
+        "increased_cells": 12,
+        "decreased_cells": 0,
+        "undefined_percent_cells": 0
+      },
+      "process_rss_bytes": {
+        "minimum_percent": -10.132399606083819,
+        "maximum_percent": -0.4524886877828038,
+        "increased_cells": 0,
+        "decreased_cells": 12,
+        "undefined_percent_cells": 0
+      },
+      "ending_heap_bytes": {
+        "minimum_percent": -18.83012655728805,
+        "maximum_percent": 11.494614017259908,
+        "increased_cells": 5,
+        "decreased_cells": 7,
+        "undefined_percent_cells": 0
+      },
+      "sampled_max_heap_bytes": {
+        "minimum_percent": -12.94475721204369,
+        "maximum_percent": 0.3995814001085174,
+        "increased_cells": 2,
+        "decreased_cells": 10,
+        "undefined_percent_cells": 0
+      },
+      "observed_gc_cycles": {
+        "minimum_percent": -14.28571428571429,
+        "maximum_percent": 0.0,
+        "increased_cells": 0,
+        "decreased_cells": 7,
+        "undefined_percent_cells": 0
+      },
+      "observed_gc_duration_ms": {
+        "minimum_percent": -22.765794616949876,
+        "maximum_percent": 6.636365737748284,
+        "increased_cells": 3,
+        "decreased_cells": 9,
+        "undefined_percent_cells": 0
+      }
+    },
+    "constrained": {
+      "checked_throughput_ops_s": {
+        "minimum_percent": 9.050376484466804,
+        "maximum_percent": 24.643977635442347,
+        "increased_cells": 12,
+        "decreased_cells": 0,
+        "undefined_percent_cells": 0
+      },
+      "process_rss_bytes": {
+        "minimum_percent": -9.850535483111688,
+        "maximum_percent": -0.027597626604114467,
+        "increased_cells": 0,
+        "decreased_cells": 12,
+        "undefined_percent_cells": 0
+      },
+      "ending_heap_bytes": {
+        "minimum_percent": -5.490922723475588,
+        "maximum_percent": 3.1223947070569524,
+        "increased_cells": 3,
+        "decreased_cells": 9,
+        "undefined_percent_cells": 0
+      },
+      "sampled_max_heap_bytes": {
+        "minimum_percent": -2.224857417132531,
+        "maximum_percent": 0.9989075056638042,
+        "increased_cells": 6,
+        "decreased_cells": 6,
+        "undefined_percent_cells": 0
+      },
+      "observed_gc_cycles": {
+        "minimum_percent": -12.5,
+        "maximum_percent": 0.0,
+        "increased_cells": 0,
+        "decreased_cells": 10,
+        "undefined_percent_cells": 0
+      },
+      "observed_gc_duration_ms": {
+        "minimum_percent": -21.235420429627627,
+        "maximum_percent": 6.6865549862144436,
+        "increased_cells": 1,
+        "decreased_cells": 11,
+        "undefined_percent_cells": 0
+      }
+    }
+  },
+  "cells": [
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "getPublicKey",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 713.1253856681913,
+          "candidate": 816.2370362051164,
+          "change_percent": 14.459119337100956,
+          "baseline_rounds": [
+            715.1044396998424,
+            710.7221881359368,
+            709.6218907265445,
+            717.0530241104411
+          ],
+          "candidate_rounds": [
+            813.3882864673054,
+            818.9476924800913,
+            817.9748577619474,
+            814.6373081111213
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 60252160.0,
+          "candidate": 59703296.0,
+          "change_percent": -0.9109449354180787,
+          "baseline_rounds": [
+            60129280,
+            60293120,
+            60211200,
+            60293120
+          ],
+          "candidate_rounds": [
+            59670528,
+            59703296,
+            59752448,
+            59703296
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 6816528.0,
+          "candidate": 6784032.0,
+          "change_percent": -0.4767236340846859,
+          "baseline_rounds": [
+            6816608,
+            6816560,
+            6816488,
+            6816496
+          ],
+          "candidate_rounds": [
+            6785048,
+            6782736,
+            6783016,
+            6785048
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 7034976.0,
+          "candidate": 7036824.0,
+          "change_percent": 0.026268746332602788,
+          "baseline_rounds": [
+            7035008,
+            7061296,
+            7034936,
+            7034944
+          ],
+          "candidate_rounds": [
+            7022320,
+            7026768,
+            7046880,
+            7047112
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 9,
+          "candidate": 8,
+          "change_percent": -11.111111111111116,
+          "baseline_rounds": [
+            9,
+            9,
+            9,
+            9
+          ],
+          "candidate_rounds": [
+            8,
+            8,
+            8,
+            8
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 0.9239070415496826,
+          "candidate": 0.8117284774780273,
+          "change_percent": -12.141758751345433,
+          "baseline_rounds": [
+            0.9360437393188477,
+            1.0092077255249023,
+            0.8951253890991211,
+            0.8552513122558594
+          ],
+          "candidate_rounds": [
+            0.92449951171875,
+            0.7169551849365234,
+            0.8052501678466797,
+            0.8002090454101562
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "getPublicKey",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 712.2168712786417,
+          "candidate": 818.2893334223896,
+          "change_percent": 14.89328130535803,
+          "baseline_rounds": [
+            715.1510523801586,
+            713.1252488579623,
+            709.0012860914059,
+            711.5898977850404
+          ],
+          "candidate_rounds": [
+            816.3260967654675,
+            818.6975720679218,
+            817.4864054884744,
+            820.6472593676949
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 63307776.0,
+          "candidate": 62611456.0,
+          "change_percent": -1.0998964803312639,
+          "baseline_rounds": [
+            63422464,
+            63242240,
+            63291392,
+            63324160
+          ],
+          "candidate_rounds": [
+            62554112,
+            62668800,
+            62603264,
+            62619648
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 6920276.0,
+          "candidate": 7675752.0,
+          "change_percent": 10.916847825144549,
+          "baseline_rounds": [
+            6119568,
+            6120768,
+            7719784,
+            7721392
+          ],
+          "candidate_rounds": [
+            7731496,
+            7620008,
+            7589216,
+            7746944
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 8105092.0,
+          "candidate": 8090688.0,
+          "change_percent": -0.17771544110788406,
+          "baseline_rounds": [
+            8083520,
+            8083520,
+            8126664,
+            8128832
+          ],
+          "candidate_rounds": [
+            8084120,
+            8097256,
+            8110272,
+            8076024
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 4.5,
+          "candidate": 4,
+          "change_percent": -11.111111111111116,
+          "baseline_rounds": [
+            5,
+            5,
+            4,
+            4
+          ],
+          "candidate_rounds": [
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 0.599083662033081,
+          "candidate": 0.46269750595092773,
+          "change_percent": -22.765794616949876,
+          "baseline_rounds": [
+            0.6828756332397461,
+            0.6215829849243164,
+            0.5247507095336914,
+            0.5671253204345703
+          ],
+          "candidate_rounds": [
+            0.49991703033447266,
+            0.44899940490722656,
+            0.4198312759399414,
+            0.4820423126220703
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "keygen",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 657.1872015691773,
+          "candidate": 741.5134205142983,
+          "change_percent": 12.8313848388669,
+          "baseline_rounds": [
+            660.6685554928329,
+            650.3363748041357,
+            658.5049956967042,
+            659.2388802830366
+          ],
+          "candidate_rounds": [
+            746.2111333745015,
+            747.021278912802,
+            742.9905660514261,
+            729.8307037184636
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 60030976.0,
+          "candidate": 59858944.0,
+          "change_percent": -0.28657205240174566,
+          "baseline_rounds": [
+            60030976,
+            60194816,
+            59883520,
+            60030976
+          ],
+          "candidate_rounds": [
+            59523072,
+            59817984,
+            60096512,
+            59899904
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 6139916.0,
+          "candidate": 6144896.0,
+          "change_percent": 0.0811086014857576,
+          "baseline_rounds": [
+            6136872,
+            6142960,
+            6135888,
+            6143008
+          ],
+          "candidate_rounds": [
+            6144880,
+            6145288,
+            6144896,
+            6144896
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 7022396.0,
+          "candidate": 6999836.0,
+          "change_percent": -0.32125787266910066,
+          "baseline_rounds": [
+            7019328,
+            7044520,
+            7018344,
+            7025464
+          ],
+          "candidate_rounds": [
+            7004792,
+            7006872,
+            6992952,
+            6994880
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 12,
+          "candidate": 12,
+          "change_percent": 0.0,
+          "baseline_rounds": [
+            12,
+            12,
+            12,
+            12
+          ],
+          "candidate_rounds": [
+            12,
+            12,
+            12,
+            12
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 1.097529411315918,
+          "candidate": 1.1709163188934326,
+          "change_percent": 6.6865549862144436,
+          "baseline_rounds": [
+            0.9965410232543945,
+            1.33258056640625,
+            1.0449962615966797,
+            1.0159997940063477
+          ],
+          "candidate_rounds": [
+            0.983250617980957,
+            1.0110406875610352,
+            1.1420412063598633,
+            1.547332763671875
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "keygen",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 658.7039590866431,
+          "candidate": 739.7551830547762,
+          "change_percent": 12.304651103132658,
+          "baseline_rounds": [
+            659.8608957555984,
+            659.3354720550603,
+            659.2137923785973,
+            656.4056761573162
+          ],
+          "candidate_rounds": [
+            737.0039459152879,
+            743.1917653918865,
+            746.7836262586923,
+            732.0413946532382
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 62734336.0,
+          "candidate": 62349312.0,
+          "change_percent": -0.6137372682162412,
+          "baseline_rounds": [
+            63209472,
+            62603264,
+            62685184,
+            62783488
+          ],
+          "candidate_rounds": [
+            62406656,
+            62275584,
+            62308352,
+            62390272
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 7067604.0,
+          "candidate": 7026076.0,
+          "change_percent": -0.5875824395367935,
+          "baseline_rounds": [
+            7060608,
+            7057056,
+            7086296,
+            7074600
+          ],
+          "candidate_rounds": [
+            7024744,
+            7025320,
+            7026832,
+            7028976
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 8080916.0,
+          "candidate": 8064832.0,
+          "change_percent": -0.1990368418629762,
+          "baseline_rounds": [
+            8168616,
+            8076792,
+            8067384,
+            8085040
+          ],
+          "candidate_rounds": [
+            8063824,
+            8089872,
+            8065840,
+            8036896
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 6,
+          "candidate": 6,
+          "change_percent": 0.0,
+          "baseline_rounds": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "candidate_rounds": [
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 0.715416431427002,
+          "candidate": 0.7305307388305664,
+          "change_percent": 2.1126586893478017,
+          "baseline_rounds": [
+            0.7419166564941406,
+            0.6818752288818359,
+            0.6817073822021484,
+            0.7561664581298828
+          ],
+          "candidate_rounds": [
+            0.8242502212524414,
+            0.7049598693847656,
+            0.6831235885620117,
+            0.7097892761230469
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "sign",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 109.58588911353134,
+          "candidate": 119.50382465215624,
+          "change_percent": 9.050376484466804,
+          "baseline_rounds": [
+            110.41540244625118,
+            110.53664411169898,
+            107.19778703568389,
+            110.19372286049129
+          ],
+          "candidate_rounds": [
+            119.19957485484967,
+            119.524439000809,
+            119.58872071151318,
+            119.70256404145313
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 59711488.0,
+          "candidate": 59482112.0,
+          "change_percent": -0.38414048566333125,
+          "baseline_rounds": [
+            59736064,
+            59703296,
+            59211776,
+            59719680
+          ],
+          "candidate_rounds": [
+            59473920,
+            59375616,
+            59490304,
+            59506688
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 6906940.0,
+          "candidate": 6841648.0,
+          "change_percent": -0.9453100794273639,
+          "baseline_rounds": [
+            6922312,
+            6891568,
+            6927456,
+            6858800
+          ],
+          "candidate_rounds": [
+            6857872,
+            6834592,
+            6841376,
+            6841920
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 7611124.0,
+          "candidate": 7586568.0,
+          "change_percent": -0.32263303028566837,
+          "baseline_rounds": [
+            7610512,
+            7611736,
+            7600648,
+            7666360
+          ],
+          "candidate_rounds": [
+            7608048,
+            7579472,
+            7585824,
+            7587312
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 68,
+          "candidate": 66,
+          "change_percent": -2.941176470588236,
+          "baseline_rounds": [
+            68,
+            68,
+            68,
+            68
+          ],
+          "candidate_rounds": [
+            66,
+            66,
+            66,
+            66
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 6.715532302856445,
+          "candidate": 5.863845109939575,
+          "change_percent": -12.682348241473063,
+          "baseline_rounds": [
+            6.124547004699707,
+            6.046038627624512,
+            8.571000099182129,
+            6.120543479919434
+          ],
+          "candidate_rounds": [
+            5.7244157791137695,
+            6.005796432495117,
+            6.007045745849609,
+            5.718122482299805
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "sign",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 110.33608405279341,
+          "candidate": 119.59545575758388,
+          "change_percent": 8.391970572709528,
+          "baseline_rounds": [
+            110.44667077870743,
+            109.86964402781247,
+            110.44921745803268,
+            110.5788039466211
+          ],
+          "candidate_rounds": [
+            119.64269516676636,
+            119.03321165973358,
+            119.77478290928207,
+            119.93113329455352
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 61554688.0,
+          "candidate": 61276160.0,
+          "change_percent": -0.4524886877828038,
+          "baseline_rounds": [
+            61407232,
+            61718528,
+            61652992,
+            61456384
+          ],
+          "candidate_rounds": [
+            61325312,
+            61325312,
+            61128704,
+            61227008
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 7351088.0,
+          "candidate": 7009892.0,
+          "change_percent": -4.6414353902442755,
+          "baseline_rounds": [
+            7346480,
+            7355696,
+            7344040,
+            7375376
+          ],
+          "candidate_rounds": [
+            7026640,
+            6993144,
+            6805816,
+            7050896
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 8478376.0,
+          "candidate": 8474392.0,
+          "change_percent": -0.046990131128887835,
+          "baseline_rounds": [
+            8473472,
+            8483280,
+            8469408,
+            8503360
+          ],
+          "candidate_rounds": [
+            8491848,
+            8456936,
+            8366216,
+            8517024
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 34,
+          "candidate": 33,
+          "change_percent": -2.941176470588236,
+          "baseline_rounds": [
+            34,
+            34,
+            34,
+            34
+          ],
+          "candidate_rounds": [
+            33,
+            33,
+            33,
+            33
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 3.9818108081817627,
+          "candidate": 3.7687716484069824,
+          "change_percent": -5.350308440999529,
+          "baseline_rounds": [
+            3.9864139556884766,
+            4.18820858001709,
+            4.023537635803223,
+            3.7290830612182617
+          ],
+          "candidate_rounds": [
+            3.576296806335449,
+            4.404250144958496,
+            3.6474599838256836,
+            3.447079658508301
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "verify",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 518.477075713475,
+          "candidate": 570.9450041024645,
+          "change_percent": 10.119623575794279,
+          "baseline_rounds": [
+            518.0137375138759,
+            514.5676348664082,
+            520.4141715099767,
+            520.9127589636389
+          ],
+          "candidate_rounds": [
+            572.9195553536717,
+            572.4864360594893,
+            567.0135440930551,
+            571.3604809036418
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 59367424.0,
+          "candidate": 59351040.0,
+          "change_percent": -0.027597626604114467,
+          "baseline_rounds": [
+            59375616,
+            59424768,
+            59277312,
+            59359232
+          ],
+          "candidate_rounds": [
+            59506688,
+            59260928,
+            59441152,
+            59097088
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 6778424.0,
+          "candidate": 6736232.0,
+          "change_percent": -0.6224455714189614,
+          "baseline_rounds": [
+            6789032,
+            6788984,
+            6767840,
+            6767864
+          ],
+          "candidate_rounds": [
+            6757240,
+            6736232,
+            6306096,
+            6736232
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 7201868.0,
+          "candidate": 7273808.0,
+          "change_percent": 0.9989075056638042,
+          "baseline_rounds": [
+            7241224,
+            7201640,
+            7201856,
+            7201880
+          ],
+          "candidate_rounds": [
+            7273816,
+            7273800,
+            7281224,
+            7273800
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 18,
+          "candidate": 18,
+          "change_percent": 0.0,
+          "baseline_rounds": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "candidate_rounds": [
+            18,
+            18,
+            18,
+            18
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 1.7711243629455566,
+          "candidate": 1.735658884048462,
+          "change_percent": -2.0024273641695123,
+          "baseline_rounds": [
+            1.8565807342529297,
+            1.8761653900146484,
+            1.7091693878173828,
+            1.6425819396972656
+          ],
+          "candidate_rounds": [
+            1.6201696395874023,
+            1.7314634323120117,
+            1.7866687774658203,
+            1.8043336868286133
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-44",
+      "operation": "verify",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 519.7156973815132,
+          "candidate": 572.2219024784941,
+          "change_percent": 10.1028707351968,
+          "baseline_rounds": [
+            519.7037417992711,
+            518.8902859919755,
+            518.3869292364501,
+            521.8818324983563
+          ],
+          "candidate_rounds": [
+            572.1896449624048,
+            569.7907756761256,
+            575.810199138919,
+            571.0969901365273
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 61579264.0,
+          "candidate": 61128704.0,
+          "change_percent": -0.7316748702939968,
+          "baseline_rounds": [
+            61669376,
+            61620224,
+            61243392,
+            61538304
+          ],
+          "candidate_rounds": [
+            61079552,
+            61177856,
+            61030400,
+            61177856
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 7780192.0,
+          "candidate": 6315172.0,
+          "change_percent": -18.83012655728805,
+          "baseline_rounds": [
+            7781464,
+            7808072,
+            7778920,
+            7777296
+          ],
+          "candidate_rounds": [
+            6340696,
+            6313304,
+            6313664,
+            6316680
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 8286672.0,
+          "candidate": 8319784.0,
+          "change_percent": 0.3995814001085174,
+          "baseline_rounds": [
+            8289424,
+            8228576,
+            8287736,
+            8285608
+          ],
+          "candidate_rounds": [
+            8319832,
+            8319664,
+            8319736,
+            8323040
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 9,
+          "candidate": 9,
+          "change_percent": 0.0,
+          "baseline_rounds": [
+            9,
+            9,
+            9,
+            9
+          ],
+          "candidate_rounds": [
+            9,
+            9,
+            9,
+            9
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 1.0613031387329102,
+          "candidate": 1.0107800960540771,
+          "change_percent": -4.76047236976539,
+          "baseline_rounds": [
+            1.01641845703125,
+            1.0695838928222656,
+            1.1313371658325195,
+            1.0278730392456055
+          ],
+          "candidate_rounds": [
+            1.042165756225586,
+            1.0161666870117188,
+            0.9311637878417969,
+            1.053624153137207
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "getPublicKey",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 446.3308804146337,
+          "candidate": 530.3138456808354,
+          "change_percent": 18.816301750885557,
+          "baseline_rounds": [
+            449.0360627036203,
+            444.01421933336707,
+            443.17774601414123,
+            449.09549360740635
+          ],
+          "candidate_rounds": [
+            529.8268494673424,
+            530.3757518835935,
+            532.1903554983622,
+            528.8624258740433
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 60571648.0,
+          "candidate": 60112896.0,
+          "change_percent": -0.7573708412226154,
+          "baseline_rounds": [
+            60473344,
+            60424192,
+            60669952,
+            60719104
+          ],
+          "candidate_rounds": [
+            60243968,
+            60096512,
+            59965440,
+            60129280
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 6704980.0,
+          "candidate": 6557220.0,
+          "change_percent": -2.2037351341838485,
+          "baseline_rounds": [
+            6705616,
+            6704272,
+            6768200,
+            6704344
+          ],
+          "candidate_rounds": [
+            6194952,
+            6197184,
+            6980216,
+            6917256
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 7135632.0,
+          "candidate": 7175704.0,
+          "change_percent": 0.5615760454014351,
+          "baseline_rounds": [
+            7136144,
+            7135048,
+            7168240,
+            7135120
+          ],
+          "candidate_rounds": [
+            7177736,
+            7171296,
+            7173672,
+            7183048
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 14,
+          "candidate": 13.5,
+          "change_percent": -3.57142857142857,
+          "baseline_rounds": [
+            14,
+            14,
+            14,
+            14
+          ],
+          "candidate_rounds": [
+            14,
+            14,
+            13,
+            13
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 1.6067702770233154,
+          "candidate": 1.3506453037261963,
+          "change_percent": -15.940360421130851,
+          "baseline_rounds": [
+            1.4227867126464844,
+            1.8173751831054688,
+            1.8394603729248047,
+            1.347458839416504
+          ],
+          "candidate_rounds": [
+            1.4245424270629883,
+            1.3734941482543945,
+            1.3169612884521484,
+            1.287583351135254
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "getPublicKey",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 447.11286316168133,
+          "candidate": 530.7006363210733,
+          "change_percent": 18.695005231635562,
+          "baseline_rounds": [
+            446.00546356692877,
+            449.31663538233283,
+            446.07419821177365,
+            447.05515548569
+          ],
+          "candidate_rounds": [
+            531.0089405228584,
+            532.111815970503,
+            529.2570732733842,
+            530.4247155175472
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 63709184.0,
+          "candidate": 62922752.0,
+          "change_percent": -1.2344091552012326,
+          "baseline_rounds": [
+            63897600,
+            63602688,
+            63815680,
+            63602688
+          ],
+          "candidate_rounds": [
+            63291392,
+            62750720,
+            62865408,
+            62980096
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 7826680.0,
+          "candidate": 7280748.0,
+          "change_percent": -6.975269207377844,
+          "baseline_rounds": [
+            7837304,
+            7816056,
+            7839104,
+            7813992
+          ],
+          "candidate_rounds": [
+            7270144,
+            7272448,
+            7289048,
+            7391416
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 8198340.0,
+          "candidate": 8184528.0,
+          "change_percent": -0.16847312992630536,
+          "baseline_rounds": [
+            8197472,
+            8199208,
+            8199272,
+            8173120
+          ],
+          "candidate_rounds": [
+            8191920,
+            8161008,
+            8182552,
+            8186504
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 7,
+          "candidate": 6,
+          "change_percent": -14.28571428571429,
+          "baseline_rounds": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "candidate_rounds": [
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 0.8926248550415039,
+          "candidate": 0.7684996128082275,
+          "change_percent": -13.905644855419697,
+          "baseline_rounds": [
+            0.9263324737548828,
+            0.7652502059936523,
+            1.0547904968261719,
+            0.8241262435913086
+          ],
+          "candidate_rounds": [
+            0.8021259307861328,
+            0.7156248092651367,
+            0.8304996490478516,
+            0.7257480621337891
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "keygen",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 407.2934180345882,
+          "candidate": 478.80118279614703,
+          "change_percent": 17.5568181549858,
+          "baseline_rounds": [
+            404.9185302019178,
+            407.6293929861414,
+            407.67436373205715,
+            408.9513852182366
+          ],
+          "candidate_rounds": [
+            477.0979029124404,
+            480.5696251838507,
+            477.3399728804268,
+            480.1972302078702
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 60735488.0,
+          "candidate": 60530688.0,
+          "change_percent": -0.3371998920960295,
+          "baseline_rounds": [
+            60604416,
+            61046784,
+            60833792,
+            60637184
+          ],
+          "candidate_rounds": [
+            60571648,
+            60784640,
+            60440576,
+            60489728
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 6762056.0,
+          "candidate": 6529624.0,
+          "change_percent": -3.43729776860765,
+          "baseline_rounds": [
+            6317384,
+            6978240,
+            6775536,
+            6748576
+          ],
+          "candidate_rounds": [
+            6534272,
+            6239824,
+            6546008,
+            6524976
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 7214976.0,
+          "candidate": 7216060.0,
+          "change_percent": 0.015024305001154481,
+          "baseline_rounds": [
+            7217880,
+            7231600,
+            7181400,
+            7212072
+          ],
+          "candidate_rounds": [
+            7220480,
+            7197688,
+            7216272,
+            7215848
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 17,
+          "candidate": 16.25,
+          "change_percent": -4.411764705882348,
+          "baseline_rounds": [
+            17,
+            17,
+            17,
+            17
+          ],
+          "candidate_rounds": [
+            16,
+            17,
+            16,
+            16
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 1.8379251956939697,
+          "candidate": 1.5777924060821533,
+          "change_percent": -14.153611377725017,
+          "baseline_rounds": [
+            2.0872011184692383,
+            1.7574567794799805,
+            1.8391685485839844,
+            1.6678743362426758
+          ],
+          "candidate_rounds": [
+            1.622584342956543,
+            1.532583236694336,
+            1.6465024948120117,
+            1.5094995498657227
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "keygen",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 408.54235429332687,
+          "candidate": 479.62859678681593,
+          "change_percent": 17.39996887628701,
+          "baseline_rounds": [
+            410.70532609661706,
+            410.71996917409723,
+            410.16661269023587,
+            402.57750921235726
+          ],
+          "candidate_rounds": [
+            480.52111433677317,
+            478.402831813869,
+            479.28950243980694,
+            480.3009385568146
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 64020480.0,
+          "candidate": 63422464.0,
+          "change_percent": -0.9341010876519507,
+          "baseline_rounds": [
+            64077824,
+            63815680,
+            64012288,
+            64028672
+          ],
+          "candidate_rounds": [
+            63438848,
+            63406080,
+            63307776,
+            63700992
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 7104272.0,
+          "candidate": 6244760.0,
+          "change_percent": -12.098523254740245,
+          "baseline_rounds": [
+            7099376,
+            7099232,
+            7142232,
+            7109168
+          ],
+          "candidate_rounds": [
+            6244760,
+            6244760,
+            6237608,
+            6247016
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 8248156.0,
+          "candidate": 8231992.0,
+          "change_percent": -0.19597107523184887,
+          "baseline_rounds": [
+            8241928,
+            8243464,
+            8252848,
+            8254568
+          ],
+          "candidate_rounds": [
+            8231992,
+            8231992,
+            8222160,
+            8233600
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 8,
+          "candidate": 8,
+          "change_percent": 0.0,
+          "baseline_rounds": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "candidate_rounds": [
+            8,
+            8,
+            8,
+            8
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 0.9926145076751709,
+          "candidate": 0.9457492828369141,
+          "change_percent": -4.721392290348558,
+          "baseline_rounds": [
+            0.8955831527709961,
+            0.972874641418457,
+            1.0140838623046875,
+            1.087916374206543
+          ],
+          "candidate_rounds": [
+            0.9233312606811523,
+            0.9612913131713867,
+            1.017374038696289,
+            0.8810005187988281
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "sign",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 94.29408660072197,
+          "candidate": 104.6258175524674,
+          "change_percent": 10.956923518962558,
+          "baseline_rounds": [
+            94.31350166639947,
+            94.163315112691,
+            94.35380909275864,
+            94.34572053103878
+          ],
+          "candidate_rounds": [
+            104.99390953298219,
+            104.43903286463825,
+            104.46875764461696,
+            104.60157016763219
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 60112896.0,
+          "candidate": 59777024.0,
+          "change_percent": -0.5587353502316761,
+          "baseline_rounds": [
+            60260352,
+            60030976,
+            60194816,
+            59867136
+          ],
+          "candidate_rounds": [
+            59686912,
+            59867136,
+            59604992,
+            59867136
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 7244684.0,
+          "candidate": 6846884.0,
+          "change_percent": -5.490922723475588,
+          "baseline_rounds": [
+            6863896,
+            7679408,
+            6869160,
+            7620208
+          ],
+          "candidate_rounds": [
+            7100072,
+            6846880,
+            6846200,
+            6846888
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 7784808.0,
+          "candidate": 7745700.0,
+          "change_percent": -0.5023630640601517,
+          "baseline_rounds": [
+            7807296,
+            7739144,
+            7771888,
+            7797728
+          ],
+          "candidate_rounds": [
+            7645128,
+            7737040,
+            7785888,
+            7754360
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 82.25,
+          "candidate": 79,
+          "change_percent": -3.951367781155013,
+          "baseline_rounds": [
+            82,
+            82,
+            83,
+            82
+          ],
+          "candidate_rounds": [
+            79,
+            79,
+            79,
+            79
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 7.1811370849609375,
+          "candidate": 6.982177734375,
+          "change_percent": -2.7705828231939345,
+          "baseline_rounds": [
+            7.131542205810547,
+            7.458876609802246,
+            7.006629943847656,
+            7.127499580383301
+          ],
+          "candidate_rounds": [
+            6.751456260681152,
+            7.154208183288574,
+            7.110669136047363,
+            6.91237735748291
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "sign",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 94.19990189251119,
+          "candidate": 104.74913582192188,
+          "change_percent": 11.198773796439966,
+          "baseline_rounds": [
+            94.46106591309275,
+            94.32430513814457,
+            94.07195414335207,
+            93.94228237545538
+          ],
+          "candidate_rounds": [
+            104.63491814361308,
+            104.90806273735572,
+            104.62508968229731,
+            104.82847272442143
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 67706880.0,
+          "candidate": 62636032.0,
+          "change_percent": -7.489413188142768,
+          "baseline_rounds": [
+            67764224,
+            67469312,
+            67649536,
+            67911680
+          ],
+          "candidate_rounds": [
+            61210624,
+            61784064,
+            63488000,
+            66027520
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 7999028.0,
+          "candidate": 7985504.0,
+          "change_percent": -0.16907054207085936,
+          "baseline_rounds": [
+            7990016,
+            7885320,
+            9940128,
+            8008040
+          ],
+          "candidate_rounds": [
+            7999480,
+            7971528,
+            6662160,
+            9019672
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 10676724.0,
+          "candidate": 9294648.0,
+          "change_percent": -12.94475721204369,
+          "baseline_rounds": [
+            10666344,
+            10690920,
+            10384752,
+            10687104
+          ],
+          "candidate_rounds": [
+            8573288,
+            8544664,
+            10016008,
+            10641576
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 37.75,
+          "candidate": 37.5,
+          "change_percent": -0.6622516556291425,
+          "baseline_rounds": [
+            38,
+            38,
+            37,
+            38
+          ],
+          "candidate_rounds": [
+            38,
+            38,
+            38,
+            36
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 4.456676006317139,
+          "candidate": 4.266744136810303,
+          "change_percent": -4.26173832779444,
+          "baseline_rounds": [
+            4.342041015625,
+            4.458171844482422,
+            4.430203437805176,
+            4.596287727355957
+          ],
+          "candidate_rounds": [
+            4.219463348388672,
+            4.1637983322143555,
+            4.5430908203125,
+            4.140624046325684
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "verify",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 326.18841347635345,
+          "candidate": 382.7505803983141,
+          "change_percent": 17.340336009838396,
+          "baseline_rounds": [
+            337.0529354221901,
+            336.7529691154118,
+            328.9464993909299,
+            302.0012499768819
+          ],
+          "candidate_rounds": [
+            382.1712471419986,
+            381.777924962889,
+            384.3560097540347,
+            382.69713973433414
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 59719680.0,
+          "candidate": 59555840.0,
+          "change_percent": -0.2743484224965731,
+          "baseline_rounds": [
+            59785216,
+            59899904,
+            59424768,
+            59654144
+          ],
+          "candidate_rounds": [
+            59654144,
+            59572224,
+            59473920,
+            59539456
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 6786404.0,
+          "candidate": 6651784.0,
+          "change_percent": -1.983672059606234,
+          "baseline_rounds": [
+            7195904,
+            6376904,
+            6376432,
+            7197000
+          ],
+          "candidate_rounds": [
+            6380568,
+            6635584,
+            6798072,
+            6667984
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 7341568.0,
+          "candidate": 7315832.0,
+          "change_percent": -0.350551816723621,
+          "baseline_rounds": [
+            7354720,
+            7311160,
+            7328416,
+            7355312
+          ],
+          "candidate_rounds": [
+            7315160,
+            7348080,
+            7314216,
+            7316504
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 26.5,
+          "candidate": 26,
+          "change_percent": -1.8867924528301883,
+          "baseline_rounds": [
+            26,
+            27,
+            27,
+            26
+          ],
+          "candidate_rounds": [
+            26,
+            26,
+            26,
+            26
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 3.1058125495910645,
+          "candidate": 2.5799179077148438,
+          "change_percent": -16.932594400955203,
+          "baseline_rounds": [
+            2.631460189819336,
+            2.923250198364258,
+            3.604538917541504,
+            3.26400089263916
+          ],
+          "candidate_rounds": [
+            2.5652523040771484,
+            2.6955013275146484,
+            2.509624481201172,
+            2.5492935180664062
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-65",
+      "operation": "verify",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 339.3935432881709,
+          "candidate": 383.8798206925899,
+          "change_percent": 13.1075791759087,
+          "baseline_rounds": [
+            340.05264489599807,
+            339.6617446672443,
+            338.3638277183139,
+            339.4959558711274
+          ],
+          "candidate_rounds": [
+            381.54466469651186,
+            385.5492006895378,
+            383.7626750215638,
+            384.6627423627461
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 62111744.0,
+          "candidate": 61366272.0,
+          "change_percent": -1.2002110261144838,
+          "baseline_rounds": [
+            62177280,
+            62210048,
+            62046208,
+            61816832
+          ],
+          "candidate_rounds": [
+            61456384,
+            61292544,
+            61440000,
+            61243392
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 6936788.0,
+          "candidate": 6468944.0,
+          "change_percent": -6.744389478242663,
+          "baseline_rounds": [
+            6942784,
+            6930432,
+            6930792,
+            7126984
+          ],
+          "candidate_rounds": [
+            6468952,
+            6468936,
+            6490200,
+            6367512
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 8329056.0,
+          "candidate": 8356432.0,
+          "change_percent": 0.3286807052323759,
+          "baseline_rounds": [
+            8337680,
+            8325704,
+            8332408,
+            8314344
+          ],
+          "candidate_rounds": [
+            8353640,
+            8359224,
+            8371536,
+            8302840
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 13,
+          "candidate": 13,
+          "change_percent": 0.0,
+          "baseline_rounds": [
+            13,
+            13,
+            13,
+            13
+          ],
+          "candidate_rounds": [
+            13,
+            13,
+            13,
+            13
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 1.4336559772491455,
+          "candidate": 1.5001049041748047,
+          "change_percent": 4.6349283217274495,
+          "baseline_rounds": [
+            1.3784141540527344,
+            1.3655805587768555,
+            1.6009197235107422,
+            1.38970947265625
+          ],
+          "candidate_rounds": [
+            1.6588773727416992,
+            1.4895009994506836,
+            1.4026670455932617,
+            1.4493741989135742
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "getPublicKey",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 279.67078320738517,
+          "candidate": 348.59278847387964,
+          "change_percent": 24.643977635442347,
+          "baseline_rounds": [
+            280.7425252602401,
+            280.24228077819157,
+            278.9571336336245,
+            278.7411931574844
+          ],
+          "candidate_rounds": [
+            349.11711953472695,
+            348.5745434376984,
+            347.75815252742484,
+            348.9213383956683
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 60538880.0,
+          "candidate": 60088320.0,
+          "change_percent": -0.7442489851150258,
+          "baseline_rounds": [
+            60555264,
+            60522496,
+            60620800,
+            60506112
+          ],
+          "candidate_rounds": [
+            60243968,
+            60096512,
+            60063744,
+            60080128
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 6285164.0,
+          "candidate": 6272212.0,
+          "change_percent": -0.20607258617276747,
+          "baseline_rounds": [
+            6285664,
+            6284664,
+            6284328,
+            6293032
+          ],
+          "candidate_rounds": [
+            6276656,
+            6266616,
+            6267768,
+            6276840
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 7194148.0,
+          "candidate": 7247620.0,
+          "change_percent": 0.7432707806400485,
+          "baseline_rounds": [
+            7194816,
+            7193480,
+            7193144,
+            7201368
+          ],
+          "candidate_rounds": [
+            7252312,
+            7237376,
+            7242968,
+            7252272
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 24,
+          "candidate": 21,
+          "change_percent": -12.5,
+          "baseline_rounds": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "candidate_rounds": [
+            21,
+            21,
+            21,
+            21
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 2.4856646060943604,
+          "candidate": 1.9578232765197754,
+          "change_percent": -21.235420429627627,
+          "baseline_rounds": [
+            2.2700395584106445,
+            2.2659969329833984,
+            2.620208740234375,
+            2.7864131927490234
+          ],
+          "candidate_rounds": [
+            1.7939558029174805,
+            2.023834228515625,
+            2.1494197845458984,
+            1.8640832901000977
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "getPublicKey",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 279.94974773400196,
+          "candidate": 347.07040109912066,
+          "change_percent": 23.975964939569906,
+          "baseline_rounds": [
+            278.4153933365237,
+            280.50608703687504,
+            280.31174935442556,
+            280.5657612081835
+          ],
+          "candidate_rounds": [
+            348.1378286149346,
+            348.15008602244643,
+            344.1744552195647,
+            347.819234539537
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 63635456.0,
+          "candidate": 62930944.0,
+          "change_percent": -1.107106076210096,
+          "baseline_rounds": [
+            63438848,
+            63668224,
+            63602688,
+            63799296
+          ],
+          "candidate_rounds": [
+            62996480,
+            62865408,
+            63045632,
+            62734336
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 6268944.0,
+          "candidate": 6289032.0,
+          "change_percent": 0.3204367434132438,
+          "baseline_rounds": [
+            6268848,
+            6268928,
+            6268960,
+            6269192
+          ],
+          "candidate_rounds": [
+            6289328,
+            6289096,
+            6288968,
+            6280992
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 8171596.0,
+          "candidate": 8142564.0,
+          "change_percent": -0.35527943378502735,
+          "baseline_rounds": [
+            8223920,
+            8180128,
+            8157120,
+            8163064
+          ],
+          "candidate_rounds": [
+            8127864,
+            8159232,
+            8157264,
+            8074608
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 12,
+          "candidate": 12,
+          "change_percent": 0.0,
+          "baseline_rounds": [
+            12,
+            12,
+            12,
+            12
+          ],
+          "candidate_rounds": [
+            12,
+            12,
+            12,
+            12
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 1.392437219619751,
+          "candidate": 1.484844446182251,
+          "change_percent": 6.636365737748284,
+          "baseline_rounds": [
+            1.501542091369629,
+            1.3774995803833008,
+            1.3815803527832031,
+            1.309126853942871
+          ],
+          "candidate_rounds": [
+            1.4110841751098633,
+            1.4265451431274414,
+            1.7600822448730469,
+            1.3416662216186523
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "keygen",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 262.3493194107113,
+          "candidate": 324.1151250119641,
+          "change_percent": 23.54334508661622,
+          "baseline_rounds": [
+            263.38847083803734,
+            262.203233105979,
+            261.0264115903884,
+            262.77916210844046
+          ],
+          "candidate_rounds": [
+            323.73602651402103,
+            323.63468723320153,
+            324.5747458026104,
+            324.5150404980235
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 61014016.0,
+          "candidate": 60522496.0,
+          "change_percent": -0.8055853920515554,
+          "baseline_rounds": [
+            60899328,
+            61227008,
+            60932096,
+            61095936
+          ],
+          "candidate_rounds": [
+            60440576,
+            60538880,
+            60637184,
+            60506112
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 6520380.0,
+          "candidate": 6723972.0,
+          "change_percent": 3.1223947070569524,
+          "baseline_rounds": [
+            6476320,
+            6635064,
+            6458272,
+            6564440
+          ],
+          "candidate_rounds": [
+            6716464,
+            6727176,
+            6817896,
+            6720768
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 7276676.0,
+          "candidate": 7220836.0,
+          "change_percent": -0.7673833492105486,
+          "baseline_rounds": [
+            7247368,
+            7275504,
+            7307824,
+            7277848
+          ],
+          "candidate_rounds": [
+            7210200,
+            7224256,
+            7306944,
+            7217416
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 26,
+          "candidate": 24,
+          "change_percent": -7.692307692307687,
+          "baseline_rounds": [
+            26,
+            26,
+            26,
+            26
+          ],
+          "candidate_rounds": [
+            24,
+            24,
+            24,
+            24
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 2.611875295639038,
+          "candidate": 2.2322824001312256,
+          "change_percent": -14.533346830976434,
+          "baseline_rounds": [
+            2.365166664123535,
+            2.711629867553711,
+            2.836665153503418,
+            2.5340394973754883
+          ],
+          "candidate_rounds": [
+            2.280458450317383,
+            2.2446250915527344,
+            2.2850427627563477,
+            2.1190032958984375
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "keygen",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 263.34945324080934,
+          "candidate": 322.73958594478165,
+          "change_percent": 22.55183444397182,
+          "baseline_rounds": [
+            263.9749017612935,
+            262.90360036457497,
+            263.0762693387177,
+            263.4430414986511
+          ],
+          "candidate_rounds": [
+            324.84872784517717,
+            322.795318148461,
+            323.1582884300964,
+            320.15600935539214
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 64102400.0,
+          "candidate": 63086592.0,
+          "change_percent": -1.5846645367412093,
+          "baseline_rounds": [
+            64241664,
+            64323584,
+            63946752,
+            63963136
+          ],
+          "candidate_rounds": [
+            62963712,
+            63389696,
+            62898176,
+            63209472
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 7372596.0,
+          "candidate": 7546116.0,
+          "change_percent": 2.3535807468631154,
+          "baseline_rounds": [
+            7268880,
+            7131240,
+            7476312,
+            7527480
+          ],
+          "candidate_rounds": [
+            7576768,
+            7564904,
+            7527328,
+            7505760
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 8334300.0,
+          "candidate": 8314328.0,
+          "change_percent": -0.23963620220054382,
+          "baseline_rounds": [
+            8340024,
+            8335896,
+            8325608,
+            8332704
+          ],
+          "candidate_rounds": [
+            8337192,
+            8324584,
+            8304072,
+            8274160
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 13,
+          "candidate": 12,
+          "change_percent": -7.692307692307687,
+          "baseline_rounds": [
+            13,
+            13,
+            13,
+            13
+          ],
+          "candidate_rounds": [
+            12,
+            12,
+            12,
+            12
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 1.6603009700775146,
+          "candidate": 1.4573016166687012,
+          "change_percent": -12.226659928972762,
+          "baseline_rounds": [
+            1.5875797271728516,
+            1.642333984375,
+            1.7165412902832031,
+            1.694748878479004
+          ],
+          "candidate_rounds": [
+            1.2841224670410156,
+            1.4379596710205078,
+            1.4919557571411133,
+            1.615168571472168
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "sign",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 45.25666803984369,
+          "candidate": 53.82594199789567,
+          "change_percent": 18.934831770000482,
+          "baseline_rounds": [
+            45.262579535997055,
+            45.27339203634771,
+            45.19903597829351,
+            45.29166460873648
+          ],
+          "candidate_rounds": [
+            53.845084751564656,
+            53.73160831273518,
+            53.930149081049215,
+            53.796925846233634
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 69607424.0,
+          "candidate": 62750720.0,
+          "change_percent": -9.850535483111688,
+          "baseline_rounds": [
+            69664768,
+            69795840,
+            69140480,
+            69550080
+          ],
+          "candidate_rounds": [
+            62701568,
+            63012864,
+            62111744,
+            62799872
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 8197676.0,
+          "candidate": 8415740.0,
+          "change_percent": 2.660070976213258,
+          "baseline_rounds": [
+            8186152,
+            8209200,
+            8185144,
+            8217416
+          ],
+          "candidate_rounds": [
+            8417296,
+            8464696,
+            8328256,
+            8414184
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 8783664.0,
+          "candidate": 8588240.0,
+          "change_percent": -2.224857417132531,
+          "baseline_rounds": [
+            8773744,
+            8793584,
+            8772792,
+            8801800
+          ],
+          "candidate_rounds": [
+            8589896,
+            8637144,
+            8500992,
+            8586584
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 164,
+          "candidate": 154,
+          "change_percent": -6.0975609756097615,
+          "baseline_rounds": [
+            164,
+            164,
+            164,
+            164
+          ],
+          "candidate_rounds": [
+            154,
+            154,
+            154,
+            154
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 14.827116012573242,
+          "candidate": 13.874285459518433,
+          "change_percent": -6.426270302645632,
+          "baseline_rounds": [
+            14.250916481018066,
+            15.096953392028809,
+            15.007092475891113,
+            14.95350170135498
+          ],
+          "candidate_rounds": [
+            14.075043678283691,
+            14.065427780151367,
+            13.496923446655273,
+            13.859746932983398
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "sign",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 45.358619010914765,
+          "candidate": 53.920697024298946,
+          "change_percent": 18.87640805670001,
+          "baseline_rounds": [
+            45.324195921298376,
+            45.418127986655286,
+            45.30868399334458,
+            45.38346814236081
+          ],
+          "candidate_rounds": [
+            53.84266876724566,
+            53.95284121246787,
+            53.83115877573121,
+            54.05611934175106
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 74866688.0,
+          "candidate": 67280896.0,
+          "change_percent": -10.132399606083819,
+          "baseline_rounds": [
+            75038720,
+            74760192,
+            74612736,
+            74973184
+          ],
+          "candidate_rounds": [
+            67420160,
+            67338240,
+            67125248,
+            67223552
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 7880456.0,
+          "candidate": 8786284.0,
+          "change_percent": 11.494614017259908,
+          "baseline_rounds": [
+            8869584,
+            8867128,
+            6893784,
+            6885264
+          ],
+          "candidate_rounds": [
+            7149872,
+            8330960,
+            9241608,
+            9981024
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 10866968.0,
+          "candidate": 10750060.0,
+          "change_percent": -1.0758106585019855,
+          "baseline_rounds": [
+            10880448,
+            10875648,
+            10818960,
+            10858288
+          ],
+          "candidate_rounds": [
+            10675200,
+            10813080,
+            10692776,
+            10807344
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 52.25,
+          "candidate": 51.25,
+          "change_percent": -1.9138755980861233,
+          "baseline_rounds": [
+            52,
+            52,
+            53,
+            52
+          ],
+          "candidate_rounds": [
+            52,
+            51,
+            52,
+            50
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 7.250431299209595,
+          "candidate": 6.582259654998779,
+          "change_percent": -9.215612377206527,
+          "baseline_rounds": [
+            7.562254905700684,
+            6.964055061340332,
+            7.584416389465332,
+            6.890998840332031
+          ],
+          "candidate_rounds": [
+            6.655831336975098,
+            6.534214973449707,
+            7.0238752365112305,
+            6.115117073059082
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "verify",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 220.72751886343087,
+          "candidate": 262.4765653922106,
+          "change_percent": 18.914291586184518,
+          "baseline_rounds": [
+            221.8151652075538,
+            221.6858399901627,
+            218.11896447571746,
+            221.2901057802896
+          ],
+          "candidate_rounds": [
+            262.91842095616687,
+            262.8760336922297,
+            261.96336298561675,
+            262.14844393482906
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 60227584.0,
+          "candidate": 59875328.0,
+          "change_percent": -0.5848748639825874,
+          "baseline_rounds": [
+            60325888,
+            60112896,
+            60129280,
+            60375040
+          ],
+          "candidate_rounds": [
+            59981824,
+            59785216,
+            59949056,
+            59801600
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 7166440.0,
+          "candidate": 6802076.0,
+          "change_percent": -5.0843096432817365,
+          "baseline_rounds": [
+            7271504,
+            7271520,
+            7061376,
+            7051072
+          ],
+          "candidate_rounds": [
+            6866600,
+            6738256,
+            6865896,
+            6610024
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 7430768.0,
+          "candidate": 7441192.0,
+          "change_percent": 0.1402815967340043,
+          "baseline_rounds": [
+            7434440,
+            7434456,
+            7427096,
+            7417016
+          ],
+          "candidate_rounds": [
+            7452952,
+            7412720,
+            7451552,
+            7430832
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 39,
+          "candidate": 38,
+          "change_percent": -2.564102564102566,
+          "baseline_rounds": [
+            39,
+            39,
+            39,
+            39
+          ],
+          "candidate_rounds": [
+            38,
+            38,
+            38,
+            38
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 3.7120912075042725,
+          "candidate": 3.3708410263061523,
+          "change_percent": -9.192936329480727,
+          "baseline_rounds": [
+            3.485039710998535,
+            3.6175365447998047,
+            4.1111650466918945,
+            3.6346235275268555
+          ],
+          "candidate_rounds": [
+            3.317704200744629,
+            3.4089107513427734,
+            3.4359588623046875,
+            3.3207902908325195
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "ML-DSA-87",
+      "operation": "verify",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 221.5840621548034,
+          "candidate": 259.6251444338048,
+          "change_percent": 17.16778811123385,
+          "baseline_rounds": [
+            221.5664770003386,
+            222.13424060855303,
+            221.76213201891963,
+            220.87339899140235
+          ],
+          "candidate_rounds": [
+            262.95453386001844,
+            250.75828816579053,
+            262.48580551613236,
+            262.30195019327783
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 62513152.0,
+          "candidate": 61947904.0,
+          "change_percent": -0.9042065260123189,
+          "baseline_rounds": [
+            62554112,
+            62521344,
+            62308352,
+            62504960
+          ],
+          "candidate_rounds": [
+            61964288,
+            61931520,
+            61718528,
+            62029824
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 7472548.0,
+          "candidate": 7548764.0,
+          "change_percent": 1.0199466099113819,
+          "baseline_rounds": [
+            7654832,
+            7290264,
+            7275448,
+            7676648
+          ],
+          "candidate_rounds": [
+            7548056,
+            7549848,
+            7549472,
+            7117688
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 8445116.0,
+          "candidate": 8429916.0,
+          "change_percent": -0.17998568640146262,
+          "baseline_rounds": [
+            8459808,
+            8430920,
+            8414088,
+            8459312
+          ],
+          "candidate_rounds": [
+            8442256,
+            8418552,
+            8441280,
+            8413368
+          ]
+        },
+        "observed_gc_cycles": {
+          "baseline": 20,
+          "candidate": 19,
+          "change_percent": -5.000000000000004,
+          "baseline_rounds": [
+            20,
+            20,
+            20,
+            20
+          ],
+          "candidate_rounds": [
+            19,
+            19,
+            19,
+            19
+          ]
+        },
+        "observed_gc_duration_ms": {
+          "baseline": 2.1848642826080322,
+          "candidate": 2.159081220626831,
+          "change_percent": -1.1800761350002187,
+          "baseline_rounds": [
+            2.1797494888305664,
+            2.127664566040039,
+            2.302793502807617,
+            2.1292495727539062
+          ],
+          "candidate_rounds": [
+            1.9977474212646484,
+            2.449618339538574,
+            1.96087646484375,
+            2.2280826568603516
+          ]
+        }
+      }
+    }
+  ]
+}

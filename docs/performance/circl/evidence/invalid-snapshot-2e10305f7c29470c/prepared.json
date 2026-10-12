@@ -1,0 +1,11 @@
+{
+  "snapshot": "2e10305f7c29470c",
+  "inputs": {
+    "libs/circl/experiments/sha2-prefix/run.py": "06a3307801620f5f4128553c7232d6d0115218ce476ea6c39d01088e0e0165bf",
+    "libs/circl/experiments/sha2-prefix/main.go": "3818cf567b194302832ba55e3cad652fd0dcccd581e3a6dc35fa8ea4a3f1604f",
+    "libs/circl/experiments/sha2-prefix/production.patch": "3144497059b7a98335ff10f51666aa6dc4b1e0215519d1027714f45520d79e57",
+    "libs/circl/experiments/sha2-prefix/tests.patch": "d8e4c95b38816644518cd28c6cb5446911e9f5a35d4e7330284f6898e5e691ef",
+    "common/validation/validation.json.gz": "8e6269ebc60979b76ef25030fc1871883aba8395f9ded57ec19ab0ad8b2a5685"
+  },
+  "upstream": "91db3e785ba2635b4f24a023e1ad76d2780e2865"
+}

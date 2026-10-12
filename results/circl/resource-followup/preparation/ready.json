@@ -1,0 +1,7 @@
+{
+  "manifest_sha256": "3ab524da771b3fd959ef2e02e8ce0e2e170d3ea0132f44225b89c1a911c0e875",
+  "gate_sha256": "0979f8d1db464ac361e3d7bc6512ace950e6d7a29cba6116b53f26b965ccf649",
+  "correctness_processes": 33,
+  "ready_at": "2026-10-12T07:02:42.921836+00:00",
+  "passed": true
+}

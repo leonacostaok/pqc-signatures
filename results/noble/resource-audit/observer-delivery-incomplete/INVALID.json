@@ -1,0 +1,10 @@
+{
+  "status": "incomplete, excluded from final post-GC results",
+  "worker_exit_code": 0,
+  "collector_exit_code": 1,
+  "checked_calls": 288,
+  "explicit_gc_calls": 8,
+  "observer_delivered_forced_events": 7,
+  "reason": "Asynchronous PerformanceObserver delivery had not exposed the final event before disconnect; fail-closed >=8 guard rejected output.",
+  "resolution": "Preserve these inputs/outputs; bounded event-delivery flush and separate final collection, with memory checkpoint logic unchanged."
+}

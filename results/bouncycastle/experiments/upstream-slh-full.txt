@@ -1,0 +1,7 @@
+$ /Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java -Xmx1g -XX:ActiveProcessorCount=1 -Dtest.full=true -Dbc.test.data.home=/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/test-data -cp core/build/classes/java/main:core/build/classes/java/test:core/src/test/resources:/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/deps/junit-4.13.2.jar:/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/deps/hamcrest-core-1.3.jar org.junit.runner.JUnitCore org.bouncycastle.crypto.signers.slhdsa.AllTests org.bouncycastle.pqc.crypto.test.AllTestsSLHDSA org.bouncycastle.pqc.crypto.test.AllTestsSLHDSASigGen
+JUnit version 4.13.2
+.............
+Time: 1,742.472
+
+OK (13 tests)
+

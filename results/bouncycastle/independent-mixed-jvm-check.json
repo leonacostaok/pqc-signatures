@@ -1,0 +1,135 @@
+{
+  "source_sha256": "909d3fa12548d797416329d83adff2f2b97ecbbc608599097250e4f355d75cc0",
+  "pairs_checked": 540,
+  "cells_checked": 18,
+  "balanced_orders": true,
+  "summary": [
+    {
+      "operation": "base2B",
+      "parameter": "12x14",
+      "speedup": 24.866564953191993,
+      "fork_min": 23.10393709383643,
+      "fork_max": 28.215159140449224
+    },
+    {
+      "operation": "base2B",
+      "parameter": "14x17",
+      "speedup": 27.886556656031935,
+      "fork_min": 26.159820447554218,
+      "fork_max": 34.676316460774395
+    },
+    {
+      "operation": "base2B",
+      "parameter": "14x22",
+      "speedup": 29.125187950839873,
+      "fork_min": 27.5936705434587,
+      "fork_max": 35.41506797060396
+    },
+    {
+      "operation": "base2B",
+      "parameter": "6x33",
+      "speedup": 42.663504131338556,
+      "fork_min": 38.44488957443049,
+      "fork_max": 45.737823939967875
+    },
+    {
+      "operation": "base2B",
+      "parameter": "8x33",
+      "speedup": 37.699029921904135,
+      "fork_min": 34.86496783008009,
+      "fork_max": 40.86820752134374
+    },
+    {
+      "operation": "base2B",
+      "parameter": "9x35",
+      "speedup": 42.03104257203041,
+      "fork_min": 38.33450202733138,
+      "fork_max": 49.31141632907382
+    },
+    {
+      "operation": "verify",
+      "parameter": "sha2_128f",
+      "speedup": 0.9990707475224653,
+      "fork_min": 0.9956668080481815,
+      "fork_max": 1.0047826610064707
+    },
+    {
+      "operation": "verify",
+      "parameter": "sha2_128s",
+      "speedup": 1.00084951068654,
+      "fork_min": 0.9982409287238636,
+      "fork_max": 1.0024632652831942
+    },
+    {
+      "operation": "verify",
+      "parameter": "sha2_192f",
+      "speedup": 1.0043486857972859,
+      "fork_min": 0.9976808813789176,
+      "fork_max": 1.008274617769563
+    },
+    {
+      "operation": "verify",
+      "parameter": "sha2_192s",
+      "speedup": 1.0061076232979045,
+      "fork_min": 0.9887069552520811,
+      "fork_max": 1.0270840275985775
+    },
+    {
+      "operation": "verify",
+      "parameter": "sha2_256f",
+      "speedup": 1.0021091343507975,
+      "fork_min": 0.9901687249709274,
+      "fork_max": 1.0130439970914706
+    },
+    {
+      "operation": "verify",
+      "parameter": "sha2_256s",
+      "speedup": 1.0078888622660553,
+      "fork_min": 1.0001354920546175,
+      "fork_max": 1.0280032766801548
+    },
+    {
+      "operation": "verify",
+      "parameter": "shake_128f",
+      "speedup": 0.9873603397360404,
+      "fork_min": 0.9669335261109004,
+      "fork_max": 0.9916468635386853
+    },
+    {
+      "operation": "verify",
+      "parameter": "shake_128s",
+      "speedup": 0.9828748007681981,
+      "fork_min": 0.9708624085909409,
+      "fork_max": 0.9897778750341854
+    },
+    {
+      "operation": "verify",
+      "parameter": "shake_192f",
+      "speedup": 0.9847657841571527,
+      "fork_min": 0.9643010426286365,
+      "fork_max": 0.9879354211916319
+    },
+    {
+      "operation": "verify",
+      "parameter": "shake_192s",
+      "speedup": 0.9898072313831049,
+      "fork_min": 0.9675091773440679,
+      "fork_max": 0.9953677969992876
+    },
+    {
+      "operation": "verify",
+      "parameter": "shake_256f",
+      "speedup": 0.9883642202641871,
+      "fork_min": 0.9639348405841999,
+      "fork_max": 0.9913124283123822
+    },
+    {
+      "operation": "verify",
+      "parameter": "shake_256s",
+      "speedup": 0.9895716005289594,
+      "fork_min": 0.9732911601014897,
+      "fork_max": 0.9941288908198191
+    }
+  ],
+  "interpretation": "Allocation improvement proven separately. All six SHAKE verification medians and all their fork medians lose in this mixed-classloader JVM run; separate-JVM follow-up pending. Not a demonstrated whole-verification speed improvement."
+}

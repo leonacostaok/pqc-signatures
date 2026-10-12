@@ -1,0 +1,5898 @@
+{
+  "kind": "lightweight preview from completed saved resource JSON; no source rehash; final independent validation pending",
+  "execution_sha256": "e1caaf57df078321a0965fe94ee46c4ae4f6abf2da613ba6143647fc402fa0bd",
+  "ranges": {
+    "default": {
+      "checked_throughput_ops_s": {
+        "minimum_percent": 24.862280142135962,
+        "maximum_percent": 38.78499643687541,
+        "increased_cells": 18,
+        "decreased_cells": 0,
+        "undefined_percent_cells": 0
+      },
+      "process_rss_bytes": {
+        "minimum_percent": -0.9716599190283448,
+        "maximum_percent": 3.4837688044338844,
+        "increased_cells": 15,
+        "decreased_cells": 3,
+        "undefined_percent_cells": 0
+      },
+      "ending_heap_bytes": {
+        "minimum_percent": -48.94860938713279,
+        "maximum_percent": 45.84252445301254,
+        "increased_cells": 13,
+        "decreased_cells": 5,
+        "undefined_percent_cells": 0
+      },
+      "sampled_max_heap_bytes": {
+        "minimum_percent": -0.6871439215268893,
+        "maximum_percent": 4.460582220709308,
+        "increased_cells": 9,
+        "decreased_cells": 9,
+        "undefined_percent_cells": 0
+      },
+      "allocated_bytes_per_op": {
+        "minimum_percent": 1.0445112650304234,
+        "maximum_percent": 9.038296458339111,
+        "increased_cells": 18,
+        "decreased_cells": 0,
+        "undefined_percent_cells": 0
+      },
+      "allocated_bytes_per_second": {
+        "minimum_percent": 33.02044659500505,
+        "maximum_percent": 46.05000554912364,
+        "increased_cells": 18,
+        "decreased_cells": 0,
+        "undefined_percent_cells": 0
+      },
+      "gc_cycles": {
+        "minimum_percent": 0.0,
+        "maximum_percent": 16.666666666666675,
+        "increased_cells": 8,
+        "decreased_cells": 0,
+        "undefined_percent_cells": 6
+      },
+      "gc_pause_ns": {
+        "minimum_percent": -39.60858047100862,
+        "maximum_percent": 54.33348587383564,
+        "increased_cells": 5,
+        "decreased_cells": 7,
+        "undefined_percent_cells": 6
+      },
+      "gc_cpu_seconds": {
+        "minimum_percent": -6.741672809196963,
+        "maximum_percent": 23.746707511772257,
+        "increased_cells": 7,
+        "decreased_cells": 5,
+        "undefined_percent_cells": 6
+      }
+    },
+    "constrained": {
+      "checked_throughput_ops_s": {
+        "minimum_percent": 26.941384181375348,
+        "maximum_percent": 39.52068589463613,
+        "increased_cells": 18,
+        "decreased_cells": 0,
+        "undefined_percent_cells": 0
+      },
+      "process_rss_bytes": {
+        "minimum_percent": -3.2110091743119296,
+        "maximum_percent": 2.441731409544956,
+        "increased_cells": 11,
+        "decreased_cells": 7,
+        "undefined_percent_cells": 0
+      },
+      "ending_heap_bytes": {
+        "minimum_percent": -35.80695629598759,
+        "maximum_percent": 29.67059513060559,
+        "increased_cells": 10,
+        "decreased_cells": 8,
+        "undefined_percent_cells": 0
+      },
+      "sampled_max_heap_bytes": {
+        "minimum_percent": -8.79026811843181,
+        "maximum_percent": 6.973778113804818,
+        "increased_cells": 10,
+        "decreased_cells": 8,
+        "undefined_percent_cells": 0
+      },
+      "allocated_bytes_per_op": {
+        "minimum_percent": 1.044341145828942,
+        "maximum_percent": 9.05491097388753,
+        "increased_cells": 18,
+        "decreased_cells": 0,
+        "undefined_percent_cells": 0
+      },
+      "allocated_bytes_per_second": {
+        "minimum_percent": 34.60703264538729,
+        "maximum_percent": 45.857173233993606,
+        "increased_cells": 18,
+        "decreased_cells": 0,
+        "undefined_percent_cells": 0
+      },
+      "gc_cycles": {
+        "minimum_percent": -19.999999999999996,
+        "maximum_percent": 24.615384615384617,
+        "increased_cells": 9,
+        "decreased_cells": 1,
+        "undefined_percent_cells": 6
+      },
+      "gc_pause_ns": {
+        "minimum_percent": -57.49604532128056,
+        "maximum_percent": 29.507768013197744,
+        "increased_cells": 8,
+        "decreased_cells": 4,
+        "undefined_percent_cells": 6
+      },
+      "gc_cpu_seconds": {
+        "minimum_percent": -30.954140199792647,
+        "maximum_percent": 28.68921357276779,
+        "increased_cells": 7,
+        "decreased_cells": 5,
+        "undefined_percent_cells": 6
+      }
+    }
+  },
+  "cells": [
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "keygen",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 2218.9644507844173,
+          "candidate": 2904.6468362488226,
+          "change_percent": 30.90100813566492,
+          "baseline_rounds": [
+            2206.600645309441,
+            2214.0402256774087,
+            2207.4382335967734,
+            2247.7786985540456
+          ],
+          "candidate_rounds": [
+            2898.7597294152733,
+            2898.024577206845,
+            2913.863420027903,
+            2907.939618345269
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 8806400.0,
+          "candidate": 8962048.0,
+          "change_percent": 1.7674418604651132,
+          "baseline_rounds": [
+            9125888,
+            8863744,
+            8749056,
+            8699904
+          ],
+          "candidate_rounds": [
+            8830976,
+            9093120,
+            9175040,
+            8683520
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1344236.0,
+          "candidate": 1340080.0,
+          "change_percent": -0.30917190136255934,
+          "baseline_rounds": [
+            1588336,
+            1292688,
+            1220752,
+            1395784
+          ],
+          "candidate_rounds": [
+            1361872,
+            1340080,
+            1339760,
+            1340080
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 2216488.0,
+          "candidate": 2240480.0,
+          "change_percent": 1.0824331103980622,
+          "baseline_rounds": [
+            2206216,
+            2226920,
+            2162184,
+            2226760
+          ],
+          "candidate_rounds": [
+            2240344,
+            2240616,
+            2240248,
+            2240616
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 21589.119791666668,
+          "candidate": 22677.213541666668,
+          "change_percent": 5.040009785021438,
+          "baseline_rounds": [
+            21589.119791666668,
+            21589.119791666668,
+            21589.119791666668,
+            21589.119791666668
+          ],
+          "candidate_rounds": [
+            22677.213541666668,
+            22677.213541666668,
+            22677.213541666668,
+            22677.213541666668
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 47905489.34143461,
+          "candidate": 65869296.56874104,
+          "change_percent": 37.498431754394154,
+          "baseline_rounds": [
+            47638565.66395449,
+            47799179.655718274,
+            47656648.4578258,
+            48527563.588239886
+          ],
+          "candidate_rounds": [
+            65735793.38993404,
+            65719122.18631789,
+            66078303.007223904,
+            65943967.69148833
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 20.75,
+          "candidate": 21,
+          "change_percent": 1.2048192771084265,
+          "baseline_rounds": [
+            20,
+            21,
+            21,
+            21
+          ],
+          "candidate_rounds": [
+            21,
+            21,
+            21,
+            21
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 368728.75,
+          "candidate": 342687,
+          "change_percent": -7.062576487458594,
+          "baseline_rounds": [
+            389037,
+            358458,
+            366212,
+            361208
+          ],
+          "candidate_rounds": [
+            330666,
+            374248,
+            311791,
+            354043
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00196923,
+          "candidate": 0.0018266765,
+          "change_percent": -7.239047749628035,
+          "baseline_rounds": [
+            0.002102666,
+            0.00183092,
+            0.002024792,
+            0.001918542
+          ],
+          "candidate_rounds": [
+            0.001836619,
+            0.001998458,
+            0.001644459,
+            0.00182717
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "keygen",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 2250.979591975527,
+          "candidate": 2977.0928612662883,
+          "change_percent": 32.257656705519146,
+          "baseline_rounds": [
+            2265.6008979142757,
+            2259.2681866154226,
+            2265.568870913796,
+            2213.4804124586144
+          ],
+          "candidate_rounds": [
+            2934.8752892958737,
+            2951.45306461852,
+            3011.0800807372507,
+            3010.9630104135094
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 10330112.0,
+          "candidate": 10403840.0,
+          "change_percent": 0.7137192704202988,
+          "baseline_rounds": [
+            10272768,
+            10403840,
+            10240000,
+            10387456
+          ],
+          "candidate_rounds": [
+            10518528,
+            10403840,
+            10371072,
+            10403840
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 2473432.0,
+          "candidate": 3005152.0,
+          "change_percent": 21.49725563508518,
+          "baseline_rounds": [
+            2753248,
+            2473280,
+            2473424,
+            2473440
+          ],
+          "candidate_rounds": [
+            2919552,
+            3090752,
+            2450912,
+            3124960
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 3543160.0,
+          "candidate": 3578504.0,
+          "change_percent": 0.9975276307025327,
+          "baseline_rounds": [
+            3543240,
+            3543080,
+            3506272,
+            3543240
+          ],
+          "candidate_rounds": [
+            3578344,
+            3582608,
+            3578504,
+            3578504
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 21589.114583333336,
+          "candidate": 22677.200520833336,
+          "change_percent": 5.039974813696135,
+          "baseline_rounds": [
+            21589.109375,
+            21589.119791666668,
+            21589.109375,
+            21589.119791666668
+          ],
+          "candidate_rounds": [
+            22677.213541666668,
+            22677.213541666668,
+            22677.171875,
+            22677.203125
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 48596656.25983534,
+          "candidate": 67512131.34184003,
+          "change_percent": 38.92340860010597,
+          "baseline_rounds": [
+            48912305.58516951,
+            48775611.52234188,
+            48911614.1507532,
+            47787093.78107677
+          ],
+          "candidate_rounds": [
+            66554793.65352326,
+            66930731.40456068,
+            68282780.52026752,
+            68280219.78900865
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 10,
+          "candidate": 11,
+          "change_percent": 10.000000000000009,
+          "baseline_rounds": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "candidate_rounds": [
+            11,
+            11,
+            11,
+            11
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 124531.75,
+          "candidate": 99499,
+          "change_percent": -20.101500219823453,
+          "baseline_rounds": [
+            72458,
+            133712,
+            111583,
+            180374
+          ],
+          "candidate_rounds": [
+            148705,
+            130831,
+            68459,
+            50001
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00110319775,
+          "candidate": 0.0011816565,
+          "change_percent": 7.111938906691928,
+          "baseline_rounds": [
+            0.001226875,
+            0.000960499,
+            0.00114796,
+            0.001077457
+          ],
+          "candidate_rounds": [
+            0.001504329,
+            0.001119795,
+            0.001070213,
+            0.001032289
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 98.62094779948313,
+          "candidate": 129.99943889946485,
+          "change_percent": 31.81726783216554,
+          "baseline_rounds": [
+            99.81391641655503,
+            98.10759315195789,
+            98.23720828506025,
+            98.3250733443594
+          ],
+          "candidate_rounds": [
+            130.22514842953896,
+            129.50116591194683,
+            130.3302585912854,
+            129.94118266508823
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 8929280.0,
+          "candidate": 8642560.0,
+          "change_percent": -3.2110091743119296,
+          "baseline_rounds": [
+            9011200,
+            8847360,
+            8585216,
+            9011200
+          ],
+          "candidate_rounds": [
+            8650752,
+            8634368,
+            8601600,
+            8798208
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1603480.0,
+          "candidate": 1726960.0,
+          "change_percent": 7.70075086686457,
+          "baseline_rounds": [
+            1603800,
+            1603480,
+            1603480,
+            1603320
+          ],
+          "candidate_rounds": [
+            1727016,
+            1726904,
+            1726696,
+            1727336
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 2316832.0,
+          "candidate": 2204512.0,
+          "change_percent": -4.847999337025732,
+          "baseline_rounds": [
+            2317232,
+            2265696,
+            2316912,
+            2316752
+          ],
+          "candidate_rounds": [
+            2204352,
+            2204240,
+            2253104,
+            2204672
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 49340.4,
+          "candidate": 50429.0,
+          "change_percent": 2.2063055832542977,
+          "baseline_rounds": [
+            49340.4,
+            49340.4,
+            49340.4,
+            49340.4
+          ],
+          "candidate_rounds": [
+            50429.2,
+            50429.2,
+            50428.4,
+            50429.2
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 4865997.012805618,
+          "candidate": 6555741.638097174,
+          "change_percent": 34.725558212319775,
+          "baseline_rounds": [
+            4924858.561559392,
+            4840667.889154863,
+            4847063.151668186,
+            4851398.4488400305
+          ],
+          "candidate_rounds": [
+            6567150.055182907,
+            6530640.196006749,
+            6572346.412344776,
+            6552829.888854268
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 1,
+          "candidate": 1,
+          "change_percent": 0.0,
+          "baseline_rounds": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "candidate_rounds": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 7291.5,
+          "candidate": 8728.75,
+          "change_percent": 19.711307687032843,
+          "baseline_rounds": [
+            9750,
+            6167,
+            7541,
+            5708
+          ],
+          "candidate_rounds": [
+            12375,
+            5875,
+            6082,
+            10583
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00018841675,
+          "candidate": 0.00021119775,
+          "change_percent": 12.090750954997365,
+          "baseline_rounds": [
+            0.000216793,
+            0.00022,
+            0.000163458,
+            0.000153416
+          ],
+          "candidate_rounds": [
+            0.000306667,
+            0.000166708,
+            0.000152791,
+            0.000218625
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 98.57857161645843,
+          "candidate": 129.54621365556204,
+          "change_percent": 31.414171996313776,
+          "baseline_rounds": [
+            98.52294272896808,
+            99.43708253257134,
+            98.49272608728673,
+            97.86153511700758
+          ],
+          "candidate_rounds": [
+            129.51832306185753,
+            129.63074313370745,
+            129.5344944993965,
+            129.50129392728675
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 9633792.0,
+          "candidate": 9723904.0,
+          "change_percent": 0.9353741496598733,
+          "baseline_rounds": [
+            9650176,
+            9617408,
+            9633792,
+            9633792
+          ],
+          "candidate_rounds": [
+            9732096,
+            9715712,
+            9732096,
+            9666560
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 3067860.0,
+          "candidate": 3009640.0,
+          "change_percent": -1.8977397925589834,
+          "baseline_rounds": [
+            3053360,
+            3053456,
+            3082264,
+            3082312
+          ],
+          "candidate_rounds": [
+            3009616,
+            2943344,
+            3144488,
+            3009664
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 3519928.0,
+          "candidate": 3507576.0,
+          "change_percent": -0.3509162687418632,
+          "baseline_rounds": [
+            3495408,
+            3495504,
+            3544352,
+            3544880
+          ],
+          "candidate_rounds": [
+            3507552,
+            3507232,
+            3560656,
+            3507600
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 49341.0,
+          "candidate": 50429.2,
+          "change_percent": 2.205468069151406,
+          "baseline_rounds": [
+            49340.4,
+            49342.0,
+            49340.4,
+            49341.2
+          ],
+          "candidate_rounds": [
+            50429.2,
+            50428.4,
+            50429.2,
+            50430.0
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 4863965.502124742,
+          "candidate": 6532911.891789229,
+          "change_percent": 34.312463543078906,
+          "baseline_rounds": [
+            4861161.403424377,
+            4906424.526322135,
+            4859670.502237162,
+            4828605.576515295
+          ],
+          "candidate_rounds": [
+            6531505.417351026,
+            6537070.967043852,
+            6532320.930008966,
+            6530750.2527530715
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 1,
+          "candidate": 1,
+          "change_percent": 0.0,
+          "baseline_rounds": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "candidate_rounds": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 7125,
+          "candidate": 8406.25,
+          "change_percent": 17.982456140350877,
+          "baseline_rounds": [
+            5584,
+            6416,
+            6083,
+            10417
+          ],
+          "candidate_rounds": [
+            9792,
+            8875,
+            8958,
+            6000
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00017081224999999998,
+          "candidate": 0.0001915,
+          "change_percent": 12.111397162674242,
+          "baseline_rounds": [
+            0.000166375,
+            0.000161165,
+            0.000162207,
+            0.000193502
+          ],
+          "candidate_rounds": [
+            0.000183749,
+            0.000196501,
+            0.000206125,
+            0.000179625
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 1579.8332506003112,
+          "candidate": 2051.0516104018257,
+          "change_percent": 29.82709470271365,
+          "baseline_rounds": [
+            1580.3147923277568,
+            1571.7700150749117,
+            1577.0554190652535,
+            1590.1927759333228
+          ],
+          "candidate_rounds": [
+            2059.6168100088453,
+            2065.2727961288438,
+            1995.0490701217211,
+            2084.267765347892
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 9003008.0,
+          "candidate": 9150464.0,
+          "change_percent": 1.6378525932666088,
+          "baseline_rounds": [
+            8847360,
+            9273344,
+            8781824,
+            9158656
+          ],
+          "candidate_rounds": [
+            9240576,
+            8978432,
+            9224192,
+            9076736
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1010064.0,
+          "candidate": 1309756.0,
+          "change_percent": 29.67059513060559,
+          "baseline_rounds": [
+            886528,
+            1147376,
+            1133600,
+            545664
+          ],
+          "candidate_rounds": [
+            1218856,
+            1583984,
+            1400656,
+            861032
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 2230896.0,
+          "candidate": 2231736.0,
+          "change_percent": 0.03765303268283837,
+          "baseline_rounds": [
+            2230896,
+            2230896,
+            2142272,
+            2231056
+          ],
+          "candidate_rounds": [
+            2231584,
+            2231792,
+            2231680,
+            2231792
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 29552.0625,
+          "candidate": 30640.1015625,
+          "change_percent": 3.6817703079099706,
+          "baseline_rounds": [
+            29552.078125,
+            29552.109375,
+            29552.078125,
+            29551.984375
+          ],
+          "candidate_rounds": [
+            30640.161458333332,
+            30640.119791666668,
+            30640.046875,
+            30640.078125
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 46687330.65552316,
+          "candidate": 62844430.41673997,
+          "change_percent": 34.60703264538729,
+          "baseline_rounds": [
+            46701586.20496302,
+            46449119.39783919,
+            46605264.95167099,
+            46993352.06761943
+          ],
+          "candidate_rounds": [
+            63106991.600968465,
+            63280205.87585815,
+            61128397.026454695,
+            63862127.16367857
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 34,
+          "candidate": 36,
+          "change_percent": 5.882352941176472,
+          "baseline_rounds": [
+            34,
+            34,
+            33,
+            35
+          ],
+          "candidate_rounds": [
+            36,
+            35,
+            37,
+            36
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 601938.5,
+          "candidate": 679282.5,
+          "change_percent": 12.849153194221664,
+          "baseline_rounds": [
+            553456,
+            660091,
+            603747,
+            590460
+          ],
+          "candidate_rounds": [
+            777707,
+            657798,
+            698252,
+            583373
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00306346825,
+          "candidate": 0.00351339875,
+          "change_percent": 14.686964684553194,
+          "baseline_rounds": [
+            0.002969242,
+            0.003163423,
+            0.00301763,
+            0.003103578
+          ],
+          "candidate_rounds": [
+            0.00369313,
+            0.003256672,
+            0.004153046,
+            0.002950747
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 1596.5164607175923,
+          "candidate": 2122.521428736024,
+          "change_percent": 32.947043200669945,
+          "baseline_rounds": [
+            1611.7315741943564,
+            1585.9477725385218,
+            1594.6842479663699,
+            1593.7022481711213
+          ],
+          "candidate_rounds": [
+            2133.3379022320073,
+            2091.270716619903,
+            2132.130799717122,
+            2133.346296375065
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 10674176.0,
+          "candidate": 10633216.0,
+          "change_percent": -0.38372985418265726,
+          "baseline_rounds": [
+            10420224,
+            10747904,
+            10731520,
+            10616832
+          ],
+          "candidate_rounds": [
+            10551296,
+            10846208,
+            10715136,
+            10518528
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 2796312.0,
+          "candidate": 3167504.0,
+          "change_percent": 13.274341346745278,
+          "baseline_rounds": [
+            2738600,
+            2810040,
+            2827624,
+            2782584
+          ],
+          "candidate_rounds": [
+            3025272,
+            3309736,
+            3514152,
+            2776664
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 3591856.0,
+          "candidate": 3577344.0,
+          "change_percent": -0.40402510568352534,
+          "baseline_rounds": [
+            3591856,
+            3591856,
+            3517488,
+            3631120
+          ],
+          "candidate_rounds": [
+            3632176,
+            3577104,
+            3577424,
+            3577264
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 29551.9296875,
+          "candidate": 30640.015625,
+          "change_percent": 3.6819454736326085,
+          "baseline_rounds": [
+            29551.911458333332,
+            29551.953125,
+            29551.953125,
+            29551.901041666668
+          ],
+          "candidate_rounds": [
+            30640.036458333332,
+            30640.015625,
+            30640.067708333332,
+            30639.942708333332
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 47180142.07021527,
+          "candidate": 65034089.72499861,
+          "change_percent": 37.842081162478095,
+          "baseline_rounds": [
+            47629748.77519182,
+            46867854.232756555,
+            47126034.14507803,
+            47096931.12783466
+          ],
+          "candidate_rounds": [
+            65365551.10233306,
+            64076567.43333877,
+            65328632.06635551,
+            65365608.297967084
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 14,
+          "candidate": 14.75,
+          "change_percent": 5.35714285714286,
+          "baseline_rounds": [
+            14,
+            14,
+            14,
+            14
+          ],
+          "candidate_rounds": [
+            15,
+            15,
+            14,
+            15
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 222366,
+          "candidate": 175353,
+          "change_percent": -21.14217101535306,
+          "baseline_rounds": [
+            133377,
+            204291,
+            283918,
+            267878
+          ],
+          "candidate_rounds": [
+            141249,
+            267377,
+            135497,
+            157289
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00153810625,
+          "candidate": 0.0015763215,
+          "change_percent": 2.4845650292364407,
+          "baseline_rounds": [
+            0.001469541,
+            0.001301751,
+            0.001708503,
+            0.00167263
+          ],
+          "candidate_rounds": [
+            0.001618499,
+            0.001540879,
+            0.001409208,
+            0.0017367
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "keygen",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 36.03945854457605,
+          "candidate": 48.201527790786464,
+          "change_percent": 33.746537093967554,
+          "baseline_rounds": [
+            35.81567685753251,
+            35.77179163739814,
+            35.83597872537396,
+            36.73438695799958
+          ],
+          "candidate_rounds": [
+            48.184268689535955,
+            48.25903442101368,
+            48.15822384444091,
+            48.20458420815532
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 6160384.0,
+          "candidate": 6291456.0,
+          "change_percent": 2.127659574468077,
+          "baseline_rounds": [
+            6176768,
+            6094848,
+            6144000,
+            6209536
+          ],
+          "candidate_rounds": [
+            6291456,
+            6307840,
+            6127616,
+            6291456
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 634376.0,
+          "candidate": 662840.0,
+          "change_percent": 4.486928887599784,
+          "baseline_rounds": [
+            634216,
+            634376,
+            634376,
+            634696
+          ],
+          "candidate_rounds": [
+            662760,
+            662968,
+            662760,
+            662920
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 634376.0,
+          "candidate": 662840.0,
+          "change_percent": 4.486928887599784,
+          "baseline_rounds": [
+            634216,
+            634376,
+            634376,
+            634696
+          ],
+          "candidate_rounds": [
+            662760,
+            662968,
+            662760,
+            662920
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 12037.666666666666,
+          "candidate": 13127.666666666666,
+          "change_percent": 9.05491097388753,
+          "baseline_rounds": [
+            12037.666666666666,
+            12037.666666666666,
+            12037.666666666666,
+            12037.666666666666
+          ],
+          "candidate_rounds": [
+            13127.666666666666,
+            13129.666666666666,
+            13127.666666666666,
+            13125.666666666666
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 433830.9888067583,
+          "candidate": 632773.6168866209,
+          "change_percent": 45.857173233993606,
+          "baseline_rounds": [
+            431137.1794520239,
+            430608.903800453,
+            431381.56656981,
+            442196.30540474626
+          ],
+          "candidate_rounds": [
+            632547.0179333315,
+            633625.0356031026,
+            632205.1098885388,
+            632717.3041215107
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "keygen",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 35.87267414260472,
+          "candidate": 48.04921232047217,
+          "change_percent": 33.943770485194456,
+          "baseline_rounds": [
+            36.0031367372851,
+            35.93395118777887,
+            35.95142963653675,
+            35.60217900881819
+          ],
+          "candidate_rounds": [
+            48.218942157256166,
+            47.8075030888129,
+            48.171131992779436,
+            47.99927204304019
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 6135808.0,
+          "candidate": 6144000.0,
+          "change_percent": 0.1335113484646211,
+          "baseline_rounds": [
+            6127616,
+            6144000,
+            6094848,
+            6160384
+          ],
+          "candidate_rounds": [
+            6144000,
+            6193152,
+            6144000,
+            6111232
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 634536.0,
+          "candidate": 662840.0,
+          "change_percent": 4.460582220709308,
+          "baseline_rounds": [
+            634696,
+            634376,
+            634376,
+            634696
+          ],
+          "candidate_rounds": [
+            662920,
+            662920,
+            662760,
+            662760
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 634536.0,
+          "candidate": 662840.0,
+          "change_percent": 4.460582220709308,
+          "baseline_rounds": [
+            634696,
+            634376,
+            634376,
+            634696
+          ],
+          "candidate_rounds": [
+            662920,
+            662920,
+            662760,
+            662760
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 12037.666666666666,
+          "candidate": 13125.666666666666,
+          "change_percent": 9.038296458339111,
+          "baseline_rounds": [
+            12037.666666666666,
+            12037.666666666666,
+            12037.666666666666,
+            12037.666666666666
+          ],
+          "candidate_rounds": [
+            13125.666666666666,
+            13125.666666666666,
+            13125.666666666666,
+            13125.666666666666
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 431823.29377062817,
+          "candidate": 630677.9445144109,
+          "change_percent": 46.05000554912364,
+          "baseline_rounds": [
+            433393.7589978589,
+            432560.9264147527,
+            432771.3261547506,
+            428567.16351515043
+          ],
+          "candidate_rounds": [
+            632905.7617754253,
+            627505.3497093952,
+            632278.2214932253,
+            630022.4450795979
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 4.716299481761534,
+          "candidate": 6.259647936232696,
+          "change_percent": 32.723716134640426,
+          "baseline_rounds": [
+            4.7201504682014015,
+            4.703769965478923,
+            4.722980468311064,
+            4.718297025054747
+          ],
+          "candidate_rounds": [
+            6.249603436621932,
+            6.255275712567804,
+            6.248886370337726,
+            6.28482622540332
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 6045696.0,
+          "candidate": 6062080.0,
+          "change_percent": 0.27100271002709064,
+          "baseline_rounds": [
+            6029312,
+            6062080,
+            6094848,
+            6012928
+          ],
+          "candidate_rounds": [
+            6094848,
+            6029312,
+            6160384,
+            5996544
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 463824.0,
+          "candidate": 469440.0,
+          "change_percent": 1.2108040981061885,
+          "baseline_rounds": [
+            463824,
+            463664,
+            464304,
+            463824
+          ],
+          "candidate_rounds": [
+            469840,
+            469360,
+            469520,
+            469200
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 463824.0,
+          "candidate": 469440.0,
+          "change_percent": 1.2108040981061885,
+          "baseline_rounds": [
+            463824,
+            463664,
+            464304,
+            463824
+          ],
+          "candidate_rounds": [
+            469840,
+            469360,
+            469520,
+            469200
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 29885.333333333332,
+          "candidate": 30973.333333333332,
+          "change_percent": 3.640581779245111,
+          "baseline_rounds": [
+            29885.333333333332,
+            29885.333333333332,
+            29885.333333333332,
+            29885.333333333332
+          ],
+          "candidate_rounds": [
+            30973.333333333332,
+            30973.333333333332,
+            30973.333333333332,
+            30973.333333333332
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 140948.1821122707,
+          "candidate": 193882.16207824735,
+          "change_percent": 37.55563156097512,
+          "baseline_rounds": [
+            141063.2701256883,
+            140573.73334165945,
+            141147.84562229892,
+            141007.87935943613
+          ],
+          "candidate_rounds": [
+            193571.05044363663,
+            193746.7397372668,
+            193548.84051059384,
+            194662.01762149215
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 4.748351010560121,
+          "candidate": 6.271099271965032,
+          "change_percent": 32.06899106697012,
+          "baseline_rounds": [
+            4.687823811429775,
+            4.806202885443954,
+            4.696626006655054,
+            4.802751338711704
+          ],
+          "candidate_rounds": [
+            6.27872790092884,
+            6.289064260610437,
+            6.294212476034235,
+            6.222392450286616
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 5996544.0,
+          "candidate": 6053888.0,
+          "change_percent": 0.95628415300546,
+          "baseline_rounds": [
+            5963776,
+            5996544,
+            6012928,
+            5996544
+          ],
+          "candidate_rounds": [
+            6127616,
+            6012928,
+            6094848,
+            6012928
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 463664.0,
+          "candidate": 469520.0,
+          "change_percent": 1.2629835398046962,
+          "baseline_rounds": [
+            463664,
+            463664,
+            463664,
+            463824
+          ],
+          "candidate_rounds": [
+            470000,
+            469520,
+            469200,
+            469520
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 463664.0,
+          "candidate": 469520.0,
+          "change_percent": 1.2629835398046962,
+          "baseline_rounds": [
+            463664,
+            463664,
+            463664,
+            463824
+          ],
+          "candidate_rounds": [
+            470000,
+            469520,
+            469200,
+            469520
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 29885.333333333332,
+          "candidate": 30973.333333333332,
+          "change_percent": 3.640581779245111,
+          "baseline_rounds": [
+            29885.333333333332,
+            29885.333333333332,
+            29885.333333333332,
+            29885.333333333332
+          ],
+          "candidate_rounds": [
+            30973.333333333332,
+            30973.333333333332,
+            30973.333333333332,
+            30973.333333333332
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 141906.0527342594,
+          "candidate": 194236.84811699693,
+          "change_percent": 36.87707069178712,
+          "baseline_rounds": [
+            140097.17721251596,
+            143634.97529912103,
+            140360.2337508885,
+            143531.82467451217
+          ],
+          "candidate_rounds": [
+            194473.13218476926,
+            194793.28369864062,
+            194952.7410910337,
+            192728.2354935441
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 4425.460978789475,
+          "candidate": 5617.741422882002,
+          "change_percent": 26.941384181375348,
+          "baseline_rounds": [
+            4451.236360095765,
+            4430.406063142225,
+            4439.053505531751,
+            4381.1479863881605
+          ],
+          "candidate_rounds": [
+            5614.395478145413,
+            5671.759827601985,
+            5681.778343206789,
+            5503.03204257382
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 8888320.0,
+          "candidate": 8847360.0,
+          "change_percent": -0.4608294930875556,
+          "baseline_rounds": [
+            8896512,
+            8880128,
+            8765440,
+            9060352
+          ],
+          "candidate_rounds": [
+            8749056,
+            8814592,
+            9224192,
+            8880128
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1170968.0,
+          "candidate": 751680.0,
+          "change_percent": -35.80695629598759,
+          "baseline_rounds": [
+            772728,
+            1340344,
+            1040952,
+            1300984
+          ],
+          "candidate_rounds": [
+            636840,
+            1039448,
+            613000,
+            866520
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 2052960.0,
+          "candidate": 2041096.0,
+          "change_percent": -0.5778972800249416,
+          "baseline_rounds": [
+            2053040,
+            2052720,
+            2052880,
+            2053088
+          ],
+          "candidate_rounds": [
+            2040992,
+            2041152,
+            2041040,
+            2041312
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 16652.509114583332,
+          "candidate": 17740.537760416664,
+          "change_percent": 6.533721965541495,
+          "baseline_rounds": [
+            16652.528645833332,
+            16652.466145833332,
+            16652.528645833332,
+            16652.513020833332
+          ],
+          "candidate_rounds": [
+            17740.513020833332,
+            17740.559895833332,
+            17740.528645833332,
+            17740.549479166668
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 73695029.38135532,
+          "candidate": 99661753.6785392,
+          "change_percent": 35.2353808868328,
+          "baseline_rounds": [
+            74124340.99586964,
+            73777186.97877064,
+            73921465.66125438,
+            72957123.88952659
+          ],
+          "candidate_rounds": [
+            99602256.08414648,
+            100620194.93635437,
+            100797751.4569355,
+            97626812.23672046
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 43,
+          "candidate": 48,
+          "change_percent": 11.627906976744185,
+          "baseline_rounds": [
+            43,
+            43,
+            43,
+            43
+          ],
+          "candidate_rounds": [
+            50,
+            47,
+            48,
+            47
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 680178,
+          "candidate": 859154.75,
+          "change_percent": 26.313222421189742,
+          "baseline_rounds": [
+            637042,
+            645456,
+            634999,
+            803215
+          ],
+          "candidate_rounds": [
+            916333,
+            777334,
+            788244,
+            954708
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.003800369,
+          "candidate": 0.00446551025,
+          "change_percent": 17.50201756724148,
+          "baseline_rounds": [
+            0.003612035,
+            0.003616085,
+            0.003448177,
+            0.004525179
+          ],
+          "candidate_rounds": [
+            0.004860249,
+            0.004057293,
+            0.004100995,
+            0.004843504
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 4533.48420445426,
+          "candidate": 5660.611747565162,
+          "change_percent": 24.862280142135962,
+          "baseline_rounds": [
+            4487.92309537058,
+            4680.386570861165,
+            4458.302198325684,
+            4507.324953259613
+          ],
+          "candidate_rounds": [
+            5697.206113489391,
+            5864.091289103704,
+            5748.001044227674,
+            5333.148543439878
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 10158080.0,
+          "candidate": 10289152.0,
+          "change_percent": 1.2903225806451646,
+          "baseline_rounds": [
+            10305536,
+            9928704,
+            10321920,
+            10010624
+          ],
+          "candidate_rounds": [
+            10420224,
+            10174464,
+            10403840,
+            10059776
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 2504688.0,
+          "candidate": 2448240.0,
+          "change_percent": -2.2536938732488854,
+          "baseline_rounds": [
+            2470376,
+            2539000,
+            3030152,
+            2139768
+          ],
+          "candidate_rounds": [
+            2703688,
+            1577592,
+            2216152,
+            2680328
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 3229792.0,
+          "candidate": 3229064.0,
+          "change_percent": -0.022540151192396163,
+          "baseline_rounds": [
+            3228416,
+            3232816,
+            3225248,
+            3231168
+          ],
+          "candidate_rounds": [
+            3221904,
+            3236224,
+            3217968,
+            3329648
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 16652.420572916664,
+          "candidate": 17740.4453125,
+          "change_percent": 6.533733248083395,
+          "baseline_rounds": [
+            16652.419270833332,
+            16652.419270833332,
+            16652.419270833332,
+            16652.424479166668
+          ],
+          "candidate_rounds": [
+            17740.450520833332,
+            17740.434895833332,
+            17740.440104166668,
+            17740.455729166668
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 75493485.59918535,
+          "candidate": 100421771.69417217,
+          "change_percent": 33.02044659500505,
+          "baseline_rounds": [
+            74734777.03936704,
+            77939759.527558,
+            74241517.44259723,
+            75057888.38721912
+          ],
+          "candidate_rounds": [
+            101071003.16334772,
+            104031529.73756762,
+            101972068.24380851,
+            94612485.63196485
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 18,
+          "candidate": 21,
+          "change_percent": 16.666666666666675,
+          "baseline_rounds": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "candidate_rounds": [
+            21,
+            21,
+            21,
+            21
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 240125.25,
+          "candidate": 309779.25,
+          "change_percent": 29.007361783069463,
+          "baseline_rounds": [
+            300207,
+            119371,
+            297503,
+            243420
+          ],
+          "candidate_rounds": [
+            386831,
+            321166,
+            358540,
+            172580
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00173501,
+          "candidate": 0.00214701775,
+          "change_percent": 23.746707511772257,
+          "baseline_rounds": [
+            0.001754083,
+            0.001780366,
+            0.001700214,
+            0.001705377
+          ],
+          "candidate_rounds": [
+            0.002172457,
+            0.002100999,
+            0.002016206,
+            0.002298409
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "keygen",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 1492.269425453929,
+          "candidate": 1977.7780012701578,
+          "change_percent": 32.53491410698464,
+          "baseline_rounds": [
+            1492.7380857770531,
+            1490.719759970826,
+            1493.370856765061,
+            1492.248999302776
+          ],
+          "candidate_rounds": [
+            1973.0387745382181,
+            1978.4684820774019,
+            1977.6157739083762,
+            1981.9889745566345
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 9158656.0,
+          "candidate": 9142272.0,
+          "change_percent": -0.17889087656529634,
+          "baseline_rounds": [
+            9404416,
+            9142272,
+            9175040,
+            9142272
+          ],
+          "candidate_rounds": [
+            9256960,
+            9043968,
+            9043968,
+            9240576
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1764828.0,
+          "candidate": 1511364.0,
+          "change_percent": -14.361966151942285,
+          "baseline_rounds": [
+            1785480,
+            1744176,
+            1832000,
+            1697648
+          ],
+          "candidate_rounds": [
+            1375520,
+            1509080,
+            1602048,
+            1513648
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 2678440.0,
+          "candidate": 2451648.0,
+          "change_percent": -8.467316796344138,
+          "baseline_rounds": [
+            2678280,
+            2678440,
+            2678600,
+            2678440
+          ],
+          "candidate_rounds": [
+            2452072,
+            2451432,
+            2451272,
+            2451864
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 44747.99479166667,
+          "candidate": 46124.338541666664,
+          "change_percent": 3.075766314016626,
+          "baseline_rounds": [
+            44747.989583333336,
+            44748.010416666664,
+            44747.989583333336,
+            44747.989583333336
+          ],
+          "candidate_rounds": [
+            46124.385416666664,
+            46124.385416666664,
+            46124.28125,
+            46124.302083333336
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 66776064.469904654,
+          "candidate": 91223702.00734165,
+          "change_percent": 36.611378240859516,
+          "baseline_rounds": [
+            66797028.31299651,
+            66706743.34750536,
+            66825343.54257653,
+            66775142.67654021
+          ],
+          "candidate_rounds": [
+            91005200.87882847,
+            91255642.80206555,
+            91216106.16018635,
+            91417858.18828627
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 20,
+          "candidate": 21,
+          "change_percent": 5.000000000000004,
+          "baseline_rounds": [
+            20,
+            20,
+            20,
+            20
+          ],
+          "candidate_rounds": [
+            21,
+            21,
+            21,
+            21
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 301991.5,
+          "candidate": 329135.5,
+          "change_percent": 8.98833245306574,
+          "baseline_rounds": [
+            300211,
+            326296,
+            288544,
+            292915
+          ],
+          "candidate_rounds": [
+            340663,
+            362669,
+            310666,
+            302544
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00173609675,
+          "candidate": 0.001820969,
+          "change_percent": 4.888682039177827,
+          "baseline_rounds": [
+            0.001686961,
+            0.001826214,
+            0.001653878,
+            0.001777334
+          ],
+          "candidate_rounds": [
+            0.001955788,
+            0.001899836,
+            0.001770039,
+            0.001658213
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "keygen",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 1511.0699605464538,
+          "candidate": 2025.1314484272968,
+          "change_percent": 34.019701357503074,
+          "baseline_rounds": [
+            1516.782990492188,
+            1497.7073668968644,
+            1510.380918854392,
+            1519.4085659423704
+          ],
+          "candidate_rounds": [
+            2026.2800822583176,
+            2018.7947690083458,
+            2034.318082526579,
+            2021.1328599159447
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 10502144.0,
+          "candidate": 10543104.0,
+          "change_percent": 0.3900156006240163,
+          "baseline_rounds": [
+            10469376,
+            10698752,
+            10534912,
+            10371072
+          ],
+          "candidate_rounds": [
+            10534912,
+            10551296,
+            10633216,
+            10534912
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 2683424.0,
+          "candidate": 3114596.0,
+          "change_percent": 16.067978821088282,
+          "baseline_rounds": [
+            2724968,
+            2593504,
+            2683344,
+            2683504
+          ],
+          "candidate_rounds": [
+            1258560,
+            2851024,
+            3432464,
+            3378168
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 3841992.0,
+          "candidate": 3835064.0,
+          "change_percent": -0.18032312404606676,
+          "baseline_rounds": [
+            3841992,
+            3841992,
+            3841832,
+            3841992
+          ],
+          "candidate_rounds": [
+            3834840,
+            4046576,
+            3835224,
+            3834904
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 44747.973958333336,
+          "candidate": 46124.296875,
+          "change_percent": 3.075721188959779,
+          "baseline_rounds": [
+            44747.96875,
+            44747.989583333336,
+            44747.96875,
+            44747.96875
+          ],
+          "candidate_rounds": [
+            46124.260416666664,
+            46124.364583333336,
+            46124.302083333336,
+            46124.260416666664
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 67617319.17415565,
+          "candidate": 93407764.0688358,
+          "change_percent": 38.14177374919892,
+          "baseline_rounds": [
+            67872957.85907598,
+            67019393.652782485,
+            67586478.15749262,
+            67990447.02727151
+          ],
+          "candidate_rounds": [
+            93460670.1911874,
+            93115625.94466715,
+            93831501.77204336,
+            93223258.3674453
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 10,
+          "candidate": 11,
+          "change_percent": 10.000000000000009,
+          "baseline_rounds": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "candidate_rounds": [
+            11,
+            11,
+            11,
+            11
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 109562.75,
+          "candidate": 66166.5,
+          "change_percent": -39.60858047100862,
+          "baseline_rounds": [
+            96501,
+            159041,
+            69834,
+            112875
+          ],
+          "candidate_rounds": [
+            59499,
+            79205,
+            39543,
+            86419
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.0010633125,
+          "candidate": 0.0010541575,
+          "change_percent": -0.860988655733852,
+          "baseline_rounds": [
+            0.00116625,
+            0.000956,
+            0.00101875,
+            0.00111225
+          ],
+          "candidate_rounds": [
+            0.001033335,
+            0.001047503,
+            0.000948125,
+            0.001187667
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "sign",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 53.63421469602739,
+          "candidate": 73.1623553908011,
+          "change_percent": 36.40985666602876,
+          "baseline_rounds": [
+            53.820126410021906,
+            53.755422904924394,
+            53.70472802193753,
+            53.25658144722574
+          ],
+          "candidate_rounds": [
+            73.22386365716586,
+            73.09665686267232,
+            73.02599077977492,
+            73.30291026359127
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 8953856.0,
+          "candidate": 9019392.0,
+          "change_percent": 0.7319304666056681,
+          "baseline_rounds": [
+            9060352,
+            8634368,
+            9027584,
+            8880128
+          ],
+          "candidate_rounds": [
+            9027584,
+            9011200,
+            9175040,
+            8814592
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 901288.0,
+          "candidate": 988448.0,
+          "change_percent": 9.670604734557653,
+          "baseline_rounds": [
+            651256,
+            937360,
+            1033144,
+            865216
+          ],
+          "candidate_rounds": [
+            939736,
+            1051576,
+            757456,
+            1037160
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 2610512.0,
+          "candidate": 2584452.0,
+          "change_percent": -0.9982716034249273,
+          "baseline_rounds": [
+            2610432,
+            2319512,
+            2610640,
+            2610592
+          ],
+          "candidate_rounds": [
+            2633904,
+            2633584,
+            2535320,
+            2439216
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 97279.55555555556,
+          "candidate": 98655.88888888889,
+          "change_percent": 1.4148228016392483,
+          "baseline_rounds": [
+            97278.88888888889,
+            97280.22222222222,
+            97280.22222222222,
+            97278.88888888889
+          ],
+          "candidate_rounds": [
+            98656.22222222222,
+            98654.88888888889,
+            98656.22222222222,
+            98656.22222222222
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 5217512.632107969,
+          "candidate": 7217897.226183783,
+          "change_percent": 38.33981314708619,
+          "baseline_rounds": [
+            5235562.097026476,
+            5229339.4858405795,
+            5224407.876358087,
+            5180741.069206734
+          ],
+          "candidate_rounds": [
+            7223989.764931058,
+            7211342.560936175,
+            7204468.374367425,
+            7231788.204500475
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 2,
+          "candidate": 2,
+          "change_percent": 0.0,
+          "baseline_rounds": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "candidate_rounds": [
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 26239.5,
+          "candidate": 31729.25,
+          "change_percent": 20.921702014138987,
+          "baseline_rounds": [
+            35959,
+            19416,
+            13708,
+            35875
+          ],
+          "candidate_rounds": [
+            54666,
+            19334,
+            23250,
+            29667
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00034442749999999997,
+          "candidate": 0.00034547924999999997,
+          "change_percent": 0.3053617960238286,
+          "baseline_rounds": [
+            0.000342709,
+            0.000349418,
+            0.000334916,
+            0.000350667
+          ],
+          "candidate_rounds": [
+            0.00045729,
+            0.000281501,
+            0.000318043,
+            0.000325083
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "sign",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 53.128547552204886,
+          "candidate": 73.17013625911707,
+          "change_percent": 37.72282441416082,
+          "baseline_rounds": [
+            53.64798536420966,
+            53.788155376941994,
+            51.29405277516855,
+            53.783996692499336
+          ],
+          "candidate_rounds": [
+            73.0628947357344,
+            73.08090309726003,
+            73.2524707447945,
+            73.28427645867934
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 10117120.0,
+          "candidate": 10018816.0,
+          "change_percent": -0.9716599190283448,
+          "baseline_rounds": [
+            10092544,
+            10141696,
+            10371072,
+            9797632
+          ],
+          "candidate_rounds": [
+            10305536,
+            10027008,
+            9945088,
+            10010624
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1593004.0,
+          "candidate": 2047672.0,
+          "change_percent": 28.541547918272634,
+          "baseline_rounds": [
+            1583288,
+            1602768,
+            1583128,
+            1602720
+          ],
+          "candidate_rounds": [
+            2267320,
+            2252472,
+            1842872,
+            1807296
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 3726652.0,
+          "candidate": 3716472.0,
+          "change_percent": -0.2731674435928033,
+          "baseline_rounds": [
+            3775232,
+            3678232,
+            3775072,
+            3678184
+          ],
+          "candidate_rounds": [
+            3814416,
+            3716472,
+            3716472,
+            3618656
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 97278.77777777778,
+          "candidate": 98655.44444444444,
+          "change_percent": 1.4151767714552177,
+          "baseline_rounds": [
+            97278.44444444444,
+            97279.77777777778,
+            97278.44444444444,
+            97278.44444444444
+          ],
+          "candidate_rounds": [
+            98655.77777777778,
+            98655.77777777778,
+            98654.44444444444,
+            98655.77777777778
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 5168280.3908563135,
+          "candidate": 7218632.2852589255,
+          "change_percent": 39.671839361310205,
+          "baseline_rounds": [
+            5218792.563808638,
+            5232499.8021455,
+            4989805.663219635,
+            5232023.53425148
+          ],
+          "candidate_rounds": [
+            7208076.706849784,
+            7209853.335762597,
+            7226681.805510621,
+            7229917.292912701
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 1,
+          "candidate": 1,
+          "change_percent": 0.0,
+          "baseline_rounds": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "candidate_rounds": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 9624.75,
+          "candidate": 7844,
+          "change_percent": -18.501779266993946,
+          "baseline_rounds": [
+            11416,
+            9375,
+            8291,
+            9417
+          ],
+          "candidate_rounds": [
+            7292,
+            12208,
+            5834,
+            6042
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00019489575,
+          "candidate": 0.00019825025,
+          "change_percent": 1.7211765777344956,
+          "baseline_rounds": [
+            0.000198791,
+            0.000218167,
+            0.000181582,
+            0.000181043
+          ],
+          "candidate_rounds": [
+            0.0002065,
+            0.000234417,
+            0.000171083,
+            0.000181001
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "verify",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 985.0065902520556,
+          "candidate": 1365.9007704019664,
+          "change_percent": 38.669201193104996,
+          "baseline_rounds": [
+            990.8848483447547,
+            989.0091312225454,
+            967.1243822068003,
+            993.0079992341219
+          ],
+          "candidate_rounds": [
+            1367.6846872406304,
+            1364.6157989383826,
+            1366.058659481995,
+            1365.2439359468574
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 9289728.0,
+          "candidate": 9175040.0,
+          "change_percent": -1.2345679012345734,
+          "baseline_rounds": [
+            9175040,
+            9682944,
+            9256960,
+            9322496
+          ],
+          "candidate_rounds": [
+            9469952,
+            9027584,
+            9060352,
+            9289728
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 999708.0,
+          "candidate": 879828.0,
+          "change_percent": -11.991501518443382,
+          "baseline_rounds": [
+            918488,
+            1080928,
+            1081104,
+            915776
+          ],
+          "candidate_rounds": [
+            879336,
+            880320,
+            822808,
+            1435736
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 2700896.0,
+          "candidate": 2463480.0,
+          "change_percent": -8.79026811843181,
+          "baseline_rounds": [
+            2700976,
+            2700656,
+            2700816,
+            2700976
+          ],
+          "candidate_rounds": [
+            2463608,
+            2520768,
+            2463352,
+            2463192
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 54264.27864583333,
+          "candidate": 55640.427083333336,
+          "change_percent": 2.5360116670521293,
+          "baseline_rounds": [
+            54264.328125,
+            54264.244791666664,
+            54264.265625,
+            54264.276041666664
+          ],
+          "candidate_rounds": [
+            55640.369791666664,
+            55640.505208333336,
+            55640.473958333336,
+            55640.359375
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 53450672.17325794,
+          "candidate": 75999302.18094,
+          "change_percent": 42.185867999174455,
+          "baseline_rounds": [
+            53769700.54467063,
+            53667833.59785379,
+            52480294.368483834,
+            53884860.18202352
+          ],
+          "candidate_rounds": [
+            76098481.75646865,
+            75927912.46820502,
+            76008151.26846369,
+            75962663.23062262
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 51.5,
+          "candidate": 54.5,
+          "change_percent": 5.825242718446599,
+          "baseline_rounds": [
+            51,
+            52,
+            52,
+            51
+          ],
+          "candidate_rounds": [
+            55,
+            54,
+            54,
+            55
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 2094512.75,
+          "candidate": 890250.75,
+          "change_percent": -57.49604532128056,
+          "baseline_rounds": [
+            838457,
+            878172,
+            5812004,
+            849418
+          ],
+          "candidate_rounds": [
+            880963,
+            895166,
+            893377,
+            891497
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.005262399,
+          "candidate": 0.00446631225,
+          "change_percent": -15.12782953174019,
+          "baseline_rounds": [
+            0.004601377,
+            0.004529301,
+            0.007590874,
+            0.004328044
+          ],
+          "candidate_rounds": [
+            0.004536206,
+            0.004427785,
+            0.004300878,
+            0.00460038
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192f",
+      "operation": "verify",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 1004.192589124948,
+          "candidate": 1375.9841870589084,
+          "change_percent": 37.0239336518047,
+          "baseline_rounds": [
+            995.195262066103,
+            1005.948780278852,
+            1007.9041622673417,
+            1007.7221518874951
+          ],
+          "candidate_rounds": [
+            1369.1554579735957,
+            1371.4158674646208,
+            1395.2454321329126,
+            1368.119990664505
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 10706944.0,
+          "candidate": 10797056.0,
+          "change_percent": 0.8416220351951109,
+          "baseline_rounds": [
+            10797056,
+            10584064,
+            10682368,
+            10731520
+          ],
+          "candidate_rounds": [
+            10911744,
+            10846208,
+            10649600,
+            10747904
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 2395980.0,
+          "candidate": 2429120.0,
+          "change_percent": 1.383150109767195,
+          "baseline_rounds": [
+            2163312,
+            2329640,
+            2496728,
+            2462320
+          ],
+          "candidate_rounds": [
+            2279288,
+            2603960,
+            2377064,
+            2481176
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 3786896.0,
+          "candidate": 3798344.0,
+          "change_percent": 0.3023056350108355,
+          "baseline_rounds": [
+            3786896,
+            3786896,
+            3787376,
+            3786736
+          ],
+          "candidate_rounds": [
+            3798024,
+            3798440,
+            3798296,
+            3798392
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 54264.07291666667,
+          "candidate": 55640.208333333336,
+          "change_percent": 2.535997286418201,
+          "baseline_rounds": [
+            54264.067708333336,
+            54264.067708333336,
+            54264.078125,
+            54264.078125
+          ],
+          "candidate_rounds": [
+            55640.203125,
+            55640.192708333336,
+            55640.171875,
+            55640.265625
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 54491579.89750959,
+          "candidate": 76560046.5698701,
+          "change_percent": 40.498856362520506,
+          "baseline_rounds": [
+            54003343.083767556,
+            54586872.72416696,
+            54692990.20378771,
+            54683113.57831615
+          ],
+          "candidate_rounds": [
+            76180087.79135327,
+            76305843.14899762,
+            77631695.65168391,
+            76122559.68744558
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 25,
+          "candidate": 26,
+          "change_percent": 4.0000000000000036,
+          "baseline_rounds": [
+            25,
+            25,
+            25,
+            25
+          ],
+          "candidate_rounds": [
+            26,
+            26,
+            26,
+            26
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 237095.5,
+          "candidate": 365917.75,
+          "change_percent": 54.33348587383564,
+          "baseline_rounds": [
+            459378,
+            188170,
+            135584,
+            165250
+          ],
+          "candidate_rounds": [
+            432876,
+            406459,
+            133291,
+            491045
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00246716975,
+          "candidate": 0.00235882275,
+          "change_percent": -4.3915502773978154,
+          "baseline_rounds": [
+            0.002446465,
+            0.002622464,
+            0.002374457,
+            0.002425293
+          ],
+          "candidate_rounds": [
+            0.002319085,
+            0.002277543,
+            0.002248661,
+            0.002590002
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "keygen",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 24.09586123537334,
+          "candidate": 32.43782402829824,
+          "change_percent": 34.61989887574004,
+          "baseline_rounds": [
+            24.11746612048953,
+            24.023880746464975,
+            24.133201200973073,
+            24.108896873565786
+          ],
+          "candidate_rounds": [
+            32.451715285508755,
+            32.386380312589296,
+            32.45145200918845,
+            32.461748505906435
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 6610944.0,
+          "candidate": 6717440.0,
+          "change_percent": 1.610904584882289,
+          "baseline_rounds": [
+            6602752,
+            6553600,
+            6619136,
+            6750208
+          ],
+          "candidate_rounds": [
+            6782976,
+            6733824,
+            6701056,
+            6619136
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1071016.0,
+          "candidate": 1106888.0,
+          "change_percent": 3.349343053698539,
+          "baseline_rounds": [
+            1070696,
+            1071336,
+            1071016,
+            1071016
+          ],
+          "candidate_rounds": [
+            1106808,
+            1107128,
+            1106648,
+            1106968
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 1071016.0,
+          "candidate": 1106888.0,
+          "change_percent": 3.349343053698539,
+          "baseline_rounds": [
+            1070696,
+            1071336,
+            1071016,
+            1071016
+          ],
+          "candidate_rounds": [
+            1106808,
+            1107128,
+            1106648,
+            1106968
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 20901.666666666668,
+          "candidate": 22281.166666666668,
+          "change_percent": 6.599952156925282,
+          "baseline_rounds": [
+            20901.666666666668,
+            20901.666666666668,
+            20901.666666666668,
+            20901.666666666668
+          ],
+          "candidate_rounds": [
+            22283.0,
+            22281.0,
+            22277.666666666668,
+            22283.0
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 503643.65958802844,
+          "candidate": 722752.5710297343,
+          "change_percent": 43.50474929455741,
+          "baseline_rounds": [
+            504095.2376950987,
+            502139.14740236214,
+            504424.1271023388,
+            503916.12615231425
+          ],
+          "candidate_rounds": [
+            723121.5717069915,
+            721600.9397448021,
+            722942.6307100306,
+            723345.141957113
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "keygen",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 24.10142590815143,
+          "candidate": 32.36331166118792,
+          "change_percent": 34.279655421724286,
+          "baseline_rounds": [
+            24.05889518900799,
+            24.111421894502232,
+            24.109224817862444,
+            24.12616173123305
+          ],
+          "candidate_rounds": [
+            32.40475518071091,
+            32.18800835426882,
+            32.47779346434152,
+            32.38268964543044
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 6610944.0,
+          "candidate": 6651904.0,
+          "change_percent": 0.6195786864931829,
+          "baseline_rounds": [
+            6619136,
+            6602752,
+            6602752,
+            6619136
+          ],
+          "candidate_rounds": [
+            6750208,
+            6651904,
+            6651904,
+            6602752
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1070936.0,
+          "candidate": 1106968.0,
+          "change_percent": 3.364533454846974,
+          "baseline_rounds": [
+            1071016,
+            1070856,
+            1070696,
+            1071016
+          ],
+          "candidate_rounds": [
+            1106808,
+            1106968,
+            1106968,
+            1107128
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 1070936.0,
+          "candidate": 1106968.0,
+          "change_percent": 3.364533454846974,
+          "baseline_rounds": [
+            1071016,
+            1070856,
+            1070696,
+            1071016
+          ],
+          "candidate_rounds": [
+            1106808,
+            1106968,
+            1106968,
+            1107128
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 20901.666666666668,
+          "candidate": 22279.833333333336,
+          "change_percent": 6.593573080296622,
+          "baseline_rounds": [
+            20901.666666666668,
+            20901.666666666668,
+            20901.666666666668,
+            20901.666666666668
+          ],
+          "candidate_rounds": [
+            22277.666666666668,
+            22281.0,
+            22283.0,
+            22277.666666666668
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 503759.9705235451,
+          "candidate": 721049.1964823052,
+          "change_percent": 43.133483935402175,
+          "baseline_rounds": [
+            502871.00760891533,
+            503968.9032982541,
+            503922.9807346881,
+            504276.9904523228
+          ],
+          "candidate_rounds": [
+            721902.3343308175,
+            717181.0141414636,
+            723702.671765922,
+            721410.7656910175
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "sign",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 2.310016772595658,
+          "candidate": 3.1693606377759105,
+          "change_percent": 37.200763015008235,
+          "baseline_rounds": [
+            2.3161613659803155,
+            2.2941609493467428,
+            2.3149935140942466,
+            2.314751260961328
+          ],
+          "candidate_rounds": [
+            3.1650107337541025,
+            3.1720462368032964,
+            3.174555163235563,
+            3.16583041731068
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 6430720.0,
+          "candidate": 6365184.0,
+          "change_percent": -1.0191082802547768,
+          "baseline_rounds": [
+            6422528,
+            6471680,
+            6356992,
+            6438912
+          ],
+          "candidate_rounds": [
+            6291456,
+            6422528,
+            6324224,
+            6406144
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 769240.0,
+          "candidate": 776216.0,
+          "change_percent": 0.9068691175705856,
+          "baseline_rounds": [
+            769080,
+            769080,
+            769400,
+            769400
+          ],
+          "candidate_rounds": [
+            776344,
+            776296,
+            776136,
+            776136
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 769240.0,
+          "candidate": 776216.0,
+          "change_percent": 0.9068691175705856,
+          "baseline_rounds": [
+            769080,
+            769080,
+            769400,
+            769400
+          ],
+          "candidate_rounds": [
+            776344,
+            776296,
+            776136,
+            776136
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 49733.333333333336,
+          "candidate": 51113.333333333336,
+          "change_percent": 2.7747989276139418,
+          "baseline_rounds": [
+            49733.333333333336,
+            49733.333333333336,
+            49733.333333333336,
+            49733.333333333336
+          ],
+          "candidate_rounds": [
+            51125.333333333336,
+            51109.333333333336,
+            51109.333333333336,
+            51109.333333333336
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 114884.83415709074,
+          "candidate": 161996.56933256995,
+          "change_percent": 41.007793170558756,
+          "baseline_rounds": [
+            115190.4252680877,
+            114096.271214178,
+            115132.34410095387,
+            115120.29604514338
+          ],
+          "candidate_rounds": [
+            161812.2287667564,
+            162121.1684655253,
+            162249.3980228608,
+            161803.4820751373
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "sign",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 2.3147796123486013,
+          "candidate": 3.170377508069953,
+          "change_percent": 36.96239119944782,
+          "baseline_rounds": [
+            2.3139287175947656,
+            2.312823365037776,
+            2.3152261426075116,
+            2.3171402241543526
+          ],
+          "candidate_rounds": [
+            3.1523413632466037,
+            3.175987417796513,
+            3.1756816192785333,
+            3.1774996319581614
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 6381568.0,
+          "candidate": 6414336.0,
+          "change_percent": 0.5134788189987249,
+          "baseline_rounds": [
+            6406144,
+            6356992,
+            6471680,
+            6356992
+          ],
+          "candidate_rounds": [
+            6406144,
+            6422528,
+            6275072,
+            6438912
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 769320.0,
+          "candidate": 776216.0,
+          "change_percent": 0.8963760203816395,
+          "baseline_rounds": [
+            769400,
+            769400,
+            769240,
+            769240
+          ],
+          "candidate_rounds": [
+            776136,
+            776776,
+            776136,
+            776296
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 769320.0,
+          "candidate": 776216.0,
+          "change_percent": 0.8963760203816395,
+          "baseline_rounds": [
+            769400,
+            769400,
+            769240,
+            769240
+          ],
+          "candidate_rounds": [
+            776136,
+            776776,
+            776136,
+            776296
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 49733.333333333336,
+          "candidate": 51109.333333333336,
+          "change_percent": 2.76675603217158,
+          "baseline_rounds": [
+            49733.333333333336,
+            49733.333333333336,
+            49733.333333333336,
+            49733.333333333336
+          ],
+          "candidate_rounds": [
+            51109.333333333336,
+            51109.333333333336,
+            51109.333333333336,
+            51109.333333333336
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 115121.70605413712,
+          "candidate": 162035.88085244992,
+          "change_percent": 40.75180641976497,
+          "baseline_rounds": [
+            115079.38822171302,
+            115024.41535454537,
+            115143.91349234692,
+            115239.10714794313
+          ],
+          "candidate_rounds": [
+            161114.06551462508,
+            162322.59959863458,
+            162306.9704402463,
+            162399.88785629367
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "verify",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 2518.6115186565157,
+          "candidate": 3468.7578507504413,
+          "change_percent": 37.7250054268296,
+          "baseline_rounds": [
+            2518.210731499141,
+            2523.0868897755636,
+            2512.8012171380897,
+            2520.3472362132693
+          ],
+          "candidate_rounds": [
+            3495.643272371439,
+            3488.046482870113,
+            3492.3113094593373,
+            3399.030338300876
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 9240576.0,
+          "candidate": 9166848.0,
+          "change_percent": -0.7978723404255317,
+          "baseline_rounds": [
+            9306112,
+            9142272,
+            9338880,
+            9175040
+          ],
+          "candidate_rounds": [
+            9388032,
+            9093120,
+            9125888,
+            9207808
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1412404.0,
+          "candidate": 1358380.0,
+          "change_percent": -3.8249679270237147,
+          "baseline_rounds": [
+            1482552,
+            848400,
+            1342256,
+            1623904
+          ],
+          "candidate_rounds": [
+            1222456,
+            1631872,
+            1494304,
+            913104
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 2275280.0,
+          "candidate": 2388656.0,
+          "change_percent": 4.982947153756889,
+          "baseline_rounds": [
+            2275360,
+            2275520,
+            2275200,
+            2275200
+          ],
+          "candidate_rounds": [
+            2388440,
+            2388680,
+            2388632,
+            2388840
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 27636.5625,
+          "candidate": 29012.6875,
+          "change_percent": 4.979363840926299,
+          "baseline_rounds": [
+            27636.575520833332,
+            27636.5703125,
+            27636.513020833332,
+            27636.591145833332
+          ],
+          "candidate_rounds": [
+            29012.736979166668,
+            29012.643229166668,
+            29012.700520833332,
+            29012.669270833332
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 69605764.74030952,
+          "candidate": 100637988.05052033,
+          "change_percent": 44.582835094173866,
+          "baseline_rounds": [
+            69594721.05844896,
+            69729468.2338293,
+            69445063.55620266,
+            69653806.11275715
+          ],
+          "candidate_rounds": [
+            101418178.83430602,
+            101197448.17426018,
+            101321382.14686304,
+            98614943.04665205
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 65,
+          "candidate": 81,
+          "change_percent": 24.615384615384617,
+          "baseline_rounds": [
+            63,
+            63,
+            65,
+            69
+          ],
+          "candidate_rounds": [
+            81,
+            80,
+            81,
+            82
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 1060181,
+          "candidate": 1373016.75,
+          "change_percent": 29.507768013197744,
+          "baseline_rounds": [
+            985376,
+            993593,
+            1184335,
+            1077420
+          ],
+          "candidate_rounds": [
+            1342035,
+            1310912,
+            1266707,
+            1572413
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00544548475,
+          "candidate": 0.0070077515,
+          "change_percent": 28.68921357276779,
+          "baseline_rounds": [
+            0.005397882,
+            0.005159383,
+            0.005612879,
+            0.005611795
+          ],
+          "candidate_rounds": [
+            0.006694496,
+            0.006995274,
+            0.006504409,
+            0.007836827
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-192s",
+      "operation": "verify",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 2574.167092159876,
+          "candidate": 3563.618146697295,
+          "change_percent": 38.437716710425796,
+          "baseline_rounds": [
+            2618.4723979489913,
+            2535.338812193354,
+            2544.1328265909915,
+            2598.7243319061686
+          ],
+          "candidate_rounds": [
+            3542.7355192179093,
+            3537.1611589450044,
+            3619.5485667686385,
+            3555.027341857626
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 10346496.0,
+          "candidate": 10706944.0,
+          "change_percent": 3.4837688044338844,
+          "baseline_rounds": [
+            10223616,
+            10698752,
+            10354688,
+            10338304
+          ],
+          "candidate_rounds": [
+            10747904,
+            10682368,
+            10436608,
+            10731520
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 3033348.0,
+          "candidate": 2352296.0,
+          "change_percent": -22.45215517639255,
+          "baseline_rounds": [
+            3033128,
+            3057584,
+            3033568,
+            2642248
+          ],
+          "candidate_rounds": [
+            2573552,
+            2131040,
+            1836584,
+            3286104
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 3570140.0,
+          "candidate": 3545608.0,
+          "change_percent": -0.6871439215268893,
+          "baseline_rounds": [
+            3581816,
+            3554384,
+            3558464,
+            3586232
+          ],
+          "candidate_rounds": [
+            3545592,
+            3545624,
+            3610416,
+            3522760
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 27636.453125,
+          "candidate": 29012.5625,
+          "change_percent": 4.979327009786094,
+          "baseline_rounds": [
+            27636.4609375,
+            27636.4296875,
+            27636.455729166668,
+            27636.466145833332
+          ],
+          "candidate_rounds": [
+            29012.575520833332,
+            29012.580729166668,
+            29012.5546875,
+            29012.5390625
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 71140848.5528226,
+          "candidate": 103389693.95973757,
+          "change_percent": 45.330982217579205,
+          "baseline_rounds": [
+            72365310.14183925,
+            70067712.8171714,
+            70310814.23120159,
+            71819557.02107817
+          ],
+          "candidate_rounds": [
+            102783881.80164829,
+            102622173.67596467,
+            105012350.73743737,
+            103140369.62389992
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 27,
+          "candidate": 29.75,
+          "change_percent": 10.185185185185187,
+          "baseline_rounds": [
+            27,
+            27,
+            27,
+            27
+          ],
+          "candidate_rounds": [
+            30,
+            30,
+            30,
+            29
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 328689,
+          "candidate": 460070.5,
+          "change_percent": 39.97137111372757,
+          "baseline_rounds": [
+            133585,
+            498587,
+            445000,
+            237584
+          ],
+          "candidate_rounds": [
+            534082,
+            515999,
+            325828,
+            464373
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00258830125,
+          "candidate": 0.00273721625,
+          "change_percent": 5.753387477597505,
+          "baseline_rounds": [
+            0.002422329,
+            0.002753962,
+            0.002628873,
+            0.002548041
+          ],
+          "candidate_rounds": [
+            0.002953207,
+            0.00280033,
+            0.002697955,
+            0.002497373
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "keygen",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 582.1312798401873,
+          "candidate": 770.7212924361776,
+          "change_percent": 32.39647466594888,
+          "baseline_rounds": [
+            582.5697851091218,
+            583.0495798806644,
+            583.6109063048026,
+            579.2948480661603
+          ],
+          "candidate_rounds": [
+            769.058931085272,
+            771.8907151497122,
+            770.455376566867,
+            771.4801469428593
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 9240576.0,
+          "candidate": 9445376.0,
+          "change_percent": 2.2163120567375794,
+          "baseline_rounds": [
+            9256960,
+            9240576,
+            9240576,
+            9158656
+          ],
+          "candidate_rounds": [
+            9584640,
+            9715712,
+            9306112,
+            9240576
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1401104.0,
+          "candidate": 1141140.0,
+          "change_percent": -18.554225810503723,
+          "baseline_rounds": [
+            1247664,
+            1431408,
+            1370800,
+            1615112
+          ],
+          "candidate_rounds": [
+            1204320,
+            1204480,
+            1077960,
+            661360
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 2800680.0,
+          "candidate": 2768520.0,
+          "change_percent": -1.1482925575217462,
+          "baseline_rounds": [
+            2695112,
+            2800600,
+            2800920,
+            2800760
+          ],
+          "candidate_rounds": [
+            2768584,
+            2768616,
+            2768456,
+            2706488
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 61385.729166666664,
+          "candidate": 62762.197916666664,
+          "change_percent": 2.242326952348783,
+          "baseline_rounds": [
+            61385.729166666664,
+            61385.729166666664,
+            61385.729166666664,
+            61385.729166666664
+          ],
+          "candidate_rounds": [
+            62761.979166666664,
+            62762.1875,
+            62762.3125,
+            62762.3125
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 35734553.08371478,
+          "candidate": 48372162.39645416,
+          "change_percent": 35.36523678674097,
+          "baseline_rounds": [
+            35761471.049391754,
+            35790923.60129325,
+            35825381.03313949,
+            35560436.65103463
+          ],
+          "candidate_rounds": [
+            48267660.61071278,
+            48445549.793735325,
+            48355561.11139488,
+            48419878.069973655
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 14.25,
+          "candidate": 15.25,
+          "change_percent": 7.017543859649122,
+          "baseline_rounds": [
+            15,
+            14,
+            14,
+            14
+          ],
+          "candidate_rounds": [
+            15,
+            15,
+            15,
+            16
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 248563.5,
+          "candidate": 261800.5,
+          "change_percent": 5.325399746945947,
+          "baseline_rounds": [
+            230670,
+            252252,
+            201248,
+            310084
+          ],
+          "candidate_rounds": [
+            249543,
+            246413,
+            294166,
+            257080
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00144677075,
+          "candidate": 0.00143565425,
+          "change_percent": -0.768366377326879,
+          "baseline_rounds": [
+            0.001461209,
+            0.001468208,
+            0.001299792,
+            0.001557874
+          ],
+          "candidate_rounds": [
+            0.001409457,
+            0.001378705,
+            0.001501039,
+            0.001453416
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "keygen",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 585.5740645703271,
+          "candidate": 775.1597949823408,
+          "change_percent": 32.376046324921305,
+          "baseline_rounds": [
+            585.7642135057168,
+            586.836150163155,
+            586.3472702786066,
+            583.3486243338298
+          ],
+          "candidate_rounds": [
+            771.198417417301,
+            778.6009761888168,
+            774.0433434036238,
+            776.7964429196218
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 10592256.0,
+          "candidate": 10731520.0,
+          "change_percent": 1.314771848414531,
+          "baseline_rounds": [
+            10682368,
+            10502144,
+            10502144,
+            10846208
+          ],
+          "candidate_rounds": [
+            10895360,
+            10616832,
+            10846208,
+            10485760
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 2345904.0,
+          "candidate": 2834672.0,
+          "change_percent": 20.834953177964664,
+          "baseline_rounds": [
+            2446848,
+            2345696,
+            2346112,
+            2228784
+          ],
+          "candidate_rounds": [
+            2772256,
+            2834688,
+            2834656,
+            2960656
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 3912152.0,
+          "candidate": 3909560.0,
+          "change_percent": -0.06625509438283883,
+          "baseline_rounds": [
+            3905144,
+            3912072,
+            3912232,
+            3918632
+          ],
+          "candidate_rounds": [
+            3909176,
+            3909576,
+            3909576,
+            3909544
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 61385.697916666664,
+          "candidate": 62762.19791666667,
+          "change_percent": 2.242379001487693,
+          "baseline_rounds": [
+            61385.6875,
+            61385.6875,
+            61385.6875,
+            61385.729166666664
+          ],
+          "candidate_rounds": [
+            62762.3125,
+            62762.270833333336,
+            62762.1875,
+            62762.020833333336
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 35945872.61236709,
+          "candidate": 48650732.349429,
+          "change_percent": 35.34441874333807,
+          "baseline_rounds": [
+            35957538.958945215,
+            36023340.52761851,
+            35993330.29980058,
+            35809280.66310405
+          ],
+          "candidate_rounds": [
+            48402196.07345009,
+            48866765.33866024,
+            48580653.45182512,
+            48753314.53378053
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 7,
+          "candidate": 7,
+          "change_percent": 0.0,
+          "baseline_rounds": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "candidate_rounds": [
+            7,
+            7,
+            7,
+            7
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 82938.5,
+          "candidate": 79156.75,
+          "change_percent": -4.559703876969079,
+          "baseline_rounds": [
+            77249,
+            51460,
+            86084,
+            116961
+          ],
+          "candidate_rounds": [
+            122958,
+            34086,
+            87458,
+            72125
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.0008051785,
+          "candidate": 0.000750896,
+          "change_percent": -6.741672809196963,
+          "baseline_rounds": [
+            0.000821956,
+            0.00077442,
+            0.000850792,
+            0.000773546
+          ],
+          "candidate_rounds": [
+            0.000776706,
+            0.000714167,
+            0.000677128,
+            0.000835583
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "sign",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 26.329510736599865,
+          "candidate": 35.70453059941516,
+          "change_percent": 35.606509959880704,
+          "baseline_rounds": [
+            26.352219606538316,
+            26.320985982848114,
+            26.38585278526497,
+            26.258984571748066
+          ],
+          "candidate_rounds": [
+            35.700496609973065,
+            35.71987878109874,
+            35.70460098295401,
+            35.69314602363481
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 8986624.0,
+          "candidate": 9027584.0,
+          "change_percent": 0.45578851412944044,
+          "baseline_rounds": [
+            9043968,
+            9011200,
+            8962048,
+            8962048
+          ],
+          "candidate_rounds": [
+            9043968,
+            9011200,
+            8945664,
+            9191424
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1838864.0,
+          "candidate": 1980016.0,
+          "change_percent": 7.6760434703164515,
+          "baseline_rounds": [
+            925440,
+            1838864,
+            1838864,
+            1839504
+          ],
+          "candidate_rounds": [
+            1984944,
+            1974976,
+            1984992,
+            1975088
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 2628272.0,
+          "candidate": 2509248.0,
+          "change_percent": -4.528602823452066,
+          "baseline_rounds": [
+            2628512,
+            2628032,
+            2628032,
+            2628672
+          ],
+          "candidate_rounds": [
+            2509328,
+            2509056,
+            2509376,
+            2509168
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 131991.77777777778,
+          "candidate": 133370.22222222222,
+          "change_percent": 1.044341145828942,
+          "baseline_rounds": [
+            131992.44444444444,
+            131991.55555555556,
+            131991.55555555556,
+            131991.55555555556
+          ],
+          "candidate_rounds": [
+            133367.55555555556,
+            133370.22222222222,
+            133372.88888888888,
+            133370.22222222222
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 3475278.935189319,
+          "candidate": 4761921.183120381,
+          "change_percent": 37.022704419579824,
+          "baseline_rounds": [
+            3478293.882403808,
+            3474147.883632096,
+            3482709.7537870114,
+            3465964.2209343608
+          ],
+          "candidate_rounds": [
+            4761287.964991505,
+            4763968.170785979,
+            4762025.779721638,
+            4760402.8169824025
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 1.25,
+          "candidate": 1,
+          "change_percent": -19.999999999999996,
+          "baseline_rounds": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "candidate_rounds": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 12874.5,
+          "candidate": 7687.25,
+          "change_percent": -40.29088508291584,
+          "baseline_rounds": [
+            22791,
+            11708,
+            10417,
+            6582
+          ],
+          "candidate_rounds": [
+            5624,
+            9917,
+            9500,
+            5708
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00025511450000000003,
+          "candidate": 0.00017614600000000002,
+          "change_percent": -30.954140199792647,
+          "baseline_rounds": [
+            0.00036675,
+            0.000262791,
+            0.000202876,
+            0.000188041
+          ],
+          "candidate_rounds": [
+            0.000166166,
+            0.000164251,
+            0.000196917,
+            0.00017725
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "sign",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 26.271141405809047,
+          "candidate": 35.71503417256733,
+          "change_percent": 35.947782476897096,
+          "baseline_rounds": [
+            26.247526105045786,
+            26.23686633305296,
+            26.298338949428842,
+            26.301834235708597
+          ],
+          "candidate_rounds": [
+            35.65537588809445,
+            35.711020494132086,
+            35.73094299782715,
+            35.76279731021564
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 9871360.0,
+          "candidate": 10043392.0,
+          "change_percent": 1.742738589211612,
+          "baseline_rounds": [
+            9863168,
+            9879552,
+            10092544,
+            9846784
+          ],
+          "candidate_rounds": [
+            9879552,
+            10108928,
+            9977856,
+            10174464
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1294728.0,
+          "candidate": 1888264.0,
+          "change_percent": 45.84252445301254,
+          "baseline_rounds": [
+            1294728,
+            1294728,
+            1294888,
+            1294568
+          ],
+          "candidate_rounds": [
+            1888104,
+            1887944,
+            2461544,
+            1888424
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 3680416.0,
+          "candidate": 3703984.0,
+          "change_percent": 0.6403623938163516,
+          "baseline_rounds": [
+            3680416,
+            3680416,
+            3680576,
+            3680256
+          ],
+          "candidate_rounds": [
+            3703984,
+            3703824,
+            3703984,
+            3704304
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 131991.55555555556,
+          "candidate": 133370.22222222222,
+          "change_percent": 1.0445112650304234,
+          "baseline_rounds": [
+            131991.55555555556,
+            131991.55555555556,
+            131991.55555555556,
+            131991.55555555556
+          ],
+          "candidate_rounds": [
+            133370.22222222222,
+            133370.22222222222,
+            133370.22222222222,
+            133370.22222222222
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 3467568.8203727007,
+          "candidate": 4763322.0442695655,
+          "change_percent": 37.36777237942734,
+          "baseline_rounds": [
+            3464451.8000900457,
+            3463044.8002028447,
+            3471158.6664623674,
+            3471620.0147355446
+          ],
+          "candidate_rounds": [
+            4755365.405612021,
+            4762786.739084728,
+            4765443.807829762,
+            4769692.224551751
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 1,
+          "candidate": 1,
+          "change_percent": 0.0,
+          "baseline_rounds": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "candidate_rounds": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 8573.25,
+          "candidate": 7906.25,
+          "change_percent": -7.780013413816233,
+          "baseline_rounds": [
+            9916,
+            5792,
+            5584,
+            13001
+          ],
+          "candidate_rounds": [
+            12084,
+            7417,
+            5333,
+            6791
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00019813574999999998,
+          "candidate": 0.00018635475,
+          "change_percent": -5.945923438854416,
+          "baseline_rounds": [
+            0.000209458,
+            0.000167209,
+            0.000150667,
+            0.000265209
+          ],
+          "candidate_rounds": [
+            0.000237126,
+            0.000169793,
+            0.000162917,
+            0.000175583
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "verify",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 944.0990927974726,
+          "candidate": 1309.2670738389807,
+          "change_percent": 38.67898865991639,
+          "baseline_rounds": [
+            950.2830099637489,
+            937.7148645637878,
+            936.2800044101471,
+            952.1184922522068
+          ],
+          "candidate_rounds": [
+            1309.5630687070168,
+            1312.436316719251,
+            1307.4583968504382,
+            1307.610513079217
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 9486336.0,
+          "candidate": 9297920.0,
+          "change_percent": -1.9861830742659792,
+          "baseline_rounds": [
+            9633792,
+            9338880,
+            9715712,
+            9207808
+          ],
+          "candidate_rounds": [
+            9306112,
+            9453568,
+            9289728,
+            9289728
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1387552.0,
+          "candidate": 1135196.0,
+          "change_percent": -18.1871382117571,
+          "baseline_rounds": [
+            696968,
+            2058552,
+            1340072,
+            1435032
+          ],
+          "candidate_rounds": [
+            1574328,
+            1137104,
+            986856,
+            1133288
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 2756384.0,
+          "candidate": 2633608.0,
+          "change_percent": -4.454241499007394,
+          "baseline_rounds": [
+            2756304,
+            2756464,
+            2756464,
+            2756304
+          ],
+          "candidate_rounds": [
+            2633792,
+            2633632,
+            2633584,
+            2633424
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 72080.390625,
+          "candidate": 73456.65104166666,
+          "change_percent": 1.9093409521414584,
+          "baseline_rounds": [
+            72080.359375,
+            72080.41145833333,
+            72080.40104166667,
+            72080.390625
+          ],
+          "candidate_rounds": [
+            73456.72395833333,
+            73456.609375,
+            73456.63020833333,
+            73456.640625
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 68051031.2956247,
+          "candidate": 96174374.54945098,
+          "change_percent": 41.32684357369092,
+          "baseline_rounds": [
+            68496740.86614372,
+            67590873.26835313,
+            67487438.20517683,
+            68629072.8428251
+          ],
+          "candidate_rounds": [
+            96196212.84403923,
+            96407121.84680979,
+            96041487.97022298,
+            96052675.53673191
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 71,
+          "candidate": 73.5,
+          "change_percent": 3.5211267605633756,
+          "baseline_rounds": [
+            72,
+            70,
+            71,
+            71
+          ],
+          "candidate_rounds": [
+            73,
+            74,
+            74,
+            73
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 1276802.75,
+          "candidate": 1194425.5,
+          "change_percent": -6.451838390855591,
+          "baseline_rounds": [
+            1202257,
+            1124711,
+            1570700,
+            1209543
+          ],
+          "candidate_rounds": [
+            1168243,
+            1131539,
+            1263045,
+            1214875
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.0062512157500000005,
+          "candidate": 0.0057904245,
+          "change_percent": -7.371226149089482,
+          "baseline_rounds": [
+            0.005930961,
+            0.005657585,
+            0.007661236,
+            0.005755081
+          ],
+          "candidate_rounds": [
+            0.005684705,
+            0.005648952,
+            0.005969419,
+            0.005858622
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256f",
+      "operation": "verify",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 963.8000202909877,
+          "candidate": 1335.1732657426112,
+          "change_percent": 38.53218900529796,
+          "baseline_rounds": [
+            960.8775766973796,
+            965.327248922609,
+            966.5536615251357,
+            962.4415940188264
+          ],
+          "candidate_rounds": [
+            1337.2682824006383,
+            1336.3206723964727,
+            1335.4269419662523,
+            1331.6771662070814
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 10616832.0,
+          "candidate": 10641408.0,
+          "change_percent": 0.23148148148148806,
+          "baseline_rounds": [
+            10715136,
+            10731520,
+            10518528,
+            10502144
+          ],
+          "candidate_rounds": [
+            10534912,
+            10584064,
+            10747904,
+            10698752
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 2822928.0,
+          "candidate": 1441144.0,
+          "change_percent": -48.94860938713279,
+          "baseline_rounds": [
+            2874232,
+            2771624,
+            2893448,
+            2685976
+          ],
+          "candidate_rounds": [
+            1530696,
+            3399984,
+            1351592,
+            1237608
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 3908768.0,
+          "candidate": 3883144.0,
+          "change_percent": -0.6555518260485171,
+          "baseline_rounds": [
+            3908688,
+            3908688,
+            3908848,
+            3908848
+          ],
+          "candidate_rounds": [
+            3883040,
+            3883200,
+            3883088,
+            3883360
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 72080.13802083334,
+          "candidate": 73456.36458333333,
+          "change_percent": 1.9093006760089848,
+          "baseline_rounds": [
+            72080.109375,
+            72080.140625,
+            72080.15104166667,
+            72080.15104166667
+          ],
+          "candidate_rounds": [
+            73456.34895833333,
+            73456.43229166667,
+            73456.31770833333,
+            73456.359375
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 69470838.51352133,
+          "candidate": 98076974.20312709,
+          "change_percent": 41.177184991135604,
+          "baseline_rounds": [
+            69260160.82433207,
+            69580923.85148604,
+            69669333.91260774,
+            69372935.46565944
+          ],
+          "candidate_rounds": [
+            98230845.60293233,
+            98161348.99184597,
+            98095545.72534105,
+            97820156.49238898
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 34,
+          "candidate": 35,
+          "change_percent": 2.941176470588225,
+          "baseline_rounds": [
+            34,
+            34,
+            34,
+            34
+          ],
+          "candidate_rounds": [
+            35,
+            35,
+            35,
+            35
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 293751.75,
+          "candidate": 245155.75,
+          "change_percent": -16.543220593579445,
+          "baseline_rounds": [
+            319756,
+            364917,
+            208873,
+            281461
+          ],
+          "candidate_rounds": [
+            172752,
+            235331,
+            231541,
+            340999
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.0033543239999999997,
+          "candidate": 0.00331856,
+          "change_percent": -1.0662058882803138,
+          "baseline_rounds": [
+            0.003558471,
+            0.003400323,
+            0.003043546,
+            0.003414956
+          ],
+          "candidate_rounds": [
+            0.00299842,
+            0.003243827,
+            0.003372629,
+            0.003659364
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "keygen",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 36.8063827469138,
+          "candidate": 49.22411511685917,
+          "change_percent": 33.73798630343969,
+          "baseline_rounds": [
+            36.8079741408645,
+            36.9011845856833,
+            36.744636938812135,
+            36.77173532229525
+          ],
+          "candidate_rounds": [
+            49.31318962684974,
+            49.293629174498506,
+            49.3224373328532,
+            48.96720433323522
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 7380992.0,
+          "candidate": 7561216.0,
+          "change_percent": 2.441731409544956,
+          "baseline_rounds": [
+            7356416,
+            7520256,
+            7389184,
+            7372800
+          ],
+          "candidate_rounds": [
+            7569408,
+            7454720,
+            7553024,
+            7585792
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1887080.0,
+          "candidate": 1923272.0,
+          "change_percent": 1.9178837145219063,
+          "baseline_rounds": [
+            1887000,
+            1887320,
+            1887000,
+            1887160
+          ],
+          "candidate_rounds": [
+            1922952,
+            1923272,
+            1923272,
+            1923272
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 1887080.0,
+          "candidate": 1923272.0,
+          "change_percent": 1.9178837145219063,
+          "baseline_rounds": [
+            1887000,
+            1887320,
+            1887000,
+            1887160
+          ],
+          "candidate_rounds": [
+            1922952,
+            1923272,
+            1923272,
+            1923272
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 37445.666666666664,
+          "candidate": 38826.0,
+          "change_percent": 3.6862298263261595,
+          "baseline_rounds": [
+            37445.666666666664,
+            37445.666666666664,
+            37445.666666666664,
+            37445.666666666664
+          ],
+          "candidate_rounds": [
+            38827.0,
+            38825.0,
+            38827.0,
+            38825.0
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 1378239.539546685,
+          "candidate": 1911175.587225537,
+          "change_percent": 38.66788264209422,
+          "baseline_rounds": [
+            1378299.1303540985,
+            1381789.457600635,
+            1375927.4265984464,
+            1376942.1436335605
+          ],
+          "candidate_rounds": [
+            1914683.213641695,
+            1913825.1526999045,
+            1915042.2743226911,
+            1901151.7082378576
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "keygen",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 36.58580810691488,
+          "candidate": 49.23579987217814,
+          "change_percent": 34.57622619212381,
+          "baseline_rounds": [
+            36.353035653198816,
+            36.28839068110438,
+            36.72980047492397,
+            36.97200561843235
+          ],
+          "candidate_rounds": [
+            49.25076423283009,
+            49.18829909478958,
+            49.27749015419321,
+            49.22664600689969
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 7421952.0,
+          "candidate": 7520256.0,
+          "change_percent": 1.324503311258285,
+          "baseline_rounds": [
+            7389184,
+            7421952,
+            7438336,
+            7421952
+          ],
+          "candidate_rounds": [
+            7421952,
+            7569408,
+            7471104,
+            7602176
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1887320.0,
+          "candidate": 1923112.0,
+          "change_percent": 1.8964457537672397,
+          "baseline_rounds": [
+            1887320,
+            1887480,
+            1887000,
+            1887320
+          ],
+          "candidate_rounds": [
+            1923032,
+            1923192,
+            1923112,
+            1923112
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 1887320.0,
+          "candidate": 1923112.0,
+          "change_percent": 1.8964457537672397,
+          "baseline_rounds": [
+            1887320,
+            1887480,
+            1887000,
+            1887320
+          ],
+          "candidate_rounds": [
+            1923032,
+            1923192,
+            1923112,
+            1923112
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 37445.666666666664,
+          "candidate": 38823.666666666664,
+          "change_percent": 3.6799985757141496,
+          "baseline_rounds": [
+            37445.666666666664,
+            37445.666666666664,
+            37445.666666666664,
+            37445.666666666664
+          ],
+          "candidate_rounds": [
+            38823.666666666664,
+            38823.666666666664,
+            38823.666666666664,
+            38823.666666666664
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 1369979.9751021657,
+          "candidate": 1911514.2823041533,
+          "change_percent": 39.5286293992438,
+          "baseline_rounds": [
+            1361263.655391132,
+            1358842.9813144077,
+            1375371.865317178,
+            1384441.398385945
+          ],
+          "candidate_rounds": [
+            1912095.2536539845,
+            1909670.1279564123,
+            1913132.8519163455,
+            1911158.8956898714
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "sign",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 2.495042535704179,
+          "candidate": 3.439419019605005,
+          "change_percent": 37.8501155946944,
+          "baseline_rounds": [
+            2.4992908262280578,
+            2.4966421016751856,
+            2.50305816345825,
+            2.481179051455223
+          ],
+          "candidate_rounds": [
+            3.440173494279236,
+            3.4351531820682712,
+            3.436610150658125,
+            3.445739251414388
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 6963200.0,
+          "candidate": 6995968.0,
+          "change_percent": 0.47058823529411153,
+          "baseline_rounds": [
+            6963200,
+            6946816,
+            7012352,
+            6963200
+          ],
+          "candidate_rounds": [
+            7077888,
+            6946816,
+            6946816,
+            7045120
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1330880.0,
+          "candidate": 1337856.0,
+          "change_percent": 0.5241644626112096,
+          "baseline_rounds": [
+            1330880,
+            1331040,
+            1330720,
+            1330880
+          ],
+          "candidate_rounds": [
+            1337776,
+            1337776,
+            1338096,
+            1337936
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 1330880.0,
+          "candidate": 1337856.0,
+          "change_percent": 0.5241644626112096,
+          "baseline_rounds": [
+            1330880,
+            1331040,
+            1330720,
+            1330880
+          ],
+          "candidate_rounds": [
+            1337776,
+            1337776,
+            1338096,
+            1337936
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 84829.33333333333,
+          "candidate": 86209.33333333333,
+          "change_percent": 1.6267957624721108,
+          "baseline_rounds": [
+            84829.33333333333,
+            84829.33333333333,
+            84829.33333333333,
+            84829.33333333333
+          ],
+          "candidate_rounds": [
+            86221.33333333333,
+            86205.33333333333,
+            86205.33333333333,
+            86205.33333333333
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 211652.79494209503,
+          "candidate": 296510.0237520331,
+          "change_percent": 40.09265685962416,
+          "baseline_rounds": [
+            212013.174595042,
+            211788.4850570382,
+            212332.75530072104,
+            210476.76481557894
+          ],
+          "candidate_rounds": [
+            296616.34557474806,
+            296128.525111256,
+            296254.12357420055,
+            297041.1007479278
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "sign",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 2.4997931444508685,
+          "candidate": 3.43625068031198,
+          "change_percent": 37.4614010739206,
+          "baseline_rounds": [
+            2.4999480052480707,
+            2.4946619431628694,
+            2.501260009729901,
+            2.503302619662634
+          ],
+          "candidate_rounds": [
+            3.4335173259129808,
+            3.4393378650026114,
+            3.4329364916727445,
+            3.4392110386595833
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 7045120.0,
+          "candidate": 7028736.0,
+          "change_percent": -0.23255813953488857,
+          "baseline_rounds": [
+            7028736,
+            7061504,
+            6979584,
+            7127040
+          ],
+          "candidate_rounds": [
+            7110656,
+            6897664,
+            7045120,
+            7012352
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1330640.0,
+          "candidate": 1337960.0,
+          "change_percent": 0.5501112246738327,
+          "baseline_rounds": [
+            1330560,
+            1330560,
+            1330720,
+            1330880
+          ],
+          "candidate_rounds": [
+            1338096,
+            1337936,
+            1337936,
+            1337984
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 1330640.0,
+          "candidate": 1337960.0,
+          "change_percent": 0.5501112246738327,
+          "baseline_rounds": [
+            1330560,
+            1330560,
+            1330720,
+            1330880
+          ],
+          "candidate_rounds": [
+            1338096,
+            1337936,
+            1337936,
+            1337984
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 84829.33333333333,
+          "candidate": 86209.33333333333,
+          "change_percent": 1.6267957624721108,
+          "baseline_rounds": [
+            84829.33333333333,
+            84829.33333333333,
+            84829.33333333333,
+            84829.33333333333
+          ],
+          "candidate_rounds": [
+            86205.33333333333,
+            86205.33333333333,
+            86205.33333333333,
+            86221.33333333333
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 212055.78591500423,
+          "candidate": 296236.8921573423,
+          "change_percent": 39.697622905738285,
+          "baseline_rounds": [
+            212068.92265319036,
+            211620.5095305441,
+            212180.21911871436,
+            212353.49235756812
+          ],
+          "candidate_rounds": [
+            295987.5055861038,
+            296489.2670985051,
+            295937.43457681284,
+            296533.3613679475
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0,
+          "candidate": 0,
+          "change_percent": null,
+          "baseline_rounds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "candidate_rounds": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "verify",
+      "settings": "constrained",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 1790.7009250978967,
+          "candidate": 2498.39821301818,
+          "change_percent": 39.52068589463613,
+          "baseline_rounds": [
+            1767.322567476203,
+            1800.6522964934118,
+            1797.43584577732,
+            1797.3929906446522
+          ],
+          "candidate_rounds": [
+            2505.7293824518274,
+            2494.5143218374146,
+            2496.0360436964843,
+            2497.3131040869926
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 9158656.0,
+          "candidate": 9199616.0,
+          "change_percent": 0.4472271914132353,
+          "baseline_rounds": [
+            9273344,
+            9256960,
+            9060352,
+            8880128
+          ],
+          "candidate_rounds": [
+            9125888,
+            9306112,
+            9273344,
+            8962048
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 1335032.0,
+          "candidate": 1247404.0,
+          "change_percent": -6.563737798045288,
+          "baseline_rounds": [
+            1448360,
+            1221704,
+            1731272,
+            1081592
+          ],
+          "candidate_rounds": [
+            1390688,
+            824424,
+            1483032,
+            1104120
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 2264368.0,
+          "candidate": 2422280.0,
+          "change_percent": 6.973778113804818,
+          "baseline_rounds": [
+            2239744,
+            2288992,
+            2239744,
+            2379392
+          ],
+          "candidate_rounds": [
+            2422224,
+            2422336,
+            2422384,
+            2422176
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 46236.798177083336,
+          "candidate": 47612.936197916664,
+          "change_percent": 2.976283123158363,
+          "baseline_rounds": [
+            46236.815104166664,
+            46236.794270833336,
+            46236.7890625,
+            46236.794270833336
+          ],
+          "candidate_rounds": [
+            47612.934895833336,
+            47612.971354166664,
+            47612.9140625,
+            47612.924479166664
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 82796277.13873616,
+          "candidate": 118956074.69315232,
+          "change_percent": 43.67321672425637,
+          "baseline_rounds": [
+            81715366.78181832,
+            83256389.78626947,
+            83107662.05458222,
+            83105689.93227464
+          ],
+          "candidate_rounds": [
+            119305129.95325552,
+            118771238.94820331,
+            118843549.6454232,
+            118904380.22572726
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 101.5,
+          "candidate": 114.75,
+          "change_percent": 13.054187192118217,
+          "baseline_rounds": [
+            108,
+            93,
+            101,
+            104
+          ],
+          "candidate_rounds": [
+            114,
+            117,
+            115,
+            113
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 1705836.75,
+          "candidate": 1799823.25,
+          "change_percent": 5.509700737775747,
+          "baseline_rounds": [
+            2051886,
+            1443212,
+            1654421,
+            1673828
+          ],
+          "candidate_rounds": [
+            1806009,
+            1828576,
+            1804709,
+            1759999
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.0082282825,
+          "candidate": 0.00891469875,
+          "change_percent": 8.342157066192124,
+          "baseline_rounds": [
+            0.009514583,
+            0.007215872,
+            0.00810371,
+            0.008078965
+          ],
+          "candidate_rounds": [
+            0.008891913,
+            0.009316,
+            0.008655961,
+            0.008794921
+          ]
+        }
+      }
+    },
+    {
+      "parameter": "SLH-DSA-SHA2-256s",
+      "operation": "verify",
+      "settings": "default",
+      "metrics": {
+        "checked_throughput_ops_s": {
+          "baseline": 1830.9492078811218,
+          "candidate": 2541.0827929188135,
+          "change_percent": 38.78499643687541,
+          "baseline_rounds": [
+            1804.3362223939685,
+            1836.8304689037443,
+            1839.6811502477997,
+            1842.948989978975
+          ],
+          "candidate_rounds": [
+            2596.748042216175,
+            2552.266986222235,
+            2501.1848121411176,
+            2514.1313310957275
+          ]
+        },
+        "process_rss_bytes": {
+          "baseline": 10592256.0,
+          "candidate": 10641408.0,
+          "change_percent": 0.46403712296982924,
+          "baseline_rounds": [
+            10829824,
+            10665984,
+            10518528,
+            10485760
+          ],
+          "candidate_rounds": [
+            10551296,
+            10616832,
+            10665984,
+            10731520
+          ]
+        },
+        "ending_heap_bytes": {
+          "baseline": 2928160.0,
+          "candidate": 2790180.0,
+          "change_percent": -4.7121741981312475,
+          "baseline_rounds": [
+            3118240,
+            3014488,
+            2841832,
+            2348920
+          ],
+          "candidate_rounds": [
+            3046456,
+            2769512,
+            2143640,
+            2810848
+          ]
+        },
+        "sampled_max_heap_bytes": {
+          "baseline": 3759608.0,
+          "candidate": 3749088.0,
+          "change_percent": -0.2798164063913089,
+          "baseline_rounds": [
+            3804384,
+            3720768,
+            3798288,
+            3720928
+          ],
+          "candidate_rounds": [
+            3725808,
+            3772368,
+            3809984,
+            3707776
+          ]
+        },
+        "allocated_bytes_per_op": {
+          "baseline": 46236.533854166664,
+          "candidate": 47612.64583333333,
+          "change_percent": 2.976243815133328,
+          "baseline_rounds": [
+            46236.5078125,
+            46236.518229166664,
+            46236.5546875,
+            46236.5546875
+          ],
+          "candidate_rounds": [
+            47612.6640625,
+            47612.643229166664,
+            47612.6484375,
+            47612.627604166664
+          ]
+        },
+        "allocated_bytes_per_second": {
+          "baseline": 84656745.29372081,
+          "candidate": 120987675.39567281,
+          "change_percent": 42.91557627912581,
+          "baseline_rounds": [
+            83426205.84309547,
+            84928645.45935673,
+            85060518.1109953,
+            85211611.76143576
+          ],
+          "candidate_rounds": [
+            123638092.18899329,
+            121520177.44057973,
+            119088033.13768952,
+            119704398.81542872
+          ]
+        },
+        "gc_cycles": {
+          "baseline": 44.5,
+          "candidate": 46.75,
+          "change_percent": 5.0561797752809,
+          "baseline_rounds": [
+            45,
+            44,
+            45,
+            44
+          ],
+          "candidate_rounds": [
+            46,
+            47,
+            48,
+            46
+          ]
+        },
+        "gc_pause_ns": {
+          "baseline": 484571,
+          "candidate": 633614,
+          "change_percent": 30.75772177864544,
+          "baseline_rounds": [
+            802422,
+            439494,
+            335913,
+            360455
+          ],
+          "candidate_rounds": [
+            321624,
+            584004,
+            868833,
+            759995
+          ]
+        },
+        "gc_cpu_seconds": {
+          "baseline": 0.00427699425,
+          "candidate": 0.00438975575,
+          "change_percent": 2.6364660181621646,
+          "baseline_rounds": [
+            0.00429947,
+            0.004583253,
+            0.004017878,
+            0.004207376
+          ],
+          "candidate_rounds": [
+            0.004254078,
+            0.004273914,
+            0.004743116,
+            0.004287915
+          ]
+        }
+      }
+    }
+  ]
+}

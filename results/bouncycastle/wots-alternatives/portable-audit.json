@@ -1,0 +1,28 @@
+{
+  "audit": "saved_evidence_passed",
+  "binary_checks": {
+    "java": "not checked: saved-only mode",
+    "javac": "not checked: saved-only mode",
+    "classes/baseline": "not checked: saved-only mode",
+    "classes/object_hoist": "not checked: saved-only mode",
+    "classes/field_rewrite": "not checked: saved-only mode",
+    "classes/two_addresses": "not checked: saved-only mode",
+    "classes/buffer": "not checked: saved-only mode",
+    "classes/buffer_peeled": "not checked: saved-only mode",
+    "drivers/baseline": "not checked: saved-only mode",
+    "drivers/object_hoist": "not checked: saved-only mode",
+    "drivers/field_rewrite": "not checked: saved-only mode",
+    "drivers/two_addresses": "not checked: saved-only mode",
+    "drivers/buffer": "not checked: saved-only mode",
+    "drivers/buffer_peeled": "not checked: saved-only mode"
+  },
+  "processes": 288,
+  "rows": {
+    "bench": 1440,
+    "allocation": 1440
+  },
+  "cells": 72,
+  "checks_per_variant": 234,
+  "variants": 6,
+  "no_overlapping_recorded_processes": true
+}

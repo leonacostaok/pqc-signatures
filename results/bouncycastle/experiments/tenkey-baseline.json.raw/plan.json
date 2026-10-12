@@ -1,0 +1,128 @@
+{
+  "prepared": {
+    "schema": "pqc-tenkey-prepared-v1",
+    "provider": "bouncycastle",
+    "old": {
+      "schema": "bc-fors-base2b-prepared-v1",
+      "upstream_commit": "c314b9cdffa3958a0eff5344f8fdcdb0181ed830",
+      "java": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/runtimes/jdk-25.0.4.1+1/Contents/Home/bin/java",
+      "java_version": "openjdk version \"25.0.4.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS, mixed mode, sharing)\n",
+      "baseline": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/baseline",
+      "candidate": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/candidate",
+      "driver": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/driver",
+      "fixtures": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/fixtures.bin",
+      "checks": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/prepared-38afeddcb55e90be/checks",
+      "correctness": {
+        "differential_cases": 48,
+        "negative_parity_cases": 240,
+        "operations": [
+          "keygen",
+          "sign",
+          "verify"
+        ],
+        "caller_inputs_unchanged": true
+      },
+      "corpus": "fors-base2b-v1/204",
+      "release": 8,
+      "jvm_environment": {
+        "JAVA_TOOL_OPTIONS": "",
+        "JDK_JAVA_OPTIONS": ""
+      },
+      "provenance": {
+        "libs/bouncycastle/experiments/ForsOperations.java": "02a4433bc401b695c4e4672a2e20f0735c684583d694a1e9db96b46facb8f30a",
+        "libs/bouncycastle/experiments/ForsBenchmark.java": "fd248620e7309ab0ec5e09ebdb6d7b7601c7d6d3fac8c185c9e82ec379b42f7d",
+        "libs/bouncycastle/experiments/ForsAllocationCheck.java": "9a58e9b4600e8bdf9310b824641f2d61409fa447ac1941ce7692093e72156d97",
+        "libs/bouncycastle/experiments/fors.py": "b93ca80c74a15f7e09198dfef9623cd9387b5d9d8d7015027ac1cfe42752473a",
+        "libs/bouncycastle/patches/fors-base2b.patch": "ce1829dff5abd139ae80b2764625922bb4ff42138bcee2e962ec73d6cd8921e2",
+        "fixture": "b68537703f7e28b1b99c21be063f0be20abbdfd9e47c09f41d418f99c6e83a0b",
+        "baseline_classes": "17be0149192d23c0bedeeede1778d3e5bccd93d40ab703f1a2eed8a389900ee5",
+        "candidate_classes": "8b37c96be155a85e3abc2ca0f86c628e8640dd9c3d3db5a5f1501b9f933ce9e8",
+        "driver_classes": "0f434a44397e67d96d93579c645863add2dbaae0bfee07a557461367a8e3c381"
+      }
+    },
+    "corpus": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/tenkey-1ea29159f5844818/corpus.tsv",
+    "parameters": [
+      "sha2_128f",
+      "sha2_128s",
+      "sha2_192f",
+      "sha2_192s",
+      "sha2_256f",
+      "sha2_256s",
+      "shake_128f",
+      "shake_128s",
+      "shake_192f",
+      "shake_192s",
+      "shake_256f",
+      "shake_256s"
+    ],
+    "operations": [
+      "keygen",
+      "sign",
+      "verify"
+    ],
+    "measured_keys": 10,
+    "warmup_keys": 2,
+    "entropy": "explicit per-key deterministic signing entropy",
+    "environment": {
+      "JAVA_TOOL_OPTIONS": "",
+      "JDK_JAVA_OPTIONS": "",
+      "_JAVA_OPTIONS": ""
+    },
+    "jvm_args": [
+      "-Xmx512m",
+      "-XX:ActiveProcessorCount=2"
+    ],
+    "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+    "python_optimize": 0,
+    "scope": "one keygen, ordinary sign and verify per new key; key decoding and FixedRandom construction outside sign/verify clocks; fresh signer/verifier initialization inside clocks; output encoding/equality/tamper checks outside clocks",
+    "warmup_policy": "exactly two complete disjoint key pipelines per parameter/variant; bounded warmup is not a steady-state guarantee",
+    "cpu_clock": "process CPU may quantize to zero for single calls; current-thread CPU retained separately",
+    "driver": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/tenkey-1ea29159f5844818/driver",
+    "fixtures": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/tenkey-1ea29159f5844818/fixtures.tsv",
+    "correctness": {
+      "parameters": 12,
+      "matched_cases": 144,
+      "measured_seed_cases": 120,
+      "valid_per_variant": 144,
+      "tamper_per_variant": 144,
+      "exact_keys_and_signatures": true,
+      "no_timing_metrics_in_checks": true,
+      "corrupt_warmup_rejected_before_measurement": true,
+      "invalid_side_rejected": true,
+      "seeds_distinct_and_disjoint_from_old_corpus": true
+    },
+    "preparation_recovery": {
+      "reason": "The first preparation passed compilation, all 288 cryptographic case checks and corrupt-warmup rejection; its invalid-side negative-test command attempted a nonexistent classpath dictionary entry before Java launch. Only that command construction was corrected.",
+      "previous_directory": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/tenkey-205fc5c79c2bd54e",
+      "previous_collector_sha256": "949cd96ca3edf5ddee8288bd52601ec8decb3aebd671ea05695afa69b099f338",
+      "driver_source_sha256": "d81455ffc69e70ee45d1eb815e099d738b2d4baa399cc7613839ae0c1977de67",
+      "class_copy_sha256": "51518d613c448e9fc741845f1cd0ef5ab694a5659168f944d0c924ea025f6278",
+      "corpus_sha256": "247dbc980d60f069b0b1120aab0d139b947570f69d6cb50a1c18a6ca0380c937",
+      "fixtures_sha256": "ffcdadcf4bb8fff8daefdc3501a3b936f4f94ee79e7b053216a486ff1d11716e",
+      "reuse_validation": "Original identity recomputed; copied class/corpus/fixtures byte hashes match; every persisted process command/status and full output revalidated against exact fixtures; corrected invalid-side test rejected by Java; no measured calls occurred."
+    },
+    "provenance": {
+      "collector": "cd874b707a940813cb42ddbc469d49f79c87d341a923963b11f2ccfe53e90999",
+      "driver_source": "d81455ffc69e70ee45d1eb815e099d738b2d4baa399cc7613839ae0c1977de67",
+      "original": {
+        "libs/bouncycastle/experiments/ForsOperations.java": "02a4433bc401b695c4e4672a2e20f0735c684583d694a1e9db96b46facb8f30a",
+        "libs/bouncycastle/experiments/ForsBenchmark.java": "fd248620e7309ab0ec5e09ebdb6d7b7601c7d6d3fac8c185c9e82ec379b42f7d",
+        "libs/bouncycastle/experiments/ForsAllocationCheck.java": "9a58e9b4600e8bdf9310b824641f2d61409fa447ac1941ce7692093e72156d97",
+        "libs/bouncycastle/experiments/fors.py": "b93ca80c74a15f7e09198dfef9623cd9387b5d9d8d7015027ac1cfe42752473a",
+        "libs/bouncycastle/patches/fors-base2b.patch": "ce1829dff5abd139ae80b2764625922bb4ff42138bcee2e962ec73d6cd8921e2",
+        "fixture": "b68537703f7e28b1b99c21be063f0be20abbdfd9e47c09f41d418f99c6e83a0b",
+        "baseline_classes": "17be0149192d23c0bedeeede1778d3e5bccd93d40ab703f1a2eed8a389900ee5",
+        "candidate_classes": "8b37c96be155a85e3abc2ca0f86c628e8640dd9c3d3db5a5f1501b9f933ce9e8",
+        "driver_classes": "0f434a44397e67d96d93579c645863add2dbaae0bfee07a557461367a8e3c381"
+      },
+      "corpus": "247dbc980d60f069b0b1120aab0d139b947570f69d6cb50a1c18a6ca0380c937",
+      "fixtures": "ffcdadcf4bb8fff8daefdc3501a3b936f4f94ee79e7b053216a486ff1d11716e",
+      "driver_classes": "51518d613c448e9fc741845f1cd0ef5ab694a5659168f944d0c924ea025f6278",
+      "java_binary": "83c9c5310d044e7c4262432854eb1bc5f49763d7c1e9971777a646c91b96c06d"
+    }
+  },
+  "variant": "baseline",
+  "started_at": "2026-10-12T02:04:53.322439+00:00",
+  "manifest_sha256": "7b8170450e3ee96b757366c4e768f5999afc7462f4480fe60101f4ed88a2b714",
+  "policy": "one pass; all candidate side batches across providers precede every baseline batch; no exclusions; no control normalization"
+}
