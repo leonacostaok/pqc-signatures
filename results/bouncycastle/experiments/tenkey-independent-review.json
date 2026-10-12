@@ -1,0 +1,23 @@
+{
+  "schema": "pqc-tenkey-independent-review-v1",
+  "provider": "bouncycastle",
+  "checked_at": "2026-10-12T02:08:26.665305+00:00",
+  "candidate_sha256": "ffb4ea95cc7973e023f8b2ded0d1c21fa1a05fef9cb6399a02cbeca4fbdff691",
+  "baseline_sha256": "84bac5c484582f76ed42d8159b6adafbb5bba67b344aca44db3c483ce2bf3df3",
+  "comparison_sha256": "e7b04c9cb9adae12bb60bcbf9d722122546c59b37f59116181781d2e8c4b21eb",
+  "reviewer_sha256": "3b48024a615d64ca8bef2e3af7820ca721f57975cf456c50f385b6367be4bca0",
+  "key_pairs": 120,
+  "operation_pairs": 360,
+  "processes": 24,
+  "summary_cells": 36,
+  "zero_process_cpu_samples": 0,
+  "exact_output_comparisons": true,
+  "checks": [
+    "All distinct seed and public-key counts; disjoint warmup and ten measured indices per parameter",
+    "Every raw stdout/rows/command/status matches complete batches; no stderr and all processes exit zero",
+    "Every generated key/signature byte matches prepared fixture and other variant; every valid/tampered outcome checked",
+    "Independent integer wall/CPU totals and all key ratios, sorted-middle medians, ranges and loss counts recomputed",
+    "Prepared manifest, driver/collector, binary/classes, corpus/fixtures, original source/classes and production patch hashes match",
+    "Candidate completes before baseline starts for this provider; global six-provider order is recorded by the root coordinator"
+  ]
+}

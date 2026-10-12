@@ -1,0 +1,2 @@
+Exception in thread "main" java.lang.IllegalArgumentException: check|bench INPUT PARAMETER VARIANT
+	at TenKeyBenchmark.main(TenKeyBenchmark.java:152)

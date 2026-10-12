@@ -1,0 +1,10 @@
+{
+  "reason": "The first preparation passed compilation, all 288 cryptographic case checks and corrupt-warmup rejection; its invalid-side negative-test command attempted a nonexistent classpath dictionary entry before Java launch. Only that command construction was corrected.",
+  "previous_directory": "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/bc-performance/libs/bouncycastle/build/fors-base2b/tenkey-205fc5c79c2bd54e",
+  "previous_collector_sha256": "949cd96ca3edf5ddee8288bd52601ec8decb3aebd671ea05695afa69b099f338",
+  "driver_source_sha256": "d81455ffc69e70ee45d1eb815e099d738b2d4baa399cc7613839ae0c1977de67",
+  "class_copy_sha256": "51518d613c448e9fc741845f1cd0ef5ab694a5659168f944d0c924ea025f6278",
+  "corpus_sha256": "247dbc980d60f069b0b1120aab0d139b947570f69d6cb50a1c18a6ca0380c937",
+  "fixtures_sha256": "ffcdadcf4bb8fff8daefdc3501a3b936f4f94ee79e7b053216a486ff1d11716e",
+  "reuse_validation": "Original identity recomputed; copied class/corpus/fixtures byte hashes match; every persisted process command/status and full output revalidated against exact fixtures; corrected invalid-side test rejected by Java; no measured calls occurred."
+}
