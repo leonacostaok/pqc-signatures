@@ -1,0 +1,134 @@
+{
+  "cases": [
+    {
+      "file": "SLH-DSA-SHA2-128s-0.txt",
+      "sha256": "ad7805b3db210a807bba55639d3c6c53974fc7032c43ead514628a81fb2067ee",
+      "message_bytes": 64,
+      "context_bytes": 0
+    },
+    {
+      "file": "SLH-DSA-SHA2-128s-1.txt",
+      "sha256": "0449206adfe97e045c9e7b5e4587c7577b3028c4b06b6629f5ed71b77d22d54d",
+      "message_bytes": 0,
+      "context_bytes": 255
+    },
+    {
+      "file": "SLH-DSA-SHA2-128s-2.txt",
+      "sha256": "cba031c52699198135601a395ba364dff8029ba784edc30c1151198c8756ccdf",
+      "message_bytes": 4096,
+      "context_bytes": 17
+    },
+    {
+      "file": "SLH-DSA-SHA2-128f-0.txt",
+      "sha256": "4f239ef0b12d1cad53b8b2bcf42a8dc430f16a321c8a0b5dccfd122d5692a048",
+      "message_bytes": 64,
+      "context_bytes": 0
+    },
+    {
+      "file": "SLH-DSA-SHA2-128f-1.txt",
+      "sha256": "3a530dcc5cf71b70ab0f2b36893ad8e845d63635a3a756c4a24d8dc050aeea48",
+      "message_bytes": 0,
+      "context_bytes": 255
+    },
+    {
+      "file": "SLH-DSA-SHA2-128f-2.txt",
+      "sha256": "a74366e1fc3ae13cf00b222c183b6f17ae3f1cfa0cc9217da9c64668bf407dca",
+      "message_bytes": 4096,
+      "context_bytes": 17
+    },
+    {
+      "file": "SLH-DSA-SHA2-192s-0.txt",
+      "sha256": "b06c6d659887935fcc89ec6c2b009b02ec2cbbc06624c0187a03567fd42facdf",
+      "message_bytes": 64,
+      "context_bytes": 0
+    },
+    {
+      "file": "SLH-DSA-SHA2-192s-1.txt",
+      "sha256": "3d009077ed397b6516ccc8fc162de327c8f600457a5c1c392ee6763fc7511470",
+      "message_bytes": 0,
+      "context_bytes": 255
+    },
+    {
+      "file": "SLH-DSA-SHA2-192s-2.txt",
+      "sha256": "d290f06093ac4dadf7894f5e3d619105a80a62802b0f2ac2377750eeb27134eb",
+      "message_bytes": 4096,
+      "context_bytes": 17
+    },
+    {
+      "file": "SLH-DSA-SHA2-192f-0.txt",
+      "sha256": "424b4b79204c0b68b8c3accf9f68b2f80e01a9465b3e3d9f32660fa5b05a9059",
+      "message_bytes": 64,
+      "context_bytes": 0
+    },
+    {
+      "file": "SLH-DSA-SHA2-192f-1.txt",
+      "sha256": "1f2b655da54ec059f891b2d726b0658592a45a21412a004c2d8d55cef6595cda",
+      "message_bytes": 0,
+      "context_bytes": 255
+    },
+    {
+      "file": "SLH-DSA-SHA2-192f-2.txt",
+      "sha256": "797775d171e630d865ff878bcd394c25fe23a10a88fabb36e9c7bc4fc64ca256",
+      "message_bytes": 4096,
+      "context_bytes": 17
+    },
+    {
+      "file": "SLH-DSA-SHA2-256s-0.txt",
+      "sha256": "3131c0fd5c2044b6776203019894c69e823d846b83403b6f53b22bd4d8941b16",
+      "message_bytes": 64,
+      "context_bytes": 0
+    },
+    {
+      "file": "SLH-DSA-SHA2-256s-1.txt",
+      "sha256": "c424ec657fe16a47862aa20611b78aa4763737bf519c74770a5b54a021d2f222",
+      "message_bytes": 0,
+      "context_bytes": 255
+    },
+    {
+      "file": "SLH-DSA-SHA2-256s-2.txt",
+      "sha256": "a63be1786733db9426c146ee70d3426a6ce81b863f489cd0222c282fb3c5f858",
+      "message_bytes": 4096,
+      "context_bytes": 17
+    },
+    {
+      "file": "SLH-DSA-SHA2-256f-0.txt",
+      "sha256": "4d85c6753e989f90e03c0f3fb6712c3161f8f722b6ac3ba931a0ff5797ca7a89",
+      "message_bytes": 64,
+      "context_bytes": 0
+    },
+    {
+      "file": "SLH-DSA-SHA2-256f-1.txt",
+      "sha256": "56d70342764ac99a83ae5e37dd3b1c86f61cdde99136ecb29adcd69b8fb6fb99",
+      "message_bytes": 0,
+      "context_bytes": 255
+    },
+    {
+      "file": "SLH-DSA-SHA2-256f-2.txt",
+      "sha256": "d2d84a04e79a0f282cb567e60b800990970318d67c1f102620f39a83ced75d4e",
+      "message_bytes": 4096,
+      "context_bytes": 17
+    },
+    {
+      "file": "SLH-DSA-SHAKE-128f-0.txt",
+      "sha256": "be0adf4e3b843110f7f81886a788a5b3e4e5c94dc3ae8035c116b20efb6c58c2",
+      "message_bytes": 64,
+      "context_bytes": 0
+    },
+    {
+      "file": "SLH-DSA-SHAKE-128f-1.txt",
+      "sha256": "05630233ee423a1ca8822de580cbc549fdc1dabef41fd6963f39c883e4861da1",
+      "message_bytes": 0,
+      "context_bytes": 255
+    },
+    {
+      "file": "SLH-DSA-SHAKE-128f-2.txt",
+      "sha256": "5499d761801796cebfc5bc4b5f08595b7e48b4f08e55f66e452f9f6d86220049",
+      "message_bytes": 4096,
+      "context_bytes": 17
+    }
+  ],
+  "binary_sha256": {
+    "libs/openssl/build/sha512-prefix/baseline/prefix-driver": "511fcb88c2b28e001c268ba2c2d4f9b65569abf4e32220f466c31f3ba799f2da",
+    "libs/openssl/build/sha512-prefix/candidate/prefix-driver": "a7252e9b08091f3eea3a8c9efa42d3eb06a4205aaf351ce928f8444f64882730"
+  }
+}

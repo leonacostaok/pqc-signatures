@@ -1,0 +1,19 @@
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" depend && "/Applications/Xcode.app/Contents/Developer/usr/bin/make" _tests
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" run_tests
+( SRCTOP=../../../../../../../../openssl/worktrees/slh-sha512-prefix \
+	  BLDTOP=. \
+	  PERL="perl" \
+	  FIPSKEY="f4556650ac31d35461610bac4ed81b1a181b2d8a43ea2854cbae22ca74560813" \
+	  EXE_EXT= \
+	  perl ../../../../../../../../openssl/worktrees/slh-sha512-prefix/test/run_tests.pl test_slh_dsa )
+Using HARNESS_JOBS=8
+
+[00:58:14] 00-prep_fipsmodule_cnf.t .. skipped: FIPS module config file only supported in a fips build
+[00:58:14]
+Files=1, Tests=0,  0 wallclock secs ( 0.00 usr  0.00 sys +  0.11 cusr  0.02 csys =  0.13 CPU)
+Result: NOTESTS
+[00:58:17] 30-test_slh_dsa.t .. ok     3291 ms ( 0.01 usr  0.00 sys +  1.97 cusr  0.05 csys =  2.03 CPU)
+[00:58:17]
+All tests successful.
+Files=1, Tests=3,  3 wallclock secs ( 0.01 usr  0.00 sys +  1.97 cusr  0.05 csys =  2.03 CPU)
+Result: PASS
