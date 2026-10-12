@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/tenkey-981027a2c750a158/target/release/mldsa-keygen-experiment",
+    "check",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/tenkey-981027a2c750a158/corpus.json",
+    "ML-DSA-44",
+    "invalid"
+  ],
+  "cwd": null,
+  "started_at": "2026-10-12T01:57:23.188868+00:00"
+}

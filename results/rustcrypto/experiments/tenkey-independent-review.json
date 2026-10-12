@@ -1,0 +1,23 @@
+{
+  "schema": "pqc-tenkey-independent-review-v1",
+  "provider": "rustcrypto",
+  "checked_at": "2026-10-12T02:08:26.450018+00:00",
+  "candidate_sha256": "b4fd2a35a42ba6a406af52faee563feac163692d4f40f2de8d39055762150624",
+  "baseline_sha256": "1ea2a196143d35b103e6cbf23cf88a71697d6d01874b8859bd8cf7e189063d4a",
+  "comparison_sha256": "742c27829af382e17c344dd36f4b473aa9a5b4f43ec9727b3ef41d663ae0d19d",
+  "reviewer_sha256": "3b48024a615d64ca8bef2e3af7820ca721f57975cf456c50f385b6367be4bca0",
+  "key_pairs": 30,
+  "operation_pairs": 120,
+  "processes": 6,
+  "summary_cells": 12,
+  "zero_process_cpu_samples": 0,
+  "exact_output_comparisons": true,
+  "checks": [
+    "All distinct seed and public-key counts; disjoint warmup and ten measured indices per parameter",
+    "Every raw stdout/rows/command/status matches complete batches; no stderr and all processes exit zero",
+    "Every generated key/signature byte matches prepared fixture and other variant; every valid/tampered outcome checked",
+    "Independent integer wall/CPU totals and all key ratios, sorted-middle medians, ranges and loss counts recomputed",
+    "Prepared manifest, driver/collector, binary/classes, corpus/fixtures, original source/classes and production patch hashes match",
+    "Candidate completes before baseline starts for this provider; global six-provider order is recorded by the root coordinator"
+  ]
+}

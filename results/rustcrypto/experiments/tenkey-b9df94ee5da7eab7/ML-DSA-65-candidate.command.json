@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/tenkey-b9df94ee5da7eab7/target/release/mldsa-keygen-experiment",
+    "check",
+    "/Users/dandelionlabs/development/personal/pqc-signatures/worktrees/rust-performance/libs/rustcrypto/build/keygen-reuse/tenkey-b9df94ee5da7eab7/corpus.json",
+    "ML-DSA-65",
+    "candidate"
+  ],
+  "cwd": null,
+  "started_at": "2026-10-12T01:59:24.345443+00:00"
+}
