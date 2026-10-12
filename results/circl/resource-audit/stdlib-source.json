@@ -1,0 +1,10 @@
+{
+  "goroot": "/opt/homebrew/Cellar/go/1.27.0/libexec",
+  "files": {
+    "crypto/sha256/sha256.go": "34c5c7e8408022e7b8fd570453aebe6a95607761c14fbae61f465f9ba6328da9",
+    "crypto/sha512/sha512.go": "f2edc5fa3205fd4e2bc39d0b72a5dc368d8e5b7ab65816fe43e7db62ab495c50",
+    "crypto/internal/fips140/sha256/sha256.go": "94f8a5508cda46bc036b891d32eae19eb31253946d3442e44d4bb3e0341643b8",
+    "crypto/internal/fips140/sha512/sha512.go": "2d5b0c8c656c71c5a9eff37daf1919141e7742f519c7ad135336ee8805f76cdc",
+    "crypto/internal/boring/sha.go": "2c54200fd884f62b70bcdf0148015eca641209e6b1a2961de5fb83bbe1ae9af0"
+  }
+}
